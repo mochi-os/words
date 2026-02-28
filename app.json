@@ -1,0 +1,57 @@
+{
+	"version": "1.0",
+	"label": "app_name",
+	"classes": ["game"],
+	"paths": ["go"],
+	"services": ["go"],
+
+	"architecture": {"engine": "starlark", "version": 4},
+	"execute": ["go.star"],
+
+	"database": {
+		"schema": 1,
+		"file": "go.db",
+		"create": {"function": "database_create"},
+		"upgrade": {"function": "database_upgrade"}
+	},
+
+	"icons": [
+		{"action": "", "label": "app_name", "file": "images/icon.svg"}
+	],
+
+	"actions": {
+		"": {"file": "web/dist/index.html"},
+		"assets": {"files": "web/dist/assets"},
+		"images": {"files": "web/dist/images"},
+		"-/create": {"function": "action_create"},
+		"-/list": {"function": "action_list"},
+		"-/new": {"function": "action_new"},
+
+		":game": {"file": "web/dist/index.html"},
+		":game/-/view": {"function": "action_view"},
+		":game/-/messages": {"function": "action_messages"},
+		":game/-/send": {"function": "action_send"},
+		":game/-/move": {"function": "action_move"},
+		":game/-/pass": {"function": "action_pass"},
+		":game/-/resign": {"function": "action_resign"},
+		":game/-/draw-offer": {"function": "action_draw_offer"},
+		":game/-/draw-accept": {"function": "action_draw_accept"},
+		":game/-/draw-decline": {"function": "action_draw_decline"},
+		":game/-/delete": {"function": "action_delete"},
+		":game/assets": {"files": "web/dist/assets"},
+		":game/images": {"files": "web/dist/images"},
+		"-/notifications/subscribe": {"function": "action_notifications_subscribe"},
+		"-/notifications/check": {"function": "action_notifications_check"},
+		"-/notifications/destinations": {"function": "action_notifications_destinations"}
+	},
+
+	"events": {
+		"new": {"function": "event_new"},
+		"move": {"function": "event_move"},
+		"message": {"function": "event_message"},
+		"resign": {"function": "event_resign"},
+		"draw_offer": {"function": "event_draw_offer"},
+		"draw_accept": {"function": "event_draw_accept"},
+		"draw_decline": {"function": "event_draw_decline"}
+	}
+}
