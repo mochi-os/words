@@ -1,5 +1,5 @@
 import { Button, EmptyState } from '@mochi/common'
-import { Plus, Circle } from 'lucide-react'
+import { Plus, LetterText } from 'lucide-react'
 
 interface GameEmptyStateProps {
   onNewGame: () => void
@@ -11,7 +11,7 @@ export function GameEmptyState({ onNewGame, hasExistingGames }: GameEmptyStatePr
     return (
       <div className="flex h-full w-full flex-1 flex-col items-center justify-center">
         <EmptyState
-          icon={Circle}
+          icon={LetterText}
           title="Select a game"
           description="Choose a game from the sidebar or start a new one."
         >
@@ -27,7 +27,7 @@ export function GameEmptyState({ onNewGame, hasExistingGames }: GameEmptyStatePr
   return (
     <div className="flex h-full w-full flex-1 flex-col items-center justify-center">
       <EmptyState
-        icon={Circle}
+        icon={LetterText}
         title="No games yet"
         description=""
       >

@@ -20,10 +20,10 @@ import {
   type CreateGameResponse,
   type MoveRequest,
   type MoveResponse,
-  type PassRequest,
+  type ExchangeRequest,
+  type ExchangeResponse,
   type ResignResponse,
   type DeleteResponse,
-  type DrawOfferResponse,
 } from '@/api/games'
 
 export const gameKeys = {
@@ -156,7 +156,7 @@ export const useMoveMutation = (
   })
 }
 
-interface PassVariables extends PassRequest {
+interface PassVariables {
   gameId: string
 }
 
@@ -166,7 +166,32 @@ export const usePassMutation = (
   const queryClient = useQueryClient()
   const { onSuccess, ...restOptions } = options ?? {}
   return useMutation({
-    mutationFn: ({ gameId, ...payload }) => gamesApi.pass(gameId, payload),
+    mutationFn: ({ gameId }) => gamesApi.pass(gameId),
+    onSuccess: (data, variables, context, mutation) => {
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.messages(variables.gameId),
+      })
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.detail(variables.gameId),
+      })
+      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      onSuccess?.(data, variables, context, mutation)
+    },
+    ...restOptions,
+  })
+}
+
+interface ExchangeVariables extends ExchangeRequest {
+  gameId: string
+}
+
+export const useExchangeMutation = (
+  options?: UseMutationOptions<ExchangeResponse, Error, ExchangeVariables, unknown>
+) => {
+  const queryClient = useQueryClient()
+  const { onSuccess, ...restOptions } = options ?? {}
+  return useMutation({
+    mutationFn: ({ gameId, ...payload }) => gamesApi.exchange(gameId, payload),
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.messages(variables.gameId),
@@ -199,9 +224,8 @@ export const useNewGameFriendsQuery = (
   })
 
 interface CreateGameVariables {
-  opponent: string
-  boardSize: number
-  komi: number
+  opponents: string[]
+  language: string
 }
 
 export const useCreateGameMutation = (
@@ -215,8 +239,8 @@ export const useCreateGameMutation = (
   const queryClient = useQueryClient()
   const { onSuccess, ...restOptions } = options ?? {}
   return useMutation({
-    mutationFn: ({ opponent, boardSize, komi }: CreateGameVariables) =>
-      gamesApi.create(opponent, boardSize, komi),
+    mutationFn: ({ opponents, language }: CreateGameVariables) =>
+      gamesApi.create(opponents, language),
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({ queryKey: gameKeys.all() })
       onSuccess?.(data, variables, context, mutation)
@@ -238,62 +262,6 @@ export const useResignMutation = (
     mutationFn: ({ gameId }: ResignVariables) => gamesApi.resign(gameId),
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({ queryKey: gameKeys.all() })
-      queryClient.invalidateQueries({
-        queryKey: gameKeys.detail(variables.gameId),
-      })
-      onSuccess?.(data, variables, context, mutation)
-    },
-    ...restOptions,
-  })
-}
-
-interface DrawVariables {
-  gameId: string
-}
-
-export const useDrawOfferMutation = (
-  options?: UseMutationOptions<DrawOfferResponse, Error, DrawVariables, unknown>
-) => {
-  const queryClient = useQueryClient()
-  const { onSuccess, ...restOptions } = options ?? {}
-  return useMutation({
-    mutationFn: ({ gameId }: DrawVariables) => gamesApi.drawOffer(gameId),
-    onSuccess: (data, variables, context, mutation) => {
-      queryClient.invalidateQueries({
-        queryKey: gameKeys.detail(variables.gameId),
-      })
-      onSuccess?.(data, variables, context, mutation)
-    },
-    ...restOptions,
-  })
-}
-
-export const useDrawAcceptMutation = (
-  options?: UseMutationOptions<DrawOfferResponse, Error, DrawVariables, unknown>
-) => {
-  const queryClient = useQueryClient()
-  const { onSuccess, ...restOptions } = options ?? {}
-  return useMutation({
-    mutationFn: ({ gameId }: DrawVariables) => gamesApi.drawAccept(gameId),
-    onSuccess: (data, variables, context, mutation) => {
-      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
-      queryClient.invalidateQueries({
-        queryKey: gameKeys.detail(variables.gameId),
-      })
-      onSuccess?.(data, variables, context, mutation)
-    },
-    ...restOptions,
-  })
-}
-
-export const useDrawDeclineMutation = (
-  options?: UseMutationOptions<DrawOfferResponse, Error, DrawVariables, unknown>
-) => {
-  const queryClient = useQueryClient()
-  const { onSuccess, ...restOptions } = options ?? {}
-  return useMutation({
-    mutationFn: ({ gameId }: DrawVariables) => gamesApi.drawDecline(gameId),
-    onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
       })

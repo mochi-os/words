@@ -10,8 +10,8 @@ import {
 import { Plus } from 'lucide-react'
 import { SidebarProvider, useSidebarContext } from '@/context/sidebar-context'
 import { useGamesQuery } from '@/hooks/useGames'
-import { NewGame } from '@/features/go/components/new-game'
-import { getOpponentName, type Game } from '@/api/games'
+import { NewGame } from '@/features/words/components/new-game'
+import { getPlayerNames, isMyTurn, type GameListItem } from '@/api/games'
 
 function AutoOpenMobileSidebar({
   hasGames,
@@ -58,7 +58,7 @@ function WebsocketStatusIndicator() {
   )
 }
 
-function GoLayoutInner() {
+function WordsLayoutInner() {
   const gamesQuery = useGamesQuery()
   const games = useMemo(
     () => gamesQuery.data?.games ?? [],
@@ -76,7 +76,7 @@ function GoLayoutInner() {
         (g) => g.id === urlGameId || g.fingerprint === urlGameId
       )
       const name = game && myIdentity
-        ? getOpponentName(game, myIdentity)
+        ? getPlayerNames(game, myIdentity)
         : undefined
       setGame(urlGameId, name)
     } else {
@@ -89,11 +89,11 @@ function GoLayoutInner() {
     const activeGames = sortedGames.filter((g) => g.status === 'active')
     const completedGames = sortedGames.filter((g) => g.status !== 'active')
 
-    const getName = (game: Game) =>
-      myIdentity ? getOpponentName(game, myIdentity) : game.opponent_name
+    const getName = (game: GameListItem) =>
+      myIdentity ? getPlayerNames(game, myIdentity) : game.player2_name
 
-    const getSize = (game: Game) =>
-      game.board_size !== 19 ? ` (${game.board_size}×${game.board_size})` : ''
+    const getTurnDot = (game: GameListItem) =>
+      myIdentity && isMyTurn(game, myIdentity) ? ' \u00B7' : ''
 
     const groups: SidebarData['navGroups'] = []
 
@@ -101,7 +101,7 @@ function GoLayoutInner() {
       groups.push({
         title: 'Active Games',
         items: activeGames.map((game) => ({
-          title: getName(game) + getSize(game),
+          title: getName(game) + getTurnDot(game),
           url: `/${game.fingerprint ?? game.id}`,
         })),
       })
@@ -111,7 +111,7 @@ function GoLayoutInner() {
       groups.push({
         title: 'Completed',
         items: completedGames.map((game) => ({
-          title: `${getName(game)}${getSize(game)} (${game.status})`,
+          title: `${getName(game)} (${game.status})`,
           url: `/${game.fingerprint ?? game.id}`,
         })),
       })
@@ -146,10 +146,10 @@ function GoLayoutInner() {
   )
 }
 
-export function GoLayout() {
+export function WordsLayout() {
   return (
     <SidebarProvider>
-      <GoLayoutInner />
+      <WordsLayoutInner />
       <NewGame />
     </SidebarProvider>
   )

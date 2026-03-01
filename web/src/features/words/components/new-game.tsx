@@ -19,10 +19,9 @@ import { Loader2, Plus, UserPlus } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
-const BOARD_SIZES = [
-  { value: 9, label: '9×9' },
-  { value: 13, label: '13×13' },
-  { value: 19, label: '19×19' },
+const LANGUAGES = [
+  { value: 'en_US', label: 'English (US)' },
+  { value: 'en_UK', label: 'English (UK)' },
 ] as const
 
 export function NewGame() {
@@ -31,10 +30,9 @@ export function NewGame() {
   const onOpenChange = (isOpen: boolean) => {
     if (!isOpen) closeNewGameDialog()
   }
-  const [selectedFriend, setSelectedFriend] = useState<string>('')
+  const [selectedFriends, setSelectedFriends] = useState<string[]>([])
   const [friendsPickerOpen, setFriendsPickerOpen] = useState(false)
-  const [boardSize, setBoardSize] = useState<number>(19)
-  const [komi, setKomi] = useState<string>('6.5')
+  const [language, setLanguage] = useState<string>('en_US')
 
   const { data, isLoading, error, refetch } = useNewGameFriendsQuery({
     enabled: open,
@@ -60,27 +58,28 @@ export function NewGame() {
     [friends]
   )
 
-  const canSubmit = !!selectedFriend && !createGameMutation.isPending
+  const canSubmit = selectedFriends.length >= 1 && selectedFriends.length <= 3 && !createGameMutation.isPending
 
   const handleCreateGame = () => {
-    if (!selectedFriend) {
-      toast.error('Please select a friend')
+    if (selectedFriends.length < 1) {
+      toast.error('Please select at least one friend')
       return
     }
-    const komiValue = parseFloat(komi) || 6.5
+    if (selectedFriends.length > 3) {
+      toast.error('Maximum 3 opponents')
+      return
+    }
     createGameMutation.mutate({
-      opponent: selectedFriend,
-      boardSize,
-      komi: komiValue,
+      opponents: selectedFriends,
+      language,
     })
   }
 
   useEffect(() => {
     if (!open) {
-      setSelectedFriend('')
+      setSelectedFriends([])
       setFriendsPickerOpen(false)
-      setBoardSize(19)
-      setKomi('6.5')
+      setLanguage('en_US')
     }
   }, [open])
 
@@ -103,13 +102,15 @@ export function NewGame() {
             New Game
           </ResponsiveDialogTitle>
           <ResponsiveDialogDescription className="sr-only">
-            Start a new Go game
+            Start a new Words game
           </ResponsiveDialogDescription>
         </ResponsiveDialogHeader>
 
         <div className="space-y-4">
           <div className="space-y-2">
-            <label className="text-sm font-medium">Choose opponent</label>
+            <label className="text-sm font-medium">
+              Choose opponents <span className="text-muted-foreground font-normal">(1-3)</span>
+            </label>
             {isLoading ? (
               <Skeleton className="h-9 w-full" />
             ) : error ? (
@@ -118,52 +119,43 @@ export function NewGame() {
               <div className="flex flex-col items-center justify-center rounded-lg border py-8 text-center">
                 <UserPlus className="text-muted-foreground mb-3 h-10 w-10 opacity-50" />
                 <p className="text-muted-foreground text-sm font-medium">No friends yet</p>
-                <p className="text-muted-foreground mt-1 text-xs">Add friends to play Go</p>
+                <p className="text-muted-foreground mt-1 text-xs">Add friends to play Words</p>
               </div>
             ) : (
               <PersonPicker
-                mode="single"
-                value={selectedFriend}
-                onChange={(value) => setSelectedFriend(value as string)}
+                mode="multiple"
+                value={selectedFriends}
+                onChange={(value) => setSelectedFriends(value as string[])}
                 local={friendsAsPeople}
-                placeholder="Select a friend..."
+                placeholder="Select friends..."
                 emptyMessage="No friends found"
                 open={friendsPickerOpen}
                 onOpenChange={setFriendsPickerOpen}
               />
             )}
+            {selectedFriends.length > 0 && (
+              <p className="text-xs text-muted-foreground">
+                {selectedFriends.length + 1} players
+              </p>
+            )}
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">Board size</label>
+            <label className="text-sm font-medium">Language</label>
             <div className="flex gap-2">
-              {BOARD_SIZES.map((size) => (
+              {LANGUAGES.map((lang) => (
                 <Button
-                  key={size.value}
+                  key={lang.value}
                   type="button"
-                  variant={boardSize === size.value ? 'default' : 'outline'}
+                  variant={language === lang.value ? 'default' : 'outline'}
                   size="sm"
-                  onClick={() => setBoardSize(size.value)}
+                  onClick={() => setLanguage(lang.value)}
                   className="flex-1"
                 >
-                  {size.label}
+                  {lang.label}
                 </Button>
               ))}
             </div>
-          </div>
-
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Komi</label>
-            <input
-              type="number"
-              step="0.5"
-              value={komi}
-              onChange={(e) => setKomi(e.target.value)}
-              className="border-input bg-card flex h-9 w-full rounded-md border px-3 py-1 text-sm focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring"
-            />
-            <p className="text-xs text-muted-foreground">
-              Points added to White's score to compensate for Black going first
-            </p>
           </div>
         </div>
 

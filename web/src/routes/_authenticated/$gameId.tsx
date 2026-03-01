@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { GoGameView } from '@/features/go'
+import { WordsGameView } from '@/features/words'
 
 export const Route = createFileRoute('/_authenticated/$gameId')({
-  component: GoGameView,
+  component: WordsGameView,
 })

@@ -1,5 +1,5 @@
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { GoGameView } from '@/features/go'
+import { WordsGameView } from '@/features/words'
 import { getLastGame, clearLastGame } from '@/hooks/useGameStorage'
 import { gamesApi } from '@/api/games'
 
@@ -25,5 +25,5 @@ export const Route = createFileRoute('/_authenticated/')({
 
     return { games }
   },
-  component: GoGameView,
+  component: WordsGameView,
 })

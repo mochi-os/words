@@ -1,28 +1,88 @@
-export function getOpponentName(game: Game, myIdentity: string): string {
-  return game.identity === myIdentity ? game.opponent_name : game.identity_name
-}
-
 export interface Game {
   id: string
   fingerprint?: string
-  identity: string
-  identity_name: string
-  opponent: string
-  opponent_name: string
-  black: string
-  board_size: number
-  komi: number
-  status: 'active' | 'finished' | 'draw' | 'resigned'
+  language: string
+  player_count: number
+  player1: string
+  player1_name: string
+  player1_score: number
+  player2: string
+  player2_name: string
+  player2_score: number
+  player3?: string
+  player3_name?: string
+  player3_score: number
+  player4?: string
+  player4_name?: string
+  player4_score: number
+  current_turn: number
+  status: 'active' | 'finished' | 'resigned'
   winner: string | null
-  draw_offer: string | null
-  fen: string
-  previous_fen: string | null
-  sgf: string
-  captures_black: number
-  captures_white: number
+  board: string
+  my_rack: string
+  my_player_number: number
+  bag_count: number
+  move_count: number
+  consecutive_passes: number
   key: string
   updated: number
   created: number
+}
+
+// Lightweight game type for list view (no rack/bag info)
+export interface GameListItem {
+  id: string
+  fingerprint?: string
+  language: string
+  player_count: number
+  player1: string
+  player1_name: string
+  player1_score: number
+  player2: string
+  player2_name: string
+  player2_score: number
+  player3?: string
+  player3_name?: string
+  player3_score: number
+  player4?: string
+  player4_name?: string
+  player4_score: number
+  current_turn: number
+  status: 'active' | 'finished' | 'resigned'
+  winner: string | null
+  board: string
+  my_player_number: number
+  move_count: number
+  consecutive_passes: number
+  updated: number
+  created: number
+}
+
+export function getPlayerNames(game: GameListItem | Game, myIdentity: string): string {
+  const names: string[] = []
+  for (let i = 1; i <= game.player_count; i++) {
+    const id = game[`player${i}` as keyof typeof game] as string
+    const name = game[`player${i}_name` as keyof typeof game] as string
+    if (id && id !== myIdentity && name) {
+      names.push(name)
+    }
+  }
+  return names.join(', ')
+}
+
+export function isMyTurn(game: GameListItem | Game, myIdentity: string): boolean {
+  if (game.status !== 'active') return false
+  const myNum = getMyPlayerNumber(game, myIdentity)
+  return game.current_turn === myNum
+}
+
+function getMyPlayerNumber(game: GameListItem | Game, myIdentity: string): number {
+  for (let i = 1; i <= game.player_count; i++) {
+    if ((game[`player${i}` as keyof typeof game] as string) === myIdentity) {
+      return i
+    }
+  }
+  return 0
 }
 
 export type MessageType = 'message' | 'move' | 'system'
@@ -44,7 +104,7 @@ export interface GameViewResponse {
 }
 
 export interface GetGamesResponse {
-  games: Game[]
+  games: GameListItem[]
 }
 
 export interface GetMessagesResponse {
@@ -55,7 +115,6 @@ export interface GetMessagesResponse {
 
 export interface CreateGameResponse {
   id: string
-  black: string
 }
 
 export interface NewGameFriend {
@@ -78,26 +137,21 @@ export interface SendMessageResponse {
 }
 
 export interface MoveRequest {
-  fen: string
-  previous_fen?: string
-  sgf: string
-  captures_black: number
-  captures_white: number
-  move_label: string
-  status?: string
-  winner?: string
-}
-
-export interface PassRequest {
-  fen: string
-  sgf: string
-  status?: string
-  winner?: string
-  score_black?: number
-  score_white?: number
+  board: string
+  score: number
+  tiles_used: string
+  words_formed: string
 }
 
 export interface MoveResponse {
+  id: string
+}
+
+export interface ExchangeRequest {
+  tiles: string
+}
+
+export interface ExchangeResponse {
   id: string
 }
 
@@ -109,6 +163,6 @@ export interface DeleteResponse {
   success: boolean
 }
 
-export interface DrawOfferResponse {
-  success: boolean
+export interface ValidateWordResponse {
+  valid: boolean
 }

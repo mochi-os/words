@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useAuthStore, getCookie } from '@mochi/common'
-import { GoLayout } from '@/components/layout/go-layout'
+import { WordsLayout } from '@/components/layout/words-layout'
 
 export const Route = createFileRoute('/_authenticated')({
   beforeLoad: ({ location }) => {
@@ -22,5 +22,5 @@ export const Route = createFileRoute('/_authenticated')({
 
     return
   },
-  component: GoLayout,
+  component: WordsLayout,
 })

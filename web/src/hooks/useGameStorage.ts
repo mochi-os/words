@@ -1,4 +1,4 @@
-const LAST_GAME_KEY = 'mochi-go-last'
+const LAST_GAME_KEY = 'mochi-words-last'
 
 export const setLastGame = (gameId: string) => {
   try {

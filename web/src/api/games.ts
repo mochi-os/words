@@ -1,6 +1,6 @@
 import { createAppClient } from '@mochi/common'
 import type {
-  Game,
+  GameListItem,
   GameViewResponse,
   GetGamesResponse,
   GetMessagesResponse,
@@ -10,16 +10,17 @@ import type {
   SendMessageResponse,
   MoveRequest,
   MoveResponse,
-  PassRequest,
+  ExchangeRequest,
+  ExchangeResponse,
   ResignResponse,
   DeleteResponse,
-  DrawOfferResponse,
+  ValidateWordResponse,
 } from './types/games'
 import endpoints from './endpoints'
 
 export * from './types/games'
 
-const client = createAppClient({ appName: 'go' })
+const client = createAppClient({ appName: 'words' })
 
 const unwrapData = <T>(raw: unknown): T => {
   if (raw && typeof raw === 'object' && 'data' in raw) {
@@ -31,7 +32,7 @@ const unwrapData = <T>(raw: unknown): T => {
 export const gamesApi = {
   list: (): Promise<GetGamesResponse> =>
     client
-      .get<{ data: Game[] }>(endpoints.game.list)
+      .get<{ data: GameListItem[] }>(endpoints.game.list)
       .then((res) => ({ games: res.data })),
 
   detail: (gameId: string) =>
@@ -55,37 +56,37 @@ export const gamesApi = {
   move: (gameId: string, payload: MoveRequest) =>
     client.post<MoveResponse>(endpoints.game.move(gameId), payload),
 
-  pass: (gameId: string, payload: PassRequest) =>
-    client.post<MoveResponse>(endpoints.game.pass(gameId), payload),
+  pass: (gameId: string) =>
+    client.post<MoveResponse>(endpoints.game.pass(gameId)),
+
+  exchange: (gameId: string, payload: ExchangeRequest) =>
+    client.post<ExchangeResponse>(endpoints.game.exchange(gameId), payload),
 
   getFriendsForNewGame: () =>
     client
       .get<{ data: GetNewGameResponse }>(endpoints.game.new)
       .then((res) => res.data),
 
-  create: (opponent: string, boardSize: number = 19, komi: number = 6.5) =>
+  create: (opponents: string[], language: string = 'en_US') =>
     client
       .post<CreateGameResponse | { data: CreateGameResponse }>(endpoints.game.create, {
-        opponent,
-        board_size: boardSize,
-        komi,
+        opponents: opponents.join(','),
+        language,
       })
       .then((res) => unwrapData<CreateGameResponse>(res)),
 
   resign: (gameId: string) =>
     client.post<ResignResponse>(endpoints.game.resign(gameId)),
 
-  drawOffer: (gameId: string) =>
-    client.post<DrawOfferResponse>(endpoints.game.drawOffer(gameId)),
-
-  drawAccept: (gameId: string) =>
-    client.post<DrawOfferResponse>(endpoints.game.drawAccept(gameId)),
-
-  drawDecline: (gameId: string) =>
-    client.post<DrawOfferResponse>(endpoints.game.drawDecline(gameId)),
-
   delete: (gameId: string) =>
     client.post<DeleteResponse>(endpoints.game.delete(gameId)),
+
+  validateWord: (word: string, language: string = 'en_US') =>
+    client
+      .get<ValidateWordResponse | { data: ValidateWordResponse }>(endpoints.game.validate, {
+        params: { word, language },
+      })
+      .then((res) => unwrapData<ValidateWordResponse>(res)),
 
   checkSubscription: () =>
     client

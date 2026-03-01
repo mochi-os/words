@@ -4,7 +4,7 @@ import {
   type QueryClient,
   type InfiniteData,
 } from '@tanstack/react-query'
-import type { GameMessage, GetMessagesResponse, GameViewResponse } from '@/api/games'
+import type { GameMessage, GetMessagesResponse } from '@/api/games'
 import {
   type ChatWebsocketMessagePayload,
   type WebsocketConnectionStatus,
@@ -67,51 +67,11 @@ const handleWebsocketPayload = (
     void queryClient.invalidateQueries({ queryKey: gameKeys.detail(gameId) })
   }
 
-  // Handle draw accept — game ended
-  if (event === 'draw_accept') {
-    void queryClient.invalidateQueries({ queryKey: gameKeys.all() })
-    void queryClient.invalidateQueries({ queryKey: gameKeys.detail(gameId) })
-  }
-
-  // Handle draw offer / decline — update draw_offer in cache
-  if (event === 'draw_offer' || event === 'draw_decline') {
-    queryClient.setQueryData<GameViewResponse>(
-      gameKeys.detail(gameId),
-      (current) => {
-        if (!current) return current
-        return {
-          ...current,
-          game: {
-            ...current.game,
-            draw_offer: (payload.draw_offer as string) || null,
-          },
-        }
-      }
-    )
-  }
-
-  // Handle move — update game detail cache with new FEN/status
+  // Handle move — update game detail cache with new board/scores/status
   if (msgType === 'move') {
-    queryClient.setQueryData<GameViewResponse>(
-      gameKeys.detail(gameId),
-      (current) => {
-        if (!current) return current
-        return {
-          ...current,
-          game: {
-            ...current.game,
-            fen: (payload.fen as string) || current.game.fen,
-            previous_fen: (payload.previous_fen as string) || current.game.previous_fen,
-            sgf: (payload.sgf as string) ?? current.game.sgf,
-            captures_black: typeof payload.captures_black === 'number' ? payload.captures_black : current.game.captures_black,
-            captures_white: typeof payload.captures_white === 'number' ? payload.captures_white : current.game.captures_white,
-            status: (payload.status as GameViewResponse['game']['status']) || current.game.status,
-            winner: (payload.winner as string) || current.game.winner,
-            draw_offer: null,
-          },
-        }
-      }
-    )
+    // For moves, we invalidate the detail to get updated rack + bag_count
+    void queryClient.invalidateQueries({ queryKey: gameKeys.detail(gameId) })
+    void queryClient.invalidateQueries({ queryKey: gameKeys.all() })
   }
 
   // Append message to messages cache for all types (message, move, system)
