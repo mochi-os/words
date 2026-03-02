@@ -584,6 +584,7 @@ def action_move(a):
 		"current_turn": new_turn, "move_count": new_move_count,
 		"status": new_status, "winner": winner or "",
 		"player" + str(pnum) + "_score": new_score,
+		"bag_count": len(new_bag),
 	}
 	for k, v in score_updates.items():
 		ws_data[k] = v
@@ -595,7 +596,7 @@ def action_move(a):
 		"board": board, "score": score, "player_number": pnum,
 		"current_turn": new_turn, "move_count": new_move_count,
 		"status": new_status, "winner": winner or "",
-		"new_score": new_score,
+		"new_score": new_score, "bag": new_bag,
 	}
 	for k, v in score_updates.items():
 		p2p_data[k] = v
@@ -748,7 +749,7 @@ def action_exchange(a):
 			{
 				"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
 				"body": body, "exchange": True,
-				"current_turn": new_turn, "bag_count": len(new_bag),
+				"current_turn": new_turn, "bag": new_bag,
 			}
 		)
 
@@ -948,12 +949,20 @@ def event_move(e):
 	body = e.content("body") or ""
 	name = e.content("name") or "Opponent"
 
+	bag = e.content("bag")
+
 	now = mochi.time.now()
 	score_key = "player" + str(player_number) + "_score"
-	mochi.db.execute(
-		"update games set board=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=? where id=?",
-		board, new_score, current_turn, move_count, status, winner, now, game["id"]
-	)
+	if bag != None:
+		mochi.db.execute(
+			"update games set board=?, bag=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=? where id=?",
+			board, bag, new_score, current_turn, move_count, status, winner, now, game["id"]
+		)
+	else:
+		mochi.db.execute(
+			"update games set board=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=? where id=?",
+			board, new_score, current_turn, move_count, status, winner, now, game["id"]
+		)
 
 	id = e.content("message")
 	if not mochi.valid(str(id), "id"):
@@ -965,6 +974,7 @@ def event_move(e):
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
 
+	bag_count = len(bag) if bag != None else len(game["bag"])
 	ws_data = {
 		"type": "move", "created": created, "member": sender, "name": name,
 		"body": body,
@@ -972,6 +982,7 @@ def event_move(e):
 		"current_turn": current_turn, "move_count": move_count,
 		"status": status, "winner": winner or "",
 		"player" + str(player_number) + "_score": new_score,
+		"bag_count": bag_count,
 	}
 	mochi.websocket.write(game["key"], ws_data)
 	mochi.service.call("notifications", "send", "move", "Words move", name + " played " + body, game["id"], "/words/" + game["id"])
@@ -1044,11 +1055,19 @@ def event_exchange(e):
 	else:
 		current_turn = next_turn(game)
 
+	bag = e.content("bag")
+
 	now = mochi.time.now()
-	mochi.db.execute(
-		"update games set current_turn=?, consecutive_passes=0, updated=? where id=?",
-		current_turn, now, game["id"]
-	)
+	if bag != None:
+		mochi.db.execute(
+			"update games set bag=?, current_turn=?, consecutive_passes=0, updated=? where id=?",
+			bag, current_turn, now, game["id"]
+		)
+	else:
+		mochi.db.execute(
+			"update games set current_turn=?, consecutive_passes=0, updated=? where id=?",
+			current_turn, now, game["id"]
+		)
 
 	id = e.content("message")
 	if not mochi.valid(str(id), "id"):
@@ -1060,14 +1079,12 @@ def event_exchange(e):
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
 
-	bag_count = e.content("bag_count")
+	bag_count = len(bag) if bag != None else len(game["bag"])
 	ws_data = {
 		"type": "move", "created": now, "member": sender, "name": name,
 		"body": body, "exchange": True,
-		"current_turn": current_turn,
+		"current_turn": current_turn, "bag_count": bag_count,
 	}
-	if bag_count:
-		ws_data["bag_count"] = int(bag_count)
 	mochi.websocket.write(game["key"], ws_data)
 	mochi.service.call("notifications", "send", "exchange", "Words", name + " exchanged tiles", game["id"], "/words/" + game["id"])
 

@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react'
+import { useCallback, useMemo, useRef } from 'react'
 import { cn } from '@mochi/common'
 import {
   BOARD_SIZE,
@@ -19,6 +19,11 @@ const PREMIUM_STYLES: Record<PremiumType, { bg: string; label: string; textColor
   '.': { bg: '', label: '', textColor: '' },
 }
 
+type DragSource =
+  | { type: 'rack'; index: number }
+  | { type: 'board'; row: number; col: number }
+  | null
+
 interface WordsBoardProps {
   board: string[][]
   pendingPlacements: Placement[]
@@ -27,8 +32,10 @@ interface WordsBoardProps {
   gameStatus: string
   onCellClick: (row: number, col: number) => void
   onRemovePlacement: (row: number, col: number) => void
-  isDragging?: boolean
+  dragSource?: DragSource
   onDrop?: (row: number, col: number) => void
+  onBoardDragStart?: (row: number, col: number) => void
+  onDragEnd?: () => void
 }
 
 export function WordsBoard({
@@ -39,11 +46,14 @@ export function WordsBoard({
   gameStatus,
   onCellClick,
   onRemovePlacement,
-  isDragging,
+  dragSource,
   onDrop,
+  onBoardDragStart,
+  onDragEnd,
 }: WordsBoardProps) {
   const isActive = gameStatus === 'active'
   const canPlace = isActive && isMyTurn && selectedRackIndex !== null
+  const isDragging = dragSource !== null && dragSource !== undefined
   const canDrop = isActive && isMyTurn && isDragging
 
   const getPending = useCallback(
@@ -59,23 +69,71 @@ export function WordsBoard({
   )
   const center = Math.floor(BOARD_SIZE / 2)
 
+  // When dragging from board, filter out the dragged tile for validLine
+  const effectivePlacements = useMemo(() => {
+    if (dragSource?.type === 'board') {
+      return pendingPlacements.filter(
+        (p) => !(p.row === dragSource.row && p.col === dragSource.col)
+      )
+    }
+    return pendingPlacements
+  }, [pendingPlacements, dragSource])
+
   // Determine which row/col are valid for the next placement
   const validLine = useMemo(() => {
-    if (pendingPlacements.length === 0) {
+    if (effectivePlacements.length === 0) {
       if (isBoardEmpty) {
         // First move: must pass through center — only center row or col
         return { row: center, col: center }
       }
       return null // any empty cell is valid
     }
-    if (pendingPlacements.length === 1) {
-      return { row: pendingPlacements[0].row, col: pendingPlacements[0].col }
+    if (effectivePlacements.length === 1) {
+      return { row: effectivePlacements[0].row, col: effectivePlacements[0].col }
     }
     // 2+ placements: direction is locked
-    const allSameRow = pendingPlacements.every((p) => p.row === pendingPlacements[0].row)
-    if (allSameRow) return { row: pendingPlacements[0].row, col: null }
-    return { row: null, col: pendingPlacements[0].col }
-  }, [pendingPlacements, isBoardEmpty, center])
+    const allSameRow = effectivePlacements.every((p) => p.row === effectivePlacements[0].row)
+    if (allSameRow) return { row: effectivePlacements[0].row, col: null }
+    return { row: null, col: effectivePlacements[0].col }
+  }, [effectivePlacements, isBoardEmpty, center])
+
+  const isValidLineCell = useCallback(
+    (row: number, col: number) => {
+      if (!validLine) return true
+      if (validLine.row !== null && validLine.col !== null) return validLine.row === row || validLine.col === col
+      if (validLine.row !== null && validLine.col === null) return validLine.row === row
+      if (validLine.col !== null && validLine.row === null) return validLine.col === col
+      return true
+    },
+    [validLine]
+  )
+
+  const isDroppableCell = useCallback(
+    (row: number, col: number) => {
+      if (row < 0 || row >= BOARD_SIZE || col < 0 || col >= BOARD_SIZE) return false
+      if (board[row][col] !== '.') return false
+      if (getPending(row, col)) return false
+      return true
+    },
+    [board, getPending]
+  )
+
+  const gridRef = useRef<HTMLDivElement>(null)
+
+  const cellFromPointer = useCallback(
+    (e: React.DragEvent) => {
+      const grid = gridRef.current
+      if (!grid) return null
+      const rect = grid.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      const col = Math.floor((x / rect.width) * BOARD_SIZE)
+      const row = Math.floor((y / rect.height) * BOARD_SIZE)
+      if (row < 0 || row >= BOARD_SIZE || col < 0 || col >= BOARD_SIZE) return null
+      return { row, col }
+    },
+    []
+  )
 
   return (
     <div
@@ -83,10 +141,27 @@ export function WordsBoard({
       style={{ maxWidth: 'min(100%, calc(100dvh - 178px))' }}
     >
       <div
+        ref={gridRef}
         className="grid aspect-square w-full gap-px bg-neutral-300 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-700"
         style={{
           gridTemplateColumns: `repeat(${BOARD_SIZE}, 1fr)`,
           gridTemplateRows: `repeat(${BOARD_SIZE}, 1fr)`,
+        }}
+        onDragOver={(e) => {
+          if (!canDrop) return
+          const cell = cellFromPointer(e)
+          if (cell && isDroppableCell(cell.row, cell.col)) {
+            e.preventDefault()
+            e.dataTransfer.dropEffect = 'move'
+          }
+        }}
+        onDrop={(e) => {
+          if (!canDrop) return
+          const cell = cellFromPointer(e)
+          if (cell && isDroppableCell(cell.row, cell.col)) {
+            e.preventDefault()
+            onDrop?.(cell.row, cell.col)
+          }
         }}
       >
         {Array.from({ length: BOARD_SIZE }).map((_, row) =>
@@ -114,17 +189,27 @@ export function WordsBoard({
             }
 
             const canClickToPlace = canPlace && isEmpty
-            const canClickToRemove = isPending
-            const isValidLine = !validLine
-              || (validLine.row !== null && validLine.col !== null && (validLine.row === row || validLine.col === col)) // single placement: same row or col
-              || (validLine.row !== null && validLine.col === null && validLine.row === row) // horizontal: same row
-              || (validLine.col !== null && validLine.row === null && validLine.col === col) // vertical: same col
-            const isDropTarget = canDrop && isEmpty && isValidLine
+            const canClickToRemove = isPending && !isDragging
+            const canAcceptDrop = canDrop && isEmpty
+            const isDropTarget = canAcceptDrop && isValidLineCell(row, col)
+            const isPlaceTarget = canClickToPlace && isValidLineCell(row, col)
+            const isValidTarget = isDropTarget || isPlaceTarget
+            const canDragThis = isActive && isMyTurn && isPending
+            const isBeingDragged = dragSource?.type === 'board' && dragSource.row === row && dragSource.col === col
 
             return (
-              <button
+              <div
                 key={`${row}-${col}`}
-                type="button"
+                role="button"
+                tabIndex={canClickToPlace || canClickToRemove || canAcceptDrop ? 0 : -1}
+                draggable={canDragThis}
+                onDragStart={(e) => {
+                  if (!canDragThis) return
+                  e.dataTransfer.setData('text/plain', `board-${row}-${col}`)
+                  e.dataTransfer.effectAllowed = 'move'
+                  onBoardDragStart?.(row, col)
+                }}
+                onDragEnd={() => onDragEnd?.()}
                 className={cn(
                   'relative flex items-center justify-center text-xs font-bold select-none overflow-hidden',
                   isEmpty && !premiumStyle.bg && 'bg-stone-50 dark:bg-stone-900/30',
@@ -133,8 +218,10 @@ export function WordsBoard({
                   isPending && 'bg-amber-200 dark:bg-amber-800 ring-2 ring-amber-500 ring-inset',
                   canClickToPlace && 'cursor-pointer hover:bg-amber-200/50 dark:hover:bg-amber-800/50',
                   canClickToRemove && 'cursor-pointer',
-                  !canClickToPlace && !canClickToRemove && !isDropTarget && 'cursor-default',
-                  isDropTarget && 'cursor-copy',
+                  canDragThis && 'cursor-grab',
+                  !canClickToPlace && !canClickToRemove && !canAcceptDrop && !canDragThis && 'cursor-default',
+                  canAcceptDrop && 'cursor-copy',
+                  isBeingDragged && 'opacity-40',
                 )}
                 onClick={() => {
                   if (canClickToRemove) {
@@ -144,32 +231,33 @@ export function WordsBoard({
                   }
                 }}
                 onDragOver={(e) => {
-                  if (isDropTarget) {
+                  if (canAcceptDrop) {
                     e.preventDefault()
+                    e.stopPropagation()
                     e.dataTransfer.dropEffect = 'move'
                   }
                 }}
                 onDrop={(e) => {
-                  if (isDropTarget) {
+                  if (canAcceptDrop) {
                     e.preventDefault()
+                    e.stopPropagation()
                     onDrop?.(row, col)
                   }
                 }}
-                disabled={!canClickToPlace && !canClickToRemove && !isDropTarget}
               >
-                {isEmpty && premiumStyle.label && (
+                {isEmpty && premiumStyle.label && !isValidTarget && (
                   <span className={cn('scale-50 text-lg font-semibold leading-none', premiumStyle.textColor)}>
                     {premiumStyle.label}
                   </span>
                 )}
 
-                {isEmpty && premium === 'ST' && (
+                {isEmpty && premium === 'ST' && !isValidTarget && (
                   <span className={cn('text-base leading-none', premiumStyle.textColor)}>
                     {'\u2605'}
                   </span>
                 )}
 
-                {isDropTarget && (
+                {isValidTarget && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className="w-[30%] h-[30%] rounded-full bg-black/20 dark:bg-white/20" />
                   </div>
@@ -190,7 +278,7 @@ export function WordsBoard({
                     )}
                   </>
                 )}
-              </button>
+              </div>
             )
           })
         )}

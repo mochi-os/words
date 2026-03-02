@@ -82,12 +82,16 @@ export function WordsGameView() {
   const [exchangeSelected, setExchangeSelected] = useState<Set<number>>(new Set())
 
   // Drag-and-drop state
-  const [draggingRackIndex, setDraggingRackIndex] = useState<number | null>(null)
+  const [dragSource, setDragSource] = useState<
+    | { type: 'rack'; index: number }
+    | { type: 'board'; row: number; col: number }
+    | null
+  >(null)
 
   // Blank tile letter prompt
   const [blankPromptOpen, setBlankPromptOpen] = useState(false)
   const [pendingBlankCell, setPendingBlankCell] = useState<{ row: number; col: number } | null>(null)
-  const [pendingBlankSource, setPendingBlankSource] = useState<'click' | 'drag'>('click')
+  const [pendingBlankRackIndex, setPendingBlankRackIndex] = useState<number | null>(null)
 
   const {
     identity: currentUserIdentity,
@@ -139,7 +143,7 @@ export function WordsGameView() {
     // Reset placement state when game changes
     setPendingPlacements([])
     setSelectedRackIndex(null)
-    setDraggingRackIndex(null)
+    setDragSource(null)
     setExchangeMode(false)
     setExchangeSelected(new Set())
   }, [game?.my_rack, game?.id])
@@ -246,7 +250,7 @@ export function WordsGameView() {
       if (tile === '_') {
         // Blank tile — need to ask for letter
         setPendingBlankCell({ row, col })
-        setPendingBlankSource('click')
+        setPendingBlankRackIndex(selectedRackIndex)
         setBlankPromptOpen(true)
         return
       }
@@ -272,8 +276,7 @@ export function WordsGameView() {
   // Handle blank tile letter selection
   const handleBlankLetterSelect = useCallback(
     (letter: string) => {
-      const rackIndex = pendingBlankSource === 'drag' ? draggingRackIndex : selectedRackIndex
-      if (!pendingBlankCell || rackIndex === null) return
+      if (!pendingBlankCell || pendingBlankRackIndex === null) return
 
       const placement: Placement = {
         row: pendingBlankCell.row,
@@ -284,14 +287,15 @@ export function WordsGameView() {
       setPendingPlacements((prev) => [...prev, placement])
 
       const newRack = [...rackTiles]
-      newRack.splice(rackIndex, 1)
+      newRack.splice(pendingBlankRackIndex, 1)
       setRackTiles(newRack)
       setSelectedRackIndex(null)
-      setDraggingRackIndex(null)
+      setDragSource(null)
       setBlankPromptOpen(false)
       setPendingBlankCell(null)
+      setPendingBlankRackIndex(null)
     },
-    [pendingBlankCell, selectedRackIndex, draggingRackIndex, pendingBlankSource, rackTiles]
+    [pendingBlankCell, pendingBlankRackIndex, rackTiles]
   )
 
   // Remove a pending placement (return tile to rack)
@@ -312,42 +316,94 @@ export function WordsGameView() {
   )
 
   // Drag-and-drop handlers
-  const handleDragStart = useCallback((index: number) => {
-    setDraggingRackIndex(index)
+  const handleRackDragStart = useCallback((index: number) => {
+    setDragSource({ type: 'rack', index })
+    setSelectedRackIndex(null)
+  }, [])
+
+  const handleBoardDragStart = useCallback((row: number, col: number) => {
+    setDragSource({ type: 'board', row, col })
     setSelectedRackIndex(null)
   }, [])
 
   const handleDragEnd = useCallback(() => {
-    setDraggingRackIndex(null)
+    setDragSource(null)
   }, [])
 
   const handleDrop = useCallback(
     (row: number, col: number) => {
-      if (draggingRackIndex === null || !rackTiles[draggingRackIndex]) return
+      if (!dragSource) return
 
-      const tile = rackTiles[draggingRackIndex]
+      if (dragSource.type === 'rack') {
+        const tile = rackTiles[dragSource.index]
+        if (!tile) return
 
-      if (tile === '_') {
-        setPendingBlankCell({ row, col })
-        setPendingBlankSource('drag')
-        setBlankPromptOpen(true)
-        return
+        if (tile === '_') {
+          setPendingBlankCell({ row, col })
+          setPendingBlankRackIndex(dragSource.index)
+          setBlankPromptOpen(true)
+          return
+        }
+
+        const placement: Placement = { row, col, letter: tile, rackTile: tile }
+        setPendingPlacements((prev) => [...prev, placement])
+
+        const newRack = [...rackTiles]
+        newRack.splice(dragSource.index, 1)
+        setRackTiles(newRack)
+      } else {
+        // board → board: move pending tile to new cell
+        const existing = pendingPlacements.find(
+          (p) => p.row === dragSource.row && p.col === dragSource.col
+        )
+        if (!existing) return
+
+        setPendingPlacements((prev) => [
+          ...prev.filter((p) => !(p.row === dragSource.row && p.col === dragSource.col)),
+          { ...existing, row, col },
+        ])
       }
 
-      const placement: Placement = {
-        row,
-        col,
-        letter: tile,
-        rackTile: tile,
-      }
-      setPendingPlacements((prev) => [...prev, placement])
-
-      const newRack = [...rackTiles]
-      newRack.splice(draggingRackIndex, 1)
-      setRackTiles(newRack)
-      setDraggingRackIndex(null)
+      setDragSource(null)
     },
-    [draggingRackIndex, rackTiles]
+    [dragSource, rackTiles, pendingPlacements]
+  )
+
+  const handleDropOnRack = useCallback(
+    (targetIndex: number) => {
+      if (!dragSource) return
+
+      if (dragSource.type === 'board') {
+        // board → rack: return tile
+        const existing = pendingPlacements.find(
+          (p) => p.row === dragSource.row && p.col === dragSource.col
+        )
+        if (!existing) return
+
+        setPendingPlacements((prev) =>
+          prev.filter((p) => !(p.row === dragSource.row && p.col === dragSource.col))
+        )
+        setRackTiles((prev) => {
+          const next = [...prev]
+          const insertAt = Math.min(targetIndex, next.length)
+          next.splice(insertAt, 0, existing.rackTile)
+          return next
+        })
+      } else {
+        // rack → rack: reorder
+        if (dragSource.index === targetIndex) return
+        setRackTiles((prev) => {
+          const next = [...prev]
+          const [tile] = next.splice(dragSource.index, 1)
+          const insertAt = Math.min(targetIndex, next.length)
+          next.splice(insertAt, 0, tile)
+          return next
+        })
+      }
+
+      setDragSource(null)
+    },
+    [dragSource, pendingPlacements]
   )
 
   // Recall all placed tiles
@@ -560,8 +616,10 @@ export function WordsGameView() {
                   gameStatus={game.status}
                   onCellClick={handleCellClick}
                   onRemovePlacement={handleRemovePlacement}
-                  isDragging={draggingRackIndex !== null}
+                  dragSource={dragSource}
                   onDrop={handleDrop}
+                  onBoardDragStart={handleBoardDragStart}
+                  onDragEnd={handleDragEnd}
                 />
 
                 {/* Tile rack + action buttons */}
@@ -580,9 +638,11 @@ export function WordsGameView() {
                         exchangeMode={exchangeMode}
                         exchangeSelected={exchangeSelected}
                         onToggleExchange={handleToggleExchange}
-                        draggingIndex={draggingRackIndex}
-                        onDragStart={handleDragStart}
+                        draggingIndex={dragSource?.type === 'rack' ? dragSource.index : null}
+                        onDragStart={handleRackDragStart}
                         onDragEnd={handleDragEnd}
+                        isDragging={dragSource !== null}
+                        onDropOnRack={handleDropOnRack}
                       />
                       <div className="absolute left-full top-1/2 -translate-y-1/2 flex items-center gap-1 pl-2">
                         {isMyTurn && exchangeMode && (
@@ -602,8 +662,10 @@ export function WordsGameView() {
                               onClick={handleExchangeConfirm}
                               disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}
                             >
-                              {exchangeMutation.isPending && (
+                              {exchangeMutation.isPending ? (
                                 <Loader2 className="mr-1 size-3 animate-spin" />
+                              ) : (
+                                <ArrowLeftRight className="mr-1 size-3" />
                               )}
                               Exchange {exchangeSelected.size > 0 ? `(${exchangeSelected.size})` : ''}
                             </Button>
@@ -734,16 +796,14 @@ export function WordsGameView() {
           if (!open) {
             setBlankPromptOpen(false)
             setPendingBlankCell(null)
-            setDraggingRackIndex(null)
+            setPendingBlankRackIndex(null)
+            setDragSource(null)
           }
         }}
       >
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Choose a letter</AlertDialogTitle>
-            <AlertDialogDescription>
-              Select the letter for your blank tile.
-            </AlertDialogDescription>
           </AlertDialogHeader>
           <div className="grid grid-cols-9 gap-1 py-2">
             {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
