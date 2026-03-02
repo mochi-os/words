@@ -20,8 +20,8 @@ import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
 const LANGUAGES = [
-  { value: 'en_US', label: 'English (US)' },
   { value: 'en_UK', label: 'English (UK)' },
+  { value: 'en_US', label: 'English (US)' },
 ] as const
 
 export function NewGame() {
@@ -32,7 +32,7 @@ export function NewGame() {
   }
   const [selectedFriends, setSelectedFriends] = useState<string[]>([])
   const [friendsPickerOpen, setFriendsPickerOpen] = useState(false)
-  const [language, setLanguage] = useState<string>('en_US')
+  const [language, setLanguage] = useState<string>('en_UK')
 
   const { data, isLoading, error, refetch } = useNewGameFriendsQuery({
     enabled: open,
@@ -79,7 +79,7 @@ export function NewGame() {
     if (!open) {
       setSelectedFriends([])
       setFriendsPickerOpen(false)
-      setLanguage('en_US')
+      setLanguage('en_UK')
     }
   }, [open])
 

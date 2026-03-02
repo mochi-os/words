@@ -9,6 +9,9 @@ interface TileRackProps {
   exchangeMode?: boolean
   exchangeSelected?: Set<number>
   onToggleExchange?: (index: number) => void
+  draggingIndex?: number | null
+  onDragStart?: (index: number) => void
+  onDragEnd?: () => void
 }
 
 export function TileRack({
@@ -19,6 +22,9 @@ export function TileRack({
   exchangeMode,
   exchangeSelected,
   onToggleExchange,
+  draggingIndex,
+  onDragStart,
+  onDragEnd,
 }: TileRackProps) {
   return (
     <div className="flex items-center justify-center gap-1.5 py-2">
@@ -29,20 +35,34 @@ export function TileRack({
         const isExchangeSelected = exchangeMode && exchangeSelected?.has(i)
         const value = tile ? getLetterValue(tile) : 0
         const displayLetter = tile === '_' ? '' : tile
+        const isDragging = draggingIndex === i
+        const canDrag = hasTile && !disabled && !exchangeMode
 
         return (
           <button
             key={i}
             type="button"
             disabled={disabled || !hasTile}
+            draggable={canDrag}
+            onDragStart={(e) => {
+              if (!canDrag) return
+              e.dataTransfer.setData('text/plain', String(i))
+              e.dataTransfer.effectAllowed = 'move'
+              onDragStart?.(i)
+            }}
+            onDragEnd={() => {
+              onDragEnd?.()
+            }}
             className={cn(
               'relative flex h-10 w-10 items-center justify-center rounded border-2 text-base font-bold transition-all select-none',
               hasTile && 'bg-amber-100 dark:bg-amber-900/60 border-amber-300 dark:border-amber-700',
               !hasTile && 'bg-transparent border-dashed border-gray-300 dark:border-gray-700',
               isSelected && !exchangeMode && 'ring-2 ring-blue-500 border-blue-500 scale-110',
               isExchangeSelected && 'ring-2 ring-red-500 border-red-500 opacity-60',
-              hasTile && !disabled && 'cursor-pointer hover:scale-105',
+              hasTile && !disabled && !exchangeMode && 'cursor-grab hover:scale-105',
+              hasTile && !disabled && exchangeMode && 'cursor-pointer hover:scale-105',
               disabled && 'opacity-50 cursor-default',
+              isDragging && 'opacity-40',
             )}
             onClick={() => {
               if (!hasTile) return
@@ -57,7 +77,7 @@ export function TileRack({
               <>
                 <span>{displayLetter}</span>
                 {value > 0 && (
-                  <span className="absolute right-0.5 bottom-0 text-[8px] font-medium text-gray-600 dark:text-gray-400">
+                  <span className="absolute right-0 bottom-0 origin-bottom-right scale-50 text-base font-medium text-gray-600 dark:text-gray-400 leading-none">
                     {value}
                   </span>
                 )}

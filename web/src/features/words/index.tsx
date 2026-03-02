@@ -38,7 +38,7 @@ import {
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
-import { gamesApi, getPlayerNames } from '@/api/games'
+import { gamesApi } from '@/api/games'
 import {
   useInfiniteMessagesQuery,
   useGamesQuery,
@@ -55,7 +55,6 @@ import { GameEmptyState } from './components/game-empty-state'
 import { WordsBoard } from './components/words-board'
 import { TileRack } from './components/tile-rack'
 import { ScorePanel } from './components/score-panel'
-import { GameStatus } from './components/game-status'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
 
@@ -77,9 +76,13 @@ export function WordsGameView() {
   const [exchangeMode, setExchangeMode] = useState(false)
   const [exchangeSelected, setExchangeSelected] = useState<Set<number>>(new Set())
 
+  // Drag-and-drop state
+  const [draggingRackIndex, setDraggingRackIndex] = useState<number | null>(null)
+
   // Blank tile letter prompt
   const [blankPromptOpen, setBlankPromptOpen] = useState(false)
   const [pendingBlankCell, setPendingBlankCell] = useState<{ row: number; col: number } | null>(null)
+  const [pendingBlankSource, setPendingBlankSource] = useState<'click' | 'drag'>('click')
 
   const {
     identity: currentUserIdentity,
@@ -131,6 +134,7 @@ export function WordsGameView() {
     // Reset placement state when game changes
     setPendingPlacements([])
     setSelectedRackIndex(null)
+    setDraggingRackIndex(null)
     setExchangeMode(false)
     setExchangeSelected(new Set())
   }, [game?.my_rack, game?.id])
@@ -237,6 +241,7 @@ export function WordsGameView() {
       if (tile === '_') {
         // Blank tile — need to ask for letter
         setPendingBlankCell({ row, col })
+        setPendingBlankSource('click')
         setBlankPromptOpen(true)
         return
       }
@@ -262,7 +267,8 @@ export function WordsGameView() {
   // Handle blank tile letter selection
   const handleBlankLetterSelect = useCallback(
     (letter: string) => {
-      if (!pendingBlankCell || selectedRackIndex === null) return
+      const rackIndex = pendingBlankSource === 'drag' ? draggingRackIndex : selectedRackIndex
+      if (!pendingBlankCell || rackIndex === null) return
 
       const placement: Placement = {
         row: pendingBlankCell.row,
@@ -273,13 +279,14 @@ export function WordsGameView() {
       setPendingPlacements((prev) => [...prev, placement])
 
       const newRack = [...rackTiles]
-      newRack.splice(selectedRackIndex, 1)
+      newRack.splice(rackIndex, 1)
       setRackTiles(newRack)
       setSelectedRackIndex(null)
+      setDraggingRackIndex(null)
       setBlankPromptOpen(false)
       setPendingBlankCell(null)
     },
-    [pendingBlankCell, selectedRackIndex, rackTiles]
+    [pendingBlankCell, selectedRackIndex, draggingRackIndex, pendingBlankSource, rackTiles]
   )
 
   // Remove a pending placement (return tile to rack)
@@ -297,6 +304,45 @@ export function WordsGameView() {
       setRackTiles((prev) => [...prev, removed.rackTile])
     },
     [pendingPlacements]
+  )
+
+  // Drag-and-drop handlers
+  const handleDragStart = useCallback((index: number) => {
+    setDraggingRackIndex(index)
+    setSelectedRackIndex(null)
+  }, [])
+
+  const handleDragEnd = useCallback(() => {
+    setDraggingRackIndex(null)
+  }, [])
+
+  const handleDrop = useCallback(
+    (row: number, col: number) => {
+      if (draggingRackIndex === null || !rackTiles[draggingRackIndex]) return
+
+      const tile = rackTiles[draggingRackIndex]
+
+      if (tile === '_') {
+        setPendingBlankCell({ row, col })
+        setPendingBlankSource('drag')
+        setBlankPromptOpen(true)
+        return
+      }
+
+      const placement: Placement = {
+        row,
+        col,
+        letter: tile,
+        rackTile: tile,
+      }
+      setPendingPlacements((prev) => [...prev, placement])
+
+      const newRack = [...rackTiles]
+      newRack.splice(draggingRackIndex, 1)
+      setRackTiles(newRack)
+      setDraggingRackIndex(null)
+    },
+    [draggingRackIndex, rackTiles]
   )
 
   // Recall all placed tiles
@@ -436,70 +482,56 @@ export function WordsGameView() {
     )
   }
 
-  const titleName = game && myIdentity
-    ? getPlayerNames(game, myIdentity)
-    : ''
-
   return (
     <>
       <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader
-          title={titleName || 'Words'}
-          actions={
-            game ? (
-              <div className="flex items-center gap-2">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon">
-                      <MoreHorizontal className="size-5" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-48">
-                    {game.status === 'active' ? (
-                      <>
-                        {isMyTurn && (
-                          <DropdownMenuItem
-                            onClick={() => {
-                              handleRecall()
-                              setExchangeMode(!exchangeMode)
-                              setExchangeSelected(new Set())
-                            }}
-                          >
-                            <ArrowLeftRight className="mr-2 size-4" />
-                            {exchangeMode ? 'Cancel exchange' : 'Exchange tiles'}
-                          </DropdownMenuItem>
-                        )}
-                        <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                          <Flag className="mr-2 size-4" /> Resign
-                        </DropdownMenuItem>
-                      </>
-                    ) : (
-                      <>
-                        <DropdownMenuItem onClick={handleRematch} disabled={rematchMutation.isPending}>
-                          <RotateCcw className="mr-2 size-4" /> Rematch
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={handleDelete}>
-                          <Trash2 className="mr-2 size-4" /> Delete game
-                        </DropdownMenuItem>
-                      </>
-                    )}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
-            ) : undefined
-          }
-        />
-
         <Main className="flex min-h-0 flex-1 overflow-hidden">
           {/* Left: Board + rack */}
-          <div className="flex flex-1 flex-col overflow-y-auto p-2 sm:p-4">
+          <div className="flex flex-1 flex-col overflow-y-auto px-2 sm:px-4 pb-2">
             {isLoadingDetail ? (
               <Skeleton className="aspect-square max-w-[600px] w-full mx-auto" />
             ) : game ? (
               <>
-                <div className="shrink-0">
-                  <ScorePanel game={game} myIdentity={myIdentity} />
-                  <GameStatus game={game} myIdentity={myIdentity} />
+                <div className="shrink-0 mb-1">
+                  <ScorePanel game={game} myIdentity={myIdentity}>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="icon" className="size-7 shrink-0">
+                          <MoreHorizontal className="size-4" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end" className="w-48">
+                        {game.status === 'active' ? (
+                          <>
+                            {isMyTurn && (
+                              <DropdownMenuItem
+                                onClick={() => {
+                                  handleRecall()
+                                  setExchangeMode(!exchangeMode)
+                                  setExchangeSelected(new Set())
+                                }}
+                              >
+                                <ArrowLeftRight className="mr-2 size-4" />
+                                {exchangeMode ? 'Cancel exchange' : 'Exchange tiles'}
+                              </DropdownMenuItem>
+                            )}
+                            <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
+                              <Flag className="mr-2 size-4" /> Resign
+                            </DropdownMenuItem>
+                          </>
+                        ) : (
+                          <>
+                            <DropdownMenuItem onClick={handleRematch} disabled={rematchMutation.isPending}>
+                              <RotateCcw className="mr-2 size-4" /> Rematch
+                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={handleDelete}>
+                              <Trash2 className="mr-2 size-4" /> Delete game
+                            </DropdownMenuItem>
+                          </>
+                        )}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </ScorePanel>
                 </div>
 
                 <WordsBoard
@@ -510,11 +542,39 @@ export function WordsGameView() {
                   gameStatus={game.status}
                   onCellClick={handleCellClick}
                   onRemovePlacement={handleRemovePlacement}
+                  isDragging={draggingRackIndex !== null}
+                  onDrop={handleDrop}
                 />
 
-                {/* Tile rack */}
+                {/* Tile rack + action buttons */}
                 {game.status === 'active' && (
-                  <div className="shrink-0 mt-1 max-w-[600px] mx-auto w-full">
+                  <div className="shrink-0 mt-1 mx-auto w-full flex items-center justify-center gap-1">
+                    {isMyTurn && (
+                      exchangeMode ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="shrink-0"
+                          onClick={() => {
+                            setExchangeMode(false)
+                            setExchangeSelected(new Set())
+                          }}
+                        >
+                          Cancel
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="shrink-0 size-8"
+                          onClick={handleShuffle}
+                          title="Shuffle rack"
+                        >
+                          <Shuffle className="size-4" />
+                        </Button>
+                      )
+                    )}
+
                     <TileRack
                       tiles={rackTiles}
                       selectedIndex={exchangeMode ? null : selectedRackIndex}
@@ -527,80 +587,58 @@ export function WordsGameView() {
                       exchangeMode={exchangeMode}
                       exchangeSelected={exchangeSelected}
                       onToggleExchange={handleToggleExchange}
+                      draggingIndex={draggingRackIndex}
+                      onDragStart={handleDragStart}
+                      onDragEnd={handleDragEnd}
                     />
 
-                    {/* Action buttons */}
                     {isMyTurn && (
-                      <div className="flex items-center justify-center gap-2 py-1">
-                        {exchangeMode ? (
-                          <>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => {
-                                setExchangeMode(false)
-                                setExchangeSelected(new Set())
-                              }}
-                            >
-                              Cancel
-                            </Button>
-                            <Button
-                              size="sm"
-                              onClick={handleExchangeConfirm}
-                              disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}
-                            >
-                              {exchangeMutation.isPending && (
-                                <Loader2 className="mr-1 size-3 animate-spin" />
-                              )}
-                              Exchange {exchangeSelected.size > 0 ? `(${exchangeSelected.size})` : ''}
-                            </Button>
-                          </>
-                        ) : (
-                          <>
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              onClick={handleShuffle}
-                              title="Shuffle rack"
-                            >
-                              <Shuffle className="size-4" />
-                            </Button>
-                            {pendingPlacements.length > 0 && (
-                              <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={handleRecall}
-                              >
-                                Recall
-                              </Button>
+                      exchangeMode ? (
+                        <Button
+                          size="sm"
+                          className="shrink-0"
+                          onClick={handleExchangeConfirm}
+                          disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}
+                        >
+                          {exchangeMutation.isPending && (
+                            <Loader2 className="mr-1 size-3 animate-spin" />
+                          )}
+                          Exchange {exchangeSelected.size > 0 ? `(${exchangeSelected.size})` : ''}
+                        </Button>
+                      ) : pendingPlacements.length > 0 ? (
+                        <div className="flex items-center gap-1 shrink-0">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={handleRecall}
+                          >
+                            Recall
+                          </Button>
+                          <Button
+                            size="sm"
+                            onClick={handleSubmitMove}
+                            disabled={moveMutation.isPending}
+                          >
+                            {moveMutation.isPending && (
+                              <Loader2 className="mr-1 size-3 animate-spin" />
                             )}
-                            {pendingPlacements.length > 0 ? (
-                              <Button
-                                size="sm"
-                                onClick={handleSubmitMove}
-                                disabled={moveMutation.isPending}
-                              >
-                                {moveMutation.isPending && (
-                                  <Loader2 className="mr-1 size-3 animate-spin" />
-                                )}
-                                Submit
-                              </Button>
-                            ) : (
-                              <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={handlePass}
-                                disabled={passMutation.isPending}
-                              >
-                                {passMutation.isPending && (
-                                  <Loader2 className="mr-1 size-3 animate-spin" />
-                                )}
-                                Pass
-                              </Button>
-                            )}
-                          </>
-                        )}
-                      </div>
+                            Submit
+                          </Button>
+                        </div>
+                      ) : (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="shrink-0"
+                          onClick={handlePass}
+                          disabled={passMutation.isPending}
+                        >
+                          {passMutation.isPending && (
+                            <Loader2 className="mr-1 size-3 animate-spin" />
+                          )}
+                          Pass
+                        </Button>
+                      )
                     )}
                   </div>
                 )}
@@ -676,6 +714,7 @@ export function WordsGameView() {
           if (!open) {
             setBlankPromptOpen(false)
             setPendingBlankCell(null)
+            setDraggingRackIndex(null)
           }
         }}
       >
