@@ -22,7 +22,7 @@ import {
   SubscribeDialog,
   getAppPath,
 } from '@mochi/common'
-import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle } from 'lucide-react'
+import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -492,7 +492,7 @@ export function WordsGameView() {
               <Skeleton className="aspect-square max-w-[600px] w-full mx-auto" />
             ) : game ? (
               <>
-                <div className="shrink-0 mb-1">
+                <div className="shrink-0 mb-3">
                   <ScorePanel game={game} myIdentity={myIdentity}>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
@@ -503,6 +503,16 @@ export function WordsGameView() {
                       <DropdownMenuContent align="end" className="w-48">
                         {game.status === 'active' ? (
                           <>
+                            {isMyTurn && (
+                              <DropdownMenuItem onClick={handleShuffle}>
+                                <Shuffle className="mr-2 size-4" /> Shuffle rack
+                              </DropdownMenuItem>
+                            )}
+                            {isMyTurn && pendingPlacements.length === 0 && (
+                              <DropdownMenuItem onClick={handlePass} disabled={passMutation.isPending}>
+                                <SkipForward className="mr-2 size-4" /> Pass
+                              </DropdownMenuItem>
+                            )}
                             {isMyTurn && (
                               <DropdownMenuItem
                                 onClick={() => {
@@ -548,98 +558,73 @@ export function WordsGameView() {
 
                 {/* Tile rack + action buttons */}
                 {game.status === 'active' && (
-                  <div className="shrink-0 mt-1 mx-auto w-full flex items-center justify-center gap-1">
-                    {isMyTurn && (
-                      exchangeMode ? (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="shrink-0"
-                          onClick={() => {
-                            setExchangeMode(false)
-                            setExchangeSelected(new Set())
-                          }}
-                        >
-                          Cancel
-                        </Button>
-                      ) : (
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          className="shrink-0 size-8"
-                          onClick={handleShuffle}
-                          title="Shuffle rack"
-                        >
-                          <Shuffle className="size-4" />
-                        </Button>
-                      )
-                    )}
+                  <div className="shrink-0 mt-1 flex justify-center">
+                    <div className="relative">
+                      <TileRack
+                        tiles={rackTiles}
+                        selectedIndex={exchangeMode ? null : selectedRackIndex}
+                        onSelectTile={(i) => {
+                          if (!exchangeMode) {
+                            setSelectedRackIndex(selectedRackIndex === i ? null : i)
+                          }
+                        }}
+                        disabled={!isMyTurn}
+                        exchangeMode={exchangeMode}
+                        exchangeSelected={exchangeSelected}
+                        onToggleExchange={handleToggleExchange}
+                        draggingIndex={draggingRackIndex}
+                        onDragStart={handleDragStart}
+                        onDragEnd={handleDragEnd}
+                      />
+                      <div className="absolute left-full top-1/2 -translate-y-1/2 flex items-center gap-1 pl-2">
+                        {isMyTurn && exchangeMode && (
+                          <>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => {
+                                setExchangeMode(false)
+                                setExchangeSelected(new Set())
+                              }}
+                            >
+                              Cancel
+                            </Button>
+                            <Button
+                              size="sm"
+                              onClick={handleExchangeConfirm}
+                              disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}
+                            >
+                              {exchangeMutation.isPending && (
+                                <Loader2 className="mr-1 size-3 animate-spin" />
+                              )}
+                              Exchange {exchangeSelected.size > 0 ? `(${exchangeSelected.size})` : ''}
+                            </Button>
+                          </>
+                        )}
 
-                    <TileRack
-                      tiles={rackTiles}
-                      selectedIndex={exchangeMode ? null : selectedRackIndex}
-                      onSelectTile={(i) => {
-                        if (!exchangeMode) {
-                          setSelectedRackIndex(selectedRackIndex === i ? null : i)
-                        }
-                      }}
-                      disabled={!isMyTurn}
-                      exchangeMode={exchangeMode}
-                      exchangeSelected={exchangeSelected}
-                      onToggleExchange={handleToggleExchange}
-                      draggingIndex={draggingRackIndex}
-                      onDragStart={handleDragStart}
-                      onDragEnd={handleDragEnd}
-                    />
-
-                    {isMyTurn && (
-                      exchangeMode ? (
-                        <Button
-                          size="sm"
-                          className="shrink-0"
-                          onClick={handleExchangeConfirm}
-                          disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}
-                        >
-                          {exchangeMutation.isPending && (
-                            <Loader2 className="mr-1 size-3 animate-spin" />
-                          )}
-                          Exchange {exchangeSelected.size > 0 ? `(${exchangeSelected.size})` : ''}
-                        </Button>
-                      ) : pendingPlacements.length > 0 ? (
-                        <div className="flex items-center gap-1 shrink-0">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={handleRecall}
-                          >
-                            Recall
-                          </Button>
-                          <Button
-                            size="sm"
-                            onClick={handleSubmitMove}
-                            disabled={moveMutation.isPending}
-                          >
-                            {moveMutation.isPending && (
-                              <Loader2 className="mr-1 size-3 animate-spin" />
-                            )}
-                            Submit
-                          </Button>
-                        </div>
-                      ) : (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="shrink-0"
-                          onClick={handlePass}
-                          disabled={passMutation.isPending}
-                        >
-                          {passMutation.isPending && (
-                            <Loader2 className="mr-1 size-3 animate-spin" />
-                          )}
-                          Pass
-                        </Button>
-                      )
-                    )}
+                        {isMyTurn && !exchangeMode && pendingPlacements.length > 0 && (
+                          <>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={handleRecall}
+                            >
+                              Recall
+                            </Button>
+                            <Button
+                              size="sm"
+                              onClick={handleSubmitMove}
+                              disabled={moveMutation.isPending}
+                            >
+                              {moveMutation.isPending && (
+                                <Loader2 className="mr-1 size-3 animate-spin" />
+                              )}
+                              Submit
+                            </Button>
+                          </>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 )}
               </>

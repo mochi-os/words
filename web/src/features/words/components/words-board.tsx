@@ -80,7 +80,7 @@ export function WordsBoard({
   return (
     <div
       className="mx-auto w-full"
-      style={{ maxWidth: 'min(100%, calc(100dvh - 170px))' }}
+      style={{ maxWidth: 'min(100%, calc(100dvh - 178px))' }}
     >
       <div
         className="grid aspect-square w-full gap-px bg-neutral-300 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-700"
