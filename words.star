@@ -10,6 +10,15 @@ TILES_EN = [
 	("Z", 10, 1), ("_", 0, 2),
 ]
 
+TILE_VALUES = {t[0]: t[1] for t in TILES_EN}
+
+def rack_value(rack):
+	"""Sum the point values of tiles in a rack string."""
+	total = 0
+	for ch in rack.elems():
+		total += TILE_VALUES.get(ch, 0)
+	return total
+
 def make_bag(language):
 	"""Create a full bag of tiles as a string."""
 	tiles = []
@@ -108,6 +117,10 @@ def database_create():
 		created integer not null
 	)""")
 	mochi.db.execute("create index if not exists games_updated on games( updated )")
+	mochi.db.execute("create index if not exists games_player1 on games( player1 )")
+	mochi.db.execute("create index if not exists games_player2 on games( player2 )")
+	mochi.db.execute("create index if not exists games_player3 on games( player3 )")
+	mochi.db.execute("create index if not exists games_player4 on games( player4 )")
 
 	mochi.db.execute("""create table if not exists messages (
 		id text not null primary key,
@@ -135,6 +148,11 @@ def database_upgrade(to_version):
 		# Re-load dictionaries (fix: str() was missing on file.read bytes)
 		load_dictionary("en_US", "dictionaries/en_US.txt")
 		load_dictionary("en_UK", "dictionaries/en_UK.txt")
+	if to_version == 3:
+		mochi.db.execute("create index if not exists games_player1 on games( player1 )")
+		mochi.db.execute("create index if not exists games_player2 on games( player2 )")
+		mochi.db.execute("create index if not exists games_player3 on games( player3 )")
+		mochi.db.execute("create index if not exists games_player4 on games( player4 )")
 
 def load_dictionary(language, filename):
 	"""Load a word list file into the dictionary table."""
@@ -190,15 +208,6 @@ def get_other_players(game, user_id):
 		if pid and pid != user_id:
 			others.append(pid)
 	return others
-
-def get_all_player_names(game):
-	"""Return comma-separated player names."""
-	names = []
-	for i in range(1, game["player_count"] + 1):
-		name = game["player" + str(i) + "_name"]
-		if name:
-			names.append(name)
-	return ", ".join(names)
 
 def get_player_name(game, player_num):
 	"""Return the name for a player number."""
@@ -331,17 +340,17 @@ def action_create(a):
 		board, bag, key, now, now
 	)
 
-	# Send new game event to all opponents
+	# Send new game event to all opponents with bag and racks
 	for opp_info in opponent_names:
 		mochi.message.send(
 			{"from": a.user.identity.id, "to": opp_info["id"], "service": "words", "event": "new"},
 			{
 				"id": game_id, "language": language, "player_count": player_count,
-				"player1": p1, "player1_name": p1_name, "player1_rack": "",
-				"player2": p2, "player2_name": p2_name, "player2_rack": "",
-				"player3": p3 or "", "player3_name": p3_name or "", "player3_rack": "",
-				"player4": p4 or "", "player4_name": p4_name or "", "player4_rack": "",
-				"board": board, "created": now,
+				"player1": p1, "player1_name": p1_name, "player1_rack": rack1,
+				"player2": p2, "player2_name": p2_name, "player2_rack": rack2,
+				"player3": p3 or "", "player3_name": p3_name or "", "player3_rack": rack3,
+				"player4": p4 or "", "player4_name": p4_name or "", "player4_rack": rack4,
+				"bag": bag, "board": board, "created": now,
 			}
 		)
 
@@ -476,6 +485,11 @@ def action_move(a):
 	tiles_used = a.input("tiles_used", "")
 	words_formed = a.input("words_formed", "")
 
+	for ch in tiles_used.elems():
+		if ch != "_" and (ch < "A" or ch > "Z"):
+			a.error(400, "Invalid tile character")
+			return
+
 	if not board or not valid_board(board):
 		a.error(400, "Invalid board state")
 		return
@@ -528,7 +542,20 @@ def action_move(a):
 	game_over = len(new_rack) == 0 and len(new_bag) == 0
 	new_status = "finished" if game_over else "active"
 	winner = None
+
+	# Apply end-of-game rack penalties
+	score_updates = {}
 	if game_over:
+		bonus = 0
+		for i in range(1, game["player_count"] + 1):
+			if i == pnum:
+				continue
+			opponent_rack = game["player" + str(i) + "_rack"]
+			penalty = rack_value(opponent_rack)
+			bonus += penalty
+			opp_score_key = "player" + str(i) + "_score"
+			score_updates[opp_score_key] = game[opp_score_key] - penalty
+		new_score += bonus
 		winner = a.user.identity.id
 
 	new_turn = next_turn(game) if not game_over else game["current_turn"]
@@ -536,10 +563,14 @@ def action_move(a):
 	now = mochi.time.now()
 
 	# Build update SQL
-	mochi.db.execute(
-		"update games set board=?, bag=?, " + rack_key + "=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=? where id=?",
-		board, new_bag, new_rack, new_score, new_turn, new_move_count, new_status, winner, now, game["id"]
-	)
+	sql = "update games set board=?, bag=?, " + rack_key + "=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=?"
+	params = [board, new_bag, new_rack, new_score, new_turn, new_move_count, new_status, winner, now]
+	for k, v in score_updates.items():
+		sql += ", " + k + "=?"
+		params.append(v)
+	sql += " where id=?"
+	params.append(game["id"])
+	mochi.db.execute(sql, *params)
 
 	# Insert move message
 	id = mochi.uid()
@@ -554,19 +585,24 @@ def action_move(a):
 		"status": new_status, "winner": winner or "",
 		"player" + str(pnum) + "_score": new_score,
 	}
+	for k, v in score_updates.items():
+		ws_data[k] = v
 	mochi.websocket.write(game["key"], ws_data)
 
+	p2p_data = {
+		"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
+		"body": move_label + " (+" + str(score) + ")",
+		"board": board, "score": score, "player_number": pnum,
+		"current_turn": new_turn, "move_count": new_move_count,
+		"status": new_status, "winner": winner or "",
+		"new_score": new_score,
+	}
+	for k, v in score_updates.items():
+		p2p_data[k] = v
 	for other in get_other_players(game, a.user.identity.id):
 		mochi.message.send(
 			{"from": a.user.identity.id, "to": other, "service": "words", "event": "move"},
-			{
-				"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
-				"body": move_label + " (+" + str(score) + ")",
-				"board": board, "score": score, "player_number": pnum,
-				"current_turn": new_turn, "move_count": new_move_count,
-				"status": new_status, "winner": winner or "",
-				"new_score": new_score,
-			}
+			p2p_data
 		)
 
 	return {
@@ -656,6 +692,10 @@ def action_exchange(a):
 	if not tiles_to_exchange or len(tiles_to_exchange) > 7:
 		a.error(400, "Invalid tiles to exchange")
 		return
+	for ch in tiles_to_exchange.elems():
+		if ch != "_" and (ch < "A" or ch > "Z"):
+			a.error(400, "Invalid tile character")
+			return
 
 	if len(game["bag"]) < 7:
 		a.error(400, "Not enough tiles in bag to exchange")
@@ -779,9 +819,12 @@ def action_validate_word(a):
 	if not word:
 		a.error(400, "Word is required")
 		return
+	if language not in ["en_US", "en_UK"]:
+		a.error(400, "Invalid language")
+		return
 
 	word = word.upper().strip()
-	if len(word) < 2:
+	if len(word) < 2 or len(word) > 15:
 		return {"data": {"valid": False}}
 
 	row = mochi.db.row("select word from dictionary where word=? and language=?", word, language)
@@ -823,36 +866,17 @@ def event_new(e):
 	if not mochi.valid(str(created), "integer"):
 		return
 
-	# The receiver needs their own rack drawn from bag
-	# But we can't send the bag over P2P (it's private state)
-	# The creating server already drew tiles — the receiver's DB gets the game
-	# with an empty rack. The first view will show it.
-	# Actually, the creator should send the receiver's rack in a separate secure manner.
-	# For now, draw tiles locally for this player.
+	# Verify this player is in the game
 	my_id = e.header("to")
-	my_pnum = 0
-	if p1 == my_id:
-		my_pnum = 1
-	elif p2 == my_id:
-		my_pnum = 2
-	elif p3 == my_id:
-		my_pnum = 3
-	elif p4 == my_id:
-		my_pnum = 4
-
-	if my_pnum == 0:
+	if my_id not in [p1, p2, p3, p4]:
 		return
 
-	# Create bag and draw tiles for all players
-	bag = make_bag(language)
-	rack1, bag = draw_tiles(bag, 7)
-	rack2, bag = draw_tiles(bag, 7)
-	rack3 = ""
-	rack4 = ""
-	if player_count >= 3:
-		rack3, bag = draw_tiles(bag, 7)
-	if player_count >= 4:
-		rack4, bag = draw_tiles(bag, 7)
+	# Use bag and racks from the creating server
+	bag = e.content("bag") or ""
+	rack1 = e.content("player1_rack") or ""
+	rack2 = e.content("player2_rack") or ""
+	rack3 = e.content("player3_rack") or ""
+	rack4 = e.content("player4_rack") or ""
 
 	result = mochi.db.execute(
 		"""insert or ignore into games (

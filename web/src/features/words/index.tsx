@@ -382,7 +382,7 @@ export function WordsGameView() {
         words_formed: wordsStr,
       })
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : 'Invalid move')
+      toast.error(getErrorMessage(err, 'Invalid move'))
     }
   }, [game, selectedGame, board, pendingPlacements, moveMutation])
 

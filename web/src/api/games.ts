@@ -22,13 +22,6 @@ export * from './types/games'
 
 const client = createAppClient({ appName: 'words' })
 
-const unwrapData = <T>(raw: unknown): T => {
-  if (raw && typeof raw === 'object' && 'data' in raw) {
-    return (raw as { data: T }).data
-  }
-  return raw as T
-}
-
 export const gamesApi = {
   list: (): Promise<GetGamesResponse> =>
     client
@@ -37,18 +30,16 @@ export const gamesApi = {
 
   detail: (gameId: string) =>
     client
-      .get<GameViewResponse | { data: GameViewResponse }>(
-        endpoints.game.detail(gameId)
-      )
-      .then((res) => unwrapData<GameViewResponse>(res)),
+      .get<{ data: GameViewResponse }>(endpoints.game.detail(gameId))
+      .then((res) => res.data),
 
   messages: (gameId: string, params?: { before?: number; limit?: number }) =>
     client
-      .get<GetMessagesResponse | { data: GetMessagesResponse }>(
+      .get<{ data: GetMessagesResponse }>(
         endpoints.game.messages(gameId),
         { params }
       )
-      .then((res) => unwrapData<GetMessagesResponse>(res)),
+      .then((res) => res.data),
 
   sendMessage: (gameId: string, payload: SendMessageRequest) =>
     client.post<SendMessageResponse>(endpoints.game.send(gameId), payload),
@@ -69,11 +60,11 @@ export const gamesApi = {
 
   create: (opponents: string[], language: string = 'en_US') =>
     client
-      .post<CreateGameResponse | { data: CreateGameResponse }>(endpoints.game.create, {
+      .post<{ data: CreateGameResponse }>(endpoints.game.create, {
         opponents: opponents.join(','),
         language,
       })
-      .then((res) => unwrapData<CreateGameResponse>(res)),
+      .then((res) => res.data),
 
   resign: (gameId: string) =>
     client.post<ResignResponse>(endpoints.game.resign(gameId)),
@@ -83,13 +74,13 @@ export const gamesApi = {
 
   validateWord: (word: string, language: string = 'en_US') =>
     client
-      .get<ValidateWordResponse | { data: ValidateWordResponse }>(endpoints.game.validate, {
+      .get<{ data: ValidateWordResponse }>(endpoints.game.validate, {
         params: { word, language },
       })
-      .then((res) => unwrapData<ValidateWordResponse>(res)),
+      .then((res) => res.data),
 
   checkSubscription: () =>
     client
-      .get<{ data: { exists: boolean } } | { exists: boolean }>('/-/notifications/check')
-      .then((res) => unwrapData<{ exists: boolean }>(res)),
+      .get<{ data: { exists: boolean } }>('/-/notifications/check')
+      .then((res) => res.data),
 }

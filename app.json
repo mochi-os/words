@@ -1,5 +1,5 @@
 {
-	"version": "1.0",
+	"version": "1.1",
 	"label": "app_name",
 	"classes": ["game"],
 	"paths": ["words"],
@@ -9,7 +9,7 @@
 	"execute": ["words.star"],
 
 	"database": {
-		"schema": 2,
+		"schema": 3,
 		"file": "words.db",
 		"create": {"function": "database_create"},
 		"upgrade": {"function": "database_upgrade"}
@@ -39,11 +39,7 @@
 		":game/-/delete": {"function": "action_delete"},
 		":game/assets": {"files": "web/dist/assets"},
 		":game/images": {"files": "web/dist/images"},
-		"-/test_bag": {"function": "action_test_bag"},
-		"-/test_board": {"function": "action_test_board"},
-		"-/test_dictionary": {"function": "action_test_dictionary"},
-		"-/test_game_flow": {"function": "action_test_game_flow"},
-		"-/notifications/subscribe": {"function": "action_notifications_subscribe"},
+"-/notifications/subscribe": {"function": "action_notifications_subscribe"},
 		"-/notifications/check": {"function": "action_notifications_check"},
 		"-/notifications/destinations": {"function": "action_notifications_destinations"}
 	},
