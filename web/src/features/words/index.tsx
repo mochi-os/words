@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from '@tanstack/react-router'
-import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, SubscribeDialog, getAppPath, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common'
+import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, IconButton, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, SubscribeDialog, getAppPath, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common/realtime-shell'
 import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward, MessageCircle } from 'lucide-react'
 import {
   parseBoard,
@@ -524,14 +524,23 @@ export function WordsGameView() {
               <>
                 <div className="shrink-0 mb-3">
                   <ScorePanel game={game} myIdentity={myIdentity}>
-                    <Button variant="ghost" size="icon" className="size-7 shrink-0 md:hidden" onClick={() => setShowMobileChat(true)}>
+                    <IconButton
+                      variant='ghost'
+                      className='size-7 shrink-0 md:hidden'
+                      onClick={() => setShowMobileChat(true)}
+                      label='Open chat panel'
+                    >
                       <MessageCircle className="size-4" />
-                    </Button>
+                    </IconButton>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" size="icon" className="size-7 shrink-0">
+                        <IconButton
+                          variant='ghost'
+                          className='size-7 shrink-0'
+                          label='Open game actions'
+                        >
                           <MoreHorizontal className="size-4" />
-                        </Button>
+                        </IconButton>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end" className="w-48">
                         {game.status === 'active' ? (
