@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from '@tanstack/react-router'
-import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, SubscribeDialog, getAppPath, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common'
+import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, shellSubscribeNotifications, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common'
 import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward, MessageCircle } from 'lucide-react'
 import {
   parseBoard,
@@ -39,8 +39,6 @@ export function WordsGameView() {
   const [newMessage, setNewMessage] = useState('')
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
-  const [subscribeOpen, setSubscribeOpen] = useState(false)
-
   // Tile placement state
   const [selectedRackIndex, setSelectedRackIndex] = useState<number | null>(null)
   const [pendingPlacements, setPendingPlacements] = useState<Placement[]>([])
@@ -205,7 +203,9 @@ export function WordsGameView() {
 
   useEffect(() => {
     if (subscriptionData?.exists === false) {
-      setSubscribeOpen(true)
+      shellSubscribeNotifications('words', [
+        { label: 'Words moves & messages', type: '', defaultEnabled: true },
+      ]).then(() => refetchSubscription())
     }
   }, [subscriptionData?.exists])
 
@@ -793,14 +793,6 @@ export function WordsGameView() {
         </AlertDialogContent>
       </AlertDialog>
 
-      <SubscribeDialog
-        open={subscribeOpen}
-        onOpenChange={setSubscribeOpen}
-        app='words'
-        label='Words moves & messages'
-        appBase={getAppPath()}
-        onResult={() => refetchSubscription()}
-      />
     </>
   )
 }
