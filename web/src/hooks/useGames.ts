@@ -24,6 +24,7 @@ import {
   type ExchangeResponse,
   type ResignResponse,
   type DeleteResponse,
+  type ValidateWordResponse,
 } from '@/api/games'
 
 export const gameKeys = {
@@ -32,6 +33,23 @@ export const gameKeys = {
   messages: (gameId: string) => ['games', gameId, 'messages'] as const,
   newGame: () => ['games', 'new'] as const,
 }
+
+const WORD_VALIDATION_STALE_TIME = 10 * 60 * 1000
+
+export const wordValidationKeys = {
+  all: () => ['words', 'validate'] as const,
+  detail: (language: string, word: string) =>
+    ['words', 'validate', language, word.toUpperCase()] as const,
+}
+
+export const getValidateWordQueryOptions = (
+  word: string,
+  language = 'en_US'
+) => ({
+  queryKey: wordValidationKeys.detail(language, word),
+  queryFn: () => gamesApi.validateWord(word, language),
+  staleTime: WORD_VALIDATION_STALE_TIME,
+})
 
 export const useGameDetailQuery = (
   gameId?: string,
@@ -72,6 +90,32 @@ export const useGamesQuery = (
     queryKey: gameKeys.all(),
     queryFn: () => gamesApi.list(),
     refetchInterval: 30000,
+    ...options,
+  })
+
+export const useValidateWordQuery = (
+  word?: string,
+  language = 'en_US',
+  options?: Omit<
+    UseQueryOptions<
+      ValidateWordResponse,
+      Error,
+      ValidateWordResponse,
+      ReturnType<typeof wordValidationKeys.detail>
+    >,
+    'queryKey' | 'queryFn'
+  >
+) =>
+  useQueryWithError({
+    queryKey: wordValidationKeys.detail(language, word ?? ''),
+    enabled: Boolean(word) && (options?.enabled ?? true),
+    staleTime: WORD_VALIDATION_STALE_TIME,
+    queryFn: () => {
+      if (!word) {
+        throw new Error('Word is required')
+      }
+      return gamesApi.validateWord(word, language)
+    },
     ...options,
   })
 

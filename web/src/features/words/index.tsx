@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useQueryClient } from '@tanstack/react-query'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, IconButton, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, SubscribeDialog, getAppPath, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common/realtime-shell'
 import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward, MessageCircle } from 'lucide-react'
 import {
   parseBoard,
   serializeBoard,
-  validateAndScoreMove,
   type Placement,
 } from '@/lib/words-engine'
 import { useSidebarContext } from '@/context/sidebar-context'
@@ -13,6 +13,7 @@ import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
 import { gamesApi } from '@/api/games'
 import {
+  getValidateWordQueryOptions,
   useInfiniteMessagesQuery,
   useGamesQuery,
   useSendMessageMutation,
@@ -28,13 +29,24 @@ import { GameEmptyState } from './components/game-empty-state'
 import { WordsBoard } from './components/words-board'
 import { TileRack } from './components/tile-rack'
 import { ScorePanel } from './components/score-panel'
+import { MoveComposer } from './components/move-composer'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
+import {
+  createDraftSignature,
+  deriveMoveDraft,
+  getUniqueDraftWords,
+  hasInvalidValidatedWords,
+  resolveMoveDraftStatus,
+  shouldApplyValidationResult,
+  type DraftWordValidationState,
+} from './lib/move-draft'
 
 export function WordsGameView() {
   usePageTitle('Words')
 
   const navigate = useNavigate()
+  const queryClient = useQueryClient()
   const { openNewGameDialog, setWebsocketStatus } = useSidebarContext()
   const [newMessage, setNewMessage] = useState('')
   const [showResignDialog, setShowResignDialog] = useState(false)
@@ -61,6 +73,11 @@ export function WordsGameView() {
   const [blankPromptOpen, setBlankPromptOpen] = useState(false)
   const [pendingBlankCell, setPendingBlankCell] = useState<{ row: number; col: number } | null>(null)
   const [pendingBlankRackIndex, setPendingBlankRackIndex] = useState<number | null>(null)
+
+  const [wordValidationState, setWordValidationState] = useState<Record<string, DraftWordValidationState>>({})
+  const [isValidationChecking, setIsValidationChecking] = useState(false)
+  const [validationUnavailable, setValidationUnavailable] = useState(false)
+  const activeDraftSignatureRef = useRef('')
 
   const {
     identity: currentUserIdentity,
@@ -122,6 +139,125 @@ export function WordsGameView() {
     if (!game?.board) return parseBoard('')
     return parseBoard(game.board)
   }, [game?.board])
+
+  const moveDraftBase = useMemo(
+    () => deriveMoveDraft(board, pendingPlacements),
+    [board, pendingPlacements]
+  )
+
+  const draftWords = useMemo(
+    () =>
+      moveDraftBase.status === 'ready'
+        ? moveDraftBase.result.wordsFormed.map((entry) => ({
+            word: entry.word,
+            score: entry.score,
+          }))
+        : [],
+    [moveDraftBase]
+  )
+
+  const draftScore = moveDraftBase.status === 'ready' ? moveDraftBase.result.totalScore : 0
+
+  const draftErrorMessage =
+    moveDraftBase.status === 'invalid_local' ? moveDraftBase.errorMessage : null
+
+  const uniqueDraftWords = useMemo(
+    () =>
+      moveDraftBase.status === 'ready'
+        ? getUniqueDraftWords(moveDraftBase.result.wordsFormed)
+        : [],
+    [moveDraftBase]
+  )
+
+  useEffect(() => {
+    if (exchangeMode || moveDraftBase.status !== 'ready') {
+      activeDraftSignatureRef.current = ''
+      setWordValidationState({})
+      setIsValidationChecking(false)
+      setValidationUnavailable(false)
+      return
+    }
+
+    const validationLanguage = game?.language ?? 'en_US'
+    const signature = createDraftSignature(game?.board ?? '', pendingPlacements)
+    activeDraftSignatureRef.current = signature
+
+    if (uniqueDraftWords.length === 0) {
+      setWordValidationState({})
+      setIsValidationChecking(false)
+      setValidationUnavailable(false)
+      return
+    }
+
+    const initialValidationState = Object.fromEntries(
+      uniqueDraftWords.map((word) => [word, 'checking' as const])
+    )
+    setWordValidationState(initialValidationState)
+    setIsValidationChecking(true)
+    setValidationUnavailable(false)
+
+    let cancelled = false
+    const timer = setTimeout(() => {
+      void (async () => {
+        const nextValidationState: Record<string, DraftWordValidationState> = {}
+        let hasValidationError = false
+
+        await Promise.all(
+          uniqueDraftWords.map(async (word) => {
+            try {
+              const response = await queryClient.fetchQuery(
+                getValidateWordQueryOptions(word, validationLanguage)
+              )
+              nextValidationState[word] = response.valid ? 'valid' : 'invalid'
+            } catch {
+              hasValidationError = true
+              nextValidationState[word] = 'unknown'
+            }
+          })
+        )
+
+        if (cancelled) return
+        if (
+          !shouldApplyValidationResult(activeDraftSignatureRef.current, signature)
+        ) {
+          return
+        }
+
+        setWordValidationState(nextValidationState)
+        setValidationUnavailable(hasValidationError)
+        setIsValidationChecking(false)
+      })()
+    }, 350)
+
+    return () => {
+      cancelled = true
+      clearTimeout(timer)
+    }
+  }, [
+    exchangeMode,
+    game?.board,
+    game?.language,
+    moveDraftBase,
+    pendingPlacements,
+    queryClient,
+    uniqueDraftWords,
+  ])
+
+  const hasInvalidWords =
+    moveDraftBase.status === 'ready'
+      ? hasInvalidValidatedWords(moveDraftBase.result.wordsFormed, wordValidationState)
+      : false
+
+  const moveDraftStatus = useMemo(
+    () =>
+      resolveMoveDraftStatus({
+        baseStatus: moveDraftBase.status,
+        hasInvalidWords,
+        hasValidationUnavailable: validationUnavailable,
+        isValidationChecking,
+      }),
+    [hasInvalidWords, isValidationChecking, moveDraftBase.status, validationUnavailable]
+  )
 
   // Messages
   const messagesQuery = useInfiniteMessagesQuery(selectedGame?.id)
@@ -397,24 +533,20 @@ export function WordsGameView() {
 
   // Submit move
   const handleSubmitMove = useCallback(() => {
-    if (!game || !selectedGame || pendingPlacements.length === 0) return
+    if (!game || !selectedGame || moveDraftBase.status !== 'ready') return
 
-    try {
-      const result = validateAndScoreMove(board, pendingPlacements)
-      const newBoardStr = serializeBoard(result.newBoard)
-      const wordsStr = result.wordsFormed.map((w) => w.word).join(', ')
+    const result = moveDraftBase.result
+    const newBoardStr = serializeBoard(result.newBoard)
+    const wordsStr = result.wordsFormed.map((word) => word.word).join(', ')
 
-      moveMutation.mutate({
-        gameId: selectedGame.id,
-        board: newBoardStr,
-        score: result.totalScore,
-        tiles_used: result.tilesUsed,
-        words_formed: wordsStr,
-      })
-    } catch (err) {
-      toast.error(getErrorMessage(err, 'Invalid move'))
-    }
-  }, [game, selectedGame, board, pendingPlacements, moveMutation])
+    moveMutation.mutate({
+      gameId: selectedGame.id,
+      board: newBoardStr,
+      score: result.totalScore,
+      tiles_used: result.tilesUsed,
+      words_formed: wordsStr,
+    })
+  }, [game, moveDraftBase, moveMutation, selectedGame])
 
   // Pass
   const handlePass = useCallback(() => {
@@ -445,6 +577,13 @@ export function WordsGameView() {
       return next
     })
   }, [])
+
+  const canRecallMove = isMyTurn && pendingPlacements.length > 0 && !moveMutation.isPending
+  const canSubmitMove =
+    isMyTurn &&
+    !exchangeMode &&
+    moveDraftBase.status === 'ready' &&
+    !moveMutation.isPending
 
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault()
@@ -600,10 +739,10 @@ export function WordsGameView() {
                   onDragEnd={handleDragEnd}
                 />
 
-                {/* Tile rack + action buttons */}
+                {/* Tile rack + move composer */}
                 {game.status === 'active' && (
-                  <div className="shrink-0 mt-1 flex justify-center">
-                    <div className="relative">
+                  <div className="shrink-0 mt-1 flex w-full justify-center">
+                    <div className="w-full max-w-[min(100%,36rem)]">
                       <TileRack
                         tiles={rackTiles}
                         selectedIndex={exchangeMode ? null : selectedRackIndex}
@@ -622,56 +761,30 @@ export function WordsGameView() {
                         isDragging={dragSource !== null}
                         onDropOnRack={handleDropOnRack}
                       />
-                      <div className="absolute left-full top-1/2 -translate-y-1/2 flex items-center gap-1 pl-2">
-                        {isMyTurn && exchangeMode && (
-                          <>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => {
-                                setExchangeMode(false)
-                                setExchangeSelected(new Set())
-                              }}
-                            >
-                              Cancel
-                            </Button>
-                            <Button
-                              size="sm"
-                              onClick={handleExchangeConfirm}
-                              disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}
-                            >
-                              {exchangeMutation.isPending ? (
-                                <Loader2 className="mr-1 size-3 animate-spin" />
-                              ) : (
-                                <ArrowLeftRight className="mr-1 size-3" />
-                              )}
-                              Exchange {exchangeSelected.size > 0 ? `(${exchangeSelected.size})` : ''}
-                            </Button>
-                          </>
-                        )}
 
-                        {isMyTurn && !exchangeMode && pendingPlacements.length > 0 && (
-                          <>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={handleRecall}
-                            >
-                              Recall
-                            </Button>
-                            <Button
-                              size="sm"
-                              onClick={handleSubmitMove}
-                              disabled={moveMutation.isPending}
-                            >
-                              {moveMutation.isPending && (
-                                <Loader2 className="mr-1 size-3 animate-spin" />
-                              )}
-                              Submit
-                            </Button>
-                          </>
-                        )}
-                      </div>
+                      <MoveComposer
+                        isMyTurn={isMyTurn}
+                        draftStatus={moveDraftStatus}
+                        totalScore={draftScore}
+                        words={draftWords}
+                        wordValidationState={wordValidationState}
+                        localErrorMessage={draftErrorMessage}
+                        validationUnavailable={validationUnavailable}
+                        showMoveActions={!exchangeMode}
+                        canRecall={canRecallMove}
+                        canSubmit={canSubmitMove}
+                        isSubmitting={moveMutation.isPending}
+                        onRecall={handleRecall}
+                        onSubmit={handleSubmitMove}
+                        showExchangeActions={isMyTurn && exchangeMode}
+                        exchangeCount={exchangeSelected.size}
+                        isExchanging={exchangeMutation.isPending}
+                        onCancelExchange={() => {
+                          setExchangeMode(false)
+                          setExchangeSelected(new Set())
+                        }}
+                        onConfirmExchange={handleExchangeConfirm}
+                      />
                     </div>
                   </div>
                 )}
