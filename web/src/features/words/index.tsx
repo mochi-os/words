@@ -582,7 +582,7 @@ export function WordsGameView() {
   const canSubmitMove =
     isMyTurn &&
     !exchangeMode &&
-    moveDraftBase.status === 'ready' &&
+    (moveDraftStatus === 'ready' || moveDraftStatus === 'ready_with_invalid_words' || moveDraftStatus === 'validation_unavailable') &&
     !moveMutation.isPending
 
   const handleSendMessage = (e: React.FormEvent) => {
