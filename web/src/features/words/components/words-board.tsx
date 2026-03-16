@@ -259,7 +259,7 @@ export function WordsBoard({
 
                 {isValidTarget && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-[30%] h-[30%] rounded-full bg-black/20 dark:bg-white/20" />
+                    <div className="w-[30%] h-[30%] rounded-full bg-emerald-500/30" />
                   </div>
                 )}
 
