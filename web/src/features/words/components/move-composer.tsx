@@ -282,7 +282,7 @@ function getStatusBadgeClass(status: MoveDraftStatus): string {
 
 function getStatusLabel(status: MoveDraftStatus, isMyTurn: boolean): string {
   if (!isMyTurn && status === 'empty') {
-    return 'Waiting for turn'
+    return 'Waiting for your turn'
   }
 
   switch (status) {
