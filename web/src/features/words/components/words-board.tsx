@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef } from 'react'
-import { cn } from '@mochi/common'
+import { cn } from '@mochi/web'
 import {
   BOARD_SIZE,
   getPremium,
