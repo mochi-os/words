@@ -1,4 +1,4 @@
-import { cn } from '@mochi/common'
+import { cn } from '@mochi/web'
 import type { Game } from '@/api/games'
 
 interface ScorePanelProps {

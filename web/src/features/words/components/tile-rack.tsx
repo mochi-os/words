@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { cn } from '@mochi/common'
+import { cn } from '@mochi/web'
 import { getLetterValue } from '@/lib/words-engine'
 
 interface TileRackProps {

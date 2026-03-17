@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
   cn,
-} from '@mochi/common'
+} from '@mochi/web'
 import {
   AlertTriangle,
   ArrowLeftRight,
