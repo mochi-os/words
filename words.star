@@ -144,15 +144,7 @@ def database_create():
 	load_dictionary("en_UK", "dictionaries/en_UK.txt")
 
 def database_upgrade(to_version):
-	if to_version == 2:
-		# Re-load dictionaries (fix: str() was missing on file.read bytes)
-		load_dictionary("en_US", "dictionaries/en_US.txt")
-		load_dictionary("en_UK", "dictionaries/en_UK.txt")
-	if to_version == 3:
-		mochi.db.execute("create index if not exists games_player1 on games( player1 )")
-		mochi.db.execute("create index if not exists games_player2 on games( player2 )")
-		mochi.db.execute("create index if not exists games_player3 on games( player3 )")
-		mochi.db.execute("create index if not exists games_player4 on games( player4 )")
+	pass
 
 def load_dictionary(language, filename):
 	"""Load a word list file into the dictionary table."""
