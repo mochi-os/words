@@ -138,7 +138,7 @@ export function WordsBoard({
   return (
     <div
       className="mx-auto w-full"
-      style={{ maxWidth: 'min(100%, calc(100dvh - 178px))' }}
+      style={{ maxWidth: 'min(100cqw, 100cqh)' }}
     >
       <div
         ref={gridRef}

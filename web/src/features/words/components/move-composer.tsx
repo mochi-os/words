@@ -144,7 +144,7 @@ export function MoveComposer({
 
         {/* Word list */}
         {showWordList ? (
-          <ul className="space-y-1.5" aria-label="Words formed">
+          <ul className="space-y-1.5 max-h-24 overflow-y-auto" aria-label="Words formed">
             {words.map(({ word, score }) => {
               const normalizedWord = word.toUpperCase()
               const validationState =

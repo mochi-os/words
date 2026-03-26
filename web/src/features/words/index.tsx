@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, IconButton, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, shellSubscribeNotifications, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/web'
-import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward, MessageCircle } from 'lucide-react'
+import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward, MessageCircle, CheckCircle2, XCircle } from 'lucide-react'
 import {
   parseBoard,
   serializeBoard,
@@ -29,7 +29,7 @@ import { GameEmptyState } from './components/game-empty-state'
 import { WordsBoard } from './components/words-board'
 import { TileRack } from './components/tile-rack'
 import { ScorePanel } from './components/score-panel'
-import { MoveComposer } from './components/move-composer'
+import { cn } from '@mochi/web'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
 import {
@@ -656,12 +656,12 @@ export function WordsGameView() {
       <div className="flex h-full flex-col overflow-hidden">
         <Main className="flex min-h-0 flex-1 overflow-hidden">
           {/* Left: Board + rack */}
-          <div className="flex flex-1 flex-col overflow-y-auto px-2 sm:px-4 pb-2">
+          <div className="flex flex-1 flex-col px-2 sm:px-4 pb-2 min-h-0">
             {isLoadingDetail ? (
               <Skeleton className="aspect-square max-w-[600px] w-full mx-auto" />
             ) : game ? (
               <>
-                <div className="shrink-0 mb-3">
+                <div className="shrink-0 mb-1">
                   <ScorePanel game={game} myIdentity={myIdentity}>
                     <IconButton
                       variant='ghost'
@@ -725,19 +725,21 @@ export function WordsGameView() {
                   </ScorePanel>
                 </div>
 
-                <WordsBoard
-                  board={board}
-                  pendingPlacements={pendingPlacements}
-                  selectedRackIndex={selectedRackIndex}
-                  isMyTurn={isMyTurn}
-                  gameStatus={game.status}
-                  onCellClick={handleCellClick}
-                  onRemovePlacement={handleRemovePlacement}
-                  dragSource={dragSource}
-                  onDrop={handleDrop}
-                  onBoardDragStart={handleBoardDragStart}
-                  onDragEnd={handleDragEnd}
-                />
+                <div className="flex-1 min-h-0" style={{ containerType: 'size' }}>
+                  <WordsBoard
+                    board={board}
+                    pendingPlacements={pendingPlacements}
+                    selectedRackIndex={selectedRackIndex}
+                    isMyTurn={isMyTurn}
+                    gameStatus={game.status}
+                    onCellClick={handleCellClick}
+                    onRemovePlacement={handleRemovePlacement}
+                    dragSource={dragSource}
+                    onDrop={handleDrop}
+                    onBoardDragStart={handleBoardDragStart}
+                    onDragEnd={handleDragEnd}
+                  />
+                </div>
 
                 {/* Tile rack + move composer */}
                 {game.status === 'active' && (
@@ -762,29 +764,54 @@ export function WordsGameView() {
                         onDropOnRack={handleDropOnRack}
                       />
 
-                      <MoveComposer
-                        isMyTurn={isMyTurn}
-                        draftStatus={moveDraftStatus}
-                        totalScore={draftScore}
-                        words={draftWords}
-                        wordValidationState={wordValidationState}
-                        localErrorMessage={draftErrorMessage}
-                        validationUnavailable={validationUnavailable}
-                        showMoveActions={!exchangeMode}
-                        canRecall={canRecallMove}
-                        canSubmit={canSubmitMove}
-                        isSubmitting={moveMutation.isPending}
-                        onRecall={handleRecall}
-                        onSubmit={handleSubmitMove}
-                        showExchangeActions={isMyTurn && exchangeMode}
-                        exchangeCount={exchangeSelected.size}
-                        isExchanging={exchangeMutation.isPending}
-                        onCancelExchange={() => {
-                          setExchangeMode(false)
-                          setExchangeSelected(new Set())
-                        }}
-                        onConfirmExchange={handleExchangeConfirm}
-                      />
+                      {/* Action bar */}
+                      <div className="flex items-center gap-2 pt-1 h-8">
+                        {exchangeMode ? (
+                          <>
+                            <Button variant="outline" size="sm" onClick={() => { setExchangeMode(false); setExchangeSelected(new Set()) }}>
+                              Cancel
+                            </Button>
+                            <div className="flex-1" />
+                            <Button size="sm" onClick={handleExchangeConfirm} disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}>
+                              {exchangeMutation.isPending && <Loader2 className="size-3 animate-spin" />}
+                              Exchange{exchangeSelected.size > 0 ? ` (${exchangeSelected.size})` : ''}
+                            </Button>
+                          </>
+                        ) : pendingPlacements.length > 0 ? (
+                          <>
+                            <Button variant="outline" size="sm" onClick={handleRecall} disabled={!canRecallMove}>
+                              Recall
+                            </Button>
+                            <div className="flex-1 flex items-center gap-2 min-w-0 text-sm">
+                              {draftErrorMessage ? (
+                                <span className="text-destructive text-xs truncate">{draftErrorMessage}</span>
+                              ) : draftWords.length > 0 ? (
+                                <>
+                                  <div className="flex items-center gap-1.5 min-w-0 overflow-hidden">
+                                    {draftWords.map(({ word, score }) => {
+                                      const state = wordValidationState[word.toUpperCase()] ?? 'unknown'
+                                      return (
+                                        <span key={word} className={cn('inline-flex items-center gap-0.5 shrink-0 text-xs', state === 'invalid' && 'text-destructive')}>
+                                          {state === 'valid' && <CheckCircle2 className="size-3 text-emerald-500" />}
+                                          {state === 'invalid' && <XCircle className="size-3" />}
+                                          {state === 'checking' && <Loader2 className="size-3 animate-spin text-muted-foreground" />}
+                                          <span className="font-semibold tracking-wide">{word.toUpperCase()}</span>
+                                          <span className="text-muted-foreground">+{score}</span>
+                                        </span>
+                                      )
+                                    })}
+                                  </div>
+                                  <span className="ml-auto shrink-0 text-base font-bold tabular-nums">{draftScore}</span>
+                                </>
+                              ) : null}
+                            </div>
+                            <Button size="sm" onClick={handleSubmitMove} disabled={!canSubmitMove}>
+                              {moveMutation.isPending && <Loader2 className="size-3 animate-spin" />}
+                              Submit
+                            </Button>
+                          </>
+                        ) : null}
+                      </div>
                     </div>
                   </div>
                 )}
