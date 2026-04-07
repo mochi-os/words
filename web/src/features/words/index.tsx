@@ -1,7 +1,38 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import { useNavigate, useParams } from '@tanstack/react-router'
-import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, IconButton, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, shellSubscribeNotifications, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/web'
+import {
+  useAuthStore,
+  usePageTitle,
+  useQueryWithError,
+  PageHeader,
+  Main,
+  GeneralError,
+  GameHeader,
+  GameHeaderStat,
+  ConfirmDialog,
+  Button,
+  IconButton,
+  getErrorMessage,
+  toast,
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  Skeleton,
+  shellSubscribeNotifications,
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  cn,
+} from '@mochi/web'
 import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward, MessageCircle, CheckCircle2, XCircle } from 'lucide-react'
 import {
   parseBoard,
@@ -28,10 +59,9 @@ import {
 import { GameEmptyState } from './components/game-empty-state'
 import { WordsBoard } from './components/words-board'
 import { TileRack } from './components/tile-rack'
-import { ScorePanel } from './components/score-panel'
-import { cn } from '@mochi/web'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
+import { getWordsHeaderModel } from './lib/header-model'
 import {
   createDraftSignature,
   deriveMoveDraft,
@@ -585,6 +615,11 @@ export function WordsGameView() {
     (moveDraftStatus === 'ready' || moveDraftStatus === 'ready_with_invalid_words' || moveDraftStatus === 'validation_unavailable') &&
     !moveMutation.isPending
 
+  const headerModel = useMemo(
+    () => (game ? getWordsHeaderModel(game, myIdentity) : null),
+    [game, myIdentity]
+  )
+
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault()
     if (!selectedGame) return
@@ -661,71 +696,106 @@ export function WordsGameView() {
               <Skeleton className="aspect-square max-w-[600px] w-full mx-auto" />
             ) : game ? (
               <>
-                <div className="shrink-0 mb-1">
-                  <ScorePanel game={game} myIdentity={myIdentity}>
-                    <IconButton
-                      variant='ghost'
-                      className='size-7 shrink-0 md:hidden'
-                      onClick={() => setShowMobileChat(true)}
-                      label='Open chat panel'
-                    >
-                      <MessageCircle className="size-4" />
-                    </IconButton>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <IconButton
-                          variant='ghost'
-                          className='size-7 shrink-0'
-                          label='Open game actions'
-                        >
-                          <MoreHorizontal className="size-4" />
-                        </IconButton>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end" className="w-48">
-                        {game.status === 'active' ? (
-                          <>
-                            {isMyTurn && (
-                              <DropdownMenuItem onClick={handleShuffle}>
-                                <Shuffle className="mr-2 size-4" /> Shuffle rack
-                              </DropdownMenuItem>
-                            )}
-                            {isMyTurn && pendingPlacements.length === 0 && (
-                              <DropdownMenuItem onClick={handlePass} disabled={passMutation.isPending}>
-                                <SkipForward className="mr-2 size-4" /> Pass
-                              </DropdownMenuItem>
-                            )}
-                            {isMyTurn && (
-                              <DropdownMenuItem
-                                onClick={() => {
-                                  handleRecall()
-                                  setExchangeMode(!exchangeMode)
-                                  setExchangeSelected(new Set())
-                                }}
+                <div className="shrink-0">
+                  {headerModel ? (
+                    <GameHeader
+                      variant='strip'
+                      myTurn={game.status === 'active' ? isMyTurn : undefined}
+                      title={headerModel.title}
+                      status={headerModel.status}
+                      stats={
+                        <>
+                          {headerModel.players.map((player) => (
+                            <GameHeaderStat
+                              key={player.playerNumber}
+                              label={player.label}
+                              value={player.score}
+                              className={cn(player.isCurrentTurn && 'bg-primary/15 text-foreground')}
+                              labelClassName={cn(
+                                player.isMe && 'font-semibold underline underline-offset-2'
+                              )}
+                            />
+                          ))}
+                          <GameHeaderStat
+                            label={headerModel.tilesLeftLabel}
+                            labelClassName='max-w-none truncate-none text-muted-foreground'
+                          />
+                        </>
+                      }
+                      actions={
+                        <>
+                          <IconButton
+                            variant='ghost'
+                            className='size-11 shrink-0 min-[900px]:hidden'
+                            onClick={() => setShowMobileChat(true)}
+                            label='Open chat panel'
+                          >
+                            <MessageCircle className='size-4' />
+                          </IconButton>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <IconButton
+                                variant='ghost'
+                                className='size-11 shrink-0 min-[900px]:size-9'
+                                label='Open game actions'
                               >
-                                <ArrowLeftRight className="mr-2 size-4" />
-                                {exchangeMode ? 'Cancel exchange' : 'Exchange tiles'}
-                              </DropdownMenuItem>
-                            )}
-                            <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                              <Flag className="mr-2 size-4" /> Resign
-                            </DropdownMenuItem>
-                          </>
-                        ) : (
-                          <>
-                            <DropdownMenuItem onClick={handleRematch} disabled={rematchMutation.isPending}>
-                              <RotateCcw className="mr-2 size-4" /> Rematch
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={handleDelete}>
-                              <Trash2 className="mr-2 size-4" /> Delete game
-                            </DropdownMenuItem>
-                          </>
-                        )}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </ScorePanel>
+                                <MoreHorizontal className='size-4' />
+                              </IconButton>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align='end' className='w-48'>
+                              {game.status === 'active' ? (
+                                <>
+                                  {isMyTurn && (
+                                    <DropdownMenuItem onClick={handleShuffle}>
+                                      <Shuffle className='mr-2 size-4' /> Shuffle rack
+                                    </DropdownMenuItem>
+                                  )}
+                                  {isMyTurn && pendingPlacements.length === 0 && (
+                                    <DropdownMenuItem
+                                      onClick={handlePass}
+                                      disabled={passMutation.isPending}
+                                    >
+                                      <SkipForward className='mr-2 size-4' /> Pass
+                                    </DropdownMenuItem>
+                                  )}
+                                  {isMyTurn && (
+                                    <DropdownMenuItem
+                                      onClick={() => {
+                                        handleRecall()
+                                        setExchangeMode(!exchangeMode)
+                                        setExchangeSelected(new Set())
+                                      }}
+                                    >
+                                      <ArrowLeftRight className='mr-2 size-4' />
+                                      {exchangeMode ? 'Cancel exchange' : 'Exchange tiles'}
+                                    </DropdownMenuItem>
+                                  )}
+                                  <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
+                                    <Flag className='mr-2 size-4' /> Resign
+                                  </DropdownMenuItem>
+                                </>
+                              ) : (
+                                <>
+                                  <DropdownMenuItem
+                                    onClick={handleRematch}
+                                    disabled={rematchMutation.isPending}
+                                  >
+                                    <RotateCcw className='mr-2 size-4' /> Rematch
+                                  </DropdownMenuItem>
+                                  <DropdownMenuItem onClick={handleDelete}>
+                                    <Trash2 className='mr-2 size-4' /> Delete game
+                                  </DropdownMenuItem>
+                                </>
+                              )}
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </>
+                      }
+                    />
+                  ) : null}
                 </div>
 
-                <div className="flex-1 min-h-0" style={{ containerType: 'size' }}>
+                <div className="flex-1 min-h-0 mt-3" style={{ containerType: 'size' }}>
                   <WordsBoard
                     board={board}
                     pendingPlacements={pendingPlacements}
@@ -820,7 +890,7 @@ export function WordsGameView() {
           </div>
 
           {/* Right: Chat sidebar */}
-          <div className="hidden md:flex w-72 lg:w-80 flex-col border-l">
+          <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-l">
             <div className="border-b px-3 py-2">
               <h3 className="text-sm font-medium">Chat</h3>
             </div>
@@ -874,38 +944,25 @@ export function WordsGameView() {
       </Sheet>
 
       {/* Resign confirmation */}
-      <AlertDialog
+      <ConfirmDialog
         open={showResignDialog}
         onOpenChange={setShowResignDialog}
-      >
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Resign game?</AlertDialogTitle>
-            <AlertDialogDescription>
-              Are you sure you want to resign?
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel disabled={resignMutation.isPending}>
-              Cancel
-            </AlertDialogCancel>
-            <AlertDialogAction
-              variant="destructive"
-              onClick={handleResign}
-              disabled={resignMutation.isPending}
-            >
-              {resignMutation.isPending ? (
-                <>
-                  <Loader2 className="mr-2 size-4 animate-spin" />
-                  Resigning...
-                </>
-              ) : (
-                'Resign'
-              )}
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+        title='Resign game?'
+        desc='Are you sure you want to resign?'
+        confirmText={
+          resignMutation.isPending ? (
+            <>
+              <Loader2 className="mr-2 size-4 animate-spin" />
+              Resigning...
+            </>
+          ) : (
+            'Resign'
+          )
+        }
+        destructive
+        handleConfirm={handleResign}
+        isLoading={resignMutation.isPending}
+      />
 
       {/* Blank tile letter selection */}
       <AlertDialog
