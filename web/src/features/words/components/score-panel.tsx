@@ -48,11 +48,11 @@ export function ScorePanel({ game, myIdentity, children }: ScorePanelProps) {
             key={num}
             className={cn(
               'flex items-center gap-1.5 rounded-md px-2 py-0.5 text-sm',
-              isTurn && 'bg-blue-100 dark:bg-blue-900/40',
+              isTurn && 'bg-primary/10 dark:bg-primary/20',
             )}
           >
             {isTurn && (
-              <span className="h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             )}
             <span className={cn(
               'font-medium truncate max-w-[100px]',

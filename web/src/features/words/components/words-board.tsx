@@ -13,7 +13,7 @@ import {
 const PREMIUM_STYLES: Record<PremiumType, { bg: string; label: string; textColor: string }> = {
   'TW': { bg: 'bg-red-300 dark:bg-red-900/50', label: 'TW', textColor: 'text-red-500 dark:text-red-400' },
   'DW': { bg: 'bg-rose-200 dark:bg-rose-900/40', label: 'DW', textColor: 'text-rose-400 dark:text-rose-500' },
-  'TL': { bg: 'bg-blue-200 dark:bg-blue-900/40', label: 'TL', textColor: 'text-blue-400 dark:text-blue-400' },
+  'TL': { bg: 'bg-primary/20 dark:bg-primary/30', label: 'TL', textColor: 'text-primary' },
   'DL': { bg: 'bg-sky-200 dark:bg-sky-900/40', label: 'DL', textColor: 'text-sky-400 dark:text-sky-400' },
   'ST': { bg: 'bg-rose-200 dark:bg-rose-900/40', label: '', textColor: 'text-rose-400 dark:text-rose-500' },
   '.': { bg: '', label: '', textColor: '' },
