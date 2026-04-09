@@ -100,13 +100,13 @@ export function TileRack({
               'relative flex h-10 w-10 items-center justify-center rounded border-2 text-base font-bold transition-all select-none',
               hasTile && 'bg-amber-100 dark:bg-amber-900/60 border-amber-300 dark:border-amber-700',
               !hasTile && 'bg-transparent border-dashed border-gray-300 dark:border-gray-700',
-              isSelected && !exchangeMode && 'ring-2 ring-blue-500 border-blue-500 scale-110',
+              isSelected && !exchangeMode && 'ring-2 ring-primary border-primary scale-110',
               isExchangeSelected && 'ring-2 ring-red-500 border-red-500 opacity-60',
               hasTile && !disabled && !exchangeMode && 'cursor-grab hover:scale-105',
               hasTile && !disabled && exchangeMode && 'cursor-pointer hover:scale-105',
               disabled && 'opacity-50 cursor-default',
               isSlotDragging && 'opacity-40',
-              isDropSlot && 'border-l-blue-500 border-l-4',
+              isDropSlot && 'border-l-primary border-l-4',
             )}
             onClick={() => {
               if (!hasTile || disabled) return
