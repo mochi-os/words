@@ -116,6 +116,16 @@ export function TileRack({
                 onSelectTile(i)
               }
             }}
+            onKeyDown={(e) => {
+              if ((e.key === 'Enter' || e.key === ' ') && hasTile && !disabled) {
+                e.preventDefault()
+                if (exchangeMode && onToggleExchange) {
+                  onToggleExchange(i)
+                } else {
+                  onSelectTile(i)
+                }
+              }
+            }}
           >
             {hasTile && (
               <>

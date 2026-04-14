@@ -979,7 +979,13 @@ export function WordsGameView() {
           }
         }}
       >
-        <AlertDialogContent>
+        <AlertDialogContent
+          onOpenAutoFocus={(e) => {
+            e.preventDefault()
+            const firstBtn = (e.currentTarget as HTMLElement).querySelector<HTMLButtonElement>('.grid button')
+            firstBtn?.focus()
+          }}
+        >
           <AlertDialogHeader>
             <AlertDialogTitle>Choose a letter</AlertDialogTitle>
           </AlertDialogHeader>

@@ -230,6 +230,13 @@ export function WordsBoard({
                     onCellClick(row, col)
                   }
                 }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    if (canClickToRemove) onRemovePlacement(row, col)
+                    else if (canClickToPlace) onCellClick(row, col)
+                  }
+                }}
                 onDragOver={(e) => {
                   if (canAcceptDrop) {
                     e.preventDefault()
