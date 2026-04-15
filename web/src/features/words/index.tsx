@@ -4,7 +4,6 @@ import { useNavigate, useParams } from '@tanstack/react-router'
 import {
   useAuthStore,
   usePageTitle,
-  useQueryWithError,
   PageHeader,
   Main,
   GeneralError,
@@ -42,7 +41,6 @@ import {
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
-import { gamesApi } from '@/api/games'
 import {
   getValidateWordQueryOptions,
   useInfiniteMessagesQuery,
@@ -360,20 +358,12 @@ export function WordsGameView() {
     setWebsocketStatus(status, retries)
   }, [status, retries, setWebsocketStatus])
 
-  // Subscription check
-  const { data: subscriptionData, refetch: refetchSubscription } = useQueryWithError({
-    queryKey: ['subscription-check', 'words'],
-    queryFn: () => gamesApi.checkSubscription(),
-    staleTime: Infinity,
-  })
-
   useEffect(() => {
-    if (subscriptionData?.exists === false) {
-      shellSubscribeNotifications('words', [
-        { label: 'Moves & messages', type: '', defaultEnabled: true },
-      ]).then(() => refetchSubscription())
-    }
-  }, [subscriptionData?.exists])
+    void shellSubscribeNotifications('words', [
+      { label: 'Game activity', topic: 'activity', defaultEnabled: true },
+      { label: 'Messages', topic: 'message', defaultEnabled: true },
+    ])
+  }, [])
 
   // Handle cell click (place tile)
   const handleCellClick = useCallback(
