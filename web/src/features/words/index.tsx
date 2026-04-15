@@ -370,7 +370,7 @@ export function WordsGameView() {
   useEffect(() => {
     if (subscriptionData?.exists === false) {
       shellSubscribeNotifications('words', [
-        { label: 'Words moves & messages', type: '', defaultEnabled: true },
+        { label: 'Moves & messages', type: '', defaultEnabled: true },
       ]).then(() => refetchSubscription())
     }
   }, [subscriptionData?.exists])
