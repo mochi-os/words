@@ -1,10 +1,54 @@
-import { cn } from '@mochi/web'
+import { cn, EntityAvatar, useAccent } from '@mochi/web'
+import type { CSSProperties } from 'react'
 import type { Game } from '@/api/games'
 
 interface ScorePanelProps {
   game: Game
   myIdentity: string
   children?: React.ReactNode
+}
+
+function PlayerScore({
+  id,
+  name,
+  score,
+  isMe,
+  isTurn,
+}: {
+  id: string
+  name: string
+  score: number
+  isMe: boolean
+  isTurn: boolean
+}) {
+  const { accent } = useAccent(isTurn ? id : null)
+  const turnStyle: CSSProperties | undefined =
+    isTurn && accent ? { backgroundColor: accent + '20' } : undefined
+
+  return (
+    <div
+      className={cn(
+        'flex items-center gap-1.5 rounded-md px-2 py-0.5 text-sm',
+        isTurn && !accent && 'bg-primary/10 dark:bg-primary/20',
+      )}
+      style={turnStyle}
+    >
+      {isTurn && (
+        <span
+          className='h-2 w-2 rounded-full animate-pulse'
+          style={{ backgroundColor: accent || 'var(--primary)' }}
+        />
+      )}
+      <EntityAvatar fingerprint={id} name={name} size={18} />
+      <span className={cn(
+        'font-medium truncate max-w-[100px]',
+        isMe && 'underline underline-offset-2',
+      )}>
+        {isMe ? 'You' : name}
+      </span>
+      <span className="font-bold tabular-nums">{score}</span>
+    </div>
+  )
 }
 
 export function ScorePanel({ game, myIdentity, children }: ScorePanelProps) {
@@ -44,24 +88,14 @@ export function ScorePanel({ game, myIdentity, children }: ScorePanelProps) {
         const isTurn = game.current_turn === num && game.status === 'active'
 
         return (
-          <div
+          <PlayerScore
             key={num}
-            className={cn(
-              'flex items-center gap-1.5 rounded-md px-2 py-0.5 text-sm',
-              isTurn && 'bg-primary/10 dark:bg-primary/20',
-            )}
-          >
-            {isTurn && (
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            )}
-            <span className={cn(
-              'font-medium truncate max-w-[100px]',
-              isMe && 'underline underline-offset-2',
-            )}>
-              {isMe ? 'You' : name}
-            </span>
-            <span className="font-bold tabular-nums">{score}</span>
-          </div>
+            id={id}
+            name={name}
+            score={score}
+            isMe={isMe}
+            isTurn={isTurn}
+          />
         )
       })}
       {endText && (
