@@ -200,8 +200,15 @@ export function WordsBoard({
             return (
               <div
                 key={`${row}-${col}`}
-                role="button"
-                tabIndex={canClickToPlace || canClickToRemove || canAcceptDrop ? 0 : -1}
+                role={canClickToPlace || canClickToRemove ? 'button' : undefined}
+                tabIndex={canClickToPlace || canClickToRemove ? 0 : -1}
+                aria-label={
+                  isPending
+                    ? `${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}, click to remove`
+                    : canClickToPlace
+                      ? `Empty square ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
+                      : undefined
+                }
                 draggable={canDragThis}
                 onDragStart={(e) => {
                   if (!canDragThis) return
