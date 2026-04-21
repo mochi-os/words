@@ -70,6 +70,14 @@ export function TileRack({
           <div
             key={i}
             role="button"
+            aria-label={
+              !hasTile
+                ? 'Empty tile slot'
+                : tile === '_'
+                  ? 'Blank tile'
+                  : `${displayLetter}, ${value} point${value !== 1 ? 's' : ''}`
+            }
+            aria-pressed={isSelected || isExchangeSelected}
             tabIndex={hasTile && !disabled ? 0 : -1}
             draggable={canDragSlot}
             onDragStart={(e) => {
