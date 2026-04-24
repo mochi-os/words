@@ -1,5 +1,5 @@
 {
-	"version": "1.28",
+	"version": "1.30",
 	"label": "app_name",
 	"classes": ["game"],
 	"paths": ["words"],
@@ -30,6 +30,7 @@
 		"-/notifications/check": {"function": "action_notifications_check"},
 
 		":game": {"file": "web/dist/index.html"},
+		":game/-/user/:user/asset/:asset": {"function": "action_user_asset", "public": true},
 		":game/-/view": {"function": "action_view"},
 		":game/-/messages": {"function": "action_messages"},
 		":game/-/send": {"function": "action_send"},

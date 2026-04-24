@@ -1,4 +1,4 @@
-import { cn, EntityAvatar, useAccent } from '@mochi/web'
+import { cn, EntityAvatar, useAccent, getAppPath } from '@mochi/web'
 import type { CSSProperties } from 'react'
 import type { Game } from '@/api/games'
 
@@ -9,19 +9,23 @@ interface ScorePanelProps {
 }
 
 function PlayerScore({
+  gameId,
   id,
   name,
   score,
   isMe,
   isTurn,
 }: {
+  gameId: string
   id: string
   name: string
   score: number
   isMe: boolean
   isTurn: boolean
 }) {
-  const { accent } = useAccent(isTurn ? id : null)
+  const assetUrl = (slot: string) =>
+    `${getAppPath()}/${gameId}/-/user/${id}/asset/${slot}`
+  const { accent } = useAccent(null, isTurn ? assetUrl('style') : null)
   const turnStyle: CSSProperties | undefined =
     isTurn && accent ? { backgroundColor: accent + '20' } : undefined
 
@@ -39,7 +43,13 @@ function PlayerScore({
           style={{ backgroundColor: accent || 'var(--primary)' }}
         />
       )}
-      <EntityAvatar fingerprint={id} name={name} size={18} />
+      <EntityAvatar
+        src={assetUrl('avatar')}
+        styleUrl={assetUrl('style')}
+        seed={id}
+        name={name}
+        size={18}
+      />
       <span className={cn(
         'font-medium truncate max-w-[100px]',
         isMe && 'underline underline-offset-2',
@@ -90,6 +100,7 @@ export function ScorePanel({ game, myIdentity, children }: ScorePanelProps) {
         return (
           <PlayerScore
             key={num}
+            gameId={game.id}
             id={id}
             name={name}
             score={score}

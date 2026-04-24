@@ -146,6 +146,37 @@ def database_create():
 def database_upgrade(to_version):
 	pass
 
+# Stream an entity's asset from its owning service via a Mochi stream.
+# Location-transparent: mochi.remote.stream() loops back in-process when the
+# entity lives on this server, or goes over P2P otherwise.
+def stream_asset(a, entity_id, service, asset):
+	if not entity_id:
+		a.error(404, asset + " unavailable")
+		return None
+	s = mochi.remote.stream(entity_id, service, asset, {})
+	if not s:
+		a.error(404, asset + " unavailable")
+		return None
+	header = s.read()
+	if not header or header.get("status") != "200":
+		a.error(404, asset + " not set")
+		return None
+	a.header("Cache-Control", "private, max-age=300")
+	if "data" in header:
+		return {"data": header["data"]}
+	a.header("Content-Type", header.get("content_type", "application/octet-stream"))
+	a.write_from_stream(s)
+	return None
+
+_PERSON_ASSETS = ("avatar", "banner", "favicon", "style", "information")
+
+def action_user_asset(a):
+	asset = a.input("asset")
+	if asset not in _PERSON_ASSETS:
+		a.error(404, "Unknown asset")
+		return
+	return stream_asset(a, a.input("user") or "", "people", asset)
+
 def load_dictionary(language, filename):
 	"""Load a word list file into the dictionary table."""
 	content = mochi.app.file.read(filename)
