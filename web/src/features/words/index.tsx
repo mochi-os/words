@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { useQueryClient } from '@tanstack/react-query'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import {
@@ -70,7 +71,8 @@ import {
 } from './lib/move-draft'
 
 export function WordsGameView() {
-  usePageTitle('Words')
+  const { t } = useLingui()
+  usePageTitle(t`Words`)
 
   const navigate = useNavigate()
   const queryClient = useQueryClient()
@@ -308,13 +310,13 @@ export function WordsGameView() {
       setSelectedRackIndex(null)
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to submit move'))
+      toast.error(getErrorMessage(error, t`Failed to submit move`))
     },
   })
 
   const passMutation = usePassMutation({
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to pass'))
+      toast.error(getErrorMessage(error, t`Failed to pass`))
     },
   })
 
@@ -324,14 +326,14 @@ export function WordsGameView() {
       setExchangeSelected(new Set())
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to exchange'))
+      toast.error(getErrorMessage(error, t`Failed to exchange`))
     },
   })
 
   const resignMutation = useResignMutation({
     onSuccess: () => setShowResignDialog(false),
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to resign'))
+      toast.error(getErrorMessage(error, t`Failed to resign`))
     },
   })
 
@@ -340,17 +342,17 @@ export function WordsGameView() {
       void navigate({ to: '/$gameId', params: { gameId: data.id } })
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to create rematch'))
+      toast.error(getErrorMessage(error, t`Failed to create rematch`))
     },
   })
 
   const deleteGameMutation = useDeleteGameMutation({
     onSuccess: () => {
-      toast.success('Game deleted')
+      toast.success(t`Game deleted`)
       void navigate({ to: '/' })
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to delete game'))
+      toast.error(getErrorMessage(error, t`Failed to delete game`))
     },
   })
 
@@ -642,7 +644,7 @@ export function WordsGameView() {
   if (selectedGameId && gamesQuery.isLoading) {
     return (
       <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title="Words" />
+        <PageHeader title={t`Words`} />
         <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden p-4">
           <Skeleton className="h-8 w-48" />
           <Skeleton className="aspect-square max-w-[600px] w-full" />
@@ -654,7 +656,7 @@ export function WordsGameView() {
   if (!selectedGame) {
     return (
       <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title="Words" />
+        <PageHeader title={t`Words`} />
         <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
           {gamesQuery.error ? (
             <GeneralError
@@ -716,7 +718,7 @@ export function WordsGameView() {
                             variant='ghost'
                             className='min-[900px]:hidden'
                             onClick={() => setShowMobileChat(true)}
-                            label='Open chat panel'
+                            label={t`Open chat panel`}
                           >
                             <MessageCircle className='size-4' />
                           </IconButton>
@@ -724,7 +726,7 @@ export function WordsGameView() {
                             <DropdownMenuTrigger asChild>
                               <IconButton
                                 variant='ghost'
-                                label='Open game actions'
+                                label={t`Open game actions`}
                               >
                                 <MoreHorizontal className='size-4' />
                               </IconButton>
@@ -734,7 +736,7 @@ export function WordsGameView() {
                                 <>
                                   {isMyTurn && (
                                     <DropdownMenuItem onClick={handleShuffle}>
-                                      <Shuffle className='mr-2 size-4' /> Shuffle rack
+                                      <Shuffle className='mr-2 size-4' /> <Trans>Shuffle rack</Trans>
                                     </DropdownMenuItem>
                                   )}
                                   {isMyTurn && pendingPlacements.length === 0 && (
@@ -742,7 +744,7 @@ export function WordsGameView() {
                                       onClick={handlePass}
                                       disabled={passMutation.isPending}
                                     >
-                                      <SkipForward className='mr-2 size-4' /> Pass
+                                      <SkipForward className='mr-2 size-4' /> <Trans>Pass</Trans>
                                     </DropdownMenuItem>
                                   )}
                                   {isMyTurn && (
@@ -758,7 +760,7 @@ export function WordsGameView() {
                                     </DropdownMenuItem>
                                   )}
                                   <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                                    <Flag className='mr-2 size-4' /> Resign
+                                    <Flag className='mr-2 size-4' /> <Trans>Resign</Trans>
                                   </DropdownMenuItem>
                                 </>
                               ) : (
@@ -767,10 +769,10 @@ export function WordsGameView() {
                                     onClick={handleRematch}
                                     disabled={rematchMutation.isPending}
                                   >
-                                    <RotateCcw className='mr-2 size-4' /> Rematch
+                                    <RotateCcw className='mr-2 size-4' /> <Trans>Rematch</Trans>
                                   </DropdownMenuItem>
                                   <DropdownMenuItem onClick={handleDelete}>
-                                    <Trash2 className='mr-2 size-4' /> Delete game
+                                    <Trash2 className='mr-2 size-4' /> <Trans>Delete game</Trans>
                                   </DropdownMenuItem>
                                 </>
                               )}
@@ -826,7 +828,7 @@ export function WordsGameView() {
                         {exchangeMode ? (
                           <>
                             <Button variant="outline" size="sm" onClick={() => { setExchangeMode(false); setExchangeSelected(new Set()) }}>
-                              Cancel
+                              <Trans>Cancel</Trans>
                             </Button>
                             <div className="flex-1" />
                             <Button size="sm" onClick={handleExchangeConfirm} disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}>
@@ -837,7 +839,7 @@ export function WordsGameView() {
                         ) : pendingPlacements.length > 0 ? (
                           <>
                             <Button variant="outline" size="sm" onClick={handleRecall} disabled={!canRecallMove}>
-                              Recall
+                              <Trans>Recall</Trans>
                             </Button>
                             <div className="flex-1 flex items-center gap-2 min-w-0 text-sm">
                               {draftErrorMessage ? (
@@ -879,7 +881,7 @@ export function WordsGameView() {
           {/* Right: Chat sidebar */}
           <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-l">
             <div className="border-b px-3 py-2">
-              <h3 className="text-sm font-medium">Chat</h3>
+              <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
             </div>
             <ChatMessageList
               messagesQuery={messagesQuery}
@@ -895,7 +897,7 @@ export function WordsGameView() {
               isSending={sendMessageMutation.isPending}
               errorMessage={
                 sendMessageMutation.error
-                  ? getErrorMessage(sendMessageMutation.error, 'Failed to send')
+                  ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
                   : null
               }
             />
@@ -911,7 +913,7 @@ export function WordsGameView() {
           onOpenAutoFocus={(event) => event.preventDefault()}
         >
           <SheetHeader className="border-b px-3 py-2">
-            <SheetTitle className="text-sm font-medium">Chat</SheetTitle>
+            <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
           </SheetHeader>
           <ChatMessageList
             messagesQuery={messagesQuery}
@@ -927,7 +929,7 @@ export function WordsGameView() {
             isSending={sendMessageMutation.isPending}
             errorMessage={
               sendMessageMutation.error
-                ? getErrorMessage(sendMessageMutation.error, 'Failed to send')
+                ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
                 : null
             }
           />
@@ -938,13 +940,13 @@ export function WordsGameView() {
       <ConfirmDialog
         open={showResignDialog}
         onOpenChange={setShowResignDialog}
-        title='Resign game?'
+        title={t`Resign game?`}
         desc='Are you sure you want to resign?'
         confirmText={
           resignMutation.isPending ? (
             <>
               <Loader2 className="mr-2 size-4 animate-spin" />
-              Resigning...
+              <Trans>Resigning...</Trans>
             </>
           ) : (
             'Resign'
@@ -975,7 +977,7 @@ export function WordsGameView() {
           }}
         >
           <AlertDialogHeader>
-            <AlertDialogTitle>Choose a letter</AlertDialogTitle>
+            <AlertDialogTitle><Trans>Choose a letter</Trans></AlertDialogTitle>
           </AlertDialogHeader>
           <div className="grid grid-cols-9 gap-1 py-2">
             {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
@@ -991,7 +993,7 @@ export function WordsGameView() {
             ))}
           </div>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel><Trans>Cancel</Trans></AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

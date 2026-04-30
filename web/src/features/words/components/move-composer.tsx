@@ -10,6 +10,7 @@ import {
   CardTitle,
   cn,
 } from '@mochi/web'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   AlertTriangle,
   ArrowLeftRight,
@@ -68,6 +69,7 @@ export function MoveComposer({
   onCancelExchange,
   onConfirmExchange,
 }: MoveComposerProps) {
+  const { t } = useLingui()
   const statusLabel = getStatusLabel(draftStatus, isMyTurn)
   const hasAdvisoryInvalidWords = draftStatus === 'ready_with_invalid_words'
   const showWordList = words.length > 0
@@ -78,7 +80,7 @@ export function MoveComposer({
       <CardHeader className="px-4 pb-3">
         <div className="flex items-center justify-between gap-2">
           <CardTitle className="text-sm font-semibold tracking-tight">
-            Move composer
+            <Trans>Move composer</Trans>
           </CardTitle>
           <Badge
             variant={getStatusBadgeVariant(draftStatus)}
@@ -98,7 +100,7 @@ export function MoveComposer({
           className="flex items-center justify-between rounded-lg bg-muted/50 px-3 py-2.5"
           aria-live="polite"
         >
-          <span className="text-sm text-muted-foreground">Preview score</span>
+          <span className="text-sm text-muted-foreground"><Trans>Preview score</Trans></span>
           <span
             className={cn(
               'text-xl font-bold tabular-nums transition-colors',
@@ -115,7 +117,7 @@ export function MoveComposer({
         {draftStatus === 'invalid_local' && localErrorMessage && (
           <Alert variant="destructive" className="py-2">
             <AlertTriangle className="size-4" />
-            <AlertTitle>Invalid move</AlertTitle>
+            <AlertTitle><Trans>Invalid move</Trans></AlertTitle>
             <AlertDescription>{localErrorMessage}</AlertDescription>
           </Alert>
         )}
@@ -124,9 +126,9 @@ export function MoveComposer({
         {validationUnavailable && (
           <Alert className="py-2">
             <AlertTriangle className="size-4 text-muted-foreground" />
-            <AlertTitle>Dictionary unavailable</AlertTitle>
+            <AlertTitle><Trans>Dictionary unavailable</Trans></AlertTitle>
             <AlertDescription>
-              Validation is temporarily offline. You can still submit.
+              <Trans>Validation is temporarily offline. You can still submit.</Trans>
             </AlertDescription>
           </Alert>
         )}
@@ -135,16 +137,16 @@ export function MoveComposer({
         {hasAdvisoryInvalidWords && (
           <Alert className="py-2">
             <XCircle className="size-4 text-destructive" />
-            <AlertTitle>Contains unknown words</AlertTitle>
+            <AlertTitle><Trans>Contains unknown words</Trans></AlertTitle>
             <AlertDescription>
-              Validation is advisory. You can still submit this move.
+              <Trans>Validation is advisory. You can still submit this move.</Trans>
             </AlertDescription>
           </Alert>
         )}
 
         {/* Word list */}
         {showWordList ? (
-          <ul className="space-y-1.5 max-h-24 overflow-y-auto" aria-label="Words formed">
+          <ul className="space-y-1.5 max-h-24 overflow-y-auto" aria-label={t`Words formed`}>
             {words.map(({ word, score }) => {
               const normalizedWord = word.toUpperCase()
               const validationState =
@@ -185,7 +187,7 @@ export function MoveComposer({
               onClick={onCancelExchange}
               className="flex-1"
             >
-              Cancel
+              <Trans>Cancel</Trans>
             </Button>
             <Button
               size="sm"
@@ -212,7 +214,7 @@ export function MoveComposer({
               onClick={onRecall}
               disabled={!canRecall}
             >
-              Recall
+              <Trans>Recall</Trans>
             </Button>
             <Button
               size="sm"
