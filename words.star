@@ -1,5 +1,8 @@
 # Mochi Words (Scrabble-style word game)
 
+def notify(topic, object="", title="", body="", url=""):
+	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notification_topic_" + topic.replace("/", "_")))
+
 # English tile distributions: (letter, value, count)
 TILES_EN = [
 	("A", 1, 9), ("B", 3, 2), ("C", 3, 2), ("D", 2, 4), ("E", 1, 12),
@@ -919,7 +922,7 @@ def event_new(e):
 		return
 
 	sender_name = e.content("player1_name") or "Someone"
-	mochi.service.call("notifications", "send", "activity", "Words game", sender_name + " started a game", game_id, "/words/" + game_id)
+	notify("activity", "", "Words game", sender_name + " started a game", "/words/" + game_id)
 
 def event_move(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1005,7 +1008,7 @@ def event_move(e):
 		"bag_count": bag_count,
 	}
 	mochi.websocket.write(game["key"], ws_data)
-	mochi.service.call("notifications", "send", "activity", "Words move", name + " played " + body, game["id"], "/words/" + game["id"])
+	notify("activity", "", "Words move", name + " played " + body, "/words/" + game["id"])
 
 def event_pass(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1056,7 +1059,7 @@ def event_pass(e):
 		"status": status, "winner": winner or "",
 	}
 	mochi.websocket.write(game["key"], ws_data)
-	mochi.service.call("notifications", "send", "activity", "Words", name + " passed", game["id"], "/words/" + game["id"])
+	notify("activity", "", "Words", name + " passed", "/words/" + game["id"])
 
 def event_exchange(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1106,7 +1109,7 @@ def event_exchange(e):
 		"current_turn": current_turn, "bag_count": bag_count,
 	}
 	mochi.websocket.write(game["key"], ws_data)
-	mochi.service.call("notifications", "send", "activity", "Words", name + " exchanged tiles", game["id"], "/words/" + game["id"])
+	notify("activity", "", "Words", name + " exchanged tiles", "/words/" + game["id"])
 
 def event_message(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1136,7 +1139,7 @@ def event_message(e):
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
 
 	mochi.websocket.write(game["key"], {"type": "message", "created": created, "member": sender, "name": name, "body": body})
-	mochi.service.call("notifications", "send", "message", "Words message", name + ": " + body, game["id"], "/words/" + game["id"])
+	notify("message", "", "Words message", name + ": " + body, "/words/" + game["id"])
 
 def event_resign(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1157,9 +1160,5 @@ def event_resign(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""})
-	mochi.service.call("notifications", "send", "activity", "Words game", body, game["id"], "/words/" + game["id"])
+	notify("activity", "", "Words game", body, "/words/" + game["id"])
 
-def action_notifications_check(a):
-	"""Check if a notification subscription exists for this app."""
-	result = mochi.service.call("notifications", "subscriptions")
-	return {"data": {"exists": len(result) > 0}}

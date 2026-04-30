@@ -21,7 +21,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   Skeleton,
-  shellSubscribeNotifications,
   Sheet,
   SheetContent,
   SheetHeader,
@@ -363,13 +362,6 @@ export function WordsGameView() {
   useEffect(() => {
     setWebsocketStatus(status, retries)
   }, [status, retries, setWebsocketStatus])
-
-  useEffect(() => {
-    void shellSubscribeNotifications('words', [
-      { label: 'Game activity', topic: 'activity', defaultEnabled: true },
-      { label: 'Messages', topic: 'message', defaultEnabled: true },
-    ])
-  }, [])
 
   // Handle cell click (place tile)
   const handleCellClick = useCallback(
