@@ -733,7 +733,7 @@ export function WordsGameView() {
                                 <>
                                   {isMyTurn && (
                                     <DropdownMenuItem onClick={handleShuffle}>
-                                      <Shuffle className='mr-2 size-4' /> <Trans>Shuffle rack</Trans>
+                                      <Shuffle className='me-2 size-4' /> <Trans>Shuffle rack</Trans>
                                     </DropdownMenuItem>
                                   )}
                                   {isMyTurn && pendingPlacements.length === 0 && (
@@ -741,7 +741,7 @@ export function WordsGameView() {
                                       onClick={handlePass}
                                       disabled={passMutation.isPending}
                                     >
-                                      <SkipForward className='mr-2 size-4' /> <Trans>Pass</Trans>
+                                      <SkipForward className='me-2 size-4' /> <Trans>Pass</Trans>
                                     </DropdownMenuItem>
                                   )}
                                   {isMyTurn && (
@@ -752,12 +752,12 @@ export function WordsGameView() {
                                         setExchangeSelected(new Set())
                                       }}
                                     >
-                                      <ArrowLeftRight className='mr-2 size-4' />
+                                      <ArrowLeftRight className='me-2 size-4' />
                                       {exchangeMode ? t`Cancel exchange` : t`Exchange tiles`}
                                     </DropdownMenuItem>
                                   )}
                                   <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                                    <Flag className='mr-2 size-4' /> <Trans>Resign</Trans>
+                                    <Flag className='me-2 size-4' /> <Trans>Resign</Trans>
                                   </DropdownMenuItem>
                                 </>
                               ) : (
@@ -766,10 +766,10 @@ export function WordsGameView() {
                                     onClick={handleRematch}
                                     disabled={rematchMutation.isPending}
                                   >
-                                    <RotateCcw className='mr-2 size-4' /> <Trans>Rematch</Trans>
+                                    <RotateCcw className='me-2 size-4' /> <Trans>Rematch</Trans>
                                   </DropdownMenuItem>
                                   <DropdownMenuItem onClick={handleDelete}>
-                                    <Trash2 className='mr-2 size-4' /> <Trans>Delete game</Trans>
+                                    <Trash2 className='me-2 size-4' /> <Trans>Delete game</Trans>
                                   </DropdownMenuItem>
                                 </>
                               )}
@@ -857,7 +857,7 @@ export function WordsGameView() {
                                       )
                                     })}
                                   </div>
-                                  <span className="ml-auto shrink-0 text-base font-bold tabular-nums">{draftScore}</span>
+                                  <span className="ms-auto shrink-0 text-base font-bold tabular-nums">{draftScore}</span>
                                 </>
                               ) : null}
                             </div>
@@ -876,7 +876,7 @@ export function WordsGameView() {
           </div>
 
           {/* Right: Chat sidebar */}
-          <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-l">
+          <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-s">
             <div className="border-b px-3 py-2">
               <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
             </div>
@@ -942,7 +942,7 @@ export function WordsGameView() {
         confirmText={
           resignMutation.isPending ? (
             <>
-              <Loader2 className="mr-2 size-4 animate-spin" />
+              <Loader2 className="me-2 size-4 animate-spin" />
               <Trans>Resigning...</Trans>
             </>
           ) : (

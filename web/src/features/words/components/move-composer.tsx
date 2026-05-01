@@ -163,7 +163,7 @@ export function MoveComposer({
                       {normalizedWord}
                     </span>
                   </div>
-                  <span className="ml-3 shrink-0 rounded bg-muted px-1.5 py-0.5 text-xs font-bold tabular-nums text-muted-foreground">
+                  <span className="ms-3 shrink-0 rounded bg-muted px-1.5 py-0.5 text-xs font-bold tabular-nums text-muted-foreground">
                     +{score}
                   </span>
                 </li>

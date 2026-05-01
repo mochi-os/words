@@ -112,7 +112,7 @@ export function ScorePanel({ game, myIdentity, children }: ScorePanelProps) {
       {endText && (
         <span className="text-sm font-medium">{endText}</span>
       )}
-      <span className="text-muted-foreground text-xs ml-auto">
+      <span className="text-muted-foreground text-xs ms-auto">
         {game.bag_count} tiles left
       </span>
       {children}
