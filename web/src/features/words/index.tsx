@@ -59,7 +59,7 @@ import { WordsBoard } from './components/words-board'
 import { TileRack } from './components/tile-rack'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
-import { getWordsHeaderModel } from './lib/header-model'
+import { useWordsHeaderModel } from './lib/header-model'
 import {
   createDraftSignature,
   deriveMoveDraft,
@@ -605,10 +605,7 @@ export function WordsGameView() {
     (moveDraftStatus === 'ready' || moveDraftStatus === 'ready_with_invalid_words' || moveDraftStatus === 'validation_unavailable') &&
     !moveMutation.isPending
 
-  const headerModel = useMemo(
-    () => (game ? getWordsHeaderModel(game, myIdentity) : null),
-    [game, myIdentity]
-  )
+  const headerModel = useWordsHeaderModel(game, myIdentity)
 
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault()

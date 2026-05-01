@@ -1,3 +1,4 @@
+import { useLingui } from '@lingui/react/macro'
 import type { Game } from '@/api/games'
 
 export interface WordsHeaderPlayer {
@@ -20,11 +21,8 @@ function getPlayerIdentity(game: Game, playerNumber: number): string | undefined
   return game[`player${playerNumber}` as keyof Game] as string | undefined
 }
 
-function getPlayerName(game: Game, playerNumber: number): string {
-  return (
-    (game[`player${playerNumber}_name` as keyof Game] as string | undefined) ??
-    `Player ${playerNumber}`
-  )
+function getPlayerNameRaw(game: Game, playerNumber: number): string | undefined {
+  return game[`player${playerNumber}_name` as keyof Game] as string | undefined
 }
 
 function isCurrentUserPlayer(
@@ -37,20 +35,6 @@ function isCurrentUserPlayer(
   }
 
   return playerNumber === game.my_player_number
-}
-
-function getOppositionNames(game: Game, myIdentity?: string | null): string[] {
-  const names: string[] = []
-
-  for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
-    if (isCurrentUserPlayer(game, playerNumber, myIdentity)) {
-      continue
-    }
-
-    names.push(getPlayerName(game, playerNumber))
-  }
-
-  return names
 }
 
 function isCurrentUserWinner(game: Game, myIdentity?: string | null): boolean {
@@ -79,57 +63,75 @@ function getWinnerPlayerNumber(game: Game): number | null {
   return null
 }
 
-export function getWordsHeaderStatus(game: Game, myIdentity?: string | null): string {
-  if (game.status === 'active') {
-    if (game.current_turn === game.my_player_number) {
-      return 'Your move'
-    }
-
-    return `${getPlayerName(game, game.current_turn)}'s move`
-  }
-
-  if (game.status === 'finished') {
-    if (isCurrentUserWinner(game, myIdentity)) {
-      return 'You win!'
-    }
-
-    const winnerPlayerNumber = getWinnerPlayerNumber(game)
-    if (winnerPlayerNumber) {
-      return `${getPlayerName(game, winnerPlayerNumber)} wins`
-    }
-
-    return 'Game over'
-  }
-
-  return isCurrentUserWinner(game, myIdentity)
-    ? 'Opponent resigned — you win!'
-    : 'You resigned'
-}
-
-export function getWordsHeaderModel(
-  game: Game,
+export function useWordsHeaderModel(
+  game: Game | null | undefined,
   myIdentity?: string | null
-): WordsHeaderModel {
-  const players: WordsHeaderPlayer[] = []
+): WordsHeaderModel | null {
+  const { t } = useLingui()
+  if (!game) return null
 
+  const getPlayerName = (playerNumber: number): string =>
+    getPlayerNameRaw(game, playerNumber) ?? t`Player ${playerNumber}`
+
+  const getOppositionNames = (): string[] => {
+    const names: string[] = []
+    for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
+      if (isCurrentUserPlayer(game, playerNumber, myIdentity)) {
+        continue
+      }
+      names.push(getPlayerName(playerNumber))
+    }
+    return names
+  }
+
+  const getStatus = (): string => {
+    if (game.status === 'active') {
+      if (game.current_turn === game.my_player_number) {
+        return t`Your move`
+      }
+      const name = getPlayerName(game.current_turn)
+      return t`${name}'s move`
+    }
+
+    if (game.status === 'finished') {
+      if (isCurrentUserWinner(game, myIdentity)) {
+        return t`You win!`
+      }
+
+      const winnerPlayerNumber = getWinnerPlayerNumber(game)
+      if (winnerPlayerNumber) {
+        const name = getPlayerName(winnerPlayerNumber)
+        return t`${name} wins`
+      }
+
+      return t`Game over`
+    }
+
+    return isCurrentUserWinner(game, myIdentity)
+      ? t`Opponent resigned — you win!`
+      : t`You resigned`
+  }
+
+  const players: WordsHeaderPlayer[] = []
   for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
     const score = game[`player${playerNumber}_score` as keyof Game] as number
     const isMe = isCurrentUserPlayer(game, playerNumber, myIdentity)
 
     players.push({
       playerNumber,
-      label: isMe ? 'You' : getPlayerName(game, playerNumber),
+      label: isMe ? t`You` : getPlayerName(playerNumber),
       score,
       isCurrentTurn: game.status === 'active' && game.current_turn === playerNumber,
       isMe,
     })
   }
 
+  const playerCount = game.player_count
   return {
-    title: getOppositionNames(game, myIdentity).join(', '),
-    status: getWordsHeaderStatus(game, myIdentity),
-    meta: game.player_count > 2 ? `Playing with ${game.player_count} players` : null,
+    title: getOppositionNames().join(', '),
+    status: getStatus(),
+    meta: game.player_count > 2 ? t`Playing with ${playerCount} players` : null,
     players,
-    tilesLeftLabel: `${game.bag_count} tiles left`,
+    tilesLeftLabel: t`${game.bag_count} tiles left`,
   }
 }

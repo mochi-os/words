@@ -13,6 +13,19 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: game.bag_count
+#: src/features/words/lib/header-model.ts:135
+msgid "{0} tiles left"
+msgstr "{0} tiles left"
+
+#: src/features/words/lib/header-model.ts:104
+msgid "{name} wins"
+msgstr "{name} wins"
+
+#: src/features/words/lib/header-model.ts:93
+msgid "{name}'s move"
+msgstr "{name}'s move"
+
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
 msgstr "Access Forbidden"
@@ -70,6 +83,10 @@ msgstr "Add to existing notifications"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Adjust the appearance and layout to suit your preferences."
 
+#: ../../../lib/web/src/components/ui/sort-selector.tsx:38
+msgid "AI"
+msgstr "AI"
+
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:158
 msgid "All"
 msgstr "All"
@@ -96,12 +113,12 @@ msgstr "Back to Home"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/words/components/move-composer.tsx:188
 #: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:831
-#: src/features/words/index.tsx:996
+#: src/features/words/index.tsx:828
+#: src/features/words/index.tsx:993
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/features/words/index.tsx:759
+#: src/features/words/index.tsx:756
 msgid "Cancel exchange"
 msgstr "Cancel exchange"
 
@@ -109,12 +126,12 @@ msgstr "Cancel exchange"
 msgid "Category for this notification"
 msgstr "Category for this notification"
 
-#: src/features/words/index.tsx:884
-#: src/features/words/index.tsx:916
+#: src/features/words/index.tsx:881
+#: src/features/words/index.tsx:913
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/words/index.tsx:980
+#: src/features/words/index.tsx:977
 msgid "Choose a letter"
 msgstr "Choose a letter"
 
@@ -155,6 +172,10 @@ msgstr "Clear selection"
 #: ../../../lib/web/src/components/ui/sheet.tsx:76
 msgid "Close"
 msgstr "Close"
+
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:97
+msgid "Close navigation"
+msgstr "Close navigation"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:254
 msgid "Close Panel"
@@ -217,7 +238,7 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI account"
 
-#: src/features/words/index.tsx:775
+#: src/features/words/index.tsx:772
 msgid "Delete game"
 msgstr "Delete game"
 
@@ -241,7 +262,7 @@ msgstr "Direction"
 msgid "Displays the mobile sidebar."
 msgstr "Displays the mobile sidebar."
 
-#: src/features/words/index.tsx:759
+#: src/features/words/index.tsx:756
 msgid "Exchange tiles"
 msgstr "Exchange tiles"
 
@@ -273,8 +294,8 @@ msgstr "Failed to pass"
 msgid "Failed to resign"
 msgstr "Failed to resign"
 
-#: src/features/words/index.tsx:900
-#: src/features/words/index.tsx:932
+#: src/features/words/index.tsx:897
+#: src/features/words/index.tsx:929
 msgid "Failed to send"
 msgstr "Failed to send"
 
@@ -301,6 +322,10 @@ msgstr "Game created"
 #: src/features/words/index.tsx:351
 msgid "Game deleted"
 msgstr "Game deleted"
+
+#: src/features/words/lib/header-model.ts:107
+msgid "Game over"
+msgstr "Game over"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:19
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:19
@@ -332,9 +357,21 @@ msgstr "Group"
 msgid "Hide"
 msgstr "Hide"
 
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:82
+msgid "Home"
+msgstr "Home"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx:41
+msgid "Hot"
+msgstr "Hot"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:239
 msgid "Inset"
 msgstr "Inset"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx:39
+msgid "Interests"
+msgstr "Interests"
 
 #: src/features/words/components/move-composer.tsx:119
 msgid "Invalid move"
@@ -359,6 +396,14 @@ msgstr "Left to Right"
 #: ../../../lib/web/src/components/config-drawer.tsx:200
 msgid "Light"
 msgstr "Light"
+
+#: ../../../lib/web/src/components/ui/load-more.tsx:32
+msgid "Load more"
+msgstr "Load more"
+
+#: ../../../lib/web/src/components/ui/load-more.tsx:32
+msgid "Loading…"
+msgstr "Loading…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:98
 #: ../../../lib/web/src/components/layout/nav-user.tsx:164
@@ -388,13 +433,17 @@ msgstr "Maximum 3 opponents"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/words/components/chat-input.tsx:25
+#: src/features/words/components/chat-input.tsx:26
 msgid "Message"
 msgstr "Message"
 
 #: src/features/words/components/move-composer.tsx:82
 msgid "Move composer"
 msgstr "Move composer"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx:40
+msgid "New"
+msgstr "New"
 
 #: src/components/layout/words-layout.tsx:107
 #: src/features/words/components/game-empty-state.tsx:21
@@ -426,7 +475,7 @@ msgstr "No friends yet"
 msgid "No groups available"
 msgstr "No groups available"
 
-#: ../../../lib/web/src/components/language-picker.tsx:99
+#: ../../../lib/web/src/components/language-picker.tsx:96
 msgid "No matches."
 msgstr "No matches."
 
@@ -472,17 +521,21 @@ msgstr "Notifications"
 msgid "Oops! Page Not Found!"
 msgstr "Oops! Page Not Found!"
 
-#: src/features/words/index.tsx:721
+#: src/features/words/index.tsx:718
 msgid "Open chat panel"
 msgstr "Open chat panel"
 
-#: src/features/words/index.tsx:729
+#: src/features/words/index.tsx:726
 msgid "Open game actions"
 msgstr "Open game actions"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:51
 msgid "Open theme settings"
 msgstr "Open theme settings"
+
+#: src/features/words/lib/header-model.ts:111
+msgid "Opponent resigned — you win!"
+msgstr "Opponent resigned — you win!"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Other"
@@ -492,9 +545,17 @@ msgstr "Other"
 msgid "Owner"
 msgstr "Owner"
 
-#: src/features/words/index.tsx:747
+#: src/features/words/index.tsx:744
 msgid "Pass"
 msgstr "Pass"
+
+#: src/features/words/lib/header-model.ts:74
+msgid "Player {playerNumber}"
+msgstr "Player {playerNumber}"
+
+#: src/features/words/lib/header-model.ts:133
+msgid "Playing with {playerCount} players"
+msgstr "Playing with {playerCount} players"
 
 #: src/features/words/components/new-game.tsx:68
 msgid "Please select at least one friend"
@@ -510,7 +571,7 @@ msgid "Profile"
 msgstr "Profile"
 
 #: src/features/words/components/move-composer.tsx:215
-#: src/features/words/index.tsx:842
+#: src/features/words/index.tsx:839
 msgid "Recall"
 msgstr "Recall"
 
@@ -523,7 +584,7 @@ msgstr "Recommended"
 msgid "Redirecting to login."
 msgstr "Redirecting to login."
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:769
 msgid "Rematch"
 msgstr "Rematch"
 
@@ -544,15 +605,15 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Reset all settings to default values"
 
-#: src/features/words/index.tsx:763
+#: src/features/words/index.tsx:760
 msgid "Resign"
 msgstr "Resign"
 
-#: src/features/words/index.tsx:943
+#: src/features/words/index.tsx:940
 msgid "Resign game?"
 msgstr "Resign game?"
 
-#: src/features/words/index.tsx:949
+#: src/features/words/index.tsx:946
 msgid "Resigning..."
 msgstr "Resigning..."
 
@@ -610,6 +671,10 @@ msgstr "Select site direction"
 msgid "Select theme preference"
 msgstr "Select theme preference"
 
+#: src/features/words/components/chat-input.tsx:40
+msgid "Send message"
+msgstr "Send message"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx:142
 msgid "Set origin and destination"
 msgstr "Set origin and destination"
@@ -620,7 +685,11 @@ msgstr "Set origin and destination"
 msgid "Settings"
 msgstr "Settings"
 
-#: src/features/words/index.tsx:739
+#: ../../../lib/web/src/components/ui/load-more.tsx:36
+msgid "Showing {totalShown} of {total}"
+msgstr "Showing {totalShown} of {total}"
+
+#: src/features/words/index.tsx:736
 msgid "Shuffle rack"
 msgstr "Shuffle rack"
 
@@ -690,6 +759,10 @@ msgstr "Toggle Sidebar"
 msgid "Toggle theme"
 msgstr "Toggle theme"
 
+#: ../../../lib/web/src/components/ui/sort-selector.tsx:42
+msgid "Top"
+msgstr "Top"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx:140
 msgid "Travelling"
 msgstr "Travelling"
@@ -704,6 +777,10 @@ msgstr "Try adjusting your search terms"
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
 msgid "Try again"
 msgstr "Try again"
+
+#: src/features/words/components/chat-input.tsx:29
+msgid "Type a message…"
+msgstr "Type a message…"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:187
 msgid "Type to search users"
@@ -754,7 +831,23 @@ msgid "Website is under maintenance!"
 msgstr "Website is under maintenance!"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:647
-#: src/features/words/index.tsx:659
+#: src/features/words/index.tsx:644
+#: src/features/words/index.tsx:656
 msgid "Words"
 msgstr "Words"
+
+#: src/features/words/lib/header-model.ts:122
+msgid "You"
+msgstr "You"
+
+#: src/features/words/lib/header-model.ts:112
+msgid "You resigned"
+msgstr "You resigned"
+
+#: src/features/words/lib/header-model.ts:98
+msgid "You win!"
+msgstr "You win!"
+
+#: src/features/words/lib/header-model.ts:90
+msgid "Your move"
+msgstr "Your move"
