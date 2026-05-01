@@ -1,7 +1,7 @@
 # Mochi Words (Scrabble-style word game)
 
 def notify(topic, object="", title="", body="", url=""):
-	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notification_topic_" + topic.replace("/", "_")))
+	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notifications.topic." + topic.replace("/", ".")))
 
 # English tile distributions: (letter, value, count)
 TILES_EN = [
@@ -249,7 +249,7 @@ def next_turn(game):
 
 def load_game(a):
 	"""Load game by ID from action input, validate access."""
-	if not mochi.valid(a.input("game"), "id"):
+	if not mochi.text.valid(a.input("game"), "id"):
 		a.error_label(400, "errors.invalid_game_id")
 		return None
 	game = mochi.db.row("select * from games where id=?", a.input("game"))
@@ -308,7 +308,7 @@ def action_create(a):
 	opponent_names = []
 	for opp in opponents:
 		opp = opp.strip()
-		if not mochi.valid(opp, "entity"):
+		if not mochi.text.valid(opp, "entity"):
 			a.error(400, "Invalid opponent: " + opp)
 			return
 		if opp == a.user.identity.id:
@@ -424,12 +424,12 @@ def action_messages(a):
 
 	limit = 30
 	limit_str = a.input("limit")
-	if limit_str and mochi.valid(limit_str, "natural"):
+	if limit_str and mochi.text.valid(limit_str, "natural"):
 		limit = min(int(limit_str), 100)
 
 	before = None
 	before_str = a.input("before")
-	if before_str and mochi.valid(before_str, "natural"):
+	if before_str and mochi.text.valid(before_str, "natural"):
 		before = int(before_str)
 
 	if before:
@@ -461,7 +461,7 @@ def action_send(a):
 		return
 
 	body = a.input("body", "")
-	if not mochi.valid(body, "text"):
+	if not mochi.text.valid(body, "text"):
 		a.error_label(400, "errors.invalid_message")
 		return
 	if len(body) > 10000:
@@ -517,7 +517,7 @@ def action_move(a):
 		a.error_label(400, "errors.invalid_board_state")
 		return
 
-	if not mochi.valid(score, "integer"):
+	if not mochi.text.valid(score, "integer"):
 		a.error_label(400, "errors.invalid_score")
 		return
 	score = int(score)
@@ -865,7 +865,7 @@ def event_new(e):
 		return
 
 	game_id = e.content("id")
-	if not mochi.valid(game_id, "id"):
+	if not mochi.text.valid(game_id, "id"):
 		return
 
 	language = e.content("language") or "en_US"
@@ -887,7 +887,7 @@ def event_new(e):
 
 	board = e.content("board") or empty_board()
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		return
 
 	# Verify this player is in the game
@@ -988,11 +988,11 @@ def event_move(e):
 		)
 
 	id = e.content("message")
-	if not mochi.valid(str(id), "id"):
+	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		created = now
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
@@ -1043,11 +1043,11 @@ def event_pass(e):
 	)
 
 	id = e.content("message")
-	if not mochi.valid(str(id), "id"):
+	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		created = now
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
@@ -1093,11 +1093,11 @@ def event_exchange(e):
 		)
 
 	id = e.content("message")
-	if not mochi.valid(str(id), "id"):
+	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		created = now
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
@@ -1121,15 +1121,15 @@ def event_message(e):
 		return
 
 	id = e.content("message")
-	if not mochi.valid(str(id), "id"):
+	if not mochi.text.valid(str(id), "id"):
 		return
 
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		return
 
 	body = e.content("body")
-	if not mochi.valid(str(body), "text"):
+	if not mochi.text.valid(str(body), "text"):
 		return
 	if len(str(body)) > 10000:
 		return
