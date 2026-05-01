@@ -68,7 +68,7 @@ export const useGameDetailQuery = (
     enabled: Boolean(gameId) && (options?.enabled ?? true),
     queryFn: () => {
       if (!gameId) {
-        throw new Error('Game ID is required')
+        throw new Error("Game ID is required")
       }
       return gamesApi.detail(gameId)
     },
@@ -112,7 +112,7 @@ export const useValidateWordQuery = (
     staleTime: WORD_VALIDATION_STALE_TIME,
     queryFn: () => {
       if (!word) {
-        throw new Error('Word is required')
+        throw new Error("Word is required")
       }
       return gamesApi.validateWord(word, language)
     },

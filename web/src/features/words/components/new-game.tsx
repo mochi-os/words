@@ -22,8 +22,8 @@ import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
 const LANGUAGES = [
-  { value: 'en_UK', label: 'English (UK)' },
-  { value: 'en_US', label: 'English (US)' },
+  { value: 'en_UK', label: "English (UK)" },
+  { value: 'en_US', label: "English (US)" },
 ] as const
 
 export function NewGame() {
@@ -184,7 +184,7 @@ export function NewGame() {
             ) : (
               <Plus className="size-4" />
             )}
-            {createGameMutation.isPending ? 'Creating...' : 'Start game'}
+            {createGameMutation.isPending ? t`Creating...` : t`Start game`}
           </Button>
         </ResponsiveDialogFooter>
       </ResponsiveDialogContent>

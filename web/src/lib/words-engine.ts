@@ -92,16 +92,16 @@ export function validateAndScoreMove(
   placements: Placement[]
 ): MoveResult {
   if (placements.length === 0) {
-    throw new Error('No tiles placed')
+    throw new Error("No tiles placed")
   }
 
   // Check all placements are on empty squares
   for (const p of placements) {
     if (p.row < 0 || p.row >= BOARD_SIZE || p.col < 0 || p.col >= BOARD_SIZE) {
-      throw new Error('Placement out of bounds')
+      throw new Error("Placement out of bounds")
     }
     if (board[p.row][p.col] !== '.') {
-      throw new Error('Square already occupied')
+      throw new Error("Square already occupied")
     }
   }
 
@@ -110,7 +110,7 @@ export function validateAndScoreMove(
   const cols = new Set(placements.map((p) => p.col))
 
   if (rows.size > 1 && cols.size > 1) {
-    throw new Error('Tiles must be placed in a single row or column')
+    throw new Error("Tiles must be placed in a single row or column")
   }
 
   const isHorizontal = rows.size === 1
@@ -139,7 +139,7 @@ export function validateAndScoreMove(
       const r = isHorizontal ? fixedAxis : i
       const c = isHorizontal ? i : fixedAxis
       if (newBoard[r][c] === '.') {
-        throw new Error('Tiles must be contiguous (no gaps)')
+        throw new Error("Tiles must be contiguous (no gaps)")
       }
     }
   }
@@ -150,10 +150,10 @@ export function validateAndScoreMove(
     // First move must cover center square (7,7)
     const coversCenter = placements.some((p) => p.row === 7 && p.col === 7)
     if (!coversCenter) {
-      throw new Error('First move must cover the center square')
+      throw new Error("First move must cover the center square")
     }
     if (placements.length < 2) {
-      throw new Error('First move must place at least 2 tiles')
+      throw new Error("First move must place at least 2 tiles")
     }
   } else {
     // Must connect to at least one existing tile
@@ -174,7 +174,7 @@ export function validateAndScoreMove(
       if (connected) break
     }
     if (!connected) {
-      throw new Error('Tiles must connect to existing tiles on the board')
+      throw new Error("Tiles must connect to existing tiles on the board")
     }
   }
 
@@ -196,7 +196,7 @@ export function validateAndScoreMove(
   }
 
   if (wordsFormed.length === 0) {
-    throw new Error('No valid words formed')
+    throw new Error("No valid words formed")
   }
 
   let totalScore = wordsFormed.reduce((sum, w) => sum + w.score, 0)

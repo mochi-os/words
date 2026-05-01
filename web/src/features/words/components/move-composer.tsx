@@ -10,7 +10,7 @@ import {
   CardTitle,
   cn,
 } from '@mochi/web'
-import { Trans, useLingui } from '@lingui/react/macro'
+import { Trans } from '@lingui/react/macro'
 import {
   AlertTriangle,
   ArrowLeftRight,
@@ -69,7 +69,6 @@ export function MoveComposer({
   onCancelExchange,
   onConfirmExchange,
 }: MoveComposerProps) {
-  const { t } = useLingui()
   const statusLabel = getStatusLabel(draftStatus, isMyTurn)
   const hasAdvisoryInvalidWords = draftStatus === 'ready_with_invalid_words'
   const showWordList = words.length > 0
@@ -146,7 +145,7 @@ export function MoveComposer({
 
         {/* Word list */}
         {showWordList ? (
-          <ul className="space-y-1.5 max-h-24 overflow-y-auto" aria-label={t`Words formed`}>
+          <ul className="space-y-1.5 max-h-24 overflow-y-auto" aria-label={"Words formed"}>
             {words.map(({ word, score }) => {
               const normalizedWord = word.toUpperCase()
               const validationState =
@@ -173,8 +172,7 @@ export function MoveComposer({
         ) : (
           <p className="text-xs text-muted-foreground">
             {isMyTurn
-              ? 'Place tiles on the board to preview score and words.'
-              : 'Waiting for your turn to place tiles.'}
+              ? "Place tiles on the board to preview score and words." : "Waiting for your turn to place tiles."}
           </p>
         )}
 

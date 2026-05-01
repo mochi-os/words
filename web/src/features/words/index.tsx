@@ -756,7 +756,7 @@ export function WordsGameView() {
                                       }}
                                     >
                                       <ArrowLeftRight className='mr-2 size-4' />
-                                      {exchangeMode ? 'Cancel exchange' : 'Exchange tiles'}
+                                      {exchangeMode ? t`Cancel exchange` : t`Exchange tiles`}
                                     </DropdownMenuItem>
                                   )}
                                   <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
