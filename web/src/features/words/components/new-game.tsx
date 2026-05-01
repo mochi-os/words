@@ -139,7 +139,7 @@ export function NewGame() {
                 onChange={(value) => setSelectedFriends(value as string[])}
                 local={friendsAsPeople}
                 placeholder={t`Select friends...`}
-                emptyMessage="No friends found"
+                emptyMessage={t`No friends found`}
                 open={friendsPickerOpen}
                 onOpenChange={setFriendsPickerOpen}
               />
