@@ -309,7 +309,7 @@ def action_create(a):
 	for opp in opponents:
 		opp = opp.strip()
 		if not mochi.text.valid(opp, "entity"):
-			a.error(400, "Invalid opponent: " + opp)
+			a.error_label(400, "errors.invalid_opponent", opponent=opp)
 			return
 		if opp == a.user.identity.id:
 			a.error_label(400, "errors.cannot_play_against_yourself")
@@ -547,7 +547,7 @@ def action_move(a):
 				idx = i
 				break
 		if idx < 0:
-			a.error(400, "Tile not in rack: " + ch)
+			a.error_label(400, "errors.tile_not_in_rack", tile=ch)
 			return
 		remaining_rack = remaining_rack[:idx] + remaining_rack[idx+1:]
 
@@ -736,7 +736,7 @@ def action_exchange(a):
 				idx = i
 				break
 		if idx < 0:
-			a.error(400, "Tile not in rack: " + ch)
+			a.error_label(400, "errors.tile_not_in_rack", tile=ch)
 			return
 		remaining_rack = remaining_rack[:idx] + remaining_rack[idx+1:]
 
