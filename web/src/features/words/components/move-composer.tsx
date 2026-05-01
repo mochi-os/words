@@ -22,6 +22,7 @@ import type {
   DraftWordValidationState,
   MoveDraftStatus,
 } from '../lib/move-draft'
+import { t } from '@lingui/core/macro'
 
 interface DraftWordPreview {
   word: string
@@ -145,7 +146,7 @@ export function MoveComposer({
 
         {/* Word list */}
         {showWordList ? (
-          <ul className="space-y-1.5 max-h-24 overflow-y-auto" aria-label={"Words formed"}>
+          <ul className="space-y-1.5 max-h-24 overflow-y-auto" aria-label={t`Words formed`}>
             {words.map(({ word, score }) => {
               const normalizedWord = word.toUpperCase()
               const validationState =
