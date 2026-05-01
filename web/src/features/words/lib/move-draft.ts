@@ -1,3 +1,4 @@
+import { naturalCompare } from '@mochi/web'
 import {
   type MoveResult,
   type Placement,
@@ -99,8 +100,8 @@ export function createDraftSignature(
     .sort((a, b) => {
       if (a.row !== b.row) return a.row - b.row
       if (a.col !== b.col) return a.col - b.col
-      if (a.letter !== b.letter) return a.letter.localeCompare(b.letter)
-      return a.rackTile.localeCompare(b.rackTile)
+      if (a.letter !== b.letter) return naturalCompare(a.letter, b.letter)
+      return naturalCompare(a.rackTile, b.rackTile)
     })
     .map((placement) =>
       `${placement.row},${placement.col},${placement.letter},${placement.rackTile}`
