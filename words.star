@@ -176,7 +176,7 @@ _PERSON_ASSETS = ("avatar", "banner", "favicon", "style", "information")
 def action_user_asset(a):
 	asset = a.input("asset")
 	if asset not in _PERSON_ASSETS:
-		a.error_label(404, "errors.unknown_asset")
+		a.error.label(404, "errors.unknown_asset")
 		return
 	return stream_asset(a, a.input("user") or "", "people", asset)
 
@@ -250,14 +250,14 @@ def next_turn(game):
 def load_game(a):
 	"""Load game by ID from action input, validate access."""
 	if not mochi.text.valid(a.input("game"), "id"):
-		a.error_label(400, "errors.invalid_game_id")
+		a.error.label(400, "errors.invalid_game_id")
 		return None
 	game = mochi.db.row("select * from games where id=?", a.input("game"))
 	if not game:
-		a.error_label(404, "errors.game_not_found")
+		a.error.label(404, "errors.game_not_found")
 		return None
 	if not is_player(game, a.user.identity.id):
-		a.error_label(403, "errors.not_a_player_in_this_game")
+		a.error.label(403, "errors.not_a_player_in_this_game")
 		return None
 	return game
 
@@ -291,17 +291,17 @@ def action_create(a):
 	language = a.input("language", "en_US")
 
 	if language not in ["en_US", "en_UK"]:
-		a.error_label(400, "errors.invalid_language")
+		a.error.label(400, "errors.invalid_language")
 		return
 
 	# Parse opponents - comma-separated entity IDs
 	if not opponents_raw:
-		a.error_label(400, "errors.at_least_one_opponent_required")
+		a.error.label(400, "errors.at_least_one_opponent_required")
 		return
 
 	opponents = opponents_raw.split(",")
 	if len(opponents) < 1 or len(opponents) > 3:
-		a.error_label(400, "errors.1_3_opponents_required")
+		a.error.label(400, "errors.1_3_opponents_required")
 		return
 
 	# Validate each opponent
@@ -309,14 +309,14 @@ def action_create(a):
 	for opp in opponents:
 		opp = opp.strip()
 		if not mochi.text.valid(opp, "entity"):
-			a.error_label(400, "errors.invalid_opponent", opponent=opp)
+			a.error.label(400, "errors.invalid_opponent", opponent=opp)
 			return
 		if opp == a.user.identity.id:
-			a.error_label(400, "errors.cannot_play_against_yourself")
+			a.error.label(400, "errors.cannot_play_against_yourself")
 			return
 		friend = mochi.service.call("friends", "get", a.user.identity.id, opp)
 		if not friend:
-			a.error_label(400, "errors.can_only_play_with_friends")
+			a.error.label(400, "errors.can_only_play_with_friends")
 			return
 		opponent_names.append({"id": opp, "name": friend["name"]})
 
@@ -462,13 +462,13 @@ def action_send(a):
 
 	body = a.input("body", "")
 	if not mochi.text.valid(body, "text"):
-		a.error_label(400, "errors.invalid_message")
+		a.error.label(400, "errors.invalid_message")
 		return
 	if len(body) > 10000:
-		a.error_label(400, "errors.message_too_long")
+		a.error.label(400, "errors.message_too_long")
 		return
 	if not body.strip():
-		a.error_label(400, "errors.message_cannot_be_empty")
+		a.error.label(400, "errors.message_cannot_be_empty")
 		return
 
 	id = mochi.uid()
@@ -493,13 +493,13 @@ def action_move(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	# Validate turn
 	pnum = get_player_number(game, a.user.identity.id)
 	if game["current_turn"] != pnum:
-		a.error_label(400, "errors.not_your_turn")
+		a.error.label(400, "errors.not_your_turn")
 		return
 
 	# Get move data
@@ -510,15 +510,15 @@ def action_move(a):
 
 	for ch in tiles_used.elems():
 		if ch != "_" and (ch < "A" or ch > "Z"):
-			a.error_label(400, "errors.invalid_tile_character")
+			a.error.label(400, "errors.invalid_tile_character")
 			return
 
 	if not board or not valid_board(board):
-		a.error_label(400, "errors.invalid_board_state")
+		a.error.label(400, "errors.invalid_board_state")
 		return
 
 	if not mochi.text.valid(score, "integer"):
-		a.error_label(400, "errors.invalid_score")
+		a.error.label(400, "errors.invalid_score")
 		return
 	score = int(score)
 
@@ -547,7 +547,7 @@ def action_move(a):
 				idx = i
 				break
 		if idx < 0:
-			a.error_label(400, "errors.tile_not_in_rack", tile=ch)
+			a.error.label(400, "errors.tile_not_in_rack", tile=ch)
 			return
 		remaining_rack = remaining_rack[:idx] + remaining_rack[idx+1:]
 
@@ -639,12 +639,12 @@ def action_pass(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	pnum = get_player_number(game, a.user.identity.id)
 	if game["current_turn"] != pnum:
-		a.error_label(400, "errors.not_your_turn")
+		a.error.label(400, "errors.not_your_turn")
 		return
 
 	new_consecutive = game["consecutive_passes"] + 1
@@ -704,25 +704,25 @@ def action_exchange(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	pnum = get_player_number(game, a.user.identity.id)
 	if game["current_turn"] != pnum:
-		a.error_label(400, "errors.not_your_turn")
+		a.error.label(400, "errors.not_your_turn")
 		return
 
 	tiles_to_exchange = a.input("tiles", "")
 	if not tiles_to_exchange or len(tiles_to_exchange) > 7:
-		a.error_label(400, "errors.invalid_tiles_to_exchange")
+		a.error.label(400, "errors.invalid_tiles_to_exchange")
 		return
 	for ch in tiles_to_exchange.elems():
 		if ch != "_" and (ch < "A" or ch > "Z"):
-			a.error_label(400, "errors.invalid_tile_character")
+			a.error.label(400, "errors.invalid_tile_character")
 			return
 
 	if len(game["bag"]) < 7:
-		a.error_label(400, "errors.not_enough_tiles_in_bag_to_exchange")
+		a.error.label(400, "errors.not_enough_tiles_in_bag_to_exchange")
 		return
 
 	# Remove exchanged tiles from rack
@@ -736,7 +736,7 @@ def action_exchange(a):
 				idx = i
 				break
 		if idx < 0:
-			a.error_label(400, "errors.tile_not_in_rack", tile=ch)
+			a.error.label(400, "errors.tile_not_in_rack", tile=ch)
 			return
 		remaining_rack = remaining_rack[:idx] + remaining_rack[idx+1:]
 
@@ -786,7 +786,7 @@ def action_resign(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	# Find winner: highest score among remaining players
@@ -826,7 +826,7 @@ def action_delete(a):
 		return
 
 	if game["status"] == "active":
-		a.error_label(400, "errors.cannot_delete_an_active_game")
+		a.error.label(400, "errors.cannot_delete_an_active_game")
 		return
 
 	mochi.db.execute("delete from messages where game=?", game["id"])
@@ -841,10 +841,10 @@ def action_validate_word(a):
 	language = a.input("language", "en_US")
 
 	if not word:
-		a.error_label(400, "errors.word_is_required")
+		a.error.label(400, "errors.word_is_required")
 		return
 	if language not in ["en_US", "en_UK"]:
-		a.error_label(400, "errors.invalid_language")
+		a.error.label(400, "errors.invalid_language")
 		return
 
 	word = word.upper().strip()
