@@ -182,7 +182,7 @@ def action_user_asset(a):
 
 def load_dictionary(language, filename):
 	"""Load a word list file into the dictionary table."""
-	content = mochi.app.file.read(filename)
+	content = mochi.app.asset.read(filename)
 	if not content:
 		return
 	words = str(content).split("\n")
