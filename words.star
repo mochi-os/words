@@ -257,7 +257,7 @@ def load_game(a):
 		a.error.label(404, "errors.game_not_found")
 		return None
 	if not is_player(game, a.user.identity.id):
-		a.error.label(403, "errors.not_a_player_in_this_game")
+		a.error.label(403, "errors.not_a_player")
 		return None
 	return game
 
