@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { cn } from '@mochi/web'
+import { useLingui } from '@lingui/react/macro'
+import { plural } from '@lingui/core/macro'
 import { getLetterValue } from '@/lib/words-engine'
 
 interface TileRackProps {
@@ -31,6 +33,7 @@ export function TileRack({
   isDragging,
   onDropOnRack,
 }: TileRackProps) {
+  const { t } = useLingui()
   const [dropTarget, setDropTarget] = useState<number | null>(null)
   const canDrop = isDragging && !exchangeMode
 
@@ -72,10 +75,10 @@ export function TileRack({
             role="button"
             aria-label={
               !hasTile
-                ? 'Empty tile slot'
+                ? t`Empty tile slot`
                 : tile === '_'
-                  ? 'Blank tile'
-                  : `${displayLetter}, ${value} point${value !== 1 ? 's' : ''}`
+                  ? t`Blank tile`
+                  : `${displayLetter}, ${plural(value, { one: '# point', other: '# points' })}`
             }
             aria-pressed={isSelected || isExchangeSelected}
             tabIndex={hasTile && !disabled ? 0 : -1}

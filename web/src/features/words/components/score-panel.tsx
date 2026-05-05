@@ -1,5 +1,7 @@
 import { cn, EntityAvatar, useAccent, getAppPath } from '@mochi/web'
 import type { CSSProperties } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
+import { plural } from '@lingui/core/macro'
 import type { Game } from '@/api/games'
 
 interface ScorePanelProps {
@@ -54,7 +56,7 @@ function PlayerScore({
         'font-medium truncate max-w-[100px]',
         isMe && 'underline underline-offset-2',
       )}>
-        {isMe ? 'You' : name}
+        {isMe ? <Trans>You</Trans> : name}
       </span>
       <span className="font-bold tabular-nums">{score}</span>
     </div>
@@ -62,29 +64,30 @@ function PlayerScore({
 }
 
 export function ScorePanel({ game, myIdentity, children }: ScorePanelProps) {
+  const { t } = useLingui()
   // Game-over status
   let endText: string | null = null
   if (game.status === 'finished') {
     if (game.winner) {
       if (game.winner === myIdentity) {
-        endText = 'You win!'
+        endText = t`You win!`
       } else {
-        let winnerName = 'Opponent'
+        let winnerName = t`Opponent`
         for (let i = 1; i <= game.player_count; i++) {
           if ((game[`player${i}` as keyof Game] as string) === game.winner) {
             winnerName = game[`player${i}_name` as keyof Game] as string
             break
           }
         }
-        endText = `${winnerName} wins`
+        endText = t`${winnerName} wins`
       }
     } else {
-      endText = 'Game over'
+      endText = t`Game over`
     }
   } else if (game.status === 'resigned') {
     endText = game.winner === myIdentity
-      ? 'Opponent resigned — you win!'
-      : 'You resigned'
+      ? t`Opponent resigned — you win!`
+      : t`You resigned`
   }
 
   return (
@@ -113,7 +116,10 @@ export function ScorePanel({ game, myIdentity, children }: ScorePanelProps) {
         <span className="text-sm font-medium">{endText}</span>
       )}
       <span className="text-muted-foreground text-xs ms-auto">
-        {game.bag_count} tiles left
+        {plural(game.bag_count, {
+          one: '# tile left',
+          other: '# tiles left',
+        })}
       </span>
       {children}
     </div>

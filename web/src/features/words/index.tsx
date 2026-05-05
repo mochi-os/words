@@ -167,9 +167,10 @@ export function WordsGameView() {
     return parseBoard(game.board)
   }, [game?.board])
 
+  const invalidMoveFallback = t`Invalid move`
   const moveDraftBase = useMemo(
-    () => deriveMoveDraft(board, pendingPlacements),
-    [board, pendingPlacements]
+    () => deriveMoveDraft(board, pendingPlacements, invalidMoveFallback),
+    [board, pendingPlacements, invalidMoveFallback]
   )
 
   const draftWords = useMemo(
@@ -830,7 +831,11 @@ export function WordsGameView() {
                             <div className="flex-1" />
                             <Button size="sm" onClick={handleExchangeConfirm} disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}>
                               {exchangeMutation.isPending && <Loader2 className="size-3 animate-spin" />}
-                              Exchange{exchangeSelected.size > 0 ? ` (${exchangeSelected.size})` : ''}
+                              {exchangeSelected.size > 0 ? (
+                                <Trans>Exchange ({exchangeSelected.size})</Trans>
+                              ) : (
+                                <Trans>Exchange</Trans>
+                              )}
                             </Button>
                           </>
                         ) : pendingPlacements.length > 0 ? (
@@ -863,7 +868,7 @@ export function WordsGameView() {
                             </div>
                             <Button size="sm" onClick={handleSubmitMove} disabled={!canSubmitMove}>
                               {moveMutation.isPending && <Loader2 className="size-3 animate-spin" />}
-                              Submit
+                              <Trans>Submit</Trans>
                             </Button>
                           </>
                         ) : null}
@@ -938,7 +943,7 @@ export function WordsGameView() {
         open={showResignDialog}
         onOpenChange={setShowResignDialog}
         title={t`Resign game?`}
-        desc='Are you sure you want to resign?'
+        desc={t`Are you sure you want to resign?`}
         confirmText={
           resignMutation.isPending ? (
             <>
@@ -946,7 +951,7 @@ export function WordsGameView() {
               <Trans>Resigning...</Trans>
             </>
           ) : (
-            'Resign'
+            t`Resign`
           )
         }
         destructive

@@ -6,6 +6,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: bn\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, one {# টাইল বাকি} other {# টাইল বাকি}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{0} এ {1}{2}, সরাতে ক্লিক করুন"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} <0>{1}</0> খেলেছে"
 
 #. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
@@ -19,6 +43,14 @@ msgstr "{name} জিতেছে"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "{name}-এর চাল"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, one {# পয়েন্ট} other {# পয়েন্ট}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} জিতেছে"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -77,11 +109,11 @@ msgstr "অ্যাকাউন্ট যোগ করুন"
 msgid "Add an account to receive notifications and use services."
 msgstr "নোটিফিকেশন পেতে এবং পরিষেবা ব্যবহার করতে একটি অ্যাকাউন্ট যোগ করুন।"
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "বন্ধু যোগ করুন"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "খেলা শুরু করতে People অ্যাপে বন্ধু যোগ করুন"
 
@@ -121,6 +153,10 @@ msgstr "সব"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "আপনি কি নিশ্চিত লগআউট করতে চান? আপনার অ্যাকাউন্টে অ্যাক্সেস করতে আবার লগইন করতে হবে।"
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "আপনি কি সত্যিই হার মানতে চান?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ঊর্ধ্বক্রম"
@@ -135,6 +171,10 @@ msgstr "ফিরে যান"
 msgid "Back to Home"
 msgstr "হোমে ফিরে যান"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "খালি টাইল"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "আগ্রহ বৃদ্ধি করুন"
@@ -146,14 +186,14 @@ msgstr "আগ্রহ বৃদ্ধি করুন"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "বাতিল করুন"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "বিনিময় বাতিল করুন"
 
@@ -165,8 +205,8 @@ msgstr "এই নোটিফিকেশনের ক্যাটেগরি"
 msgid "Change notification category"
 msgstr "নোটিফিকেশন ক্যাটেগরি পরিবর্তন করুন"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "চ্যাট"
 
@@ -174,7 +214,7 @@ msgstr "চ্যাট"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "সাইডবার থেকে একটি গেম বেছে নিন বা একটি নতুন শুরু করুন।"
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "একটি অক্ষর বেছে নিন"
 
@@ -197,6 +237,10 @@ msgstr "সিস্টেম পছন্দ, লাইট মোড, বা �
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "ভাষা বেছে নিন"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "প্রতিপক্ষ বেছে নিন <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -278,7 +322,7 @@ msgstr "চালিয়ে যান"
 msgid "Copy"
 msgstr "কপি করুন"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "তৈরি করা হচ্ছে..."
 
@@ -303,7 +347,7 @@ msgstr "ডিফল্ট"
 msgid "Default AI account"
 msgstr "ডিফল্ট AI অ্যাকাউন্ট"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "গেম মুছুন"
 
@@ -342,7 +386,39 @@ msgstr "মোবাইল সাইডবার প্রদর্শন কর
 msgid "Download"
 msgstr "ডাউনলোড"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "খালি ঘর {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "খালি টাইল স্লট"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "ইংরেজি (UK)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "ইংরেজি (US)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "বিনিময়"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "বিনিময় ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "বিনিময় ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "টাইল বিনিময় করুন"
 
@@ -354,23 +430,23 @@ msgstr "সাইডবার প্রসারিত করুন"
 msgid "Failed to add account"
 msgstr "অ্যাকাউন্ট যোগ করতে ব্যর্থ"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "গেম তৈরি করতে ব্যর্থ"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "পুনঃম্যাচ তৈরি করতে ব্যর্থ"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "গেম মুছতে ব্যর্থ"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "বিনিময় করতে ব্যর্থ"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "পাস করতে ব্যর্থ"
 
@@ -378,12 +454,12 @@ msgstr "পাস করতে ব্যর্থ"
 msgid "Failed to remove account"
 msgstr "অ্যাকাউন্ট সরাতে ব্যর্থ"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "রিজাইন করতে ব্যর্থ"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "পাঠাতে ব্যর্থ"
 
@@ -391,7 +467,7 @@ msgstr "পাঠাতে ব্যর্থ"
 msgid "Failed to send verification code"
 msgstr "যাচাইকরণ কোড পাঠাতে ব্যর্থ"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "চাল জমা দিতে ব্যর্থ"
 
@@ -415,14 +491,15 @@ msgstr "থেকে"
 msgid "Full layout"
 msgstr "সম্পূর্ণ লেআউট"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "গেম তৈরি করা হয়েছে"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "গেম মুছে ফেলা হয়েছে"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "গেম শেষ"
@@ -481,6 +558,7 @@ msgid "Interests"
 msgstr "আগ্রহসমূহ"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "অবৈধ চাল"
 
@@ -488,7 +566,7 @@ msgstr "অবৈধ চাল"
 msgid "Invalid verification code"
 msgstr "অবৈধ যাচাইকরণ কোড"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "ভাষা"
 
@@ -548,7 +626,7 @@ msgstr "লুমা (ডিফল্ট)"
 msgid "Mark all as read"
 msgstr "সবগুলি পঠিত হিসেবে চিহ্নিত করুন"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "সর্বোচ্চ ৩ জন প্রতিপক্ষ"
 
@@ -582,7 +660,7 @@ msgstr "নতুন"
 msgid "New game"
 msgstr "নতুন গেম"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "নতুন গেম"
 
@@ -598,11 +676,11 @@ msgstr "কোনো অ্যাক্সেস নিয়ম কনফিগ
 msgid "No connected accounts"
 msgstr "কোনো সংযুক্ত অ্যাকাউন্ট নেই"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "কোনো বন্ধু পাওয়া যায়নি"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "এখনও কোনো বন্ধু নেই"
 
@@ -618,7 +696,7 @@ msgstr "কোনো গ্রুপ উপলব্ধ নেই"
 msgid "No matches."
 msgstr "কোনো মিল নেই।"
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "এখনও কোনো বার্তা নেই"
 
@@ -666,11 +744,11 @@ msgstr "ওহ! পৃষ্ঠাটি পাওয়া যায়নি!"
 msgid "Open account actions"
 msgstr "অ্যাকাউন্ট অ্যাকশন খুলুন"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "চ্যাট প্যানেল খুলুন"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "গেম অ্যাকশন খুলুন"
 
@@ -687,6 +765,11 @@ msgstr "নেভিগেশন মেনু খুলুন"
 msgid "Open theme settings"
 msgstr "থিম সেটিংস খুলুন"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "প্রতিপক্ষ"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "প্রতিপক্ষ পদত্যাগ করেছেন — আপনি জিতেছেন!"
@@ -699,9 +782,13 @@ msgstr "অন্যান্য"
 msgid "Owner"
 msgstr "মালিক"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "পাস"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "স্কোর ও শব্দ দেখতে বোর্ডে টাইল রাখুন।"
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -711,7 +798,7 @@ msgstr "খেলোয়াড় {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount} জন খেলোয়াড়ের সাথে খেলা হচ্ছে"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "অনুগ্রহ করে কমপক্ষে একজন বন্ধু নির্বাচন করুন"
 
@@ -728,8 +815,8 @@ msgstr "পূর্ববর্তী ছবি"
 msgid "Profile"
 msgstr "প্রোফাইল"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "প্রত্যাহার"
 
@@ -754,7 +841,7 @@ msgstr "আপেক্ষিক (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "২৪ ঘণ্টার মধ্যে আপেক্ষিক, অন্যথায় পরম"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "পুনরায় খেলুন"
 
@@ -784,15 +871,16 @@ msgstr "রিসেট"
 msgid "Reset all settings to default values"
 msgstr "সমস্ত সেটিংস ডিফল্ট মানে রিসেট করুন"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "পদত্যাগ"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "গেম থেকে পদত্যাগ করবেন?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "পদত্যাগ করা হচ্ছে..."
 
@@ -858,7 +946,7 @@ msgstr "অ্যাক্সেস নিয়ম নির্বাচন ক
 msgid "Select account type"
 msgstr "অ্যাকাউন্টের ধরন নির্বাচন করুন"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "বন্ধু নির্বাচন করুন..."
 
@@ -904,7 +992,7 @@ msgstr "সেটিংস"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total} এর মধ্যে {totalShown} দেখানো হচ্ছে"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "র‍্যাক শাফল করুন"
 
@@ -922,11 +1010,11 @@ msgstr "সাইন আউট করা হচ্ছে..."
 msgid "Skip to Main"
 msgstr "মূল অংশে এড়িয়ে যান"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "একটি নতুন Words গেম শুরু করুন"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "গেম শুরু করুন"
 
@@ -937,6 +1025,11 @@ msgstr "তবে সাথে থাকুন!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "বিষয়"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "জমা দিন"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1041,6 +1134,10 @@ msgstr "অননুমোদিত অ্যাক্সেস"
 msgid "United States"
 msgstr "যুক্তরাষ্ট্র"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "অজানা"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "যাচাই করা হয়নি"
@@ -1089,6 +1186,10 @@ msgstr "সব দেখুন"
 msgid "View all notifications"
 msgstr "সব নোটিফিকেশন দেখুন"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "টাইল রাখার জন্য আপনার পালার অপেক্ষায়।"
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "আমরা শীঘ্রই আবার অনলাইনে ফিরে আসব।"
@@ -1102,8 +1203,8 @@ msgid "Wednesday"
 msgstr "বুধবার"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Words"
 
@@ -1111,14 +1212,18 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "তৈরি করা শব্দ"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "আপনি"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "আপনি পদত্যাগ করেছেন"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "আপনি জিতেছেন!"

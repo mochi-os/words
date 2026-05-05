@@ -14,6 +14,24 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, one {kushiyeke # tayile} other {kushiyeke # iitayile}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{0} ku-{1}{2}, cofa ukususa"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} udlale <0>{1}</0>"
+
+#. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
 msgid "{0} tiles left"
 msgstr "Kushiyeke ii-tiles ezi-{0}"
@@ -25,6 +43,14 @@ msgstr "{name} uphumelele"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "Umqhubo ka-{name}"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, one {amanqaku angu-#} other {amanqaku angu-#}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} uphumelele"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -83,11 +109,11 @@ msgstr "Yongeza i-akhawunti"
 msgid "Add an account to receive notifications and use services."
 msgstr "Yongeza i-akhawunti ukuze ufumane izaziso kwaye usebenzise iinkonzo."
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "Yongeza abahlobo"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "Yongeza abahlobo kwi-app yeAbantu ukuze uqalise ukudlala"
 
@@ -127,6 +153,10 @@ msgstr "Konke"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Uqinisekile ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwi-akhawunti yakho."
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "Uqinisekile ufuna ukurhoxa?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Enyukayo"
@@ -141,6 +171,10 @@ msgstr "Buyela"
 msgid "Back to Home"
 msgstr "Buyela eKhaya"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "Itayile engenanto"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Khulisa umdla"
@@ -152,14 +186,14 @@ msgstr "Khulisa umdla"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "Rhoxisa"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "Rhoxisa ukutshintshiselana"
 
@@ -171,8 +205,8 @@ msgstr "Udidi lwesi saziso"
 msgid "Change notification category"
 msgstr "Tshintsha udidi lwesaziso"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "Incoko"
 
@@ -180,7 +214,7 @@ msgstr "Incoko"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Khetha umdlalo kwibha esecaleni okanye qalisa omtsha."
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "Khetha unobumba"
 
@@ -203,6 +237,10 @@ msgstr "Khetha phakathi kothando lwesistim, imodi ekhanyayo, okanye imodi emnyam
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Khetha ulwimi"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "Khetha abachasayo <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -284,7 +322,7 @@ msgstr "Qhubeka"
 msgid "Copy"
 msgstr "Kotshela"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "Iyenziwa..."
 
@@ -309,7 +347,7 @@ msgstr "Eyoqobo"
 msgid "Default AI account"
 msgstr "I-akhawunti yoqobo ye-AI"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "Cima umdlalo"
 
@@ -348,7 +386,39 @@ msgstr "Ibonisa ibara lecala leselula."
 msgid "Download"
 msgstr "Khuphela"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "Isikwere esingenanto {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "Indawo yetayile engenanto"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "IsiNgesi (UK)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "IsiNgesi (US)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "Tshintsha"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "Tshintsha ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "Tshintsha ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "Tshintshanisa amathayile"
 
@@ -360,23 +430,23 @@ msgstr "Yandisa ibara lecala"
 msgid "Failed to add account"
 msgstr "Ayiphumelelanga ukongeza iakhawunti"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "Ayiphumelelanga ukudala umdlalo"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "Ayiphumelelanga ukudala umdlalo omtsha"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "Ayiphumelelanga ukucima umdlalo"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "Ayiphumelelanga ukutshintshanisa"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "Ayiphumelelanga ukudlulisa"
 
@@ -384,12 +454,12 @@ msgstr "Ayiphumelelanga ukudlulisa"
 msgid "Failed to remove account"
 msgstr "Ayiphumelelanga ukususa iakhawunti"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "Ayiphumelelanga ukurhoxa"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "Ayiphumelelanga ukuthumela"
 
@@ -397,7 +467,7 @@ msgstr "Ayiphumelelanga ukuthumela"
 msgid "Failed to send verification code"
 msgstr "Ayiphumelelanga ukuthumela ikhowudi yokuqinisekisa"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "Ayiphumelelanga ukungenisa intshukumo"
 
@@ -421,14 +491,15 @@ msgstr "Suka"
 msgid "Full layout"
 msgstr "Ulungelelaniso olupheleleyo"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "Umdlalo udaliwe"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "Umdlalo ucinyiwe"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "Umdlalo uphelile"
@@ -487,6 +558,7 @@ msgid "Interests"
 msgstr "Imidla"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "Intshukumo engasebenziyo"
 
@@ -494,7 +566,7 @@ msgstr "Intshukumo engasebenziyo"
 msgid "Invalid verification code"
 msgstr "Ikhowudi yokuqinisekisa engasebenziyo"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "Ulwimi"
 
@@ -554,7 +626,7 @@ msgstr "Luma (Okumiselweyo)"
 msgid "Mark all as read"
 msgstr "Phawula konke njengokufundiwe"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "Abachasi abagqibeleleyo aba-3"
 
@@ -588,7 +660,7 @@ msgstr "Entsha"
 msgid "New game"
 msgstr "Umdlalo omtsha"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "Umdlalo Omtsha"
 
@@ -604,11 +676,11 @@ msgstr "Akukho mithetho yofikelelo emiselwe. Yongeza imithetho yokulawula ukuba 
 msgid "No connected accounts"
 msgstr "Akukho akhawunti zinxulumeneyo"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "Akukho bahlobo bafumanekileyo"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "Akukho bahlobo okwangoku"
 
@@ -624,7 +696,7 @@ msgstr "Akukho maqela afumanekayo"
 msgid "No matches."
 msgstr "Akukho zifananisayo."
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Akukho miyalezo okwangoku"
 
@@ -672,11 +744,11 @@ msgstr "Yhu! Iphepha Alifumanekanga!"
 msgid "Open account actions"
 msgstr "Vula izenzo zeakhawunti"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "Vula iphaneli yencoko"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "Vula izenzo zomdlalo"
 
@@ -693,6 +765,11 @@ msgstr "Vula imenyu yojikelo"
 msgid "Open theme settings"
 msgstr "Vula iisetingi zomxholo"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "Umchasi"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "Umchasi urhoxile — uphumelele!"
@@ -705,9 +782,13 @@ msgstr "Okunye"
 msgid "Owner"
 msgstr "Umnini"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "Yidlula"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "Beka iitayile ebhodini ukubona amanqaku namagama."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -717,7 +798,7 @@ msgstr "Umdlali {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Idlala kunye nabadlali aba-{playerCount}"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "Nceda khetha okungenani umhlobo omnye"
 
@@ -734,8 +815,8 @@ msgstr "Umfanekiso ongaphambili"
 msgid "Profile"
 msgstr "Iprofayile"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "Khumbula"
 
@@ -760,7 +841,7 @@ msgstr "Khwiniyene (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Khwiniyene kumayure angama-24, kungenjalo kupheleleyo"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "Phinda udlale"
 
@@ -790,15 +871,16 @@ msgstr "Buyisela"
 msgid "Reset all settings to default values"
 msgstr "Buyisela zonke iisetingi kumaxabiso amiselweyo"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "Rhoxa"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "Rhoxa kumdlalo?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "Iyarhoxa..."
 
@@ -864,7 +946,7 @@ msgstr "Khetha umgaqo wofikelelo"
 msgid "Select account type"
 msgstr "Khetha uhlobo lwe-akhawunti"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "Khetha abahlobo..."
 
@@ -910,7 +992,7 @@ msgstr "Iisetingi"
 msgid "Showing {totalShown} of {total}"
 msgstr "Kuboniswa {totalShown} kwa-{total}"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "Xokomeza igridi"
 
@@ -928,11 +1010,11 @@ msgstr "Iyaphuma..."
 msgid "Skip to Main"
 msgstr "Tsiba uye kweyona"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Qalisa umdlalo omtsha wamaWords"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "Qalisa umdlalo"
 
@@ -943,6 +1025,11 @@ msgstr "Yiba uphaphile!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "Isihloko"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "Ngenisa"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1047,6 +1134,10 @@ msgstr "Ufikelelo Olungavunyelwanga"
 msgid "United States"
 msgstr "United States"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "Akwaziwa"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Ayingqinwanga"
@@ -1095,6 +1186,10 @@ msgstr "Bonisa konke"
 msgid "View all notifications"
 msgstr "Bonisa zonke izaziso"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "Ulinde ithuba lakho lokubeka iitayile."
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "Sizakubuyela kungekudala."
@@ -1108,8 +1203,8 @@ msgid "Wednesday"
 msgstr "Ulwesithathu"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Amagama"
 
@@ -1117,14 +1212,18 @@ msgstr "Amagama"
 msgid "Words formed"
 msgstr "Amagama enziwe"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "Wena"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "Uyekile"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "Uphumelele!"

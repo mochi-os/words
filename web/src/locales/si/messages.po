@@ -6,6 +6,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: si\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, one {# උළුවස්ස ඉතිරිය} other {# උළුවස්ස ඉතිරිය}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{1}{2} හි {0}, ඉවත් කිරීමට ක්ලික් කරන්න"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} <0>{1}</0> ක්‍රීඩා කළා"
 
 #. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
@@ -19,6 +43,14 @@ msgstr "{name} ජයග්‍රහණය කරයි"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "{name}ගේ ගමන"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, one {ලකුණු #} other {ලකුණු #}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} ජය ගනී"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -77,11 +109,11 @@ msgstr "ගිණුමක් එක් කරන්න"
 msgid "Add an account to receive notifications and use services."
 msgstr "දැනුම්දීම් ලබා ගැනීමට සහ සේවාවන් භාවිත කිරීමට ගිණුමක් එක් කරන්න."
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "මිතුරන් එක් කරන්න"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "ක්‍රීඩා කිරීම ආරම්භ කිරීමට People app එකේ මිතුරන් එක් කරන්න"
 
@@ -121,6 +153,10 @@ msgstr "සියල්ල"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ඔබට පිටවීමට අවශ්‍ය බව විශ්වාසද? ඔබේ ගිණුමට ප්‍රවේශ වීමට ඔබට නැවත පුරනය විය යුතුය."
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "ඔබට ඇත්තටම අත්හැරීමට අවශ්‍යද?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ආරෝහණ"
@@ -135,6 +171,10 @@ msgstr "ආපසු"
 msgid "Back to Home"
 msgstr "මුල් පිටුවට ආපසු"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "හිස් උළුවස්ස"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "කැමැත්ත වැඩි කරන්න"
@@ -146,14 +186,14 @@ msgstr "කැමැත්ත වැඩි කරන්න"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "අවලංගු කරන්න"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "හුවමාරුව අවලංගු කරන්න"
 
@@ -165,8 +205,8 @@ msgstr "මෙම දැනුම්දීම සඳහා ප්‍රවර්
 msgid "Change notification category"
 msgstr "දැනුම්දීම් ප්‍රවර්ගය වෙනස් කරන්න"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "චැට්"
 
@@ -174,7 +214,7 @@ msgstr "චැට්"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "පැති තීරුවෙන් ක්‍රීඩාවක් තෝරන්න හෝ නව එකක් ආරම්භ කරන්න."
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "අකුරක් තෝරන්න"
 
@@ -197,6 +237,10 @@ msgstr "පද්ධති අභිරුචිය, ආලෝකමත් ආ�
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "භාෂාව තෝරන්න"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "ප්‍රතිවාදීන් තෝරන්න <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -278,7 +322,7 @@ msgstr "ඉදිරියට"
 msgid "Copy"
 msgstr "පිටපත් කරන්න"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "නිර්මාණය කරමින්..."
 
@@ -303,7 +347,7 @@ msgstr "පෙරනිමි"
 msgid "Default AI account"
 msgstr "පෙරනිමි AI ගිණුම"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "ක්‍රීඩාව මකන්න"
 
@@ -342,7 +386,39 @@ msgstr "ජංගම පැති තීරුව සංදර්ශනය ක�
 msgid "Download"
 msgstr "බාගත කරන්න"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "හිස් කොටුව {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "හිස් උළුවස්ස ස්ථානය"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "ඉංග්‍රීසි (UK)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "ඉංග්‍රීසි (US)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "හුවමාරු"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "හුවමාරු ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "හුවමාරු ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "කොටස් හුවමාරු කරන්න"
 
@@ -354,23 +430,23 @@ msgstr "පැති තීරුව ප්‍රසාරණය කරන්න
 msgid "Failed to add account"
 msgstr "ගිණුම එක් කිරීමට අසමත් විය"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "ක්‍රීඩාවක් සෑදීමට අසමත් විය"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "නැවත තරඟයක් සෑදීමට අසමත් විය"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "ක්‍රීඩාව මැකීමට අසමත් විය"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "හුවමාරුවට අසමත් විය"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "මඟ හැරීමට අසමත් විය"
 
@@ -378,12 +454,12 @@ msgstr "මඟ හැරීමට අසමත් විය"
 msgid "Failed to remove account"
 msgstr "ගිණුම ඉවත් කිරීමට අසමත් විය"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "ඉල්ලා අස්වීමට අසමත් විය"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "යැවීමට අසමත් විය"
 
@@ -391,7 +467,7 @@ msgstr "යැවීමට අසමත් විය"
 msgid "Failed to send verification code"
 msgstr "සත්‍යාපන කේතය යැවීමට අසමත් විය"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "ගමන ඉදිරිපත් කිරීමට අසමත් විය"
 
@@ -415,14 +491,15 @@ msgstr "සිට"
 msgid "Full layout"
 msgstr "සම්පූර්ණ පිරිසැලසුම"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "ක්‍රීඩාව සාදන ලදී"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "ක්‍රීඩාව මකන ලදී"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "ක්‍රීඩාව අවසන්"
@@ -481,6 +558,7 @@ msgid "Interests"
 msgstr "උනන්දු"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "අවලංගු ගමනකි"
 
@@ -488,7 +566,7 @@ msgstr "අවලංගු ගමනකි"
 msgid "Invalid verification code"
 msgstr "අවලංගු සත්‍යාපන කේතය"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "භාෂාව"
 
@@ -548,7 +626,7 @@ msgstr "Luma (පෙරනිමි)"
 msgid "Mark all as read"
 msgstr "සියල්ල කියවූ ලෙස සලකුණු කරන්න"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "උපරිම ප්‍රතිවාදීන් 3 යි"
 
@@ -582,7 +660,7 @@ msgstr "අලුත්"
 msgid "New game"
 msgstr "නව ක්‍රීඩාවක්"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "නව ක්‍රීඩාව"
 
@@ -598,11 +676,11 @@ msgstr "ප්‍රවේශ නියමයන් කිසිවක් සැ
 msgid "No connected accounts"
 msgstr "සම්බන්ධිත ගිණුම් නැත"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "මිතුරන් හමු නොවීය"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "තවම මිතුරන් නැත"
 
@@ -618,7 +696,7 @@ msgstr "කණ්ඩායම් ලබා ගත නොහැක"
 msgid "No matches."
 msgstr "ගැලපීම් නැත."
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "තවම පණිවිඩ නැත"
 
@@ -666,11 +744,11 @@ msgstr "අහෝ! පිටුව හමු නොවීය!"
 msgid "Open account actions"
 msgstr "ගිණුම් ක්‍රියා විවෘත කරන්න"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "චැට් පැනලය විවෘත කරන්න"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "ක්‍රීඩා ක්‍රියා විවෘත කරන්න"
 
@@ -687,6 +765,11 @@ msgstr "සංචාලන මෙනුව විවෘත කරන්න"
 msgid "Open theme settings"
 msgstr "theme සැකසුම් විවෘත කරන්න"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "ප්‍රතිවාදී"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "ප්‍රතිවාදියා ඉල්ලා අස්වුණා — ඔබ දිනුවා!"
@@ -699,9 +782,13 @@ msgstr "වෙනත්"
 msgid "Owner"
 msgstr "හිමිකරු"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "pass කරන්න"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "ලකුණු සහ වචන පෙරදැක්මට පුවරුව මත උළුවස්ස තබන්න."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -711,7 +798,7 @@ msgstr "ක්‍රීඩකයා {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "ක්‍රීඩකයන් {playerCount} දෙනා සමඟ ක්‍රීඩා කරයි"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "කරුණාකර අවම වශයෙන් එක් මිතුරෙකු තෝරන්න"
 
@@ -728,8 +815,8 @@ msgstr "පෙර පින්තූරය"
 msgid "Profile"
 msgstr "පැතිකඩ"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "recall කරන්න"
 
@@ -754,7 +841,7 @@ msgstr "සාපේක්ෂ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "පැය 24 තුළ සාපේක්ෂ, නැතහොත් නිරපේක්ෂ"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "නැවත ක්‍රීඩාව"
 
@@ -784,15 +871,16 @@ msgstr "reset"
 msgid "Reset all settings to default values"
 msgstr "සියලු සැකසුම් පෙරනිමි අගයන් වෙත reset කරන්න"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "ඉල්ලා අස්වන්න"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "ක්‍රීඩාවෙන් ඉල්ලා අස්වන්නද?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "ඉල්ලා අස්වෙමින්..."
 
@@ -858,7 +946,7 @@ msgstr "ප්‍රවේශ රීතිය තෝරන්න"
 msgid "Select account type"
 msgstr "ගිණුම් වර්ගය තෝරන්න"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "මිතුරන් තෝරන්න..."
 
@@ -904,7 +992,7 @@ msgstr "සැකසුම්"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total}න් {totalShown}ක් පෙන්වමින්"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "rack එක shuffle කරන්න"
 
@@ -922,11 +1010,11 @@ msgstr "පිට වෙමින්..."
 msgid "Skip to Main"
 msgstr "ප්‍රධාන කොටසට මඟ හරින්න"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "නව Words ක්‍රීඩාවක් ආරම්භ කරන්න"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "ක්‍රීඩාව ආරම්භ කරන්න"
 
@@ -937,6 +1025,11 @@ msgstr "නමුත් රැඳී සිටින්න!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "විෂය"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "ඉදිරිපත් කරන්න"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1041,6 +1134,10 @@ msgstr "අනවසර ප්‍රවේශය"
 msgid "United States"
 msgstr "එක්සත් ජනපදය"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "නොදන්නා"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "සත්‍යාපනය නොකළ"
@@ -1089,6 +1186,10 @@ msgstr "සියල්ල බලන්න"
 msgid "View all notifications"
 msgstr "සියලුම දැනුම්දීම් බලන්න"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "උළුවස්ස තැබීමට ඔබේ වාරය බලාපොරොත්තුවෙන්."
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "අපි ඉක්මනින් online වන්නෙමු."
@@ -1102,8 +1203,8 @@ msgid "Wednesday"
 msgstr "බදාදා"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Words"
 
@@ -1111,14 +1212,18 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "සාදන ලද වචන"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "ඔබ"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "ඔබ ඉල්ලා අස් විය"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "ඔබ ජයග්‍රහණය කරයි!"

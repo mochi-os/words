@@ -14,6 +14,24 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, one {Tayìlì # kù} other {Tayìlì # kù}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{0} ní {1}{2}, tẹ láti yọ"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} ṣeré <0>{1}</0>"
+
+#. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
 msgid "{0} tiles left"
 msgstr "{0} tiles tó kù"
@@ -25,6 +43,14 @@ msgstr "{name} borí"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "Ìṣíkiri ti {name}"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, one {ojuami #} other {ojuami #}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} ti ṣẹ́gun"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -83,11 +109,11 @@ msgstr "Fi àkáǹtì kún"
 msgid "Add an account to receive notifications and use services."
 msgstr "Fi àkáǹtì kún láti gba àwọn ìfitónilétí àti láti lo àwọn iṣẹ́."
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "Fi àwọn ọ̀rẹ́ kún"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "Fi àwọn ọ̀rẹ́ kún nínú app People láti bẹ̀rẹ̀ eré"
 
@@ -127,6 +153,10 @@ msgstr "Gbogbo"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ṣé o dájú pé o fẹ́ jáde? Wàá nílò láti wọlé lẹ́ẹ̀kan sí i láti rí àkáǹtì rẹ."
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "Ṣé o dájú pé o fẹ́ jọ̀wọ́?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Àsc"
@@ -141,6 +171,10 @@ msgstr "Padà"
 msgid "Back to Home"
 msgstr "Padà sí Ilé"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "Tayìlì òfìfo"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Mú ìfẹ́ pọ̀"
@@ -152,14 +186,14 @@ msgstr "Mú ìfẹ́ pọ̀"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "Fagilé"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "Fagilé pàṣípààrọ̀"
 
@@ -171,8 +205,8 @@ msgstr "Ẹ̀ka fún ìfitónilétí yìí"
 msgid "Change notification category"
 msgstr "Yí ẹ̀ka ìfitónilétí padà"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "Ìjíròrò"
 
@@ -180,7 +214,7 @@ msgstr "Ìjíròrò"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Yan eré kan láti sidebar tàbí bẹ̀rẹ̀ ọ̀kan tuntun."
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "Yan lẹ́tà kan"
 
@@ -203,6 +237,10 @@ msgstr "Yan láàrin ìfẹ́ system, ọ̀nà ìmọ́lẹ̀, tàbí ọ̀nà �
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Yan èdè"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "Yan àwọn alátakò <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -284,7 +322,7 @@ msgstr "Tẹ̀síwájú"
 msgid "Copy"
 msgstr "Ṣe àdàkọ"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "Ó ń dá..."
 
@@ -309,7 +347,7 @@ msgstr "Àìpé"
 msgid "Default AI account"
 msgstr "Àkáǹtì AI àìpé"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "Pa eré rẹ́"
 
@@ -348,7 +386,39 @@ msgstr "Ó ń fi sidebar fóònù hàn."
 msgid "Download"
 msgstr "Gbà sílẹ̀"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "Onígun mẹ́rin tó ṣófo {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "Àyè tayìlì òfìfo"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "Èdè Gẹ̀ẹ́sì (UK)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "Èdè Gẹ̀ẹ́sì (US)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "Pààrọ̀"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "Pààrọ̀ ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "Pààrọ̀ ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "Pààrọ̀ àwọn tile"
 
@@ -360,23 +430,23 @@ msgstr "Fẹ̀ sidebar"
 msgid "Failed to add account"
 msgstr "Kò lè fi àkántì kún"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "Kò lè dá eré"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "Kò lè dá ìbárapọ̀ tuntun"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "Kò lè pa eré rẹ́"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "Kò lè pààrọ̀"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "Kò lè kọjá"
 
@@ -384,12 +454,12 @@ msgstr "Kò lè kọjá"
 msgid "Failed to remove account"
 msgstr "Kò lè mú àkántì kúrò"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "Kò lè jọ̀wọ́"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "Kò lè firanṣẹ́"
 
@@ -397,7 +467,7 @@ msgstr "Kò lè firanṣẹ́"
 msgid "Failed to send verification code"
 msgstr "Kò lè firanṣẹ́ kóòdù ìjẹ́rìí"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "Kò lè fi ìṣíkiri sílẹ̀"
 
@@ -421,14 +491,15 @@ msgstr "Láti"
 msgid "Full layout"
 msgstr "Àtòjọ kíkún"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "A ti dá eré"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "A ti pa eré rẹ́"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "Eré ti parí"
@@ -487,6 +558,7 @@ msgid "Interests"
 msgstr "Àwọn ìfẹ́"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "Ìṣíkiri aláìdára"
 
@@ -494,7 +566,7 @@ msgstr "Ìṣíkiri aláìdára"
 msgid "Invalid verification code"
 msgstr "Kóòdù ìjẹ́rìí aláìdára"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "Èdè"
 
@@ -554,7 +626,7 @@ msgstr "Luma (Àbùdá)"
 msgid "Mark all as read"
 msgstr "Sàmì sí gbogbo gẹ́gẹ́ bí kíkà"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "Olórúkọ mẹ́ta jùlọ"
 
@@ -588,7 +660,7 @@ msgstr "Tuntun"
 msgid "New game"
 msgstr "Eré tuntun"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "Eré Tuntun"
 
@@ -604,11 +676,11 @@ msgstr "A kò ṣètò àwọn òfin àyè kankan. Fi àwọn òfin kún láti �
 msgid "No connected accounts"
 msgstr "Kò sí ìròyìn tó sopọ̀"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "A kò rí ọ̀rẹ́ kankan"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "Kò sí ọ̀rẹ́ síbẹ̀"
 
@@ -624,7 +696,7 @@ msgstr "Kò sí ẹgbẹ́ tó wà"
 msgid "No matches."
 msgstr "Kò sí ìbámu."
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Kò sí ìránṣẹ́ síbẹ̀"
 
@@ -672,11 +744,11 @@ msgstr "Aàá! A Kò Rí Ojú-ìwé!"
 msgid "Open account actions"
 msgstr "Ṣí àwọn iṣẹ́ ìròyìn"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "Ṣí àwòrán chat"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "Ṣí àwọn iṣẹ́ eré"
 
@@ -693,6 +765,11 @@ msgstr "Ṣí ìtòlẹ́sẹẹsẹ ìṣàkóso"
 msgid "Open theme settings"
 msgstr "Ṣí àwọn ètò àkórí"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "Alátakò"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "Olórúkọ ti fi sílẹ̀ — o borí!"
@@ -705,9 +782,13 @@ msgstr "Mìíràn"
 msgid "Owner"
 msgstr "Onílé"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "Kọjá"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "Gbé tayìlì sí orí pátákó láti rí ojuami àti àwọn ọrọ̀."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -717,7 +798,7 @@ msgstr "Ẹlẹ́rò {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Ń ṣe eré pẹ̀lú àwọn ẹlẹ́rò {playerCount}"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "Jọ̀wọ́ yan o kéré tán ọ̀rẹ́ kan"
 
@@ -734,8 +815,8 @@ msgstr "Àwòrán tó kọjá"
 msgid "Profile"
 msgstr "Profile"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "Rántí"
 
@@ -760,7 +841,7 @@ msgstr "Pẹ̀lú ìbáṣepọ̀ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Pẹ̀lú ìbáṣepọ̀ nínú wákàtí 24, bí ó ṣíkù absolute"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "Tún bá"
 
@@ -790,15 +871,16 @@ msgstr "Pa padà"
 msgid "Reset all settings to default values"
 msgstr "Pa gbogbo ètò padà sí àwọn iye àbùdá"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "Fi sílẹ̀"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "Fi eré sílẹ̀?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "Ń fi sílẹ̀..."
 
@@ -864,7 +946,7 @@ msgstr "Yan òfin ààyè"
 msgid "Select account type"
 msgstr "Yan irú account"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "Yan àwọn ọ̀rẹ́..."
 
@@ -910,7 +992,7 @@ msgstr "Àwọn ìṣètò"
 msgid "Showing {totalShown} of {total}"
 msgstr "Ń fi {totalShown} hàn nínú {total}"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "Gbọn rack"
 
@@ -928,11 +1010,11 @@ msgstr "Ń jáde..."
 msgid "Skip to Main"
 msgstr "Fò sí Olórí"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Bẹ̀rẹ̀ eré Words tuntun"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "Bẹ̀rẹ̀ eré"
 
@@ -943,6 +1025,11 @@ msgstr "Ṣùgbọ́n dúró tì wá!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "Àkòrí"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "Fi sí ilẹ̀"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1047,6 +1134,10 @@ msgstr "Ààyè Aláìláyè"
 msgid "United States"
 msgstr "United States"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "Aláìmọ̀"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Kò tíì jẹ́rìí sí"
@@ -1095,6 +1186,10 @@ msgstr "Wo gbogbo"
 msgid "View all notifications"
 msgstr "Wo gbogbo àwọn ìfitónilétí"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "Ń dúró fún ìgbà rẹ láti gbé tayìlì."
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "A ó padà sí lójú-ọ̀nà láìpẹ́."
@@ -1108,8 +1203,8 @@ msgid "Wednesday"
 msgstr "Ọjọ́rú"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Àwọn ọ̀rọ̀"
 
@@ -1117,14 +1212,18 @@ msgstr "Àwọn ọ̀rọ̀"
 msgid "Words formed"
 msgstr "Àwọn ọ̀rọ̀ tí a dá"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "Ìwọ"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "O fi ipò sílẹ̀"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "O borí!"

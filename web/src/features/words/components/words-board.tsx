@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useRef } from 'react'
 import { cn } from '@mochi/web'
+import { useLingui } from '@lingui/react/macro'
 import {
   BOARD_SIZE,
   getPremium,
@@ -51,6 +52,7 @@ export function WordsBoard({
   onBoardDragStart,
   onDragEnd,
 }: WordsBoardProps) {
+  const { t } = useLingui()
   const isActive = gameStatus === 'active'
   const canPlace = isActive && isMyTurn && selectedRackIndex !== null
   const isDragging = dragSource !== null && dragSource !== undefined
@@ -204,9 +206,9 @@ export function WordsBoard({
                 tabIndex={canClickToPlace || canClickToRemove ? 0 : -1}
                 aria-label={
                   isPending
-                    ? `${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}, click to remove`
+                    ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}, click to remove`
                     : canClickToPlace
-                      ? `Empty square ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
+                      ? t`Empty square ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
                       : undefined
                 }
                 draggable={canDragThis}

@@ -1,3 +1,4 @@
+/* eslint-disable lingui/no-unlocalized-strings -- vitest describe/it test names are not user-facing */
 import { describe, it, expect } from 'vitest'
 import {
   BOARD_SIZE,

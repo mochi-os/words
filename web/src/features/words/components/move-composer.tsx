@@ -10,7 +10,7 @@ import {
   CardTitle,
   cn,
 } from '@mochi/web'
-import { Trans } from '@lingui/react/macro'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   AlertTriangle,
   ArrowLeftRight,
@@ -22,7 +22,6 @@ import type {
   DraftWordValidationState,
   MoveDraftStatus,
 } from '../lib/move-draft'
-import { t } from '@lingui/core/macro'
 
 interface DraftWordPreview {
   word: string
@@ -70,7 +69,8 @@ export function MoveComposer({
   onCancelExchange,
   onConfirmExchange,
 }: MoveComposerProps) {
-  const statusLabel = getStatusLabel(draftStatus, isMyTurn)
+  const { t } = useLingui()
+  const statusLabel = getStatusLabel(draftStatus, isMyTurn, t)
   const hasAdvisoryInvalidWords = draftStatus === 'ready_with_invalid_words'
   const showWordList = words.length > 0
   const isChecking = draftStatus === 'checking'
@@ -172,8 +172,11 @@ export function MoveComposer({
           </ul>
         ) : (
           <p className="text-xs text-muted-foreground">
-            {isMyTurn
-              ? "Place tiles on the board to preview score and words." : "Waiting for your turn to place tiles."}
+            {isMyTurn ? (
+              <Trans>Place tiles on the board to preview score and words.</Trans>
+            ) : (
+              <Trans>Waiting for your turn to place tiles.</Trans>
+            )}
           </p>
         )}
 
@@ -199,7 +202,11 @@ export function MoveComposer({
               ) : (
                 <ArrowLeftRight className="size-3" />
               )}
-              Exchange{exchangeCount > 0 ? ` (${exchangeCount})` : ''}
+              {exchangeCount > 0 ? (
+                <Trans>Exchange ({exchangeCount})</Trans>
+              ) : (
+                <Trans>Exchange</Trans>
+              )}
             </Button>
           </div>
         )}
@@ -224,7 +231,7 @@ export function MoveComposer({
               {isSubmitting && (
                 <Loader2 className="size-3 animate-spin" />
               )}
-              Submit
+              <Trans>Submit</Trans>
             </Button>
           </div>
         )}
@@ -276,30 +283,33 @@ function getStatusBadgeVariant(
 
 function getStatusBadgeClass(status: MoveDraftStatus): string {
   if (status === 'ready') {
+    // eslint-disable-next-line lingui/no-unlocalized-strings -- Tailwind class names
     return 'bg-emerald-600 border-emerald-600 text-white dark:bg-emerald-700 dark:border-emerald-700'
   }
   return ''
 }
 
-function getStatusLabel(status: MoveDraftStatus, isMyTurn: boolean): string {
+type LinguiT = ReturnType<typeof useLingui>['t']
+
+function getStatusLabel(status: MoveDraftStatus, isMyTurn: boolean, t: LinguiT): string {
   if (!isMyTurn && status === 'empty') {
-    return 'Waiting for your turn'
+    return t`Waiting for your turn`
   }
 
   switch (status) {
     case 'empty':
-      return 'Waiting for tiles'
+      return t`Waiting for tiles`
     case 'invalid_local':
-      return 'Invalid move'
+      return t`Invalid move`
     case 'ready':
-      return 'Ready'
+      return t`Ready`
     case 'checking':
-      return 'Checking'
+      return t`Checking`
     case 'ready_with_invalid_words':
-      return 'Has unknown words'
+      return t`Has unknown words`
     case 'validation_unavailable':
-      return 'Validation offline'
+      return t`Validation offline`
     default:
-      return 'Ready'
+      return t`Ready`
   }
 }

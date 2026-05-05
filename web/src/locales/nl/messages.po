@@ -14,6 +14,24 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, one {# steen over} other {# stenen over}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{0} op {1}{2}, klik om te verwijderen"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} speelde <0>{1}</0>"
+
+#. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
 msgid "{0} tiles left"
 msgstr "{0} stenen over"
@@ -25,6 +43,14 @@ msgstr "{name} wint"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "Zet van {name}"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, one {# punt} other {# punten}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} wint"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -83,11 +109,11 @@ msgstr "Account toevoegen"
 msgid "Add an account to receive notifications and use services."
 msgstr "Voeg een account toe om meldingen te ontvangen en diensten te gebruiken."
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "Vrienden toevoegen"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "Voeg vrienden toe in de People-app om te beginnen met spelen"
 
@@ -127,6 +153,10 @@ msgstr "Alles"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Weet je zeker dat je wilt uitloggen? Je moet opnieuw inloggen om toegang te krijgen tot je account."
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "Weet je zeker dat je wilt opgeven?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Oplopend"
@@ -141,6 +171,10 @@ msgstr "Terug"
 msgid "Back to Home"
 msgstr "Terug naar Home"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "Lege steen"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Interesse versterken"
@@ -152,14 +186,14 @@ msgstr "Interesse versterken"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "Ruil annuleren"
 
@@ -171,8 +205,8 @@ msgstr "Categorie voor deze melding"
 msgid "Change notification category"
 msgstr "Meldingscategorie wijzigen"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "Chat"
 
@@ -180,7 +214,7 @@ msgstr "Chat"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Kies een game in de zijbalk of start een nieuw spel."
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "Kies een letter"
 
@@ -203,6 +237,10 @@ msgstr "Kies tussen systeemvoorkeur, lichte modus of donkere modus"
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Kies taal"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "Kies tegenstanders <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -284,7 +322,7 @@ msgstr "Doorgaan"
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "Aanmaken..."
 
@@ -309,7 +347,7 @@ msgstr "Standaard"
 msgid "Default AI account"
 msgstr "Standaard AI-account"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "Game verwijderen"
 
@@ -348,7 +386,39 @@ msgstr "Toont de mobiele zijbalk."
 msgid "Download"
 msgstr "Downloaden"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "Leeg vakje {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "Lege steenplek"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "Engels (VK)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "Engels (VS)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "Wisselen"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "Wisselen ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "Wisselen ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "Stenen omruilen"
 
@@ -360,23 +430,23 @@ msgstr "Zijbalk uitklappen"
 msgid "Failed to add account"
 msgstr "Account toevoegen mislukt"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "Spel aanmaken mislukt"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "Revanche aanmaken mislukt"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "Spel verwijderen mislukt"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "Omruilen mislukt"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "Passen mislukt"
 
@@ -384,12 +454,12 @@ msgstr "Passen mislukt"
 msgid "Failed to remove account"
 msgstr "Account verwijderen mislukt"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "Opgeven mislukt"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "Verzenden mislukt"
 
@@ -397,7 +467,7 @@ msgstr "Verzenden mislukt"
 msgid "Failed to send verification code"
 msgstr "Verificatiecode verzenden mislukt"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "Zet indienen mislukt"
 
@@ -421,14 +491,15 @@ msgstr "Van"
 msgid "Full layout"
 msgstr "Volledige lay-out"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "Spel aangemaakt"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "Spel verwijderd"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "Spel afgelopen"
@@ -487,6 +558,7 @@ msgid "Interests"
 msgstr "Interesses"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "Ongeldige zet"
 
@@ -494,7 +566,7 @@ msgstr "Ongeldige zet"
 msgid "Invalid verification code"
 msgstr "Ongeldige verificatiecode"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "Taal"
 
@@ -554,7 +626,7 @@ msgstr "Luma (standaard)"
 msgid "Mark all as read"
 msgstr "Alles als gelezen markeren"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "Maximaal 3 tegenstanders"
 
@@ -588,7 +660,7 @@ msgstr "Nieuw"
 msgid "New game"
 msgstr "Nieuw spel"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "Nieuw spel"
 
@@ -604,11 +676,11 @@ msgstr "Geen toegangsregels geconfigureerd. Voeg regels toe om te bepalen wie to
 msgid "No connected accounts"
 msgstr "Geen gekoppelde accounts"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "Geen vrienden gevonden"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "Nog geen vrienden"
 
@@ -624,7 +696,7 @@ msgstr "Geen groepen beschikbaar"
 msgid "No matches."
 msgstr "Geen overeenkomsten."
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Nog geen berichten"
 
@@ -672,11 +744,11 @@ msgstr "Oeps! Pagina niet gevonden!"
 msgid "Open account actions"
 msgstr "Account-acties openen"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "Chatvenster openen"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "Spel-acties openen"
 
@@ -693,6 +765,11 @@ msgstr "Navigatiemenu openen"
 msgid "Open theme settings"
 msgstr "Thema-instellingen openen"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "Tegenstander"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "Tegenstander heeft opgegeven — je hebt gewonnen!"
@@ -705,9 +782,13 @@ msgstr "Overig"
 msgid "Owner"
 msgstr "Eigenaar"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "Passen"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "Plaats stenen op het bord om score en woorden te zien."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -717,7 +798,7 @@ msgstr "Speler {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Spelen met {playerCount} spelers"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "Selecteer ten minste één vriend"
 
@@ -734,8 +815,8 @@ msgstr "Vorige afbeelding"
 msgid "Profile"
 msgstr "Profiel"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "Terugroepen"
 
@@ -760,7 +841,7 @@ msgstr "Relatief (5m, 3u, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatief binnen 24 uur, anders absoluut"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "Revanche"
 
@@ -790,15 +871,16 @@ msgstr "Resetten"
 msgid "Reset all settings to default values"
 msgstr "Alle instellingen resetten naar standaardwaarden"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "Opgeven"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "Spel opgeven?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "Bezig met opgeven..."
 
@@ -864,7 +946,7 @@ msgstr "Kies toegangsregel"
 msgid "Select account type"
 msgstr "Kies accounttype"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "Kies vrienden..."
 
@@ -910,7 +992,7 @@ msgstr "Instellingen"
 msgid "Showing {totalShown} of {total}"
 msgstr "Toont {totalShown} van {total}"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "Rek schudden"
 
@@ -928,11 +1010,11 @@ msgstr "Bezig met uitloggen..."
 msgid "Skip to Main"
 msgstr "Naar hoofdinhoud"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Start een nieuw Words-spel"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "Spel starten"
 
@@ -943,6 +1025,11 @@ msgstr "Houd het in de gaten!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "Onderwerp"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "Verzenden"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1047,6 +1134,10 @@ msgstr "Onbevoegde toegang"
 msgid "United States"
 msgstr "Verenigde Staten"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "Onbekend"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Niet geverifieerd"
@@ -1095,6 +1186,10 @@ msgstr "Alles bekijken"
 msgid "View all notifications"
 msgstr "Alle meldingen bekijken"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "Wachten op je beurt om stenen te plaatsen."
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "We zijn zo weer online."
@@ -1108,8 +1203,8 @@ msgid "Wednesday"
 msgstr "Woensdag"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Woorden"
 
@@ -1117,14 +1212,18 @@ msgstr "Woorden"
 msgid "Words formed"
 msgstr "Gevormde woorden"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "Jij"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "Je hebt opgegeven"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "Je wint!"

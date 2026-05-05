@@ -14,6 +14,24 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, other {Còn lại # quân}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{0} tại {1}{2}, nhấp để gỡ"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} đã chơi <0>{1}</0>"
+
+#. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
 msgid "{0} tiles left"
 msgstr "Còn lại {0} ô"
@@ -25,6 +43,14 @@ msgstr "{name} thắng"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "Lượt của {name}"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, other {# điểm}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} thắng"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -83,11 +109,11 @@ msgstr "Thêm tài khoản"
 msgid "Add an account to receive notifications and use services."
 msgstr "Thêm tài khoản để nhận thông báo và dùng dịch vụ."
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "Thêm bạn"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "Thêm bạn trong ứng dụng People để bắt đầu chơi"
 
@@ -127,6 +153,10 @@ msgstr "Tất cả"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Bạn có chắc muốn đăng xuất? Bạn sẽ cần đăng nhập lại để truy cập tài khoản."
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "Bạn có chắc chắn muốn đầu hàng?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Tăng dần"
@@ -141,6 +171,10 @@ msgstr "Quay lại"
 msgid "Back to Home"
 msgstr "Quay lại Trang chủ"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "Quân trống"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Đẩy mạnh sở thích"
@@ -152,14 +186,14 @@ msgstr "Đẩy mạnh sở thích"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "Hủy"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "Hủy trao đổi"
 
@@ -171,8 +205,8 @@ msgstr "Danh mục cho thông báo này"
 msgid "Change notification category"
 msgstr "Đổi danh mục thông báo"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "Trò chuyện"
 
@@ -180,7 +214,7 @@ msgstr "Trò chuyện"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Chọn một ván chơi ở thanh bên hoặc bắt đầu ván mới."
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "Chọn một chữ cái"
 
@@ -203,6 +237,10 @@ msgstr "Chọn giữa theo hệ thống, chế độ sáng, hoặc chế độ t
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Chọn ngôn ngữ"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "Chọn đối thủ <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -284,7 +322,7 @@ msgstr "Tiếp tục"
 msgid "Copy"
 msgstr "Sao chép"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "Đang tạo..."
 
@@ -309,7 +347,7 @@ msgstr "Mặc định"
 msgid "Default AI account"
 msgstr "Tài khoản AI mặc định"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "Xóa ván"
 
@@ -348,7 +386,39 @@ msgstr "Hiển thị thanh bên di động."
 msgid "Download"
 msgstr "Tải xuống"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "Ô trống {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "Vị trí quân trống"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "Tiếng Anh (UK)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "Tiếng Anh (US)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "Đổi"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "Đổi ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "Đổi ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "Đổi quân"
 
@@ -360,23 +430,23 @@ msgstr "Mở rộng thanh bên"
 msgid "Failed to add account"
 msgstr "Không thêm tài khoản được"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "Không tạo trò chơi được"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "Không tạo trận tái đấu được"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "Không xoá trò chơi được"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "Không đổi được"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "Không bỏ lượt được"
 
@@ -384,12 +454,12 @@ msgstr "Không bỏ lượt được"
 msgid "Failed to remove account"
 msgstr "Không xoá tài khoản được"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "Không xin thua được"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "Không gửi được"
 
@@ -397,7 +467,7 @@ msgstr "Không gửi được"
 msgid "Failed to send verification code"
 msgstr "Không gửi mã xác minh được"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "Không gửi nước đi được"
 
@@ -421,14 +491,15 @@ msgstr "Từ"
 msgid "Full layout"
 msgstr "Bố cục đầy đủ"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "Đã tạo trò chơi"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "Đã xoá trò chơi"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "Hết trò chơi"
@@ -487,6 +558,7 @@ msgid "Interests"
 msgstr "Sở thích"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "Nước đi không hợp lệ"
 
@@ -494,7 +566,7 @@ msgstr "Nước đi không hợp lệ"
 msgid "Invalid verification code"
 msgstr "Mã xác minh không hợp lệ"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "Ngôn ngữ"
 
@@ -554,7 +626,7 @@ msgstr "Luma (Mặc định)"
 msgid "Mark all as read"
 msgstr "Đánh dấu tất cả là đã đọc"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "Tối đa 3 đối thủ"
 
@@ -588,7 +660,7 @@ msgstr "Mới"
 msgid "New game"
 msgstr "Trò chơi mới"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "Trò chơi mới"
 
@@ -604,11 +676,11 @@ msgstr "Chưa cấu hình quy tắc truy cập. Thêm quy tắc để kiểm so�
 msgid "No connected accounts"
 msgstr "Không có tài khoản đã kết nối"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "Không tìm thấy bạn bè"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "Chưa có bạn bè"
 
@@ -624,7 +696,7 @@ msgstr "Không có nhóm nào"
 msgid "No matches."
 msgstr "Không có kết quả khớp."
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Chưa có tin nhắn"
 
@@ -672,11 +744,11 @@ msgstr "Rất tiếc! Không tìm thấy trang!"
 msgid "Open account actions"
 msgstr "Mở thao tác tài khoản"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "Mở bảng trò chuyện"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "Mở thao tác trò chơi"
 
@@ -693,6 +765,11 @@ msgstr "Mở menu điều hướng"
 msgid "Open theme settings"
 msgstr "Mở cài đặt theme"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "Đối thủ"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "Đối thủ đã đầu hàng — bạn thắng!"
@@ -705,9 +782,13 @@ msgstr "Khác"
 msgid "Owner"
 msgstr "Chủ sở hữu"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "Bỏ qua"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "Đặt quân lên bàn cờ để xem điểm và từ."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -717,7 +798,7 @@ msgstr "Người chơi {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Đang chơi với {playerCount} người chơi"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "Vui lòng chọn ít nhất một người bạn"
 
@@ -734,8 +815,8 @@ msgstr "Hình trước"
 msgid "Profile"
 msgstr "Hồ sơ"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "Thu hồi"
 
@@ -760,7 +841,7 @@ msgstr "Tương đối (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Tương đối trong vòng 24 giờ, ngoài ra dùng tuyệt đối"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "Đấu lại"
 
@@ -790,15 +871,16 @@ msgstr "Đặt lại"
 msgid "Reset all settings to default values"
 msgstr "Đặt lại tất cả cài đặt về giá trị mặc định"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "Đầu hàng"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "Đầu hàng trận đấu?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "Đang đầu hàng..."
 
@@ -864,7 +946,7 @@ msgstr "Chọn quy tắc truy cập"
 msgid "Select account type"
 msgstr "Chọn loại tài khoản"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "Chọn bạn bè..."
 
@@ -910,7 +992,7 @@ msgstr "Cài đặt"
 msgid "Showing {totalShown} of {total}"
 msgstr "Đang hiển thị {totalShown} trên {total}"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "Xáo giá"
 
@@ -928,11 +1010,11 @@ msgstr "Đang đăng xuất..."
 msgid "Skip to Main"
 msgstr "Chuyển đến nội dung chính"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Bắt đầu một ván Words mới"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "Bắt đầu trò chơi"
 
@@ -943,6 +1025,11 @@ msgstr "Hãy đón xem nhé!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "Tiêu đề"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "Gửi"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1047,6 +1134,10 @@ msgstr "Truy cập không được phép"
 msgid "United States"
 msgstr "Hoa Kỳ"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "Không rõ"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Chưa xác minh"
@@ -1095,6 +1186,10 @@ msgstr "Xem tất cả"
 msgid "View all notifications"
 msgstr "Xem tất cả thông báo"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "Đang chờ đến lượt bạn để đặt quân."
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "Chúng tôi sẽ trở lại trực tuyến sớm."
@@ -1108,8 +1203,8 @@ msgid "Wednesday"
 msgstr "Thứ tư"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Words"
 
@@ -1117,14 +1212,18 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Từ đã ghép"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "Bạn"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "Bạn đã đầu hàng"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "Bạn thắng!"

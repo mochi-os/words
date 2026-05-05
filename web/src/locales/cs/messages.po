@@ -14,6 +14,24 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, one {Zbývá # kámen} few {Zbývají # kameny} many {Zbývá # kamenů} other {Zbývá # kamenů}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{0} na {1}{2}, kliknutím odeberete"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} zahrál <0>{1}</0>"
+
+#. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
 msgid "{0} tiles left"
 msgstr "Zbývá {0} kamenů"
@@ -25,6 +43,14 @@ msgstr "Vyhrává {name}"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "Tah hráče {name}"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, one {# bod} few {# body} many {# bodů} other {# bodů}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} vyhrává"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -83,11 +109,11 @@ msgstr "Přidat účet"
 msgid "Add an account to receive notifications and use services."
 msgstr "Přidejte účet pro příjem oznámení a využívání služeb."
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "Přidat přátele"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "Přidejte přátele v aplikaci Lidé a začněte hrát"
 
@@ -127,6 +153,10 @@ msgstr "Vše"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Opravdu se chcete odhlásit? Pro přístup ke svému účtu se budete muset znovu přihlásit."
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "Opravdu chcete vzdát hru?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Vzestupně"
@@ -141,6 +171,10 @@ msgstr "Zpět"
 msgid "Back to Home"
 msgstr "Zpět na hlavní stránku"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "Prázdný kámen"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Zvýšit zájem"
@@ -152,14 +186,14 @@ msgstr "Zvýšit zájem"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "Zrušit výměnu"
 
@@ -171,8 +205,8 @@ msgstr "Kategorie pro toto oznámení"
 msgid "Change notification category"
 msgstr "Změnit kategorii oznámení"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "Chat"
 
@@ -180,7 +214,7 @@ msgstr "Chat"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Vyberte hru z postranního panelu nebo začněte novou."
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "Vyberte písmeno"
 
@@ -203,6 +237,10 @@ msgstr "Vyberte mezi systémovým nastavením, světlým nebo tmavým režimem"
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Vyberte jazyk"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "Vyberte soupeře <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -284,7 +322,7 @@ msgstr "Pokračovat"
 msgid "Copy"
 msgstr "Kopírovat"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "Vytváření..."
 
@@ -309,7 +347,7 @@ msgstr "Výchozí"
 msgid "Default AI account"
 msgstr "Výchozí AI účet"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "Smazat hru"
 
@@ -348,7 +386,39 @@ msgstr "Zobrazí mobilní postranní panel."
 msgid "Download"
 msgstr "Stáhnout"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "Prázdné políčko {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "Prázdná pozice pro kámen"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "Angličtina (UK)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "Angličtina (US)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "Vyměnit"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "Vyměnit ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "Vyměnit ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "Vyměnit kameny"
 
@@ -360,23 +430,23 @@ msgstr "Rozbalit postranní panel"
 msgid "Failed to add account"
 msgstr "Nepodařilo se přidat účet"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "Nepodařilo se vytvořit hru"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "Nepodařilo se vytvořit odvetu"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "Nepodařilo se smazat hru"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "Nepodařilo se vyměnit"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "Nepodařilo se předat"
 
@@ -384,12 +454,12 @@ msgstr "Nepodařilo se předat"
 msgid "Failed to remove account"
 msgstr "Nepodařilo se odebrat účet"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "Nepodařilo se vzdát se"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "Nepodařilo se odeslat"
 
@@ -397,7 +467,7 @@ msgstr "Nepodařilo se odeslat"
 msgid "Failed to send verification code"
 msgstr "Nepodařilo se odeslat ověřovací kód"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "Nepodařilo se odeslat tah"
 
@@ -421,14 +491,15 @@ msgstr "Od"
 msgid "Full layout"
 msgstr "Plné rozvržení"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "Hra vytvořena"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "Hra smazána"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "Konec hry"
@@ -487,6 +558,7 @@ msgid "Interests"
 msgstr "Zájmy"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "Neplatný tah"
 
@@ -494,7 +566,7 @@ msgstr "Neplatný tah"
 msgid "Invalid verification code"
 msgstr "Neplatný ověřovací kód"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "Jazyk"
 
@@ -554,7 +626,7 @@ msgstr "Luma (výchozí)"
 msgid "Mark all as read"
 msgstr "Označit vše jako přečtené"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "Maximálně 3 soupeři"
 
@@ -588,7 +660,7 @@ msgstr "Nové"
 msgid "New game"
 msgstr "Nová hra"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "Nová hra"
 
@@ -604,11 +676,11 @@ msgstr "Nejsou nakonfigurována žádná pravidla přístupu. Přidejte pravidla
 msgid "No connected accounts"
 msgstr "Žádné připojené účty"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "Žádní přátelé nenalezeni"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "Zatím žádní přátelé"
 
@@ -624,7 +696,7 @@ msgstr "Žádné skupiny k dispozici"
 msgid "No matches."
 msgstr "Žádné shody."
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Zatím žádné zprávy"
 
@@ -672,11 +744,11 @@ msgstr "Jejda! Stránka nenalezena!"
 msgid "Open account actions"
 msgstr "Otevřít akce účtu"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "Otevřít panel chatu"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "Otevřít akce hry"
 
@@ -693,6 +765,11 @@ msgstr "Otevřít navigační menu"
 msgid "Open theme settings"
 msgstr "Otevřít nastavení tématu"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "Soupeř"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "Soupeř vzdal — vyhráváte!"
@@ -705,9 +782,13 @@ msgstr "Ostatní"
 msgid "Owner"
 msgstr "Vlastník"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "Vynechat"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "Položte kameny na desku pro náhled skóre a slov."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -717,7 +798,7 @@ msgstr "Hráč {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount, plural, one {Hraje # hráč} few {Hrají # hráči} many {Hraje # hráčů} other {Hraje # hráčů}}"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "Vyberte alespoň jednoho přítele"
 
@@ -734,8 +815,8 @@ msgstr "Předchozí obrázek"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "Stáhnout"
 
@@ -760,7 +841,7 @@ msgstr "Relativní (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativní do 24 hodin, jinak absolutní"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "Odveta"
 
@@ -790,15 +871,16 @@ msgstr "Resetovat"
 msgid "Reset all settings to default values"
 msgstr "Obnovit všechna nastavení na výchozí hodnoty"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "Vzdát"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "Vzdát hru?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "Vzdávání…"
 
@@ -864,7 +946,7 @@ msgstr "Vyberte pravidlo přístupu"
 msgid "Select account type"
 msgstr "Vyberte typ účtu"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "Vyberte přátele..."
 
@@ -910,7 +992,7 @@ msgstr "Nastavení"
 msgid "Showing {totalShown} of {total}"
 msgstr "Zobrazeno {totalShown} z {total}"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "Zamíchat stojan"
 
@@ -928,11 +1010,11 @@ msgstr "Odhlašování..."
 msgid "Skip to Main"
 msgstr "Přeskočit na hlavní obsah"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Začít novou hru Words"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "Začít hru"
 
@@ -943,6 +1025,11 @@ msgstr "Zůstaňte ale naladěni!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "Předmět"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "Odeslat"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1047,6 +1134,10 @@ msgstr "Neoprávněný přístup"
 msgid "United States"
 msgstr "Spojené státy"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "Neznámý"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Neověřeno"
@@ -1095,6 +1186,10 @@ msgstr "Zobrazit vše"
 msgid "View all notifications"
 msgstr "Zobrazit všechna oznámení"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "Čekání, až budete na tahu, abyste položili kameny."
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "Brzy budeme zpět online."
@@ -1108,8 +1203,8 @@ msgid "Wednesday"
 msgstr "Středa"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Words"
 
@@ -1117,14 +1212,18 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Vytvořená slova"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "Vy"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "Vzdal jste to"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "Vyhráváte!"

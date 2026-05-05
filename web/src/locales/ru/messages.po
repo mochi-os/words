@@ -14,6 +14,24 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: game.bag_count
+#: src/features/words/components/score-panel.tsx:119
+msgid "{0, plural, one {# tile left} other {# tiles left}}"
+msgstr "{0, plural, one {Осталась # фишка} few {Осталось # фишки} many {Осталось # фишек} other {Осталось # фишек}}"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:209
+msgid "{0} at {1}{2}, click to remove"
+msgstr "{0} на {1}{2}, нажмите, чтобы убрать"
+
+#. placeholder {0}: isSent ? t`You` : message.name
+#. placeholder {1}: message.body
+#: src/features/words/components/chat-message-list.tsx:198
+msgid "{0} played <0>{1}</0>"
+msgstr "{0} сыграл <0>{1}</0>"
+
+#. placeholder {0}: game.bag_count
 #: src/features/words/lib/header-model.ts:135
 msgid "{0} tiles left"
 msgstr "Осталось плиток: {0}"
@@ -25,6 +43,14 @@ msgstr "{name} побеждает"
 #: src/features/words/lib/header-model.ts:93
 msgid "{name}'s move"
 msgstr "Ход {name}"
+
+#: src/features/words/components/tile-rack.tsx:81
+msgid "{value, plural, one {# point} other {# points}}"
+msgstr "{value, plural, one {# очко} few {# очка} many {# очков} other {# очков}}"
+
+#: src/features/words/components/score-panel.tsx:82
+msgid "{winnerName} wins"
+msgstr "{winnerName} побеждает"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -83,11 +109,11 @@ msgstr "Добавить аккаунт"
 msgid "Add an account to receive notifications and use services."
 msgstr "Добавьте аккаунт, чтобы получать уведомления и использовать сервисы."
 
-#: src/features/words/components/new-game.tsx:132
+#: src/features/words/components/new-game.tsx:136
 msgid "Add friends"
 msgstr "Добавить друзей"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:129
 msgid "Add friends in the People app to start playing"
 msgstr "Добавьте друзей в приложении People, чтобы начать играть"
 
@@ -127,6 +153,10 @@ msgstr "Все"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Вы уверены, что хотите выйти? Вам потребуется войти снова, чтобы получить доступ к аккаунту."
 
+#: src/features/words/index.tsx:946
+msgid "Are you sure you want to resign?"
+msgstr "Вы уверены, что хотите сдаться?"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "По возр."
@@ -141,6 +171,10 @@ msgstr "Назад"
 msgid "Back to Home"
 msgstr "Назад на главную"
 
+#: src/features/words/components/tile-rack.tsx:80
+msgid "Blank tile"
+msgstr "Пустая фишка"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Усилить интерес"
@@ -152,14 +186,14 @@ msgstr "Усилить интерес"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:189
-#: src/features/words/components/new-game.tsx:179
-#: src/features/words/index.tsx:828
-#: src/features/words/index.tsx:993
+#: src/features/words/components/move-composer.tsx:192
+#: src/features/words/components/new-game.tsx:183
+#: src/features/words/index.tsx:829
+#: src/features/words/index.tsx:998
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/features/words/index.tsx:756
+#: src/features/words/index.tsx:757
 msgid "Cancel exchange"
 msgstr "Отменить обмен"
 
@@ -171,8 +205,8 @@ msgstr "Категория этого уведомления"
 msgid "Change notification category"
 msgstr "Изменить категорию уведомления"
 
-#: src/features/words/index.tsx:881
-#: src/features/words/index.tsx:913
+#: src/features/words/index.tsx:886
+#: src/features/words/index.tsx:918
 msgid "Chat"
 msgstr "Чат"
 
@@ -180,7 +214,7 @@ msgstr "Чат"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Выберите игру в боковой панели или начните новую."
 
-#: src/features/words/index.tsx:977
+#: src/features/words/index.tsx:982
 msgid "Choose a letter"
 msgstr "Выберите букву"
 
@@ -203,6 +237,10 @@ msgstr "Выберите системные настройки, светлый �
 #: ../../../lib/web/src/components/language-picker.tsx:167
 msgid "Choose language"
 msgstr "Выберите язык"
+
+#: src/features/words/components/new-game.tsx:119
+msgid "Choose opponents <0>(1-3)</0>"
+msgstr "Выберите соперников <0>(1-3)</0>"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:304
 msgid "Clear"
@@ -284,7 +322,7 @@ msgstr "Продолжить"
 msgid "Copy"
 msgstr "Копировать"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
 msgstr "Создание..."
 
@@ -309,7 +347,7 @@ msgstr "По умолчанию"
 msgid "Default AI account"
 msgstr "Аккаунт ИИ по умолчанию"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:773
 msgid "Delete game"
 msgstr "Удалить игру"
 
@@ -348,7 +386,39 @@ msgstr "Отображает мобильную боковую панель."
 msgid "Download"
 msgstr "Скачать"
 
-#: src/features/words/index.tsx:756
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:211
+msgid "Empty square {0}{1}"
+msgstr "Пустая клетка {0}{1}"
+
+#: src/features/words/components/tile-rack.tsx:78
+msgid "Empty tile slot"
+msgstr "Пустое место для фишки"
+
+#: src/features/words/components/new-game.tsx:27
+msgid "English (UK)"
+msgstr "Английский (Великобритания)"
+
+#: src/features/words/components/new-game.tsx:28
+msgid "English (US)"
+msgstr "Английский (США)"
+
+#: src/features/words/components/move-composer.tsx:208
+#: src/features/words/index.tsx:837
+msgid "Exchange"
+msgstr "Обменять"
+
+#. placeholder {0}: exchangeSelected.size
+#: src/features/words/index.tsx:835
+msgid "Exchange ({0})"
+msgstr "Обменять ({0})"
+
+#: src/features/words/components/move-composer.tsx:206
+msgid "Exchange ({exchangeCount})"
+msgstr "Обменять ({exchangeCount})"
+
+#: src/features/words/index.tsx:757
 msgid "Exchange tiles"
 msgstr "Обменять фишки"
 
@@ -360,23 +430,23 @@ msgstr "Развернуть боковую панель"
 msgid "Failed to add account"
 msgstr "Не удалось добавить аккаунт"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:57
 msgid "Failed to create game"
 msgstr "Не удалось создать игру"
 
-#: src/features/words/index.tsx:345
+#: src/features/words/index.tsx:346
 msgid "Failed to create rematch"
 msgstr "Не удалось создать матч-реванш"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:356
 msgid "Failed to delete game"
 msgstr "Не удалось удалить игру"
 
-#: src/features/words/index.tsx:329
+#: src/features/words/index.tsx:330
 msgid "Failed to exchange"
 msgstr "Не удалось обменять"
 
-#: src/features/words/index.tsx:319
+#: src/features/words/index.tsx:320
 msgid "Failed to pass"
 msgstr "Не удалось пропустить"
 
@@ -384,12 +454,12 @@ msgstr "Не удалось пропустить"
 msgid "Failed to remove account"
 msgstr "Не удалось удалить аккаунт"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to resign"
 msgstr "Не удалось сдаться"
 
-#: src/features/words/index.tsx:897
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:934
 msgid "Failed to send"
 msgstr "Не удалось отправить"
 
@@ -397,7 +467,7 @@ msgstr "Не удалось отправить"
 msgid "Failed to send verification code"
 msgstr "Не удалось отправить код подтверждения"
 
-#: src/features/words/index.tsx:313
+#: src/features/words/index.tsx:314
 msgid "Failed to submit move"
 msgstr "Не удалось отправить ход"
 
@@ -421,14 +491,15 @@ msgstr "От"
 msgid "Full layout"
 msgstr "Полный макет"
 
-#: src/features/words/components/new-game.tsx:49
+#: src/features/words/components/new-game.tsx:53
 msgid "Game created"
 msgstr "Игра создана"
 
-#: src/features/words/index.tsx:351
+#: src/features/words/index.tsx:352
 msgid "Game deleted"
 msgstr "Игра удалена"
 
+#: src/features/words/components/score-panel.tsx:85
 #: src/features/words/lib/header-model.ts:107
 msgid "Game over"
 msgstr "Игра окончена"
@@ -487,6 +558,7 @@ msgid "Interests"
 msgstr "Интересы"
 
 #: src/features/words/components/move-composer.tsx:120
+#: src/features/words/index.tsx:170
 msgid "Invalid move"
 msgstr "Недопустимый ход"
 
@@ -494,7 +566,7 @@ msgstr "Недопустимый ход"
 msgid "Invalid verification code"
 msgstr "Недопустимый код подтверждения"
 
-#: src/features/words/components/new-game.tsx:155
+#: src/features/words/components/new-game.tsx:159
 msgid "Language"
 msgstr "Язык"
 
@@ -554,7 +626,7 @@ msgstr "Luma (по умолчанию)"
 msgid "Mark all as read"
 msgstr "Отметить все как прочитанное"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "Максимум 3 соперника"
 
@@ -588,7 +660,7 @@ msgstr "Новый"
 msgid "New game"
 msgstr "Новая игра"
 
-#: src/features/words/components/new-game.tsx:105
+#: src/features/words/components/new-game.tsx:109
 msgid "New Game"
 msgstr "Новая игра"
 
@@ -604,11 +676,11 @@ msgstr "Правила доступа не настроены. Добавьте 
 msgid "No connected accounts"
 msgstr "Нет подключённых учётных записей"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:146
 msgid "No friends found"
 msgstr "Друзья не найдены"
 
-#: src/features/words/components/new-game.tsx:124
+#: src/features/words/components/new-game.tsx:128
 msgid "No friends yet"
 msgstr "Друзей пока нет"
 
@@ -624,7 +696,7 @@ msgstr "Нет доступных групп"
 msgid "No matches."
 msgstr "Совпадений нет."
 
-#: src/features/words/components/chat-message-list.tsx:148
+#: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Сообщений пока нет"
 
@@ -672,11 +744,11 @@ msgstr "Упс! Страница не найдена!"
 msgid "Open account actions"
 msgstr "Открыть действия учётной записи"
 
-#: src/features/words/index.tsx:718
+#: src/features/words/index.tsx:719
 msgid "Open chat panel"
 msgstr "Открыть панель чата"
 
-#: src/features/words/index.tsx:726
+#: src/features/words/index.tsx:727
 msgid "Open game actions"
 msgstr "Открыть действия игры"
 
@@ -693,6 +765,11 @@ msgstr "Открыть меню навигации"
 msgid "Open theme settings"
 msgstr "Открыть настройки темы"
 
+#: src/features/words/components/score-panel.tsx:75
+msgid "Opponent"
+msgstr "Соперник"
+
+#: src/features/words/components/score-panel.tsx:89
 #: src/features/words/lib/header-model.ts:111
 msgid "Opponent resigned — you win!"
 msgstr "Соперник сдался — вы победили!"
@@ -705,9 +782,13 @@ msgstr "Другое"
 msgid "Owner"
 msgstr "Владелец"
 
-#: src/features/words/index.tsx:744
+#: src/features/words/index.tsx:745
 msgid "Pass"
 msgstr "Пас"
+
+#: src/features/words/components/move-composer.tsx:176
+msgid "Place tiles on the board to preview score and words."
+msgstr "Расставьте фишки на доске, чтобы увидеть очки и слова."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -717,7 +798,7 @@ msgstr "Игрок {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Играем с {playerCount} {playerCount, plural, one {игроком} few {игроками} many {игроками} other {игроками}}"
 
-#: src/features/words/components/new-game.tsx:68
+#: src/features/words/components/new-game.tsx:72
 msgid "Please select at least one friend"
 msgstr "Пожалуйста, выберите хотя бы одного друга"
 
@@ -734,8 +815,8 @@ msgstr "Предыдущее изображение"
 msgid "Profile"
 msgstr "Профиль"
 
-#: src/features/words/components/move-composer.tsx:216
-#: src/features/words/index.tsx:839
+#: src/features/words/components/move-composer.tsx:223
+#: src/features/words/index.tsx:844
 msgid "Recall"
 msgstr "Отозвать"
 
@@ -760,7 +841,7 @@ msgstr "Относительный (5м, 3ч, 2д)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Относительный в пределах 24 часов, иначе абсолютный"
 
-#: src/features/words/index.tsx:769
+#: src/features/words/index.tsx:770
 msgid "Rematch"
 msgstr "Реванш"
 
@@ -790,15 +871,16 @@ msgstr "Сбросить"
 msgid "Reset all settings to default values"
 msgstr "Сбросить все настройки к значениям по умолчанию"
 
-#: src/features/words/index.tsx:760
+#: src/features/words/index.tsx:761
+#: src/features/words/index.tsx:954
 msgid "Resign"
 msgstr "Сдаться"
 
-#: src/features/words/index.tsx:940
+#: src/features/words/index.tsx:945
 msgid "Resign game?"
 msgstr "Сдаться в игре?"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:951
 msgid "Resigning..."
 msgstr "Сдача..."
 
@@ -864,7 +946,7 @@ msgstr "Выберите правило доступа"
 msgid "Select account type"
 msgstr "Выберите тип аккаунта"
 
-#: src/features/words/components/new-game.tsx:141
+#: src/features/words/components/new-game.tsx:145
 msgid "Select friends..."
 msgstr "Выберите друзей..."
 
@@ -910,7 +992,7 @@ msgstr "Настройки"
 msgid "Showing {totalShown} of {total}"
 msgstr "Показано {totalShown} из {total}"
 
-#: src/features/words/index.tsx:736
+#: src/features/words/index.tsx:737
 msgid "Shuffle rack"
 msgstr "Перемешать стойку"
 
@@ -928,11 +1010,11 @@ msgstr "Выход..."
 msgid "Skip to Main"
 msgstr "Перейти к основному"
 
-#: src/features/words/components/new-game.tsx:108
+#: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Начать новую игру Words"
 
-#: src/features/words/components/new-game.tsx:187
+#: src/features/words/components/new-game.tsx:191
 msgid "Start game"
 msgstr "Начать игру"
 
@@ -943,6 +1025,11 @@ msgstr "Следите за обновлениями!"
 #: ../../../lib/web/src/features/access/access-list.tsx:187
 msgid "Subject"
 msgstr "Тема"
+
+#: src/features/words/components/move-composer.tsx:234
+#: src/features/words/index.tsx:871
+msgid "Submit"
+msgstr "Отправить"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:75
 msgid "Sunday"
@@ -1047,6 +1134,10 @@ msgstr "Несанкционированный доступ"
 msgid "United States"
 msgstr "США"
 
+#: src/hooks/useGameWebsocket.ts:121
+msgid "Unknown"
+msgstr "Неизвестно"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Не подтверждено"
@@ -1095,6 +1186,10 @@ msgstr "Просмотреть всё"
 msgid "View all notifications"
 msgstr "Просмотреть все уведомления"
 
+#: src/features/words/components/move-composer.tsx:178
+msgid "Waiting for your turn to place tiles."
+msgstr "Ожидание вашего хода для расстановки фишек."
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "Мы скоро снова будем в сети."
@@ -1108,8 +1203,8 @@ msgid "Wednesday"
 msgstr "Среда"
 
 #: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:644
-#: src/features/words/index.tsx:656
+#: src/features/words/index.tsx:645
+#: src/features/words/index.tsx:657
 msgid "Words"
 msgstr "Слова"
 
@@ -1117,14 +1212,18 @@ msgstr "Слова"
 msgid "Words formed"
 msgstr "Сформированные слова"
 
+#: src/features/words/components/chat-message-list.tsx:199
+#: src/features/words/components/score-panel.tsx:59
 #: src/features/words/lib/header-model.ts:122
 msgid "You"
 msgstr "Вы"
 
+#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "You resigned"
 msgstr "Вы сдались"
 
+#: src/features/words/components/score-panel.tsx:73
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "Вы выиграли!"

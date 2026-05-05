@@ -1,4 +1,4 @@
-import { naturalCompare } from '@mochi/web'
+import { getErrorMessage, naturalCompare } from '@mochi/web'
 import {
   type MoveResult,
   type Placement,
@@ -34,7 +34,8 @@ interface ResolveMoveDraftStatusArgs {
 
 export function deriveMoveDraft(
   board: string[][],
-  placements: readonly Placement[]
+  placements: readonly Placement[],
+  invalidMoveFallback: string,
 ): MoveDraftBase {
   if (placements.length === 0) {
     return { status: 'empty', errorMessage: null, result: null }
@@ -46,7 +47,7 @@ export function deriveMoveDraft(
   } catch (error) {
     return {
       status: 'invalid_local',
-      errorMessage: getErrorMessage(error),
+      errorMessage: getErrorMessage(error, invalidMoveFallback),
       result: null,
     }
   }
@@ -118,9 +119,3 @@ export function shouldApplyValidationResult(
   return activeSignature === resultSignature
 }
 
-function getErrorMessage(error: unknown): string {
-  if (error instanceof Error && error.message.trim().length > 0) {
-    return error.message
-  }
-  return 'Invalid move'
-}

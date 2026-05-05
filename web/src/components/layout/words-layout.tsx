@@ -112,7 +112,7 @@ function WordsLayoutInner() {
     })
 
     return { navGroups: groups }
-  }, [games, myIdentity, openNewGameDialog])
+  }, [games, myIdentity, openNewGameDialog, t])
 
   return (
     <AuthenticatedLayout

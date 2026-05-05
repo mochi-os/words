@@ -21,13 +21,17 @@ import { Loader2, Plus, UserPlus, Users } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
-const LANGUAGES = [
-  { value: 'en_UK', label: "English (UK)" },
-  { value: 'en_US', label: "English (US)" },
-] as const
+function useLanguages() {
+  const { t } = useLingui()
+  return [
+    { value: 'en_UK', label: t`English (UK)` },
+    { value: 'en_US', label: t`English (US)` },
+  ] as const
+}
 
 export function NewGame() {
   const { t } = useLingui()
+  const languages = useLanguages()
   const navigate = useNavigate()
   const { newGameDialogOpen: open, closeNewGameDialog } = useSidebarContext()
   const onOpenChange = (isOpen: boolean) => {
@@ -112,7 +116,7 @@ export function NewGame() {
         <div className="space-y-4">
           <div className="space-y-2">
             <label className="text-sm font-medium">
-              Choose opponents <span className="text-muted-foreground font-normal">(1-3)</span>
+              <Trans>Choose opponents <span className="text-muted-foreground font-normal">(1-3)</span></Trans>
             </label>
             {isLoading ? (
               <Skeleton className="h-9 w-full" />
@@ -154,7 +158,7 @@ export function NewGame() {
           <div className="space-y-2">
             <label className="text-sm font-medium"><Trans>Language</Trans></label>
             <div className="flex gap-2">
-              {LANGUAGES.map((lang) => (
+              {languages.map((lang) => (
                 <Button
                   key={lang.value}
                   type="button"
