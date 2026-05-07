@@ -922,7 +922,7 @@ def event_new(e):
 		return
 
 	sender_name = e.content("player1_name") or "Someone"
-	notify("activity", "", "Words game", sender_name + " started a game", "/words/" + game_id)
+	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.started_game", name=sender_name), "/words/" + game_id)
 
 def event_move(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1008,7 +1008,7 @@ def event_move(e):
 		"bag_count": bag_count,
 	}
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", "Words move", name + " played " + body, "/words/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=body), "/words/" + game["id"])
 
 def event_pass(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1059,7 +1059,7 @@ def event_pass(e):
 		"status": status, "winner": winner or "",
 	}
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", "Words", name + " passed", "/words/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.passed", name=name), "/words/" + game["id"])
 
 def event_exchange(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1109,7 +1109,7 @@ def event_exchange(e):
 		"current_turn": current_turn, "bag_count": bag_count,
 	}
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", "Words", name + " exchanged tiles", "/words/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.exchanged_tiles", name=name), "/words/" + game["id"])
 
 def event_message(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1139,7 +1139,7 @@ def event_message(e):
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
 
 	mochi.websocket.write(game["key"], {"type": "message", "created": created, "member": sender, "name": name, "body": body})
-	notify("message", "", "Words message", name + ": " + body, "/words/" + game["id"])
+	notify("message", "", mochi.app.label("notifications.title.message"), name + ": " + body, "/words/" + game["id"])
 
 def event_resign(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1160,5 +1160,5 @@ def event_resign(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""})
-	notify("activity", "", "Words game", body, "/words/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.game"), body, "/words/" + game["id"])
 
