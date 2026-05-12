@@ -961,6 +961,13 @@ def event_move(e):
 	else:
 		move_count = game["move_count"] + 1
 
+	# Monotonic gate: move_count is sequential per game, so an incoming
+	# event whose count isn't strictly greater than ours is stale (delayed
+	# duplicate, or a replicated identity's parallel attempt that lost
+	# the cross-host race). Drop without rewriting board / bag / scores.
+	if game["move_count"] != None and move_count <= game["move_count"]:
+		return
+
 	new_score = e.content("new_score")
 	if new_score:
 		new_score = int(new_score)
