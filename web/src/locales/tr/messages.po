@@ -234,7 +234,7 @@ msgstr "Soldan sağa veya sağdan sola site yönü arasında seçim yapın"
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Sistem tercihi, açık mod veya koyu mod arasında seçim yapın"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Dil seçin"
 
@@ -285,11 +285,16 @@ msgstr "Aramayı kapat"
 msgid "Collapse sidebar"
 msgstr "Kenar çubuğunu daralt"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Geniş"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Yakında!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Kompakt"
 
@@ -321,6 +326,10 @@ msgstr "Devam et"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopyala"
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "Bu belge yüklenemedi. Lütfen daha sonra tekrar deneyin."
 
 #: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
@@ -359,7 +368,7 @@ msgstr "Azalan"
 msgid "Details Panel"
 msgstr "Ayrıntılar paneli"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -385,6 +394,10 @@ msgstr "Mobil kenar çubuğunu görüntüler."
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:312
 msgid "Download"
 msgstr "İndir"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Disleksi dostu"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
@@ -425,6 +438,10 @@ msgstr "Taşları değiştir"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "Kenar çubuğunu genişlet"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Çok büyük"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -486,6 +503,14 @@ msgstr "Cuma"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Kimden"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Temadan"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -570,6 +595,11 @@ msgstr "Geçersiz doğrulama kodu"
 msgid "Language"
 msgstr "Dil"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Büyük"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "Düzen"
@@ -592,6 +622,7 @@ msgid "Load more"
 msgstr "Daha fazla yükle"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "Yükleniyor…"
 
@@ -625,6 +656,10 @@ msgstr "Tümünü okundu olarak işaretle"
 #: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "En fazla 3 rakip"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Orta"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
@@ -688,10 +723,6 @@ msgstr "Henüz oyun yok"
 msgid "No groups available"
 msgstr "Grup yok"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Eşleşme yok."
-
 #: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Henüz mesaj yok"
@@ -722,8 +753,14 @@ msgid "No users found"
 msgstr "Kullanıcı bulunamadı"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Yok"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Normal"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -805,6 +842,11 @@ msgstr "Önizleme skoru"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "Önceki görsel"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "Gizlilik"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
@@ -916,10 +958,6 @@ msgstr "Kullanıcılarda ara"
 msgid "Search..."
 msgstr "Ara..."
 
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Ara…"
-
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
 #: ../../../lib/web/src/features/access/access-dialog.tsx:199
@@ -970,6 +1008,15 @@ msgstr "Tema tercihi seç"
 msgid "Send message"
 msgstr "Mesaj gönder"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "Tırnaklı"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "Sunucu kuralları"
+
 #: ../../../lib/web/src/lib/api-client.ts:224
 msgid "Session expired"
 msgstr "Oturum süresi doldu"
@@ -1006,6 +1053,15 @@ msgstr "Çıkış yapılıyor..."
 msgid "Skip to Main"
 msgstr "Ana içeriğe atla"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Küçük"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Geniş"
+
 #: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Yeni bir Words oyunu başlat"
@@ -1033,6 +1089,7 @@ msgstr "Pazar"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Sistem"
 
@@ -1043,6 +1100,11 @@ msgstr "Etiket"
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:60
 msgid "Teams/Apps"
 msgstr "Takımlar/Uygulamalar"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "Şartlar ve koşullar"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"

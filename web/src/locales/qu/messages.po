@@ -234,7 +234,7 @@ msgstr "Lluq'i-paña utaq paña-lluq'i pi akllay"
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Sistema munay, k'illa, utaq tutayaq pi akllay"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Simi akllay"
 
@@ -285,11 +285,16 @@ msgstr "Maskhay wichq'ay"
 msgid "Collapse sidebar"
 msgstr "Sidebar pisichay"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Allin"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Hamuchkan!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Pisi"
 
@@ -321,6 +326,10 @@ msgstr "Qatiy"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Copiay"
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "Kay documento mana cargasqa karqachu. Qhipaman ruway."
 
 #: src/features/words/components/new-game.tsx:191
 msgid "Creating..."
@@ -359,7 +368,7 @@ msgstr "Uray"
 msgid "Details Panel"
 msgstr "Willariykuna Panel"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -385,6 +394,10 @@ msgstr "Movil sidebar qhawachin."
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:312
 msgid "Download"
 msgstr "Uray chaskiy"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Disleksia llamkaywanmi"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
@@ -425,6 +438,10 @@ msgstr "Fichakunata chaqnay"
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "Sidebarta kichay"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Sinchi hatun"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
@@ -486,6 +503,14 @@ msgstr "Viernes"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Manta"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Temamanta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -570,6 +595,11 @@ msgstr "Mana allin sut'inchay código"
 msgid "Language"
 msgstr "Simi"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Hatun"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "Layout"
@@ -592,6 +622,7 @@ msgid "Load more"
 msgstr "Aswan wichachiy"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "Wichachichkan…"
 
@@ -625,6 +656,10 @@ msgstr "Llapanta ñawinchasqaman churay"
 #: src/features/words/components/new-game.tsx:76
 msgid "Maximum 3 opponents"
 msgstr "Maximo 3 awqaqkuna"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Chawpi"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
@@ -688,10 +723,6 @@ msgstr "Manaraq pukllaykuna"
 msgid "No groups available"
 msgstr "Mana grupokuna atikuq"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Mana tupaqkuna."
-
 #: src/features/words/components/chat-message-list.tsx:150
 msgid "No messages yet"
 msgstr "Manaraq mensajekuna"
@@ -722,8 +753,14 @@ msgid "No users found"
 msgstr "Mana usuariokuna tarisqachu"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Mana"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Walliq"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -805,6 +842,11 @@ msgstr "Puntaje ñawpaq qhaway"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "Ñawpaqnin imagen"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "Pakaynin"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
@@ -916,10 +958,6 @@ msgstr "Usuariokunata maskay"
 msgid "Search..."
 msgstr "Maskay..."
 
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Maskay…"
-
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
 #: ../../../lib/web/src/features/access/access-dialog.tsx:199
@@ -970,6 +1008,15 @@ msgstr "Tema munayta akllay"
 msgid "Send message"
 msgstr "Willakuyta apachiy"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "Serif"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "Server kamachiykuna"
+
 #: ../../../lib/web/src/lib/api-client.ts:224
 msgid "Session expired"
 msgstr "Session tukukapun"
@@ -1006,6 +1053,15 @@ msgstr "Lluqsichkan..."
 msgid "Skip to Main"
 msgstr "Mainman pasay"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Huch'uy"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Hatun"
+
 #: src/features/words/components/new-game.tsx:112
 msgid "Start a new Words game"
 msgstr "Musuq Words pukllayta qallariy"
@@ -1033,6 +1089,7 @@ msgstr "Intichaw"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Sistema"
 
@@ -1043,6 +1100,11 @@ msgstr "Tag"
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:60
 msgid "Teams/Apps"
 msgstr "Huñukuna/Appkuna"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "Condicionkuna"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
