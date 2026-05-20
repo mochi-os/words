@@ -117,7 +117,7 @@ export function TileRack({
               hasTile && !disabled && exchangeMode && 'cursor-pointer hover:scale-105',
               disabled && 'opacity-50 cursor-default',
               isSlotDragging && 'opacity-40',
-              isDropSlot && 'border-s-primary border-s-4',
+              isDropSlot && 'ring-2 ring-primary ring-inset',
             )}
             onClick={() => {
               if (!hasTile || disabled) return
