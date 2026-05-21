@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, one {# खेळाडू} other {# खेळाडू}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "खाते प्रकार"
 msgid "Account verified"
 msgstr "खाते सत्यापित केले"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "सक्रिय खेळ"
 
@@ -113,11 +118,11 @@ msgstr "खाते जोडा"
 msgid "Add an account to receive notifications and use services."
 msgstr "सूचना प्राप्त करण्यासाठी आणि सेवा वापरण्यासाठी खाते जोडा."
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "मित्र जोडा"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "खेळ सुरू करण्यासाठी People अॅपमध्ये मित्र जोडा"
 
@@ -157,7 +162,7 @@ msgstr "सर्व"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "तुम्हाला खरोखरच लॉग आउट करायचे आहे का? तुमच्या खात्यात प्रवेश करण्यासाठी तुम्हाला पुन्हा लॉग इन करावे लागेल."
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "तुम्ही नक्की हार मानायला तयार आहात का?"
 
@@ -190,27 +195,27 @@ msgstr "रुची वाढवा"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "अदलाबदल रद्द करा"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "या सूचनेसाठी श्रेणी"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "सूचना श्रेणी बदला"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "चॅट"
 
@@ -218,7 +223,7 @@ msgstr "चॅट"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "साइडबारमधून खेळ निवडा किंवा नवीन सुरू करा."
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "अक्षर निवडा"
 
@@ -242,7 +247,7 @@ msgstr "सिस्टम प्राधान्य, लाइट मोड, 
 msgid "Choose language"
 msgstr "भाषा निवडा"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "विरोधक निवडा <0>(1-3)</0>"
 
@@ -302,7 +307,7 @@ msgstr "लवकरच येत आहे!"
 msgid "Compact"
 msgstr "कॉम्पॅक्ट"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "पूर्ण केले"
 
@@ -311,9 +316,9 @@ msgstr "पूर्ण केले"
 msgid "Confirm"
 msgstr "पुष्टी करा"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "अज्ञात शब्द आहेत"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "अज्ञात शब्द आहेत. तुम्ही तरीही सबमिट करू शकता."
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "कॉपी करा"
 msgid "Could not load this document. Please try again later."
 msgstr "हा दस्तऐवज लोड करता आला नाही. कृपया नंतर पुन्हा प्रयत्न करा."
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "तयार करत आहे..."
 
@@ -360,7 +365,7 @@ msgstr "डीफॉल्ट"
 msgid "Default AI account"
 msgstr "डीफॉल्ट AI खाते"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "खेळ हटवा"
 
@@ -382,10 +387,6 @@ msgstr "तपशील पॅनेल"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "वेब ब्राउझरमधून शोधा"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "शब्दकोश अनुपलब्ध"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "रिकामा चौकोन {0}{1}"
 msgid "Empty tile slot"
 msgstr "रिकामी टाइल जागा"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "इंग्रजी (UK)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "इंग्रजी (US)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "बदला"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "बदला ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "बदला ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "टाइल्सची देवाणघेवाण करा"
 
@@ -451,23 +452,23 @@ msgstr "अतिरिक्त मोठे"
 msgid "Failed to add account"
 msgstr "खाते जोडण्यात अयशस्वी"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "गेम तयार करण्यात अयशस्वी"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "रीमॅच तयार करण्यात अयशस्वी"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "गेम हटवण्यात अयशस्वी"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "देवाणघेवाण करण्यात अयशस्वी"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "पास करण्यात अयशस्वी"
 
@@ -475,12 +476,12 @@ msgstr "पास करण्यात अयशस्वी"
 msgid "Failed to remove account"
 msgstr "खाते काढण्यात अयशस्वी"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "रिझाइन करण्यात अयशस्वी"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "पाठवण्यात अयशस्वी"
 
@@ -488,11 +489,11 @@ msgstr "पाठवण्यात अयशस्वी"
 msgid "Failed to send verification code"
 msgstr "पडताळणी कोड पाठवण्यात अयशस्वी"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "चाल सबमिट करण्यात अयशस्वी"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "श्रेणी अद्यतनित करण्यात अयशस्वी"
 
@@ -520,11 +521,11 @@ msgstr "थीममधून"
 msgid "Full layout"
 msgstr "संपूर्ण लेआउट"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "गेम तयार केला"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "गेम हटवला"
 
@@ -590,8 +591,7 @@ msgstr "इनसेट"
 msgid "Interests"
 msgstr "इंटरेस्ट्स"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "अवैध चाल"
 
@@ -599,7 +599,7 @@ msgstr "अवैध चाल"
 msgid "Invalid verification code"
 msgstr "अवैध पडताळणी कोड"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "भाषा"
 
@@ -661,7 +661,7 @@ msgstr "लॉग आउट करत आहे…"
 msgid "Mark all as read"
 msgstr "सर्व वाचलेले म्हणून चिन्हांकित करा"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "जास्तीत जास्त 3 प्रतिस्पर्धी"
 
@@ -685,21 +685,17 @@ msgstr "मेट्रिक"
 msgid "Monday"
 msgstr "सोमवार"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "कंपोझर हलवा"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "नवीन"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "नवीन गेम"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "नवीन गेम"
 
@@ -715,11 +711,11 @@ msgstr "कोणतेही प्रवेश नियम कॉन्फि
 msgid "No connected accounts"
 msgstr "कनेक्ट केलेले अकाउंट्स नाहीत"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "मित्र सापडले नाहीत"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "अद्याप मित्र नाहीत"
 
@@ -752,7 +748,7 @@ msgstr "कोणतेही निकाल सापडले नाहीत
 msgid "No time zone found."
 msgstr "टाइम झोन सापडला नाही."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "अद्याप टॉपिक रेकॉर्ड नाही — पुढील नोटिफिकेशननंतर पुन्हा प्रयत्न करा."
 
@@ -785,11 +781,11 @@ msgstr "अरेरे! पेज सापडले नाही!"
 msgid "Open account actions"
 msgstr "अकाउंट क्रिया उघडा"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "चॅट पॅनेल उघडा"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "गेम क्रिया उघडा"
 
@@ -823,13 +819,9 @@ msgstr "इतर"
 msgid "Owner"
 msgstr "मालक"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "पास"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "गुण आणि शब्द पाहण्यासाठी बोर्डवर टाइल्स ठेवा."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "प्लेयर {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount} प्लेयर्ससह खेळत आहे"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "कृपया किमान एक मित्र निवडा"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "पूर्वावलोकन स्कोअर"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "गोपनीयता"
 msgid "Profile"
 msgstr "प्रोफाइल"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "रिकॉल"
 
@@ -887,7 +875,7 @@ msgstr "सापेक्ष (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 तासांच्या आत सापेक्ष, अन्यथा निरपेक्ष"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "रीमॅच"
 
@@ -918,16 +906,16 @@ msgstr "रीसेट करा"
 msgid "Reset all settings to default values"
 msgstr "सर्व सेटिंग्ज डीफॉल्ट मूल्यांवर रीसेट करा"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "राजीनामा द्या"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "गेमचा राजीनामा द्यायचा?"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "राजीनामा देत आहे..."
 
@@ -989,7 +977,7 @@ msgstr "अॅक्सेस नियम निवडा"
 msgid "Select account type"
 msgstr "खाते प्रकार निवडा"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "मित्र निवडा..."
 
@@ -1048,7 +1036,7 @@ msgstr "सेटिंग्ज"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total} पैकी {totalShown} दर्शवत आहे"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "रॅक शफल करा"
 
@@ -1075,11 +1063,11 @@ msgstr "लहान"
 msgid "Spacious"
 msgstr "विस्तृत"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "नवीन Words गेम सुरू करा"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "गेम सुरू करा"
 
@@ -1091,8 +1079,8 @@ msgstr "मात्र संपर्कात रहा!"
 msgid "Subject"
 msgstr "विषय"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "सादर करा"
 
@@ -1196,7 +1184,7 @@ msgstr "शोधण्यासाठी टाइप करा..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "लॉगिनवर रीडायरेक्ट करण्यात अक्षम. कृपया पुन्हा प्रयत्न करा."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "नियुक्त न केलेले"
 
@@ -1220,13 +1208,9 @@ msgstr "असत्यापित"
 msgid "User"
 msgstr "वापरकर्ता"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "व्हॅलिडेशन सल्लागार आहे. तुम्ही तरीही ही चाल सादर करू शकता."
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "व्हॅलिडेशन तात्पुरते ऑफलाइन आहे. तुम्ही तरीही सादर करू शकता."
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "पडताळणी ऑफलाइन आहे — तुम्ही तरीही सबमिट करू शकता."
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "सर्व पहा"
 msgid "View all notifications"
 msgstr "सर्व सूचना पहा"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "टाइल्स ठेवण्यासाठी तुमच्या वळणाची वाट पाहत आहोत."
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "आम्ही लवकरच पुन्हा ऑनलाइन येऊ."
@@ -1277,13 +1257,13 @@ msgstr "वेबसाइट देखभालीखाली आहे!"
 msgid "Wednesday"
 msgstr "बुधवार"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "तयार झालेले शब्द"
 

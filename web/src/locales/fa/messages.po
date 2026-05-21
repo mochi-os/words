@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, one {# بازیکن} other {# بازیکن}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "نوع حساب"
 msgid "Account verified"
 msgstr "حساب تأیید شد"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "بازی‌های فعال"
 
@@ -113,11 +118,11 @@ msgstr "افزودن حساب"
 msgid "Add an account to receive notifications and use services."
 msgstr "برای دریافت اعلان‌ها و استفاده از سرویس‌ها یک حساب اضافه کنید."
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "افزودن دوستان"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "برای شروع بازی، در برنامهٔ People دوست اضافه کنید"
 
@@ -157,7 +162,7 @@ msgstr "همه"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "آیا از خروج از حساب مطمئن هستید؟ برای دسترسی به حساب باید دوباره وارد شوید."
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "آیا از تسلیم شدن مطمئن هستید؟"
 
@@ -190,27 +195,27 @@ msgstr "تقویت علاقه"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "لغو"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "لغو تبادل"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "دستهٔ این اعلان"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "تغییر دستهٔ اعلان"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "گفت‌وگو"
 
@@ -218,7 +223,7 @@ msgstr "گفت‌وگو"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "از نوار کناری یک بازی انتخاب کنید یا بازی جدیدی شروع کنید."
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "یک حرف انتخاب کنید"
 
@@ -242,7 +247,7 @@ msgstr "بین ترجیح سیستم، حالت روشن یا حالت تیره 
 msgid "Choose language"
 msgstr "انتخاب زبان"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "انتخاب حریف <0>(۱-۳)</0>"
 
@@ -302,7 +307,7 @@ msgstr "به‌زودی!"
 msgid "Compact"
 msgstr "فشرده"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "تکمیل شد"
 
@@ -311,9 +316,9 @@ msgstr "تکمیل شد"
 msgid "Confirm"
 msgstr "تأیید"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "شامل کلمات ناشناخته است"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "حاوی واژه‌های ناشناخته است. هنوز هم می‌توانید ثبت کنید."
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "کپی"
 msgid "Could not load this document. Please try again later."
 msgstr "بارگذاری این سند ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "در حال ساخت..."
 
@@ -360,7 +365,7 @@ msgstr "پیش‌فرض"
 msgid "Default AI account"
 msgstr "حساب پیش‌فرض هوش مصنوعی"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "حذف بازی"
 
@@ -382,10 +387,6 @@ msgstr "پنل جزئیات"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "تشخیص از مرورگر وب"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "فرهنگ لغت در دسترس نیست"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "خانه خالی {0}{1}"
 msgid "Empty tile slot"
 msgstr "جایگاه کاشی خالی"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "انگلیسی (بریتانیا)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "انگلیسی (آمریکا)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "تعویض"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "تعویض ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "تعویض ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "تعویض کاشی‌ها"
 
@@ -451,23 +452,23 @@ msgstr "خیلی بزرگ"
 msgid "Failed to add account"
 msgstr "افزودن حساب ناموفق بود"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "ایجاد بازی ناموفق بود"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "ایجاد بازی مجدد ناموفق بود"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "حذف بازی ناموفق بود"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "تعویض ناموفق بود"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "پاس دادن ناموفق بود"
 
@@ -475,12 +476,12 @@ msgstr "پاس دادن ناموفق بود"
 msgid "Failed to remove account"
 msgstr "حذف حساب ناموفق بود"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "تسلیم شدن ناموفق بود"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "ارسال ناموفق بود"
 
@@ -488,11 +489,11 @@ msgstr "ارسال ناموفق بود"
 msgid "Failed to send verification code"
 msgstr "ارسال کد تأیید ناموفق بود"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "ارسال حرکت ناموفق بود"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "به‌روزرسانی دسته ناموفق بود"
 
@@ -520,11 +521,11 @@ msgstr "از تم"
 msgid "Full layout"
 msgstr "چیدمان کامل"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "بازی ایجاد شد"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "بازی حذف شد"
 
@@ -590,8 +591,7 @@ msgstr "تورفته"
 msgid "Interests"
 msgstr "علاقه‌مندی‌ها"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "حرکت نامعتبر"
 
@@ -599,7 +599,7 @@ msgstr "حرکت نامعتبر"
 msgid "Invalid verification code"
 msgstr "کد تأیید نامعتبر"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "زبان"
 
@@ -661,7 +661,7 @@ msgstr "در حال خروج…"
 msgid "Mark all as read"
 msgstr "علامت‌گذاری همه به‌عنوان خوانده‌شده"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "حداکثر ۳ حریف"
 
@@ -685,21 +685,17 @@ msgstr "متریک"
 msgid "Monday"
 msgstr "دوشنبه"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "انتقال نگارشگر"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "جدید"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "بازی جدید"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "بازی جدید"
 
@@ -715,11 +711,11 @@ msgstr "هیچ قاعده دسترسی پیکربندی نشده است. برا�
 msgid "No connected accounts"
 msgstr "هیچ حساب متصلی وجود ندارد"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "دوستی یافت نشد"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "هنوز دوستی وجود ندارد"
 
@@ -752,7 +748,7 @@ msgstr "نتیجه‌ای یافت نشد."
 msgid "No time zone found."
 msgstr "منطقه زمانی یافت نشد."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "هنوز هیچ رکوردی برای موضوع وجود ندارد — پس از اعلان بعدی دوباره تلاش کنید."
 
@@ -785,11 +781,11 @@ msgstr "اوه! صفحه پیدا نشد!"
 msgid "Open account actions"
 msgstr "باز کردن اقدامات حساب"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "باز کردن پنل گفت‌وگو"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "باز کردن اقدامات بازی"
 
@@ -823,13 +819,9 @@ msgstr "سایر"
 msgid "Owner"
 msgstr "مالک"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "رد کردن"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "کاشی‌ها را روی تخته بگذارید تا امتیاز و کلمات را پیش‌نمایش کنید."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "بازیکن {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "بازی با {playerCount} بازیکن"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "لطفاً حداقل یک دوست انتخاب کنید"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "پیش‌نمایش امتیاز"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "حریم خصوصی"
 msgid "Profile"
 msgstr "پروفایل"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "فراخوانی"
 
@@ -887,7 +875,7 @@ msgstr "نسبی (۵د، ۳س، ۲ر)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "در ۲۴ ساعت نسبی، در غیر این صورت مطلق"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "بازی مجدد"
 
@@ -918,16 +906,16 @@ msgstr "بازنشانی"
 msgid "Reset all settings to default values"
 msgstr "بازنشانی همه تنظیمات به مقادیر پیش‌فرض"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "تسلیم"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "بازی را تسلیم می‌شوید؟"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "در حال تسلیم..."
 
@@ -989,7 +977,7 @@ msgstr "انتخاب قاعده دسترسی"
 msgid "Select account type"
 msgstr "انتخاب نوع حساب"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "انتخاب دوستان..."
 
@@ -1048,7 +1036,7 @@ msgstr "تنظیمات"
 msgid "Showing {totalShown} of {total}"
 msgstr "نمایش {totalShown} از {total}"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "بُر زدن قفسه"
 
@@ -1075,11 +1063,11 @@ msgstr "کوچک"
 msgid "Spacious"
 msgstr "گسترده"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "شروع بازی Words جدید"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "شروع بازی"
 
@@ -1091,8 +1079,8 @@ msgstr "اما با ما همراه بمانید!"
 msgid "Subject"
 msgstr "موضوع"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "ثبت"
 
@@ -1196,7 +1184,7 @@ msgstr "برای جست‌وجو تایپ کنید..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "ریدایرکت به ورود ممکن نیست. لطفاً دوباره تلاش کنید."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "بدون اختصاص"
 
@@ -1220,13 +1208,9 @@ msgstr "تأیید نشده"
 msgid "User"
 msgstr "کاربر"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "اعتبارسنجی توصیه‌ای است. همچنان می‌توانید این حرکت را ثبت کنید."
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "اعتبارسنجی موقتاً آفلاین است. همچنان می‌توانید ثبت کنید."
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "اعتبارسنجی آفلاین است — هنوز هم می‌توانید ثبت کنید."
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "نمایش همه"
 msgid "View all notifications"
 msgstr "نمایش همه اعلان‌ها"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "در انتظار نوبت شما برای قرار دادن کاشی‌ها."
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "به‌زودی دوباره آنلاین خواهیم بود."
@@ -1277,13 +1257,13 @@ msgstr "وب‌سایت در حال نگهداری است!"
 msgid "Wednesday"
 msgstr "چهارشنبه"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "کلمات ساخته‌شده"
 

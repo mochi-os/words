@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, one {# வீரர்} other {# வீரர்கள்}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "கணக்கு வகை"
 msgid "Account verified"
 msgstr "கணக்கு சரிபார்க்கப்பட்டது"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "செயலில் உள்ள விளையாட்டுகள்"
 
@@ -113,11 +118,11 @@ msgstr "கணக்கு சேர்"
 msgid "Add an account to receive notifications and use services."
 msgstr "அறிவிப்புகளைப் பெறவும் சேவைகளைப் பயன்படுத்தவும் கணக்கைச் சேர்க்கவும்."
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "நண்பர்கள் சேர்"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "விளையாட்டைத் தொடங்க People பயன்பாட்டில் நண்பர்களைச் சேர்க்கவும்"
 
@@ -157,7 +162,7 @@ msgstr "அனைத்தும்"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "வெளியேற விரும்புகிறீர்களா? உங்கள் கணக்கை அணுக மீண்டும் உள்நுழைய வேண்டும்."
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "நீங்கள் விட்டுக்கொடுக்க விரும்புகிறீர்களா?"
 
@@ -190,27 +195,27 @@ msgstr "ஆர்வத்தை அதிகரி"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "பரிமாற்றத்தை ரத்துசெய்"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "இந்த அறிவிப்புக்கான வகை"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "அறிவிப்பு வகையை மாற்று"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "அரட்டை"
 
@@ -218,7 +223,7 @@ msgstr "அரட்டை"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "பக்கப்பட்டியில் இருந்து ஒரு விளையாட்டைத் தேர்ந்தெடுக்கவும் அல்லது புதிய ஒன்றைத் தொடங்கவும்."
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "ஒரு எழுத்தைத் தேர்ந்தெடுக்கவும்"
 
@@ -242,7 +247,7 @@ msgstr "கணினி விருப்பம், ஒளிமுறை, அ�
 msgid "Choose language"
 msgstr "மொழியைத் தேர்ந்தெடுக்கவும்"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "எதிரிகளைத் தேர்ந்தெடுக்கவும் <0>(1-3)</0>"
 
@@ -302,7 +307,7 @@ msgstr "விரைவில் வருகிறது!"
 msgid "Compact"
 msgstr "சுருக்கமான"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "முடிந்தது"
 
@@ -311,9 +316,9 @@ msgstr "முடிந்தது"
 msgid "Confirm"
 msgstr "உறுதிசெய்"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "தெரியாத சொற்கள் உள்ளன"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "தெரியாத சொற்களைக் கொண்டுள்ளது. நீங்கள் இன்னும் சமர்ப்பிக்கலாம்."
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "நகலெடு"
 msgid "Could not load this document. Please try again later."
 msgstr "இந்த ஆவணத்தை ஏற்ற முடியவில்லை. பிறகு மீண்டும் முயற்சிக்கவும்."
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "உருவாக்குகிறது..."
 
@@ -360,7 +365,7 @@ msgstr "இயல்புநிலை"
 msgid "Default AI account"
 msgstr "இயல்புநிலை AI கணக்கு"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "விளையாட்டை நீக்கு"
 
@@ -382,10 +387,6 @@ msgstr "விவரங்கள் பலகம்"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "வலை உலாவியிலிருந்து கண்டறி"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "அகராதி கிடைக்கவில்லை"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "வெற்று கட்டம் {0}{1}"
 msgid "Empty tile slot"
 msgstr "வெற்று ஓடு இடம்"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "ஆங்கிலம் (UK)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "ஆங்கிலம் (US)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "மாற்று"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "மாற்று ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "மாற்று ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "ஓடுகளை மாற்று"
 
@@ -451,23 +452,23 @@ msgstr "மிகப் பெரியது"
 msgid "Failed to add account"
 msgstr "கணக்கைச் சேர்க்க முடியவில்லை"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "ஆட்டத்தை உருவாக்க முடியவில்லை"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "மறுபோட்டியை உருவாக்க முடியவில்லை"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "ஆட்டத்தை நீக்க முடியவில்லை"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "மாற்ற முடியவில்லை"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "தாண்ட முடியவில்லை"
 
@@ -475,12 +476,12 @@ msgstr "தாண்ட முடியவில்லை"
 msgid "Failed to remove account"
 msgstr "கணக்கை நீக்க முடியவில்லை"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "ராஜினாமா செய்ய முடியவில்லை"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "அனுப்ப முடியவில்லை"
 
@@ -488,11 +489,11 @@ msgstr "அனுப்ப முடியவில்லை"
 msgid "Failed to send verification code"
 msgstr "சரிபார்ப்பு குறியீட்டை அனுப்ப முடியவில்லை"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "நகர்வைச் சமர்ப்பிக்க முடியவில்லை"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "வகையைப் புதுப்பிக்க முடியவில்லை"
 
@@ -520,11 +521,11 @@ msgstr "தீமிலிருந்து"
 msgid "Full layout"
 msgstr "முழு தளவமைப்பு"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "ஆட்டம் உருவாக்கப்பட்டது"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "ஆட்டம் நீக்கப்பட்டது"
 
@@ -590,8 +591,7 @@ msgstr "உள்ளமைக்கப்பட்ட"
 msgid "Interests"
 msgstr "ஆர்வங்கள்"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "தவறான நகர்வு"
 
@@ -599,7 +599,7 @@ msgstr "தவறான நகர்வு"
 msgid "Invalid verification code"
 msgstr "தவறான சரிபார்ப்பு குறியீடு"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "மொழி"
 
@@ -661,7 +661,7 @@ msgstr "வெளியேறுகிறது…"
 msgid "Mark all as read"
 msgstr "அனைத்தையும் படித்ததாகக் குறிக்கவும்"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "அதிகபட்சம் 3 எதிராளிகள்"
 
@@ -685,21 +685,17 @@ msgstr "மெட்ரிக்"
 msgid "Monday"
 msgstr "திங்கட்கிழமை"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "Composerஐ நகர்த்தவும்"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "புதியது"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "புதிய விளையாட்டு"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "புதிய விளையாட்டு"
 
@@ -715,11 +711,11 @@ msgstr "அணுகல் விதிகள் எதுவும் கட்
 msgid "No connected accounts"
 msgstr "இணைக்கப்பட்ட கணக்குகள் இல்லை"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "நண்பர்கள் எதுவும் கிடைக்கவில்லை"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "நண்பர்கள் இன்னும் இல்லை"
 
@@ -752,7 +748,7 @@ msgstr "முடிவுகள் எதுவும் கிடைக்க�
 msgid "No time zone found."
 msgstr "நேர மண்டலம் எதுவும் கிடைக்கவில்லை."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "தலைப்புப் பதிவு இன்னும் இல்லை — அடுத்த அறிவிப்புக்குப் பிறகு மீண்டும் முயற்சிக்கவும்."
 
@@ -785,11 +781,11 @@ msgstr "அய்யோ! பக்கம் கிடைக்கவில்ல
 msgid "Open account actions"
 msgstr "கணக்கு செயல்களைத் திறக்கவும்"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "அரட்டை பேனலைத் திறக்கவும்"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "விளையாட்டு செயல்களைத் திறக்கவும்"
 
@@ -823,13 +819,9 @@ msgstr "மற்றவை"
 msgid "Owner"
 msgstr "உரிமையாளர்"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "தவிர்"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "மதிப்பெண் மற்றும் சொற்களைப் பார்க்க பலகையில் ஓடுகளை வைக்கவும்."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "வீரர் {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount} வீரர்களுடன் விளையாடுகிறது"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "குறைந்தபட்சம் ஒரு நண்பரையாவது தேர்ந்தெடுக்கவும்"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "மதிப்பெண் முன்னோட்டம்"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "தனியுரிமை"
 msgid "Profile"
 msgstr "சுயவிவரம்"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "திரும்பப் பெறு"
 
@@ -887,7 +875,7 @@ msgstr "சார்பு (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 மணி நேரத்திற்குள் சார்பு, இல்லையெனில் முழுமையானது"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "மறுபோட்டி"
 
@@ -918,16 +906,16 @@ msgstr "மீட்டமை"
 msgid "Reset all settings to default values"
 msgstr "அனைத்து அமைப்புகளையும் இயல்பு மதிப்புகளுக்கு மீட்டமைக்கவும்"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "விலகு"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "விளையாட்டிலிருந்து விலகவா?"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "விலகுகிறது..."
 
@@ -989,7 +977,7 @@ msgstr "அணுகல் விதியை தேர்ந்தெடு"
 msgid "Select account type"
 msgstr "கணக்கு வகையை தேர்ந்தெடு"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "நண்பர்களை தேர்ந்தெடு..."
 
@@ -1048,7 +1036,7 @@ msgstr "அமைப்புகள்"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total}-ல் {totalShown} காட்டப்படுகிறது"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "ராக்கை கலைத்து வை"
 
@@ -1075,11 +1063,11 @@ msgstr "சிறியது"
 msgid "Spacious"
 msgstr "விரிவான"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "புதிய Words கேமை தொடங்கு"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "கேமை தொடங்கு"
 
@@ -1091,8 +1079,8 @@ msgstr "எனினும் காத்திருங்கள்!"
 msgid "Subject"
 msgstr "பொருள்"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "சமர்ப்பி"
 
@@ -1196,7 +1184,7 @@ msgstr "தேட தட்டச்சு செய்..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "உள்நுழைவுக்கு திருப்பி விட முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சி செய்யுங்கள்."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "ஒதுக்கப்படாதது"
 
@@ -1220,13 +1208,9 @@ msgstr "சரிபார்க்கப்படாதது"
 msgid "User"
 msgstr "பயனர்"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "சரிபார்ப்பு ஆலோசனை மட்டுமே. நீங்கள் இன்னும் இந்த நகர்வை சமர்ப்பிக்கலாம்."
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "சரிபார்ப்பு தற்காலிகமாக ஆஃப்லைனில் உள்ளது. நீங்கள் இன்னும் சமர்ப்பிக்கலாம்."
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "சரிபார்ப்பு ஆஃப்லைனில் உள்ளது — நீங்கள் இன்னும் சமர்ப்பிக்கலாம்."
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "அனைத்தையும் காட்டு"
 msgid "View all notifications"
 msgstr "அனைத்து அறிவிப்புகளையும் காட்டு"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "ஓடுகளை வைக்க உங்கள் முறைக்காக காத்திருக்கிறது."
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "நாங்கள் விரைவில் ஆன்லைனுக்கு திரும்புவோம்."
@@ -1277,13 +1257,13 @@ msgstr "இணையதளம் பராமரிப்பில் உள்�
 msgid "Wednesday"
 msgstr "புதன்கிழமை"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "வார்த்தைகள்"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "உருவாக்கப்பட்ட வார்த்தைகள்"
 

@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, other {# 名玩家}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "帳戶類型"
 msgid "Account verified"
 msgstr "帳戶已驗證"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "進行中的遊戲"
 
@@ -113,11 +118,11 @@ msgstr "新增帳戶"
 msgid "Add an account to receive notifications and use services."
 msgstr "新增帳戶以接收通知並使用服務。"
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "新增好友"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "在通訊錄應用程式中新增好友以開始遊玩"
 
@@ -157,7 +162,7 @@ msgstr "全部"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "您確定要登出嗎?您將需要再次登入才能存取您的帳戶。"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "確定要認輸嗎?"
 
@@ -190,27 +195,27 @@ msgstr "提升興趣"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "取消"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "取消交換"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "此通知的類別"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "變更通知類別"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "聊天"
 
@@ -218,7 +223,7 @@ msgstr "聊天"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "從側邊欄選擇遊戲或開始新的遊戲。"
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "選擇字母"
 
@@ -242,7 +247,7 @@ msgstr "在系統偏好、淺色模式、或深色模式之間選擇"
 msgid "Choose language"
 msgstr "選擇語言"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "選擇對手 <0>(1-3)</0>"
 
@@ -302,7 +307,7 @@ msgstr "敬請期待!"
 msgid "Compact"
 msgstr "緊湊"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "已完成"
 
@@ -311,9 +316,9 @@ msgstr "已完成"
 msgid "Confirm"
 msgstr "確認"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "包含未知字詞"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "包含未知單字。你仍然可以提交。"
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "複製"
 msgid "Could not load this document. Please try again later."
 msgstr "無法載入此文件,請稍後再試。"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "建立中..."
 
@@ -360,7 +365,7 @@ msgstr "預設"
 msgid "Default AI account"
 msgstr "預設 AI 帳戶"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "刪除遊戲"
 
@@ -382,10 +387,6 @@ msgstr "詳細資料面板"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "從網頁瀏覽器偵測"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "字典無法使用"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "空格 {0}{1}"
 msgid "Empty tile slot"
 msgstr "空牌位"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "英語 (英國)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "英語 (美國)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "換牌"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "換牌 ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "換牌 ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "交換棋子"
 
@@ -451,23 +452,23 @@ msgstr "特大"
 msgid "Failed to add account"
 msgstr "新增帳號失敗"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "建立遊戲失敗"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "建立再戰失敗"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "刪除遊戲失敗"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "交換失敗"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "略過失敗"
 
@@ -475,12 +476,12 @@ msgstr "略過失敗"
 msgid "Failed to remove account"
 msgstr "移除帳號失敗"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "認輸失敗"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "傳送失敗"
 
@@ -488,11 +489,11 @@ msgstr "傳送失敗"
 msgid "Failed to send verification code"
 msgstr "傳送驗證碼失敗"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "送出走法失敗"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "更新類別失敗"
 
@@ -520,11 +521,11 @@ msgstr "來自主題"
 msgid "Full layout"
 msgstr "完整版面"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "遊戲已建立"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "遊戲已刪除"
 
@@ -590,8 +591,7 @@ msgstr "內嵌"
 msgid "Interests"
 msgstr "興趣"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "無效的走法"
 
@@ -599,7 +599,7 @@ msgstr "無效的走法"
 msgid "Invalid verification code"
 msgstr "無效的驗證碼"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "語言"
 
@@ -661,7 +661,7 @@ msgstr "正在登出…"
 msgid "Mark all as read"
 msgstr "全部標示為已讀"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "最多 3 位對手"
 
@@ -685,21 +685,17 @@ msgstr "公制"
 msgid "Monday"
 msgstr "星期一"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "移動編輯器"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "新增"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "新遊戲"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "新遊戲"
 
@@ -715,11 +711,11 @@ msgstr "未設定存取規則。新增規則以控制誰可以存取此資源。
 msgid "No connected accounts"
 msgstr "無已連接的帳戶"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "找不到朋友"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "尚無朋友"
 
@@ -752,7 +748,7 @@ msgstr "找不到結果。"
 msgid "No time zone found."
 msgstr "找不到時區。"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "尚無主題記錄 — 請在下次通知後再試一次。"
 
@@ -785,11 +781,11 @@ msgstr "糟糕!找不到頁面!"
 msgid "Open account actions"
 msgstr "開啟帳戶動作"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "開啟聊天面板"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "開啟遊戲動作"
 
@@ -823,13 +819,9 @@ msgstr "其他"
 msgid "Owner"
 msgstr "擁有者"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "略過"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "在棋盤上放置字母牌以預覽分數和單字。"
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "玩家 {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "與 {playerCount} 位玩家進行遊戲"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "請至少選擇一位朋友"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "預覽分數"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "隱私"
 msgid "Profile"
 msgstr "個人檔案"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "撤回"
 
@@ -887,7 +875,7 @@ msgstr "相對(5m、3h、2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 小時內相對,否則絕對"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "再戰一場"
 
@@ -918,16 +906,16 @@ msgstr "重設"
 msgid "Reset all settings to default values"
 msgstr "將所有設定重設為預設值"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "認輸"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "認輸?"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "認輸中..."
 
@@ -989,7 +977,7 @@ msgstr "選擇存取規則"
 msgid "Select account type"
 msgstr "選擇帳戶類型"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "選擇朋友..."
 
@@ -1048,7 +1036,7 @@ msgstr "設定"
 msgid "Showing {totalShown} of {total}"
 msgstr "顯示 {totalShown} / {total}"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "重新排列字架"
 
@@ -1075,11 +1063,11 @@ msgstr "小"
 msgid "Spacious"
 msgstr "寬鬆"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "開始新的 Words 遊戲"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "開始遊戲"
 
@@ -1091,8 +1079,8 @@ msgstr "敬請期待!"
 msgid "Subject"
 msgstr "主旨"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "送出"
 
@@ -1196,7 +1184,7 @@ msgstr "輸入以搜尋..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "無法重新導向至登入頁面。請重試。"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "未指派"
 
@@ -1220,13 +1208,9 @@ msgstr "未驗證"
 msgid "User"
 msgstr "使用者"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "驗證僅為建議。您仍可送出此步。"
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "驗證暫時離線。您仍可送出。"
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "驗證服務離線 — 你仍然可以提交。"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "檢視全部"
 msgid "View all notifications"
 msgstr "檢視所有通知"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "等待輪到你放置字母牌。"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "我們很快就會恢復上線。"
@@ -1277,13 +1257,13 @@ msgstr "網站維護中!"
 msgid "Wednesday"
 msgstr "星期三"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "已組成的字詞"
 

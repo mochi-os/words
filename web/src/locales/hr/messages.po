@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, one {# igrač} few {# igrača} other {# igrača}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "Vrsta računa"
 msgid "Account verified"
 msgstr "Račun verificiran"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "Aktivne igre"
 
@@ -113,11 +118,11 @@ msgstr "Dodaj račun"
 msgid "Add an account to receive notifications and use services."
 msgstr "Dodajte račun za primanje obavijesti i korištenje servisa."
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "Dodaj prijatelje"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "Dodajte prijatelje u aplikaciji Ljudi za početak igranja"
 
@@ -157,7 +162,7 @@ msgstr "Sve"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Jeste li sigurni da se želite odjaviti? Morat ćete se ponovno prijaviti za pristup vašem računu."
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "Jeste li sigurni da želite predati partiju?"
 
@@ -190,27 +195,27 @@ msgstr "Pojačaj interes"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "Odustani"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "Odustani od razmjene"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kategorija za ovu obavijest"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Promijeni kategoriju obavijesti"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "Razgovor"
 
@@ -218,7 +223,7 @@ msgstr "Razgovor"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Odaberite igru iz bočne trake ili započnite novu."
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "Odaberite slovo"
 
@@ -242,7 +247,7 @@ msgstr "Odaberite između sistemske postavke, svijetlog ili tamnog načina rada"
 msgid "Choose language"
 msgstr "Odaberite jezik"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Odaberite protivnike <0>(1-3)</0>"
 
@@ -302,7 +307,7 @@ msgstr "Uskoro!"
 msgid "Compact"
 msgstr "Kompaktno"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "Završeno"
 
@@ -311,9 +316,9 @@ msgstr "Završeno"
 msgid "Confirm"
 msgstr "Potvrdi"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "Sadrži nepoznate riječi"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "Sadrži nepoznate riječi. Svejedno možeš poslati."
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "Kopiraj"
 msgid "Could not load this document. Please try again later."
 msgstr "Nije moguće učitati ovaj dokument. Pokušajte ponovno kasnije."
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "Stvaranje..."
 
@@ -360,7 +365,7 @@ msgstr "Zadano"
 msgid "Default AI account"
 msgstr "Zadani AI račun"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "Obriši igru"
 
@@ -382,10 +387,6 @@ msgstr "Panel s detaljima"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "Otkrij iz web preglednika"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "Rječnik nedostupan"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "Prazno polje {0}{1}"
 msgid "Empty tile slot"
 msgstr "Prazno mjesto za pločicu"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "Engleski (UK)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "Engleski (SAD)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "Razmjena"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "Razmjena ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "Razmjena ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "Razmijeni pločice"
 
@@ -451,23 +452,23 @@ msgstr "Ekstra veliko"
 msgid "Failed to add account"
 msgstr "Dodavanje računa nije uspjelo"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "Stvaranje igre nije uspjelo"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "Stvaranje uzvrata nije uspjelo"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "Brisanje igre nije uspjelo"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "Razmjena nije uspjela"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "Pas nije uspio"
 
@@ -475,12 +476,12 @@ msgstr "Pas nije uspio"
 msgid "Failed to remove account"
 msgstr "Uklanjanje računa nije uspjelo"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "Predaja nije uspjela"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "Slanje nije uspjelo"
 
@@ -488,11 +489,11 @@ msgstr "Slanje nije uspjelo"
 msgid "Failed to send verification code"
 msgstr "Slanje verifikacijskog koda nije uspjelo"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "Podnošenje poteza nije uspjelo"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Ažuriranje kategorije nije uspjelo"
 
@@ -520,11 +521,11 @@ msgstr "Iz teme"
 msgid "Full layout"
 msgstr "Puni izgled"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "Igra stvorena"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "Igra izbrisana"
 
@@ -590,8 +591,7 @@ msgstr "Uvučeno"
 msgid "Interests"
 msgstr "Interesi"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "Nevažeći potez"
 
@@ -599,7 +599,7 @@ msgstr "Nevažeći potez"
 msgid "Invalid verification code"
 msgstr "Nevažeći verifikacijski kod"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "Jezik"
 
@@ -661,7 +661,7 @@ msgstr "Odjavljivanje…"
 msgid "Mark all as read"
 msgstr "Označi sve kao pročitano"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "Najviše 3 protivnika"
 
@@ -685,21 +685,17 @@ msgstr "Metrički"
 msgid "Monday"
 msgstr "Ponedjeljak"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "Pomakni sastavljač"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "Novo"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "Nova igra"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "Nova igra"
 
@@ -715,11 +711,11 @@ msgstr "Nisu konfigurirana pravila pristupa. Dodajte pravila za kontrolu pristup
 msgid "No connected accounts"
 msgstr "Nema povezanih računa"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "Nije pronađen nijedan prijatelj"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "Još nema prijatelja"
 
@@ -752,7 +748,7 @@ msgstr "Nema rezultata."
 msgid "No time zone found."
 msgstr "Nije pronađena nijedna vremenska zona."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Još nema zapisa o temi — pokušajte ponovno nakon sljedeće obavijesti."
 
@@ -785,11 +781,11 @@ msgstr "Ups! Stranica nije pronađena!"
 msgid "Open account actions"
 msgstr "Otvori akcije računa"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "Otvori panel razgovora"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "Otvori akcije igre"
 
@@ -823,13 +819,9 @@ msgstr "Ostalo"
 msgid "Owner"
 msgstr "Vlasnik"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "Predaj"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "Postavite pločice na ploču za pregled rezultata i riječi."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "Igrač {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Igra s {playerCount} igrača"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "Odaberite barem jednog prijatelja"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "Pregled rezultata"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "Privatnost"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "Opozovi"
 
@@ -887,7 +875,7 @@ msgstr "Relativno (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativno unutar 24 sata, inače apsolutno"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "Revanš"
 
@@ -918,16 +906,16 @@ msgstr "Resetiraj"
 msgid "Reset all settings to default values"
 msgstr "Resetiraj sve postavke na zadane vrijednosti"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "Predaj se"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "Predati igru?"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "Predaja..."
 
@@ -989,7 +977,7 @@ msgstr "Odaberite pravilo pristupa"
 msgid "Select account type"
 msgstr "Odaberite tip računa"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "Odaberi prijatelje..."
 
@@ -1048,7 +1036,7 @@ msgstr "Postavke"
 msgid "Showing {totalShown} of {total}"
 msgstr "Prikazujem {totalShown} od {total}"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "Promiješaj stalak"
 
@@ -1075,11 +1063,11 @@ msgstr "Malo"
 msgid "Spacious"
 msgstr "Prostrano"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "Započni novu Words partiju"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "Započni igru"
 
@@ -1091,8 +1079,8 @@ msgstr "Ipak ostanite s nama!"
 msgid "Subject"
 msgstr "Predmet"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "Pošalji"
 
@@ -1196,7 +1184,7 @@ msgstr "Tipkajte za pretragu..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nije moguće preusmjeriti na prijavu. Pokušajte ponovno."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Nedodijeljeno"
 
@@ -1220,13 +1208,9 @@ msgstr "Neprovjereno"
 msgid "User"
 msgstr "Korisnik"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "Validacija je savjetodavna. I dalje možete poslati ovaj potez."
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "Validacija je trenutno izvan mreže. I dalje možete poslati."
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "Provjera nije dostupna — svejedno možeš poslati."
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "Prikaži sve"
 msgid "View all notifications"
 msgstr "Prikaži sve obavijesti"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "Čekanje vašeg reda za postavljanje pločica."
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "Uskoro ćemo biti ponovno dostupni."
@@ -1277,13 +1257,13 @@ msgstr "Web stranica je u održavanju!"
 msgid "Wednesday"
 msgstr "Srijeda"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "Stvorene riječi"
 

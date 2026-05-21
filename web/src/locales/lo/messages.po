@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, other {# ຜູ້ຫຼິ້ນ}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "ປະເພດບັນຊີ"
 msgid "Account verified"
 msgstr "ບັນຊີຢືນຢັນແລ້ວ"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "ເກມທີ່ໃຊ້ງານຢູ່"
 
@@ -113,11 +118,11 @@ msgstr "ເພີ່ມບັນຊີ"
 msgid "Add an account to receive notifications and use services."
 msgstr "ເພີ່ມບັນຊີເພື່ອຮັບການແຈ້ງເຕືອນ ແລະ ໃຊ້ບໍລິການ."
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "ເພີ່ມເພື່ອນ"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "ເພີ່ມເພື່ອນໃນແອັບ People ເພື່ອເລີ່ມຫຼິ້ນ"
 
@@ -157,7 +162,7 @@ msgstr "ທັງໝົດ"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການອອກຈາກລະບົບ? ທ່ານຈະຕ້ອງເຂົ້າສູ່ລະບົບອີກຄັ້ງເພື່ອເຂົ້າເຖິງບັນຊີຂອງທ່ານ."
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍອມແພ້?"
 
@@ -190,27 +195,27 @@ msgstr "ເພີ່ມຄວາມສົນໃຈ"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "ຍົກເລີກການແລກປ່ຽນ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "ໝວດໝູ່ສຳລັບການແຈ້ງເຕືອນນີ້"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "ປ່ຽນໝວດໝູ່ການແຈ້ງເຕືອນ"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "ແຊັດ"
 
@@ -218,7 +223,7 @@ msgstr "ແຊັດ"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "ເລືອກເກມຈາກແຖບຂ້າງ ຫຼື ເລີ່ມຕົ້ນອັນໃໝ່."
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "ເລືອກຕົວອັກສອນ"
 
@@ -242,7 +247,7 @@ msgstr "ເລືອກລະຫວ່າງຄ່າເລີ່ມຕົ້ນ
 msgid "Choose language"
 msgstr "ເລືອກພາສາ"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "ເລືອກຄູ່ຕໍ່ສູ້ <0>(1-3)</0>"
 
@@ -302,7 +307,7 @@ msgstr "ຈະມາໃນໄວໆນີ້!"
 msgid "Compact"
 msgstr "ຫຍໍ້"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "ສຳເລັດແລ້ວ"
 
@@ -311,9 +316,9 @@ msgstr "ສຳເລັດແລ້ວ"
 msgid "Confirm"
 msgstr "ຢືນຢັນ"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "ມີຄຳທີ່ບໍ່ຮູ້ຈັກ"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "ມີຄຳສັບທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້."
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "ສຳເນົາ"
 msgid "Could not load this document. Please try again later."
 msgstr "ບໍ່ສາມາດໂຫລດເອກະສານນີ້ໄດ້. ກະລຸນາລອງອີກຄັ້ງໃນພາຍຫຼັງ."
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "ກຳລັງສ້າງ..."
 
@@ -360,7 +365,7 @@ msgstr "ຄ່າເລີ່ມຕົ້ນ"
 msgid "Default AI account"
 msgstr "ບັນຊີ AI ເລີ່ມຕົ້ນ"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "ລົບເກມ"
 
@@ -382,10 +387,6 @@ msgstr "ແຜງລາຍລະອຽດ"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "ກວດຫາຈາກຕົວທ່ອງເວັບ"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "ບໍ່ມີວັດຈະນານຸກົມ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "ຊ່ອງສີ່ຫຼ່ຽມວ່າງ {0}{1}"
 msgid "Empty tile slot"
 msgstr "ຊ່ອງແຜ່ນປ້າຍວ່າງ"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "ອັງກິດ (UK)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "ອັງກິດ (US)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "ແລກປ່ຽນ"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "ແລກປ່ຽນ ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "ແລກປ່ຽນ ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "ແລກປ່ຽນແຜ່ນປ້າຍ"
 
@@ -451,23 +452,23 @@ msgstr "ໃຫຍ່ພິເສດ"
 msgid "Failed to add account"
 msgstr "ເພີ່ມບັນຊີລົ້ມເຫຼວ"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "ສ້າງເກມລົ້ມເຫຼວ"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "ສ້າງການແຂ່ງຂັນຄືນໃໝ່ລົ້ມເຫຼວ"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "ລຶບເກມລົ້ມເຫຼວ"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "ແລກປ່ຽນລົ້ມເຫຼວ"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "ຜ່ານລົ້ມເຫຼວ"
 
@@ -475,12 +476,12 @@ msgstr "ຜ່ານລົ້ມເຫຼວ"
 msgid "Failed to remove account"
 msgstr "ຍ້າຍບັນຊີລົ້ມເຫຼວ"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "ລາອອກລົ້ມເຫຼວ"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "ສົ່ງລົ້ມເຫຼວ"
 
@@ -488,11 +489,11 @@ msgstr "ສົ່ງລົ້ມເຫຼວ"
 msgid "Failed to send verification code"
 msgstr "ສົ່ງລະຫັດຢືນຢັນລົ້ມເຫຼວ"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "ສົ່ງການເຄື່ອນໄຫວລົ້ມເຫຼວ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "ອັບເດດໝວດໝູ່ລົ້ມເຫຼວ"
 
@@ -520,11 +521,11 @@ msgstr "ຈາກຮູບແບບ"
 msgid "Full layout"
 msgstr "ຮູບແບບເຕັມ"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "ສ້າງເກມແລ້ວ"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "ລຶບເກມແລ້ວ"
 
@@ -590,8 +591,7 @@ msgstr "ປະທັບໃນ"
 msgid "Interests"
 msgstr "ຄວາມສົນໃຈ"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "ການເຄື່ອນໄຫວບໍ່ຖືກຕ້ອງ"
 
@@ -599,7 +599,7 @@ msgstr "ການເຄື່ອນໄຫວບໍ່ຖືກຕ້ອງ"
 msgid "Invalid verification code"
 msgstr "ລະຫັດຢືນຢັນບໍ່ຖືກຕ້ອງ"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "ພາສາ"
 
@@ -661,7 +661,7 @@ msgstr "ກຳລັງອອກຈາກລະບົບ…"
 msgid "Mark all as read"
 msgstr "ໝາຍທັງໝົດເປັນອ່ານແລ້ວ"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "ຄູ່ແຂ່ງສູງສຸດ 3 ຄົນ"
 
@@ -685,21 +685,17 @@ msgstr "Metric"
 msgid "Monday"
 msgstr "ວັນຈັນ"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "ຍ້າຍຕົວແຕ່ງ"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "ໃໝ່"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "ເກມໃໝ່"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "ເກມໃໝ່"
 
@@ -715,11 +711,11 @@ msgstr "ບໍ່ມີກົດການເຂົ້າເຖິງທີ່ຕ
 msgid "No connected accounts"
 msgstr "ບໍ່ມີບັນຊີທີ່ເຊື່ອມຕໍ່"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "ບໍ່ພົບໝູ່"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "ຍັງບໍ່ມີໝູ່"
 
@@ -752,7 +748,7 @@ msgstr "ບໍ່ພົບຜົນ."
 msgid "No time zone found."
 msgstr "ບໍ່ພົບເຂດເວລາ."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "ຍັງບໍ່ມີບັນທຶກຫົວຂໍ້ — ລອງໃໝ່ຫຼັງຈາກການແຈ້ງເຕືອນຄັ້ງຕໍ່ໄປ."
 
@@ -785,11 +781,11 @@ msgstr "ອຸບຍ! ບໍ່ພົບໜ້າ!"
 msgid "Open account actions"
 msgstr "ເປີດການກະທຳບັນຊີ"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "ເປີດແຜງສົນທະນາ"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "ເປີດການກະທຳເກມ"
 
@@ -823,13 +819,9 @@ msgstr "ອື່ນໆ"
 msgid "Owner"
 msgstr "ເຈົ້າຂອງ"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "ຜ່ານ"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "ວາງເບື້ຍຢູ່ໃນກະດານເພື່ອເບິ່ງຄະແນນແລະຄຳກ່ອນ."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "ຜູ້ຫຼິ້ນ {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "ຫຼິ້ນກັບຜູ້ຫຼິ້ນ {playerCount} ຄົນ"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "ກະລຸນາເລືອກໝູ່ຢ່າງໜ້ອຍໜຶ່ງຄົນ"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "ຕົວຢ່າງຄະແນນ"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "ຄວາມເປັນສ່ວນຕົວ"
 msgid "Profile"
 msgstr "ໂປຣໄຟລ໌"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "ຮຽກຄືນ"
 
@@ -887,7 +875,7 @@ msgstr "ສຳພັດ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "ສຳພັດພາຍໃນ 24 ຊົ່ວໂມງ, ຖ້າບໍ່ດັ່ງນັ້ນສົມບູນ"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "ແຂ່ງຄືນ"
 
@@ -918,16 +906,16 @@ msgstr "ຣີເຊັດ"
 msgid "Reset all settings to default values"
 msgstr "ຣີເຊັດການຕັ້ງຄ່າທັງໝົດເປັນຄ່າເລີ່ມຕົ້ນ"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "ຍອມແພ້"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "ຍອມແພ້ເກມ?"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "ກຳລັງຍອມແພ້..."
 
@@ -989,7 +977,7 @@ msgstr "ເລືອກກົດການເຂົ້າເຖິງ"
 msgid "Select account type"
 msgstr "ເລືອກປະເພດບັນຊີ"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "ເລືອກໝູ່..."
 
@@ -1048,7 +1036,7 @@ msgstr "ການຕັ້ງຄ່າ"
 msgid "Showing {totalShown} of {total}"
 msgstr "ກຳລັງສະແດງ {totalShown} ຈາກ {total}"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "ສຸ່ມ rack"
 
@@ -1075,11 +1063,11 @@ msgstr "ນ້ອຍ"
 msgid "Spacious"
 msgstr "ກວ້າງຂວາງ"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "ເລີ່ມເກມ Words ໃໝ່"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "ເລີ່ມເກມ"
 
@@ -1091,8 +1079,8 @@ msgstr "ຕິດຕາມຕໍ່ໄປ!"
 msgid "Subject"
 msgstr "ຫົວຂໍ້"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "ສົ່ງ"
 
@@ -1196,7 +1184,7 @@ msgstr "ພິມເພື່ອຄົ້ນຫາ..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "ບໍ່ສາມາດປ່ຽນເສັ້ນທາງໄປຫາການເຂົ້າສູ່ລະບົບ. ກະລຸນາລອງອີກຄັ້ງ."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "ບໍ່ໄດ້ມອບໝາຍ"
 
@@ -1220,13 +1208,9 @@ msgstr "ບໍ່ໄດ້ຢືນຢັນ"
 msgid "User"
 msgstr "ຜູ້ໃຊ້"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "ການກວດສອບເປັນຄຳແນະນຳ. ທ່ານຍັງສາມາດສົ່ງການເຄື່ອນໄຫວນີ້ໄດ້."
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "ການກວດສອບອອບລາຍຊົ່ວຄາວ. ທ່ານຍັງສາມາດສົ່ງໄດ້."
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "ການກວດສອບອອບລາຍ — ທ່ານຍັງສາມາດສົ່ງໄດ້."
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "ເບິ່ງທັງໝົດ"
 msgid "View all notifications"
 msgstr "ເບິ່ງການແຈ້ງເຕືອນທັງໝົດ"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "ກຳລັງລໍຖ້າເທື່ອຂອງທ່ານເພື່ອວາງ tiles."
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "ພວກເຮົາຈະກັບມາອອນລາຍໃນບໍ່ຊ້າ."
@@ -1277,13 +1257,13 @@ msgstr "ເວັບໄຊກຳລັງຢູ່ໃນການບຳລຸງ
 msgid "Wednesday"
 msgstr "ວັນພຸດ"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "Words ທີ່ສ້າງຂຶ້ນ"
 

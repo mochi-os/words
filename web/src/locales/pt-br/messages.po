@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, one {# jogador} other {# jogadores}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "Tipo de conta"
 msgid "Account verified"
 msgstr "Conta verificada"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "Jogos ativos"
 
@@ -113,11 +118,11 @@ msgstr "Adicionar conta"
 msgid "Add an account to receive notifications and use services."
 msgstr "Adicione uma conta para receber notificações e usar serviços."
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "Adicionar amigos"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "Adicione amigos no aplicativo Pessoas para começar a jogar"
 
@@ -157,7 +162,7 @@ msgstr "Todos"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Tem certeza de que deseja sair? Você precisará entrar novamente para acessar sua conta."
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "Tem certeza de que deseja desistir?"
 
@@ -190,27 +195,27 @@ msgstr "Aumentar interesse"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "Cancelar troca"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Categoria desta notificação"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Alterar categoria da notificação"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "Chat"
 
@@ -218,7 +223,7 @@ msgstr "Chat"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Escolha um jogo na barra lateral ou inicie um novo."
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "Escolha uma letra"
 
@@ -242,7 +247,7 @@ msgstr "Escolha entre preferência do sistema, modo claro ou modo escuro"
 msgid "Choose language"
 msgstr "Escolher idioma"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Escolha os adversários <0>(1-3)</0>"
 
@@ -302,7 +307,7 @@ msgstr "Em breve!"
 msgid "Compact"
 msgstr "Compacto"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "Concluído"
 
@@ -311,9 +316,9 @@ msgstr "Concluído"
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "Contém palavras desconhecidas"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "Contém palavras desconhecidas. Você ainda pode enviar."
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "Copiar"
 msgid "Could not load this document. Please try again later."
 msgstr "Não foi possível carregar este documento. Tente novamente mais tarde."
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "Criando..."
 
@@ -360,7 +365,7 @@ msgstr "Padrão"
 msgid "Default AI account"
 msgstr "Conta de IA padrão"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "Excluir jogo"
 
@@ -382,10 +387,6 @@ msgstr "Painel de detalhes"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "Detectar do navegador"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "Dicionário indisponível"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "Casa vazia {0}{1}"
 msgid "Empty tile slot"
 msgstr "Posição de peça vazia"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "Inglês (Reino Unido)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "Inglês (EUA)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "Trocar"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "Trocar ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "Trocar ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "Trocar peças"
 
@@ -451,23 +452,23 @@ msgstr "Extra grande"
 msgid "Failed to add account"
 msgstr "Falha ao adicionar conta"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "Falha ao criar jogo"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "Falha ao criar revanche"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "Falha ao excluir jogo"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "Falha ao trocar"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "Falha ao passar"
 
@@ -475,12 +476,12 @@ msgstr "Falha ao passar"
 msgid "Failed to remove account"
 msgstr "Falha ao remover conta"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "Falha ao desistir"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "Falha ao enviar"
 
@@ -488,11 +489,11 @@ msgstr "Falha ao enviar"
 msgid "Failed to send verification code"
 msgstr "Falha ao enviar código de verificação"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "Falha ao enviar jogada"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Falha ao atualizar categoria"
 
@@ -520,11 +521,11 @@ msgstr "Do tema"
 msgid "Full layout"
 msgstr "Layout completo"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "Jogo criado"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "Jogo excluído"
 
@@ -590,8 +591,7 @@ msgstr "Embutido"
 msgid "Interests"
 msgstr "Interesses"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "Jogada inválida"
 
@@ -599,7 +599,7 @@ msgstr "Jogada inválida"
 msgid "Invalid verification code"
 msgstr "Código de verificação inválido"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "Idioma"
 
@@ -661,7 +661,7 @@ msgstr "Desconectando…"
 msgid "Mark all as read"
 msgstr "Marcar tudo como lido"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "Máximo de 3 oponentes"
 
@@ -685,21 +685,17 @@ msgstr "Métrica"
 msgid "Monday"
 msgstr "Segunda-feira"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "Mover compositor"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "Novo"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "Novo jogo"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "Novo jogo"
 
@@ -715,11 +711,11 @@ msgstr "Nenhuma regra de acesso configurada. Adicione regras para controlar quem
 msgid "No connected accounts"
 msgstr "Nenhuma conta conectada"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "Nenhum amigo encontrado"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "Ainda não há amigos"
 
@@ -752,7 +748,7 @@ msgstr "Nenhum resultado encontrado."
 msgid "No time zone found."
 msgstr "Nenhum fuso horário encontrado."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ainda não há registro do tópico — tente novamente após a próxima notificação."
 
@@ -785,11 +781,11 @@ msgstr "Ops! Página não encontrada!"
 msgid "Open account actions"
 msgstr "Abrir ações da conta"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "Abrir painel de conversa"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "Abrir ações do jogo"
 
@@ -823,13 +819,9 @@ msgstr "Outro"
 msgid "Owner"
 msgstr "Proprietário"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "Passar"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "Coloque peças no tabuleiro para ver pontuação e palavras."
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "Jogador {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Jogando com {playerCount} jogadores"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "Selecione pelo menos um amigo"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "Pré-visualizar pontuação"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "Privacidade"
 msgid "Profile"
 msgstr "Perfil"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "Revogar"
 
@@ -887,7 +875,7 @@ msgstr "Relativo (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativo em até 24 horas, caso contrário absoluto"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "Revanche"
 
@@ -918,16 +906,16 @@ msgstr "Redefinir"
 msgid "Reset all settings to default values"
 msgstr "Redefinir todas as configurações para os valores padrão"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "Desistir"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "Desistir do jogo?"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "Desistindo..."
 
@@ -989,7 +977,7 @@ msgstr "Selecionar regra de acesso"
 msgid "Select account type"
 msgstr "Selecionar tipo de conta"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "Selecionar amigos..."
 
@@ -1048,7 +1036,7 @@ msgstr "Configurações"
 msgid "Showing {totalShown} of {total}"
 msgstr "Mostrando {totalShown} de {total}"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "Embaralhar suporte"
 
@@ -1075,11 +1063,11 @@ msgstr "Pequeno"
 msgid "Spacious"
 msgstr "Espaçoso"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "Iniciar um novo jogo de Words"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "Iniciar jogo"
 
@@ -1091,8 +1079,8 @@ msgstr "Mas fique atento!"
 msgid "Subject"
 msgstr "Assunto"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "Enviar"
 
@@ -1196,7 +1184,7 @@ msgstr "Digite para pesquisar..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Não foi possível redirecionar para o login. Tente novamente."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Não atribuído"
 
@@ -1220,13 +1208,9 @@ msgstr "Não verificado"
 msgid "User"
 msgstr "Usuário"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "A validação é apenas uma sugestão. Você ainda pode enviar esta jogada."
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "A validação está temporariamente offline. Você ainda pode enviar."
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "Validação offline — você ainda pode enviar."
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "Ver tudo"
 msgid "View all notifications"
 msgstr "Ver todas as notificações"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "Aguardando sua vez para colocar peças."
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "Voltaremos a ficar on-line em breve."
@@ -1277,13 +1257,13 @@ msgstr "O site está em manutenção!"
 msgid "Wednesday"
 msgstr "Quarta-feira"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "Palavras formadas"
 

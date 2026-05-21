@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: selectedFriends.length + 1
+#: src/features/words/components/new-game.tsx:154
+msgid "{0, plural, one {# player} other {# players}}"
+msgstr "{0, plural, other {# 人のプレイヤー}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:119
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -88,7 +93,7 @@ msgstr "アカウントタイプ"
 msgid "Account verified"
 msgstr "アカウントを確認しました"
 
-#: src/components/layout/words-layout.tsx:84
+#: src/components/layout/words-layout.tsx:81
 msgid "Active Games"
 msgstr "アクティブなゲーム"
 
@@ -113,11 +118,11 @@ msgstr "アカウントを追加"
 msgid "Add an account to receive notifications and use services."
 msgstr "通知を受け取り、サービスを利用するには、アカウントを追加してください。"
 
-#: src/features/words/components/new-game.tsx:136
+#: src/features/words/components/new-game.tsx:137
 msgid "Add friends"
 msgstr "友だちを追加"
 
-#: src/features/words/components/new-game.tsx:129
+#: src/features/words/components/new-game.tsx:130
 msgid "Add friends in the People app to start playing"
 msgstr "プレイを始めるには、人物アプリで友だちを追加してください"
 
@@ -157,7 +162,7 @@ msgstr "すべて"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "本当にログアウトしますか？再度アクセスするにはログインが必要です。"
 
-#: src/features/words/index.tsx:946
+#: src/features/words/index.tsx:953
 msgid "Are you sure you want to resign?"
 msgstr "本当に投了しますか?"
 
@@ -190,27 +195,27 @@ msgstr "関心を高める"
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/features/words/components/move-composer.tsx:192
-#: src/features/words/components/new-game.tsx:183
-#: src/features/words/index.tsx:829
-#: src/features/words/index.tsx:998
+#: src/features/words/components/move-composer.tsx:140
+#: src/features/words/components/new-game.tsx:184
+#: src/features/words/index.tsx:856
+#: src/features/words/index.tsx:1005
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Cancel exchange"
 msgstr "交換をキャンセル"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "この通知のカテゴリ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "通知カテゴリを変更"
 
-#: src/features/words/index.tsx:886
-#: src/features/words/index.tsx:918
+#: src/features/words/index.tsx:891
+#: src/features/words/index.tsx:924
 msgid "Chat"
 msgstr "チャット"
 
@@ -218,7 +223,7 @@ msgstr "チャット"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "サイドバーからゲームを選ぶか、新しいゲームを始めてください。"
 
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:989
 msgid "Choose a letter"
 msgstr "文字を選択"
 
@@ -242,7 +247,7 @@ msgstr "システム設定、ライトモード、ダークモードから選択
 msgid "Choose language"
 msgstr "言語を選択"
 
-#: src/features/words/components/new-game.tsx:119
+#: src/features/words/components/new-game.tsx:120
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "対戦相手を選択 <0>(1-3)</0>"
 
@@ -302,7 +307,7 @@ msgstr "近日公開!"
 msgid "Compact"
 msgstr "コンパクト"
 
-#: src/components/layout/words-layout.tsx:94
+#: src/components/layout/words-layout.tsx:92
 msgid "Completed"
 msgstr "完了"
 
@@ -311,9 +316,9 @@ msgstr "完了"
 msgid "Confirm"
 msgstr "確認"
 
-#: src/features/words/components/move-composer.tsx:140
-msgid "Contains unknown words"
-msgstr "不明な単語が含まれています"
+#: src/features/words/components/move-composer.tsx:112
+msgid "Contains unknown words. You can still submit."
+msgstr "辞書にない単語が含まれています。そのまま送信できます。"
 
 #: ../../../lib/web/src/lib/query-client.ts:78
 msgid "Content not modified"
@@ -335,7 +340,7 @@ msgstr "コピー"
 msgid "Could not load this document. Please try again later."
 msgstr "このドキュメントを読み込めませんでした。後ほどもう一度お試しください。"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
 msgstr "作成中..."
 
@@ -360,7 +365,7 @@ msgstr "デフォルト"
 msgid "Default AI account"
 msgstr "デフォルト AI アカウント"
 
-#: src/features/words/index.tsx:773
+#: src/features/words/index.tsx:799
 msgid "Delete game"
 msgstr "ゲームを削除"
 
@@ -382,10 +387,6 @@ msgstr "詳細パネル"
 #: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "ウェブブラウザから検出"
-
-#: src/features/words/components/move-composer.tsx:129
-msgid "Dictionary unavailable"
-msgstr "辞書が利用できません"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:327
 msgid "Direction"
@@ -413,29 +414,29 @@ msgstr "空きマス {0}{1}"
 msgid "Empty tile slot"
 msgstr "空きタイル枠"
 
-#: src/features/words/components/new-game.tsx:27
+#: src/features/words/components/new-game.tsx:28
 msgid "English (UK)"
 msgstr "英語 (英国)"
 
-#: src/features/words/components/new-game.tsx:28
+#: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "英語 (米国)"
 
-#: src/features/words/components/move-composer.tsx:208
-#: src/features/words/index.tsx:837
+#: src/features/words/components/move-composer.tsx:156
+#: src/features/words/index.tsx:861
 msgid "Exchange"
 msgstr "交換"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:835
+#: src/features/words/index.tsx:861
 msgid "Exchange ({0})"
 msgstr "交換 ({0})"
 
-#: src/features/words/components/move-composer.tsx:206
+#: src/features/words/components/move-composer.tsx:154
 msgid "Exchange ({exchangeCount})"
 msgstr "交換 ({exchangeCount})"
 
-#: src/features/words/index.tsx:757
+#: src/features/words/index.tsx:783
 msgid "Exchange tiles"
 msgstr "タイルを交換"
 
@@ -451,23 +452,23 @@ msgstr "特大"
 msgid "Failed to add account"
 msgstr "アカウントの追加に失敗しました"
 
-#: src/features/words/components/new-game.tsx:57
+#: src/features/words/components/new-game.tsx:58
 msgid "Failed to create game"
 msgstr "ゲームの作成に失敗しました"
 
-#: src/features/words/index.tsx:346
+#: src/features/words/index.tsx:347
 msgid "Failed to create rematch"
 msgstr "再戦の作成に失敗しました"
 
-#: src/features/words/index.tsx:356
+#: src/features/words/index.tsx:357
 msgid "Failed to delete game"
 msgstr "ゲームの削除に失敗しました"
 
-#: src/features/words/index.tsx:330
+#: src/features/words/index.tsx:331
 msgid "Failed to exchange"
 msgstr "交換に失敗しました"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to pass"
 msgstr "パスに失敗しました"
 
@@ -475,12 +476,12 @@ msgstr "パスに失敗しました"
 msgid "Failed to remove account"
 msgstr "アカウントの削除に失敗しました"
 
-#: src/features/words/index.tsx:337
+#: src/features/words/index.tsx:338
 msgid "Failed to resign"
 msgstr "投了に失敗しました"
 
-#: src/features/words/index.tsx:902
-#: src/features/words/index.tsx:934
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Failed to send"
 msgstr "送信に失敗しました"
 
@@ -488,11 +489,11 @@ msgstr "送信に失敗しました"
 msgid "Failed to send verification code"
 msgstr "確認コードの送信に失敗しました"
 
-#: src/features/words/index.tsx:314
+#: src/features/words/index.tsx:315
 msgid "Failed to submit move"
 msgstr "着手の送信に失敗しました"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "カテゴリの更新に失敗しました"
 
@@ -520,11 +521,11 @@ msgstr "テーマから"
 msgid "Full layout"
 msgstr "フルレイアウト"
 
-#: src/features/words/components/new-game.tsx:53
+#: src/features/words/components/new-game.tsx:54
 msgid "Game created"
 msgstr "ゲームを作成しました"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:353
 msgid "Game deleted"
 msgstr "ゲームを削除しました"
 
@@ -590,8 +591,7 @@ msgstr "インセット"
 msgid "Interests"
 msgstr "興味"
 
-#: src/features/words/components/move-composer.tsx:120
-#: src/features/words/index.tsx:170
+#: src/features/words/index.tsx:171
 msgid "Invalid move"
 msgstr "無効な着手"
 
@@ -599,7 +599,7 @@ msgstr "無効な着手"
 msgid "Invalid verification code"
 msgstr "確認コードが無効です"
 
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:160
 msgid "Language"
 msgstr "言語"
 
@@ -661,7 +661,7 @@ msgstr "ログアウトしています…"
 msgid "Mark all as read"
 msgstr "すべて既読にする"
 
-#: src/features/words/components/new-game.tsx:76
+#: src/features/words/components/new-game.tsx:77
 msgid "Maximum 3 opponents"
 msgstr "対戦相手は最大 3 人"
 
@@ -685,21 +685,17 @@ msgstr "メートル法"
 msgid "Monday"
 msgstr "月曜日"
 
-#: src/features/words/components/move-composer.tsx:83
-msgid "Move composer"
-msgstr "着手を組み立てる"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "新規"
 
-#: src/components/layout/words-layout.tsx:107
+#: src/components/layout/words-layout.tsx:106
 #: src/features/words/components/game-empty-state.tsx:22
 #: src/features/words/components/game-empty-state.tsx:38
 msgid "New game"
 msgstr "新しいゲーム"
 
-#: src/features/words/components/new-game.tsx:109
+#: src/features/words/components/new-game.tsx:110
 msgid "New Game"
 msgstr "新しいゲーム"
 
@@ -715,11 +711,11 @@ msgstr "アクセスルールが設定されていません。このリソース
 msgid "No connected accounts"
 msgstr "接続されたアカウントがありません"
 
-#: src/features/words/components/new-game.tsx:146
+#: src/features/words/components/new-game.tsx:147
 msgid "No friends found"
 msgstr "友だちが見つかりません"
 
-#: src/features/words/components/new-game.tsx:128
+#: src/features/words/components/new-game.tsx:129
 msgid "No friends yet"
 msgstr "まだ友だちがいません"
 
@@ -752,7 +748,7 @@ msgstr "結果が見つかりません。"
 msgid "No time zone found."
 msgstr "タイムゾーンが見つかりません。"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "まだトピック記録がありません — 次の通知後にもう一度お試しください。"
 
@@ -785,11 +781,11 @@ msgstr "ページが見つかりません!"
 msgid "Open account actions"
 msgstr "アカウントのアクションを開く"
 
-#: src/features/words/index.tsx:719
+#: src/features/words/index.tsx:745
 msgid "Open chat panel"
 msgstr "チャットパネルを開く"
 
-#: src/features/words/index.tsx:727
+#: src/features/words/index.tsx:753
 msgid "Open game actions"
 msgstr "ゲーム操作を開く"
 
@@ -823,13 +819,9 @@ msgstr "その他"
 msgid "Owner"
 msgstr "オーナー"
 
-#: src/features/words/index.tsx:745
+#: src/features/words/index.tsx:771
 msgid "Pass"
 msgstr "パス"
-
-#: src/features/words/components/move-composer.tsx:176
-msgid "Place tiles on the board to preview score and words."
-msgstr "ボードにタイルを置いてスコアと単語をプレビューします。"
 
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
@@ -839,13 +831,9 @@ msgstr "プレイヤー{playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount}人でプレイ中"
 
-#: src/features/words/components/new-game.tsx:72
+#: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
 msgstr "友だちを 1 人以上選択してください"
-
-#: src/features/words/components/move-composer.tsx:103
-msgid "Preview score"
-msgstr "スコアをプレビュー"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
@@ -861,8 +849,8 @@ msgstr "プライバシー"
 msgid "Profile"
 msgstr "プロフィール"
 
-#: src/features/words/components/move-composer.tsx:223
-#: src/features/words/index.tsx:844
+#: src/features/words/components/move-composer.tsx:166
+#: src/features/words/index.tsx:867
 msgid "Recall"
 msgstr "戻す"
 
@@ -887,7 +875,7 @@ msgstr "相対 (5分、3時間、2日)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24時間以内は相対、それ以外は絶対"
 
-#: src/features/words/index.tsx:770
+#: src/features/words/index.tsx:796
 msgid "Rematch"
 msgstr "再戦"
 
@@ -918,16 +906,16 @@ msgstr "リセット"
 msgid "Reset all settings to default values"
 msgstr "すべての設定をデフォルト値にリセット"
 
-#: src/features/words/index.tsx:761
-#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:787
+#: src/features/words/index.tsx:961
 msgid "Resign"
 msgstr "投了"
 
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:952
 msgid "Resign game?"
 msgstr "ゲームを投了しますか?"
 
-#: src/features/words/index.tsx:951
+#: src/features/words/index.tsx:958
 msgid "Resigning..."
 msgstr "投了中..."
 
@@ -989,7 +977,7 @@ msgstr "アクセスルールを選択"
 msgid "Select account type"
 msgstr "アカウントの種類を選択"
 
-#: src/features/words/components/new-game.tsx:145
+#: src/features/words/components/new-game.tsx:146
 msgid "Select friends..."
 msgstr "友だちを選択..."
 
@@ -1048,7 +1036,7 @@ msgstr "設定"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total}件中{totalShown}件を表示"
 
-#: src/features/words/index.tsx:737
+#: src/features/words/index.tsx:763
 msgid "Shuffle rack"
 msgstr "ラックをシャッフル"
 
@@ -1075,11 +1063,11 @@ msgstr "小"
 msgid "Spacious"
 msgstr "ゆったり"
 
-#: src/features/words/components/new-game.tsx:112
+#: src/features/words/components/new-game.tsx:113
 msgid "Start a new Words game"
 msgstr "新しいワーズゲームを始める"
 
-#: src/features/words/components/new-game.tsx:191
+#: src/features/words/components/new-game.tsx:192
 msgid "Start game"
 msgstr "ゲームを開始"
 
@@ -1091,8 +1079,8 @@ msgstr "今後の更新にご期待ください!"
 msgid "Subject"
 msgstr "件名"
 
-#: src/features/words/components/move-composer.tsx:234
-#: src/features/words/index.tsx:871
+#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/index.tsx:875
 msgid "Submit"
 msgstr "送信"
 
@@ -1196,7 +1184,7 @@ msgstr "入力して検索…"
 msgid "Unable to redirect to login. Please try again."
 msgstr "ログインページにリダイレクトできません。再試行してください。"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "未割り当て"
 
@@ -1220,13 +1208,9 @@ msgstr "未認証"
 msgid "User"
 msgstr "ユーザー"
 
-#: src/features/words/components/move-composer.tsx:142
-msgid "Validation is advisory. You can still submit this move."
-msgstr "検証は参考用です。この着手はそのまま送信できます。"
-
-#: src/features/words/components/move-composer.tsx:131
-msgid "Validation is temporarily offline. You can still submit."
-msgstr "検証は一時的にオフラインです。そのまま送信できます。"
+#: src/features/words/components/move-composer.tsx:104
+msgid "Validation offline — you can still submit."
+msgstr "検証はオフラインです — そのまま送信できます。"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1261,10 +1245,6 @@ msgstr "すべて表示"
 msgid "View all notifications"
 msgstr "すべての通知を表示"
 
-#: src/features/words/components/move-composer.tsx:178
-msgid "Waiting for your turn to place tiles."
-msgstr "タイルを置く順番を待っています。"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "We'll be back online shortly."
 msgstr "まもなく復旧します。"
@@ -1277,13 +1257,13 @@ msgstr "ウェブサイトはメンテナンス中です!"
 msgid "Wednesday"
 msgstr "水曜日"
 
-#: src/features/words/index.tsx:75
-#: src/features/words/index.tsx:645
-#: src/features/words/index.tsx:657
+#: src/features/words/index.tsx:76
+#: src/features/words/index.tsx:671
+#: src/features/words/index.tsx:683
 msgid "Words"
 msgstr "ワーズ"
 
-#: src/features/words/components/move-composer.tsx:149
+#: src/features/words/components/move-composer.tsx:118
 msgid "Words formed"
 msgstr "作成された単語"
 
