@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
+import { plural } from '@lingui/core/macro'
 import { useNavigate } from '@tanstack/react-router'
 import {
   Button,
@@ -150,7 +151,7 @@ export function NewGame() {
             )}
             {selectedFriends.length > 0 && (
               <p className="text-xs text-muted-foreground">
-                {selectedFriends.length + 1} players
+                {plural(selectedFriends.length + 1, { one: '# player', other: '# players' })}
               </p>
             )}
           </div>

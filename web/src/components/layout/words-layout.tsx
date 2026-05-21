@@ -74,17 +74,15 @@ function WordsLayoutInner() {
     const getName = (game: GameListItem) =>
       myIdentity ? getPlayerNames(game, myIdentity) : game.player2_name
 
-    const getTurnDot = (game: GameListItem) =>
-      myIdentity && isMyTurn(game, myIdentity) ? ' \u00B7' : ''
-
     const groups: SidebarData['navGroups'] = []
 
     if (activeGames.length > 0) {
       groups.push({
         title: t`Active Games`,
         items: activeGames.map((game) => ({
-          title: getName(game) + getTurnDot(game),
+          title: getName(game),
           url: `/${game.fingerprint ?? game.id}`,
+          badge: myIdentity && isMyTurn(game, myIdentity) ? '!' : undefined,
         })),
       })
     }
@@ -93,8 +91,9 @@ function WordsLayoutInner() {
       groups.push({
         title: t`Completed`,
         items: completedGames.map((game) => ({
-          title: `${getName(game)} (${game.status})`,
+          title: getName(game),
           url: `/${game.fingerprint ?? game.id}`,
+          className: 'text-muted-foreground',
         })),
       })
     }
