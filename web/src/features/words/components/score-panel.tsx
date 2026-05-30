@@ -50,7 +50,7 @@ function PlayerScore({
         styleUrl={assetUrl('style')}
         seed={id}
         name={name}
-        size={18}
+        size="xs"
       />
       <span className={cn(
         'font-medium truncate max-w-[100px]',
