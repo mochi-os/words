@@ -78,9 +78,4 @@ export const gamesApi = {
         params: { word, language },
       })
       .then((res) => res.data),
-
-  checkSubscription: () =>
-    client
-      .get<{ data: { exists: boolean } }>('/-/notifications/check')
-      .then((res) => res.data),
 }

@@ -22,7 +22,7 @@ def rack_value(rack):
 		total += TILE_VALUES.get(ch, 0)
 	return total
 
-def make_bag(language):
+def make_bag():
 	"""Create a full bag of tiles as a string."""
 	tiles = []
 	for letter, value, count in TILES_EN:
@@ -74,15 +74,6 @@ def valid_board(board_str):
 		for ch in row.elems():
 			if ch != "." and not ch.isalpha():
 				return False
-	return True
-
-def valid_rack(rack_str):
-	"""Validate a rack string."""
-	if len(rack_str) > 7:
-		return False
-	for ch in rack_str.elems():
-		if ch != "_" and not ch.isupper():
-			return False
 	return True
 
 # Commit hook: fires the chat-message-arrival websocket on every host
@@ -365,7 +356,7 @@ def action_create(a):
 	player_count = len(opponents) + 1
 
 	# Initialize bag and draw tiles
-	bag = make_bag(language)
+	bag = make_bag()
 
 	rack1, bag = draw_tiles(bag, 7)
 	rack2, bag = draw_tiles(bag, 7)
@@ -574,7 +565,7 @@ def action_move(a):
 				continue
 			row = mochi.db.row("select word from dictionary where word=? and language=?", word, language)
 			if not row:
-				a.error(400, word + " is not a valid word")
+				a.error.label(400, "errors.invalid_word", word=word)
 				return
 
 	# Remove used tiles from rack
