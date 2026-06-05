@@ -158,6 +158,14 @@ msgstr "AI"
 msgid "All"
 msgstr "ሁሉም"
 
+#: ../../../lib/web/src/lib/api-client.ts:189
+msgid "An error occurred"
+msgstr "ስህተት ተከስቷል"
+
+#: ../../../lib/web/src/lib/api-client.ts:252
+msgid "An unexpected error occurred"
+msgstr "ያልተጠበቀ ስህተት ተከስቷል"
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:24
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "መውጣት እንደምትፈልግ እርግጠኛ ነህ? መለያህን ለመድረስ ዳግም መግባት ያስፈልግሃል።"
@@ -169,6 +177,10 @@ msgstr "በእርግጥ መልቀቅ ይፈልጋሉ?"
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ዕርገት"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "የማረጋገጫ ኮድ"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -189,6 +201,7 @@ msgid "Boost interest"
 msgstr "ፍላጎትን አሳድግ"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -332,6 +345,10 @@ msgstr "የአውድ መረጃና ዝርዝሮች።"
 msgid "Continue"
 msgstr "ቀጥል"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "በ{label} ይቀጥሉ"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "ቅዳ"
@@ -339,6 +356,18 @@ msgstr "ቅዳ"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "ይህን ሰነድ መጫን አልተቻለም። እባክዎ በኋላ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "ኮዱን መላክ አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "እንደገና ማረጋገጥን መጀመር አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "በዚያ መለያ ማረጋገጥ አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
 
 #: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
@@ -369,6 +398,10 @@ msgstr "ነባሪ የAI መለያ"
 msgid "Delete game"
 msgstr "ጨዋታ ሰርዝ"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "በድሮ ሰርቨር ላይ ያለ መለያህን ሰርዝ"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "ቁልቁለት"
@@ -392,6 +425,10 @@ msgstr "ከድር አሳሽ አውቅ"
 msgid "Direction"
 msgstr "አቅጣጫ"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "አጥፋ"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "የሞባይል ጎንደርን ያሳያል።"
@@ -403,6 +440,10 @@ msgstr "አውርድ"
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "ለዲስሌክሲያ ምቹ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "የኢሜይል ኮድ"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
@@ -421,6 +462,14 @@ msgstr "እንግሊዝኛ (UK)"
 #: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "እንግሊዝኛ (US)"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "ከኢሜይልዎ የመጣውን ኮድ ያስገቡ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "የአረጋጋጭዎን ኮድ ያስገቡ"
 
 #: src/features/words/components/move-composer.tsx:156
 #: src/features/words/index.tsx:861
@@ -496,6 +545,10 @@ msgstr "እንቅስቃሴ ማቅረብ አልተሳካም"
 #: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "ምድብን ማዘመን አልተሳካም"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "የመለያ ዝውውርን አጠናቅ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -685,6 +738,10 @@ msgstr "ሜትሪክ"
 msgid "Monday"
 msgstr "ሰኞ"
 
+#: ../../../lib/web/src/lib/api-client.ts:297
+msgid "Network error"
+msgstr "የአውታረ መረብ ስህተት"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "አዲስ"
@@ -823,6 +880,18 @@ msgstr "ባለቤት"
 msgid "Pass"
 msgstr "አስተላልፍ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "የይለፍ ቁልፍ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "ፓስኪዎች"
+
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
 msgstr "ተጫዋች {playerNumber}"
@@ -830,6 +899,10 @@ msgstr "ተጫዋች {playerNumber}"
 #: src/features/words/lib/header-model.ts:133
 msgid "Playing with {playerCount} players"
 msgstr "ከ{playerCount} ተጫዋቾች ጋር በመጫወት ላይ"
+
+#: ../../../lib/web/src/lib/api-client.ts:298
+msgid "Please check your internet connection and try again."
+msgstr "እባክዎ የበይነመረብ ግንኙነትዎን አረጋግጠው እንደገና ይሞክሩ።"
 
 #: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
@@ -848,6 +921,14 @@ msgstr "ግላዊነት"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "መገለጫ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "በዚህ ሰርቨር ላይ መለያዎችህን እንደገና አገናኝ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "የይለፍ ቁልፎችዎን በዚህ አገልጋይ ላይ እንደገና ይመዝግቡ"
 
 #: src/features/words/components/move-composer.tsx:166
 #: src/features/words/index.tsx:867
@@ -896,6 +977,10 @@ msgstr "ድረሳ ይወገድ?"
 #: ../../../lib/web/src/components/post-tags.tsx:190
 msgid "Remove interest"
 msgstr "ፍላጎት አስወግድ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ኢሜይል እንደገና ላክ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1005,6 +1090,10 @@ msgstr "የገጽታ ምርጫ ይምረጡ"
 msgid "Send again"
 msgstr "እንደገና ላክ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ኢሜይል ላክ"
+
 #: src/features/words/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "መልዕክት ይላኩ"
@@ -1012,6 +1101,11 @@ msgstr "መልዕክት ይላኩ"
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
 msgstr "ሰሪፍ"
+
+#: ../../../lib/web/src/lib/api-client.ts:256
+#: ../../../lib/web/src/lib/api-client.ts:281
+msgid "Server error"
+msgstr "የአገልጋይ ስህተት"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
@@ -1107,6 +1201,10 @@ msgstr "ቡድኖች/መተግበሪያዎች"
 msgid "Terms and conditions"
 msgstr "ውሎችና መመሪያዎች"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "ያ ኮድ የተሳሳተ ነው ወይም ጊዜው አልፎበታል።"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
 msgstr "ገጽታ"
@@ -1179,6 +1277,10 @@ msgstr "ተጠቃሚዎችን ለመፈለግ ይተይቡ"
 msgid "Type to search..."
 msgstr "ለመፈለግ ይተይቡ..."
 
+#: ../../../lib/web/src/lib/api-client.ts:277
+msgid "Unable to connect to remote server"
+msgstr "ከርቀት አገልጋይ ጋር መገናኘት አልተቻለም"
+
 #: ../../../lib/web/src/lib/auth-manager.ts:82
 #: ../../../lib/web/src/lib/auth-manager.ts:94
 msgid "Unable to redirect to login. Please try again."
@@ -1204,6 +1306,10 @@ msgstr "ያልታወቀ"
 msgid "Unverified"
 msgstr "ያልተረጋገጠ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "የይለፍ ቁልፍዎን ይጠቀሙ"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "ተጠቃሚ"
@@ -1224,6 +1330,7 @@ msgstr "የማረጋገጫ ኮድ ተልኳል"
 msgid "Verification failed"
 msgstr "ማረጋገጫ አልተሳካም"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1232,6 +1339,10 @@ msgstr "ያረጋግጡ"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "የኢሜይል አድራሻ ያረጋግጡ"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "የቪዲዮ ጥፍር ምስል"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1282,6 +1393,10 @@ msgstr "ተዉ"
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "አሸንፈዋል!"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "መለያህ ከ{source} ወደዚህ ተዛውሯል። እዚያ እስኪሰርዝ ድረስ፣ መልዕክቶችና ማሳወቂያዎች ሁለቱ ሰርቨሮች ሊደርሱ ይችላሉ፣ አንዳንድ ይዘቶችህ ከድሮ ሰርቨር ሲቀርቡ ይቀጥላሉ፣ ተከታዮችህ ወደዚህ ለማግኘት ጥቂት ደቂቃዎች ሊወስድ ይችላል።"
 
 #: src/features/words/lib/header-model.ts:90
 msgid "Your move"

@@ -158,6 +158,14 @@ msgstr "Gervigreind"
 msgid "All"
 msgstr "Allt"
 
+#: ../../../lib/web/src/lib/api-client.ts:189
+msgid "An error occurred"
+msgstr "Villa kom upp"
+
+#: ../../../lib/web/src/lib/api-client.ts:252
+msgid "An unexpected error occurred"
+msgstr "Óvænt villa kom upp"
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:24
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ertu viss um að þú viljir skrá þig út? Þú þarft að skrá þig inn aftur til að komast að reikningnum þínum."
@@ -169,6 +177,10 @@ msgstr "Ertu viss um að þú viljir gefast upp?"
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Hækkandi"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Auðkennisnúmer"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -189,6 +201,7 @@ msgid "Boost interest"
 msgstr "Auka áhuga"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -332,6 +345,10 @@ msgstr "Samhengisupplýsingar og smáatriði."
 msgid "Continue"
 msgstr "Halda áfram"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Halda áfram með {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Afrita"
@@ -339,6 +356,18 @@ msgstr "Afrita"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Ekki tókst að hlaða þessu skjali. Reyndu aftur síðar."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Ekki tókst að senda kóðann. Reyndu aftur."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Ekki tókst að hefja endurauðkenningu. Reyndu aftur."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Ekki tókst að staðfesta með þeim reikningi. Reyndu aftur."
 
 #: src/features/words/components/new-game.tsx:192
 msgid "Creating..."
@@ -369,6 +398,10 @@ msgstr "Sjálfgefinn gervigreindarreikningur"
 msgid "Delete game"
 msgstr "Eyða leik"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Eyddu reikningnum þínum á gamla þjóninum"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Lækkandi"
@@ -392,6 +425,10 @@ msgstr "Greina út frá vafra"
 msgid "Direction"
 msgstr "Stefna"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Hafna"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Sýnir hliðarstiku farsíma."
@@ -403,6 +440,10 @@ msgstr "Hlaða niður"
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Lesblinduvænt"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Tölvupóstkóði"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
@@ -421,6 +462,14 @@ msgstr "Enska (UK)"
 #: src/features/words/components/new-game.tsx:29
 msgid "English (US)"
 msgstr "Enska (US)"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Sláðu inn kóðann úr tölvupóstinum þínum"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Sláðu inn auðkenniskóðann þinn"
 
 #: src/features/words/components/move-composer.tsx:156
 #: src/features/words/index.tsx:861
@@ -496,6 +545,10 @@ msgstr "Tókst ekki að senda leik"
 #: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Tókst ekki að uppfæra flokk"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Kláraðu að færa reikninginn þinn"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -685,6 +738,10 @@ msgstr "Mæling"
 msgid "Monday"
 msgstr "Mánudagur"
 
+#: ../../../lib/web/src/lib/api-client.ts:297
+msgid "Network error"
+msgstr "Netvilla"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:40
 msgid "New"
 msgstr "Nýtt"
@@ -823,6 +880,18 @@ msgstr "Eigandi"
 msgid "Pass"
 msgstr "Pass"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Aðgangslykill"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Staðfesting aðgangslykils mistókst. Reyndu aftur."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Aðgangslyklar"
+
 #: src/features/words/lib/header-model.ts:74
 msgid "Player {playerNumber}"
 msgstr "Leikmaður {playerNumber}"
@@ -830,6 +899,10 @@ msgstr "Leikmaður {playerNumber}"
 #: src/features/words/lib/header-model.ts:133
 msgid "Playing with {playerCount} players"
 msgstr "Spilað með {playerCount} leikmönnum"
+
+#: ../../../lib/web/src/lib/api-client.ts:298
+msgid "Please check your internet connection and try again."
+msgstr "Athugaðu nettenginguna og reyndu aftur."
 
 #: src/features/words/components/new-game.tsx:73
 msgid "Please select at least one friend"
@@ -848,6 +921,14 @@ msgstr "Friðhelgi"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "Síða"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Tengdu reikninga þína aftur á þessum þjóni"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Skráðu aðgangslyklana þína aftur á þessum netþjóni"
 
 #: src/features/words/components/move-composer.tsx:166
 #: src/features/words/index.tsx:867
@@ -896,6 +977,10 @@ msgstr "Fjarlægja aðgang?"
 #: ../../../lib/web/src/components/post-tags.tsx:190
 msgid "Remove interest"
 msgstr "Fjarlægja áhuga"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Senda tölvupóst aftur"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1005,6 +1090,10 @@ msgstr "Veldu þemastillingu"
 msgid "Send again"
 msgstr "Senda aftur"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Senda tölvupóst"
+
 #: src/features/words/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Senda skilaboð"
@@ -1012,6 +1101,11 @@ msgstr "Senda skilaboð"
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
 msgstr "Þverstrik"
+
+#: ../../../lib/web/src/lib/api-client.ts:256
+#: ../../../lib/web/src/lib/api-client.ts:281
+msgid "Server error"
+msgstr "Þjónsvilla"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
@@ -1107,6 +1201,10 @@ msgstr "Teymi/Forrit"
 msgid "Terms and conditions"
 msgstr "Skilmálar og skilyrði"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Þessi kóði er rangur eða útrunninn."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
 msgstr "Þema"
@@ -1179,6 +1277,10 @@ msgstr "Skrifaðu til að leita að notendum"
 msgid "Type to search..."
 msgstr "Skrifaðu til að leita..."
 
+#: ../../../lib/web/src/lib/api-client.ts:277
+msgid "Unable to connect to remote server"
+msgstr "Ekki tókst að tengjast fjarþjóni"
+
 #: ../../../lib/web/src/lib/auth-manager.ts:82
 #: ../../../lib/web/src/lib/auth-manager.ts:94
 msgid "Unable to redirect to login. Please try again."
@@ -1204,6 +1306,10 @@ msgstr "Óþekkt"
 msgid "Unverified"
 msgstr "Óstaðfest"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Notaðu aðgangslykilinn þinn"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
 msgstr "Notandi"
@@ -1224,6 +1330,7 @@ msgstr "Sannprófunarkóði sendur"
 msgid "Verification failed"
 msgstr "Sannprófun mistókst"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1232,6 +1339,10 @@ msgstr "Sannprófa"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Sannprófa netfang"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Smámynd myndbands"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1282,6 +1393,10 @@ msgstr "Þú gafst upp"
 #: src/features/words/lib/header-model.ts:98
 msgid "You win!"
 msgstr "Þú vannst!"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Reikningurinn þinn var fluttur hingað frá {source}. Þar til þú eyðir honum þar, geta skilaboð og tilkynningar náð til beggja þjóna, hluti af efni þínu heldur áfram að vera þjónað af gamla þjóninum og fylgjendur gætu þurft nokkrar mínútur að finna þig hér."
 
 #: src/features/words/lib/header-model.ts:90
 msgid "Your move"
