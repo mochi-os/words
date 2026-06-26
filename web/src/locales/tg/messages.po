@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:164
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# бозигар} other {# бозигар}}"
 
@@ -118,11 +118,11 @@ msgstr "Иловаи ҳисоб"
 msgid "Add an account to receive notifications and use services."
 msgstr "Барои гирифтани огоҳиномаҳо ва истифодаи хидматҳо ҳисоб илова кунед."
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:147
 msgid "Add friends"
 msgstr "Иловаи дӯстон"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends in the People app to start playing"
 msgstr "Дар барномаи People дӯстон илова кунед, то бозиро оғоз кунед"
 
@@ -171,7 +171,7 @@ msgstr "Хатогии ғайричашмдошт рух дод"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед хориҷ шавед? Барои дастрасӣ ба ҳисоб бояд аз нав ворид шавед."
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:969
 msgid "Are you sure you want to resign?"
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед таслим шавед?"
 
@@ -216,13 +216,13 @@ msgstr "Афзоиши таваҷҷуҳ"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/components/new-game.tsx:194
+#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:1021
 msgid "Cancel"
 msgstr "Бекор кардан"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Cancel exchange"
 msgstr "Бекор кардани мубодила"
 
@@ -235,8 +235,8 @@ msgstr "Категория барои ин огоҳинома"
 msgid "Change notification category"
 msgstr "Тағйири категорияи огоҳинома"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Chat"
 msgstr "Чат"
 
@@ -244,7 +244,7 @@ msgstr "Чат"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Аз панели канорӣ бозиеро интихоб кунед ё нав оғоз кунед."
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1005
 msgid "Choose a letter"
 msgstr "Ҳарф интихоб кунед"
 
@@ -269,7 +269,7 @@ msgstr "Байни танзимоти система, ҳолати равшан 
 msgid "Choose language"
 msgstr "Забон интихоб кунед"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:130
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Рақибонро <0>(1-3)</0> интихоб кунед"
 
@@ -300,8 +300,8 @@ msgid "Clear selection (Escape)"
 msgstr "Тоза кардани интихоб (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Пӯшидан"
@@ -322,8 +322,8 @@ msgstr "Пӯшидани ҷустуҷӯ"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Печондан"
 
@@ -393,7 +393,15 @@ msgstr "Аз нав аутентификатсияро оғоз кардан и�
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Бо он ҳисоб тасдиқ кардан имконнопазир буд. Лутфан, бори дигар кӯшиш кунед."
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:82
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/words/index.tsx:646
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/words/components/new-game.tsx:202
 msgid "Creating..."
 msgstr "Эҷод карда истодааст..."
 
@@ -422,13 +430,17 @@ msgstr "Пешфарз"
 msgid "Default AI account"
 msgstr "Ҳисоби пешфарз AI"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:815
 msgid "Delete game"
 msgstr "Нест кардани бозӣ"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Ҳисоби худро дар сервери кӯҳна нест кунед"
+
+#: src/features/words/index.tsx:622
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -466,10 +478,14 @@ msgstr "Рад кардан"
 msgid "Displays the mobile sidebar."
 msgstr "Панели канории мобилиро намоиш медиҳад."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Боргирӣ"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -493,11 +509,11 @@ msgstr "Чоркунҷаи холии {0}{1}"
 msgid "Empty tile slot"
 msgstr "Ковокии холии плита"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:34
 msgid "English (UK)"
 msgstr "English (UK)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:35
 msgid "English (US)"
 msgstr "English (US)"
 
@@ -510,12 +526,12 @@ msgid "Enter your authenticator code"
 msgstr "Рамзи аутентификатори худро ворид кунед"
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange"
 msgstr "Мубодила"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange ({0})"
 msgstr "Мубодила ({0})"
 
@@ -523,14 +539,14 @@ msgstr "Мубодила ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Мубодила ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Exchange tiles"
 msgstr "Мубодилаи плитаҳо"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Васеъ кардан"
 
@@ -546,23 +562,23 @@ msgstr "Хеле калон"
 msgid "Failed to add account"
 msgstr "Илова кардани ҳисоб ба анҷом нарасид"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:84
 msgid "Failed to create game"
 msgstr "Эҷоди бозӣ ба анҷом нарасид"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:649
 msgid "Failed to create rematch"
 msgstr "Эҷоди бозии нав ба анҷом нарасид"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:624
 msgid "Failed to delete game"
 msgstr "Ҳазфи бозӣ ба анҷом нарасид"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to exchange"
 msgstr "Мубодила ба анҷом нарасид"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:327
 msgid "Failed to pass"
 msgstr "Гузаштан ба анҷом нарасид"
 
@@ -570,12 +586,12 @@ msgstr "Гузаштан ба анҷом нарасид"
 msgid "Failed to remove account"
 msgstr "Бартараф кардани ҳисоб ба анҷом нарасид"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:344
 msgid "Failed to resign"
 msgstr "Истеъфо ба анҷом нарасид"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:923
+#: src/features/words/index.tsx:956
 msgid "Failed to send"
 msgstr "Ирсол ба анҷом нарасид"
 
@@ -583,7 +599,7 @@ msgstr "Ирсол ба анҷом нарасид"
 msgid "Failed to send verification code"
 msgstr "Ирсоли рамзи тасдиқ ба анҷом нарасид"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to submit move"
 msgstr "Пешниҳоди ҳаракат ба анҷом нарасид"
 
@@ -624,11 +640,11 @@ msgstr "Аз мавзӯъ"
 msgid "Full layout"
 msgstr "Тарҳбандии пурра"
 
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:83
 msgid "Game created"
 msgstr "Бозӣ сохта шуд"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:623
 msgid "Game deleted"
 msgstr "Бозӣ ҳазф шуд"
 
@@ -698,7 +714,7 @@ msgstr "Дохилӣ"
 msgid "Interests"
 msgstr "Шавқҳо"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:177
 msgid "Invalid move"
 msgstr "Ҳаракати нодуруст"
 
@@ -706,7 +722,7 @@ msgstr "Ҳаракати нодуруст"
 msgid "Invalid verification code"
 msgstr "Рамзи тасдиқ нодуруст"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:170
 msgid "Language"
 msgstr "Забон"
 
@@ -736,6 +752,10 @@ msgstr "Равшан"
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 msgid "Load more"
 msgstr "Бештар бор кунед"
+
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
@@ -770,7 +790,7 @@ msgstr "Баромадан…"
 msgid "Mark all as read"
 msgstr "Аломатгузорӣ ҳамчун хондашуда"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:72
 msgid "Maximum 3 opponents"
 msgstr "Ҳадди аксар 3 рақиб"
 
@@ -808,12 +828,12 @@ msgstr "Нав"
 msgid "New game"
 msgstr "Бозии нав"
 
-#: src/features/words/components/new-game.tsx:115
+#: src/features/words/components/new-game.tsx:120
 msgid "New Game"
 msgstr "Бозии нав"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Тасвири навбатӣ"
 
@@ -825,11 +845,11 @@ msgstr "Ягон қоидаи дастрасӣ танзим нашудааст. 
 msgid "No connected accounts"
 msgstr "Ягон ҳисоби пайвастшуда нест"
 
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:157
 msgid "No friends found"
 msgstr "Ягон дӯст ёфт нашуд"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:139
 msgid "No friends yet"
 msgstr "То ҳол ягон дӯст нест"
 
@@ -901,16 +921,16 @@ msgstr "Эҳ! Саҳифа ёфт нашуд!"
 msgid "Open account actions"
 msgstr "Кушодани амалҳои ҳисоб"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Кушодани амалҳо"
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:761
 msgid "Open chat panel"
 msgstr "Кушодани панели чат"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:769
 msgid "Open game actions"
 msgstr "Кушодани амалҳои бозӣ"
 
@@ -946,7 +966,7 @@ msgstr "Дигар"
 msgid "Owner"
 msgstr "Соҳиб"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:787
 msgid "Pass"
 msgstr "Гузар"
 
@@ -974,12 +994,12 @@ msgstr "Бозӣ бо {playerCount} бозингарон"
 msgid "Please check your internet connection and try again."
 msgstr "Лутфан пайвасти интернети худро санҷед ва аз нав кӯшиш кунед."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:68
 msgid "Please select at least one friend"
 msgstr "Лутфан ҳадди ақал як дӯсти худро интихоб кунед"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Тасвири қаблӣ"
 
@@ -1006,7 +1026,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Калидҳои дастрасии худро дар ин сервер аз нав сабт кунед"
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:883
 msgid "Recall"
 msgstr "Бозхон"
 
@@ -1032,9 +1052,13 @@ msgstr "Нисбӣ (5д, 3с, 2р)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Нисбӣ дар 24 соат, дар акси ҳол мутлақ"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:812
 msgid "Rematch"
 msgstr "Бозиҳои такрорӣ"
+
+#: src/features/words/index.tsx:647
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1068,16 +1092,16 @@ msgstr "Барқарорсозӣ"
 msgid "Reset all settings to default values"
 msgstr "Барқарорсозии ҳамаи танзимот ба қиматҳои нобаёнӣ"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:803
+#: src/features/words/index.tsx:977
 msgid "Resign"
 msgstr "Таслим"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:968
 msgid "Resign game?"
 msgstr "Аз бозӣ таслим шудан?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:974
 msgid "Resigning..."
 msgstr "Таслим шудан..."
 
@@ -1144,7 +1168,7 @@ msgstr "Интихоби қоидаи дастрасӣ"
 msgid "Select account type"
 msgstr "Интихоби намуди ҳисоб"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:156
 msgid "Select friends..."
 msgstr "Дӯстонро интихоб кунед..."
 
@@ -1219,7 +1243,7 @@ msgstr "Нишон додани рамз"
 msgid "Showing {totalShown} of {total}"
 msgstr "{totalShown} аз {total} нишон дода мешавад"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:779
 msgid "Shuffle rack"
 msgstr "Рафро бо тартиби тасодуфӣ ҷобаҷо кардан"
 
@@ -1251,11 +1275,11 @@ msgstr "Хурд"
 msgid "Spacious"
 msgstr "Васеъ"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:123
 msgid "Start a new Words game"
 msgstr "Бозии нави Words-ро оғоз кунед"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:202
 msgid "Start game"
 msgstr "Бозӣ оғоз кунед"
 
@@ -1268,7 +1292,7 @@ msgid "Subject"
 msgstr "Мавзӯъ"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:891
 msgid "Submit"
 msgstr "Пешниҳод кардан"
 
@@ -1325,10 +1349,10 @@ msgstr "Тағйир додани сутунҳо"
 msgid "Toggle right panel"
 msgstr "Панели ростро иваз кардан"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Гузориши қисмат"
 
@@ -1478,9 +1502,9 @@ msgstr "Сомона дар ҳолати таъмир аст!"
 msgid "Wednesday"
 msgstr "Чоршанбе"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:82
+#: src/features/words/index.tsx:687
+#: src/features/words/index.tsx:699
 msgid "Words"
 msgstr "Words"
 

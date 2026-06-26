@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:164
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, other {# ผู้เล่น}}"
 
@@ -118,11 +118,11 @@ msgstr "เพิ่มบัญชี"
 msgid "Add an account to receive notifications and use services."
 msgstr "เพิ่มบัญชีเพื่อรับการแจ้งเตือนและใช้บริการ"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:147
 msgid "Add friends"
 msgstr "เพิ่มเพื่อน"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends in the People app to start playing"
 msgstr "เพิ่มเพื่อนในแอป People เพื่อเริ่มเล่น"
 
@@ -171,7 +171,7 @@ msgstr "เกิดข้อผิดพลาดที่ไม่คาดค
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ? คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อเข้าถึงบัญชีของคุณ"
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:969
 msgid "Are you sure you want to resign?"
 msgstr "แน่ใจว่าต้องการยอมแพ้?"
 
@@ -216,13 +216,13 @@ msgstr "เพิ่มความสนใจ"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/components/new-game.tsx:194
+#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:1021
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Cancel exchange"
 msgstr "ยกเลิกการแลกเปลี่ยน"
 
@@ -235,8 +235,8 @@ msgstr "หมวดหมู่สำหรับการแจ้งเตื
 msgid "Change notification category"
 msgstr "เปลี่ยนหมวดหมู่การแจ้งเตือน"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Chat"
 msgstr "แชท"
 
@@ -244,7 +244,7 @@ msgstr "แชท"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "เลือกเกมจากแถบด้านข้างหรือเริ่มเกมใหม่"
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1005
 msgid "Choose a letter"
 msgstr "เลือกตัวอักษร"
 
@@ -269,7 +269,7 @@ msgstr "เลือกระหว่างการตั้งค่าระ
 msgid "Choose language"
 msgstr "เลือกภาษา"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:130
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "เลือกคู่แข่ง <0>(1-3)</0>"
 
@@ -300,8 +300,8 @@ msgid "Clear selection (Escape)"
 msgstr "ล้างการเลือก (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "ปิด"
@@ -322,8 +322,8 @@ msgstr "ปิดการค้นหา"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "ยุบ"
 
@@ -393,7 +393,15 @@ msgstr "เริ่มการยืนยันตัวตนอีกคร
 msgid "Couldn't verify with that account. Please try again."
 msgstr "ไม่สามารถยืนยันด้วยบัญชีนั้นได้ โปรดลองอีกครั้ง"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:82
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/words/index.tsx:646
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/words/components/new-game.tsx:202
 msgid "Creating..."
 msgstr "กำลังสร้าง..."
 
@@ -422,13 +430,17 @@ msgstr "ค่าเริ่มต้น"
 msgid "Default AI account"
 msgstr "บัญชี AI เริ่มต้น"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:815
 msgid "Delete game"
 msgstr "ลบเกม"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "ลบบัญชีของคุณบนเซิร์ฟเวอร์เดิม"
+
+#: src/features/words/index.tsx:622
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -466,10 +478,14 @@ msgstr "ปิด"
 msgid "Displays the mobile sidebar."
 msgstr "แสดงแถบด้านข้างบนมือถือ"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "ดาวน์โหลด"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -493,11 +509,11 @@ msgstr "ช่องว่าง {0}{1}"
 msgid "Empty tile slot"
 msgstr "ช่องว่างใส่ตัว"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:34
 msgid "English (UK)"
 msgstr "อังกฤษ (UK)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:35
 msgid "English (US)"
 msgstr "อังกฤษ (US)"
 
@@ -510,12 +526,12 @@ msgid "Enter your authenticator code"
 msgstr "ป้อนรหัสจากแอปยืนยันตัวตนของคุณ"
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange"
 msgstr "สลับ"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange ({0})"
 msgstr "สลับ ({0})"
 
@@ -523,14 +539,14 @@ msgstr "สลับ ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "สลับ ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Exchange tiles"
 msgstr "แลกเปลี่ยนตัวอักษร"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "ขยาย"
 
@@ -546,23 +562,23 @@ msgstr "ใหญ่พิเศษ"
 msgid "Failed to add account"
 msgstr "ไม่สามารถเพิ่มบัญชีได้"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:84
 msgid "Failed to create game"
 msgstr "ไม่สามารถสร้างเกมได้"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:649
 msgid "Failed to create rematch"
 msgstr "ไม่สามารถสร้างการแข่งใหม่ได้"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:624
 msgid "Failed to delete game"
 msgstr "ไม่สามารถลบเกมได้"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to exchange"
 msgstr "ไม่สามารถแลกเปลี่ยนได้"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:327
 msgid "Failed to pass"
 msgstr "ไม่สามารถข้ามได้"
 
@@ -570,12 +586,12 @@ msgstr "ไม่สามารถข้ามได้"
 msgid "Failed to remove account"
 msgstr "ไม่สามารถเอาบัญชีออกได้"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:344
 msgid "Failed to resign"
 msgstr "ไม่สามารถยอมแพ้ได้"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:923
+#: src/features/words/index.tsx:956
 msgid "Failed to send"
 msgstr "ไม่สามารถส่งได้"
 
@@ -583,7 +599,7 @@ msgstr "ไม่สามารถส่งได้"
 msgid "Failed to send verification code"
 msgstr "ไม่สามารถส่งรหัสยืนยันได้"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to submit move"
 msgstr "ไม่สามารถส่งการเดินได้"
 
@@ -624,11 +640,11 @@ msgstr "จากธีม"
 msgid "Full layout"
 msgstr "เลย์เอาต์เต็ม"
 
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:83
 msgid "Game created"
 msgstr "สร้างเกมแล้ว"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:623
 msgid "Game deleted"
 msgstr "ลบเกมแล้ว"
 
@@ -698,7 +714,7 @@ msgstr "ฝังเข้าด้านใน"
 msgid "Interests"
 msgstr "ความสนใจ"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:177
 msgid "Invalid move"
 msgstr "การเดินไม่ถูกต้อง"
 
@@ -706,7 +722,7 @@ msgstr "การเดินไม่ถูกต้อง"
 msgid "Invalid verification code"
 msgstr "รหัสยืนยันไม่ถูกต้อง"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:170
 msgid "Language"
 msgstr "ภาษา"
 
@@ -736,6 +752,10 @@ msgstr "สว่าง"
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 msgid "Load more"
 msgstr "โหลดเพิ่ม"
+
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
@@ -770,7 +790,7 @@ msgstr "กำลังออกจากระบบ…"
 msgid "Mark all as read"
 msgstr "ทำเครื่องหมายว่าอ่านแล้วทั้งหมด"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:72
 msgid "Maximum 3 opponents"
 msgstr "คู่ต่อสู้สูงสุด 3 คน"
 
@@ -808,12 +828,12 @@ msgstr "ใหม่"
 msgid "New game"
 msgstr "เกมใหม่"
 
-#: src/features/words/components/new-game.tsx:115
+#: src/features/words/components/new-game.tsx:120
 msgid "New Game"
 msgstr "เกมใหม่"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "รูปถัดไป"
 
@@ -825,11 +845,11 @@ msgstr "ยังไม่ได้ตั้งกฎการเข้าถึ
 msgid "No connected accounts"
 msgstr "ไม่มีบัญชีที่เชื่อมต่อ"
 
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:157
 msgid "No friends found"
 msgstr "ไม่พบเพื่อน"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:139
 msgid "No friends yet"
 msgstr "ยังไม่มีเพื่อน"
 
@@ -901,16 +921,16 @@ msgstr "ขออภัย! ไม่พบหน้านี้!"
 msgid "Open account actions"
 msgstr "เปิดการดำเนินการของบัญชี"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "เปิดการดำเนินการ"
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:761
 msgid "Open chat panel"
 msgstr "เปิดแผงแชต"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:769
 msgid "Open game actions"
 msgstr "เปิดการดำเนินการของเกม"
 
@@ -946,7 +966,7 @@ msgstr "อื่น ๆ"
 msgid "Owner"
 msgstr "เจ้าของ"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:787
 msgid "Pass"
 msgstr "ผ่าน"
 
@@ -974,12 +994,12 @@ msgstr "กำลังเล่นกับผู้เล่น {playerCount} 
 msgid "Please check your internet connection and try again."
 msgstr "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง"
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:68
 msgid "Please select at least one friend"
 msgstr "กรุณาเลือกเพื่อนอย่างน้อยหนึ่งคน"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "รูปก่อนหน้า"
 
@@ -1006,7 +1026,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ลงทะเบียนพาสคีย์ของคุณใหม่บนเซิร์ฟเวอร์นี้"
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:883
 msgid "Recall"
 msgstr "เรียกคืน"
 
@@ -1032,9 +1052,13 @@ msgstr "แบบสัมพัทธ์ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "สัมพัทธ์ภายใน 24 ชั่วโมง นอกนั้นแบบสัมบูรณ์"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:812
 msgid "Rematch"
 msgstr "แข่งใหม่"
+
+#: src/features/words/index.tsx:647
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1068,16 +1092,16 @@ msgstr "รีเซ็ต"
 msgid "Reset all settings to default values"
 msgstr "รีเซ็ตการตั้งค่าทั้งหมดเป็นค่าเริ่มต้น"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:803
+#: src/features/words/index.tsx:977
 msgid "Resign"
 msgstr "ยอมแพ้"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:968
 msgid "Resign game?"
 msgstr "ยอมแพ้เกม?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:974
 msgid "Resigning..."
 msgstr "กำลังยอมแพ้..."
 
@@ -1144,7 +1168,7 @@ msgstr "เลือกกฎการเข้าถึง"
 msgid "Select account type"
 msgstr "เลือกประเภทบัญชี"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:156
 msgid "Select friends..."
 msgstr "เลือกเพื่อน..."
 
@@ -1219,7 +1243,7 @@ msgstr "แสดงรหัสผ่าน"
 msgid "Showing {totalShown} of {total}"
 msgstr "แสดง {totalShown} จาก {total}"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:779
 msgid "Shuffle rack"
 msgstr "สับเปลี่ยนแร็ค"
 
@@ -1251,11 +1275,11 @@ msgstr "เล็ก"
 msgid "Spacious"
 msgstr "กว้างขวาง"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:123
 msgid "Start a new Words game"
 msgstr "เริ่มเกม Words ใหม่"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:202
 msgid "Start game"
 msgstr "เริ่มเกม"
 
@@ -1268,7 +1292,7 @@ msgid "Subject"
 msgstr "หัวเรื่อง"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:891
 msgid "Submit"
 msgstr "ส่ง"
 
@@ -1325,10 +1349,10 @@ msgstr "สลับคอลัมน์"
 msgid "Toggle right panel"
 msgstr "สลับแผงด้านขวา"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "สลับส่วน"
 
@@ -1478,9 +1502,9 @@ msgstr "เว็บไซต์อยู่ระหว่างการบำ
 msgid "Wednesday"
 msgstr "วันพุธ"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:82
+#: src/features/words/index.tsx:687
+#: src/features/words/index.tsx:699
 msgid "Words"
 msgstr "Words"
 

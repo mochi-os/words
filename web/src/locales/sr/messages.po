@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:164
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# играч} few {# играча} other {# играча}}"
 
@@ -118,11 +118,11 @@ msgstr "Додај налог"
 msgid "Add an account to receive notifications and use services."
 msgstr "Додајте налог да примате обавештења и користите услуге."
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:147
 msgid "Add friends"
 msgstr "Додај пријатеље"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends in the People app to start playing"
 msgstr "Додајте пријатеље у апликацији People да започнете игру"
 
@@ -171,7 +171,7 @@ msgstr "Дошло је до неочекиване грешке"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Да ли сте сигурни да желите да се одјавите? Мораћете поново да се пријавите да приступите свом налогу."
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:969
 msgid "Are you sure you want to resign?"
 msgstr "Да ли сте сигурни да желите да предате?"
 
@@ -216,13 +216,13 @@ msgstr "Појачај интересовање"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/components/new-game.tsx:194
+#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:1021
 msgid "Cancel"
 msgstr "Откажи"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Cancel exchange"
 msgstr "Откажи размену"
 
@@ -235,8 +235,8 @@ msgstr "Категорија за ово обавештење"
 msgid "Change notification category"
 msgstr "Промени категорију обавештења"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Chat"
 msgstr "Разговор"
 
@@ -244,7 +244,7 @@ msgstr "Разговор"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Изаберите игру из бочне траке или започните нову."
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1005
 msgid "Choose a letter"
 msgstr "Изаберите слово"
 
@@ -269,7 +269,7 @@ msgstr "Изаберите између системских поставки, �
 msgid "Choose language"
 msgstr "Изаберите језик"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:130
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Изаберите противнике <0>(1-3)</0>"
 
@@ -300,8 +300,8 @@ msgid "Clear selection (Escape)"
 msgstr "Очисти избор (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Затвори"
@@ -322,8 +322,8 @@ msgstr "Затвори претрагу"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Скупи"
 
@@ -393,7 +393,15 @@ msgstr "Поновна потврда идентитета није могла �
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Није било могуће извршити проверу са тим налогом. Покушајте поново."
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:82
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/words/index.tsx:646
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/words/components/new-game.tsx:202
 msgid "Creating..."
 msgstr "Креирање..."
 
@@ -422,13 +430,17 @@ msgstr "Подразумевано"
 msgid "Default AI account"
 msgstr "Подразумевани AI налог"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:815
 msgid "Delete game"
 msgstr "Обриши игру"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Обришите свој налог на старом серверу"
+
+#: src/features/words/index.tsx:622
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -466,10 +478,14 @@ msgstr "Одбаци"
 msgid "Displays the mobile sidebar."
 msgstr "Приказује мобилну бочну траку."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Преузми"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -493,11 +509,11 @@ msgstr "Празно поље {0}{1}"
 msgid "Empty tile slot"
 msgstr "Празно место за плочицу"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:34
 msgid "English (UK)"
 msgstr "Енглески (УК)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:35
 msgid "English (US)"
 msgstr "Енглески (САД)"
 
@@ -510,12 +526,12 @@ msgid "Enter your authenticator code"
 msgstr "Унесите код из апликације за потврду идентитета"
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange"
 msgstr "Размена"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange ({0})"
 msgstr "Размена ({0})"
 
@@ -523,14 +539,14 @@ msgstr "Размена ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Размена ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Exchange tiles"
 msgstr "Размени плочице"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Прошири"
 
@@ -546,23 +562,23 @@ msgstr "Веома велико"
 msgid "Failed to add account"
 msgstr "Додавање налога није успело"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:84
 msgid "Failed to create game"
 msgstr "Креирање игре није успело"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:649
 msgid "Failed to create rematch"
 msgstr "Креирање реванша није успело"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:624
 msgid "Failed to delete game"
 msgstr "Брисање игре није успело"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to exchange"
 msgstr "Размена није успела"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:327
 msgid "Failed to pass"
 msgstr "Прескакање није успело"
 
@@ -570,12 +586,12 @@ msgstr "Прескакање није успело"
 msgid "Failed to remove account"
 msgstr "Уклањање налога није успело"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:344
 msgid "Failed to resign"
 msgstr "Предаја није успела"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:923
+#: src/features/words/index.tsx:956
 msgid "Failed to send"
 msgstr "Слање није успело"
 
@@ -583,7 +599,7 @@ msgstr "Слање није успело"
 msgid "Failed to send verification code"
 msgstr "Слање кода за верификацију није успело"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to submit move"
 msgstr "Подношење потеза није успело"
 
@@ -624,11 +640,11 @@ msgstr "Из теме"
 msgid "Full layout"
 msgstr "Пуни распоред"
 
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:83
 msgid "Game created"
 msgstr "Игра креирана"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:623
 msgid "Game deleted"
 msgstr "Игра обрисана"
 
@@ -698,7 +714,7 @@ msgstr "Унутрашње"
 msgid "Interests"
 msgstr "Интересовања"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:177
 msgid "Invalid move"
 msgstr "Неважећи потез"
 
@@ -706,7 +722,7 @@ msgstr "Неважећи потез"
 msgid "Invalid verification code"
 msgstr "Неважећи код за верификацију"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:170
 msgid "Language"
 msgstr "Језик"
 
@@ -736,6 +752,10 @@ msgstr "Светло"
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 msgid "Load more"
 msgstr "Учитај још"
+
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
@@ -770,7 +790,7 @@ msgstr "Одјављивање…"
 msgid "Mark all as read"
 msgstr "Означи све као прочитано"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:72
 msgid "Maximum 3 opponents"
 msgstr "Максимално 3 противника"
 
@@ -808,12 +828,12 @@ msgstr "Ново"
 msgid "New game"
 msgstr "Нова игра"
 
-#: src/features/words/components/new-game.tsx:115
+#: src/features/words/components/new-game.tsx:120
 msgid "New Game"
 msgstr "Нова игра"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Следећа слика"
 
@@ -825,11 +845,11 @@ msgstr "Нема конфигурисаних правила приступа. �
 msgid "No connected accounts"
 msgstr "Нема повезаних налога"
 
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:157
 msgid "No friends found"
 msgstr "Нема пронађених пријатеља"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:139
 msgid "No friends yet"
 msgstr "Још нема пријатеља"
 
@@ -901,16 +921,16 @@ msgstr "Упс! Страница није пронађена!"
 msgid "Open account actions"
 msgstr "Отвори акције налога"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Отвори радње"
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:761
 msgid "Open chat panel"
 msgstr "Отвори панел чета"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:769
 msgid "Open game actions"
 msgstr "Отвори акције игре"
 
@@ -946,7 +966,7 @@ msgstr "Друго"
 msgid "Owner"
 msgstr "Власник"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:787
 msgid "Pass"
 msgstr "Прескочи"
 
@@ -974,12 +994,12 @@ msgstr "Игра са {playerCount} играча"
 msgid "Please check your internet connection and try again."
 msgstr "Проверите интернет везу и покушајте поново."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:68
 msgid "Please select at least one friend"
 msgstr "Молимо изаберите бар једног пријатеља"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Претходна слика"
 
@@ -1006,7 +1026,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Поново региструјте своје приступне кључеве на овом серверу"
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:883
 msgid "Recall"
 msgstr "Опозови"
 
@@ -1032,9 +1052,13 @@ msgstr "Релативно (5м, 3ч, 2д)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Релативно у оквиру 24 сата, иначе апсолутно"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:812
 msgid "Rematch"
 msgstr "Реванш"
+
+#: src/features/words/index.tsx:647
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1068,16 +1092,16 @@ msgstr "Ресетуј"
 msgid "Reset all settings to default values"
 msgstr "Ресетуј сва подешавања на подразумеване вредности"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:803
+#: src/features/words/index.tsx:977
 msgid "Resign"
 msgstr "Предај се"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:968
 msgid "Resign game?"
 msgstr "Предати игру?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:974
 msgid "Resigning..."
 msgstr "Предавање..."
 
@@ -1144,7 +1168,7 @@ msgstr "Изабери правило приступа"
 msgid "Select account type"
 msgstr "Изабери тип налога"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:156
 msgid "Select friends..."
 msgstr "Изабери пријатеље..."
 
@@ -1219,7 +1243,7 @@ msgstr "Прикажи лозинку"
 msgid "Showing {totalShown} of {total}"
 msgstr "Приказ {totalShown} од {total}"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:779
 msgid "Shuffle rack"
 msgstr "Промешај полицу"
 
@@ -1251,11 +1275,11 @@ msgstr "Мало"
 msgid "Spacious"
 msgstr "Простран"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:123
 msgid "Start a new Words game"
 msgstr "Започни нову Words партију"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:202
 msgid "Start game"
 msgstr "Започни игру"
 
@@ -1268,7 +1292,7 @@ msgid "Subject"
 msgstr "Тема"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:891
 msgid "Submit"
 msgstr "Пошаљи"
 
@@ -1325,10 +1349,10 @@ msgstr "Прикажи колоне"
 msgid "Toggle right panel"
 msgstr "Пребаци десни панел"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Прикажи/сакриј одељак"
 
@@ -1478,9 +1502,9 @@ msgstr "Веб-сајт је на одржавању!"
 msgid "Wednesday"
 msgstr "Среда"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:82
+#: src/features/words/index.tsx:687
+#: src/features/words/index.tsx:699
 msgid "Words"
 msgstr "Words"
 

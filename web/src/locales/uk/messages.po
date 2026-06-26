@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:164
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# гравець} few {# гравці} many {# гравців} other {# гравця}}"
 
@@ -118,11 +118,11 @@ msgstr "Додати обліковий запис"
 msgid "Add an account to receive notifications and use services."
 msgstr "Додайте обліковий запис, щоб отримувати сповіщення та користуватися сервісами."
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:147
 msgid "Add friends"
 msgstr "Додати друзів"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends in the People app to start playing"
 msgstr "Додайте друзів у застосунку People, щоб почати грати"
 
@@ -171,7 +171,7 @@ msgstr "Сталася неочікувана помилка"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ви впевнені, що хочете вийти? Вам доведеться увійти знову, щоб отримати доступ до облікового запису."
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:969
 msgid "Are you sure you want to resign?"
 msgstr "Ви впевнені, що хочете здатися?"
 
@@ -216,13 +216,13 @@ msgstr "Підвищити інтерес"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/components/new-game.tsx:194
+#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:1021
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Cancel exchange"
 msgstr "Скасувати обмін"
 
@@ -235,8 +235,8 @@ msgstr "Категорія цього сповіщення"
 msgid "Change notification category"
 msgstr "Змінити категорію сповіщення"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Chat"
 msgstr "Чат"
 
@@ -244,7 +244,7 @@ msgstr "Чат"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Виберіть гру на бічній панелі або почніть нову."
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1005
 msgid "Choose a letter"
 msgstr "Виберіть літеру"
 
@@ -269,7 +269,7 @@ msgstr "Виберіть між системними налаштуванням�
 msgid "Choose language"
 msgstr "Виберіть мову"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:130
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Виберіть суперників <0>(1-3)</0>"
 
@@ -300,8 +300,8 @@ msgid "Clear selection (Escape)"
 msgstr "Очистити вибір (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Закрити"
@@ -322,8 +322,8 @@ msgstr "Закрити пошук"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Згорнути"
 
@@ -393,7 +393,15 @@ msgstr "Не вдалося розпочати повторну автентиф
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Не вдалося підтвердити за допомогою цього облікового запису. Спробуйте ще раз."
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:82
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/words/index.tsx:646
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/words/components/new-game.tsx:202
 msgid "Creating..."
 msgstr "Створення..."
 
@@ -422,13 +430,17 @@ msgstr "За замовчуванням"
 msgid "Default AI account"
 msgstr "AI-обліковий запис за замовчуванням"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:815
 msgid "Delete game"
 msgstr "Видалити гру"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Видаліть свій обліковий запис на старому сервері"
+
+#: src/features/words/index.tsx:622
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -466,10 +478,14 @@ msgstr "Закрити"
 msgid "Displays the mobile sidebar."
 msgstr "Відображає мобільну бічну панель."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Завантажити"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -493,11 +509,11 @@ msgstr "Порожня клітинка {0}{1}"
 msgid "Empty tile slot"
 msgstr "Порожнє місце для фішки"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:34
 msgid "English (UK)"
 msgstr "Англійська (Велика Британія)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:35
 msgid "English (US)"
 msgstr "Англійська (США)"
 
@@ -510,12 +526,12 @@ msgid "Enter your authenticator code"
 msgstr "Введіть код з програми автентифікації"
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange"
 msgstr "Обмін"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange ({0})"
 msgstr "Обмін ({0})"
 
@@ -523,14 +539,14 @@ msgstr "Обмін ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Обмін ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Exchange tiles"
 msgstr "Обміняти фішки"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Розгорнути"
 
@@ -546,23 +562,23 @@ msgstr "Дуже великий"
 msgid "Failed to add account"
 msgstr "Не вдалося додати обліковий запис"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:84
 msgid "Failed to create game"
 msgstr "Не вдалося створити гру"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:649
 msgid "Failed to create rematch"
 msgstr "Не вдалося створити реванш"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:624
 msgid "Failed to delete game"
 msgstr "Не вдалося видалити гру"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to exchange"
 msgstr "Не вдалося обміняти"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:327
 msgid "Failed to pass"
 msgstr "Не вдалося пропустити"
 
@@ -570,12 +586,12 @@ msgstr "Не вдалося пропустити"
 msgid "Failed to remove account"
 msgstr "Не вдалося видалити обліковий запис"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:344
 msgid "Failed to resign"
 msgstr "Не вдалося здатися"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:923
+#: src/features/words/index.tsx:956
 msgid "Failed to send"
 msgstr "Не вдалося надіслати"
 
@@ -583,7 +599,7 @@ msgstr "Не вдалося надіслати"
 msgid "Failed to send verification code"
 msgstr "Не вдалося надіслати код підтвердження"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to submit move"
 msgstr "Не вдалося подати хід"
 
@@ -624,11 +640,11 @@ msgstr "З теми"
 msgid "Full layout"
 msgstr "Повний макет"
 
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:83
 msgid "Game created"
 msgstr "Гру створено"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:623
 msgid "Game deleted"
 msgstr "Гру видалено"
 
@@ -698,7 +714,7 @@ msgstr "Вставлений"
 msgid "Interests"
 msgstr "Інтереси"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:177
 msgid "Invalid move"
 msgstr "Недійсний хід"
 
@@ -706,7 +722,7 @@ msgstr "Недійсний хід"
 msgid "Invalid verification code"
 msgstr "Недійсний код підтвердження"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:170
 msgid "Language"
 msgstr "Мова"
 
@@ -736,6 +752,10 @@ msgstr "Світла"
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 msgid "Load more"
 msgstr "Завантажити більше"
+
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
@@ -770,7 +790,7 @@ msgstr "Виконується вихід…"
 msgid "Mark all as read"
 msgstr "Позначити все як прочитане"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:72
 msgid "Maximum 3 opponents"
 msgstr "Максимум 3 суперники"
 
@@ -808,12 +828,12 @@ msgstr "Нове"
 msgid "New game"
 msgstr "Нова гра"
 
-#: src/features/words/components/new-game.tsx:115
+#: src/features/words/components/new-game.tsx:120
 msgid "New Game"
 msgstr "Нова гра"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Наступне зображення"
 
@@ -825,11 +845,11 @@ msgstr "Правила доступу не налаштовано. Додайт�
 msgid "No connected accounts"
 msgstr "Немає підключених облікових записів"
 
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:157
 msgid "No friends found"
 msgstr "Друзів не знайдено"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:139
 msgid "No friends yet"
 msgstr "Друзів ще немає"
 
@@ -901,16 +921,16 @@ msgstr "Ой! Сторінку не знайдено!"
 msgid "Open account actions"
 msgstr "Відкрити дії з обліковим записом"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Відкрити дії"
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:761
 msgid "Open chat panel"
 msgstr "Відкрити панель чату"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:769
 msgid "Open game actions"
 msgstr "Відкрити дії гри"
 
@@ -946,7 +966,7 @@ msgstr "Інше"
 msgid "Owner"
 msgstr "Власник"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:787
 msgid "Pass"
 msgstr "Пас"
 
@@ -974,12 +994,12 @@ msgstr "Гра з {playerCount} гравцями"
 msgid "Please check your internet connection and try again."
 msgstr "Будь ласка, перевірте підключення до Інтернету та спробуйте ще раз."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:68
 msgid "Please select at least one friend"
 msgstr "Будь ласка, виберіть принаймні одного друга"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Попереднє зображення"
 
@@ -1006,7 +1026,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Зареєструйте свої ключі доступу на цьому сервері знову"
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:883
 msgid "Recall"
 msgstr "Відкликати"
 
@@ -1032,9 +1052,13 @@ msgstr "Відносний (5хв, 3год, 2д)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Відносний протягом 24 годин, інакше абсолютний"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:812
 msgid "Rematch"
 msgstr "Реванш"
+
+#: src/features/words/index.tsx:647
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1068,16 +1092,16 @@ msgstr "Скинути"
 msgid "Reset all settings to default values"
 msgstr "Скинути всі налаштування до значень за замовчуванням"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:803
+#: src/features/words/index.tsx:977
 msgid "Resign"
 msgstr "Здатися"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:968
 msgid "Resign game?"
 msgstr "Здатися у грі?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:974
 msgid "Resigning..."
 msgstr "Здача..."
 
@@ -1144,7 +1168,7 @@ msgstr "Виберіть правило доступу"
 msgid "Select account type"
 msgstr "Виберіть тип облікового запису"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:156
 msgid "Select friends..."
 msgstr "Виберіть друзів..."
 
@@ -1219,7 +1243,7 @@ msgstr "Показати пароль"
 msgid "Showing {totalShown} of {total}"
 msgstr "Показано {totalShown} з {total}"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:779
 msgid "Shuffle rack"
 msgstr "Перемішати стійку"
 
@@ -1251,11 +1275,11 @@ msgstr "Малий"
 msgid "Spacious"
 msgstr "Просторий"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:123
 msgid "Start a new Words game"
 msgstr "Почати нову гру в Слова"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:202
 msgid "Start game"
 msgstr "Почати гру"
 
@@ -1268,7 +1292,7 @@ msgid "Subject"
 msgstr "Тема"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:891
 msgid "Submit"
 msgstr "Надіслати"
 
@@ -1325,10 +1349,10 @@ msgstr "Перемкнути стовпці"
 msgid "Toggle right panel"
 msgstr "Перемкнути праву панель"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Розгорнути/згорнути розділ"
 
@@ -1478,9 +1502,9 @@ msgstr "Вебсайт на технічному обслуговуванні!"
 msgid "Wednesday"
 msgstr "Середа"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:82
+#: src/features/words/index.tsx:687
+#: src/features/words/index.tsx:699
 msgid "Words"
 msgstr "Слова"
 

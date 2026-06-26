@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:164
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {jokalari #} other {# jokalari}}"
 
@@ -118,11 +118,11 @@ msgstr "Gehitu kontua"
 msgid "Add an account to receive notifications and use services."
 msgstr "Gehitu kontu bat jakinarazpenak jasotzeko eta zerbitzuak erabiltzeko."
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:147
 msgid "Add friends"
 msgstr "Gehitu lagunak"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends in the People app to start playing"
 msgstr "Gehitu lagunak Pertsonak aplikazioan jokatzen hasteko"
 
@@ -171,7 +171,7 @@ msgstr "Ustekabeko errore bat gertatu da"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ziur al zaude saioa amaitu nahi duzula? Berriro hasi beharko duzu saioa zure kontura sartzeko."
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:969
 msgid "Are you sure you want to resign?"
 msgstr "Ziur al zaude amore eman nahi duzula?"
 
@@ -216,13 +216,13 @@ msgstr "Bultzatu interesa"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/components/new-game.tsx:194
+#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:1021
 msgid "Cancel"
 msgstr "Utzi"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Cancel exchange"
 msgstr "Utzi trukea"
 
@@ -235,8 +235,8 @@ msgstr "Jakinarazpen honentzako kategoria"
 msgid "Change notification category"
 msgstr "Aldatu jakinarazpen kategoria"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:907
+#: src/features/words/index.tsx:940
 msgid "Chat"
 msgstr "Txata"
 
@@ -244,7 +244,7 @@ msgstr "Txata"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Aukeratu joko bat alboko barratik edo hasi berri bat."
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1005
 msgid "Choose a letter"
 msgstr "Aukeratu letra bat"
 
@@ -269,7 +269,7 @@ msgstr "Aukeratu sistemaren lehentasunaren, modu argiaren edo modu ilunaren arte
 msgid "Choose language"
 msgstr "Aukeratu hizkuntza"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:130
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Aukeratu aurkariak <0>(1-3)</0>"
 
@@ -300,8 +300,8 @@ msgid "Clear selection (Escape)"
 msgstr "Garbitu hautapena (Ihes)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Itxi"
@@ -322,8 +322,8 @@ msgstr "Itxi bilaketa"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Tolestu"
 
@@ -393,7 +393,15 @@ msgstr "Ezin izan da berrautentifikazioa hasi. Saiatu berriro."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ezin izan da kontu horrekin egiaztatu. Saiatu berriro."
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:82
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/words/index.tsx:646
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/words/components/new-game.tsx:202
 msgid "Creating..."
 msgstr "Sortzen..."
 
@@ -422,13 +430,17 @@ msgstr "Lehenetsia"
 msgid "Default AI account"
 msgstr "Lehenetsitako AA kontua"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:815
 msgid "Delete game"
 msgstr "Ezabatu jokoa"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Ezabatu zure kontua zerbitzari zaharrean"
+
+#: src/features/words/index.tsx:622
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -466,10 +478,14 @@ msgstr "Baztertu"
 msgid "Displays the mobile sidebar."
 msgstr "Mugikorraren alboko barra erakusten du."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Deskargatu"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -493,11 +509,11 @@ msgstr "Lauki hutsa {0}{1}"
 msgid "Empty tile slot"
 msgstr "Fitxa-zirrikitu hutsa"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:34
 msgid "English (UK)"
 msgstr "Ingelesa (Erresuma Batua)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:35
 msgid "English (US)"
 msgstr "Ingelesa (AEB)"
 
@@ -510,12 +526,12 @@ msgid "Enter your authenticator code"
 msgstr "Sartu zure autentifikazio-aplikazioaren kodea"
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange"
 msgstr "Trukatu"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:877
 msgid "Exchange ({0})"
 msgstr "Trukatu ({0})"
 
@@ -523,14 +539,14 @@ msgstr "Trukatu ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Trukatu ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:799
 msgid "Exchange tiles"
 msgstr "Trukatu fitxak"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Zabaldu"
 
@@ -546,23 +562,23 @@ msgstr "Oso handia"
 msgid "Failed to add account"
 msgstr "Ezin izan da kontua gehitu"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:84
 msgid "Failed to create game"
 msgstr "Ezin izan da jokoa sortu"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:649
 msgid "Failed to create rematch"
 msgstr "Ezin izan da errebantxa sortu"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:624
 msgid "Failed to delete game"
 msgstr "Ezin izan da jokoa ezabatu"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:337
 msgid "Failed to exchange"
 msgstr "Ezin izan da trukatu"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:327
 msgid "Failed to pass"
 msgstr "Ezin izan da pasatu"
 
@@ -570,12 +586,12 @@ msgstr "Ezin izan da pasatu"
 msgid "Failed to remove account"
 msgstr "Ezin izan da kontua kendu"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:344
 msgid "Failed to resign"
 msgstr "Ezin izan da amore eman"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:923
+#: src/features/words/index.tsx:956
 msgid "Failed to send"
 msgstr "Ezin izan da bidali"
 
@@ -583,7 +599,7 @@ msgstr "Ezin izan da bidali"
 msgid "Failed to send verification code"
 msgstr "Ezin izan da egiaztapen-kodea bidali"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:321
 msgid "Failed to submit move"
 msgstr "Ezin izan da mugimendua bidali"
 
@@ -624,11 +640,11 @@ msgstr "Gaiatik"
 msgid "Full layout"
 msgstr "Diseinu osoa"
 
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:83
 msgid "Game created"
 msgstr "Jokoa sortuta"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:623
 msgid "Game deleted"
 msgstr "Jokoa ezabatuta"
 
@@ -698,7 +714,7 @@ msgstr "Sartzea"
 msgid "Interests"
 msgstr "Interesak"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:177
 msgid "Invalid move"
 msgstr "Mugimendu baliogabea"
 
@@ -706,7 +722,7 @@ msgstr "Mugimendu baliogabea"
 msgid "Invalid verification code"
 msgstr "Egiaztapen-kode baliogabea"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:170
 msgid "Language"
 msgstr "Hizkuntza"
 
@@ -736,6 +752,10 @@ msgstr "Argia"
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 msgid "Load more"
 msgstr "Kargatu gehiago"
+
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
@@ -770,7 +790,7 @@ msgstr "Saioa amaitzen…"
 msgid "Mark all as read"
 msgstr "Markatu denak irakurritzat"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:72
 msgid "Maximum 3 opponents"
 msgstr "Gehienez 3 aurkari"
 
@@ -808,12 +828,12 @@ msgstr "Berria"
 msgid "New game"
 msgstr "Joko berria"
 
-#: src/features/words/components/new-game.tsx:115
+#: src/features/words/components/new-game.tsx:120
 msgid "New Game"
 msgstr "Joko berria"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Hurrengo irudia"
 
@@ -825,11 +845,11 @@ msgstr "Ez da sarbide-araurik konfiguratu. Gehitu arauak baliabide honetara nork
 msgid "No connected accounts"
 msgstr "Konektatutako konturik ez"
 
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:157
 msgid "No friends found"
 msgstr "Ez da lagunik aurkitu"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:139
 msgid "No friends yet"
 msgstr "Oraindik lagunik ez"
 
@@ -901,16 +921,16 @@ msgstr "Hutsegitea! Ez da orria aurkitu!"
 msgid "Open account actions"
 msgstr "Ireki kontuaren ekintzak"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Ireki ekintzak"
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:761
 msgid "Open chat panel"
 msgstr "Ireki txat-panela"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:769
 msgid "Open game actions"
 msgstr "Ireki joko-ekintzak"
 
@@ -946,7 +966,7 @@ msgstr "Bestelakoa"
 msgid "Owner"
 msgstr "Jabea"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:787
 msgid "Pass"
 msgstr "Pasa"
 
@@ -974,12 +994,12 @@ msgstr "{playerCount} jokalarirekin jokatzen"
 msgid "Please check your internet connection and try again."
 msgstr "Egiaztatu zure interneteko konexioa eta saiatu berriro."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:68
 msgid "Please select at least one friend"
 msgstr "Mesedez hautatu lagun bat gutxienez"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Aurreko irudia"
 
@@ -1006,7 +1026,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Erregistratu berriro zure sarbide-gakoak zerbitzari honetan"
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:883
 msgid "Recall"
 msgstr "Atzera deitu"
 
@@ -1032,9 +1052,13 @@ msgstr "Erlatiboa (5m, 3o, 2e)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Erlatiboa 24 ordu barruan, bestela absolutua"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:812
 msgid "Rematch"
 msgstr "Itzulketa-partida"
+
+#: src/features/words/index.tsx:647
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1068,16 +1092,16 @@ msgstr "Berrezarri"
 msgid "Reset all settings to default values"
 msgstr "Berrezarri ezarpen guztiak balio lehenetsietara"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:803
+#: src/features/words/index.tsx:977
 msgid "Resign"
 msgstr "Amore eman"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:968
 msgid "Resign game?"
 msgstr "Jokoan amore eman?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:974
 msgid "Resigning..."
 msgstr "Amore ematen..."
 
@@ -1144,7 +1168,7 @@ msgstr "Hautatu sarbide-araua"
 msgid "Select account type"
 msgstr "Hautatu kontu mota"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:156
 msgid "Select friends..."
 msgstr "Hautatu lagunak..."
 
@@ -1219,7 +1243,7 @@ msgstr "Erakutsi pasahitza"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total}etik {totalShown} erakusten"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:779
 msgid "Shuffle rack"
 msgstr "Nahastu apala"
 
@@ -1251,11 +1275,11 @@ msgstr "Txikia"
 msgid "Spacious"
 msgstr "Lasaia"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:123
 msgid "Start a new Words game"
 msgstr "Hasi Words partida berria"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:202
 msgid "Start game"
 msgstr "Hasi partida"
 
@@ -1268,7 +1292,7 @@ msgid "Subject"
 msgstr "Gaia"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:891
 msgid "Submit"
 msgstr "Bidali"
 
@@ -1325,10 +1349,10 @@ msgstr "Txandakatu zutabeak"
 msgid "Toggle right panel"
 msgstr "Aldatu eskuineko panela"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Txandakatu atala"
 
@@ -1478,9 +1502,9 @@ msgstr "Webgunea mantentze-lanetan dago!"
 msgid "Wednesday"
 msgstr "Asteazkena"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:82
+#: src/features/words/index.tsx:687
+#: src/features/words/index.tsx:699
 msgid "Words"
 msgstr "Words"
 

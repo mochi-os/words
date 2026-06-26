@@ -20,6 +20,7 @@ import {
   IconButton,
   getErrorMessage,
   toast,
+  toastAction,
   AlertDialog,
   AlertDialogCancel,
   AlertDialogContent,
@@ -344,24 +345,9 @@ export function WordsGameView() {
     },
   })
 
-  const rematchMutation = useCreateGameMutation({
-    onSuccess: (data) => {
-      void navigate({ to: '/$gameId', params: { gameId: data.id } })
-    },
-    onError: (error) => {
-      toast.error(getErrorMessage(error, t`Failed to create rematch`))
-    },
-  })
+  const rematchMutation = useCreateGameMutation()
 
-  const deleteGameMutation = useDeleteGameMutation({
-    onSuccess: () => {
-      toast.success(t`Game deleted`)
-      void navigate({ to: '/' })
-    },
-    onError: (error) => {
-      toast.error(getErrorMessage(error, t`Failed to delete game`))
-    },
-  })
+  const deleteGameMutation = useDeleteGameMutation()
 
   // WebSocket
   const { status, retries } = useGameWebsocket(
@@ -627,12 +613,24 @@ export function WordsGameView() {
     resignMutation.mutate({ gameId: selectedGame.id })
   }
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     if (!selectedGame) return
-    deleteGameMutation.mutate({ gameId: selectedGame.id })
+    try {
+      await toastAction(
+        deleteGameMutation.mutateAsync({ gameId: selectedGame.id }),
+        {
+          loading: t`Deleting game...`,
+          success: t`Game deleted`,
+          error: (error) => getErrorMessage(error, t`Failed to delete game`),
+        }
+      )
+      void navigate({ to: '/' })
+    } catch {
+      // toastAction already showed error
+    }
   }
 
-  const handleRematch = () => {
+  const handleRematch = async () => {
     if (!game || !myIdentity) return
     const opponents: string[] = []
     for (let i = 1; i <= game.player_count; i++) {
@@ -641,7 +639,20 @@ export function WordsGameView() {
         opponents.push(pid)
       }
     }
-    rematchMutation.mutate({ opponents, language: game.language })
+    try {
+      const data = await toastAction(
+        rematchMutation.mutateAsync({ opponents, language: game.language }),
+        {
+          loading: t`Creating rematch...`,
+          success: t`Rematch created`,
+          error: (error) =>
+            getErrorMessage(error, t`Failed to create rematch`),
+        }
+      )
+      void navigate({ to: '/$gameId', params: { gameId: data.id } })
+    } catch {
+      // toastAction already showed error
+    }
   }
 
   const moveComposerSection = game?.status === 'active' && (pendingPlacements.length > 0 || exchangeMode) ? (
