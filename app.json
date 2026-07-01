@@ -17,7 +17,8 @@
 		"schema": 3,
 		"file": "words.db",
 		"create": {"function": "database_create"},
-		"upgrade": {"function": "database_upgrade"}
+		"upgrade": {"function": "database_upgrade"},
+		"replicate": {"exclude": {"tables": ["dictionary"]}}
 	},
 
 	"icons": [
