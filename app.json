@@ -4,7 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 {
-	"version": "1.61",
+	"version": "1.62",
 	"label": "app.name",
 	"classes": ["game"],
 	"paths": ["words"],
@@ -17,8 +17,7 @@
 		"schema": 3,
 		"file": "words.db",
 		"create": {"function": "database_create"},
-		"upgrade": {"function": "database_upgrade"},
-		"replicate": {"exclude": {"tables": ["dictionary"]}}
+		"upgrade": {"function": "database_upgrade"}
 	},
 
 	"icons": [
