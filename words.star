@@ -184,17 +184,6 @@ def database_create():
 	load_dictionary("en_US", "dictionaries/en_US.txt")
 	load_dictionary("en_UK", "dictionaries/en_UK.txt")
 
-def database_upgrade(to_version):
-	pass
-
-# Stream an entity's asset from its owning service via a Mochi stream.
-# Location-transparent: mochi.remote.stream() loops back in-process when the
-# entity lives on this server, or goes over P2P otherwise.
-	if to_version == 4:
-		# Schema alignment for the baseline squash: heal tables/indexes that
-		# create gained over time without matching migrations. database_create
-		# is fully if-not-exists so it doubles as the healer.
-		database_create()
 def stream_asset(a, entity_id, service, asset):
 	if not entity_id:
 		a.error.label(404, "errors.asset_unavailable", asset=asset)
