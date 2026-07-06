@@ -69,6 +69,10 @@ msgstr "24 часа"
 msgid "Absolute (date and time)"
 msgstr "Апсолутно (датум и време)"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Пристапот е одбиен"
+
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
 msgstr "Пристапот е забранет"
@@ -163,7 +167,7 @@ msgstr "Сите"
 msgid "An error occurred"
 msgstr "Се појави грешка"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Се појави неочекувана грешка"
 
@@ -226,12 +230,12 @@ msgstr "Откажи"
 msgid "Cancel exchange"
 msgstr "Откажи размена"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Категорија за ова известување"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Промени категорија на известување"
 
@@ -414,6 +418,10 @@ msgstr "Темна"
 msgid "Dark mode"
 msgstr "Темен режим"
 
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Конфликт на податоци"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
 msgstr "Стандардно"
@@ -591,7 +599,7 @@ msgstr "Неуспешно испраќање на код за верифика�
 msgid "Failed to submit move"
 msgstr "Неуспешно поднесување на потег"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Неуспешно ажурирање на категорија"
 
@@ -802,7 +810,8 @@ msgstr "Metric"
 msgid "Monday"
 msgstr "Понеделник"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Грешка во мрежата"
 
@@ -870,7 +879,7 @@ msgstr "Не се пронајдени резултати."
 msgid "No time zone found."
 msgstr "Не е пронајдена временска зона."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Сè уште нема запис за темата — обидете се повторно по следното известување."
 
@@ -887,6 +896,10 @@ msgstr "Ништо"
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Normal"
 msgstr "Нормално"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Не е пронајдено"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -978,13 +991,23 @@ msgstr "Играч {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Игра со {playerCount} играчи"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Проверете ја вашата интернет-врска и обидете се повторно."
 
 #: src/features/words/components/new-game.tsx:78
 msgid "Please select at least one friend"
 msgstr "Изберете најмалку еден пријател"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Обидете се повторно."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Почекајте момент и обидете се повторно."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1018,8 +1041,8 @@ msgstr "Повторно регистрирајте ги вашите клуче
 msgid "Recall"
 msgstr "Повлечи"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Препорачано"
 
@@ -1130,8 +1153,8 @@ msgstr "Пребарај корисници"
 msgid "Search..."
 msgstr "Пребарувај..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Пребарување..."
@@ -1193,8 +1216,8 @@ msgstr "Испрати порака"
 msgid "Serif"
 msgstr "Сериф"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Грешка на серверот"
 
@@ -1203,9 +1226,9 @@ msgstr "Грешка на серверот"
 msgid "Server rules"
 msgstr "Правила на серверот"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Сесијата истече"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Сесијата истече. Најавете се повторно."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1312,6 +1335,10 @@ msgstr "Услови и одредби"
 msgid "That code is incorrect or has expired."
 msgstr "Тој код е неточен или е истечен."
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Бараната содржина не е пронајдена."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Тема"
@@ -1355,6 +1382,10 @@ msgstr "Префрли странична лента"
 msgid "Toggle theme"
 msgstr "Префрли тема"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Премногу барања"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Врв"
@@ -1363,13 +1394,13 @@ msgstr "Врв"
 msgid "Travelling"
 msgstr "Патување"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Обидете се да ги прилагодите термините за пребарување"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Обидете се повторно"
@@ -1394,7 +1425,7 @@ msgstr "Внесете за да пребарувате корисници"
 msgid "Type to search..."
 msgstr "Внесете за пребарување..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Не може да се поврзе со далечинскиот сервер"
 
@@ -1403,7 +1434,7 @@ msgstr "Не може да се поврзе со далечинскиот се�
 msgid "Unable to redirect to login. Please try again."
 msgstr "Не може да се пренасочи кон најавата. Обидете се повторно."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Недоделено"
 
@@ -1501,6 +1532,10 @@ msgstr "Формирани зборови"
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Вие"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Немате пристап до овој дел."
 
 #: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
