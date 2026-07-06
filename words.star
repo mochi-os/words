@@ -1012,7 +1012,14 @@ def event_move(e):
 		new_score = game["player" + str(player_number) + "_score"] + score
 
 	status = e.content("status") or "active"
+	if status not in ["active", "finished", "resigned"]:
+		status = "active"
 	winner = e.content("winner") or None
+	# Clamp winner to an actual player of this game - a player must not be able
+	# to declare an arbitrary entity the winner (matches chess/go).
+	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
+	if winner and winner not in players:
+		winner = None
 	body = e.content("body") or ""
 	name = e.content("name") or "Opponent"
 
@@ -1199,6 +1206,9 @@ def event_resign(e):
 		return
 
 	winner = e.content("winner") or None
+	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
+	if winner and winner not in players:
+		winner = None
 	body = e.content("body") or "Opponent resigned"
 
 	now = mochi.time.now()
