@@ -39,6 +39,23 @@ export const gameKeys = {
   newGame: () => ['games', 'new'] as const,
 }
 
+// Games this window has just sent a move for, so the websocket echo of our
+// own move can be told apart from the same move arriving in another window
+// of the same user, which still needs the refetch the mutation did here.
+const echoes = new Map<string, number>()
+const ECHO_LIFETIME = 15_000
+
+export const expectEcho = (gameId: string) => {
+  echoes.set(gameId, Date.now())
+}
+
+export const consumeEcho = (gameId: string): boolean => {
+  const sent = echoes.get(gameId)
+  if (sent === undefined) return false
+  echoes.delete(gameId)
+  return Date.now() - sent < ECHO_LIFETIME
+}
+
 const WORD_VALIDATION_STALE_TIME = 10 * 60 * 1000
 
 export const wordValidationKeys = {
@@ -196,7 +213,10 @@ export const useMoveMutation = (
   const queryClient = useQueryClient()
   const { onSuccess, ...restOptions } = options ?? {}
   return useMutation({
-    mutationFn: ({ gameId, ...payload }) => gamesApi.move(gameId, payload),
+    mutationFn: ({ gameId, ...payload }) => {
+      expectEcho(gameId)
+      return gamesApi.move(gameId, payload)
+    },
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.messages(variables.gameId),
@@ -222,7 +242,10 @@ export const usePassMutation = (
   const queryClient = useQueryClient()
   const { onSuccess, ...restOptions } = options ?? {}
   return useMutation({
-    mutationFn: ({ gameId }) => gamesApi.pass(gameId),
+    mutationFn: ({ gameId }) => {
+      expectEcho(gameId)
+      return gamesApi.pass(gameId)
+    },
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.messages(variables.gameId),
@@ -248,7 +271,10 @@ export const useExchangeMutation = (
   const queryClient = useQueryClient()
   const { onSuccess, ...restOptions } = options ?? {}
   return useMutation({
-    mutationFn: ({ gameId, ...payload }) => gamesApi.exchange(gameId, payload),
+    mutationFn: ({ gameId, ...payload }) => {
+      expectEcho(gameId)
+      return gamesApi.exchange(gameId, payload)
+    },
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.messages(variables.gameId),

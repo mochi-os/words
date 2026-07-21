@@ -16,7 +16,7 @@ import {
   type ChatWebsocketMessagePayload,
   type WebsocketConnectionStatus,
 } from '@/lib/websocket-manager'
-import { gameKeys } from '@/hooks/useGames'
+import { gameKeys, consumeEcho } from '@/hooks/useGames'
 import { useWebsocketManager } from '@/hooks/useWebsocketManager'
 
 interface UseGameWebsocketResult {
@@ -106,7 +106,7 @@ const handleWebsocketPayload = (
   // Handle move — refetch detail for updated rack + bag_count (private,
   // not in the payload). Skip our own echo: the move/pass/exchange
   // mutation already invalidated detail, messages, and the list.
-  if (msgType === 'move' && !(myIdentity && payload.member === myIdentity)) {
+  if (msgType === 'move' && !(myIdentity && payload.member === myIdentity && consumeEcho(gameId))) {
     void queryClient.invalidateQueries({
       queryKey: gameKeys.detail(gameId),
       exact: true,
