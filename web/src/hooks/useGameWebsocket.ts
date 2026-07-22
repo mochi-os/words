@@ -10,12 +10,13 @@ import {
   type InfiniteData,
 } from '@tanstack/react-query'
 import { useLingui } from '@lingui/react/macro'
-import type { GameMessage, GetMessagesResponse } from '@/api/games'
+import { useAuthStore } from '@mochi/web'
+import type { GameMessage, GetMessagesResponse, GameViewResponse, GetGamesResponse } from '@/api/games'
 import {
   type ChatWebsocketMessagePayload,
   type WebsocketConnectionStatus,
 } from '@/lib/websocket-manager'
-import { gameKeys } from '@/hooks/useGames'
+import { gameKeys, consumeEcho } from '@/hooks/useGames'
 import { useWebsocketManager } from '@/hooks/useWebsocketManager'
 
 interface UseGameWebsocketResult {
@@ -62,23 +63,55 @@ const handleWebsocketPayload = (
   payload: ChatWebsocketMessagePayload,
   queryClient: QueryClient,
   unknownSenderLabel: string,
+  myIdentity: string,
 ) => {
   if (!gameId) return
 
   const msgType = payload.type as string | undefined
   const event = payload.event as string | undefined
 
-  // Handle resign event — invalidate all queries
+  // Handle resign — the payload carries the final state, so patch the
+  // caches directly. Invalidating here would refetch view + list a second
+  // time on the actor's side (their mutation already invalidates).
   if (event === 'resign') {
-    void queryClient.invalidateQueries({ queryKey: gameKeys.all() })
-    void queryClient.invalidateQueries({ queryKey: gameKeys.detail(gameId) })
+    const winner =
+      typeof payload.winner === 'string' && payload.winner ? payload.winner : null
+    queryClient.setQueryData<GameViewResponse>(
+      gameKeys.detail(gameId),
+      (current) => {
+        if (!current) return current
+        return {
+          ...current,
+          game: {
+            ...current.game,
+            status: 'resigned' as const,
+            winner: winner ?? current.game.winner,
+          },
+        }
+      }
+    )
+    queryClient.setQueryData<GetGamesResponse>(gameKeys.all(), (current) => {
+      if (!current) return current
+      return {
+        ...current,
+        games: current.games.map((g) =>
+          g.id === gameId
+            ? { ...g, status: 'resigned' as const, winner: winner ?? g.winner }
+            : g
+        ),
+      }
+    })
   }
 
-  // Handle move — update game detail cache with new board/scores/status
-  if (msgType === 'move') {
-    // For moves, we invalidate the detail to get updated rack + bag_count
-    void queryClient.invalidateQueries({ queryKey: gameKeys.detail(gameId) })
-    void queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+  // Handle move — refetch detail for updated rack + bag_count (private,
+  // not in the payload). Skip our own echo: the move/pass/exchange
+  // mutation already invalidated detail, messages, and the list.
+  if (msgType === 'move' && !(myIdentity && payload.member === myIdentity && consumeEcho(gameId))) {
+    void queryClient.invalidateQueries({
+      queryKey: gameKeys.detail(gameId),
+      exact: true,
+    })
+    void queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
   }
 
   // Append message to messages cache for all types (message, move, system)
@@ -126,6 +159,7 @@ export const useGameWebsocket = (
   const unknownSenderLabel = t`Unknown`
   const manager = useWebsocketManager()
   const queryClient = useQueryClient()
+  const { identity: myIdentity } = useAuthStore()
   const [snapshot, setSnapshot] = useState<{
     status: WebsocketConnectionStatus
     retries: number
@@ -142,7 +176,7 @@ export const useGameWebsocket = (
     const unsubscribe = manager.subscribe(gameId, {
       chatKey: gameKey,
       onMessage: (event) => {
-        handleWebsocketPayload(event.chatId, event.payload, queryClient, unknownSenderLabel)
+        handleWebsocketPayload(event.chatId, event.payload, queryClient, unknownSenderLabel, myIdentity)
       },
       onStatusChange: (nextSnapshot) => {
         setSnapshot(nextSnapshot)
@@ -152,7 +186,7 @@ export const useGameWebsocket = (
     return () => {
       unsubscribe()
     }
-  }, [gameId, gameKey, manager, queryClient, unknownSenderLabel])
+  }, [gameId, gameKey, manager, queryClient, unknownSenderLabel, myIdentity])
 
   const forceReconnect = useCallback(() => {
     if (gameId && manager) {
