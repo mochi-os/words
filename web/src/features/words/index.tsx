@@ -361,6 +361,7 @@ export function WordsGameView() {
 
   const deleteGameMutation = useDeleteGameMutation({
     onSuccess: () => {
+      setShowDeleteDialog(false)
       toast.success(t`Game deleted`)
       void navigate({ to: '/' })
     },
@@ -635,7 +636,6 @@ export function WordsGameView() {
 
   const handleDelete = () => {
     if (!selectedGame) return
-    setShowDeleteDialog(false)
     deleteGameMutation.mutate({ gameId: selectedGame.id })
   }
 
