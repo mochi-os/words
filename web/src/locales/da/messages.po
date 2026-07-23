@@ -180,7 +180,7 @@ msgstr "Der opstod en uventet fejl"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Er du sikker på, at du vil logge ud? Du skal logge ind igen for at få adgang til din konto."
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:974
 msgid "Are you sure you want to resign?"
 msgstr "Er du sikker på, at du vil opgive?"
 
@@ -226,12 +226,12 @@ msgstr "Fremhæv interesse"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
 #: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/index.tsx:875
+#: src/features/words/index.tsx:1047
 msgid "Cancel"
 msgstr "Annuller"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:802
 msgid "Cancel exchange"
 msgstr "Annuller bytte"
 
@@ -244,8 +244,8 @@ msgstr "Kategori for denne notifikation"
 msgid "Change notification category"
 msgstr "Skift notifikationskategori"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:944
 msgid "Chat"
 msgstr "Chat"
 
@@ -253,7 +253,7 @@ msgstr "Chat"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Vælg et spil fra sidepanelet, eller start et nyt."
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1031
 msgid "Choose a letter"
 msgstr "Vælg et bogstav"
 
@@ -435,13 +435,25 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Standard AI-konto"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:1003
+msgid "Delete"
+msgstr "Slet"
+
+#: src/features/words/index.tsx:818
 msgid "Delete game"
 msgstr "Slet spil"
+
+#: src/features/words/index.tsx:994
+msgid "Delete game?"
+msgstr "Slet spillet?"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Slet din konto på den gamle server"
+
+#: src/features/words/index.tsx:1000
+msgid "Deleting..."
+msgstr "Sletter..."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -527,12 +539,12 @@ msgid "Enter your authenticator code"
 msgstr "Indtast din autentificeringskode"
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:880
 msgid "Exchange"
 msgstr "Byt"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:880
 msgid "Exchange ({0})"
 msgstr "Byt ({0})"
 
@@ -540,7 +552,7 @@ msgstr "Byt ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Byt ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:802
 msgid "Exchange tiles"
 msgstr "Byt brikker"
 
@@ -567,19 +579,19 @@ msgstr "Kunne ikke tilføje konto"
 msgid "Failed to create game"
 msgstr "Kunne ikke oprette spil"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:358
 msgid "Failed to create rematch"
 msgstr "Kunne ikke oprette omkamp"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:368
 msgid "Failed to delete game"
 msgstr "Kunne ikke slette spil"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:342
 msgid "Failed to exchange"
 msgstr "Kunne ikke bytte"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:332
 msgid "Failed to pass"
 msgstr "Kunne ikke passe"
 
@@ -587,12 +599,12 @@ msgstr "Kunne ikke passe"
 msgid "Failed to remove account"
 msgstr "Kunne ikke fjerne konto"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:349
 msgid "Failed to resign"
 msgstr "Kunne ikke opgive"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:927
+#: src/features/words/index.tsx:961
 msgid "Failed to send"
 msgstr "Kunne ikke sende"
 
@@ -600,7 +612,7 @@ msgstr "Kunne ikke sende"
 msgid "Failed to send verification code"
 msgstr "Kunne ikke sende verifikationskode"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:326
 msgid "Failed to submit move"
 msgstr "Kunne ikke indsende træk"
 
@@ -645,7 +657,7 @@ msgstr "Fuldt layout"
 msgid "Game created"
 msgstr "Spil oprettet"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:364
 msgid "Game deleted"
 msgstr "Spil slettet"
 
@@ -715,7 +727,7 @@ msgstr "Indsat"
 msgid "Interests"
 msgstr "Interesser"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Ugyldigt træk"
 
@@ -924,16 +936,16 @@ msgstr "Ups! Siden blev ikke fundet!"
 msgid "Open account actions"
 msgstr "Åbn kontohandlinger"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "Åbn handlinger"
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:764
 msgid "Open chat panel"
 msgstr "Åbn chatpanel"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:772
 msgid "Open game actions"
 msgstr "Åbn spilhandlinger"
 
@@ -969,7 +981,7 @@ msgstr "Andet"
 msgid "Owner"
 msgstr "Ejer"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:790
 msgid "Pass"
 msgstr "Pas"
 
@@ -1038,7 +1050,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Registrer dine adgangsnøgler på denne server igen"
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:886
 msgid "Recall"
 msgstr "Tilbagekald"
 
@@ -1064,7 +1076,7 @@ msgstr "Relativ (5m, 3t, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativ inden for 24 timer, ellers absolut"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:815
 msgid "Rematch"
 msgstr "Returkamp"
 
@@ -1100,16 +1112,16 @@ msgstr "Nulstil"
 msgid "Reset all settings to default values"
 msgstr "Nulstil alle indstillinger til standardværdier"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:806
+#: src/features/words/index.tsx:982
 msgid "Resign"
 msgstr "Giv op"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:973
 msgid "Resign game?"
 msgstr "Giv op i spillet?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "Giver op..."
 
@@ -1251,7 +1263,7 @@ msgstr "Vis adgangskode"
 msgid "Showing {totalShown} of {total}"
 msgstr "Viser {totalShown} af {total}"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:782
 msgid "Shuffle rack"
 msgstr "Bland holder"
 
@@ -1300,7 +1312,7 @@ msgid "Subject"
 msgstr "Emne"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:894
 msgid "Submit"
 msgstr "Indsend"
 
@@ -1348,6 +1360,10 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temaindstillinger"
 
+#: src/features/words/index.tsx:995
+msgid "This permanently deletes the game and its chat. This cannot be undone."
+msgstr "Dette sletter spillet og dets chat permanent. Dette kan ikke fortrydes."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Torsdag"
@@ -1361,10 +1377,10 @@ msgstr "Skift kolonner"
 msgid "Toggle right panel"
 msgstr "Skift højre panel"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "Skift sektion"
 
@@ -1519,8 +1535,8 @@ msgid "Wednesday"
 msgstr "Onsdag"
 
 #: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:683
+#: src/features/words/index.tsx:695
 msgid "Words"
 msgstr "Ord"
 

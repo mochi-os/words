@@ -180,7 +180,7 @@ msgstr ""
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Er du sikker på at du vil logge ut? Du må logge inn att for å få tilgang til kontoen din."
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:974
 msgid "Are you sure you want to resign?"
 msgstr "Er du sikker på at du vil gje opp?"
 
@@ -226,12 +226,12 @@ msgstr "Auk interesse"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
 #: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/index.tsx:875
+#: src/features/words/index.tsx:1047
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:802
 msgid "Cancel exchange"
 msgstr "Avbryt utveksling"
 
@@ -244,8 +244,8 @@ msgstr "Kategori for dette varselet"
 msgid "Change notification category"
 msgstr "Endre varselkategori"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:944
 msgid "Chat"
 msgstr "Prat"
 
@@ -253,7 +253,7 @@ msgstr "Prat"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Vel eit spel frå sidestolpen eller start eit nytt."
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1031
 msgid "Choose a letter"
 msgstr "Vel ein bokstav"
 
@@ -435,13 +435,25 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Standard KI-konto"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:1003
+msgid "Delete"
+msgstr "Slett"
+
+#: src/features/words/index.tsx:818
 msgid "Delete game"
 msgstr "Slett spel"
+
+#: src/features/words/index.tsx:994
+msgid "Delete game?"
+msgstr "Slette spelet?"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr ""
+
+#: src/features/words/index.tsx:1000
+msgid "Deleting..."
+msgstr "Slettar..."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -527,12 +539,12 @@ msgid "Enter your authenticator code"
 msgstr ""
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:880
 msgid "Exchange"
 msgstr "Byt"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:880
 msgid "Exchange ({0})"
 msgstr "Byt ({0})"
 
@@ -540,7 +552,7 @@ msgstr "Byt ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Byt ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:802
 msgid "Exchange tiles"
 msgstr "Byt brikker"
 
@@ -567,19 +579,19 @@ msgstr "Klarte ikkje leggja til konto"
 msgid "Failed to create game"
 msgstr "Klarte ikkje oppretta spel"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:358
 msgid "Failed to create rematch"
 msgstr "Klarte ikkje oppretta omkamp"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:368
 msgid "Failed to delete game"
 msgstr "Klarte ikkje sletta spel"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:342
 msgid "Failed to exchange"
 msgstr "Klarte ikkje byta"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:332
 msgid "Failed to pass"
 msgstr "Klarte ikkje passa"
 
@@ -587,12 +599,12 @@ msgstr "Klarte ikkje passa"
 msgid "Failed to remove account"
 msgstr "Klarte ikkje fjerna konto"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:349
 msgid "Failed to resign"
 msgstr "Klarte ikkje gje opp"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:927
+#: src/features/words/index.tsx:961
 msgid "Failed to send"
 msgstr "Klarte ikkje senda"
 
@@ -600,7 +612,7 @@ msgstr "Klarte ikkje senda"
 msgid "Failed to send verification code"
 msgstr "Klarte ikkje senda stadfestingskode"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:326
 msgid "Failed to submit move"
 msgstr "Klarte ikkje senda inn trekk"
 
@@ -645,7 +657,7 @@ msgstr "Full layout"
 msgid "Game created"
 msgstr "Spel oppretta"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:364
 msgid "Game deleted"
 msgstr "Spel sletta"
 
@@ -715,7 +727,7 @@ msgstr "Innfelt"
 msgid "Interests"
 msgstr "Interesser"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Ugyldig trekk"
 
@@ -924,16 +936,16 @@ msgstr "Ups! Side ikkje funne!"
 msgid "Open account actions"
 msgstr "Opna kontohandlingar"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr ""
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:764
 msgid "Open chat panel"
 msgstr "Opna pratpanel"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:772
 msgid "Open game actions"
 msgstr "Opna spelhandlingar"
 
@@ -969,7 +981,7 @@ msgstr "Anna"
 msgid "Owner"
 msgstr "Eigar"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:790
 msgid "Pass"
 msgstr "Pasar"
 
@@ -1038,7 +1050,7 @@ msgid "Re-register your passkeys on this server"
 msgstr ""
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:886
 msgid "Recall"
 msgstr "Trekk tilbake"
 
@@ -1064,7 +1076,7 @@ msgstr "Relativ (5m, 3t, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativ innan 24 timar, elles absolutt"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:815
 msgid "Rematch"
 msgstr "Omkamp"
 
@@ -1100,16 +1112,16 @@ msgstr "Tilbakestill"
 msgid "Reset all settings to default values"
 msgstr "Tilbakestill alle innstillingar til standardverdiar"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:806
+#: src/features/words/index.tsx:982
 msgid "Resign"
 msgstr "Gje opp"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:973
 msgid "Resign game?"
 msgstr "Gje opp spelet?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "Gjev opp..."
 
@@ -1251,7 +1263,7 @@ msgstr ""
 msgid "Showing {totalShown} of {total}"
 msgstr "Viser {totalShown} av {total}"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:782
 msgid "Shuffle rack"
 msgstr "Stokk om hylla"
 
@@ -1300,7 +1312,7 @@ msgid "Subject"
 msgstr "Emne"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:894
 msgid "Submit"
 msgstr "Send inn"
 
@@ -1348,6 +1360,10 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temainnstillingar"
 
+#: src/features/words/index.tsx:995
+msgid "This permanently deletes the game and its chat. This cannot be undone."
+msgstr "Dette slettar spelet og praten permanent. Denne handlinga kan ikkje angrast."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Torsdag"
@@ -1361,10 +1377,10 @@ msgstr "Slå kolonner av/på"
 msgid "Toggle right panel"
 msgstr ""
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr ""
 
@@ -1519,8 +1535,8 @@ msgid "Wednesday"
 msgstr "Onsdag"
 
 #: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:683
+#: src/features/words/index.tsx:695
 msgid "Words"
 msgstr "Words"
 

@@ -180,7 +180,7 @@ msgstr "Tapahtui odottamaton virhe"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Haluatko varmasti kirjautua ulos? Sinun täytyy kirjautua uudelleen sisään päästäksesi tilillesi."
 
-#: src/features/words/index.tsx:958
+#: src/features/words/index.tsx:974
 msgid "Are you sure you want to resign?"
 msgstr "Haluatko varmasti luovuttaa?"
 
@@ -226,12 +226,12 @@ msgstr "Korosta kiinnostusta"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
 #: src/features/words/components/move-composer.tsx:145
 #: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:861
-#: src/features/words/index.tsx:1010
+#: src/features/words/index.tsx:875
+#: src/features/words/index.tsx:1047
 msgid "Cancel"
 msgstr "Peruuta"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:802
 msgid "Cancel exchange"
 msgstr "Peruuta vaihto"
 
@@ -244,8 +244,8 @@ msgstr "Tämän ilmoituksen kategoria"
 msgid "Change notification category"
 msgstr "Vaihda ilmoituksen kategoria"
 
-#: src/features/words/index.tsx:896
-#: src/features/words/index.tsx:929
+#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:944
 msgid "Chat"
 msgstr "Chat"
 
@@ -253,7 +253,7 @@ msgstr "Chat"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Valitse peli sivupalkista tai aloita uusi."
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1031
 msgid "Choose a letter"
 msgstr "Valitse kirjain"
 
@@ -435,13 +435,25 @@ msgstr "Oletus"
 msgid "Default AI account"
 msgstr "Oletustekoälytili"
 
-#: src/features/words/index.tsx:804
+#: src/features/words/index.tsx:1003
+msgid "Delete"
+msgstr "Poista"
+
+#: src/features/words/index.tsx:818
 msgid "Delete game"
 msgstr "Poista peli"
+
+#: src/features/words/index.tsx:994
+msgid "Delete game?"
+msgstr "Poistetaanko peli?"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Poista tilisi vanhalta palvelimelta"
+
+#: src/features/words/index.tsx:1000
+msgid "Deleting..."
+msgstr "Poistetaan..."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -527,12 +539,12 @@ msgid "Enter your authenticator code"
 msgstr "Anna todennussovelluksen koodi"
 
 #: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:880
 msgid "Exchange"
 msgstr "Vaihda"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:866
+#: src/features/words/index.tsx:880
 msgid "Exchange ({0})"
 msgstr "Vaihda ({0})"
 
@@ -540,7 +552,7 @@ msgstr "Vaihda ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Vaihda ({exchangeCount})"
 
-#: src/features/words/index.tsx:788
+#: src/features/words/index.tsx:802
 msgid "Exchange tiles"
 msgstr "Vaihda laattoja"
 
@@ -567,19 +579,19 @@ msgstr "Tilin lisääminen epäonnistui"
 msgid "Failed to create game"
 msgstr "Pelin luominen epäonnistui"
 
-#: src/features/words/index.tsx:352
+#: src/features/words/index.tsx:358
 msgid "Failed to create rematch"
 msgstr "Uusintaottelun luominen epäonnistui"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:368
 msgid "Failed to delete game"
 msgstr "Pelin poistaminen epäonnistui"
 
-#: src/features/words/index.tsx:336
+#: src/features/words/index.tsx:342
 msgid "Failed to exchange"
 msgstr "Vaihto epäonnistui"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:332
 msgid "Failed to pass"
 msgstr "Ohittaminen epäonnistui"
 
@@ -587,12 +599,12 @@ msgstr "Ohittaminen epäonnistui"
 msgid "Failed to remove account"
 msgstr "Tilin poisto epäonnistui"
 
-#: src/features/words/index.tsx:343
+#: src/features/words/index.tsx:349
 msgid "Failed to resign"
 msgstr "Luovuttaminen epäonnistui"
 
-#: src/features/words/index.tsx:912
-#: src/features/words/index.tsx:945
+#: src/features/words/index.tsx:927
+#: src/features/words/index.tsx:961
 msgid "Failed to send"
 msgstr "Lähetys epäonnistui"
 
@@ -600,7 +612,7 @@ msgstr "Lähetys epäonnistui"
 msgid "Failed to send verification code"
 msgstr "Vahvistuskoodin lähetys epäonnistui"
 
-#: src/features/words/index.tsx:320
+#: src/features/words/index.tsx:326
 msgid "Failed to submit move"
 msgstr "Siirron lähetys epäonnistui"
 
@@ -645,7 +657,7 @@ msgstr "Täysi asettelu"
 msgid "Game created"
 msgstr "Peli luotu"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:364
 msgid "Game deleted"
 msgstr "Peli poistettu"
 
@@ -715,7 +727,7 @@ msgstr "Sisennetty"
 msgid "Interests"
 msgstr "Kiinnostuksen kohteet"
 
-#: src/features/words/index.tsx:176
+#: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Virheellinen siirto"
 
@@ -924,16 +936,16 @@ msgstr "Hups! Sivua ei löytynyt!"
 msgid "Open account actions"
 msgstr "Avaa tilin toiminnot"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "Avaa toiminnot"
 
-#: src/features/words/index.tsx:750
+#: src/features/words/index.tsx:764
 msgid "Open chat panel"
 msgstr "Avaa keskustelupaneeli"
 
-#: src/features/words/index.tsx:758
+#: src/features/words/index.tsx:772
 msgid "Open game actions"
 msgstr "Avaa pelin toiminnot"
 
@@ -969,7 +981,7 @@ msgstr "Muu"
 msgid "Owner"
 msgstr "Omistaja"
 
-#: src/features/words/index.tsx:776
+#: src/features/words/index.tsx:790
 msgid "Pass"
 msgstr "Passaa"
 
@@ -1038,7 +1050,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "Rekisteröi pääsyavaimesi uudelleen tällä palvelimella"
 
 #: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:872
+#: src/features/words/index.tsx:886
 msgid "Recall"
 msgstr "Peruuta"
 
@@ -1064,7 +1076,7 @@ msgstr "Suhteellinen (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Suhteellinen 24 tunnin sisällä, muuten absoluuttinen"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:815
 msgid "Rematch"
 msgstr "Uusinta"
 
@@ -1100,16 +1112,16 @@ msgstr "Nollaa"
 msgid "Reset all settings to default values"
 msgstr "Palauta kaikki asetukset oletusarvoihin"
 
-#: src/features/words/index.tsx:792
-#: src/features/words/index.tsx:966
+#: src/features/words/index.tsx:806
+#: src/features/words/index.tsx:982
 msgid "Resign"
 msgstr "Luovuta"
 
-#: src/features/words/index.tsx:957
+#: src/features/words/index.tsx:973
 msgid "Resign game?"
 msgstr "Luovutatko pelin?"
 
-#: src/features/words/index.tsx:963
+#: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "Luovutetaan..."
 
@@ -1251,7 +1263,7 @@ msgstr "Näytä salasana"
 msgid "Showing {totalShown} of {total}"
 msgstr "Näytetään {totalShown} / {total}"
 
-#: src/features/words/index.tsx:768
+#: src/features/words/index.tsx:782
 msgid "Shuffle rack"
 msgstr "Sekoita teline"
 
@@ -1300,7 +1312,7 @@ msgid "Subject"
 msgstr "Aihe"
 
 #: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:894
 msgid "Submit"
 msgstr "Lähetä"
 
@@ -1348,6 +1360,10 @@ msgstr "Teema"
 msgid "Theme Settings"
 msgstr "Teema-asetukset"
 
+#: src/features/words/index.tsx:995
+msgid "This permanently deletes the game and its chat. This cannot be undone."
+msgstr "Tämä poistaa pelin ja sen keskustelun pysyvästi. Tätä ei voi peruuttaa."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Torstai"
@@ -1361,10 +1377,10 @@ msgstr "Vaihda sarakkeet"
 msgid "Toggle right panel"
 msgstr "Vaihda oikeaa paneelia"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "Näytä tai piilota osio"
 
@@ -1519,8 +1535,8 @@ msgid "Wednesday"
 msgstr "Keskiviikko"
 
 #: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:676
-#: src/features/words/index.tsx:688
+#: src/features/words/index.tsx:683
+#: src/features/words/index.tsx:695
 msgid "Words"
 msgstr "Words"
 

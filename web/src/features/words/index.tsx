@@ -85,6 +85,7 @@ export function WordsGameView() {
   const { openNewGameDialog, setWebsocketStatus } = useSidebarContext()
   const [newMessage, setNewMessage] = useState('')
   const [showResignDialog, setShowResignDialog] = useState(false)
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
   // Tile placement state
   const [selectedRackIndex, setSelectedRackIndex] = useState<number | null>(null)
@@ -146,7 +147,12 @@ export function WordsGameView() {
   )
 
   // Game detail
-  const { data: gameDetail, isLoading: isLoadingDetail } = useGameDetailQuery(selectedGame?.id)
+  const {
+    data: gameDetail,
+    isLoading: isLoadingDetail,
+    error: gameDetailError,
+    refetch: refetchGameDetail,
+  } = useGameDetailQuery(selectedGame?.id)
 
   const game = gameDetail?.game
   const myIdentity = gameDetail?.identity ?? currentUserIdentity
@@ -355,6 +361,7 @@ export function WordsGameView() {
 
   const deleteGameMutation = useDeleteGameMutation({
     onSuccess: () => {
+      setShowDeleteDialog(false)
       toast.success(t`Game deleted`)
       void navigate({ to: '/' })
     },
@@ -713,6 +720,13 @@ export function WordsGameView() {
           <div className="flex flex-1 flex-col px-2 sm:px-4 pb-2 min-h-0">
             {isLoadingDetail ? (
               <Skeleton className="aspect-square max-w-[600px] w-full mx-auto" />
+            ) : gameDetailError ? (
+              <GeneralError
+                error={gameDetailError}
+                minimal
+                mode="inline"
+                reset={refetchGameDetail}
+              />
             ) : game ? (
               <>
                 <div className="shrink-0">
@@ -763,7 +777,7 @@ export function WordsGameView() {
                             <DropdownMenuContent align='end' className='w-48'>
                               {game.status === 'active' ? (
                                 <>
-                                  {isMyTurn && (
+                                  {isMyTurn && !exchangeMode && (
                                     <DropdownMenuItem onClick={handleShuffle}>
                                       <Shuffle className='me-2 size-4' /> <Trans>Shuffle rack</Trans>
                                     </DropdownMenuItem>
@@ -800,7 +814,7 @@ export function WordsGameView() {
                                   >
                                     <RotateCcw className='me-2 size-4' /> <Trans>Rematch</Trans>
                                   </DropdownMenuItem>
-                                  <DropdownMenuItem onClick={handleDelete}>
+                                  <DropdownMenuItem onClick={() => setShowDeleteDialog(true)}>
                                     <Trash2 className='me-2 size-4' /> <Trans>Delete game</Trans>
                                   </DropdownMenuItem>
                                 </>
@@ -896,6 +910,7 @@ export function WordsGameView() {
               <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
             </div>
             <ChatMessageList
+              key={selectedGame.id}
               messagesQuery={messagesQuery}
               chatMessages={chatMessages}
               isLoadingMessages={messagesQuery.isLoading}
@@ -929,6 +944,7 @@ export function WordsGameView() {
             <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
           </SheetHeader>
           <ChatMessageList
+            key={selectedGame.id}
             messagesQuery={messagesQuery}
             chatMessages={chatMessages}
             isLoadingMessages={messagesQuery.isLoading}
@@ -969,6 +985,27 @@ export function WordsGameView() {
         destructive
         handleConfirm={handleResign}
         isLoading={resignMutation.isPending}
+      />
+
+      {/* Delete confirmation */}
+      <ConfirmDialog
+        open={showDeleteDialog}
+        onOpenChange={setShowDeleteDialog}
+        title={t`Delete game?`}
+        desc={t`This permanently deletes the game and its chat. This cannot be undone.`}
+        confirmText={
+          deleteGameMutation.isPending ? (
+            <>
+              <Loader2 className="me-2 size-4 animate-spin" />
+              <Trans>Deleting...</Trans>
+            </>
+          ) : (
+            t`Delete`
+          )
+        }
+        destructive
+        handleConfirm={handleDelete}
+        isLoading={deleteGameMutation.isPending}
       />
 
       {/* Blank tile letter selection */}
