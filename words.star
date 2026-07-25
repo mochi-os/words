@@ -218,6 +218,20 @@ def action_user_asset(a):
 	if asset not in _PERSON_ASSETS:
 		a.error.label(404, "errors.unknown_asset")
 		return
+	# Public route - only a player in this game may resolve its players' assets.
+	# Requires a real authenticated caller: an anonymous request to a public
+	# action runs as the entity owner, so without the a.user test the ambient
+	# owner would satisfy is_player for their own games.
+	user_id = a.user.identity.id if a.user and a.user.identity else None
+	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	if not user_id or not game or not is_player(game, user_id):
+		a.error.label(403, "errors.not_a_player")
+		return
+	# Bind the requested identity to this game, so the route can only resolve
+	# its own players rather than any entity the caller names.
+	if not is_player(game, a.input("user") or ""):
+		a.error.label(404, "errors.unknown_asset")
+		return
 	return stream_asset(a, a.input("user") or "", "people", asset)
 
 def load_dictionary(language, filename):
