@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# joueur} other {# joueurs}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# sélectionné} other {# sélectionnés}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# tuile restante} other {# tuiles restantes}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} en {1}{2}, cliquez pour retirer"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} a joué <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} a joué <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} tuiles restantes"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} a échangé des tuiles"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} a passé"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} a passé — partie terminée"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Nom du {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} a abandonné"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Actions groupées pour # {entityName} séle
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# point} other {# points}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} a gagné"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Type de compte"
 msgid "Account verified"
 msgstr "Compte vérifié"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Parties actives"
 
@@ -379,7 +388,7 @@ msgstr "Bientôt disponible !"
 msgid "Compact"
 msgstr "Compact"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Terminé"
 
@@ -696,7 +705,6 @@ msgstr "Partie créée"
 msgid "Game deleted"
 msgstr "Partie supprimée"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Partie terminée"
@@ -881,7 +889,7 @@ msgstr "Erreur réseau"
 msgid "New"
 msgstr "Nouveau"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Ouvrir le menu de navigation"
 msgid "Open theme settings"
 msgstr "Ouvrir les paramètres du thème"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Adversaire"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Adversaire abandonné — vous avez gagné !"
@@ -1549,7 +1552,7 @@ msgstr "Accès non autorisé"
 msgid "United States"
 msgstr "États-Unis"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Inconnu"
 
@@ -1640,8 +1643,9 @@ msgstr "Mots"
 msgid "Words formed"
 msgstr "Mots formés"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Vous"
@@ -1654,12 +1658,10 @@ msgstr "Vous n'avez pas accès à cette section."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Vous n'avez pas l'autorisation nécessaire <0/>pour consulter cette ressource."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Vous avez abandonné"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Vous avez gagné !"

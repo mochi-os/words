@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# spelare} other {# spelare}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# vald} other {# valda}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# bricka kvar} other {# brickor kvar}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} vid {1}{2}, klicka för att ta bort"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} spelade <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} spelade <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} brickor kvar"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} bytte brickor"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} passade"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} passade — spelet är slut"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel}-namn"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} gav upp"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Massåtgärder för # vald {entityName}} ot
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# poäng} other {# poäng}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} vinner"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Kontotyp"
 msgid "Account verified"
 msgstr "Konto verifierat"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Aktiva spel"
 
@@ -379,7 +388,7 @@ msgstr "Kommer snart!"
 msgid "Compact"
 msgstr "Kompakt"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Slutförd"
 
@@ -696,7 +705,6 @@ msgstr "Spel skapat"
 msgid "Game deleted"
 msgstr "Spel raderat"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Spelet är slut"
@@ -881,7 +889,7 @@ msgstr "Nätverksfel"
 msgid "New"
 msgstr "Ny"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Öppna navigeringsmeny"
 msgid "Open theme settings"
 msgstr "Öppna temainställningar"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Motståndare"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Motståndaren gav upp — du vinner!"
@@ -1549,7 +1552,7 @@ msgstr "Obehörig åtkomst"
 msgid "United States"
 msgstr "USA"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Okänd"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Bildade ord"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Du"
@@ -1654,12 +1658,10 @@ msgstr "Du har inte åtkomst till det här avsnittet."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Du har inte nödvändig behörighet <0/>för att visa den här resursen."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Du gav upp"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Du vinner!"

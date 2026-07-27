@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# igrač} few {# igrača} other {# igrača}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# odabrano} few {# odabrana} other {# odabranih}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# pločica preostala} few {# pločice preostale} other {# pločica preostalo}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} u {1}{2}, klikni za uklanjanje"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} odigrao <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} odigrao <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} pločica preostalo"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} je zamijenio pločice"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} je preskočio potez"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} je preskočio potez — igra je gotova"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Naziv {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} se predao/la"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Grupne radnje za # odabrani {entityName}} f
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# bod} few {# boda} other {# bodova}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} pobjeđuje"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Vrsta računa"
 msgid "Account verified"
 msgstr "Račun verifikovan"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Aktivne igre"
 
@@ -379,7 +388,7 @@ msgstr "Uskoro!"
 msgid "Compact"
 msgstr "Kompaktno"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Završeno"
 
@@ -696,7 +705,6 @@ msgstr "Igra kreirana"
 msgid "Game deleted"
 msgstr "Igra obrisana"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Igra završena"
@@ -881,7 +889,7 @@ msgstr "Greška mreže"
 msgid "New"
 msgstr "Novo"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Otvori navigacijski meni"
 msgid "Open theme settings"
 msgstr "Otvori postavke teme"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Protivnik"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Protivnik je predao — pobijedili ste!"
@@ -1549,7 +1552,7 @@ msgstr "Neovlašteni pristup"
 msgid "United States"
 msgstr "Sjedinjene Države"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Nepoznato"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Formirane riječi"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Vi"
@@ -1654,12 +1658,10 @@ msgstr "Nemate pristup ovom odjeljku."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Nemate potrebnu dozvolu <0/>za pregled ovog resursa."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Predao si se"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Pobijedio si!"

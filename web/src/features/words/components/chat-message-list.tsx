@@ -177,7 +177,8 @@ export function ChatMessageList({
           </div>
 
           {groupedMessages[key].map((message, index) => {
-            // System messages
+            // System messages. A marker renders localised text per viewer;
+            // legacy rows without one fall back to the stored body.
             if (message.type === 'system') {
               return (
                 <div
@@ -185,25 +186,75 @@ export function ChatMessageList({
                   className="flex justify-center py-1"
                 >
                   <span className="text-muted-foreground text-[11px] italic">
-                    {message.body}
+                    {message.event === 'resign' && message.name ? (
+                      // eslint-disable-next-line lingui/no-expression-in-message -- bare identifier keeps the msgid shared with chess/go
+                      (() => { const name = message.name; return <Trans>{name} resigned</Trans> })()
+                    ) : (
+                      message.body
+                    )}
                   </span>
                 </div>
               )
             }
 
-            // Move messages
+            // Move messages. The event marker distinguishes plays from
+            // passes and exchanges - all three share type 'move' - and lets
+            // this viewer render localised text. The stored body wrapped
+            // every row in "played", producing "Alice played Alice passed"
+            // for pass rows; legacy rows without a marker keep that
+            // behaviour rather than guessing.
             if (message.type === 'move') {
               const isSent = isCurrentUserMessage(message)
+              const actor = isSent ? t`You` : message.name
+              const marker = message.event ?? ''
+              let content: React.ReactNode
+              if (marker === 'pass' || marker === 'pass:over') {
+                content =
+                  marker === 'pass:over' ? (
+                    <Trans>{actor} passed — game over</Trans>
+                  ) : (
+                    <Trans>{actor} passed</Trans>
+                  )
+              } else if (marker.startsWith('exchange:')) {
+                // The marker carries the tile count, but rendering it needs a
+                // count-inflected noun in every locale's plural categories -
+                // hand-filling that across 105 catalogs is where quality
+                // collapses, so the sentence omits the number. The count
+                // stays stored in the marker for a future plural pass.
+                content = <Trans>{actor} exchanged tiles</Trans>
+              } else if (marker.startsWith('play:')) {
+                const score = marker.slice('play:'.length)
+                // Body is `<words> (+<score>)` with `played` as the no-words
+                // placeholder; the marker's score strips it deterministically.
+                const suffix = ` (+${score})`
+                let words = message.body.endsWith(suffix)
+                  ? message.body.slice(0, -suffix.length)
+                  : message.body
+                // eslint-disable-next-line lingui/no-unlocalized-strings -- stored placeholder token, not user-facing output
+                if (words === 'played') words = ''
+                content = (
+                  <Trans>
+                    {isSent ? t`You` : message.name} played{' '}
+                    <span className="font-mono">
+                      {words ? `${words} (+${score})` : `(+${score})`}
+                    </span>
+                  </Trans>
+                )
+              } else {
+                content = (
+                  <Trans>
+                    {isSent ? t`You` : message.name} played{' '}
+                    <span className="font-mono">{message.body}</span>
+                  </Trans>
+                )
+              }
               return (
                 <div
                   key={`${message.id}-${index}`}
                   className="flex justify-center py-0.5"
                 >
                   <span className="text-[11px] text-muted-foreground/60">
-                    <Trans>
-                      {isSent ? t`You` : message.name} played{' '}
-                      <span className="font-mono">{message.body}</span>
-                    </Trans>
+                    {content}
                   </span>
                 </div>
               )

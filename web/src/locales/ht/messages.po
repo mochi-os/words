@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# jwè} other {# jwè}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, other {# chwazi}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, other {# tile rete}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} nan {1}{2}, klike pou retire"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} jwe <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} jwe <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} tiles rete"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} chanje til yo"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} pase"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} pase — jwèt fini"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Non {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} bay legen"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, other {Aksyon an gwoup pou # {manyName} chwazi}}
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {# pwen}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} genyen"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Tip kont"
 msgid "Account verified"
 msgstr "Kont verifye"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Jwèt Aktif"
 
@@ -379,7 +388,7 @@ msgstr "Vini Talè!"
 msgid "Compact"
 msgstr "Konpak"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Konplete"
 
@@ -696,7 +705,6 @@ msgstr "Jwèt kreye"
 msgid "Game deleted"
 msgstr "Jwèt efase"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Jwèt fini"
@@ -881,7 +889,7 @@ msgstr "Erè rezo"
 msgid "New"
 msgstr "Nouvo"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Ouvri meni navigasyon"
 msgid "Open theme settings"
 msgstr "Ouvri paramèt tèm"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Advèsè"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Advèsè a demisyone — ou genyen!"
@@ -1549,7 +1552,7 @@ msgstr "Aksè Pa Otorize"
 msgid "United States"
 msgstr "Etazini"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Enkoni"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Mo fòme"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Ou"
@@ -1654,12 +1658,10 @@ msgstr "Ou pa gen aksè nan seksyon sa a."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Ou pa gen pèmisyon nesesè a <0/>pou w wè resous sa a."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Ou demisyone"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Ou genyen!"

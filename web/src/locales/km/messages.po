@@ -28,11 +28,6 @@ msgstr "{0, plural, other {# អ្នកលេង}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, other {# បានជ្រើសរើស}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, other {# tile នៅសល់}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} នៅ {1}{2}, ចុចដើម្បីដក"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} បានលេង <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} បានលេង <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} tiles នៅសល់"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} បានប្ដូរក្បឿង"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} បានរំលង"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} បានរំលង — ល្បែងចប់"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "ឈ្មោះ {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} បានចុះចាញ់"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, other {សកម្មភាពជាបណ្�
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {# ពិន្ទុ}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} ឈ្នះ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "ប្រភេទគណនី"
 msgid "Account verified"
 msgstr "គណនីត្រូវបានផ្ទៀងផ្ទាត់"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "ហ្គេមសកម្ម"
 
@@ -379,7 +388,7 @@ msgstr "នឹងមកដល់ឆាប់ៗ!"
 msgid "Compact"
 msgstr "តូច"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "បានបញ្ចប់"
 
@@ -696,7 +705,6 @@ msgstr "បានបង្កើតហ្គេម"
 msgid "Game deleted"
 msgstr "បានលុបហ្គេម"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "ហ្គេមបញ្ចប់"
@@ -881,7 +889,7 @@ msgstr "កំហុសបណ្តាញ"
 msgid "New"
 msgstr "ថ្មី"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "បើកម៉ឺនុយរុករក"
 msgid "Open theme settings"
 msgstr "បើកការកំណត់រចនាប័ទ្ម"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "គូប្រកួត"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "គូប្រកួតបានចុះចាញ់ — អ្នកឈ្នះ!"
@@ -1549,7 +1552,7 @@ msgstr "ការចូលប្រើដោយគ្មានសិទ្ធិ
 msgid "United States"
 msgstr "សហរដ្ឋអាមេរិក"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "មិនស្គាល់"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "ពាក្យដែលបានបង្កើត"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "អ្នក"
@@ -1654,12 +1658,10 @@ msgstr "អ្នកមិនមានសិទ្ធិចូលប្រើផ
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "អ្នកមិនមានការអនុញ្ញាតចាំបាច់ <0/>ដើម្បីមើលធនធាននេះទេ។"
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "អ្នកបានចុះចាញ់"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "អ្នកឈ្នះ!"

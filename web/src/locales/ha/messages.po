@@ -28,11 +28,6 @@ msgstr "{0, plural, one {mai wasa #} other {masu wasa #}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# zaɓaɓɓe} other {# zaɓaɓɓu}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {Tayil # ya rage} other {Tayil # suka rage}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} a {1}{2}, danna don cire"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} ya buga <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} ya buga <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "Sauran {0} tiles"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} ya musanya alluna"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} ya wuce"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} ya wuce — wasa ya ƙare"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Sunan {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} ya ja da"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Ayyuka masu yawa don {entityName} # da aka 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# maki} other {# maki}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} ya yi nasara"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Nau'in asusu"
 msgid "Account verified"
 msgstr "An tabbatar da asusu"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Wasannin da ke kan ci gaba"
 
@@ -379,7 +388,7 @@ msgstr "Yana zuwa nan ba da daɗewa ba!"
 msgid "Compact"
 msgstr "Ƙanƙane"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "An kammala"
 
@@ -696,7 +705,6 @@ msgstr "An ƙirƙiri wasa"
 msgid "Game deleted"
 msgstr "An share wasa"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Wasan ya ƙare"
@@ -881,7 +889,7 @@ msgstr "Kuskuren hanyar sadarwa"
 msgid "New"
 msgstr "Sabon"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Buɗe menu ɗin navigation"
 msgid "Open theme settings"
 msgstr "Buɗe saitunan theme"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Abokin hamayya"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Abokin hamayya ya yi murabus — ka yi nasara!"
@@ -1549,7 +1552,7 @@ msgstr "Damar Shiga Ba Tare Da Izini Ba"
 msgid "United States"
 msgstr "Amurka"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Ba a sani ba"
 
@@ -1640,8 +1643,9 @@ msgstr "Kalmomi"
 msgid "Words formed"
 msgstr "Kalmomin da aka samar"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Kai"
@@ -1654,12 +1658,10 @@ msgstr "Ba ka da damar shiga wannan sashe ba."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Ba ka da izinin da ake buƙata <0/>don duba wannan albarkatun."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Kun yi murabus"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Kun yi nasara!"

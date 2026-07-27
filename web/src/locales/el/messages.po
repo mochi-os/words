@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# παίκτης} other {# παίκτες}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# επιλεγμένο} other {# επιλεγμένα}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# πλακίδιο απομένει} other {# πλακίδια απομένουν}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} στο {1}{2}, κάντε κλικ για αφαίρεση"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} έπαιξε <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} έπαιξε <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "Απομένουν {0} πλακίδια"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "Ο/Η {actor} αντάλλαξε πλακίδια"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "Ο/Η {actor} πέρασε"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "Ο/Η {actor} πέρασε — τέλος παιχνιδιού"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Όνομα {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "Ο/Η {name} παραιτήθηκε"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Μαζικές ενέργειες για # 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# πόντος} other {# πόντοι}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "Νίκη του/της {winnerName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Τύπος λογαριασμού"
 msgid "Account verified"
 msgstr "Ο λογαριασμός επαληθεύτηκε"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Ενεργά παιχνίδια"
 
@@ -379,7 +388,7 @@ msgstr "Έρχεται σύντομα!"
 msgid "Compact"
 msgstr "Συμπαγές"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Ολοκληρώθηκε"
 
@@ -696,7 +705,6 @@ msgstr "Το παιχνίδι δημιουργήθηκε"
 msgid "Game deleted"
 msgstr "Το παιχνίδι διαγράφηκε"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Τέλος παιχνιδιού"
@@ -881,7 +889,7 @@ msgstr "Σφάλμα δικτύου"
 msgid "New"
 msgstr "Νέο"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Άνοιγμα μενού πλοήγησης"
 msgid "Open theme settings"
 msgstr "Άνοιγμα ρυθμίσεων θέματος"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Αντίπαλος"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Ο αντίπαλος παραιτήθηκε — κερδίζετε!"
@@ -1549,7 +1552,7 @@ msgstr "Μη εξουσιοδοτημένη πρόσβαση"
 msgid "United States"
 msgstr "Ηνωμένες Πολιτείες"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Άγνωστο"
 
@@ -1640,8 +1643,9 @@ msgstr "Λέξεις"
 msgid "Words formed"
 msgstr "Σχηματισμένες λέξεις"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Εσείς"
@@ -1654,12 +1658,10 @@ msgstr "Δεν έχετε πρόσβαση σε αυτήν την ενότητα
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Δεν έχετε την απαραίτητη άδεια <0/>για να δείτε αυτόν τον πόρο."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Παραιτηθήκατε"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Νικήσατε!"

@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# მოთამაშე} other {# მოთამა
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, other {# გაყიდვა}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, other {# არჩეული}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} პოზიციაზე {1}{2}, დააწკაპუნე�
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0}-მა ითამაშა <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0}-მა ითამაშა <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} ტეგი"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor}-მა გაცვალა ფილები"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor}-მა გაატარა სვლა"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor}-მა გაატარა სვლა — თამაში დასრულდა"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel}-ის სახელი"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name}-მა დანებდა"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, other {მასობრივი მოქმ�
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {# ქულა}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} იმარჯვებს"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "ანგარიშის ტიპი"
 msgid "Account verified"
 msgstr "ანგარიში დადასტურებულია"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "აქტიური თამაშები"
 
@@ -379,7 +388,7 @@ msgstr "მალე!"
 msgid "Compact"
 msgstr "კომპაქტური"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "დასრულდა"
 
@@ -696,7 +705,6 @@ msgstr "თამაში შეიქმნა"
 msgid "Game deleted"
 msgstr "თამაში წაიშალა"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "თამაში დასრულდა"
@@ -881,7 +889,7 @@ msgstr "ქსელის შეცდომა"
 msgid "New"
 msgstr "ახალი"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "ნავიგაციის მენიუს გახსნა"
 msgid "Open theme settings"
 msgstr "თემის პარამეტრების გახსნა"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "მოწინააღმდეგე"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "მოწინააღმდეგემ ჩააბარა — თქვენ მოიგეთ!"
@@ -1549,7 +1552,7 @@ msgstr "არაავტორიზებული წვდომა"
 msgid "United States"
 msgstr "ამ ვიკის უნიკალური იდენტიფიკატორები."
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "ერთეულები"
 
@@ -1640,8 +1643,9 @@ msgstr "სიტყვები"
 msgid "Words formed"
 msgstr "Words"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "დიახ, ძალით"
@@ -1654,12 +1658,10 @@ msgstr "ამ განყოფილებაზე წვდომა არ
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "თქვენ არ გაქვთ საჭირო ნებართვა <0/>ამ რესურსის სანახავად."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "თქვენ დატოვეთ ეს ჩატი"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "თქვენ ამოგაშორეს ამ ჩატიდან"

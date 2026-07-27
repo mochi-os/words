@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# کھلاڑی} other {# کھلاڑی}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# منتخب} other {# منتخب}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# ٹائل باقی} other {# ٹائلز باقی}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} {1}{2} پر، ہٹانے کے لیے کلک کریں"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} نے <0>{1}</0> کھیلا"
 
@@ -51,9 +48,25 @@ msgstr "{0} نے <0>{1}</0> کھیلا"
 msgid "{0} tiles left"
 msgstr "{0} ٹائلز باقی"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} نے ٹائلیں بدلیں"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} نے پاس کیا"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} نے پاس کیا — گیم ختم"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel} کا نام"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} نے ہار مان لی"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {# منتخب {entityName} کے لیے بل�
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# پوائنٹ} other {# پوائنٹس}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} جیت گیا"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "اکاؤنٹ کی قسم"
 msgid "Account verified"
 msgstr "اکاؤنٹ تصدیق شدہ"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "فعال گیمز"
 
@@ -379,7 +388,7 @@ msgstr "جلد آرہا ہے!"
 msgid "Compact"
 msgstr "کمپیکٹ"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "مکمل"
 
@@ -696,7 +705,6 @@ msgstr "گیم بنا دی گئی"
 msgid "Game deleted"
 msgstr "گیم حذف کر دی گئی"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "گیم ختم"
@@ -881,7 +889,7 @@ msgstr "نیٹ ورک کی خرابی"
 msgid "New"
 msgstr "نیا"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "navigation مینو کھولیں"
 msgid "Open theme settings"
 msgstr "تھیم سیٹنگز کھولیں"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "حریف"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "حریف نے resign کر دیا — آپ جیت گئے!"
@@ -1549,7 +1552,7 @@ msgstr "غیر مجاز رسائی"
 msgid "United States"
 msgstr "ریاستہائے متحدہ"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "نامعلوم"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "تشکیل شدہ الفاظ"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "آپ"
@@ -1654,12 +1658,10 @@ msgstr "آپ کو اس حصے تک رسائی حاصل نہیں ہے۔"
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "اس وسیلے کو دیکھنے کے لیے <0/>آپ کے پاس ضروری اجازت نہیں ہے۔"
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "آپ نے دستبرداری اختیار کی"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "آپ جیت گئے!"

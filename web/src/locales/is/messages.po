@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# leikmaður} other {# leikmenn}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# valið} other {# valin}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# flís eftir} other {# flísar eftir}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} á {1}{2}, smelltu til að fjarlægja"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} spilaði <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} spilaði <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} flísar eftir"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} skipti um stafi"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} sagði pass"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} sagði pass — leik lokið"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Nafn {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} gafst upp"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Magnaðgerðir fyrir # valið {entityName}}
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# stig} other {# stig}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} vinnur"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Tegund reiknings"
 msgid "Account verified"
 msgstr "Reikningur staðfestur"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Virkir leikir"
 
@@ -379,7 +388,7 @@ msgstr "Væntanlegt!"
 msgid "Compact"
 msgstr "Þétt"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Lokið"
 
@@ -696,7 +705,6 @@ msgstr "Leikur búinn til"
 msgid "Game deleted"
 msgstr "Leik eytt"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Leik lokið"
@@ -881,7 +889,7 @@ msgstr "Netvilla"
 msgid "New"
 msgstr "Nýtt"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Opna leiðsögnarvalmynd"
 msgid "Open theme settings"
 msgstr "Opna þemastillingar"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Andstæðingur"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Andstæðingur gafst upp — þú vinnur!"
@@ -1549,7 +1552,7 @@ msgstr "Óheimill aðgangur"
 msgid "United States"
 msgstr "Bandaríkin"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Óþekkt"
 
@@ -1640,8 +1643,9 @@ msgstr "Orð"
 msgid "Words formed"
 msgstr "Orð mynduð"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Þú"
@@ -1654,12 +1658,10 @@ msgstr "Þú hefur ekki aðgang að þessum hluta."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Þú hefur ekki nauðsynlega heimild <0/>til að skoða þetta efni."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Þú gafst upp"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Þú vannst!"

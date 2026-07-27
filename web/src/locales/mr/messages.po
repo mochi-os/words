@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# खेळाडू} other {# खेळाडू}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# निवडले} other {# निवडले}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# टाइल शिल्लक} other {# टाइल्स शिल्लक}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} येथे {1}{2}, काढण्यासाठी क्लि�
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} ने <0>{1}</0> खेळले"
 
@@ -51,9 +48,25 @@ msgstr "{0} ने <0>{1}</0> खेळले"
 msgid "{0} tiles left"
 msgstr "{0} टाइल्स उरल्या"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} यांनी टाइल्स बदलल्या"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} यांनी पास केले"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} यांनी पास केले — खेळ संपला"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel} नाव"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} ने राजीनामा दिला"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {# निवडलेल्या {entityNam
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# गुण} other {# गुण}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} जिंकले"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "खाते प्रकार"
 msgid "Account verified"
 msgstr "खाते सत्यापित केले"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "सक्रिय खेळ"
 
@@ -379,7 +388,7 @@ msgstr "लवकरच येत आहे!"
 msgid "Compact"
 msgstr "कॉम्पॅक्ट"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "पूर्ण केले"
 
@@ -696,7 +705,6 @@ msgstr "गेम तयार केला"
 msgid "Game deleted"
 msgstr "गेम हटवला"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "गेम संपला"
@@ -881,7 +889,7 @@ msgstr "नेटवर्क त्रुटी"
 msgid "New"
 msgstr "नवीन"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "नेव्हिगेशन मेन्यू उघडा"
 msgid "Open theme settings"
 msgstr "थीम सेटिंग्ज उघडा"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "विरोधक"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "प्रतिस्पर्ध्याने राजीनामा दिला — तुम्ही जिंकलात!"
@@ -1549,7 +1552,7 @@ msgstr "अनधिकृत अॅक्सेस"
 msgid "United States"
 msgstr "युनायटेड स्टेट्स"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "अज्ञात"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "तयार झालेले शब्द"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "तुम्ही"
@@ -1654,12 +1658,10 @@ msgstr "तुम्हाला या विभागात प्रवेश
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "हे संसाधन पाहण्यासाठी <0/>तुमच्याकडे आवश्यक परवानगी नाही."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "तुम्ही राजीनामा दिला"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "तुम्ही जिंकलात!"

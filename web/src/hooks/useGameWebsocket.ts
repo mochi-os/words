@@ -50,6 +50,7 @@ const createMessageFromPayload = (
     id: `ws-${gameId}-${created}-${Math.random().toString(36).slice(2)}`,
     game: gameId,
     body: messageBody,
+    event: typeof payload.event === 'string' ? payload.event : undefined,
     member: senderId,
     name: senderName,
     type: msgType,

@@ -28,11 +28,6 @@ msgstr "{0, plural, other {ကစားသမား # ဦး}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, other {# ရွေးထား}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, other {tile # ခုကျန်}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{1}{2} ၌ {0}၊ ဖယ်ရှားရန် နှိပ်ပါ"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} က <0>{1}</0> ကို ကစားခဲ့သည်"
 
@@ -51,9 +48,25 @@ msgstr "{0} က <0>{1}</0> ကို ကစားခဲ့သည်"
 msgid "{0} tiles left"
 msgstr "Tile {0} ခုကျန်"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} အကွက်များ လဲလှယ်ခဲ့သည်"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} ကျော်သွားသည်"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} ကျော်သွားသည် — ဂိမ်းပြီးပါပြီ"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel} အမည်"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} အရှုံးပေးလိုက်သည်"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, other {ရွေးချယ်ထားသေ�
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {အမှတ် #}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} နိုင်သည်"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "အကောင့်အမျိုးအစား"
 msgid "Account verified"
 msgstr "အကောင့် အတည်ပြုပြီး"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "လက်ရှိ Games"
 
@@ -379,7 +388,7 @@ msgstr "မကြာမီ ရောက်လာမည်!"
 msgid "Compact"
 msgstr "ကျစ်လျစ်"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "ပြီးစီးပြီး"
 
@@ -696,7 +705,6 @@ msgstr "ဂိမ်း ဖန်တီးပြီးပါပြီ"
 msgid "Game deleted"
 msgstr "ဂိမ်း ဖျက်ပြီးပါပြီ"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "ဂိမ်း ပြီးဆုံး"
@@ -881,7 +889,7 @@ msgstr "ကွန်ရက် အမှား"
 msgid "New"
 msgstr "အသစ်"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "navigation menu ကို ဖွင့်"
 msgid "Open theme settings"
 msgstr "theme ဆက်တင်များကို ဖွင့်"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "ပြိုင်ဘက်"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "ပြိုင်ဘက် ရှုံးပြီ — သင် နိုင်ပြီ!"
@@ -1549,7 +1552,7 @@ msgstr "ခွင့်ပြုမထားသော ဝင်ရောက်�
 msgid "United States"
 msgstr "United States"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "မသိရသော"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "ဖွဲ့စည်းထားသော Words များ"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "သင်"
@@ -1654,12 +1658,10 @@ msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်�
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "ဤအရင်းအမြစ်ကို ကြည့်ရှုရန် <0/>လိုအပ်သော ခွင့်ပြုချက် သင့်တွင်မရှိပါ။"
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "သင် လက်လျှော့ခဲ့သည်"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "သင်နိုင်ပြီ!"

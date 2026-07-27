@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# гулец} few {# гульцы} many {# гульцо
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# выбрана} few {# выбрана} many {# выбрана} other {# выбрана}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {засталася # плітачка} few {засталіся # плітачкі} many {засталося # плітачак} other {засталося # плітачкі}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} на {1}{2}, націсніце, каб выдаліць"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} згуляў <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} згуляў <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "Засталося плітачак: {0}"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} абмяняў фішкі"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} прапусціў ход"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} прапусціў ход — гульня скончана"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Назва {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} здаўся"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Масавыя дзеянні для # вы
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# ачко} few {# ачкі} many {# ачкоў} other {# ачка}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} перамагае"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Тып уліковага запісу"
 msgid "Account verified"
 msgstr "Уліковы запіс пацверджаны"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Актыўныя гульні"
 
@@ -379,7 +388,7 @@ msgstr "Хутка!"
 msgid "Compact"
 msgstr "Кампактна"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Завершана"
 
@@ -696,7 +705,6 @@ msgstr "Гульня створана"
 msgid "Game deleted"
 msgstr "Гульня выдалена"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Канец гульні"
@@ -881,7 +889,7 @@ msgstr "Памылка сеткі"
 msgid "New"
 msgstr "Новы"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Адкрыць меню навігацыі"
 msgid "Open theme settings"
 msgstr "Адкрыць налады тэмы"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Супернік"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Супернік здаўся — вы перамаглі!"
@@ -1549,7 +1552,7 @@ msgstr "Несанкцыянаваны доступ"
 msgid "United States"
 msgstr "Злучаныя Штаты"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Невядома"
 
@@ -1640,8 +1643,9 @@ msgstr "Словы"
 msgid "Words formed"
 msgstr "Сфарміраваныя словы"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Вы"
@@ -1654,12 +1658,10 @@ msgstr "У вас няма доступу да гэтага раздзела."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "У вас няма патрэбнага дазволу, <0/>каб праглядзець гэты рэсурс."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Вы здаліся"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Вы перамаглі!"

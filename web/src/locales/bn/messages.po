@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# জন খেলোয়াড়} other {# জন �
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# নির্বাচিত} other {# নির্বাচিত}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# টাইল বাকি} other {# টাইল বাকি}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} এ {1}{2}, সরাতে ক্লিক করুন"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} <0>{1}</0> খেলেছে"
 
@@ -51,9 +48,25 @@ msgstr "{0} <0>{1}</0> খেলেছে"
 msgid "{0} tiles left"
 msgstr "{0} টাইল অবশিষ্ট"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} টাইল বদল করেছেন"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} পাস করেছেন"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} পাস করেছেন — খেলা শেষ"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel} নাম"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} হার মেনে নিয়েছেন"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {# নির্বাচিত {entityName} 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# পয়েন্ট} other {# পয়েন্ট}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} জিতেছে"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "অ্যাকাউন্টের ধরন"
 msgid "Account verified"
 msgstr "অ্যাকাউন্ট যাচাই করা হয়েছে"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "সক্রিয় গেম"
 
@@ -379,7 +388,7 @@ msgstr "শীঘ্রই আসছে!"
 msgid "Compact"
 msgstr "কম্প্যাক্ট"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "সম্পন্ন"
 
@@ -696,7 +705,6 @@ msgstr "গেম তৈরি করা হয়েছে"
 msgid "Game deleted"
 msgstr "গেম মুছে ফেলা হয়েছে"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "গেম শেষ"
@@ -881,7 +889,7 @@ msgstr "নেটওয়ার্ক ত্রুটি"
 msgid "New"
 msgstr "নতুন"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "নেভিগেশন মেনু খুলুন"
 msgid "Open theme settings"
 msgstr "থিম সেটিংস খুলুন"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "প্রতিপক্ষ"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "প্রতিপক্ষ পদত্যাগ করেছেন — আপনি জিতেছেন!"
@@ -1549,7 +1552,7 @@ msgstr "অননুমোদিত অ্যাক্সেস"
 msgid "United States"
 msgstr "যুক্তরাষ্ট্র"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "অজানা"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "তৈরি করা শব্দ"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "আপনি"
@@ -1654,12 +1658,10 @@ msgstr "এই বিভাগে আপনার অ্যাক্সেস �
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "এই রিসোর্স দেখার জন্য <0/>আপনার প্রয়োজনীয় অনুমতি নেই।"
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "আপনি পদত্যাগ করেছেন"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "আপনি জিতেছেন!"

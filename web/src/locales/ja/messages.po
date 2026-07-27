@@ -28,11 +28,6 @@ msgstr "{0, plural, other {# 人のプレイヤー}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# 件選択中} other {# 件選択中}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, other {残り# 個}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{1}{2} の {0}、クリックで削除"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} が <0>{1}</0> をプレイ"
 
@@ -51,9 +48,25 @@ msgstr "{0} が <0>{1}</0> をプレイ"
 msgid "{0} tiles left"
 msgstr "残り{0}タイル"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor}がタイルを交換しました"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor}がパスしました"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor}がパスしました — ゲーム終了"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel} の名前"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name}が投了しました"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {選択中の {entityName} # 件の一括操
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {#点}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} の勝ち"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "アカウントタイプ"
 msgid "Account verified"
 msgstr "アカウントを確認しました"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "アクティブなゲーム"
 
@@ -379,7 +388,7 @@ msgstr "近日公開!"
 msgid "Compact"
 msgstr "コンパクト"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "完了"
 
@@ -696,7 +705,6 @@ msgstr "ゲームを作成しました"
 msgid "Game deleted"
 msgstr "ゲームを削除しました"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "ゲーム終了"
@@ -881,7 +889,7 @@ msgstr "ネットワークエラー"
 msgid "New"
 msgstr "新規"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "ナビゲーションメニューを開く"
 msgid "Open theme settings"
 msgstr "テーマ設定を開く"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "対戦相手"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "相手が投了しました — あなたの勝ち！"
@@ -1549,7 +1552,7 @@ msgstr "認証されていないアクセス"
 msgid "United States"
 msgstr "アメリカ合衆国"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "不明"
 
@@ -1640,8 +1643,9 @@ msgstr "ワーズ"
 msgid "Words formed"
 msgstr "作成された単語"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "あなた"
@@ -1654,12 +1658,10 @@ msgstr "このセクションへのアクセス権がありません。"
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "このリソースを表示するために <0/>必要な権限がありません。"
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "投了しました"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "勝ちました！"

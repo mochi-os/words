@@ -171,6 +171,17 @@ def words_ensure_commit_hook():
 # Database
 
 def database_upgrade(version):
+	if version == 5:
+		# Event marker on game messages, so the client renders localised text
+		# per viewer instead of the English sentence the acting host stored in
+		# body. body keeps that sentence as the fallback for legacy rows and
+		# clients. Same design as chess and go.
+		found = False
+		for column in mochi.db.table("messages"):
+			if column["name"] == "event":
+				found = True
+		if not found:
+			mochi.db.execute("alter table messages add column event text not null default ''")
 	if version == 4:
 		# Version tuple. A scalar counter each peer increments locally is not
 		# a total order: with up to four independent writers, two peers can
@@ -251,6 +262,7 @@ def database_create():
 		name text not null,
 		body text not null,
 		type text not null default 'message',
+		event text not null default '',
 		created integer not null
 	)""")
 	mochi.db.execute("create index if not exists messages_game_created on messages( game, created )")
@@ -1064,11 +1076,12 @@ def action_move(a):
 	# Insert move message
 	id = mochi.uid()
 	move_label = words_formed if words_formed else "played"
-	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, move_label + " (+" + str(score) + ")", now)
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, move_label + " (+" + str(score) + ")", "play:" + str(score), now)
 
 	ws_data = {
 		"type": "move", "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
 		"body": move_label + " (+" + str(score) + ")",
+		"event": "play:" + str(score),
 		"board": board, "score": score, "player_number": pnum,
 		"current_turn": new_turn, "move_count": new_move_count,
 		"status": new_status, "winner": winner or "",
@@ -1083,6 +1096,7 @@ def action_move(a):
 	p2p_data = {
 		"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
 		"body": move_label + " (+" + str(score) + ")",
+		"event": "play:" + str(score),
 		"board": board, "score": score, "player_number": pnum,
 		"current_turn": new_turn, "move_count": new_move_count,
 		"status": new_status, "winner": winner or "",
@@ -1156,11 +1170,12 @@ def action_pass(a):
 	body = player_name + " passed"
 	if game_over:
 		body = body + " — game over"
-	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, body, now)
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, body, "pass:over" if game_over else "pass", now)
 
 	ws_data = {
 		"type": "move", "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
 		"body": body, "pass": True,
+		"event": "pass:over" if game_over else "pass",
 		"current_turn": new_turn, "consecutive_passes": new_consecutive,
 		"status": new_status, "winner": winner or "",
 	}
@@ -1244,11 +1259,12 @@ def action_exchange(a):
 	id = mochi.uid()
 	player_name = get_player_name(game, pnum)
 	body = player_name + " exchanged " + str(len(tiles_to_exchange)) + " tiles"
-	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, body, now)
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, body, "exchange:" + str(len(tiles_to_exchange)), now)
 
 	ws_data = {
 		"type": "move", "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
 		"body": body, "exchange": True,
+		"event": "exchange:" + str(len(tiles_to_exchange)),
 		"current_turn": new_turn, "bag_count": len(new_bag),
 	}
 	# Skip commit-hook conversion: the (games, update) shape is shared with move / pass / resign and the payload carries an exchange-specific flag that the hook can't disambiguate from row state.
@@ -1257,6 +1273,7 @@ def action_exchange(a):
 	p2p_data = {
 		"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
 		"body": body, "exchange": True,
+		"tiles": len(tiles_to_exchange),
 		# Retained for peers that predate the snapshot.
 		"bag": new_bag, "rack": new_rack,
 	}
@@ -1302,7 +1319,7 @@ def action_resign(a):
 
 	id = mochi.uid()
 	msg = a.user.identity.name + " resigned"
-	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, "resign", now)
 
 	# Skip commit-hook conversion: the resign payload carries an event marker and the winner (sourced from the games row), neither of which is on the messages row alone — and the games.update is shared with move / pass / exchange.
 	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": msg, "winner": winner or ""})
@@ -1580,12 +1597,15 @@ def event_move(e):
 	if created == None:
 		created = now
 
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
+	# The receiver stamps the marker from what it validated, not from any
+	# sender text, so the row localises for this viewer whatever language the
+	# acting host spoke.
+	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, "play:" + str(score), created)
 
 	bag_count = len(bag) if bag != None else len(game["bag"])
 	ws_data = {
 		"type": "move", "created": created, "member": sender, "name": name,
-		"body": body,
+		"body": body, "event": "play:" + str(score),
 		"board": board, "score": score, "player_number": player_number,
 		"current_turn": current_turn, "move_count": move_count,
 		"status": status, "winner": winner or "",
@@ -1648,11 +1668,12 @@ def event_pass(e):
 	if created == None:
 		created = now
 
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
+	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, "pass:over" if status != "active" else "pass", created)
 
 	ws_data = {
 		"type": "move", "created": now, "member": sender, "name": name,
 		"body": body, "pass": True,
+		"event": "pass:over" if status != "active" else "pass",
 		"current_turn": current_turn, "consecutive_passes": consecutive_passes,
 		"status": status, "winner": winner or "",
 	}
@@ -1682,6 +1703,13 @@ def event_exchange(e):
 
 	bag = e.content("bag")
 
+	# Tile count for the localised "exchanged N tiles" row. Additive wire
+	# field: an old peer sends none and the row falls back to its body text.
+	tiles = event_integer(e.content("tiles"), None)
+	exchange_marker = ""
+	if tiles != None and tiles >= 0 and tiles <= 7:
+		exchange_marker = "exchange:" + str(tiles)
+
 	now = mochi.time.now()
 	legacy = {"current_turn": current_turn, "consecutive_passes": 0}
 	if bag != None:
@@ -1705,12 +1733,12 @@ def event_exchange(e):
 	if created == None:
 		created = now
 
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
+	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, exchange_marker, created)
 
 	bag_count = len(bag) if bag != None else len(game["bag"])
 	ws_data = {
 		"type": "move", "created": now, "member": sender, "name": name,
-		"body": body, "exchange": True,
+		"body": body, "exchange": True, "event": exchange_marker,
 		"current_turn": current_turn, "bag_count": bag_count,
 	}
 	# Skip commit-hook conversion: matches action_exchange — shared (games, update) shape and an exchange flag the hook can't infer from row state.
@@ -1774,7 +1802,9 @@ def event_resign(e):
 		return
 
 	id = mochi.uid()
-	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
+	# Resolve the resigner's name from our own row rather than storing the
+	# sender's prose, so the marker render has a name in the viewer's data.
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', ?, ? )", id, game["id"], sender, get_player_name(game, get_player_number(game, sender)), body, "resign", now)
 
 	# Skip commit-hook conversion: matches action_resign — payload carries an event marker and the winner from the games row, neither of which is on the messages row alone.
 	ws_data = {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""}

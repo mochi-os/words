@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# لوبغاړی} other {# لوبغاړي}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# ټاکل شوی} other {# ټاکل شوي}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# tile پاتې} other {# tileونه پاتې}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} په {1}{2} کې، د لرې کولو لپاره کلیک وکړئ"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} <0>{1}</0> ولوبید"
 
@@ -51,9 +48,25 @@ msgstr "{0} <0>{1}</0> ولوبید"
 msgid "{0} tiles left"
 msgstr "{0} tileونه پاتې"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} ټوټې بدلې کړې"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} تېر شو"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} تېر شو — لوبه پای ته ورسېده"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "د {entityLabel} نوم"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} ماتې ومنله"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {د # غوره شوي {entityName} لپار�
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# ټکی} other {# ټکي}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} ګټي"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "د حساب ډول"
 msgid "Account verified"
 msgstr "حساب تایید شو"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "فعالې لوبې"
 
@@ -379,7 +388,7 @@ msgstr "ډیر ژر راځي!"
 msgid "Compact"
 msgstr "فشرده"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "بشپړ شو"
 
@@ -696,7 +705,6 @@ msgstr "لوبه جوړه شوه"
 msgid "Game deleted"
 msgstr "لوبه وشلیده"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "لوبه پای ته ورسیده"
@@ -881,7 +889,7 @@ msgstr "د شبکې تېروتنه"
 msgid "New"
 msgstr "نوی"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "د نیویګیشن مینو خلاص کړئ"
 msgid "Open theme settings"
 msgstr "د ت موضوع تنظیمات خلاص کړئ"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "حریف"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "حریف تسلیم شو — تاسو وګټلې!"
@@ -1549,7 +1552,7 @@ msgstr "غیر مجاز لاسرسی"
 msgid "United States"
 msgstr "متحده ایالات"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "نامعلوم"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "جوړ شوي ټکي"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "تاسو"
@@ -1654,12 +1658,10 @@ msgstr "تاسو دې برخې ته لاسرسی نه لرئ."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "تاسو د دې سرچینې لیدو لپاره <0/>اړینه اجازه نه لرئ."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "تاسو استعفا ورکړه"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "تاسو وګټل!"

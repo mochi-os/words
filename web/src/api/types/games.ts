@@ -97,6 +97,10 @@ export interface GameMessage {
   name: string
   body: string
   type: MessageType
+  // Game-event marker (play:<score>, pass, pass:over, exchange:<n>, resign),
+  // rendered as localised text per viewer. Empty/absent on legacy rows and on
+  // plain chat messages, which fall back to `body`.
+  event?: string
   created: number
 }
 

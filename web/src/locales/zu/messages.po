@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# umdlali} other {# abadlali}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# kukhethiwe} other {# kukhethiwe}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {kusele # ithayela} other {kusele # amathayela}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} ku-{1}{2}, chofoza ukususa"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} udlalile <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "{0} udlalile <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} amathayela asele"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} ushintshe amathayela"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} udlulisile"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} udlulisile — umdlalo uphelile"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Igama le-{entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} udedele"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {Izenzo eziningi ze-{entityName} engu-# ekhe
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {amaphuzu angu-#} other {amaphuzu angu-#}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} uphumelele"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Uhlobo lwe-akhawunti"
 msgid "Account verified"
 msgstr "I-akhawunti iqinisekisiwe"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Imidlalo Esebenzayo"
 
@@ -379,7 +388,7 @@ msgstr "Kuyeza Maduze!"
 msgid "Compact"
 msgstr "Okufishane"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Kuqediwe"
 
@@ -696,7 +705,6 @@ msgstr "Umdlalo udaliwe"
 msgid "Game deleted"
 msgstr "Umdlalo ususiwe"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Umdlalo uphelile"
@@ -881,7 +889,7 @@ msgstr "Iphutha lenethiwekhi"
 msgid "New"
 msgstr "Okusha"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Vula imenyu yokuzulazula"
 msgid "Open theme settings"
 msgstr "Vula izilungiselelo zetimu"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Umphikisi"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Ophikisanayo uyekile — uwinile!"
@@ -1549,7 +1552,7 @@ msgstr "Ukufinyelela Okungavunyelwe"
 msgid "United States"
 msgstr "I-United States"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Akwaziwa"
 
@@ -1640,8 +1643,9 @@ msgstr "Amagama"
 msgid "Words formed"
 msgstr "Amagama akhiwe"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Wena"
@@ -1654,12 +1658,10 @@ msgstr "Awunakho ukufinyelela kule ngxenye."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Awunayo imvume edingekayo <0/>yokubuka le nsiza."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Ushiye phansi"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Uwinile!"

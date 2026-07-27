@@ -28,11 +28,6 @@ msgstr "{0, plural, one {# ఆటగాడు} other {# ఆటగాళ్లు
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# ఎంచుకోబడింది} other {# ఎంచుకోబడ్డాయి}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, one {# టైల్ మిగిలింది} other {# టైల్స్ మిగిలాయి}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} {1}{2} వద్ద, తీసివేయడానికి క్�
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} <0>{1}</0> ఆడారు"
 
@@ -51,9 +48,25 @@ msgstr "{0} <0>{1}</0> ఆడారు"
 msgid "{0} tiles left"
 msgstr "{0} టైల్‌లు మిగిలి ఉన్నాయి"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor} టైల్స్ మార్చారు"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor} పాస్ చేశారు"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor} పాస్ చేశారు — గేమ్ ముగిసింది"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel} పేరు"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} ఓటమిని అంగీకరించారు"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {# ఎంచుకున్న {entityName} 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# పాయింట్} other {# పాయింట్లు}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName} గెలిచారు"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "ఖాతా రకం"
 msgid "Account verified"
 msgstr "ఖాతా ధృవీకరించబడింది"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "క్రియాశీల ఆటలు"
 
@@ -379,7 +388,7 @@ msgstr "త్వరలో వస్తోంది!"
 msgid "Compact"
 msgstr "కాంపాక్ట్"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "పూర్తయింది"
 
@@ -696,7 +705,6 @@ msgstr "ఆట సృష్టించబడింది"
 msgid "Game deleted"
 msgstr "ఆట తొలగించబడింది"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "ఆట ముగిసింది"
@@ -881,7 +889,7 @@ msgstr "నెట్‌వర్క్ లోపం"
 msgid "New"
 msgstr "కొత్తది"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "నావిగేషన్ మెనుని ఓపెన్ చేయ
 msgid "Open theme settings"
 msgstr "థీమ్ సెట్టింగ్‌లను ఓపెన్ చేయండి"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "ప్రత్యర్థి"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "ప్రత్యర్థి రిజైన్ అయ్యాడు — మీరు గెలిచారు!"
@@ -1549,7 +1552,7 @@ msgstr "అనుమతి లేని యాక్సెస్"
 msgid "United States"
 msgstr "యునైటెడ్ స్టేట్స్"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "తెలియదు"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "ఏర్పడిన పదాలు"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "మీరు"
@@ -1654,12 +1658,10 @@ msgstr "ఈ విభాగానికి మీకు యాక్సెస్
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "ఈ వనరును వీక్షించడానికి <0/>మీకు అవసరమైన అనుమతి లేదు."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "మీరు రాజీనామా చేశారు"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "మీరు గెలిచారు!"

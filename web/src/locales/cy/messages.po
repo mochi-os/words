@@ -28,11 +28,6 @@ msgstr "{0, plural, zero {# chwaraewr} one {# chwaraewr} two {# chwaraewr} few {
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, zero {# wedi'i ddewis} one {# wedi'i ddewis} two {# wedi'u dewis} few {# wedi'u dewis} many {# wedi'u dewis} other {# wedi'u dewis}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, zero {# teilsen ar ôl} one {# deilsen ar ôl} two {# deilsen ar ôl} few {# theilsen ar ôl} many {# theilsen ar ôl} other {# teilsen ar ôl}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{0} yn {1}{2}, cliciwch i dynnu"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "Chwaraeodd {0} <0>{1}</0>"
 
@@ -51,9 +48,25 @@ msgstr "Chwaraeodd {0} <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} teilsen ar ôl"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "Cyfnewidiodd {actor} deils"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "Pasiodd {actor}"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "Pasiodd {actor} — gêm drosodd"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "Enw {entityLabel}"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "Ildiodd {name}"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, zero {Camau swmp ar gyfer # {manyName} a ddewisw
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, zero {# pwynt} one {# pwynt} two {# bwynt} few {# phwynt} many {# phwynt} other {# pwynt}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "Mae {winnerName} yn ennill"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "Math o gyfrif"
 msgid "Account verified"
 msgstr "Cyfrif wedi'i wirio"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "Gemau gweithredol"
 
@@ -379,7 +388,7 @@ msgstr "Yn dod yn fuan!"
 msgid "Compact"
 msgstr "Cryno"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "Wedi cwblhau"
 
@@ -696,7 +705,6 @@ msgstr "Gêm wedi'i chreu"
 msgid "Game deleted"
 msgstr "Gêm wedi'i dileu"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "Diwedd y gêm"
@@ -881,7 +889,7 @@ msgstr "Gwall rhwydwaith"
 msgid "New"
 msgstr "Newydd"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "Agor dewislen llywio"
 msgid "Open theme settings"
 msgstr "Agor gosodiadau thema"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "Gwrthwynebydd"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "Mae'r gwrthwynebydd wedi ymddiswyddo — rydych chi'n ennill!"
@@ -1549,7 +1552,7 @@ msgstr "Mynediad Heb Awdurdod"
 msgid "United States"
 msgstr "Yr Unol Daleithiau"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "Anhysbys"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Geiriau wedi'u ffurfio"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Chi"
@@ -1654,12 +1658,10 @@ msgstr "Nid oes gennych fynediad i'r adran hon."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Nid oes gennych y caniatâd angenrheidiol <0/>i weld yr adnodd hwn."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "Cawsoch eich tynnu o'r sgwrs hon"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "Rydych yn ennill!"

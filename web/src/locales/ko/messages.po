@@ -28,11 +28,6 @@ msgstr "{0, plural, other {# 명의 플레이어}}"
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# 선택됨} other {# 선택됨}}"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/components/score-panel.tsx:124
-msgid "{0, plural, one {# tile left} other {# tiles left}}"
-msgstr "{0, plural, other {타일 #개 남음}}"
-
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
@@ -42,7 +37,9 @@ msgstr "{1}{2}의 {0}, 제거하려면 클릭"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
-#: src/features/words/components/chat-message-list.tsx:203
+#. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
+#: src/features/words/components/chat-message-list.tsx:236
+#: src/features/words/components/chat-message-list.tsx:245
 msgid "{0} played <0>{1}</0>"
 msgstr "{0}님이 <0>{1}</0> 두었습니다"
 
@@ -51,9 +48,25 @@ msgstr "{0}님이 <0>{1}</0> 두었습니다"
 msgid "{0} tiles left"
 msgstr "타일 {0}개 남음"
 
+#: src/features/words/components/chat-message-list.tsx:224
+msgid "{actor} exchanged tiles"
+msgstr "{actor}님이 타일을 교환했어요"
+
+#: src/features/words/components/chat-message-list.tsx:216
+msgid "{actor} passed"
+msgstr "{actor}님이 패스했어요"
+
+#: src/features/words/components/chat-message-list.tsx:214
+msgid "{actor} passed — game over"
+msgstr "{actor}님이 패스했어요 — 게임 종료"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
 msgid "{entityLabel} name"
 msgstr "{entityLabel} 이름"
+
+#: src/features/words/components/chat-message-list.tsx:191
+msgid "{name} resigned"
+msgstr "{name} 기권함"
 
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
@@ -82,10 +95,6 @@ msgstr "{selectedCount, plural, one {선택된 {entityName} # 개에 대한 일�
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {#점}}"
-
-#: src/features/words/components/score-panel.tsx:87
-msgid "{winnerName} wins"
-msgstr "{winnerName}님 승리"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -127,7 +136,7 @@ msgstr "계정 유형"
 msgid "Account verified"
 msgstr "계정이 인증되었어요"
 
-#: src/components/layout/words-layout.tsx:86
+#: src/components/layout/words-layout.tsx:80
 msgid "Active games"
 msgstr "활성 게임"
 
@@ -379,7 +388,7 @@ msgstr "곧 출시!"
 msgid "Compact"
 msgstr "컴팩트"
 
-#: src/components/layout/words-layout.tsx:97
+#: src/components/layout/words-layout.tsx:91
 msgid "Completed"
 msgstr "완료됨"
 
@@ -696,7 +705,6 @@ msgstr "게임이 생성되었어요"
 msgid "Game deleted"
 msgstr "게임이 삭제되었어요"
 
-#: src/features/words/components/score-panel.tsx:90
 #: src/features/words/lib/header-model.ts:112
 msgid "Game over"
 msgstr "게임 종료"
@@ -881,7 +889,7 @@ msgstr "네트워크 오류"
 msgid "New"
 msgstr "새로 만들기"
 
-#: src/components/layout/words-layout.tsx:111
+#: src/components/layout/words-layout.tsx:105
 #: src/features/words/components/game-empty-state.tsx:27
 #: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
@@ -1014,11 +1022,6 @@ msgstr "내비게이션 메뉴 열기"
 msgid "Open theme settings"
 msgstr "테마 설정 열기"
 
-#: src/features/words/components/score-panel.tsx:80
-msgid "Opponent"
-msgstr "상대"
-
-#: src/features/words/components/score-panel.tsx:94
 #: src/features/words/lib/header-model.ts:116
 msgid "Opponent resigned — you win!"
 msgstr "상대방이 기권했어요 — 승리예요!"
@@ -1549,7 +1552,7 @@ msgstr "허용되지 않은 접근"
 msgid "United States"
 msgstr "미국"
 
-#: src/hooks/useGameWebsocket.ts:178
+#: src/hooks/useGameWebsocket.ts:179
 msgid "Unknown"
 msgstr "알 수 없음"
 
@@ -1640,8 +1643,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "구성된 단어"
 
-#: src/features/words/components/chat-message-list.tsx:204
-#: src/features/words/components/score-panel.tsx:64
+#: src/features/words/components/chat-message-list.tsx:208
+#: src/features/words/components/chat-message-list.tsx:237
+#: src/features/words/components/chat-message-list.tsx:246
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "본인"
@@ -1654,12 +1658,10 @@ msgstr "이 섹션에 대한 접근 권한이 없습니다."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "이 리소스를 볼 수 있는 <0/>권한이 없어요."
 
-#: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
 msgid "You resigned"
 msgstr "기권했어요"
 
-#: src/features/words/components/score-panel.tsx:78
 #: src/features/words/lib/header-model.ts:103
 msgid "You win!"
 msgstr "승리했어요!"
