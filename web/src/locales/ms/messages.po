@@ -23,6 +23,11 @@ msgstr "Sila semak sambungan internet anda dan cuba lagi."
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, other {# pemain}}"
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# dipilih} other {# dipilih}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:124
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -31,7 +36,7 @@ msgstr "{0, plural, other {# jubin tinggal}}"
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:214
+#: src/features/words/components/words-board.tsx:219
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} di {1}{2}, klik untuk membuang"
 
@@ -46,6 +51,10 @@ msgstr "{0} bermain <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} jubin berbaki"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Nama {entityLabel}"
+
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
 msgstr "{name} menang"
@@ -53,6 +62,22 @@ msgstr "{name} menang"
 #: src/features/words/lib/header-model.ts:98
 msgid "{name}'s move"
 msgstr "Giliran {name}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {{entityName} dipilih} other {{manyName} dipilih}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {# {entityName} dipilih. Bar alat tindakan pukal tersedia.} other {# {manyName} dipilih. Bar alat tindakan pukal tersedia.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# dipilih} other {# dipilih}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Tindakan pukal untuk # {entityName} dipilih} other {Tindakan pukal untuk # {manyName} dipilih}}"
 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
@@ -200,9 +225,9 @@ msgstr "Kod authenticator"
 msgid "Back"
 msgstr "Kembali"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Kembali ke laman utama"
 
@@ -223,7 +248,7 @@ msgstr "Tingkatkan minat"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:145
 #: src/features/words/components/new-game.tsx:189
 #: src/features/words/index.tsx:875
@@ -295,28 +320,29 @@ msgstr "Kosongkan"
 msgid "Clear all"
 msgstr "Kosongkan semua"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Kosongkan penapis"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Kosongkan pilihan"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Kosongkan pilihan (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Tutup"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Tutup navigasi"
 
@@ -411,6 +437,7 @@ msgid "Custom"
 msgstr "Tersuai"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Gelap"
@@ -491,8 +518,8 @@ msgstr "Tutup"
 msgid "Displays the mobile sidebar."
 msgstr "Memaparkan bar sisi mudah alih."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Muat turun"
 
@@ -514,7 +541,7 @@ msgstr "Kod e-mel"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:216
+#: src/features/words/components/words-board.tsx:221
 msgid "Empty square {0}{1}"
 msgstr "Petak kosong {0}{1}"
 
@@ -583,13 +610,21 @@ msgstr "Gagal mencipta permainan"
 msgid "Failed to create rematch"
 msgstr "Gagal mencipta perlawanan semula"
 
-#: src/features/words/index.tsx:368
+#: src/features/words/index.tsx:369
 msgid "Failed to delete game"
 msgstr "Gagal memadam permainan"
 
 #: src/features/words/index.tsx:342
 msgid "Failed to exchange"
 msgstr "Gagal menukar"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Gagal memuatkan imej"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Gagal memuatkan video"
 
 #: src/features/words/index.tsx:332
 msgid "Failed to pass"
@@ -657,7 +692,7 @@ msgstr "Susun atur penuh"
 msgid "Game created"
 msgstr "Permainan dicipta"
 
-#: src/features/words/index.tsx:364
+#: src/features/words/index.tsx:365
 msgid "Game deleted"
 msgstr "Permainan dipadam"
 
@@ -666,29 +701,29 @@ msgstr "Permainan dipadam"
 msgid "Game over"
 msgstr "Permainan tamat"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Kembali"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Pergi ke halaman pertama"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Pergi ke halaman terakhir"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Pergi ke halaman seterusnya"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Pergi ke halaman {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Pergi ke halaman sebelumnya"
 
@@ -715,6 +750,11 @@ msgstr "Laman utama"
 msgid "Hot"
 msgstr "Panas"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Pemapar imej: {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Imperial"
@@ -734,6 +774,10 @@ msgstr "Pergerakan tidak sah"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Kod pengesahan tidak sah"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Nampaknya halaman yang anda cari <0/>tidak wujud atau telah dialih keluar."
 
 #: src/features/words/components/new-game.tsx:165
 msgid "Language"
@@ -758,6 +802,7 @@ msgid "Left to Right"
 msgstr "Kiri ke Kanan"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Terang"
@@ -772,8 +817,8 @@ msgstr "Memuatkan kandungan…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Memuatkan…"
+msgid "Loading..."
+msgstr "Memuatkan..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -797,8 +842,8 @@ msgstr "Berjaya log keluar"
 msgid "Logging out…"
 msgstr "Sedang log keluar…"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Tanda semua sebagai dibaca"
@@ -843,8 +888,8 @@ msgstr "Baharu"
 msgid "New game"
 msgstr "Permainan baharu"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Imej seterusnya"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "Tiada profil"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Tiada keputusan dijumpai."
 
@@ -926,6 +971,11 @@ msgstr "Tidak ditetapkan"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "Pemberitahuan"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Pemberitahuan: {0}"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
@@ -981,6 +1031,11 @@ msgstr "Lain-lain"
 msgid "Owner"
 msgstr "Pemilik"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Halaman {currentPage} daripada {totalPages}"
+
 #: src/features/words/index.tsx:790
 msgid "Pass"
 msgstr "Lepas"
@@ -1010,6 +1065,10 @@ msgstr "Bermain dengan {playerCount} pemain"
 msgid "Please check your internet connection and try again."
 msgstr "Sila semak sambungan internet anda dan cuba lagi."
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Sila log masuk dengan bukti kelayakan yang sesuai <0/> untuk mengakses sumber ini."
+
 #: src/features/words/components/new-game.tsx:78
 msgid "Please select at least one friend"
 msgstr "Sila pilih sekurang-kurangnya seorang rakan"
@@ -1022,8 +1081,8 @@ msgstr "Sila cuba lagi."
 msgid "Please wait a moment and try again."
 msgstr "Sila tunggu sebentar dan cuba lagi."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Imej sebelumnya"
 
@@ -1090,6 +1149,11 @@ msgstr "Alih keluar"
 msgid "Remove access rule"
 msgstr "Alih keluar peraturan akses"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Alih keluar peraturan akses untuk \"{0}\"?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Alih keluar akses?"
@@ -1129,7 +1193,7 @@ msgstr "Meletakkan jawatan..."
 msgid "Right to Left"
 msgstr "Kanan ke Kiri"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Baris setiap halaman"
 
@@ -1212,7 +1276,16 @@ msgstr "Pilih arah laman"
 msgid "Select theme preference"
 msgstr "Pilih keutamaan tema"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "dipilih"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Dipilih: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Hantar semula"
 
@@ -1321,6 +1394,7 @@ msgid "Sunday"
 msgstr "Ahad"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1352,6 +1426,10 @@ msgstr "Kod itu tidak betul atau telah tamat tempoh."
 msgid "The requested content could not be found."
 msgstr "Kandungan yang diminta tidak ditemui."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Laman ini tidak tersedia buat masa ini."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Tema"
@@ -1360,6 +1438,10 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tetapan Tema"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Halaman ini belum dibuat lagi."
+
 #: src/features/words/index.tsx:995
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ini akan memadam permainan dan sembangnya secara kekal. Tindakan ini tidak boleh dibuat asal."
@@ -1367,6 +1449,10 @@ msgstr "Ini akan memadam permainan dan sembangnya secara kekal. Tindakan ini tid
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Khamis"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Ke"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1463,7 +1549,7 @@ msgstr "Akses Tidak Dibenarkan"
 msgid "United States"
 msgstr "Amerika Syarikat"
 
-#: src/hooks/useGameWebsocket.ts:126
+#: src/hooks/useGameWebsocket.ts:178
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
@@ -1483,7 +1569,7 @@ msgstr "Pengguna"
 msgid "Validation offline — you can still submit."
 msgstr "Pengesahan di luar talian — anda masih boleh hantar."
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Kod pengesahan"
 
@@ -1497,7 +1583,7 @@ msgstr "Pengesahan gagal"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Sahkan"
 
@@ -1505,9 +1591,14 @@ msgstr "Sahkan"
 msgid "Verify email address"
 msgstr "Sahkan alamat e-mel"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "Imej kecil video"
+
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Pemapar video: {0}"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
@@ -1517,10 +1608,15 @@ msgstr "Lihat"
 msgid "View all"
 msgstr "Lihat semua"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Lihat semua pemberitahuan"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Kami menghantar kod pengesahan ke <0>{0}</0>. Masukkan kod di bawah untuk mengesahkan alamat e-mel anda."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1553,6 +1649,10 @@ msgstr "Anda"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Anda tidak mempunyai akses kepada bahagian ini."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Anda tidak mempunyai kebenaran yang diperlukan <0/>untuk melihat sumber ini."
 
 #: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117

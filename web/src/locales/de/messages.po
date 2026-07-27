@@ -23,6 +23,11 @@ msgstr "Bitte überprüfe deine Internetverbindung und versuche es erneut."
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# Spieler} other {# Spieler}}"
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# ausgewählt} other {# ausgewählt}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:124
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -31,7 +36,7 @@ msgstr "{0, plural, one {# Stein übrig} other {# Steine übrig}}"
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:214
+#: src/features/words/components/words-board.tsx:219
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} auf {1}{2}, zum Entfernen klicken"
 
@@ -46,6 +51,10 @@ msgstr "{0} hat <0>{1}</0> gespielt"
 msgid "{0} tiles left"
 msgstr "{0} Steine übrig"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "{entityLabel}-Name"
+
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
 msgstr "{name} gewinnt"
@@ -53,6 +62,22 @@ msgstr "{name} gewinnt"
 #: src/features/words/lib/header-model.ts:98
 msgid "{name}'s move"
 msgstr "Zug von {name}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {{entityName} ausgewählt} other {{manyName} ausgewählt}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {# {entityName} ausgewählt. Die Symbolleiste für Sammelaktionen ist verfügbar.} other {# {manyName} ausgewählt. Die Symbolleiste für Sammelaktionen ist verfügbar.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# ausgewählt} other {# ausgewählt}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Sammelaktionen für # ausgewähltes {entityName}} other {Sammelaktionen für # ausgewählte {manyName}}}"
 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
@@ -200,9 +225,9 @@ msgstr "Authenticator-Code"
 msgid "Back"
 msgstr "Zurück"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Zurück zur Startseite"
 
@@ -223,7 +248,7 @@ msgstr "Interesse hervorheben"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:145
 #: src/features/words/components/new-game.tsx:189
 #: src/features/words/index.tsx:875
@@ -295,28 +320,29 @@ msgstr "Leeren"
 msgid "Clear all"
 msgstr "Alle leeren"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Filter zurücksetzen"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Auswahl aufheben"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Auswahl aufheben (Esc)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Schließen"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Navigation schließen"
 
@@ -411,6 +437,7 @@ msgid "Custom"
 msgstr "Benutzerdefiniert"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Dunkel"
@@ -491,8 +518,8 @@ msgstr "Schließen"
 msgid "Displays the mobile sidebar."
 msgstr "Zeigt die mobile Seitenleiste an."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Herunterladen"
 
@@ -514,7 +541,7 @@ msgstr "E-Mail-Code"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:216
+#: src/features/words/components/words-board.tsx:221
 msgid "Empty square {0}{1}"
 msgstr "Leeres Feld {0}{1}"
 
@@ -583,13 +610,21 @@ msgstr "Spiel konnte nicht erstellt werden"
 msgid "Failed to create rematch"
 msgstr "Revanche konnte nicht erstellt werden"
 
-#: src/features/words/index.tsx:368
+#: src/features/words/index.tsx:369
 msgid "Failed to delete game"
 msgstr "Spiel konnte nicht gelöscht werden"
 
 #: src/features/words/index.tsx:342
 msgid "Failed to exchange"
 msgstr "Tausch fehlgeschlagen"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Bild konnte nicht geladen werden"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Video konnte nicht geladen werden"
 
 #: src/features/words/index.tsx:332
 msgid "Failed to pass"
@@ -657,7 +692,7 @@ msgstr "Vollständiges Layout"
 msgid "Game created"
 msgstr "Spiel erstellt"
 
-#: src/features/words/index.tsx:364
+#: src/features/words/index.tsx:365
 msgid "Game deleted"
 msgstr "Spiel gelöscht"
 
@@ -666,29 +701,29 @@ msgstr "Spiel gelöscht"
 msgid "Game over"
 msgstr "Spiel beendet"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Zurück"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Zur ersten Seite"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Zur letzten Seite"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Zur nächsten Seite"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Zu Seite {pageNumber} gehen"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Zur vorherigen Seite"
 
@@ -715,6 +750,11 @@ msgstr "Startseite"
 msgid "Hot"
 msgstr "Heiß"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Bildbetrachter: {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Imperial"
@@ -734,6 +774,10 @@ msgstr "Ungültiger Zug"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Ungültiger Bestätigungscode"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Die gesuchte Seite <0/>existiert nicht oder wurde entfernt."
 
 #: src/features/words/components/new-game.tsx:165
 msgid "Language"
@@ -758,6 +802,7 @@ msgid "Left to Right"
 msgstr "Links nach Rechts"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Hell"
@@ -772,8 +817,8 @@ msgstr "Inhalt wird geladen…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Wird geladen…"
+msgid "Loading..."
+msgstr "Wird geladen..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -797,8 +842,8 @@ msgstr "Erfolgreich abgemeldet"
 msgid "Logging out…"
 msgstr "Abmelden …"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Alle als gelesen markieren"
@@ -843,8 +888,8 @@ msgstr "Neu"
 msgid "New game"
 msgstr "Neues Spiel"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Nächstes Bild"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "Kein Profil"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Keine Ergebnisse gefunden."
 
@@ -926,6 +971,11 @@ msgstr "Nicht festgelegt"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "Benachrichtigungen"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Benachrichtigungen: {0}"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
@@ -981,6 +1031,11 @@ msgstr "Sonstige"
 msgid "Owner"
 msgstr "Eigentümer"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Seite {currentPage} von {totalPages}"
+
 #: src/features/words/index.tsx:790
 msgid "Pass"
 msgstr "Passen"
@@ -1010,6 +1065,10 @@ msgstr "Spielen mit {playerCount} Spielern"
 msgid "Please check your internet connection and try again."
 msgstr "Bitte überprüfe deine Internetverbindung und versuche es erneut."
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Bitte melden Sie sich mit den entsprechenden Zugangsdaten an, <0/> um auf diese Ressource zuzugreifen."
+
 #: src/features/words/components/new-game.tsx:78
 msgid "Please select at least one friend"
 msgstr "Bitte wählen Sie mindestens einen Freund aus"
@@ -1022,8 +1081,8 @@ msgstr "Bitte versuche es erneut."
 msgid "Please wait a moment and try again."
 msgstr "Bitte warten Sie einen Moment und versuchen Sie es erneut."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Vorheriges Bild"
 
@@ -1090,6 +1149,11 @@ msgstr "Entfernen"
 msgid "Remove access rule"
 msgstr "Zugriffsregel entfernen"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Zugriffsregel für „{0}“ entfernen?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Zugriff entfernen?"
@@ -1129,7 +1193,7 @@ msgstr "Wird aufgegeben …"
 msgid "Right to Left"
 msgstr "Rechts nach links"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Zeilen pro Seite"
 
@@ -1212,7 +1276,16 @@ msgstr "Site-Richtung auswählen"
 msgid "Select theme preference"
 msgstr "Theme-Einstellung auswählen"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "ausgewählt"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Ausgewählt: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Erneut senden"
 
@@ -1321,6 +1394,7 @@ msgid "Sunday"
 msgstr "Sonntag"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1352,6 +1426,10 @@ msgstr "Dieser Code ist falsch oder abgelaufen."
 msgid "The requested content could not be found."
 msgstr "Der angeforderte Inhalt wurde nicht gefunden."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Die Website ist derzeit nicht verfügbar."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Theme"
@@ -1360,6 +1438,10 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Theme-Einstellungen"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Diese Seite wurde noch nicht erstellt."
+
 #: src/features/words/index.tsx:995
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Dadurch werden das Spiel und sein Chat dauerhaft gelöscht. Dies kann nicht rückgängig gemacht werden."
@@ -1367,6 +1449,10 @@ msgstr "Dadurch werden das Spiel und sein Chat dauerhaft gelöscht. Dies kann ni
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Donnerstag"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Nach"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1463,7 +1549,7 @@ msgstr "Nicht zugelassener Zugriff"
 msgid "United States"
 msgstr "Vereinigte Staaten"
 
-#: src/hooks/useGameWebsocket.ts:126
+#: src/hooks/useGameWebsocket.ts:178
 msgid "Unknown"
 msgstr "Unbekannt"
 
@@ -1483,7 +1569,7 @@ msgstr "Benutzer"
 msgid "Validation offline — you can still submit."
 msgstr "Validierung offline – du kannst trotzdem einreichen."
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Verifizierungscode"
 
@@ -1497,7 +1583,7 @@ msgstr "Verifizierung fehlgeschlagen"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Verifizieren"
 
@@ -1505,9 +1591,14 @@ msgstr "Verifizieren"
 msgid "Verify email address"
 msgstr "E-Mail-Adresse verifizieren"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "Video-Vorschaubild"
+
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Videobetrachter: {0}"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
@@ -1517,10 +1608,15 @@ msgstr "Ansicht"
 msgid "View all"
 msgstr "Alle anzeigen"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Alle Benachrichtigungen anzeigen"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Wir haben einen Bestätigungscode an <0>{0}</0> gesendet. Geben Sie den Code unten ein, um Ihre E-Mail-Adresse zu bestätigen."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1553,6 +1649,10 @@ msgstr "Sie"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Sie haben keinen Zugriff auf diesen Bereich."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Sie haben nicht die erforderliche Berechtigung, <0/>um diese Ressource anzuzeigen."
 
 #: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117

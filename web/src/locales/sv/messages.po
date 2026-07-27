@@ -23,6 +23,11 @@ msgstr "Kontrollera din internetanslutning och försök igen."
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# spelare} other {# spelare}}"
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# vald} other {# valda}}"
+
 #. placeholder {0}: game.bag_count
 #: src/features/words/components/score-panel.tsx:124
 msgid "{0, plural, one {# tile left} other {# tiles left}}"
@@ -31,7 +36,7 @@ msgstr "{0, plural, one {# bricka kvar} other {# brickor kvar}}"
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:214
+#: src/features/words/components/words-board.tsx:219
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} vid {1}{2}, klicka för att ta bort"
 
@@ -46,6 +51,10 @@ msgstr "{0} spelade <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} brickor kvar"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "{entityLabel}-namn"
+
 #: src/features/words/lib/header-model.ts:109
 msgid "{name} wins"
 msgstr "{name} vinner"
@@ -53,6 +62,22 @@ msgstr "{name} vinner"
 #: src/features/words/lib/header-model.ts:98
 msgid "{name}'s move"
 msgstr "{name}s drag"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {{entityName} vald} other {{manyName} valda}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {# {entityName} vald. Verktygsfältet för massåtgärder är tillgängligt.} other {# {manyName} valda. Verktygsfältet för massåtgärder är tillgängligt.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# valda} other {# valda}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Massåtgärder för # vald {entityName}} other {Massåtgärder för # valda {manyName}}}"
 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
@@ -200,9 +225,9 @@ msgstr "Autentiseringskod"
 msgid "Back"
 msgstr "Tillbaka"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Tillbaka till start"
 
@@ -223,7 +248,7 @@ msgstr "Öka intresse"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:145
 #: src/features/words/components/new-game.tsx:189
 #: src/features/words/index.tsx:875
@@ -295,28 +320,29 @@ msgstr "Rensa"
 msgid "Clear all"
 msgstr "Rensa allt"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Rensa filter"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Rensa val"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Rensa val (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Stäng"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Stäng navigering"
 
@@ -411,6 +437,7 @@ msgid "Custom"
 msgstr "Anpassad"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Mörk"
@@ -491,8 +518,8 @@ msgstr "Avfärda"
 msgid "Displays the mobile sidebar."
 msgstr "Visar mobil-sidofältet."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Ladda ner"
 
@@ -514,7 +541,7 @@ msgstr "E-postkod"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:216
+#: src/features/words/components/words-board.tsx:221
 msgid "Empty square {0}{1}"
 msgstr "Tom ruta {0}{1}"
 
@@ -583,13 +610,21 @@ msgstr "Kunde inte skapa spel"
 msgid "Failed to create rematch"
 msgstr "Kunde inte skapa returmatch"
 
-#: src/features/words/index.tsx:368
+#: src/features/words/index.tsx:369
 msgid "Failed to delete game"
 msgstr "Kunde inte radera spel"
 
 #: src/features/words/index.tsx:342
 msgid "Failed to exchange"
 msgstr "Kunde inte byta"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Det gick inte att läsa in bilden"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Det gick inte att läsa in videon"
 
 #: src/features/words/index.tsx:332
 msgid "Failed to pass"
@@ -657,7 +692,7 @@ msgstr "Fullständig layout"
 msgid "Game created"
 msgstr "Spel skapat"
 
-#: src/features/words/index.tsx:364
+#: src/features/words/index.tsx:365
 msgid "Game deleted"
 msgstr "Spel raderat"
 
@@ -666,29 +701,29 @@ msgstr "Spel raderat"
 msgid "Game over"
 msgstr "Spelet är slut"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Tillbaka"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Gå till första sidan"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Gå till sista sidan"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Gå till nästa sida"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Gå till sida {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Gå till föregående sida"
 
@@ -715,6 +750,11 @@ msgstr "Hem"
 msgid "Hot"
 msgstr "Het"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Bildvisare: {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Imperial"
@@ -734,6 +774,10 @@ msgstr "Ogiltigt drag"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Ogiltig verifieringskod"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Det verkar som att sidan du letar efter <0/>inte finns eller har tagits bort."
 
 #: src/features/words/components/new-game.tsx:165
 msgid "Language"
@@ -758,6 +802,7 @@ msgid "Left to Right"
 msgstr "Vänster till höger"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Ljust"
@@ -772,8 +817,8 @@ msgstr "Läser in innehåll…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Läser in…"
+msgid "Loading..."
+msgstr "Läser in..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -797,8 +842,8 @@ msgstr "Utloggad"
 msgid "Logging out…"
 msgstr "Loggar ut…"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Markera alla som lästa"
@@ -843,8 +888,8 @@ msgstr "Ny"
 msgid "New game"
 msgstr "Nytt spel"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Nästa bild"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "Ingen profil"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Inga resultat hittades."
 
@@ -926,6 +971,11 @@ msgstr "Ej inställd"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "Aviseringar"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Aviseringar: {0}"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
@@ -981,6 +1031,11 @@ msgstr "Övrigt"
 msgid "Owner"
 msgstr "Ägare"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Sida {currentPage} av {totalPages}"
+
 #: src/features/words/index.tsx:790
 msgid "Pass"
 msgstr "Passa"
@@ -1010,6 +1065,10 @@ msgstr "Spelar med {playerCount} spelare"
 msgid "Please check your internet connection and try again."
 msgstr "Kontrollera din internetanslutning och försök igen."
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Logga in med rätt uppgifter <0/> för att komma åt den här resursen."
+
 #: src/features/words/components/new-game.tsx:78
 msgid "Please select at least one friend"
 msgstr "Välj minst en vän"
@@ -1022,8 +1081,8 @@ msgstr "Försök igen."
 msgid "Please wait a moment and try again."
 msgstr "Vänta en stund och försök igen."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Föregående bild"
 
@@ -1090,6 +1149,11 @@ msgstr "Ta bort"
 msgid "Remove access rule"
 msgstr "Ta bort åtkomstregel"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Ta bort åtkomstregeln för ”{0}”?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Ta bort åtkomst?"
@@ -1129,7 +1193,7 @@ msgstr "Ger upp..."
 msgid "Right to Left"
 msgstr "Höger till vänster"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Rader per sida"
 
@@ -1212,7 +1276,16 @@ msgstr "Välj webbplatsriktning"
 msgid "Select theme preference"
 msgstr "Välj temainställning"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "valda"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Valt: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Skicka igen"
 
@@ -1321,6 +1394,7 @@ msgid "Sunday"
 msgstr "Söndag"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1352,6 +1426,10 @@ msgstr "Koden är felaktig eller har upphört att gälla."
 msgid "The requested content could not be found."
 msgstr "Det begärda innehållet kunde inte hittas."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Webbplatsen är inte tillgänglig just nu."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Tema"
@@ -1360,6 +1438,10 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temainställningar"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Den här sidan har inte skapats än."
+
 #: src/features/words/index.tsx:995
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Detta tar bort partiet och dess chatt permanent. Detta går inte att ångra."
@@ -1367,6 +1449,10 @@ msgstr "Detta tar bort partiet och dess chatt permanent. Detta går inte att ån
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Torsdag"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Till"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1463,7 +1549,7 @@ msgstr "Obehörig åtkomst"
 msgid "United States"
 msgstr "USA"
 
-#: src/hooks/useGameWebsocket.ts:126
+#: src/hooks/useGameWebsocket.ts:178
 msgid "Unknown"
 msgstr "Okänd"
 
@@ -1483,7 +1569,7 @@ msgstr "Användare"
 msgid "Validation offline — you can still submit."
 msgstr "Valideringen är offline – du kan ändå skicka in draget."
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Verifieringskod"
 
@@ -1497,7 +1583,7 @@ msgstr "Verifiering misslyckades"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Verifiera"
 
@@ -1505,9 +1591,14 @@ msgstr "Verifiera"
 msgid "Verify email address"
 msgstr "Verifiera e-postadress"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "Videominiatyr"
+
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Videovisare: {0}"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
@@ -1517,10 +1608,15 @@ msgstr "Visa"
 msgid "View all"
 msgstr "Visa alla"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Visa alla aviseringar"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Vi skickade en verifieringskod till <0>{0}</0>. Ange koden nedan för att verifiera din e-postadress."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1553,6 +1649,10 @@ msgstr "Du"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Du har inte åtkomst till det här avsnittet."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Du har inte nödvändig behörighet <0/>för att visa den här resursen."
 
 #: src/features/words/components/score-panel.tsx:95
 #: src/features/words/lib/header-model.ts:117
