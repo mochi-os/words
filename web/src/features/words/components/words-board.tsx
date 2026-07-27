@@ -146,6 +146,11 @@ export function WordsBoard({
     <div
       className="mx-auto w-full"
       style={{ maxWidth: 'min(100cqw, 100cqh)' }}
+      // Exposes the status the board is actually rendering with, so a test can
+      // assert what the UI shows rather than scraping text - the message list
+      // keeps a "resigned" system entry even after reconciliation restores
+      // play, which makes any text scan permanently wrong.
+      data-game-status={gameStatus}
     >
       <div
         ref={gridRef}
