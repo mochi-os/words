@@ -27,6 +27,43 @@ def rack_value(rack):
 		total += TILE_VALUES.get(ch, 0)
 	return total
 
+def game_finish(game, scores, out):
+	"""Standard Scrabble end-of-game adjustments and winner.
+
+	scores maps each playing slot to its total before adjustments; out is
+	the slot that emptied its rack, or 0 for a pass-out ending.
+
+	Going out: every other player's leftover tiles come off their own
+	score and their sum is added to the player who went out. Pass-out:
+	each player's own leftovers come off their own score, nobody gains.
+	Winner is the highest adjusted total; a tie goes to the higher score
+	before adjustments, and a tie in both to the lowest slot. The rule
+	must be deterministic in full, because the finishing host computes it
+	once and every peer converges on the shipped result.
+
+	Returns (adjusted, winner slot)."""
+	adjusted = {}
+	bonus = 0
+	for n in range(1, game["player_count"] + 1):
+		if n == out:
+			# The row still holds the pre-move rack; the going-out player's
+			# rack is empty by definition.
+			penalty = 0
+		else:
+			penalty = rack_value(game["player" + str(n) + "_rack"])
+		adjusted[n] = scores[n] - penalty
+		if n != out:
+			bonus += penalty
+	if out:
+		adjusted[out] = scores[out] + bonus
+	victor = 1
+	for n in range(2, game["player_count"] + 1):
+		if adjusted[n] > adjusted[victor]:
+			victor = n
+		elif adjusted[n] == adjusted[victor] and scores[n] > scores[victor]:
+			victor = n
+	return adjusted, victor
+
 def make_bag():
 	"""Create a full bag of tiles as a string."""
 	tiles = []
@@ -993,20 +1030,22 @@ def action_move(a):
 	new_status = "finished" if game_over else "active"
 	winner = None
 
-	# Apply end-of-game rack penalties
+	# Standard end-of-game scoring. The winner comes from the adjusted
+	# totals, not from who went out: going out earns the rack bonus, but an
+	# opponent far enough ahead still wins - the old unconditional
+	# winner-is-the-mover converged the wrong answer to every peer.
 	score_updates = {}
 	if game_over:
-		bonus = 0
+		scores = {}
 		for i in range(1, game["player_count"] + 1):
-			if i == pnum:
-				continue
-			opponent_rack = game["player" + str(i) + "_rack"]
-			penalty = rack_value(opponent_rack)
-			bonus += penalty
-			opp_score_key = "player" + str(i) + "_score"
-			score_updates[opp_score_key] = game[opp_score_key] - penalty
-		new_score += bonus
-		winner = a.user.identity.id
+			scores[i] = game["player" + str(i) + "_score"]
+		scores[pnum] = new_score
+		adjusted, victor = game_finish(game, scores, pnum)
+		for i in range(1, game["player_count"] + 1):
+			if i != pnum:
+				score_updates["player" + str(i) + "_score"] = adjusted[i]
+		new_score = adjusted[pnum]
+		winner = game["player" + str(victor)]
 
 	new_turn = next_turn(game) if not game_over else game["current_turn"]
 
@@ -1087,19 +1126,27 @@ def action_pass(a):
 	new_status = "finished" if game_over else "active"
 	new_turn = next_turn(game) if not game_over else game["current_turn"]
 
-	# If game over, find winner by highest score
+	# Standard pass-out scoring: each player's own leftover tiles come off
+	# their own score, nobody gains, and the winner comes from the adjusted
+	# totals. The old code compared raw scores, so the same leftover Q cost
+	# ten points if someone went out and nothing if everyone passed.
 	winner = None
+	changes = {}
 	if game_over:
-		best_score = -1
+		scores = {}
 		for i in range(1, game["player_count"] + 1):
-			s = game["player" + str(i) + "_score"]
-			if s > best_score:
-				best_score = s
-				winner = game["player" + str(i)]
+			scores[i] = game["player" + str(i) + "_score"]
+		adjusted, victor = game_finish(game, scores, 0)
+		for i in range(1, game["player_count"] + 1):
+			changes["player" + str(i) + "_score"] = adjusted[i]
+		winner = game["player" + str(victor)]
 
 	now = mochi.time.now()
-	state = game_write(game, {"current_turn": new_turn, "consecutive_passes": new_consecutive,
-		"status": new_status, "winner": winner}, a.user.identity.id, now)
+	changes["current_turn"] = new_turn
+	changes["consecutive_passes"] = new_consecutive
+	changes["status"] = new_status
+	changes["winner"] = winner
+	state = game_write(game, changes, a.user.identity.id, now)
 	if state == None:
 		a.error.label(409, "errors.game_state_changed")
 		return
