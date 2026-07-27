@@ -81,6 +81,15 @@ def valid_board(board_str):
 				return False
 	return True
 
+def valid_rack(rack):
+	"""Validate a rack string: up to seven tiles, letters or blanks."""
+	if rack == None or len(rack) > 7:
+		return False
+	for ch in rack.elems():
+		if ch != "_" and (ch < "A" or ch > "Z"):
+			return False
+	return True
+
 # Commit hook: fires the chat-message-arrival websocket on every host
 # that sees a new messages row commit, whether locally (via action_send /
 # event_message calling mochi.db.commit.fire) or via replication apply
@@ -126,6 +135,17 @@ def words_ensure_commit_hook():
 # Database
 
 def database_upgrade(version):
+	if version == 3:
+		# Monotonic revision, bumped by every state change and carried on
+		# every outbound event. Local writes compare-and-swap on the value
+		# they read; inbound writes apply only when they carry a higher one.
+		# Existing rows start at 0 on both peers, so they stay in step.
+		found = False
+		for column in mochi.db.table("games"):
+			if column["name"] == "revision":
+				found = True
+		if not found:
+			mochi.db.execute("alter table games add column revision integer not null default 0")
 	if version == 2:
 		# Drop the pre-2026-07 broadcast tables left in the app data DB when
 		# broadcast state moved to the per-app system DB - inert, but stale
@@ -162,6 +182,7 @@ def database_create():
 		move_count integer not null default 0,
 		consecutive_passes integer not null default 0,
 		key text not null,
+		revision integer not null default 0,
 		updated integer not null,
 		created integer not null
 	)""")
@@ -349,6 +370,52 @@ def strip_other_racks(game, user_id):
 	# Remove the actual bag contents
 	result.pop("bag", None)
 	return result
+
+# Concurrency control.
+#
+# Nothing serialises HTTP actions for a (user, app): core's per-worker
+# guarantee (protocol2_worker.go) covers inbound P2P frames only, and
+# db_app's lock guards schema creation, not handler execution. So two
+# HTTP actions, or an HTTP action and an inbound event, can all read the
+# same games row and write over each other. That matters most here
+# because scores are read-modify-write, so a lost update silently drops
+# points rather than merely reordering moves.
+#
+# Every state change therefore bumps a monotonic revision. Local writes
+# compare-and-swap on the value they read; inbound writes apply only when
+# they carry a higher one. Monotonic ordering is what makes a rejected
+# inbound event safe to discard - core acks a handler that simply returns
+# (protocol2_worker.go run/handle), so the sender never retries, and a
+# drop would be permanent. Because the revision only ever moves forward,
+# a rejected event is by definition one whose state we have already
+# reached or passed, so nothing is lost.
+
+def game_write(game, columns, values, now):
+	"""Apply a local state change, guarding on the revision we read.
+
+	Returns the new revision, or 0 when another writer got there first -
+	in which case the caller must abandon the change entirely, emitting
+	no message, no websocket payload and no P2P event."""
+	revision = game["revision"] + 1
+	sql = "update games set " + columns + ", revision=?, updated=? where id=? and revision=?"
+	params = values + [revision, now, game["id"], game["revision"]]
+	if mochi.db.execute(sql, *params) == 0:
+		return 0
+	return revision
+
+def game_apply(e, game, columns, values, now):
+	"""Apply an inbound state change if it is newer than the row we hold.
+
+	The sender's post-write revision orders the change. A peer predating
+	the field sends none, and falls back to our own read value plus one,
+	which makes the write behave exactly like the local compare-and-swap.
+	Returns False when the row already sits at or past this state."""
+	revision = event_integer(e.content("revision"), None)
+	if revision == None:
+		revision = game["revision"] + 1
+	sql = "update games set " + columns + ", revision=?, updated=? where id=? and revision<?"
+	params = values + [revision, now, game["id"], revision]
+	return mochi.db.execute(sql, *params) > 0
 
 # Actions
 
@@ -666,26 +733,14 @@ def action_move(a):
 
 	now = mochi.time.now()
 
-	# Build update SQL
-	sql = "update games set board=?, bag=?, " + rack_key + "=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=?"
-	params = [board, new_bag, new_rack, new_score, new_turn, new_move_count, new_status, winner, now]
+	# Build the column list; game_write appends the revision predicate.
+	columns = "board=?, bag=?, " + rack_key + "=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?"
+	values = [board, new_bag, new_rack, new_score, new_turn, new_move_count, new_status, winner]
 	for k, v in score_updates.items():
-		sql += ", " + k + "=?"
-		params.append(v)
-	# Compare-and-swap against the turn and move count we validated against.
-	# Nothing serialises HTTP actions for a (user, app) - core's per-worker
-	# guarantee covers inbound P2P frames only - so a double submit, or the
-	# opponent's move landing in the same instant, otherwise lets both
-	# requests validate the same turn. That matters more here than in
-	# chess/go because new_score is read-modify-write, so the loser's
-	# points would be silently dropped rather than merely reordered.
-	sql += " where id=? and current_turn=? and move_count=? and status=?"
-	params.append(game["id"])
-	params.append(game["current_turn"])
-	params.append(game["move_count"])
-	params.append(game["status"])
-	changed = mochi.db.execute(sql, *params)
-	if changed == 0:
+		columns += ", " + k + "=?"
+		values.append(v)
+	revision = game_write(game, columns, values, now)
+	if revision == 0:
 		a.error.label(409, "errors.game_state_changed")
 		return
 
@@ -714,7 +769,12 @@ def action_move(a):
 		"board": board, "score": score, "player_number": pnum,
 		"current_turn": new_turn, "move_count": new_move_count,
 		"status": new_status, "winner": winner or "",
-		"new_score": new_score, "bag": new_bag,
+		"new_score": new_score, "bag": new_bag, "revision": revision,
+		# The mover's rack after drawing. Without this each host keeps every
+		# opponent's OPENING rack for the whole game, and the player who goes
+		# out then values their opponents' leftover tiles from that stale copy
+		# - so the endgame penalties were wrong on every side at once.
+		"rack": new_rack,
 	}
 	for k, v in score_updates.items():
 		p2p_data[k] = v
@@ -758,10 +818,11 @@ def action_pass(a):
 				winner = game["player" + str(i)]
 
 	now = mochi.time.now()
-	mochi.db.execute(
-		"update games set current_turn=?, consecutive_passes=?, status=?, winner=?, updated=? where id=?",
-		new_turn, new_consecutive, new_status, winner, now, game["id"]
-	)
+	revision = game_write(game, "current_turn=?, consecutive_passes=?, status=?, winner=?",
+		[new_turn, new_consecutive, new_status, winner], now)
+	if revision == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	id = mochi.uid()
 	player_name = get_player_name(game, pnum)
@@ -786,7 +847,7 @@ def action_pass(a):
 				"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
 				"body": body, "pass": True,
 				"current_turn": new_turn, "consecutive_passes": new_consecutive,
-				"status": new_status, "winner": winner or "",
+				"status": new_status, "winner": winner or "", "revision": revision,
 			}
 		)
 
@@ -845,10 +906,11 @@ def action_exchange(a):
 	new_turn = next_turn(game)
 	now = mochi.time.now()
 
-	mochi.db.execute(
-		"update games set bag=?, " + rack_key + "=?, current_turn=?, consecutive_passes=0, updated=? where id=?",
-		new_bag, new_rack, new_turn, now, game["id"]
-	)
+	revision = game_write(game, "bag=?, " + rack_key + "=?, current_turn=?, consecutive_passes=0",
+		[new_bag, new_rack, new_turn], now)
+	if revision == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	id = mochi.uid()
 	player_name = get_player_name(game, pnum)
@@ -869,7 +931,8 @@ def action_exchange(a):
 			{
 				"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
 				"body": body, "exchange": True,
-				"current_turn": new_turn, "bag": new_bag,
+				"current_turn": new_turn, "bag": new_bag, "revision": revision,
+				"rack": new_rack,
 			}
 		)
 
@@ -899,7 +962,10 @@ def action_resign(a):
 			winner = game["player" + str(i)]
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set status='resigned', winner=?, updated=? where id=?", winner, now, game["id"])
+	revision = game_write(game, "status='resigned', winner=?", [winner], now)
+	if revision == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	id = mochi.uid()
 	msg = a.user.identity.name + " resigned"
@@ -911,7 +977,7 @@ def action_resign(a):
 	for other in get_other_players(game, a.user.identity.id):
 		mochi.message.send(
 			{"from": a.user.identity.id, "to": other, "service": "words", "event": "resign"},
-			{"game": game["id"], "created": now, "body": msg, "winner": winner or ""}
+			{"game": game["id"], "created": now, "body": msg, "winner": winner or "", "revision": revision}
 		)
 
 	return {
@@ -991,6 +1057,15 @@ def event_new(e):
 	# Verify this player is in the game
 	my_id = e.header("to")
 	if my_id not in [p1, p2, p3, p4]:
+		return
+
+	# ...and that the sender is too. The friend check above only proves the
+	# sender is OUR friend, not that they are playing: without this a friend
+	# could plant a game between us and third parties, who would then satisfy
+	# every later is_player check on this host. Multiplayer Words does not
+	# require the participants to be friends of each other, so this is the
+	# only place the sender's own participation can be established.
+	if e.header("from") not in [p1, p2, p3, p4]:
 		return
 
 	# One entity per player slot, same rule action_create enforces: a
@@ -1110,21 +1185,35 @@ def event_move(e):
 			return
 		penalties[key] = int(value)
 
+	# Apply atomically, ordered by the sender's revision. The move_count
+	# gate above still rejects a stale event early, but on its own it was
+	# a read-then-write: a concurrent local action could advance the row
+	# between the check and this write, and the unconditional update then
+	# erased it.
 	now = mochi.time.now()
 	score_key = "player" + str(player_number) + "_score"
-	sql = "update games set board=?, "
-	params = [board]
+	columns = "board=?"
+	values = [board]
 	if bag != None:
-		sql += "bag=?, "
-		params.append(bag)
-	sql += score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=?"
-	params.extend([new_score, current_turn, move_count, status, winner, now])
+		columns += ", bag=?"
+		values.append(bag)
+	columns += ", " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?"
+	values.extend([new_score, current_turn, move_count, status, winner])
+	# Keep the sender's rack current. player_number is derived from the
+	# sender above, so the column is server-derived; the peer supplies only
+	# the tiles. A malformed rack drops the event rather than storing junk
+	# that would later be valued as a penalty.
+	rack = e.content("rack")
+	if rack != None:
+		if not valid_rack(rack):
+			return
+		columns += ", player" + str(player_number) + "_rack=?"
+		values.append(rack)
 	for k, v in penalties.items():
-		sql += ", " + k + "=?"
-		params.append(v)
-	sql += " where id=?"
-	params.append(game["id"])
-	mochi.db.execute(sql, *params)
+		columns += ", " + k + "=?"
+		values.append(v)
+	if not game_apply(e, game, columns, values, now):
+		return
 
 	id = e.content("message")
 	if not mochi.text.valid(str(id), "id"):
@@ -1183,10 +1272,9 @@ def event_pass(e):
 		winner = None
 
 	now = mochi.time.now()
-	mochi.db.execute(
-		"update games set current_turn=?, consecutive_passes=?, status=?, winner=?, updated=? where id=?",
-		current_turn, consecutive_passes, status, winner, now, game["id"]
-	)
+	if not game_apply(e, game, "current_turn=?, consecutive_passes=?, status=?, winner=?",
+			[current_turn, consecutive_passes, status, winner], now):
+		return
 
 	id = e.content("message")
 	if not mochi.text.valid(str(id), "id"):
@@ -1226,16 +1314,23 @@ def event_exchange(e):
 	bag = e.content("bag")
 
 	now = mochi.time.now()
+	columns = ""
+	values = []
 	if bag != None:
-		mochi.db.execute(
-			"update games set bag=?, current_turn=?, consecutive_passes=0, updated=? where id=?",
-			bag, current_turn, now, game["id"]
-		)
-	else:
-		mochi.db.execute(
-			"update games set current_turn=?, consecutive_passes=0, updated=? where id=?",
-			current_turn, now, game["id"]
-		)
+		columns = "bag=?, "
+		values.append(bag)
+	columns += "current_turn=?, consecutive_passes=0"
+	values.append(current_turn)
+	# An exchange swaps tiles, so the sender's rack changes here too.
+	rack = e.content("rack")
+	if rack != None:
+		sender_number = get_player_number(game, sender)
+		if sender_number < 1 or not valid_rack(rack):
+			return
+		columns += ", player" + str(sender_number) + "_rack=?"
+		values.append(rack)
+	if not game_apply(e, game, columns, values, now):
+		return
 
 	id = e.content("message")
 	if not mochi.text.valid(str(id), "id"):
@@ -1304,7 +1399,8 @@ def event_resign(e):
 	body = e.content("body") or "Opponent resigned"
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set status='resigned', winner=?, updated=? where id=?", winner, now, game["id"])
+	if not game_apply(e, game, "status='resigned', winner=?", [winner], now):
+		return
 
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
