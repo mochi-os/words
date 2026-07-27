@@ -73,15 +73,14 @@ def make_bag():
 	return "".join(tiles)
 
 def shuffle_string(s):
-	"""Shuffle a string using Fisher-Yates."""
+	"""Shuffle a string using Fisher-Yates.
+
+	mochi.random.integer gives an unbiased draw directly; the old version
+	built a big number out of alphanumeric characters and took a modulus,
+	which was both convoluted and modulo-biased."""
 	chars = list(s.elems())
-	n = len(chars)
-	for i in range(n - 1, 0, -1):
-		j_raw = mochi.random.alphanumeric(4)
-		j = 0
-		for ch in j_raw.elems():
-			j = j * 256 + ord(ch)
-		j = j % (i + 1)
+	for i in range(len(chars) - 1, 0, -1):
+		j = mochi.random.integer(0, i)
 		tmp = chars[i]
 		chars[i] = chars[j]
 		chars[j] = tmp

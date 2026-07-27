@@ -141,7 +141,7 @@ export function WordsGameView() {
   const selectedGame = useMemo(
     () =>
       games.find(
-        (g) => g.id === selectedGameId || g.fingerprint === selectedGameId
+        (g) => g.id === selectedGameId
       ) ?? null,
     [games, selectedGameId]
   )

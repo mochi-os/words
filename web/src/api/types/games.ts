@@ -5,7 +5,6 @@
 
 export interface Game {
   id: string
-  fingerprint?: string
   language: string
   player_count: number
   player1: string
@@ -37,7 +36,6 @@ export interface Game {
 // Lightweight game type for list view (no rack/bag info)
 export interface GameListItem {
   id: string
-  fingerprint?: string
   language: string
   player_count: number
   player1: string

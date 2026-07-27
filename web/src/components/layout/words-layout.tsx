@@ -59,13 +59,7 @@ function WordsLayoutInner() {
 
   useEffect(() => {
     if (urlGameId) {
-      const game = games.find(
-        (g) => g.id === urlGameId || g.fingerprint === urlGameId
-      )
-      const name = game && myIdentity
-        ? getPlayerNames(game, myIdentity)
-        : undefined
-      setGame(urlGameId, name)
+      setGame(urlGameId)
     } else {
       setGame(null)
     }
@@ -86,7 +80,7 @@ function WordsLayoutInner() {
         title: t`Active games`,
         items: activeGames.map((game) => ({
           title: getName(game),
-          url: `/${game.fingerprint ?? game.id}`,
+          url: `/${game.id}`,
           badge: myIdentity && isMyTurn(game, myIdentity) ? '!' : undefined,
         })),
       })
@@ -97,7 +91,7 @@ function WordsLayoutInner() {
         title: t`Completed`,
         items: completedGames.map((game) => ({
           title: getName(game),
-          url: `/${game.fingerprint ?? game.id}`,
+          url: `/${game.id}`,
           className: 'text-muted-foreground',
         })),
       })
