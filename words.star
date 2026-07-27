@@ -405,16 +405,22 @@ def strip_other_racks(game, user_id):
 # Ordering is therefore the tuple (terminal, revision, writer, event),
 # compared lexicographically:
 #
-#   terminal  1 when the status ends the game, else 0. Terminal states
-#             are absorbing, so a resignation is never silently undone by
-#             a concurrent move - the one outcome a player would read as
-#             a bug rather than a race.
+#   revision  the logical counter, and it leads. An earlier version put
+#             terminal first, which made EVERY terminal state outrank every
+#             non-terminal one at any counter: a player resigning from a
+#             stale revision-4 view then rewound peers at revision 30 to
+#             revision-4 boards, racks and scores. Causality first.
+#   terminal  1 when the status ends the game, else 0. Second, so it decides
+#             only genuine same-counter conflicts - a resignation racing a
+#             move at the same revision survives on both peers - without
+#             letting an ancient terminal defeat newer state. A resignation
+#             made against a state that no longer exists is discarded, and
+#             the player reissues it once caught up.
 #
 # The snapshot carries every rack. That costs nothing here: replicating
 # all racks to all participants is already an accepted property of this
 # app, and it is what makes a lagging peer able to value an opponent's
 # leftover tiles correctly at game end.
-#   revision  the logical counter.
 #   writer    the entity that produced the state. Breaks ties between
 #             peers at the same counter, identically on both sides.
 #   event     a per-write uid. Only reachable if one writer produced two
@@ -450,6 +456,39 @@ def game_state(game, changes):
 	for key, value in changes.items():
 		state[key] = "" if value == None else value
 	return state
+
+def game_snapshot_valid(game, state):
+	"""Validate a complete inbound snapshot before it can replace our row.
+
+	Broader than the other games: a snapshot arriving on any event type
+	can replace the board, the bag, every rack and every score, and none
+	of those handlers validate those fields themselves."""
+	if not valid_board(state["board"]):
+		return False
+	if len(state["bag"]) > 200:
+		return False
+	for ch in state["bag"].elems():
+		if ch != "_" and (ch < "A" or ch > "Z"):
+			return False
+	for n in range(1, 5):
+		if not valid_rack(state["player" + str(n) + "_rack"]):
+			return False
+		if not mochi.text.valid(str(state["player" + str(n) + "_score"]), "integer"):
+			return False
+	if not mochi.text.valid(str(state["current_turn"]), "integer"):
+		return False
+	if not valid_turn(game, int(state["current_turn"])):
+		return False
+	if not mochi.text.valid(str(state["move_count"]), "integer"):
+		return False
+	if not mochi.text.valid(str(state["consecutive_passes"]), "integer"):
+		return False
+	if state["status"] not in ["active", "finished", "resigned"]:
+		return False
+	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
+	if state["winner"] and state["winner"] not in players:
+		return False
+	return True
 
 def game_write(game, changes, writer, now):
 	"""Apply a local change, guarding on the exact tuple we read.
@@ -489,7 +528,14 @@ def game_apply(e, game, legacy, now):
 		state = {}
 		for column in GAME_COLUMNS:
 			value = e.content(column)
-			state[column] = "" if value == None else value
+			# A field absent from a snapshot is a truncated snapshot, not an
+			# empty value: coercing it to "" would let a partial event clear
+			# state the sender never meant to change.
+			if value == None:
+				return None
+			state[column] = value
+		if not game_snapshot_valid(game, state):
+			return None
 		revision = e.content("revision")
 		if not mochi.text.valid(str(revision), "integer"):
 			return None
@@ -513,9 +559,9 @@ def game_apply(e, game, legacy, now):
 		params.append(value)
 	sql = ("update games set " + ", ".join(sets) +
 		", revision=?, writer=?, event=?, updated=? where id=?" +
-		" and (case when status in ('finished','resigned') then 1 else 0 end, revision, writer, event) < (?, ?, ?, ?)")
+		" and (revision, case when status in ('finished','resigned') then 1 else 0 end, writer, event) < (?, ?, ?, ?)")
 	params.extend([revision, writer, event, now, game["id"],
-		game_terminal(state["status"]), revision, writer, event])
+		revision, game_terminal(state["status"]), writer, event])
 	if mochi.db.execute(sql, *params) == 0:
 		return None
 	return state
@@ -1317,7 +1363,8 @@ def event_move(e):
 		legacy["player" + str(player_number) + "_rack"] = rack
 	for k, v in penalties.items():
 		legacy[k] = v
-	if game_apply(e, game, legacy, now) == None:
+	state = game_apply(e, game, legacy, now)
+	if state == None:
 		return
 
 	id = e.content("message")
@@ -1345,6 +1392,11 @@ def event_move(e):
 	for k, v in penalties.items():
 		ws_data[k] = v
 	# Skip commit-hook conversion: matches action_move — shared (games, update) shape and per-move score delta isn't in the row.
+	# A snapshot may have repaired more than this event's own subject - a pass
+	# can carry a board, racks and scores the peer never received - so send the
+	# applied state, not just this event's fields.
+	for key, value in state.items():
+		ws_data[key] = value
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=body), "/words/" + game["id"], event_id="move:" + str(id))
 
@@ -1377,9 +1429,10 @@ def event_pass(e):
 		winner = None
 
 	now = mochi.time.now()
-	if game_apply(e, game, {"current_turn": current_turn,
+	state = game_apply(e, game, {"current_turn": current_turn,
 			"consecutive_passes": consecutive_passes, "status": status,
-			"winner": winner}, now) == None:
+			"winner": winner}, now)
+	if state == None:
 		return
 
 	id = e.content("message")
@@ -1399,6 +1452,11 @@ def event_pass(e):
 		"status": status, "winner": winner or "",
 	}
 	# Skip commit-hook conversion: matches action_pass — shared (games, update) shape and a pass flag the hook can't infer from row state.
+	# A snapshot may have repaired more than this event's own subject - a pass
+	# can carry a board, racks and scores the peer never received - so send the
+	# applied state, not just this event's fields.
+	for key, value in state.items():
+		ws_data[key] = value
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.passed", name=name), "/words/" + game["id"], event_id="pass:" + str(id))
 
@@ -1430,7 +1488,8 @@ def event_exchange(e):
 		if sender_number < 1 or not valid_rack(rack):
 			return
 		legacy["player" + str(sender_number) + "_rack"] = rack
-	if game_apply(e, game, legacy, now) == None:
+	state = game_apply(e, game, legacy, now)
+	if state == None:
 		return
 
 	id = e.content("message")
@@ -1450,6 +1509,11 @@ def event_exchange(e):
 		"current_turn": current_turn, "bag_count": bag_count,
 	}
 	# Skip commit-hook conversion: matches action_exchange — shared (games, update) shape and an exchange flag the hook can't infer from row state.
+	# A snapshot may have repaired more than this event's own subject - a pass
+	# can carry a board, racks and scores the peer never received - so send the
+	# applied state, not just this event's fields.
+	for key, value in state.items():
+		ws_data[key] = value
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.exchanged_tiles", name=name), "/words/" + game["id"], event_id="exchange:" + str(id))
 
@@ -1500,12 +1564,18 @@ def event_resign(e):
 	body = e.content("body") or "Opponent resigned"
 
 	now = mochi.time.now()
-	if game_apply(e, game, {"status": "resigned", "winner": winner}, now) == None:
+	state = game_apply(e, game, {"status": "resigned", "winner": winner}, now)
+	if state == None:
 		return
 
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	# Skip commit-hook conversion: matches action_resign — payload carries an event marker and the winner from the games row, neither of which is on the messages row alone.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""})
+	ws_data = {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""}
+	# A snapshot may have repaired more than this event's own subject, so send
+	# the applied state rather than just this event's fields.
+	for key, value in state.items():
+		ws_data[key] = value
+	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.game"), body, "/words/" + game["id"], event_id="resign:" + game["id"])
