@@ -1089,18 +1089,42 @@ def event_move(e):
 
 	bag = e.content("bag")
 
+	# End-of-game rack penalties. When a move empties the mover's rack,
+	# action_move subtracts each opponent's leftover rack value from their
+	# score and ships the results as playerN_score keys. Without reading them
+	# back here the mover's final scoreboard and every opponent's disagree
+	# permanently, on every completed game.
+	#
+	# The slot index comes from this bounded loop over the game's own
+	# player_count, never from the payload, so the column name stays
+	# server-derived and the peer supplies only the value.
+	penalties = {}
+	for n in range(1, game["player_count"] + 1):
+		if n == player_number:
+			continue
+		key = "player" + str(n) + "_score"
+		value = e.content(key)
+		if value == None or value == "":
+			continue
+		if not mochi.text.valid(str(value), "integer"):
+			return
+		penalties[key] = int(value)
+
 	now = mochi.time.now()
 	score_key = "player" + str(player_number) + "_score"
+	sql = "update games set board=?, "
+	params = [board]
 	if bag != None:
-		mochi.db.execute(
-			"update games set board=?, bag=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=? where id=?",
-			board, bag, new_score, current_turn, move_count, status, winner, now, game["id"]
-		)
-	else:
-		mochi.db.execute(
-			"update games set board=?, " + score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=? where id=?",
-			board, new_score, current_turn, move_count, status, winner, now, game["id"]
-		)
+		sql += "bag=?, "
+		params.append(bag)
+	sql += score_key + "=?, current_turn=?, move_count=?, consecutive_passes=0, status=?, winner=?, updated=?"
+	params.extend([new_score, current_turn, move_count, status, winner, now])
+	for k, v in penalties.items():
+		sql += ", " + k + "=?"
+		params.append(v)
+	sql += " where id=?"
+	params.append(game["id"])
+	mochi.db.execute(sql, *params)
 
 	id = e.content("message")
 	if not mochi.text.valid(str(id), "id"):
@@ -1122,6 +1146,10 @@ def event_move(e):
 		"player" + str(player_number) + "_score": new_score,
 		"bag_count": bag_count,
 	}
+	# Mirror action_move: an open client must see the penalised opponent
+	# scores land, not just the mover's own.
+	for k, v in penalties.items():
+		ws_data[k] = v
 	# Skip commit-hook conversion: matches action_move — shared (games, update) shape and per-move score delta isn't in the row.
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=body), "/words/" + game["id"], event_id="move:" + str(id))
