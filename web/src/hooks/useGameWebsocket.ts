@@ -103,6 +103,19 @@ const handleWebsocketPayload = (
     })
   }
 
+  // Any payload carrying a board is a complete applied snapshot, whatever the
+  // event was: a resignation can carry a move this client never received,
+  // because the server applies the whole state and only the whole state.
+  // Refetch rather than merging by hand - rack and bag are private and the
+  // payload's copies are not the ones this viewer is entitled to.
+  if (msgType !== 'move' && payload.board) {
+    void queryClient.invalidateQueries({
+      queryKey: gameKeys.detail(gameId),
+      exact: true,
+    })
+    void queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
+  }
+
   // Handle move — refetch detail for updated rack + bag_count (private,
   // not in the payload). Skip our own echo: the move/pass/exchange
   // mutation already invalidated detail, messages, and the list.

@@ -435,11 +435,36 @@ def strip_other_racks(game, user_id):
 # any handler that returns cleanly (protocol2_worker.go), so nothing
 # retries it.
 
+#
+# Protocol invariants. These are the properties the code above is meant to
+# hold; anything added here should be tested against them, not just against a
+# final database row.
+#
+#   1. Every applied event carries one complete, validated state.
+#   2. Every replica deterministically retains the maximum version.
+#   3. A rejected sender eventually learns the dominating version (event_sync).
+#   4. Browser state eventually equals its local canonical row.
+#   5. History divergence is permitted and is NOT a bug.
+#
+# On (5): the games row is canonical. The messages table is an activity feed,
+# not an authoritative ledger of moves and events - under concurrent writes
+# each peer keeps its own losing action, so two peers can legitimately show
+# different system messages for the same game. Do not write code that
+# reconstructs game state from message history; it cannot.
+
 GAME_COLUMNS = ["board", "bag",
 	"player1_rack", "player2_rack", "player3_rack", "player4_rack",
 	"player1_score", "player2_score", "player3_score", "player4_score",
 	"current_turn", "move_count", "consecutive_passes", "status", "winner"]
 GAME_TERMINAL = ["finished", "resigned"]
+
+# Columns a websocket payload may carry. The snapshot the peers exchange holds
+# every rack and the bag; the browser must not, because the UI hides other
+# players' tiles and the viewer refetches its own rack through the API, which
+# applies strip_other_racks.
+GAME_PUBLIC = ["board", "player1_score", "player2_score", "player3_score",
+	"player4_score", "current_turn", "move_count", "consecutive_passes",
+	"status", "winner"]
 
 def game_terminal(status):
 	return 1 if status in GAME_TERMINAL else 0
@@ -515,7 +540,7 @@ def game_write(game, changes, writer, now):
 	state["snapshot"] = 1
 	return state
 
-def game_apply(e, game, legacy, now):
+def game_apply(e, game, legacy, now, reconcile=True):
 	"""Apply an inbound change if it outranks the row we hold.
 
 	Peers on this version send a complete snapshot and the full tuple.
@@ -540,8 +565,18 @@ def game_apply(e, game, legacy, now):
 		if not mochi.text.valid(str(revision), "integer"):
 			return None
 		revision = int(revision)
-		writer = e.content("writer") or ""
-		event = e.content("event") or ""
+		if revision < 0:
+			return None
+		# Ordering metadata, not game state, but the whole design rests on it
+		# being well formed. writer must be the authenticated sender: it
+		# decides every same-revision tie, so a peer naming someone else could
+		# steer them all.
+		writer = e.content("writer")
+		if writer != e.header("from"):
+			return None
+		event = e.content("event")
+		if not event or not mochi.text.valid(str(event), "id"):
+			return None
 	else:
 		state = {}
 		for key, value in legacy.items():
@@ -563,8 +598,48 @@ def game_apply(e, game, legacy, now):
 	params.extend([revision, writer, event, now, game["id"],
 		revision, game_terminal(state["status"]), writer, event])
 	if mochi.db.execute(sql, *params) == 0:
+		# Our state dominates. Rejecting is only safe if the sender eventually
+		# learns why, otherwise a peer that acted on a stale view sits on it
+		# forever - core acks a handler that returns cleanly, so nothing else
+		# tells them. Send our winning snapshot back. reconcile is False on
+		# the sync path itself so this cannot ping-pong.
+		if reconcile:
+			game_reconcile(e, game)
 		return None
 	return state
+
+def game_reconcile(e, game):
+	"""Send our dominating state back to a peer whose event we rejected."""
+	current = mochi.db.row("select * from games where id=?", game["id"])
+	if not current:
+		return
+	state = game_state(current, {})
+	state["revision"] = current["revision"]
+	state["writer"] = current["writer"] or ""
+	state["event"] = current["event"] or ""
+	state["snapshot"] = 1
+	state["game"] = current["id"]
+	# Only a peer that already wrote the state we hold can be named as its
+	# writer, so an empty writer means there is nothing authoritative to
+	# reconcile with yet.
+	if not state["writer"]:
+		return
+	mochi.message.send(
+		{"from": e.header("to"), "to": e.header("from"), "service": "words", "event": "sync"},
+		state
+	)
+
+def event_sync(e):
+	"""Receive a peer's dominating state after they rejected one of ours."""
+	game = mochi.db.row("select * from games where id=?", e.content("game"))
+	if not game:
+		return
+	sender = e.header("from")
+	if not is_player(game, sender):
+		return
+	# reconcile=False: if OUR state dominates theirs we simply drop it rather
+	# than answering, which is what terminates the exchange.
+	game_apply(e, game, {}, mochi.time.now(), False)
 
 # Actions
 
@@ -1393,10 +1468,10 @@ def event_move(e):
 		ws_data[k] = v
 	# Skip commit-hook conversion: matches action_move — shared (games, update) shape and per-move score delta isn't in the row.
 	# A snapshot may have repaired more than this event's own subject - a pass
-	# can carry a board, racks and scores the peer never received - so send the
-	# applied state, not just this event's fields.
-	for key, value in state.items():
-		ws_data[key] = value
+	# can carry a board and scores the peer never received - so send the
+	# applied state, minus the racks and bag the browser must not see.
+	for key in GAME_PUBLIC:
+		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=body), "/words/" + game["id"], event_id="move:" + str(id))
 
@@ -1453,10 +1528,10 @@ def event_pass(e):
 	}
 	# Skip commit-hook conversion: matches action_pass — shared (games, update) shape and a pass flag the hook can't infer from row state.
 	# A snapshot may have repaired more than this event's own subject - a pass
-	# can carry a board, racks and scores the peer never received - so send the
-	# applied state, not just this event's fields.
-	for key, value in state.items():
-		ws_data[key] = value
+	# can carry a board and scores the peer never received - so send the
+	# applied state, minus the racks and bag the browser must not see.
+	for key in GAME_PUBLIC:
+		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.passed", name=name), "/words/" + game["id"], event_id="pass:" + str(id))
 
@@ -1510,10 +1585,10 @@ def event_exchange(e):
 	}
 	# Skip commit-hook conversion: matches action_exchange — shared (games, update) shape and an exchange flag the hook can't infer from row state.
 	# A snapshot may have repaired more than this event's own subject - a pass
-	# can carry a board, racks and scores the peer never received - so send the
-	# applied state, not just this event's fields.
-	for key, value in state.items():
-		ws_data[key] = value
+	# can carry a board and scores the peer never received - so send the
+	# applied state, minus the racks and bag the browser must not see.
+	for key in GAME_PUBLIC:
+		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.exchanged_tiles", name=name), "/words/" + game["id"], event_id="exchange:" + str(id))
 
@@ -1574,8 +1649,8 @@ def event_resign(e):
 	# Skip commit-hook conversion: matches action_resign — payload carries an event marker and the winner from the games row, neither of which is on the messages row alone.
 	ws_data = {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""}
 	# A snapshot may have repaired more than this event's own subject, so send
-	# the applied state rather than just this event's fields.
-	for key, value in state.items():
-		ws_data[key] = value
+	# the applied state, minus the racks and bag the browser must not see.
+	for key in GAME_PUBLIC:
+		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.game"), body, "/words/" + game["id"], event_id="resign:" + game["id"])
