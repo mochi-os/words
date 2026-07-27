@@ -108,7 +108,7 @@ const handleWebsocketPayload = (
   // because the server applies the whole state and only the whole state.
   // Refetch rather than merging by hand - rack and bag are private and the
   // payload's copies are not the ones this viewer is entitled to.
-  if (msgType !== 'move' && payload.board) {
+  if (msgType !== 'move' && (payload.board || msgType === 'state')) {
     void queryClient.invalidateQueries({
       queryKey: gameKeys.detail(gameId),
       exact: true,
