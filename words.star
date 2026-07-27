@@ -470,6 +470,21 @@ def game_players(game):
 	"""Entities entitled to write this game's state."""
 	return [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
 
+def event_created(e, now):
+	"""Peer-supplied message timestamp, clamped to our clock.
+
+	A stamp far from now would pin the message out of order forever and
+	distort the created-keyed pagination cursor, so anything more than a
+	day behind or five minutes ahead is replaced with our own time.
+	Returns None when the field is absent or malformed."""
+	created = e.content("created")
+	if not mochi.text.valid(str(created), "integer"):
+		return None
+	created = int(created)
+	if created < now - 86400 or created > now + 300:
+		return now
+	return created
+
 def game_terminal(status):
 	return 1 if status in GAME_TERMINAL else 0
 
@@ -504,13 +519,19 @@ def game_snapshot_valid(game, state):
 			return False
 		if not mochi.text.valid(str(state["player" + str(n) + "_score"]), "integer"):
 			return False
+		if int(state["player" + str(n) + "_score"]) < -100000 or int(state["player" + str(n) + "_score"]) > 100000:
+			return False
 	if not mochi.text.valid(str(state["current_turn"]), "integer"):
 		return False
 	if not valid_turn(game, int(state["current_turn"])):
 		return False
 	if not mochi.text.valid(str(state["move_count"]), "integer"):
 		return False
+	if int(state["move_count"]) < 0 or int(state["move_count"]) > 10000:
+		return False
 	if not mochi.text.valid(str(state["consecutive_passes"]), "integer"):
+		return False
+	if int(state["consecutive_passes"]) < 0 or int(state["consecutive_passes"]) > game["player_count"]:
 		return False
 	if state["status"] not in ["active", "finished", "resigned"]:
 		return False
@@ -1319,8 +1340,8 @@ def event_new(e):
 	p4_name = e.content("player4_name") or ""
 
 	board = e.content("board") or empty_board()
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, mochi.time.now())
+	if created == None:
 		return
 
 	# Verify this player is in the game
@@ -1352,6 +1373,35 @@ def event_new(e):
 	rack2 = e.content("player2_rack") or ""
 	rack3 = e.content("player3_rack") or ""
 	rack4 = e.content("player4_rack") or ""
+
+	# Validate every stored field. This is the creation entry beside the
+	# snapshot path: game_snapshot_valid guards later state, but a row
+	# planted here was stored raw - oversized boards and bags, 8-tile
+	# racks, control characters in names, or a player_count above the
+	# filled slots, which wedges the game when the turn reaches an empty
+	# slot: the same wedge the duplicate check below exists to prevent.
+	if language not in ["en_US", "en_UK"]:
+		return
+	if not valid_board(board):
+		return
+	if len(bag) > 200:
+		return
+	for ch in bag.elems():
+		if ch != "_" and (ch < "A" or ch > "Z"):
+			return
+	if len(filled) != player_count:
+		return
+	for player in filled:
+		if not mochi.text.valid(player, "entity"):
+			return
+	for name in [p1_name, p2_name, p3_name, p4_name]:
+		if name and not mochi.text.valid(name, "name"):
+			return
+	if not p1_name or not p2_name or (p3 and not p3_name) or (p4 and not p4_name):
+		return
+	for rack in [rack1, rack2, rack3, rack4]:
+		if not valid_rack(rack):
+			return
 
 	result = mochi.db.execute(
 		"""insert or ignore into games (
@@ -1405,7 +1455,7 @@ def event_move(e):
 		return
 
 	move_count = event_integer(e.content("move_count"), game["move_count"] + 1)
-	if move_count == None:
+	if move_count == None or move_count < 0 or move_count > 10000:
 		return
 
 	# The move_count gate that used to sit here has gone the same way as the
@@ -1480,8 +1530,8 @@ def event_move(e):
 	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, now)
+	if created == None:
 		created = now
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
@@ -1525,7 +1575,7 @@ def event_pass(e):
 		return
 
 	consecutive_passes = event_integer(e.content("consecutive_passes"), game["consecutive_passes"] + 1)
-	if consecutive_passes == None:
+	if consecutive_passes == None or consecutive_passes < 0 or consecutive_passes > game["player_count"]:
 		return
 
 	status = e.content("status") or "active"
@@ -1548,8 +1598,8 @@ def event_pass(e):
 	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, now)
+	if created == None:
 		created = now
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
@@ -1605,8 +1655,8 @@ def event_exchange(e):
 	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, now)
+	if created == None:
 		created = now
 
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, body, created)
@@ -1639,8 +1689,8 @@ def event_message(e):
 	if not mochi.text.valid(str(id), "id"):
 		return
 
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, mochi.time.now())
+	if created == None:
 		return
 
 	body = e.content("body")
@@ -1687,4 +1737,4 @@ def event_resign(e):
 	for key in GAME_PUBLIC:
 		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.game"), body, "/words/" + game["id"], event_id="resign:" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/words/" + game["id"], event_id="resign:" + game["id"])
