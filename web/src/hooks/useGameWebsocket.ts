@@ -10,13 +10,12 @@ import {
   type InfiniteData,
 } from '@tanstack/react-query'
 import { useLingui } from '@lingui/react/macro'
-import { useAuthStore } from '@mochi/web'
 import type { GameMessage, GetMessagesResponse, GameViewResponse, GetGamesResponse } from '@/api/games'
 import {
   type ChatWebsocketMessagePayload,
   type WebsocketConnectionStatus,
 } from '@/lib/websocket-manager'
-import { gameKeys, consumeEcho } from '@/hooks/useGames'
+import { gameKeys } from '@/hooks/useGames'
 import { useWebsocketManager } from '@/hooks/useWebsocketManager'
 
 interface UseGameWebsocketResult {
@@ -63,7 +62,6 @@ const handleWebsocketPayload = (
   payload: ChatWebsocketMessagePayload,
   queryClient: QueryClient,
   unknownSenderLabel: string,
-  myIdentity: string,
 ) => {
   if (!gameId) return
 
@@ -119,7 +117,10 @@ const handleWebsocketPayload = (
   // Handle move — refetch detail for updated rack + bag_count (private,
   // not in the payload). Skip our own echo: the move/pass/exchange
   // mutation already invalidated detail, messages, and the list.
-  if (msgType === 'move' && !(myIdentity && payload.member === myIdentity && consumeEcho(gameId))) {
+  // Runs unconditionally: the own-echo guard that sat here shared chess's two
+  // holes (frame emitted before the HTTP response; marker keyed by game
+  // alone), so a lost response or a second window could leave the list stale.
+  if (msgType === 'move') {
     void queryClient.invalidateQueries({
       queryKey: gameKeys.detail(gameId),
       exact: true,
@@ -177,7 +178,6 @@ export const useGameWebsocket = (
   const unknownSenderLabel = t`Unknown`
   const manager = useWebsocketManager()
   const queryClient = useQueryClient()
-  const { identity: myIdentity } = useAuthStore()
   const [snapshot, setSnapshot] = useState<{
     status: WebsocketConnectionStatus
     retries: number
@@ -194,7 +194,7 @@ export const useGameWebsocket = (
     const unsubscribe = manager.subscribe(gameId, {
       chatKey: gameKey,
       onMessage: (event) => {
-        handleWebsocketPayload(event.chatId, event.payload, queryClient, unknownSenderLabel, myIdentity)
+        handleWebsocketPayload(event.chatId, event.payload, queryClient, unknownSenderLabel)
       },
       onStatusChange: (nextSnapshot) => {
         setSnapshot(nextSnapshot)
@@ -204,7 +204,7 @@ export const useGameWebsocket = (
     return () => {
       unsubscribe()
     }
-  }, [gameId, gameKey, manager, queryClient, unknownSenderLabel, myIdentity])
+  }, [gameId, gameKey, manager, queryClient, unknownSenderLabel])
 
   const forceReconnect = useCallback(() => {
     if (gameId && manager) {
