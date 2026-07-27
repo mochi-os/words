@@ -301,6 +301,24 @@ def next_turn(game):
 		t = 1
 	return t
 
+def event_integer(value, fallback):
+	"""Parse an integer field off a P2P event.
+
+	Returns fallback when the field is absent and None when it is present
+	but malformed. Starlark has no try/except, so a bare int() on a field
+	the peer sent as a non-integer raises and aborts the whole handler -
+	the move is lost with no retry that recovers it, which is how a
+	version-skewed client silently drops a turn."""
+	if value == None or value == "":
+		return fallback
+	if not mochi.text.valid(str(value), "integer"):
+		return None
+	return int(value)
+
+def valid_turn(game, turn):
+	"""Check a turn number names a real player slot in this game."""
+	return turn != None and turn >= 1 and turn <= game["player_count"]
+
 def load_game(a):
 	"""Load game by ID from action input, validate access."""
 	if not mochi.text.valid(a.input("game"), "id"):
@@ -368,6 +386,14 @@ def action_create(a):
 		if opp == a.user.identity.id:
 			a.error.label(400, "errors.cannot_play_against_yourself")
 			return
+		# One entity per player slot. get_player_number resolves to the
+		# first matching slot while next_turn walks every slot, so a
+		# duplicated opponent can never satisfy the turn check for their
+		# second slot and the game wedges the moment play reaches it.
+		for seen in opponent_names:
+			if seen["id"] == opp:
+				a.error.label(400, "errors.duplicate_opponent")
+				return
 		friend = mochi.service.call("friends", "get", a.user.identity.id, opp)
 		if not friend:
 			a.error.label(400, "errors.can_only_play_with_friends")
@@ -646,9 +672,22 @@ def action_move(a):
 	for k, v in score_updates.items():
 		sql += ", " + k + "=?"
 		params.append(v)
-	sql += " where id=?"
+	# Compare-and-swap against the turn and move count we validated against.
+	# Nothing serialises HTTP actions for a (user, app) - core's per-worker
+	# guarantee covers inbound P2P frames only - so a double submit, or the
+	# opponent's move landing in the same instant, otherwise lets both
+	# requests validate the same turn. That matters more here than in
+	# chess/go because new_score is read-modify-write, so the loser's
+	# points would be silently dropped rather than merely reordered.
+	sql += " where id=? and current_turn=? and move_count=? and status=?"
 	params.append(game["id"])
-	mochi.db.execute(sql, *params)
+	params.append(game["current_turn"])
+	params.append(game["move_count"])
+	params.append(game["status"])
+	changed = mochi.db.execute(sql, *params)
+	if changed == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	# Insert move message
 	id = mochi.uid()
@@ -929,7 +968,7 @@ def event_new(e):
 
 	language = e.content("language") or "en_US"
 	player_count = e.content("player_count")
-	if not player_count:
+	if not player_count or not mochi.text.valid(str(player_count), "integer"):
 		return
 	player_count = int(player_count)
 	if player_count < 2 or player_count > 4:
@@ -953,6 +992,15 @@ def event_new(e):
 	my_id = e.header("to")
 	if my_id not in [p1, p2, p3, p4]:
 		return
+
+	# One entity per player slot, same rule action_create enforces: a
+	# duplicated player wedges the game once play reaches their second
+	# slot, so refuse to store one that arrives already broken.
+	filled = [p for p in [p1, p2, p3, p4] if p]
+	for i in range(len(filled)):
+		for j in range(i + 1, len(filled)):
+			if filled[i] == filled[j]:
+				return
 
 	# Use bag and racks from the creating server
 	bag = e.content("bag") or ""
@@ -996,29 +1044,25 @@ def event_move(e):
 	if not board or not valid_board(board):
 		return
 
-	score = e.content("score")
-	if not score:
-		score = 0
-	else:
-		score = int(score)
+	score = event_integer(e.content("score"), 0)
+	if score == None:
+		return
 
-	player_number = e.content("player_number")
-	if player_number:
-		player_number = int(player_number)
-	else:
-		player_number = get_player_number(game, sender)
+	# Derive the scoring slot from the sender rather than the payload. The
+	# claimed number is interpolated into a column name below, so a wrong
+	# one credits another player's score, and an out-of-range one builds a
+	# column that doesn't exist and fails the statement.
+	player_number = get_player_number(game, sender)
+	if player_number < 1:
+		return
 
-	current_turn = e.content("current_turn")
-	if current_turn:
-		current_turn = int(current_turn)
-	else:
-		current_turn = next_turn(game)
+	current_turn = event_integer(e.content("current_turn"), next_turn(game))
+	if not valid_turn(game, current_turn):
+		return
 
-	move_count = e.content("move_count")
-	if move_count:
-		move_count = int(move_count)
-	else:
-		move_count = game["move_count"] + 1
+	move_count = event_integer(e.content("move_count"), game["move_count"] + 1)
+	if move_count == None:
+		return
 
 	# Monotonic gate: move_count is sequential per game, so an incoming
 	# event whose count isn't strictly greater than ours is stale (delayed
@@ -1027,11 +1071,9 @@ def event_move(e):
 	if game["move_count"] != None and move_count <= game["move_count"]:
 		return
 
-	new_score = e.content("new_score")
-	if new_score:
-		new_score = int(new_score)
-	else:
-		new_score = game["player" + str(player_number) + "_score"] + score
+	new_score = event_integer(e.content("new_score"), game["player" + str(player_number) + "_score"] + score)
+	if new_score == None:
+		return
 
 	status = e.content("status") or "active"
 	if status not in ["active", "finished", "resigned"]:
@@ -1095,20 +1137,22 @@ def event_pass(e):
 
 	body = e.content("body") or "passed"
 	name = e.content("name") or "Opponent"
-	current_turn = e.content("current_turn")
-	if current_turn:
-		current_turn = int(current_turn)
-	else:
-		current_turn = next_turn(game)
+	current_turn = event_integer(e.content("current_turn"), next_turn(game))
+	if not valid_turn(game, current_turn):
+		return
 
-	consecutive_passes = e.content("consecutive_passes")
-	if consecutive_passes:
-		consecutive_passes = int(consecutive_passes)
-	else:
-		consecutive_passes = game["consecutive_passes"] + 1
+	consecutive_passes = event_integer(e.content("consecutive_passes"), game["consecutive_passes"] + 1)
+	if consecutive_passes == None:
+		return
 
 	status = e.content("status") or "active"
+	if status not in ["active", "finished", "resigned"]:
+		status = "active"
 	winner = e.content("winner") or None
+	# Clamp winner to an actual player of this game, matching event_move.
+	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
+	if winner and winner not in players:
+		winner = None
 
 	now = mochi.time.now()
 	mochi.db.execute(
@@ -1147,11 +1191,9 @@ def event_exchange(e):
 
 	body = e.content("body") or "exchanged tiles"
 	name = e.content("name") or "Opponent"
-	current_turn = e.content("current_turn")
-	if current_turn:
-		current_turn = int(current_turn)
-	else:
-		current_turn = next_turn(game)
+	current_turn = event_integer(e.content("current_turn"), next_turn(game))
+	if not valid_turn(game, current_turn):
+		return
 
 	bag = e.content("bag")
 
