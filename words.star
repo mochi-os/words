@@ -906,7 +906,7 @@ def action_view(a):
 	if not game:
 		return
 
-	mochi.service.call("notifications", "clear/object", "words", game["id"])
+	mochi.service.call("notifications", "clear/object", game["id"])
 
 	return {
 		"data": {"game": strip_other_racks(game, a.user.identity.id), "identity": a.user.identity.id}
