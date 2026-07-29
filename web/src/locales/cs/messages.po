@@ -85,6 +85,10 @@ msgstr "Vyhrává {name}"
 msgid "{name}'s move"
 msgstr "Tah hráče {name}"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {Vybráno {entityName}} few {Vybrány {manyName}} other {Vybráno {manyName}}}"
@@ -109,6 +113,11 @@ msgstr "{unreadCount, plural, one {Otevřít nabídku (# nepřečtené oznámen�
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# bod} few {# body} many {# bodů} other {# bodů}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 hodin"
@@ -120,6 +129,10 @@ msgstr "24 hodin"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absolutní (datum a čas)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -153,6 +166,7 @@ msgstr "Účet ověřen"
 msgid "Active games"
 msgstr "Aktivní hry"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -175,6 +189,10 @@ msgstr "Přidat účet"
 msgid "Add an account to receive notifications and use services."
 msgstr "Přidejte účet pro příjem oznámení a využívání služeb."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "Přidat přátele"
@@ -182,6 +200,10 @@ msgstr "Přidat přátele"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "Přidejte přátele v aplikaci Lidé a začněte hrát"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -327,12 +349,12 @@ msgstr "Zrušit"
 msgid "Cancel exchange"
 msgstr "Zrušit výměnu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Kategorie pro toto oznámení"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Změnit kategorii oznámení"
 
@@ -345,7 +367,7 @@ msgstr "Chat"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Zaškrtněte „Vše“, chcete-li zobrazit dřívější oznámení."
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Vyberte hru z postranního panelu nebo začněte novou."
 
@@ -567,6 +589,10 @@ msgstr "Tmavý režim"
 msgid "Data conflict"
 msgstr "Konflikt dat"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Výchozí"
@@ -629,6 +655,14 @@ msgstr "Směr"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Adresář"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +832,7 @@ msgstr "Nepodařilo se odeslat ověřovací kód"
 msgid "Failed to submit move"
 msgstr "Nepodařilo se odeslat tah"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Nepodařilo se aktualizovat kategorii"
 
@@ -938,6 +972,10 @@ msgstr "Vložené"
 msgid "Interests"
 msgstr "Zájmy"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Neplatný tah"
@@ -1051,7 +1089,7 @@ msgstr "Střední"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Zpráva"
 
@@ -1084,9 +1122,9 @@ msgstr "Chyba sítě"
 msgid "New"
 msgstr "Nové"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Nová hra"
@@ -1112,7 +1150,7 @@ msgstr "Žádní přátelé nenalezeni"
 msgid "No friends yet"
 msgstr "Zatím žádní přátelé"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Zatím žádné hry"
 
@@ -1128,6 +1166,7 @@ msgstr "Zatím žádné zprávy"
 msgid "No notifications yet"
 msgstr "Zatím žádná oznámení"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Žádní lidé nenalezeni"
@@ -1154,7 +1193,7 @@ msgstr "Žádné výsledky nenalezeny."
 msgid "No time zone found."
 msgstr "Žádné časové pásmo nenalezeno."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Zatím žádný záznam o tématu — zkuste to znovu po dalším oznámení."
 
@@ -1284,6 +1323,7 @@ msgstr "Hráč {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount, plural, one {Hraje # hráč} few {Hrají # hráči} many {Hraje # hráčů} other {Hraje # hráčů}}"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1375,6 +1415,7 @@ msgstr "Relativní do 24 hodin, jinak absolutní"
 msgid "Rematch"
 msgstr "Odveta"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1404,6 +1445,10 @@ msgstr "Odebrat přístup?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Odebrat zájem"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1435,6 +1480,10 @@ msgstr "Vzdát hru?"
 #: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "Vzdávání…"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1504,7 +1553,7 @@ msgstr "Hledá se..."
 msgid "Select {0}"
 msgstr "Vybrat {0}"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Vyberte hru"
 
@@ -1556,6 +1605,11 @@ msgstr "Vyberte směr písma"
 msgid "Select theme preference"
 msgstr "Vyberte preferenci motivu"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "vybráno"
@@ -1573,8 +1627,8 @@ msgstr "Odeslat znovu"
 msgid "Send email"
 msgstr "Odeslat e-mail"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Odeslat zprávu"
 
@@ -1809,9 +1863,9 @@ msgstr "Úterý"
 msgid "Type a command or search..."
 msgstr "Zadejte příkaz nebo hledejte..."
 
-#: src/features/words/components/chat-input.tsx:34
-msgid "Type a message…"
-msgstr "Napište zprávu…"
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1830,7 +1884,7 @@ msgstr "Nelze se připojit ke vzdálenému serveru"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nelze přesměrovat na přihlášení. Zkuste to prosím znovu."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Nepřiřazeno"
 
@@ -1983,6 +2037,18 @@ msgstr "Máte vše přečteno!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Váš účet byl přesunut sem z {source}. Dokud ho tam nesmažete, zprávy a upozornění mohou dosahovat na oba servery, část vašeho obsahu je nadále obsluhována ze starého serveru a sledující vás mohou potřebovat několik minut, než vás zde najdou."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
 msgstr "Váš tah"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""

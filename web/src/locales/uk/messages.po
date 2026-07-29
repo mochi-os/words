@@ -85,6 +85,10 @@ msgstr "Перемагає {name}"
 msgid "{name}'s move"
 msgstr "Хід {name}"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {Вибрано {entityName}} few {Вибрано {manyName}} many {Вибрано {manyName}} other {Вибрано {manyName}}}"
@@ -109,6 +113,11 @@ msgstr "{unreadCount, plural, one {Відкрити меню (# непрочит
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# очко} few {# очка} many {# очок} other {# очок}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 годин"
@@ -120,6 +129,10 @@ msgstr "24 години"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Абсолютне (дата й час)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -153,6 +166,7 @@ msgstr "Обліковий запис підтверджено"
 msgid "Active games"
 msgstr "Активні ігри"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -175,6 +189,10 @@ msgstr "Додати обліковий запис"
 msgid "Add an account to receive notifications and use services."
 msgstr "Додайте обліковий запис, щоб отримувати сповіщення та користуватися сервісами."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "Додати друзів"
@@ -182,6 +200,10 @@ msgstr "Додати друзів"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "Додайте друзів у застосунку People, щоб почати грати"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -327,12 +349,12 @@ msgstr "Скасувати"
 msgid "Cancel exchange"
 msgstr "Скасувати обмін"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Категорія цього сповіщення"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Змінити категорію сповіщення"
 
@@ -345,7 +367,7 @@ msgstr "Чат"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Виберіть «Усі», щоб побачити попередні сповіщення."
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Виберіть гру на бічній панелі або почніть нову."
 
@@ -567,6 +589,10 @@ msgstr "Темний режим"
 msgid "Data conflict"
 msgstr "Конфлікт даних"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "За замовчуванням"
@@ -629,6 +655,14 @@ msgstr "Напрямок"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Каталог"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +832,7 @@ msgstr "Не вдалося надіслати код підтвердження
 msgid "Failed to submit move"
 msgstr "Не вдалося подати хід"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Не вдалося оновити категорію"
 
@@ -938,6 +972,10 @@ msgstr "Вставлений"
 msgid "Interests"
 msgstr "Інтереси"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Недійсний хід"
@@ -1051,7 +1089,7 @@ msgstr "Середній"
 msgid "Menu"
 msgstr "Меню"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Повідомлення"
 
@@ -1084,9 +1122,9 @@ msgstr "Помилка мережі"
 msgid "New"
 msgstr "Нове"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Нова гра"
@@ -1112,7 +1150,7 @@ msgstr "Друзів не знайдено"
 msgid "No friends yet"
 msgstr "Друзів ще немає"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Ігор ще немає"
 
@@ -1128,6 +1166,7 @@ msgstr "Повідомлень ще немає"
 msgid "No notifications yet"
 msgstr "Сповіщень поки немає"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Людей не знайдено"
@@ -1154,7 +1193,7 @@ msgstr "Результатів не знайдено."
 msgid "No time zone found."
 msgstr "Часовий пояс не знайдено."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Запису про тему ще немає — спробуйте ще раз після наступного сповіщення."
 
@@ -1284,6 +1323,7 @@ msgstr "Гравець {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Гра з {playerCount} гравцями"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1375,6 +1415,7 @@ msgstr "Відносний протягом 24 годин, інакше абсо
 msgid "Rematch"
 msgstr "Реванш"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1404,6 +1445,10 @@ msgstr "Видалити доступ?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Видалити інтерес"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1435,6 +1480,10 @@ msgstr "Здатися у грі?"
 #: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "Здача..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1504,7 +1553,7 @@ msgstr "Пошук..."
 msgid "Select {0}"
 msgstr "Вибрати {0}"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Виберіть гру"
 
@@ -1556,6 +1605,11 @@ msgstr "Виберіть напрямок сайту"
 msgid "Select theme preference"
 msgstr "Виберіть тему"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "вибрано"
@@ -1573,8 +1627,8 @@ msgstr "Надіслати ще раз"
 msgid "Send email"
 msgstr "Надіслати лист"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Надіслати повідомлення"
 
@@ -1809,9 +1863,9 @@ msgstr "Вівторок"
 msgid "Type a command or search..."
 msgstr "Введіть команду або пошук..."
 
-#: src/features/words/components/chat-input.tsx:34
-msgid "Type a message…"
-msgstr "Введіть повідомлення…"
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1830,7 +1884,7 @@ msgstr "Не вдалося підключитися до віддаленого
 msgid "Unable to redirect to login. Please try again."
 msgstr "Не вдається перенаправити на сторінку входу. Спробуйте ще раз."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Не призначено"
 
@@ -1983,6 +2037,18 @@ msgstr "Ви все переглянули!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ваш обліковий запис переміщено сюди з {source}. Поки ви не видалите його там, повідомлення та сповіщення можуть надходити на обидва сервери, частина вашого вмісту продовжить надаватися зі старого сервера, а підписникам може знадобитися кілька хвилин, щоб знайти вас тут."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
 msgstr "Ваш хід"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""

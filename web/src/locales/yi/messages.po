@@ -85,6 +85,10 @@ msgstr "{name} געווינט"
 msgid "{name}'s move"
 msgstr "{name}׳ס צוג"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} אויסגעקליבן} other {{manyName} אויסגעקליבן}}"
@@ -109,6 +113,11 @@ msgstr "{unreadCount, plural, one {עפֿנט מעניו (# אומגעלײענט
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# פּונקט} other {# פּונקטן}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 שעה"
@@ -120,6 +129,10 @@ msgstr "24 שעה"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "אַבסאָלוט (דאַטע און צײַט)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -153,6 +166,7 @@ msgstr "קאָנטע באַשטעטיקט"
 msgid "Active games"
 msgstr "אַקטיווע שפּילן"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -175,6 +189,10 @@ msgstr "צולייגן קאָנטע"
 msgid "Add an account to receive notifications and use services."
 msgstr "צולייגן אַ קאָנטע צו באַקומען נאָטיפֿיקאַציעס און נוצן סערוויסעס."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "צולייגן פֿרײַנד"
@@ -182,6 +200,10 @@ msgstr "צולייגן פֿרײַנד"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "צולייגט פֿרײַנד אין דער מענטשן אַפּ צו אָנהייבן שפּילן"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -327,12 +349,12 @@ msgstr "אָפּזאָגן"
 msgid "Cancel exchange"
 msgstr "אָפּזאָגן בײַט"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "קאַטעגאָריע פֿאַר דעם נאָטיפֿיקאַציע"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "ענדערן נאָטיפֿיקאַציע קאַטעגאָריע"
 
@@ -345,7 +367,7 @@ msgstr "שמועס"
 msgid "Check \"All\" to see your past notifications."
 msgstr "קלײַבט אױס \"אַלץ\" צו זען אײַערע פֿריִערדיקע מעלדונגען."
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "קלײַבט אַ שפּיל פֿון דער סײַדבאַר אָדער הייבט אָן אַ נײַע."
 
@@ -567,6 +589,10 @@ msgstr "טונקלע מאָדע"
 msgid "Data conflict"
 msgstr "דאַטן־קאָנפֿליקט"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "פֿאַרשטאַנדלעך"
@@ -629,6 +655,14 @@ msgstr "ריכטונג"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "פֿאַרצײכעניש"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +832,7 @@ msgstr "ניט געלונגען צו שיקן פֿאַרזיכערונג־קאָ
 msgid "Failed to submit move"
 msgstr "ניט געלונגען אונטערצוגעבן גאַנג"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "ניט געלונגען צו דערהײַנטיקן קאַטעגאָריע"
 
@@ -938,6 +972,10 @@ msgstr "אַרײַנגעשטעלט"
 msgid "Interests"
 msgstr "אינטערעסן"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "ניט גילטיקער גאַנג"
@@ -1051,7 +1089,7 @@ msgstr "מיטל"
 msgid "Menu"
 msgstr "מעניו"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "בריוו"
 
@@ -1084,9 +1122,9 @@ msgstr "נעץ פֿעלער"
 msgid "New"
 msgstr "נײַ"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "נײַ שפּיל"
@@ -1112,7 +1150,7 @@ msgstr "קיין פֿרײַנד ניט געפֿונען"
 msgid "No friends yet"
 msgstr "נאָך קיין פֿרײַנד"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "נאָך קיין שפּילן"
 
@@ -1128,6 +1166,7 @@ msgstr "נאָך קיין מעלדונגען"
 msgid "No notifications yet"
 msgstr "נאָך קײן מעלדונגען"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "קיין מענטשן ניט געפֿונען"
@@ -1154,7 +1193,7 @@ msgstr "קיין רעזולטאַטן ניט געפֿונען."
 msgid "No time zone found."
 msgstr "קיין צײַט זאָנע ניט געפֿונען."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "נאָך קיין טעמע רעקאָרד — פּרוּוו ווידער נאָך דער ווײַטערדיקער מעלדונג."
 
@@ -1284,6 +1323,7 @@ msgstr "שפּילער {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "שפּילן מיט {playerCount} שפּילערס"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1375,6 +1415,7 @@ msgstr "רעלאַטיוו אין 24 שעה, אַנדערש אַבסאָלוט"
 msgid "Rematch"
 msgstr "ווידערמאַטש"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1404,6 +1445,10 @@ msgstr "אַראָפּנעמען צוטריט?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "אַראָפּנעמען אינטערעס"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1435,6 +1480,10 @@ msgstr "רעזיגנירן שפּיל?"
 #: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "רעזיגנירן..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1504,7 +1553,7 @@ msgstr "זוכן..."
 msgid "Select {0}"
 msgstr "קלײַבט אױס {0}"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "קלײַב אַ שפּיל"
 
@@ -1556,6 +1605,11 @@ msgstr "קלײַב זײַטל־ריכטונג"
 msgid "Select theme preference"
 msgstr "קלײַב טעמע־פּרעפֿערענץ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "אויסגעקליבן"
@@ -1573,8 +1627,8 @@ msgstr "שיקן ווידער"
 msgid "Send email"
 msgstr "שיק בליצפּאָסט"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "שיק אַ מעלדונג"
 
@@ -1809,9 +1863,9 @@ msgstr "דינסטיק"
 msgid "Type a command or search..."
 msgstr "טיפּט אַ באַפֿעל אָדער זוכט..."
 
-#: src/features/words/components/chat-input.tsx:34
-msgid "Type a message…"
-msgstr "טיפּט אַ מעלדונג…"
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1830,7 +1884,7 @@ msgstr "ניט געקענט פֿאַרבינדן צום ווײַטן סערוו�
 msgid "Unable to redirect to login. Please try again."
 msgstr "קאָן נישט רעדירעקטירן צו אַרײַנמעלדונג. פּרוּווט נאָך אַ מאָל."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "אומצוגעטיילט"
 
@@ -1983,6 +2037,18 @@ msgstr "איר האָט אַלץ געזען!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "דיין קאנטע איז אהערגעברענגט ווארן פון {source}. ביז דו לעשסט עס דארט, קענען מעסאזשן און הודעות דערגרייכן ביידע סערווערס, עטלעכע פון דיין אינהאלט ווערט ווייטאר פארזאמלט פונם אלטן סערווער, און פאלגערס קענען נעמען עטלעכע מינוטן צו דיך דא געפינען."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
 msgstr "אײַער צוג"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""

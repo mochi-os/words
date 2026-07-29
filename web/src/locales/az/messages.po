@@ -85,6 +85,10 @@ msgstr "{name} qazanır"
 msgid "{name}'s move"
 msgstr "{name} gedişi"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} seçildi} other {{manyName} seçildi}}"
@@ -109,6 +113,11 @@ msgstr "{unreadCount, plural, one {Menyunu aç (# oxunmamış bildiriş)} other 
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# xal} other {# xal}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 saat"
@@ -120,6 +129,10 @@ msgstr "24 saat"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Mütləq (tarix və saat)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -153,6 +166,7 @@ msgstr "Hesab təsdiqləndi"
 msgid "Active games"
 msgstr "Aktiv oyunlar"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -175,6 +189,10 @@ msgstr "Hesab əlavə et"
 msgid "Add an account to receive notifications and use services."
 msgstr "Bildiriş almaq və xidmətlərdən istifadə etmək üçün hesab əlavə edin."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "Dostlar əlavə et"
@@ -182,6 +200,10 @@ msgstr "Dostlar əlavə et"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "Oynamağa başlamaq üçün People tətbiqində dost əlavə edin"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -327,12 +349,12 @@ msgstr "Ləğv et"
 msgid "Cancel exchange"
 msgstr "Mübadiləni ləğv et"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Bu bildiriş üçün kateqoriya"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Bildiriş kateqoriyasını dəyişdir"
 
@@ -345,7 +367,7 @@ msgstr "Söhbət"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Keçmiş bildirişlərinizi görmək üçün \"Hamısı\" seçin."
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Yan paneldən oyun seçin və ya yenisini başladın."
 
@@ -567,6 +589,10 @@ msgstr "Tünd rejim"
 msgid "Data conflict"
 msgstr "Məlumat konflikti"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Default"
@@ -629,6 +655,14 @@ msgstr "İstiqamət"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Kataloq"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +832,7 @@ msgstr "Doğrulama kodu göndərmək alınmadı"
 msgid "Failed to submit move"
 msgstr "Hərəkət göndərmək alınmadı"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Kateqoriyanı yeniləmək alınmadı"
 
@@ -938,6 +972,10 @@ msgstr "İçəri"
 msgid "Interests"
 msgstr "Maraqlar"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Etibarsız hərəkət"
@@ -1051,7 +1089,7 @@ msgstr "Orta"
 msgid "Menu"
 msgstr "Menyu"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Mesaj"
 
@@ -1084,9 +1122,9 @@ msgstr "Şəbəkə xətası"
 msgid "New"
 msgstr "Yeni"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Yeni oyun"
@@ -1112,7 +1150,7 @@ msgstr "Dost tapılmadı"
 msgid "No friends yet"
 msgstr "Hələ dost yoxdur"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Hələ oyun yoxdur"
 
@@ -1128,6 +1166,7 @@ msgstr "Hələ mesaj yoxdur"
 msgid "No notifications yet"
 msgstr "Hələ bildiriş yoxdur"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "İnsan tapılmadı"
@@ -1154,7 +1193,7 @@ msgstr "Nəticə tapılmadı."
 msgid "No time zone found."
 msgstr "Saat qurşağı tapılmadı."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Hələ mövzu qeydi yoxdur — növbəti bildirişdən sonra yenidən cəhd edin."
 
@@ -1284,6 +1323,7 @@ msgstr "Oyunçu {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount} oyunçu ilə oynayır"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1375,6 +1415,7 @@ msgstr "24 saat içində nisbi, əks halda mütləq"
 msgid "Rematch"
 msgstr "Yenidən qarşılaşma"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1404,6 +1445,10 @@ msgstr "Girişi silək?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Marağı sil"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1435,6 +1480,10 @@ msgstr "Oyundan təslim olunsun?"
 #: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "Təslim olunur..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1504,7 +1553,7 @@ msgstr "Axtarılır..."
 msgid "Select {0}"
 msgstr "{0} seçin"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Oyun seç"
 
@@ -1556,6 +1605,11 @@ msgstr "Sayt istiqamətini seçin"
 msgid "Select theme preference"
 msgstr "Mövzu seçimini seçin"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "seçildi"
@@ -1573,8 +1627,8 @@ msgstr "Yenidən göndər"
 msgid "Send email"
 msgstr "E-poçt göndər"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Mesaj göndər"
 
@@ -1809,9 +1863,9 @@ msgstr "Əmr yazın və ya axtarın..."
 msgid "Type a command or search..."
 msgstr "Mesaj yazın…"
 
-#: src/features/words/components/chat-input.tsx:34
-msgid "Type a message…"
-msgstr "Axtarmaq üçün yazın..."
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message..."
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1830,7 +1884,7 @@ msgstr "Uzaq serverə qoşulmaq mümkün olmadı"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Girişə yönləndirmək mümkün olmadı. Yenidən cəhd edin."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "İcazəsiz giriş"
 
@@ -1983,6 +2037,18 @@ msgstr "Hər şeyi oxudunuz!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hesabınız {source} saytından buraya köçürüldü. Orada silənə qədər mesajlar və bildirişlər hər iki serverə çata bilər, bəzi məzmununuz köhnə serverdən təqdim edilməyə davam edər və izləyicilər sizi burada tapmaq üçün bir neçə dəqiqə gözləyə bilər."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
 msgstr "Sizin ödənişiniz"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""
