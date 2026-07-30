@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# akllasqa} other {# akllasqa}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# akllasqa {entityName} paq huñu ruwaykuna} other {# akllasqa {manyName} paq huñu ruwaykuna}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} / {totalLabel}"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menuta kichay (# mana ñawinchasqa willakuy)} other {Menuta kichay (# mana ñawinchasqa willakuykuna)}}"
@@ -327,12 +331,12 @@ msgstr "Mana ruway"
 msgid "Cancel exchange"
 msgstr "Cambio mana ruway"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Kay willaykuna categoría"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Willaykuna categoría tikray"
 
@@ -630,6 +634,14 @@ msgstr "Imayna"
 msgid "Directory"
 msgstr "Katalogo"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "Wikch'uy"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "¿Qillqa qallariyta wikch'unkichu?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -798,7 +810,7 @@ msgstr "Mana sut'inchay códigota apachiyta atinchu"
 msgid "Failed to submit move"
 msgstr "Mana kuyuyta apachiyta atinchu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Mana categoríata musuqyachiyta atinchu"
 
@@ -1154,7 +1166,7 @@ msgstr "Mana resultadokuna tarisqachu."
 msgid "No time zone found."
 msgstr "Mana time zone tarisqachu."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Manaraq topic registro — qatiqnin notificacionmanta watiqmanta ruway."
 
@@ -1284,6 +1296,7 @@ msgstr "Pukllaq {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount} pukllaqkunawan pukllashan"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1314,6 +1327,10 @@ msgstr "Ñawpaqnin imagen"
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 msgid "Privacy"
 msgstr "Pakaynin"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Ruwakuchkan…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1375,6 +1392,7 @@ msgstr "24 horas ukhupi relativo, mana chayqa absoluto"
 msgid "Rematch"
 msgstr "Watiqmanta pukllay"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1435,6 +1453,10 @@ msgstr "Pukllayta saqirakapuy?"
 #: src/features/words/index.tsx:979
 msgid "Resigning..."
 msgstr "Saqirakapushan..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "Wakmanta ruway"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1830,7 +1852,7 @@ msgstr "Karu servidorman mana tinkiy atikunchu"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Loginman mana tikrachiyta atikurqanchu. Ama hina kaspa kutimanta ruway."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Mana akllasqa"
 
@@ -1855,6 +1877,10 @@ msgstr "Mana riqsisqa"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "Mana qhawasqa"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Cargasqa puririynin"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1983,6 +2009,18 @@ msgstr "Llapanta qhawarqankiña!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Cuenta-yki {source} llaqtamanta kaypi churasqa karqan. Chaypeqa manaraj qichuykiptiyki, willakuykuna hinaspa sut'ichakuykuna iskay serverkunaman chayayta atinku, imaymayki wakin ñawpaq servermanta kamachikapusqanmi kachkan, hinaspa qhatiqniykim kaypi tarisunkaypaq huk minutokunata suyayta atinku."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "Ratachisqaykikuna chinkapunqa."
+
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
 msgstr "Movimientoyki"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "Qillqasqaykipas ratachisqaykikunapas chinkapunqa."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "Qillqasqayki chinkanqa."
