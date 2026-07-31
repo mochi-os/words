@@ -85,6 +85,10 @@ msgstr "{name}님이 승리했어요"
 msgid "{name}'s move"
 msgstr "{name}님의 차례"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} 선택됨} other {{manyName} 선택됨}}"
@@ -101,10 +105,6 @@ msgstr "{selectedCount, plural, one {# 개 선택됨} other {# 개 선택됨}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {선택된 {entityName} # 개에 대한 일괄 작업} other {선택된 {manyName} # 개에 대한 일괄 작업}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{totalLabel} 중 {sentLabel}"
-
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {메뉴 열기(읽지 않은 알림 #개)} other {메뉴 열기(읽지 않은 알림 #개)}}"
@@ -112,6 +112,11 @@ msgstr "{unreadCount, plural, one {메뉴 열기(읽지 않은 알림 #개)} oth
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {#점}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -124,6 +129,10 @@ msgstr "24시간"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "절대값 (날짜 및 시간)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -157,6 +166,7 @@ msgstr "계정이 인증되었어요"
 msgid "Active games"
 msgstr "활성 게임"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -179,6 +189,10 @@ msgstr "계정 추가"
 msgid "Add an account to receive notifications and use services."
 msgstr "알림을 받고 서비스를 이용하려면 계정을 추가하세요."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "친구 추가"
@@ -186,6 +200,10 @@ msgstr "친구 추가"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "People 앱에서 친구를 추가하여 플레이를 시작하세요"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -349,7 +367,7 @@ msgstr "채팅"
 msgid "Check \"All\" to see your past notifications."
 msgstr "지난 알림을 보려면 \"전체\"를 선택하세요."
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "사이드바에서 게임을 선택하거나 새로 시작하세요."
 
@@ -571,6 +589,10 @@ msgstr "다크 모드"
 msgid "Data conflict"
 msgstr "데이터 충돌"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "기본값"
@@ -636,11 +658,11 @@ msgstr "디렉터리"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "버리기"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "초안을 버릴까요?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -950,6 +972,10 @@ msgstr "인셋"
 msgid "Interests"
 msgstr "관심사"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "잘못된 수"
@@ -1063,7 +1089,7 @@ msgstr "보통"
 msgid "Menu"
 msgstr "메뉴"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "메시지"
 
@@ -1096,9 +1122,9 @@ msgstr "네트워크 오류"
 msgid "New"
 msgstr "새로 만들기"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "새 게임"
@@ -1124,7 +1150,7 @@ msgstr "친구를 찾을 수 없어요"
 msgid "No friends yet"
 msgstr "아직 친구가 없어요"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "아직 게임이 없어요"
 
@@ -1140,6 +1166,7 @@ msgstr "아직 메시지가 없어요"
 msgid "No notifications yet"
 msgstr "아직 알림이 없어요"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "사람을 찾을 수 없어요"
@@ -1328,10 +1355,6 @@ msgstr "이전 이미지"
 msgid "Privacy"
 msgstr "개인정보"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "처리 중…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1423,6 +1446,10 @@ msgstr "접근 권한을 제거할까요?"
 msgid "Remove interest"
 msgstr "관심사 제거"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "이메일 다시 보내기"
@@ -1456,7 +1483,7 @@ msgstr "기권 중..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "다시 시도"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1526,7 +1553,7 @@ msgstr "검색 중..."
 msgid "Select {0}"
 msgstr "{0} 선택"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "게임 선택"
 
@@ -1578,6 +1605,11 @@ msgstr "사이트 방향 선택"
 msgid "Select theme preference"
 msgstr "테마 환경설정 선택"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "개 선택됨"
@@ -1595,8 +1627,8 @@ msgstr "다시 보내기"
 msgid "Send email"
 msgstr "이메일 보내기"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "메시지 보내기"
 
@@ -1831,7 +1863,7 @@ msgstr "화요일"
 msgid "Type a command or search..."
 msgstr "명령어를 입력하거나 검색..."
 
-#: src/features/words/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message…"
 msgstr "메시지 입력…"
 
@@ -1877,10 +1909,6 @@ msgstr "알 수 없음"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "확인되지 않음"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "업로드 진행률"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -2011,7 +2039,7 @@ msgstr "계정이 {source}에서 이곳으로 이전되었습니다. 거기서 �
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "첨부 파일이 사라집니다."
+msgstr ""
 
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
@@ -2019,8 +2047,8 @@ msgstr "본인의 차례"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "텍스트와 첨부 파일이 사라집니다."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "작성한 내용이 사라져요."
+msgstr ""

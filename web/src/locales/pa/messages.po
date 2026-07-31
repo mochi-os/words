@@ -85,6 +85,10 @@ msgstr "{name} ਜਿੱਤ ਗਿਆ"
 msgid "{name}'s move"
 msgstr "{name} ਦੀ ਚਾਲ"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} ਚੁਣਿਆ ਗਿਆ} other {{manyName} ਚੁਣੇ ਗਏ}}"
@@ -101,10 +105,6 @@ msgstr "{selectedCount, plural, one {# ਚੁਣੇ ਗਏ} other {# ਚੁਣ�
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# ਚੁਣੇ {entityName} ਲਈ ਬਲਕ ਕਾਰਵਾਈਆਂ} other {# ਚੁਣੇ {manyName} ਲਈ ਬਲਕ ਕਾਰਵਾਈਆਂ}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{totalLabel} ਵਿੱਚੋਂ {sentLabel}"
-
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {ਮੀਨੂ ਖੋਲ੍ਹੋ (# ਅਣਪੜ੍ਹੀ ਸੂਚਨਾ)} other {ਮੀਨੂ ਖੋਲ੍ਹੋ (# ਅਣਪੜ੍ਹੀਆਂ ਸੂਚਨਾਵਾਂ)}}"
@@ -112,6 +112,11 @@ msgstr "{unreadCount, plural, one {ਮੀਨੂ ਖੋਲ੍ਹੋ (# ਅਣਪ�
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# ਅੰਕ} other {# ਅੰਕ}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -124,6 +129,10 @@ msgstr "24 ਘੰਟੇ"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "ਨਿਰਪੇਖ (ਮਿਤੀ ਅਤੇ ਸਮਾਂ)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -157,6 +166,7 @@ msgstr "ਖਾਤਾ ਤਸਦੀਕ ਕੀਤਾ ਗਿਆ"
 msgid "Active games"
 msgstr "ਕਿਰਿਆਸ਼ੀਲ ਖੇਡਾਂ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -179,6 +189,10 @@ msgstr "ਖਾਤਾ ਜੋੜੋ"
 msgid "Add an account to receive notifications and use services."
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਅਤੇ ਸੇਵਾਵਾਂ ਵਰਤਣ ਲਈ ਇੱਕ ਖਾਤਾ ਜੋੜੋ।"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "ਦੋਸਤ ਜੋੜੋ"
@@ -186,6 +200,10 @@ msgstr "ਦੋਸਤ ਜੋੜੋ"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "ਖੇਡਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ People ਐਪ ਵਿੱਚ ਦੋਸਤ ਜੋੜੋ"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -349,7 +367,7 @@ msgstr "ਚੈਟ"
 msgid "Check \"All\" to see your past notifications."
 msgstr "ਪਿਛਲੀਆਂ ਸੂਚਨਾਵਾਂ ਵੇਖਣ ਲਈ \"ਸਭ\" ਚੁਣੋ।"
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "ਸਾਈਡਬਾਰ ਤੋਂ ਇੱਕ ਖੇਡ ਚੁਣੋ ਜਾਂ ਨਵੀਂ ਸ਼ੁਰੂ ਕਰੋ।"
 
@@ -571,6 +589,10 @@ msgstr "ਡਾਰਕ ਮੋਡ"
 msgid "Data conflict"
 msgstr "ਡਾਟਾ ਟਕਰਾਅ"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "ਡਿਫਾਲਟ"
@@ -636,11 +658,11 @@ msgstr "ਡਾਇਰੈਕਟਰੀ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "ਰੱਦ ਕਰੋ"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "ਡਰਾਫਟ ਰੱਦ ਕਰਨਾ ਹੈ?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -950,6 +972,10 @@ msgstr "ਇਨਸੈੱਟ"
 msgid "Interests"
 msgstr "ਦਿਲਚਸਪੀਆਂ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "ਅਯੋਗ ਚਾਲ"
@@ -1063,7 +1089,7 @@ msgstr "ਮੱਧਮ"
 msgid "Menu"
 msgstr "ਮੇਨੂ"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "ਸੁਨੇਹਾ"
 
@@ -1096,9 +1122,9 @@ msgstr "ਨੈੱਟਵਰਕ ਗੜਬੜ"
 msgid "New"
 msgstr "ਨਵਾਂ"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "ਨਵੀਂ ਗੇਮ"
@@ -1124,7 +1150,7 @@ msgstr "ਕੋਈ ਦੋਸਤ ਨਹੀਂ ਮਿਲਿਆ"
 msgid "No friends yet"
 msgstr "ਅਜੇ ਕੋਈ ਦੋਸਤ ਨਹੀਂ"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "ਅਜੇ ਕੋਈ ਗੇਮ ਨਹੀਂ"
 
@@ -1140,6 +1166,7 @@ msgstr "ਅਜੇ ਕੋਈ ਸੁਨੇਹੇ ਨਹੀਂ"
 msgid "No notifications yet"
 msgstr "ਹਾਲੇ ਕੋਈ ਸੂਚਨਾ ਨਹੀਂ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "ਕੋਈ ਲੋਕ ਨਹੀਂ ਮਿਲੇ"
@@ -1328,10 +1355,6 @@ msgstr "ਪਿਛਲੀ ਤਸਵੀਰ"
 msgid "Privacy"
 msgstr "ਪ੍ਰਾਈਵੇਸੀ"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "ਪ੍ਰਕਿਰਿਆ ਜਾਰੀ ਹੈ…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1423,6 +1446,10 @@ msgstr "ਪਹੁੰਚ ਹਟਾਏ?"
 msgid "Remove interest"
 msgstr "ਦਿਲਚਸਪੀ ਹਟਾਓ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "ਈਮੇਲ ਦੁਬਾਰਾ ਭੇਜੋ"
@@ -1456,7 +1483,7 @@ msgstr "ਅਸਤੀਫ਼ਾ ਦੇ ਰਿਹਾ ਹੈ..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1526,7 +1553,7 @@ msgstr "ਖੋਜ ਰਿਹਾ ਹੈ..."
 msgid "Select {0}"
 msgstr "{0} ਚੁਣੋ"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "ਖੇਡ ਚੁਣੋ"
 
@@ -1578,6 +1605,11 @@ msgstr "ਸਾਈਟ ਦੀ ਦਿਸ਼ਾ ਚੁਣੋ"
 msgid "Select theme preference"
 msgstr "theme ਪਸੰਦ ਚੁਣੋ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "ਚੁਣੇ ਗਏ"
@@ -1595,8 +1627,8 @@ msgstr "ਫਿਰ ਭੇਜੋ"
 msgid "Send email"
 msgstr "ਈਮੇਲ ਭੇਜੋ"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "ਸੁਨੇਹਾ ਭੇਜੋ"
 
@@ -1831,7 +1863,7 @@ msgstr "ਮੰਗਲਵਾਰ"
 msgid "Type a command or search..."
 msgstr "ਕਮਾਂਡ ਟਾਈਪ ਕਰੋ ਜਾਂ ਖੋਜੋ..."
 
-#: src/features/words/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message…"
 msgstr "ਸੁਨੇਹਾ ਟਾਈਪ ਕਰੋ…"
 
@@ -1877,10 +1909,6 @@ msgstr "ਅਣਜਾਣ"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "ਅਪ੍ਰਮਾਣਿਤ"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "ਅੱਪਲੋਡ ਪ੍ਰਗਤੀ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -2011,7 +2039,7 @@ msgstr "ਤੁਹਾਡਾ ਖਾਤਾ {source} ਤੋਂ ਇੱਥੇ ਲਿ�
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "ਤੁਹਾਡੇ ਅਟੈਚਮੈਂਟ ਗੁੰਮ ਹੋ ਜਾਣਗੇ।"
+msgstr ""
 
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
@@ -2019,8 +2047,8 @@ msgstr "ਤੁਹਾਡੀ ਚਾਲ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "ਤੁਹਾਡਾ ਟੈਕਸਟ ਅਤੇ ਅਟੈਚਮੈਂਟ ਗੁੰਮ ਹੋ ਜਾਣਗੇ।"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "ਤੁਹਾਡਾ ਟੈਕਸਟ ਗੁੰਮ ਹੋ ਜਾਵੇਗਾ।"
+msgstr ""

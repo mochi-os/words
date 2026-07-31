@@ -85,6 +85,10 @@ msgstr "Buann {name}"
 msgid "{name}'s move"
 msgstr "Gluaiseacht {name}"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} roghnaithe} two {{manyName} roghnaithe} few {{manyName} roghnaithe} many {{manyName} roghnaithe} other {{manyName} roghnaithe}}"
@@ -101,10 +105,6 @@ msgstr "{selectedCount, plural, one {# roghnaithe} two {# roghnaithe} few {# rog
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Gníomhartha ollmhóra le haghaidh # {entityName} roghnaithe} two {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe} few {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe} many {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe} other {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{sentLabel} as {totalLabel}"
-
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Oscail an roghchlár (# fhógra gan léamh)} two {Oscail an roghchlár (# fhógra gan léamh)} few {Oscail an roghchlár (# fhógra gan léamh)} many {Oscail an roghchlár (# bhfógra gan léamh)} other {Oscail an roghchlár (# fógra gan léamh)}}"
@@ -112,6 +112,11 @@ msgstr "{unreadCount, plural, one {Oscail an roghchlár (# fhógra gan léamh)} 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# phointe} two {# phointe} few {# phointe} many {# bpointe} other {# pointe}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -124,6 +129,10 @@ msgstr "24 uair"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absalóideach (dáta agus am)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -157,6 +166,7 @@ msgstr "Cuntas fíoraithe"
 msgid "Active games"
 msgstr "Cluichí Gníomhacha"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -179,6 +189,10 @@ msgstr "Cuir cuntas leis"
 msgid "Add an account to receive notifications and use services."
 msgstr "Cuir cuntas leis chun fógraí a fháil agus seirbhísí a úsáid."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "Cuir cairde leis"
@@ -186,6 +200,10 @@ msgstr "Cuir cairde leis"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "Cuir cairde leis san aip Daoine chun tosú ag imirt"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -349,7 +367,7 @@ msgstr "Comhrá"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Tic \"Gach rud\" chun d'fhógraí roimhe seo a fheiceáil."
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Roghnaigh cluiche ón mbarra taoibh nó tosaigh ceann nua."
 
@@ -571,6 +589,10 @@ msgstr "Mód dorcha"
 msgid "Data conflict"
 msgstr "Coinbhleacht sonraí"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Réamhshocrú"
@@ -636,11 +658,11 @@ msgstr "Eolaire"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "Cuir i leataobh"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "An gcuirfear an dréacht i leataobh?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -950,6 +972,10 @@ msgstr "Insocraithe"
 msgid "Interests"
 msgstr "Suimeanna"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Bogadh neamhbhailí"
@@ -1063,7 +1089,7 @@ msgstr "Meánach"
 msgid "Menu"
 msgstr "Roghchlár"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Teachtaireacht"
 
@@ -1096,9 +1122,9 @@ msgstr "Earráid líonra"
 msgid "New"
 msgstr "Nua"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Cluiche nua"
@@ -1124,7 +1150,7 @@ msgstr "Níor aimsíodh aon chara"
 msgid "No friends yet"
 msgstr "Níl aon chara fós"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "Níl aon chluiche fós"
 
@@ -1140,6 +1166,7 @@ msgstr "Níl aon teachtaireacht fós"
 msgid "No notifications yet"
 msgstr "Níl aon fhógra ann fós"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Níor aimsíodh aon duine"
@@ -1328,10 +1355,6 @@ msgstr "Íomhá roimhe seo"
 msgid "Privacy"
 msgstr "Príobháideacht"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "Á phróiseáil…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1423,6 +1446,10 @@ msgstr "Bain rochtain?"
 msgid "Remove interest"
 msgstr "Bain spéis"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Seol an ríomhphost arís"
@@ -1456,7 +1483,7 @@ msgstr "Ag éirí as..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "Bain triail eile as"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1526,7 +1553,7 @@ msgstr "Ag cuardach..."
 msgid "Select {0}"
 msgstr "Roghnaigh {0}"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "Roghnaigh cluiche"
 
@@ -1578,6 +1605,11 @@ msgstr "Roghnaigh treo an tsuímh"
 msgid "Select theme preference"
 msgstr "Roghnaigh sainrogha téama"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "roghnaithe"
@@ -1595,8 +1627,8 @@ msgstr "Seol arís"
 msgid "Send email"
 msgstr "Seol ríomhphost"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Seol teachtaireacht"
 
@@ -1831,7 +1863,7 @@ msgstr "Máirt"
 msgid "Type a command or search..."
 msgstr "Clóscríobh ordú nó cuardach..."
 
-#: src/features/words/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message…"
 msgstr "Clóscríobh teachtaireacht…"
 
@@ -1877,10 +1909,6 @@ msgstr "Anaithnid"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "Neamhfhíoraithe"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "Dul chun cinn an uaslódála"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -2011,7 +2039,7 @@ msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ans
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "Caillfear do cheangaltáin."
+msgstr ""
 
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
@@ -2019,8 +2047,8 @@ msgstr "Do ghluaiseacht"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "Caillfear do théacs agus do cheangaltáin."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "Caillfear do théacs."
+msgstr ""

@@ -85,6 +85,10 @@ msgstr "{name} bi serket"
 msgid "{name}'s move"
 msgstr "Tevgera {name}"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} hilbijartî} other {{manyName} hilbijartî}}"
@@ -101,10 +105,6 @@ msgstr "{selectedCount, plural, one {# hilbijartî} other {# hilbijartî}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Kiryarên girseyî ji bo # {entityName} hilbijartî} other {Kiryarên girseyî ji bo # {manyName} hilbijartî}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{sentLabel} ji {totalLabel}"
-
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Pêşek veke (# agahdariya nexwendî)} other {Pêşek veke (# agahdariyên nexwendî)}}"
@@ -112,6 +112,11 @@ msgstr "{unreadCount, plural, one {Pêşek veke (# agahdariya nexwendî)} other 
 #: src/features/words/components/tile-rack.tsx:86
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# puan} other {# puan}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -124,6 +129,10 @@ msgstr "24 saet"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Mutleq (dîrok û saet)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -157,6 +166,7 @@ msgstr "Hesab hat piştrastkirin"
 msgid "Active games"
 msgstr "Lîstikên çalak"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -179,6 +189,10 @@ msgstr "Hesab zêde bike"
 msgid "Add an account to receive notifications and use services."
 msgstr "Hesabekê zêde bike da ku agahdarî werbigirî û xizmetan bi kar bînî."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/words/components/new-game.tsx:142
 msgid "Add friends"
 msgstr "Hevalan zêde bike"
@@ -186,6 +200,10 @@ msgstr "Hevalan zêde bike"
 #: src/features/words/components/new-game.tsx:135
 msgid "Add friends in the People app to start playing"
 msgstr "Ji bo destpêkirina lîstikê di sepana Mirovan de hevalan zêde bike"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -349,7 +367,7 @@ msgstr "Chat"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Ji bo dîtina agahdariyên berê \"Hemû\" hilbijêre."
 
-#: src/features/words/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Lîstikekê ji panela kêlekê hilbijêre an yeke nû dest pê bike."
 
@@ -571,6 +589,10 @@ msgstr "Awayê tarî"
 msgid "Data conflict"
 msgstr "Nakokiya daneyan"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr ""
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Standard"
@@ -636,11 +658,11 @@ msgstr "Peldank"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "Bavêje"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "Reşnivîs bê avêtin?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -950,6 +972,10 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Balkêşî"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: src/features/words/index.tsx:182
 msgid "Invalid move"
 msgstr "Tevgera nederbasdar"
@@ -1063,7 +1089,7 @@ msgstr "Navîn"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/words/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Peyam"
 
@@ -1096,9 +1122,9 @@ msgstr "Çewtiya torê"
 msgid "New"
 msgstr "Nû"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/words-layout.tsx:105
-#: src/features/words/components/game-empty-state.tsx:27
-#: src/features/words/components/game-empty-state.tsx:43
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Lîstika nû"
@@ -1124,7 +1150,7 @@ msgstr "Tu heval nehatin dîtin"
 msgid "No friends yet"
 msgstr "Hêj tu heval tune"
 
-#: src/features/words/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "Hêj tu lîstik tune"
 
@@ -1140,6 +1166,7 @@ msgstr "Hêj tu peyam tune"
 msgid "No notifications yet"
 msgstr "Hîna agahdarî tune"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Tu kes nehatin dîtin"
@@ -1328,10 +1355,6 @@ msgstr "Wêneya pêştir"
 msgid "Privacy"
 msgstr "Nepenî"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "Tê pêvajokirin…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1423,6 +1446,10 @@ msgstr "Destpêkirinê rake?"
 msgid "Remove interest"
 msgstr "Balkêşiyê rake"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Dîsa e-nameyê bişîne"
@@ -1456,7 +1483,7 @@ msgstr "Dest jê tê berdan..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "Dîsa biceribîne"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1526,7 +1553,7 @@ msgstr "Tê gerîn..."
 msgid "Select {0}"
 msgstr "{0} hilbijêre"
 
-#: src/features/words/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "Lîstikek hilbijêre"
 
@@ -1578,6 +1605,11 @@ msgstr "Beralîkirina malperê hilbijêre"
 msgid "Select theme preference"
 msgstr "Tercîha temayê hilbijêre"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "hilbijartî"
@@ -1595,8 +1627,8 @@ msgstr "Dîsa bişîne"
 msgid "Send email"
 msgstr "E-nameyê bişîne"
 
-#: src/features/words/components/chat-input.tsx:47
-#: src/features/words/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Peyamê bişîne"
 
@@ -1831,7 +1863,7 @@ msgstr "Sêşem"
 msgid "Type a command or search..."
 msgstr "Fermanek an lêgerînê binivîse..."
 
-#: src/features/words/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message…"
 msgstr "Peyamekê binivîse…"
 
@@ -1877,10 +1909,6 @@ msgstr "Nediyar"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "Nehatiye verast kirin"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "Pêşketina barkirinê"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -2011,7 +2039,7 @@ msgstr "Hesabê we ji {source} hat vir veguheztin. Heya ku hûn wê li wir jêne
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "Pêvekên te wê winda bibin."
+msgstr ""
 
 #: src/features/words/lib/header-model.ts:95
 msgid "Your move"
@@ -2019,8 +2047,8 @@ msgstr "Tevgera te"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "Nivîs û pêvekên te wê winda bibin."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "Nivîsa te dê winda bibe."
+msgstr ""
