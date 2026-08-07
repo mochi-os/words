@@ -560,6 +560,29 @@ def game_players(game):
 	"""Entities entitled to write this game's state."""
 	return [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
 
+def event_name(value):
+	"""Peer-supplied display name, held to core's name rules.
+
+	Rejects angle brackets and line breaks and caps at 1000 characters, so a
+	peer cannot store an unbounded string or smuggle markup into the label
+	shown beside their moves."""
+	value = str(value or "")
+	if not value or not mochi.text.valid(value, "name"):
+		return "Opponent"
+	return value
+
+def event_body(value, maximum, fallback):
+	"""Peer-supplied display text, held to the bound the local path uses.
+
+	Clamped rather than rejected. The board in the same event is validated
+	separately and is the real state; dropping an otherwise-good move over a
+	bad label would leave us behind the sender with no way to catch up, which
+	is a worse outcome than showing a fallback for one move."""
+	value = str(value or "")
+	if not value or len(value) > maximum:
+		return fallback
+	return value
+
 def event_created(e, now):
 	"""Peer-supplied message timestamp, clamped to our clock.
 
@@ -1078,6 +1101,14 @@ def action_move(a):
 	# Update score
 	score_key = "player" + str(pnum) + "_score"
 	new_score = game[score_key] + score
+	# The same bound the inbound path applies, and applied to the running
+	# total rather than the move: the peer validates player scores, so a move
+	# small enough to pass on its own can still carry the total out of range.
+	# A total the peers reject writes into the games row and every later
+	# snapshot carries it forward, so the game forks permanently.
+	if new_score < -100000 or new_score > 100000:
+		a.error.label(400, "errors.invalid_score")
+		return
 
 	# Check for game over: player used all tiles and bag is empty
 	new_move_count = game["move_count"] + 1
@@ -1585,8 +1616,8 @@ def event_move(e):
 	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
 	if winner and winner not in players:
 		winner = None
-	body = e.content("body") or ""
-	name = e.content("name") or "Opponent"
+	body = event_body(e.content("body"), 10000, "")
+	name = event_name(e.content("name"))
 
 	bag = e.content("bag")
 
@@ -1661,8 +1692,8 @@ def event_pass(e):
 	if not is_player(game, sender):
 		return
 
-	body = e.content("body") or "passed"
-	name = e.content("name") or "Opponent"
+	body = event_body(e.content("body"), 10000, "passed")
+	name = event_name(e.content("name"))
 	current_turn = event_integer(e.content("current_turn"), next_turn(game))
 	if not valid_turn(game, current_turn):
 		return
@@ -1720,8 +1751,8 @@ def event_exchange(e):
 	if not is_player(game, sender):
 		return
 
-	body = e.content("body") or "exchanged tiles"
-	name = e.content("name") or "Opponent"
+	body = event_body(e.content("body"), 10000, "exchanged tiles")
+	name = event_name(e.content("name"))
 	current_turn = event_integer(e.content("current_turn"), next_turn(game))
 	if not valid_turn(game, current_turn):
 		return
@@ -1788,7 +1819,7 @@ def event_message(e):
 	if len(str(body)) > 10000:
 		return
 
-	name = e.content("name") or "Opponent"
+	name = event_name(e.content("name"))
 
 	words_ensure_commit_hook()
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
@@ -1809,7 +1840,7 @@ def event_resign(e):
 	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
 	if winner and winner not in players:
 		winner = None
-	body = e.content("body") or "Opponent resigned"
+	body = event_body(e.content("body"), 10000, "Opponent resigned")
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
