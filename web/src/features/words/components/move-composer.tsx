@@ -9,13 +9,7 @@ import {
   cn,
 } from '@mochi/web'
 import { Trans, useLingui } from '@lingui/react/macro'
-import {
-  AlertTriangle,
-  ArrowLeftRight,
-  CheckCircle2,
-  Loader2,
-  XCircle,
-} from 'lucide-react'
+import { AlertTriangle, ArrowLeftRight, CheckCircle2, Loader2, Send, XCircle } from 'lucide-react'
 import type {
   DraftWordValidationState,
   MoveDraftStatus,
@@ -171,7 +165,11 @@ export function MoveComposer({
             <Trans>Recall</Trans>
           </Button>
           <Button size="sm" onClick={onSubmit} disabled={!canSubmit} className="flex-1">
-            {isSubmitting && <Loader2 className="size-3 animate-spin" />}
+            {isSubmitting ? (
+              <Loader2 className="size-3 animate-spin" />
+            ) : (
+              <Send className="size-4" />
+            )}
             <Trans>Submit</Trans>
           </Button>
         </div>

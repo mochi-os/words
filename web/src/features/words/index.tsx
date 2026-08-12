@@ -37,7 +37,7 @@ import {
   DropdownMenuTrigger,
   cn,
 } from '@mochi/web'
-import { MoreHorizontal, Trash2, Loader2, Flag, RotateCcw, ArrowLeftRight, Shuffle, SkipForward, MessageCircle } from 'lucide-react'
+import { ArrowLeftRight, Flag, Loader2, MessageCircle, MoreHorizontal, RotateCcw, Send, Shuffle, SkipForward, Trash2 } from 'lucide-react'
 import {
   parseBoard,
   serializeBoard,
@@ -876,6 +876,7 @@ export function WordsGameView() {
                               </Button>
                               <div className="flex-1" />
                               <Button size="sm" onClick={handleExchangeConfirm} disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}>
+                                {/* button-icon-ok: Exchange (tiles back to the bag) has no conventional glyph */}
                                 {exchangeMutation.isPending && <Loader2 className="size-3 animate-spin" />}
                                 {exchangeSelected.size > 0 ? <Trans>Exchange ({exchangeSelected.size})</Trans> : <Trans>Exchange</Trans>}
                               </Button>
@@ -890,7 +891,11 @@ export function WordsGameView() {
                                 <span className="text-base font-bold tabular-nums">+{draftScore}</span>
                               )}
                               <Button size="sm" onClick={handleSubmitMove} disabled={!canSubmitMove}>
-                                {moveMutation.isPending && <Loader2 className="size-3 animate-spin" />}
+                                {moveMutation.isPending ? (
+                                  <Loader2 className="size-3 animate-spin" />
+                                ) : (
+                                  <Send className="size-4" />
+                                )}
                                 <Trans>Submit</Trans>
                               </Button>
                             </>
