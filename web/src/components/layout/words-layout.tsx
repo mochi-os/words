@@ -3,46 +3,14 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { useEffect, useMemo } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 import { useLingui } from '@lingui/react/macro'
 import { Outlet, useParams } from '@tanstack/react-router'
-import {
-  cn,
-  useSidebar,
-  useAuthStore,
-  AuthenticatedLayout,
-  type SidebarData,
-} from '@mochi/web'
-import { Plus } from 'lucide-react'
+import { GameLayout, useAuthStore } from '@mochi/web'
 import { SidebarProvider, useSidebarContext } from '@/context/sidebar-context'
 import { useGamesQuery } from '@/hooks/useGames'
 import { NewGame } from '@/features/words/components/new-game'
 import { getPlayerNames, isMyTurn, type GameListItem } from '@/api/games'
-
-function WebsocketStatusIndicator() {
-  const { websocketStatusMeta, gameId } = useSidebarContext()
-  const { state } = useSidebar()
-  const isCollapsed = state === 'collapsed'
-
-  if (!gameId) return null
-
-  return (
-    <div
-      className={cn(
-        'text-muted-foreground flex items-center gap-2 px-2 py-2 text-xs',
-        isCollapsed && 'justify-center px-0'
-      )}
-    >
-      <span
-        className={cn(
-          'h-2 w-2 flex-shrink-0 rounded-full',
-          websocketStatusMeta.color
-        )}
-      />
-      {!isCollapsed && <span>{websocketStatusMeta.label}</span>}
-    </div>
-  )
-}
 
 function WordsLayoutInner() {
   const { t } = useLingui()
@@ -51,7 +19,8 @@ function WordsLayoutInner() {
     () => gamesQuery.data?.games ?? [],
     [gamesQuery.data?.games]
   )
-  const { setGame, openNewGameDialog } = useSidebarContext()
+  const { setGame, openNewGameDialog, websocketStatusMeta, gameId } =
+    useSidebarContext()
   const { identity: myIdentity } = useAuthStore()
 
   const params = useParams({ strict: false }) as { gameId?: string }
@@ -65,60 +34,37 @@ function WordsLayoutInner() {
     }
   }, [urlGameId, games, myIdentity, setGame])
 
-  const sidebarData: SidebarData = useMemo(() => {
-    const sortedGames = [...games].sort((a, b) => b.updated - a.updated)
-    const activeGames = sortedGames.filter((g) => g.status === 'active')
-    const completedGames = sortedGames.filter((g) => g.status !== 'active')
+  // A words game can seat up to four, so the entry names every other player
+  // rather than a single opponent - which is also why no avatar is drawn.
+  const gameTitle = useCallback(
+    (game: GameListItem) =>
+      myIdentity ? getPlayerNames(game, myIdentity) : game.player2_name,
+    [myIdentity]
+  )
 
-    const getName = (game: GameListItem) =>
-      myIdentity ? getPlayerNames(game, myIdentity) : game.player2_name
-
-    const groups: SidebarData['navGroups'] = []
-
-    if (activeGames.length > 0) {
-      groups.push({
-        title: t`Active games`,
-        items: activeGames.map((game) => ({
-          title: getName(game),
-          url: `/${game.id}`,
-          badge: myIdentity && isMyTurn(game, myIdentity) ? '!' : undefined,
-        })),
-      })
-    }
-
-    if (completedGames.length > 0) {
-      groups.push({
-        title: t`Completed`,
-        items: completedGames.map((game) => ({
-          title: getName(game),
-          url: `/${game.id}`,
-          className: 'text-muted-foreground',
-        })),
-      })
-    }
-
-    groups.push({
-      title: '',
-      separator: true,
-      items: [
-        {
-          title: t`New game`,
-          onClick: openNewGameDialog,
-          icon: Plus,
-        },
-      ],
-    })
-
-    return { navGroups: groups }
-  }, [games, myIdentity, openNewGameDialog, t])
+  // isMyTurn already answers false for a finished game, so the completed
+  // group never carries this even though the shell offers it to both.
+  const badge = useCallback(
+    (game: GameListItem) =>
+      myIdentity && isMyTurn(game, myIdentity) ? '!' : undefined,
+    [myIdentity]
+  )
 
   return (
-    <AuthenticatedLayout
-      sidebarData={sidebarData}
-      sidebarFooter={<WebsocketStatusIndicator />}
+    <GameLayout
+      games={games}
+      gameTitle={gameTitle}
+      badge={badge}
+      onNewGame={openNewGameDialog}
+      websocketStatus={gameId ? websocketStatusMeta : null}
+      labels={{
+        active: t`Active games`,
+        completed: t`Completed`,
+        newGame: t`New game`,
+      }}
     >
       <Outlet />
-    </AuthenticatedLayout>
+    </GameLayout>
   )
 }
 

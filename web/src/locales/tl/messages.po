@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "Pakitingnan ang iyong koneksyon sa internet at subukang muli."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " o "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(in-edit)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(palawakin)"
 
@@ -59,8 +59,8 @@ msgstr "Preview ng opsyong {0}"
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
 #. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
-#: src/features/words/components/chat-message-list.tsx:236
-#: src/features/words/components/chat-message-list.tsx:245
+#: src/features/words/components/chat-message-list.tsx:85
+#: src/features/words/components/chat-message-list.tsx:94
 msgid "{0} played <0>{1}</0>"
 msgstr "Naglaro si {0} ng <0>{1}</0>"
 
@@ -69,31 +69,31 @@ msgstr "Naglaro si {0} ng <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} tile na natitira"
 
-#: src/features/words/components/chat-message-list.tsx:224
+#: src/features/words/components/chat-message-list.tsx:73
 msgid "{actor} exchanged tiles"
 msgstr "Nagpalit ng tiles si {actor}"
 
-#: src/features/words/components/chat-message-list.tsx:216
+#: src/features/words/components/chat-message-list.tsx:65
 msgid "{actor} passed"
 msgstr "Nag-pass si {actor}"
 
-#: src/features/words/components/chat-message-list.tsx:214
+#: src/features/words/components/chat-message-list.tsx:63
 msgid "{actor} passed — game over"
 msgstr "Nag-pass si {actor} — tapos na ang laro"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#ar} other {#ar}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#or} other {#or}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#min} other {#min}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#lin} other {#lin}}"
 
@@ -105,7 +105,7 @@ msgstr "Pangalan ng {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Kailangan ang pangalan ng {entityLabel}"
 
-#: src/features/words/components/chat-message-list.tsx:191
+#: src/features/words/components/chat-message-list.tsx:49
 msgid "{name} resigned"
 msgstr "Sumuko si {name}"
 
@@ -137,6 +137,7 @@ msgstr "{selectedCount, plural, one {# napili} other {# napili}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Mga bulk action para sa # napiling {entityName}} other {Mga bulk action para sa # napiling {manyName}}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{sentLabel} sa {totalLabel}"
@@ -158,11 +159,11 @@ msgstr "{value, plural, one {# puntos} other {# puntos}}"
 msgid "+{0} nested"
 msgstr "+{0} naka-nest"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} pang sagot"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 sagot"
 
@@ -210,7 +211,7 @@ msgstr "Uri ng account"
 msgid "Account verified"
 msgstr "Na-verify ang account"
 
-#: src/components/layout/words-layout.tsx:80
+#: src/components/layout/words-layout.tsx:61
 msgid "Active games"
 msgstr "Mga aktibong laro"
 
@@ -220,7 +221,7 @@ msgstr "Mga aktibong laro"
 msgid "Add"
 msgstr "Idagdag"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "Magdagdag ng komento..."
 
@@ -348,8 +349,12 @@ msgstr "Kahit sino"
 msgid "Anyone who is logged in"
 msgstr "Sinumang naka-log in"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr ""
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Sigurado ka bang gusto mong i-delete ang \"{0}\"?"
 
@@ -357,7 +362,7 @@ msgstr "Sigurado ka bang gusto mong i-delete ang \"{0}\"?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Sigurado ka bang gusto mong i-delete ang column na \"{name}\"? Hindi na ito maibabalik."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Sigurado ka bang gusto mong i-delete ang komentong ito? Made-delete din lahat ng sagot."
 
@@ -377,13 +382,13 @@ msgstr "Asc"
 msgid "Ascending"
 msgstr "Pataas"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "I-attach ang mga file ng komento"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "I-attach ang mga file ng sagot"
 
@@ -392,7 +397,7 @@ msgstr "I-attach ang mga file ng sagot"
 msgid "Authenticated users"
 msgstr "Mga naka-authenticate na user"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Code ng authenticator"
 
@@ -458,11 +463,11 @@ msgid "Browser notifications"
 msgstr "Mga notification ng browser"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -477,8 +482,8 @@ msgstr "Mga notification ng browser"
 msgid "Cancel"
 msgstr "Kanselahin"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "Kanselahin ang komento"
 
@@ -486,8 +491,8 @@ msgstr "Kanselahin ang komento"
 msgid "Cancel exchange"
 msgstr "Kanselahin ang exchange"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Kanselahin ang sagot"
 
@@ -581,8 +586,8 @@ msgstr "Burahin ang piniling"
 msgid "Clear selection (Escape)"
 msgstr "Burahin ang piniling (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -651,8 +656,8 @@ msgstr "Malapit nang dumating!"
 msgid "Command Palette"
 msgstr "Command palette"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Mga aksyon sa komento"
 
@@ -661,7 +666,7 @@ msgstr "Mga aksyon sa komento"
 msgid "Compact"
 msgstr "Compact"
 
-#: src/components/layout/words-layout.tsx:91
+#: src/components/layout/words-layout.tsx:62
 msgid "Completed"
 msgstr "Natapos"
 
@@ -710,7 +715,7 @@ msgstr "Contextual na impormasyon at detalye."
 msgid "Continue"
 msgstr "Magpatuloy"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "Magpatuloy gamit ang {label}"
 
@@ -734,22 +739,22 @@ msgstr "Hindi ma-load ang document na ito. Subukan muli mamaya."
 msgid "Couldn't load notifications"
 msgstr "Hindi ma-load ang mga notification"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "Hindi naipadala ang code. Pakisubukang muli."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Hindi masimulan ang muling pagpapatunay. Pakisubukang muli."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Hindi ma-verify gamit ang account na iyon. Pakisubukang muli."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Gumawa"
@@ -768,7 +773,7 @@ msgstr "Gumawa ng bagong item"
 msgid "Created"
 msgstr "Nagawa"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/words/components/new-game.tsx:197
 msgid "Creating..."
@@ -819,18 +824,18 @@ msgstr "Default na sort"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
 #: src/features/words/index.tsx:1003
 msgid "Delete"
 msgstr "I-delete"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "I-delete ang attachment"
 
@@ -838,7 +843,7 @@ msgstr "I-delete ang attachment"
 msgid "Delete column"
 msgstr "I-delete ang column"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "I-delete ang komento"
 
@@ -911,11 +916,11 @@ msgstr "Direksyon"
 msgid "Directory"
 msgstr "Direktoryo"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "Itapon"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "Itapon ang draft?"
 
@@ -938,7 +943,7 @@ msgstr "Ipinapakita ang mobile sidebar."
 msgid "Done"
 msgstr "Tapos na"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -956,8 +961,8 @@ msgstr "Duplicate"
 msgid "Dyslexia-friendly"
 msgstr "Angkop sa dyslexia"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "I-edit"
 
@@ -995,7 +1000,7 @@ msgstr "I-edit ang view"
 msgid "Email"
 msgstr "Email"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "Code ng email"
 
@@ -1017,11 +1022,11 @@ msgstr "Ingles (UK)"
 msgid "English (US)"
 msgstr "Ingles (US)"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "Ilagay ang code mula sa iyong email"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Ilagay ang iyong authenticator code"
 
@@ -1080,7 +1085,7 @@ msgid "Failed to create game"
 msgstr "Nabigong gumawa ng game"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Nabigong gumawa ng link"
 
@@ -1088,11 +1093,11 @@ msgstr "Nabigong gumawa ng link"
 msgid "Failed to create rematch"
 msgstr "Nabigong gumawa ng rematch"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "Nabigong magdelete ng attachment"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "Nabigong magdelete ng comment"
 
@@ -1108,7 +1113,7 @@ msgstr "Nabigong magdelete ng link"
 msgid "Failed to exchange"
 msgstr "Nabigong magpalit"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "Nabigong makakuha ng RSS token"
 
@@ -1132,7 +1137,7 @@ msgstr "Nabigong i-load ang video"
 msgid "Failed to pass"
 msgstr "Nabigong magpasa"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "Nabigong mag-post ng comment"
 
@@ -1144,7 +1149,7 @@ msgstr "Nabigong tanggalin ang account"
 msgid "Failed to resign"
 msgstr "Nabigong mag-resign"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "Nabigong bawiin ang RSS access"
 
@@ -1161,17 +1166,17 @@ msgstr "Nabigong magpadala ng verification code"
 msgid "Failed to submit move"
 msgstr "Nabigong i-submit ang move"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "Nabigong i-update ang comment"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Nabigong mag-upload ng attachment"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Mga file"
 
@@ -1347,7 +1352,7 @@ msgstr "Invalid na verification code"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Mukhang ang pahinang hinahanap mo <0/>ay wala o maaaring inalis na."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "Ngayon lang"
 
@@ -1388,7 +1393,7 @@ msgstr "Mga letra, numero, espasyo, at gitling lamang"
 msgid "Light"
 msgstr "Light"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Link"
 
@@ -1486,7 +1491,7 @@ msgstr "Pinakamababang haba"
 msgid "Mochi web"
 msgstr "Mochi web"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1494,8 +1499,8 @@ msgstr ""
 msgid "Monday"
 msgstr "Lunes"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Iba pang opsyon"
 
@@ -1520,14 +1525,14 @@ msgstr "Ang pangalan ay dapat 1000 karakter o mas mababa"
 msgid "Network error"
 msgstr "Error sa network"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Bago"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:41
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:53
-#: src/components/layout/words-layout.tsx:105
+#: src/components/layout/words-layout.tsx:63
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Bagong laro"
@@ -1537,7 +1542,7 @@ msgstr "Bagong laro"
 msgid "Next image"
 msgstr "Susunod na imahe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "Walang {parentClassNames} na maaaring idagdag"
 
@@ -1549,7 +1554,7 @@ msgstr "Walang naka-configure na access rule. Magdagdag ng mga rule upang kontro
 msgid "No activity yet"
 msgstr "Wala pang aktibidad"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "Wala pang komento"
 
@@ -1573,7 +1578,7 @@ msgstr "Wala pang laro"
 msgid "No groups available"
 msgstr "Walang available na grupo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Wala pang uri ng item na magagawa. Gumawa muna ng kinakailangang parent item."
 
@@ -1581,7 +1586,7 @@ msgstr "Wala pang uri ng item na magagawa. Gumawa muna ng kinakailangang parent 
 msgid "No matching objects"
 msgstr "Walang tugmang object"
 
-#: src/features/words/components/chat-message-list.tsx:155
+#: src/features/words/components/chat-message-list.tsx:42
 msgid "No messages yet"
 msgstr "Wala pang mensahe"
 
@@ -1602,6 +1607,7 @@ msgstr "Walang nakitang lugar"
 msgid "No profile"
 msgstr "Walang profile"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1639,9 +1645,9 @@ msgid "No views"
 msgstr "Walang view"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1781,7 +1787,7 @@ msgstr "May-ari"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "Pahina {currentPage} ng {totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "Magulang"
 
@@ -1789,11 +1795,11 @@ msgstr "Magulang"
 msgid "Pass"
 msgstr "Pumasa"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "Passkey"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "Nabigo ang pag-verify ng passkey. Pakisubukang muli."
 
@@ -1817,7 +1823,7 @@ msgstr "Player {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Naglalaro kasama ang {playerCount} na manlalaro"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1839,11 +1845,11 @@ msgstr "Pakisubukan muli."
 msgid "Please wait a moment and try again."
 msgstr "Mangyaring maghintay sandali at subukang muli."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Mga Post"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Mga post at komento"
 
@@ -1924,9 +1930,9 @@ msgstr "Relatibo sa loob ng 24 na oras, kung hindi ay absolute"
 msgid "Rematch"
 msgstr "Rematch"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1979,13 +1985,13 @@ msgstr "Palitan ang pangalan ng column"
 msgid "Rename this board column"
 msgstr "Palitan ang pangalan ng board column na ito"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Tumugon"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "Sagutin si {0}..."
 
@@ -1993,7 +1999,7 @@ msgstr "Sagutin si {0}..."
 msgid "Required"
 msgstr "Kinakailangan"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "Muling ipadala ang email"
 
@@ -2024,13 +2030,21 @@ msgstr "Sumuko sa laro?"
 msgid "Resigning..."
 msgstr "Sumusuko..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "Subukang muli"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr ""
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Bawiin ang access"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2049,15 +2063,15 @@ msgstr "Igrupo ang mga row ayon sa"
 msgid "Rows per page"
 msgstr "Mga row bawat page"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "Nabawi ang RSS access"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "Feed ng RSS"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "Nakopya ang RSS URL sa clipboard"
 
@@ -2065,7 +2079,7 @@ msgstr "Nakopya ang RSS URL sa clipboard"
 msgid "Saturday"
 msgstr "Sabado"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2117,6 +2131,7 @@ msgstr "Maghanap, bantayan, at ayusin ang view na ito."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2220,7 +2235,7 @@ msgstr "Napili: <0>{0}</0>"
 msgid "Send again"
 msgstr "Ipadala muli"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "Magpadala ng email"
 
@@ -2253,7 +2268,7 @@ msgstr "Itakda ang origin at destination"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Mga setting"
 
@@ -2314,7 +2329,7 @@ msgstr "Maliit"
 msgid "Sort"
 msgstr "Ayusin"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Mga source"
 
@@ -2330,7 +2345,7 @@ msgstr "Magsimula ng bagong laro ng Words"
 msgid "Start game"
 msgstr "Simulan ang laro"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "Simulan ang diskusyon sa pamamagitan ng pagdagdag ng unang komento."
 
@@ -2347,16 +2362,18 @@ msgstr "Paksa"
 msgid "Submit"
 msgstr "Ipasa"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "Ipasa ang komento"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Ipasa ang sagot"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2408,9 +2425,18 @@ msgstr "Mga tuntunin at kundisyon"
 msgid "Text"
 msgstr "Teksto"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Mali ang code na iyon o nag-expire na."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr ""
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2567,11 +2593,11 @@ msgstr "United States"
 msgid "Unknown"
 msgstr "Hindi alam"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Mag-unsubscribe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2586,8 +2612,8 @@ msgstr "Hindi naberipika"
 msgid "Updated"
 msgstr "Na-update"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Mag-upload"
 
@@ -2595,7 +2621,7 @@ msgstr "Mag-upload"
 msgid "Upload progress"
 msgstr "Progreso ng pag-upload"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Gamitin ang iyong passkey"
 
@@ -2621,7 +2647,7 @@ msgstr "Naipadala ang verification code"
 msgid "Verification failed"
 msgstr "Nabigo ang beripikasyon"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2697,9 +2723,9 @@ msgstr "Salita"
 msgid "Words formed"
 msgstr "Mga salitang nabuo"
 
-#: src/features/words/components/chat-message-list.tsx:208
-#: src/features/words/components/chat-message-list.tsx:237
-#: src/features/words/components/chat-message-list.tsx:246
+#: src/features/words/components/chat-message-list.tsx:57
+#: src/features/words/components/chat-message-list.tsx:86
+#: src/features/words/components/chat-message-list.tsx:95
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Ikaw"
@@ -2728,7 +2754,7 @@ msgstr "Nakita mo na lahat!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ang iyong account ay inilipat dito mula sa {source}. Hanggang hindi mo ito binubura doon, ang mga mensahe at abiso ay maaaring maabot ang parehong mga server, ang ilan sa iyong nilalaman ay patuloy na pinaglilingkuran mula sa lumang server, at ang mga tagasunod ay maaaring maglaan ng ilang minuto upang mahanap ka dito."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "Mawawala ang iyong mga attachment."
 
@@ -2736,10 +2762,10 @@ msgstr "Mawawala ang iyong mga attachment."
 msgid "Your move"
 msgstr "Galaw mo"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "Mawawala ang iyong teksto at mga attachment."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "Mawawala ang iyong teksto."

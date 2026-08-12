@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "Egiaztatu zure interneteko konexioa eta saiatu berriro."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " edo "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(editatua)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(zabaldu)"
 
@@ -59,8 +59,8 @@ msgstr "{0} aukeraren aurrebista"
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
 #. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
-#: src/features/words/components/chat-message-list.tsx:236
-#: src/features/words/components/chat-message-list.tsx:245
+#: src/features/words/components/chat-message-list.tsx:85
+#: src/features/words/components/chat-message-list.tsx:94
 msgid "{0} played <0>{1}</0>"
 msgstr "{0}-(e)k <0>{1}</0> jokatu du"
 
@@ -69,31 +69,31 @@ msgstr "{0}-(e)k <0>{1}</0> jokatu du"
 msgid "{0} tiles left"
 msgstr "{0} fitxa geratzen dira"
 
-#: src/features/words/components/chat-message-list.tsx:224
+#: src/features/words/components/chat-message-list.tsx:73
 msgid "{actor} exchanged tiles"
 msgstr "{actor}(e)k fitxak aldatu ditu"
 
-#: src/features/words/components/chat-message-list.tsx:216
+#: src/features/words/components/chat-message-list.tsx:65
 msgid "{actor} passed"
 msgstr "{actor}(e)k pasatu du"
 
-#: src/features/words/components/chat-message-list.tsx:214
+#: src/features/words/components/chat-message-list.tsx:63
 msgid "{actor} passed — game over"
 msgstr "{actor}(e)k pasatu du — partida amaituta"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#eg} other {#eg}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#or} other {#or}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#min} other {#min}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#ast} other {#ast}}"
 
@@ -105,7 +105,7 @@ msgstr "{entityLabel} izena"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} izena beharrezkoa da"
 
-#: src/features/words/components/chat-message-list.tsx:191
+#: src/features/words/components/chat-message-list.tsx:49
 msgid "{name} resigned"
 msgstr "{name} amore eman du"
 
@@ -137,6 +137,7 @@ msgstr "{selectedCount, plural, one {# hautatuta} other {# hautatuta}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Hautatutako # {entityName}(r)en ekintza masiboak} other {Hautatutako # {manyName}(r)en ekintza masiboak}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{sentLabel} / {totalLabel}"
@@ -158,11 +159,11 @@ msgstr "{value, plural, one {# puntu} other {# puntu}}"
 msgid "+{0} nested"
 msgstr "+{0} kabiratuta"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} erantzun gehiago"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "Erantzun 1"
 
@@ -210,7 +211,7 @@ msgstr "Kontu mota"
 msgid "Account verified"
 msgstr "Kontua egiaztatua"
 
-#: src/components/layout/words-layout.tsx:80
+#: src/components/layout/words-layout.tsx:61
 msgid "Active games"
 msgstr "Joko aktiboak"
 
@@ -220,7 +221,7 @@ msgstr "Joko aktiboak"
 msgid "Add"
 msgstr "Gehitu"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "Gehitu iruzkin bat..."
 
@@ -348,8 +349,12 @@ msgstr "Edonor"
 msgid "Anyone who is logged in"
 msgstr "Saioa hasi duen edonor"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr ""
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Ziur al zaude \"{0}\" ezabatu nahi duzula?"
 
@@ -357,7 +362,7 @@ msgstr "Ziur al zaude \"{0}\" ezabatu nahi duzula?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Ziur al zaude \"{name}\" zutabea ezabatu nahi duzula? Hau ezin da desegin."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Ziur al zaude iruzkin hau ezabatu nahi duzula? Honek erantzun guztiak ere ezabatuko ditu."
 
@@ -377,13 +382,13 @@ msgstr "Goranzkoa"
 msgid "Ascending"
 msgstr "Gorakorra"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "Erantsi iruzkin fitxategiak"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "Erantsi erantzun fitxategiak"
 
@@ -392,7 +397,7 @@ msgstr "Erantsi erantzun fitxategiak"
 msgid "Authenticated users"
 msgstr "Autentifikatutako erabiltzaileak"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Autentifikatzaile kodea"
 
@@ -458,11 +463,11 @@ msgid "Browser notifications"
 msgstr "Nabigatzaile jakinarazpenak"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -477,8 +482,8 @@ msgstr "Nabigatzaile jakinarazpenak"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "Utzi iruzkina"
 
@@ -486,8 +491,8 @@ msgstr "Utzi iruzkina"
 msgid "Cancel exchange"
 msgstr "Utzi trukea"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Utzi erantzuna"
 
@@ -581,8 +586,8 @@ msgstr "Garbitu hautapena"
 msgid "Clear selection (Escape)"
 msgstr "Garbitu hautapena (Ihes)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -651,8 +656,8 @@ msgstr "Laster dator!"
 msgid "Command Palette"
 msgstr "Komando-paleta"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Iruzkinaren ekintzak"
 
@@ -661,7 +666,7 @@ msgstr "Iruzkinaren ekintzak"
 msgid "Compact"
 msgstr "Trinkoa"
 
-#: src/components/layout/words-layout.tsx:91
+#: src/components/layout/words-layout.tsx:62
 msgid "Completed"
 msgstr "Osatua"
 
@@ -710,7 +715,7 @@ msgstr "Testuinguruko informazioa eta xehetasunak."
 msgid "Continue"
 msgstr "Jarraitu"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "Jarraitu {label} erabiliz"
 
@@ -734,22 +739,22 @@ msgstr "Ezin izan da dokumentu hau kargatu. Saiatu berriro geroago."
 msgid "Couldn't load notifications"
 msgstr "Ezin izan dira jakinarazpenak kargatu"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "Ezin izan da kodea bidali. Saiatu berriro."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Ezin izan da berrautentifikazioa hasi. Saiatu berriro."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ezin izan da kontu horrekin egiaztatu. Saiatu berriro."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Sortu"
@@ -768,7 +773,7 @@ msgstr "Sortu elementu berria"
 msgid "Created"
 msgstr "Sortua"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/words/components/new-game.tsx:197
 msgid "Creating..."
@@ -819,18 +824,18 @@ msgstr "Lehenetsitako ordena"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
 #: src/features/words/index.tsx:1003
 msgid "Delete"
 msgstr "Ezabatu"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "Ezabatu eranskina"
 
@@ -838,7 +843,7 @@ msgstr "Ezabatu eranskina"
 msgid "Delete column"
 msgstr "Ezabatu zutabea"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "Ezabatu iruzkina"
 
@@ -911,11 +916,11 @@ msgstr "Norabidea"
 msgid "Directory"
 msgstr "Direktorioa"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "Baztertu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "Zirriborroa baztertu?"
 
@@ -938,7 +943,7 @@ msgstr "Mugikorraren alboko barra erakusten du."
 msgid "Done"
 msgstr "Eginda"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -956,8 +961,8 @@ msgstr "Bikoiztuak"
 msgid "Dyslexia-friendly"
 msgstr "Dislexiarako egokia"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "Editatu"
 
@@ -995,7 +1000,7 @@ msgstr "Editatu ikuspegia"
 msgid "Email"
 msgstr "Posta elektronikoa"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "Posta elektronikoko kodea"
 
@@ -1017,11 +1022,11 @@ msgstr "Ingelesa (Erresuma Batua)"
 msgid "English (US)"
 msgstr "Ingelesa (AEB)"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "Sartu zure mezu elektronikoko kodea"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Sartu zure autentifikazio-aplikazioaren kodea"
 
@@ -1080,7 +1085,7 @@ msgid "Failed to create game"
 msgstr "Ezin izan da jokoa sortu"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Ezin izan da esteka sortu"
 
@@ -1088,11 +1093,11 @@ msgstr "Ezin izan da esteka sortu"
 msgid "Failed to create rematch"
 msgstr "Ezin izan da errebantxa sortu"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "Ezin izan da eranskina ezabatu"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "Ezin izan da iruzkina ezabatu"
 
@@ -1108,7 +1113,7 @@ msgstr "Ezin izan da esteka ezabatu"
 msgid "Failed to exchange"
 msgstr "Ezin izan da trukatu"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "Ezin izan da RSS tokena lortu"
 
@@ -1132,7 +1137,7 @@ msgstr "Ezin izan da bideoa kargatu"
 msgid "Failed to pass"
 msgstr "Ezin izan da pasatu"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "Ezin izan da iruzkina argitaratu"
 
@@ -1144,7 +1149,7 @@ msgstr "Ezin izan da kontua kendu"
 msgid "Failed to resign"
 msgstr "Ezin izan da amore eman"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "Ezin izan da RSS sarbidea ezeztatu"
 
@@ -1161,17 +1166,17 @@ msgstr "Ezin izan da egiaztapen-kodea bidali"
 msgid "Failed to submit move"
 msgstr "Ezin izan da mugimendua bidali"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "Ezin izan da iruzkina eguneratu"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Ezin izan da eranskina igo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Fitxategiak"
 
@@ -1347,7 +1352,7 @@ msgstr "Egiaztapen-kode baliogabea"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Bilatzen ari zaren orria <0/>ez dela existitzen edo kendu egin dela dirudi."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "Oraintxe"
 
@@ -1388,7 +1393,7 @@ msgstr "Letrak, zenbakiak, zuriuneak eta marratxoak soilik"
 msgid "Light"
 msgstr "Argia"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Esteka"
 
@@ -1486,7 +1491,7 @@ msgstr "Gutxieneko luzera"
 msgid "Mochi web"
 msgstr "Mochi web"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1494,8 +1499,8 @@ msgstr ""
 msgid "Monday"
 msgstr "Astelehena"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Aukera gehiago"
 
@@ -1520,14 +1525,14 @@ msgstr "Izenak 1000 karaktere edo gutxiago izan behar ditu"
 msgid "Network error"
 msgstr "Sareko errorea"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Berria"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:41
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:53
-#: src/components/layout/words-layout.tsx:105
+#: src/components/layout/words-layout.tsx:63
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Joko berria"
@@ -1537,7 +1542,7 @@ msgstr "Joko berria"
 msgid "Next image"
 msgstr "Hurrengo irudia"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "Ez dago {parentClassNames} gehitzeko"
 
@@ -1549,7 +1554,7 @@ msgstr "Ez da sarbide-araurik konfiguratu. Gehitu arauak baliabide honetara nork
 msgid "No activity yet"
 msgstr "Oraindik jardueririk ez"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "Oraindik iruzkinik ez"
 
@@ -1573,7 +1578,7 @@ msgstr "Oraindik jokorik ez"
 msgid "No groups available"
 msgstr "Ez dago talde erabilgarririk"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elementu gurasoak."
 
@@ -1581,7 +1586,7 @@ msgstr "Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elemen
 msgid "No matching objects"
 msgstr "Bat datorren objekturik ez"
 
-#: src/features/words/components/chat-message-list.tsx:155
+#: src/features/words/components/chat-message-list.tsx:42
 msgid "No messages yet"
 msgstr "Oraindik mezurik ez"
 
@@ -1602,6 +1607,7 @@ msgstr "Ez da lekurik aurkitu"
 msgid "No profile"
 msgstr "Profilik ez"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1639,9 +1645,9 @@ msgid "No views"
 msgstr "Ikuspegirik ez"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1781,7 +1787,7 @@ msgstr "Jabea"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "{currentPage} / {totalPages} orria"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "Gurasoa"
 
@@ -1789,11 +1795,11 @@ msgstr "Gurasoa"
 msgid "Pass"
 msgstr "Pasa"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "Passkey-a"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "Sarbide-gakoaren egiaztapenak huts egin du. Saiatu berriro."
 
@@ -1817,7 +1823,7 @@ msgstr "{playerNumber} jokalaria"
 msgid "Playing with {playerCount} players"
 msgstr "{playerCount} jokalarirekin jokatzen"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1839,11 +1845,11 @@ msgstr "Saiatu berriro."
 msgid "Please wait a moment and try again."
 msgstr "Itxaron pixka bat eta saiatu berriro."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Argitalpenak"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Argitalpenak eta iruzkinak"
 
@@ -1924,9 +1930,9 @@ msgstr "Erlatiboa 24 ordu barruan, bestela absolutua"
 msgid "Rematch"
 msgstr "Itzulketa-partida"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1979,13 +1985,13 @@ msgstr "Aldatu zutabearen izena"
 msgid "Rename this board column"
 msgstr "Aldatu taula honetako zutabearen izena"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Erantzun"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "Erantzun {0}-(r)i..."
 
@@ -1993,7 +1999,7 @@ msgstr "Erantzun {0}-(r)i..."
 msgid "Required"
 msgstr "Beharrezkoa"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "Bidali mezua berriro"
 
@@ -2024,13 +2030,21 @@ msgstr "Jokoan amore eman?"
 msgid "Resigning..."
 msgstr "Amore ematen..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "Saiatu berriro"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr ""
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Ezeztatu sarbidea"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2049,15 +2063,15 @@ msgstr "Errenkadak honela taldekatu"
 msgid "Rows per page"
 msgstr "Errenkada orriko"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "RSS sarbidea ezeztatuta"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "RSS jarioa"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "RSS URLa arbelera kopiatu da"
 
@@ -2065,7 +2079,7 @@ msgstr "RSS URLa arbelera kopiatu da"
 msgid "Saturday"
 msgstr "Larunbata"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2117,6 +2131,7 @@ msgstr "Bilatu, ikusi eta sailkatu ikuspegi hau."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2220,7 +2235,7 @@ msgstr "Hautatua: <0>{0}</0>"
 msgid "Send again"
 msgstr "Bidali berriz"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "Bidali emaila"
 
@@ -2253,7 +2268,7 @@ msgstr "Ezarri jatorria eta helmuga"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Ezarpenak"
 
@@ -2314,7 +2329,7 @@ msgstr "Txikia"
 msgid "Sort"
 msgstr "Ordenatu"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Iturriak"
 
@@ -2330,7 +2345,7 @@ msgstr "Hasi Words partida berria"
 msgid "Start game"
 msgstr "Hasi partida"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "Hasi eztabaida lehen iruzkina gehituz."
 
@@ -2347,16 +2362,18 @@ msgstr "Gaia"
 msgid "Submit"
 msgstr "Bidali"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "Bidali iruzkina"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Bidali erantzuna"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2408,9 +2425,18 @@ msgstr "Baldintzak"
 msgid "Text"
 msgstr "Testua"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Kode hori okerra da edo iraungi egin da."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr ""
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2567,11 +2593,11 @@ msgstr "Estatu Batuak"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Harpidetza kendu"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2586,8 +2612,8 @@ msgstr "Egiaztatu gabe"
 msgid "Updated"
 msgstr "Eguneratuta"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Igo"
 
@@ -2595,7 +2621,7 @@ msgstr "Igo"
 msgid "Upload progress"
 msgstr "Igoeraren aurrerapena"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Erabili zure sarbide-gakoa"
 
@@ -2621,7 +2647,7 @@ msgstr "Egiaztatze-kodea bidali da"
 msgid "Verification failed"
 msgstr "Egiaztatzeak huts egin du"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2697,9 +2723,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Sortutako hitzak"
 
-#: src/features/words/components/chat-message-list.tsx:208
-#: src/features/words/components/chat-message-list.tsx:237
-#: src/features/words/components/chat-message-list.tsx:246
+#: src/features/words/components/chat-message-list.tsx:57
+#: src/features/words/components/chat-message-list.tsx:86
+#: src/features/words/components/chat-message-list.tsx:95
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Zu"
@@ -2728,7 +2754,7 @@ msgstr "Dena irakurri duzu!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Zure kontua {source}-etik hona mugitu da. Han ezabatu arte, mezuak eta jakinarazpenak bi zerbitzarietara irits daitezke, zure edukiaren zati bat zerbitzari zaharretik ematen jarraitzen du, eta jarraitzaileek minutu batzuk behar izan ditzakete zu hemen aurkitzeko."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "Zure eranskinak galduko dira."
 
@@ -2736,10 +2762,10 @@ msgstr "Zure eranskinak galduko dira."
 msgid "Your move"
 msgstr "Zure mugimendua"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "Zure testua eta eranskinak galduko dira."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "Zure testua galduko da."

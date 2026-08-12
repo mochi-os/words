@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "Sila semak sambungan internet anda dan cuba lagi."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " atau "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(disunting)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(kembangkan)"
 
@@ -59,8 +59,8 @@ msgstr "Pratonton pilihan {0}"
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
 #. placeholder {1}: words ? `${words} (+${score})` : `(+${score})`
-#: src/features/words/components/chat-message-list.tsx:236
-#: src/features/words/components/chat-message-list.tsx:245
+#: src/features/words/components/chat-message-list.tsx:85
+#: src/features/words/components/chat-message-list.tsx:94
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} bermain <0>{1}</0>"
 
@@ -69,31 +69,31 @@ msgstr "{0} bermain <0>{1}</0>"
 msgid "{0} tiles left"
 msgstr "{0} jubin berbaki"
 
-#: src/features/words/components/chat-message-list.tsx:224
+#: src/features/words/components/chat-message-list.tsx:73
 msgid "{actor} exchanged tiles"
 msgstr "{actor} menukar jubin"
 
-#: src/features/words/components/chat-message-list.tsx:216
+#: src/features/words/components/chat-message-list.tsx:65
 msgid "{actor} passed"
 msgstr "{actor} melepasi giliran"
 
-#: src/features/words/components/chat-message-list.tsx:214
+#: src/features/words/components/chat-message-list.tsx:63
 msgid "{actor} passed — game over"
 msgstr "{actor} melepasi giliran — permainan tamat"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#h} other {#h}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#j} other {#j}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#min} other {#min}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#mgg} other {#mgg}}"
 
@@ -105,7 +105,7 @@ msgstr "Nama {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Nama {entityLabel} diperlukan"
 
-#: src/features/words/components/chat-message-list.tsx:191
+#: src/features/words/components/chat-message-list.tsx:49
 msgid "{name} resigned"
 msgstr "{name} mengaku kalah"
 
@@ -137,6 +137,7 @@ msgstr "{selectedCount, plural, one {# dipilih} other {# dipilih}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Tindakan pukal untuk # {entityName} dipilih} other {Tindakan pukal untuk # {manyName} dipilih}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{sentLabel} daripada {totalLabel}"
@@ -158,11 +159,11 @@ msgstr "{value, plural, other {# mata}}"
 msgid "+{0} nested"
 msgstr "+{0} bersarang"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} balasan lagi"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 balasan"
 
@@ -210,7 +211,7 @@ msgstr "Jenis akaun"
 msgid "Account verified"
 msgstr "Akaun disahkan"
 
-#: src/components/layout/words-layout.tsx:80
+#: src/components/layout/words-layout.tsx:61
 msgid "Active games"
 msgstr "Permainan Aktif"
 
@@ -220,7 +221,7 @@ msgstr "Permainan Aktif"
 msgid "Add"
 msgstr "Tambah"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "Tambah komen..."
 
@@ -348,8 +349,12 @@ msgstr "Sesiapa sahaja"
 msgid "Anyone who is logged in"
 msgstr "Sesiapa yang log masuk"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr ""
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Adakah anda pasti mahu memadam \"{0}\"?"
 
@@ -357,7 +362,7 @@ msgstr "Adakah anda pasti mahu memadam \"{0}\"?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Adakah anda pasti mahu memadam lajur \"{name}\"? Ini tidak boleh dibatalkan."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Adakah anda pasti mahu memadam komen ini? Ini juga akan memadam semua balasan."
 
@@ -377,13 +382,13 @@ msgstr "Menaik"
 msgid "Ascending"
 msgstr "Menaik"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "Lampirkan fail komen"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "Lampirkan fail balasan"
 
@@ -392,7 +397,7 @@ msgstr "Lampirkan fail balasan"
 msgid "Authenticated users"
 msgstr "Pengguna disahkan"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Kod authenticator"
 
@@ -458,11 +463,11 @@ msgid "Browser notifications"
 msgstr "Pemberitahuan pelayar"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -477,8 +482,8 @@ msgstr "Pemberitahuan pelayar"
 msgid "Cancel"
 msgstr "Batal"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "Batal komen"
 
@@ -486,8 +491,8 @@ msgstr "Batal komen"
 msgid "Cancel exchange"
 msgstr "Batal pertukaran"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Batal balasan"
 
@@ -581,8 +586,8 @@ msgstr "Kosongkan pilihan"
 msgid "Clear selection (Escape)"
 msgstr "Kosongkan pilihan (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -651,8 +656,8 @@ msgstr "Akan Datang!"
 msgid "Command Palette"
 msgstr "Palet perintah"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Tindakan komen"
 
@@ -661,7 +666,7 @@ msgstr "Tindakan komen"
 msgid "Compact"
 msgstr "Padat"
 
-#: src/components/layout/words-layout.tsx:91
+#: src/components/layout/words-layout.tsx:62
 msgid "Completed"
 msgstr "Selesai"
 
@@ -710,7 +715,7 @@ msgstr "Maklumat dan butiran konteks."
 msgid "Continue"
 msgstr "Teruskan"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "Teruskan dengan {label}"
 
@@ -734,22 +739,22 @@ msgstr "Tidak dapat memuatkan dokumen ini. Sila cuba lagi kemudian."
 msgid "Couldn't load notifications"
 msgstr "Tidak dapat memuatkan pemberitahuan"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "Tidak dapat menghantar kod. Sila cuba lagi."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Tidak dapat memulakan pengesahan semula. Sila cuba lagi."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Tidak dapat mengesahkan dengan akaun itu. Sila cuba lagi."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Cipta"
@@ -768,7 +773,7 @@ msgstr "Cipta item baharu"
 msgid "Created"
 msgstr "Dicipta"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/words/components/new-game.tsx:197
 msgid "Creating..."
@@ -819,18 +824,18 @@ msgstr "Susunan lalai"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
 #: src/features/words/index.tsx:1003
 msgid "Delete"
 msgstr "Padam"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "Padam lampiran"
 
@@ -838,7 +843,7 @@ msgstr "Padam lampiran"
 msgid "Delete column"
 msgstr "Padam lajur"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "Padam komen"
 
@@ -911,11 +916,11 @@ msgstr "Arah"
 msgid "Directory"
 msgstr "Direktori"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "Buang"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "Buang draf?"
 
@@ -938,7 +943,7 @@ msgstr "Memaparkan bar sisi mudah alih."
 msgid "Done"
 msgstr "Selesai"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -956,8 +961,8 @@ msgstr "Pendua"
 msgid "Dyslexia-friendly"
 msgstr "Mesra disleksia"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "Edit"
 
@@ -995,7 +1000,7 @@ msgstr "Edit paparan"
 msgid "Email"
 msgstr "E-mel"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "Kod e-mel"
 
@@ -1017,11 +1022,11 @@ msgstr "Inggeris (UK)"
 msgid "English (US)"
 msgstr "Inggeris (US)"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "Masukkan kod dari e-mel anda"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Masukkan kod pengesah anda"
 
@@ -1080,7 +1085,7 @@ msgid "Failed to create game"
 msgstr "Gagal mencipta permainan"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Gagal mencipta pautan"
 
@@ -1088,11 +1093,11 @@ msgstr "Gagal mencipta pautan"
 msgid "Failed to create rematch"
 msgstr "Gagal mencipta perlawanan semula"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "Gagal memadam lampiran"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "Gagal memadam komen"
 
@@ -1108,7 +1113,7 @@ msgstr "Gagal memadam pautan"
 msgid "Failed to exchange"
 msgstr "Gagal menukar"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "Gagal mendapatkan token RSS"
 
@@ -1132,7 +1137,7 @@ msgstr "Gagal memuatkan video"
 msgid "Failed to pass"
 msgstr "Gagal melepasi"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "Gagal mencatat komen"
 
@@ -1144,7 +1149,7 @@ msgstr "Gagal mengalih keluar akaun"
 msgid "Failed to resign"
 msgstr "Gagal mengaku kalah"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "Gagal membatalkan akses RSS"
 
@@ -1161,17 +1166,17 @@ msgstr "Gagal menghantar kod pengesahan"
 msgid "Failed to submit move"
 msgstr "Gagal menghantar pergerakan"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "Gagal mengemas kini komen"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Gagal memuat naik lampiran"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Fail"
 
@@ -1347,7 +1352,7 @@ msgstr "Kod pengesahan tidak sah"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Nampaknya halaman yang anda cari <0/>tidak wujud atau telah dialih keluar."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "Sebentar tadi"
 
@@ -1388,7 +1393,7 @@ msgstr "Hanya huruf, nombor, ruang dan sengkang"
 msgid "Light"
 msgstr "Terang"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Pautan"
 
@@ -1486,7 +1491,7 @@ msgstr "Panjang minimum"
 msgid "Mochi web"
 msgstr "Web Mochi"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1494,8 +1499,8 @@ msgstr ""
 msgid "Monday"
 msgstr "Isnin"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Lagi pilihan"
 
@@ -1520,14 +1525,14 @@ msgstr "Nama mestilah 1000 aksara atau kurang"
 msgid "Network error"
 msgstr "Ralat rangkaian"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Baharu"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:41
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:53
-#: src/components/layout/words-layout.tsx:105
+#: src/components/layout/words-layout.tsx:63
 #: src/features/words/components/new-game.tsx:115
 msgid "New game"
 msgstr "Permainan baharu"
@@ -1537,7 +1542,7 @@ msgstr "Permainan baharu"
 msgid "Next image"
 msgstr "Imej seterusnya"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "Tiada {parentClassNames} untuk ditambah"
 
@@ -1549,7 +1554,7 @@ msgstr "Tiada peraturan akses dikonfigurasikan. Tambah peraturan untuk mengawal 
 msgid "No activity yet"
 msgstr "Tiada aktiviti lagi"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "Tiada komen lagi"
 
@@ -1573,7 +1578,7 @@ msgstr "Tiada permainan lagi"
 msgid "No groups available"
 msgstr "Tiada kumpulan tersedia"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu."
 
@@ -1581,7 +1586,7 @@ msgstr "Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan da
 msgid "No matching objects"
 msgstr "Tiada objek yang sepadan"
 
-#: src/features/words/components/chat-message-list.tsx:155
+#: src/features/words/components/chat-message-list.tsx:42
 msgid "No messages yet"
 msgstr "Tiada mesej lagi"
 
@@ -1602,6 +1607,7 @@ msgstr "Tiada tempat dijumpai"
 msgid "No profile"
 msgstr "Tiada profil"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1639,9 +1645,9 @@ msgid "No views"
 msgstr "Tiada paparan"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1781,7 +1787,7 @@ msgstr "Pemilik"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "Halaman {currentPage} daripada {totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "Induk"
 
@@ -1789,11 +1795,11 @@ msgstr "Induk"
 msgid "Pass"
 msgstr "Lepas"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "Kunci laluan"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "Pengesahan kunci laluan gagal. Sila cuba lagi."
 
@@ -1817,7 +1823,7 @@ msgstr "Pemain {playerNumber}"
 msgid "Playing with {playerCount} players"
 msgstr "Bermain dengan {playerCount} pemain"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1839,11 +1845,11 @@ msgstr "Sila cuba lagi."
 msgid "Please wait a moment and try again."
 msgstr "Sila tunggu sebentar dan cuba lagi."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Hantaran"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Hantaran dan komen"
 
@@ -1924,9 +1930,9 @@ msgstr "Relatif dalam 24 jam, jika tidak mutlak"
 msgid "Rematch"
 msgstr "Lawan semula"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1979,13 +1985,13 @@ msgstr "Namakan semula lajur"
 msgid "Rename this board column"
 msgstr "Namakan semula lajur papan ini"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Balas"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "Balas kepada {0}..."
 
@@ -1993,7 +1999,7 @@ msgstr "Balas kepada {0}..."
 msgid "Required"
 msgstr "Diperlukan"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "Hantar semula e-mel"
 
@@ -2024,13 +2030,21 @@ msgstr "Letak jawatan permainan?"
 msgid "Resigning..."
 msgstr "Meletakkan jawatan..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "Cuba lagi"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr ""
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Batalkan akses"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2049,15 +2063,15 @@ msgstr "Baris dikumpulkan mengikut"
 msgid "Rows per page"
 msgstr "Baris setiap halaman"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "Akses RSS dibatalkan"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "Suapan RSS"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "URL RSS disalin ke papan keratan"
 
@@ -2065,7 +2079,7 @@ msgstr "URL RSS disalin ke papan keratan"
 msgid "Saturday"
 msgstr "Sabtu"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2117,6 +2131,7 @@ msgstr "Cari, pantau dan susun paparan ini."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2220,7 +2235,7 @@ msgstr "Dipilih: <0>{0}</0>"
 msgid "Send again"
 msgstr "Hantar semula"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "Hantar e-mel"
 
@@ -2253,7 +2268,7 @@ msgstr "Tetapkan asal dan destinasi"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Tetapan"
 
@@ -2314,7 +2329,7 @@ msgstr "Kecil"
 msgid "Sort"
 msgstr "Susun"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Sumber"
 
@@ -2330,7 +2345,7 @@ msgstr "Mulakan permainan Words baharu"
 msgid "Start game"
 msgstr "Mulakan permainan"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "Mulakan perbincangan dengan menambah komen pertama."
 
@@ -2347,16 +2362,18 @@ msgstr "Subjek"
 msgid "Submit"
 msgstr "Hantar"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "Hantar komen"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Hantar balasan"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2408,9 +2425,18 @@ msgstr "Terma dan syarat"
 msgid "Text"
 msgstr "Teks"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Kod itu tidak betul atau telah tamat tempoh."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr ""
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2567,11 +2593,11 @@ msgstr "Amerika Syarikat"
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Berhenti melanggan"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2586,8 +2612,8 @@ msgstr "Belum disahkan"
 msgid "Updated"
 msgstr "Dikemas kini"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Muat naik"
 
@@ -2595,7 +2621,7 @@ msgstr "Muat naik"
 msgid "Upload progress"
 msgstr "Kemajuan muat naik"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Gunakan kunci laluan anda"
 
@@ -2621,7 +2647,7 @@ msgstr "Kod pengesahan dihantar"
 msgid "Verification failed"
 msgstr "Pengesahan gagal"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2697,9 +2723,9 @@ msgstr "Words"
 msgid "Words formed"
 msgstr "Perkataan terbentuk"
 
-#: src/features/words/components/chat-message-list.tsx:208
-#: src/features/words/components/chat-message-list.tsx:237
-#: src/features/words/components/chat-message-list.tsx:246
+#: src/features/words/components/chat-message-list.tsx:57
+#: src/features/words/components/chat-message-list.tsx:86
+#: src/features/words/components/chat-message-list.tsx:95
 #: src/features/words/lib/header-model.ts:127
 msgid "You"
 msgstr "Anda"
@@ -2728,7 +2754,7 @@ msgstr "Anda sudah membaca semua!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akaun anda telah dipindahkan ke sini dari {source}. Sehingga anda memadamnya di sana, mesej dan pemberitahuan mungkin sampai ke kedua-dua pelayan, sebahagian kandungan anda terus dihidangkan dari pelayan lama, dan pengikut mungkin mengambil masa beberapa minit untuk mencari anda di sini."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "Lampiran anda akan hilang."
 
@@ -2736,10 +2762,10 @@ msgstr "Lampiran anda akan hilang."
 msgid "Your move"
 msgstr "Giliran anda"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "Teks dan lampiran anda akan hilang."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "Teks anda akan hilang."
