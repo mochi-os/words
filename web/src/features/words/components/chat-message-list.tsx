@@ -3,29 +3,14 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import {
-  Fragment,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-} from 'react'
+import type { ReactNode } from 'react'
 import type {
   UseInfiniteQueryResult,
   InfiniteData,
 } from '@tanstack/react-query'
-import {
-  GeneralError,
-  LoadMoreTrigger,
-  cn,
-  Skeleton,
-  getChatBubbleToneClass,
-  useFormat,
-} from '@mochi/web'
-import type { GameMessage, GetMessagesResponse } from '@/api/games'
-
+import { GameChatMessageList } from '@mochi/web'
 import { Trans, useLingui } from '@lingui/react/macro'
+import type { GameMessage, GetMessagesResponse } from '@/api/games'
 
 interface ChatMessageListProps {
   messagesQuery: UseInfiniteQueryResult<
@@ -46,260 +31,74 @@ export function ChatMessageList({
   currentUserIdentity,
 }: ChatMessageListProps) {
   const { t } = useLingui()
-  const { formatDate, formatDateTime } = useFormat()
-  const scrollContainerRef = useRef<HTMLDivElement | null>(null)
-  const messagesEndRef = useRef<HTMLDivElement | null>(null)
-  const prevScrollHeightRef = useRef<number>(0)
-  const isLoadingMoreRef = useRef(false)
-  const isInitialLoadRef = useRef(true)
-  const prevMessageCountRef = useRef<number>(0)
-
-  const isCurrentUserMessage = (message: GameMessage) => {
-    if (!currentUserIdentity) return false
-    return message.member === currentUserIdentity
-  }
-
-  const groupedMessages = useMemo(() => {
-    const groups: Record<string, GameMessage[]> = {}
-    chatMessages.forEach((message) => {
-      const d = new Date(message.created * 1000)
-      const date = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
-      if (!groups[date]) {
-        groups[date] = []
-      }
-      groups[date].push(message)
-    })
-    return groups
-  }, [chatMessages])
-
-  const handleLoadMore = useCallback(() => {
-    if (messagesQuery.isFetchingNextPage || !messagesQuery.hasNextPage) return
-
-    if (scrollContainerRef.current) {
-      prevScrollHeightRef.current = scrollContainerRef.current.scrollHeight
-      isLoadingMoreRef.current = true
-    }
-
-    messagesQuery.fetchNextPage()
-  }, [messagesQuery])
-
-  useLayoutEffect(() => {
-    if (
-      isLoadingMoreRef.current &&
-      scrollContainerRef.current &&
-      !messagesQuery.isFetchingNextPage
-    ) {
-      const newScrollHeight = scrollContainerRef.current.scrollHeight
-      const scrollDiff = newScrollHeight - prevScrollHeightRef.current
-      scrollContainerRef.current.scrollTop += scrollDiff
-      isLoadingMoreRef.current = false
-    }
-  }, [chatMessages, messagesQuery.isFetchingNextPage])
-
-  useEffect(() => {
-    const prevCount = prevMessageCountRef.current
-    const currentCount = chatMessages.length
-
-    if (isInitialLoadRef.current && currentCount > 0) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'instant' })
-      isInitialLoadRef.current = false
-    } else if (!isLoadingMoreRef.current && currentCount > prevCount) {
-      requestAnimationFrame(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-      })
-    }
-
-    prevMessageCountRef.current = currentCount
-  }, [chatMessages])
-
-  if (isLoadingMessages) {
-    return (
-      <div className="flex flex-1 w-full flex-col justify-end gap-3 p-3">
-        {Array.from({ length: 3 }).map((_, i) => (
-          <div
-            key={i}
-            className={cn(
-              'flex w-full flex-col gap-1',
-              i % 2 === 0 ? 'items-start' : 'items-end'
-            )}
-          >
-            <Skeleton
-              className={cn(
-                'h-8 w-[70%] rounded-[12px]',
-                i % 2 === 0 ? 'rounded-es-[4px]' : 'rounded-ee-[4px]'
-              )}
-            />
-          </div>
-        ))}
-      </div>
-    )
-  }
-
-  if (messagesError) {
-    return (
-      <div className="flex w-full flex-1 flex-col items-center justify-center py-4">
-        <GeneralError
-          error={messagesError}
-          minimal
-          mode="inline"
-          reset={messagesQuery.refetch}
-          className="w-full max-w-md"
-        />
-      </div>
-    )
-  }
-
-  if (chatMessages.length === 0) {
-    return (
-      <div className="flex flex-1 flex-col items-center justify-center py-4 text-center">
-        <p className="text-muted-foreground text-xs"><Trans>No messages yet</Trans></p>
-      </div>
-    )
-  }
 
   return (
-    <div
-      ref={scrollContainerRef}
-      className="flex w-full flex-1 flex-col justify-start gap-2 overflow-y-auto py-2 px-3 pb-3"
-    >
-      <LoadMoreTrigger
-        onLoadMore={handleLoadMore}
-        hasMore={messagesQuery.hasNextPage ?? false}
-        isLoading={messagesQuery.isFetchingNextPage}
-        rootMargin="100px"
-      />
-
-      {Object.keys(groupedMessages).map((key) => (
-        <Fragment key={key}>
-          <div className="my-2 flex items-center justify-center">
-            {/* eslint-disable-next-line lingui/no-unlocalized-strings -- ISO-8601 time literal */}
-            <div className="text-muted-foreground text-[10px]">{formatDate(new Date(key + 'T00:00:00'))}</div>
-          </div>
-
-          {groupedMessages[key].map((message, index) => {
-            // System messages. A marker renders localised text per viewer;
-            // legacy rows without one fall back to the stored body.
-            if (message.type === 'system') {
-              return (
-                <div
-                  key={`${message.id}-${index}`}
-                  className="flex justify-center py-1"
-                >
-                  <span className="text-muted-foreground text-[11px] italic">
-                    {message.event === 'resign' && message.name ? (
-                      // eslint-disable-next-line lingui/no-expression-in-message -- bare identifier keeps the msgid shared with chess/go
-                      (() => { const name = message.name; return <Trans>{name} resigned</Trans> })()
-                    ) : (
-                      message.body
-                    )}
-                  </span>
-                </div>
-              )
-            }
-
-            // Move messages. The event marker distinguishes plays from
-            // passes and exchanges - all three share type 'move' - and lets
-            // this viewer render localised text. The stored body wrapped
-            // every row in "played", producing "Alice played Alice passed"
-            // for pass rows; legacy rows without a marker keep that
-            // behaviour rather than guessing.
-            if (message.type === 'move') {
-              const isSent = isCurrentUserMessage(message)
-              const actor = isSent ? t`You` : message.name
-              const marker = message.event ?? ''
-              let content: React.ReactNode
-              if (marker === 'pass' || marker === 'pass:over') {
-                content =
-                  marker === 'pass:over' ? (
-                    <Trans>{actor} passed — game over</Trans>
-                  ) : (
-                    <Trans>{actor} passed</Trans>
-                  )
-              } else if (marker.startsWith('exchange:')) {
-                // The marker carries the tile count, but rendering it needs a
-                // count-inflected noun in every locale's plural categories -
-                // hand-filling that across 105 catalogs is where quality
-                // collapses, so the sentence omits the number. The count
-                // stays stored in the marker for a future plural pass.
-                content = <Trans>{actor} exchanged tiles</Trans>
-              } else if (marker.startsWith('play:')) {
-                const score = marker.slice('play:'.length)
-                // Body is `<words> (+<score>)` with `played` as the no-words
-                // placeholder; the marker's score strips it deterministically.
-                const suffix = ` (+${score})`
-                let words = message.body.endsWith(suffix)
-                  ? message.body.slice(0, -suffix.length)
-                  : message.body
-                // eslint-disable-next-line lingui/no-unlocalized-strings -- stored placeholder token, not user-facing output
-                if (words === 'played') words = ''
-                content = (
-                  <Trans>
-                    {isSent ? t`You` : message.name} played{' '}
-                    <span className="font-mono">
-                      {words ? `${words} (+${score})` : `(+${score})`}
-                    </span>
-                  </Trans>
-                )
-              } else {
-                content = (
-                  <Trans>
-                    {isSent ? t`You` : message.name} played{' '}
-                    <span className="font-mono">{message.body}</span>
-                  </Trans>
-                )
-              }
-              return (
-                <div
-                  key={`${message.id}-${index}`}
-                  className="flex justify-center py-0.5"
-                >
-                  <span className="text-[11px] text-muted-foreground/60">
-                    {content}
-                  </span>
-                </div>
-              )
-            }
-
-            // Regular chat messages
-            const isSent = isCurrentUserMessage(message)
-            return (
-              <div
-                key={`${message.id}-${index}`}
-                className={cn(
-                  'group mb-1 flex w-full flex-col gap-0.5',
-                  isSent ? 'items-end' : 'items-start'
-                )}
-              >
-                <div className="flex items-end gap-1.5">
-                  {isSent && (
-                    <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {formatDateTime(new Date(message.created * 1000))}
-                    </span>
-                  )}
-
-                  <div
-                    className={cn(
-                      'relative max-w-[85%] px-2.5 py-1.5 text-sm wrap-break-word',
-                      getChatBubbleToneClass(isSent)
-                    )}
-                  >
-                    <p className="leading-relaxed whitespace-pre-wrap">
-                      {message.body}
-                    </p>
-                  </div>
-
-                  {!isSent && (
-                    <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {formatDateTime(new Date(message.created * 1000))}
-                    </span>
-                  )}
-                </div>
-              </div>
+    <GameChatMessageList
+      messagesQuery={messagesQuery}
+      chatMessages={chatMessages}
+      isLoadingMessages={isLoadingMessages}
+      messagesError={messagesError}
+      currentUserIdentity={currentUserIdentity}
+      emptyLabel={t`No messages yet`}
+      // Words has no draw, so resignation is the only event with wording of
+      // its own. A row carrying no actor name falls back to the stored body,
+      // which is what returning null here asks the list to do.
+      systemLabels={{
+        // `name` reaches Trans as a bare identifier, which keeps the msgid
+        // "{name} resigned" shared with chess and go.
+        resigned: (name) => (name ? <Trans>{name} resigned</Trans> : null),
+      }}
+      renderMove={(message, isSent) => {
+        // Plays, passes and exchanges all arrive as type 'move' and are told
+        // apart by the event marker, which also lets this viewer render
+        // localised text. The stored body wrapped every row in "played",
+        // producing "Alice played Alice passed" for pass rows; legacy rows
+        // without a marker keep that behaviour rather than guessing.
+        const actor = isSent ? t`You` : message.name
+        const marker = message.event ?? ''
+        let content: ReactNode
+        if (marker === 'pass' || marker === 'pass:over') {
+          content =
+            marker === 'pass:over' ? (
+              <Trans>{actor} passed — game over</Trans>
+            ) : (
+              <Trans>{actor} passed</Trans>
             )
-          })}
-        </Fragment>
-      ))}
-      <div ref={messagesEndRef} />
-    </div>
+        } else if (marker.startsWith('exchange:')) {
+          // The marker carries the tile count, but rendering it needs a
+          // count-inflected noun in every locale's plural categories -
+          // hand-filling that across 105 catalogs is where quality collapses,
+          // so the sentence omits the number. The count stays stored in the
+          // marker for a future plural pass.
+          content = <Trans>{actor} exchanged tiles</Trans>
+        } else if (marker.startsWith('play:')) {
+          const score = marker.slice('play:'.length)
+          // Body is `<words> (+<score>)` with `played` as the no-words
+          // placeholder; the marker's score strips it deterministically.
+          const suffix = ` (+${score})`
+          let words = message.body.endsWith(suffix)
+            ? message.body.slice(0, -suffix.length)
+            : message.body
+          // 'played' is the stored placeholder token, not user-facing output.
+          if (words === 'played') words = ''
+          content = (
+            <Trans>
+              {isSent ? t`You` : message.name} played{' '}
+              <span className="font-mono">
+                {words ? `${words} (+${score})` : `(+${score})`}
+              </span>
+            </Trans>
+          )
+        } else {
+          content = (
+            <Trans>
+              {isSent ? t`You` : message.name} played{' '}
+              <span className="font-mono">{message.body}</span>
+            </Trans>
+          )
+        }
+        return content
+      }}
+    />
   )
 }
