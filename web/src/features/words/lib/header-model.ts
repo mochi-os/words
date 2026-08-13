@@ -3,6 +3,7 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+import { plural } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
 import type { Game } from '@/api/games'
 
@@ -20,6 +21,7 @@ export interface WordsHeaderModel {
   meta: string | null
   players: WordsHeaderPlayer[]
   tilesLeftLabel: string
+  tilesLeft: number
 }
 
 function getPlayerIdentity(game: Game, playerNumber: number): string | undefined {
@@ -131,12 +133,25 @@ export function useWordsHeaderModel(
     })
   }
 
+  // The tile count is a stat like the scores beside it, so it is a label and a
+  // value rather than a sentence with the number inside. As one sentence it
+  // read "1 tiles left" at the end of every game, and no wording could be
+  // right in a language with more than two number forms.
+  //
+  // The player line has no such split: it is prose, so it takes plural forms.
   const playerCount = game.player_count
   return {
     title: getOppositionNames().join(', '),
     status: getStatus(),
-    meta: game.player_count > 2 ? t`Playing with ${playerCount} players` : null,
+    meta:
+      game.player_count > 2
+        ? plural(playerCount, {
+            one: 'Playing with # player',
+            other: 'Playing with # players',
+          })
+        : null,
     players,
-    tilesLeftLabel: t`${game.bag_count} tiles left`,
+    tilesLeftLabel: t`Tiles left`,
+    tilesLeft: game.bag_count,
   }
 }

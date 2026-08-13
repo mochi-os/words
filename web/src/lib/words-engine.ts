@@ -91,22 +91,58 @@ export interface MoveResult {
   tilesUsed: string  // rack tiles consumed (for server)
 }
 
+// Why a move was rejected. The engine names the reason and the UI supplies
+// the words: this module has no Lingui context, and the English literals that
+// used to be thrown here reached the composer verbatim in all 106 locales
+// (getErrorMessage returns a non-empty error.message unchanged, so the
+// translated fallback beside it never ran). The Android client splits it the
+// same way — see MoveError in WordsEngine.kt, whose members these mirror.
+export type MoveErrorCode =
+  | 'no_tiles'
+  | 'out_of_bounds'
+  | 'square_occupied'
+  | 'not_in_line'
+  | 'not_contiguous'
+  | 'first_move_centre'
+  | 'first_move_two_tiles'
+  | 'not_connected'
+  | 'no_words'
+
+export class MoveError extends Error {
+  readonly code: MoveErrorCode
+
+  constructor(code: MoveErrorCode) {
+    super(code)
+    this.name = 'MoveError'
+    this.code = code
+  }
+}
+
+// Reads the code off a thrown value, or null if it came from somewhere else.
+// A property test rather than instanceof, so a value that crossed a module
+// boundary is still recognised.
+export function moveErrorCode(error: unknown): MoveErrorCode | null {
+  if (typeof error !== 'object' || error === null) return null
+  const code = (error as { code?: unknown }).code
+  return typeof code === 'string' ? (code as MoveErrorCode) : null
+}
+
 // Validate and score a move
 export function validateAndScoreMove(
   board: string[][],
   placements: Placement[]
 ): MoveResult {
   if (placements.length === 0) {
-    throw new Error("No tiles placed")
+    throw new MoveError('no_tiles')
   }
 
   // Check all placements are on empty squares
   for (const p of placements) {
     if (p.row < 0 || p.row >= BOARD_SIZE || p.col < 0 || p.col >= BOARD_SIZE) {
-      throw new Error("Placement out of bounds")
+      throw new MoveError('out_of_bounds')
     }
     if (board[p.row][p.col] !== '.') {
-      throw new Error("Square already occupied")
+      throw new MoveError('square_occupied')
     }
   }
 
@@ -115,7 +151,7 @@ export function validateAndScoreMove(
   const cols = new Set(placements.map((p) => p.col))
 
   if (rows.size > 1 && cols.size > 1) {
-    throw new Error("Tiles must be placed in a single row or column")
+    throw new MoveError('not_in_line')
   }
 
   const isHorizontal = rows.size === 1
@@ -144,7 +180,7 @@ export function validateAndScoreMove(
       const r = isHorizontal ? fixedAxis : i
       const c = isHorizontal ? i : fixedAxis
       if (newBoard[r][c] === '.') {
-        throw new Error("Tiles must be contiguous (no gaps)")
+        throw new MoveError('not_contiguous')
       }
     }
   }
@@ -155,10 +191,10 @@ export function validateAndScoreMove(
     // First move must cover center square (7,7)
     const coversCenter = placements.some((p) => p.row === 7 && p.col === 7)
     if (!coversCenter) {
-      throw new Error("First move must cover the center square")
+      throw new MoveError('first_move_centre')
     }
     if (placements.length < 2) {
-      throw new Error("First move must place at least 2 tiles")
+      throw new MoveError('first_move_two_tiles')
     }
   } else {
     // Must connect to at least one existing tile
@@ -179,7 +215,7 @@ export function validateAndScoreMove(
       if (connected) break
     }
     if (!connected) {
-      throw new Error("Tiles must connect to existing tiles on the board")
+      throw new MoveError('not_connected')
     }
   }
 
@@ -201,7 +237,7 @@ export function validateAndScoreMove(
   }
 
   if (wordsFormed.length === 0) {
-    throw new Error("No valid words formed")
+    throw new MoveError('no_words')
   }
 
   let totalScore = wordsFormed.reduce((sum, w) => sum + w.score, 0)

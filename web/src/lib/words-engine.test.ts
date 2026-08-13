@@ -14,6 +14,7 @@ import {
   getLetterValue,
   getPremium,
   validateAndScoreMove,
+  MoveError,
   getDisplayLetter,
   isBlankTile,
   type Placement,
@@ -141,17 +142,17 @@ describe('getPremium', () => {
 
 describe('validateAndScoreMove — validation', () => {
   it('throws on empty placements', () => {
-    expect(() => validateAndScoreMove(makeEmptyBoard(), [])).toThrow('No tiles placed')
+    expect(() => validateAndScoreMove(makeEmptyBoard(), [])).toThrow(new MoveError('no_tiles'))
   })
 
   it('throws on out of bounds placement', () => {
     const p: Placement[] = [{ row: -1, col: 7, letter: 'A', rackTile: 'A' }]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow('out of bounds')
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('out_of_bounds'))
   })
 
   it('throws on out of bounds (too large)', () => {
     const p: Placement[] = [{ row: 7, col: 15, letter: 'A', rackTile: 'A' }]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow('out of bounds')
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('out_of_bounds'))
   })
 
   it('throws on occupied square', () => {
@@ -160,7 +161,7 @@ describe('validateAndScoreMove — validation', () => {
       { row: 7, col: 7, letter: 'B', rackTile: 'B' },
       { row: 7, col: 8, letter: 'A', rackTile: 'A' },
     ]
-    expect(() => validateAndScoreMove(board, p)).toThrow('already occupied')
+    expect(() => validateAndScoreMove(board, p)).toThrow(new MoveError('square_occupied'))
   })
 
   it('throws when tiles not in single row/column', () => {
@@ -168,7 +169,7 @@ describe('validateAndScoreMove — validation', () => {
       { row: 7, col: 7, letter: 'A', rackTile: 'A' },
       { row: 8, col: 8, letter: 'B', rackTile: 'B' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow('single row or column')
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('not_in_line'))
   })
 
   it('throws on gap between tiles', () => {
@@ -177,7 +178,7 @@ describe('validateAndScoreMove — validation', () => {
       { row: 7, col: 7, letter: 'B', rackTile: 'B' },
       { row: 7, col: 9, letter: 'C', rackTile: 'C' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow('contiguous')
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('not_contiguous'))
   })
 
   it('first move must cover center (7,7)', () => {
@@ -185,12 +186,12 @@ describe('validateAndScoreMove — validation', () => {
       { row: 0, col: 0, letter: 'A', rackTile: 'A' },
       { row: 0, col: 1, letter: 'B', rackTile: 'B' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow('center square')
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('first_move_centre'))
   })
 
   it('first move must place at least 2 tiles', () => {
     const p: Placement[] = [{ row: 7, col: 7, letter: 'A', rackTile: 'A' }]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow('at least 2 tiles')
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('first_move_two_tiles'))
   })
 
   it('subsequent move must connect to existing tiles', () => {
@@ -200,7 +201,7 @@ describe('validateAndScoreMove — validation', () => {
       { row: 0, col: 0, letter: 'C', rackTile: 'C' },
       { row: 0, col: 1, letter: 'D', rackTile: 'D' },
     ]
-    expect(() => validateAndScoreMove(board, p)).toThrow('connect to existing')
+    expect(() => validateAndScoreMove(board, p)).toThrow(new MoveError('not_connected'))
   })
 })
 

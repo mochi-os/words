@@ -379,7 +379,11 @@ def load_dictionary(language, filename):
 		insert_word_batch(batch, language)
 
 def insert_word_batch(words, language):
-	"""Insert a batch of words into the dictionary."""
+	"""Insert a batch of words into the dictionary.
+
+	500 rows is 1000 bound parameters. The bundled SQLite accepts 32766, so
+	this sits well inside the limit; the 999 of pre-3.32 builds does not
+	apply."""
 	placeholders = []
 	params = []
 	for w in words:
@@ -1064,17 +1068,21 @@ def action_move(a):
 		return
 	score = int(score)
 
-	# Validate words against dictionary
+	# words_formed is the move's display label, not a rule the server decides.
+	# The rules engine is the client's (see the same treatment of board, score
+	# and winner above), and a dictionary test here could never be more than
+	# advice anyway: event_move takes an opponent's move without consulting the
+	# dictionary at all, so the test bound only the player using this server
+	# while both clients showed the word as unknown and offered Submit. A word
+	# the list does not carry is between the players, as a challenge is.
+	#
+	# The shape is still ours: this string is stored as the move's message body
+	# and sent to every peer, so hold it to the bound display text gets. A move
+	# forms at most eight words of fifteen letters, so 200 is generous.
 	if words_formed:
-		language = game["language"]
-		for word in words_formed.split(", "):
-			word = word.upper().strip()
-			if len(word) < 2:
-				continue
-			row = mochi.db.row("select word from dictionary where word=? and language=?", word, language)
-			if not row:
-				a.error.label(400, "errors.invalid_word", word=word)
-				return
+		if len(words_formed) > 200 or not mochi.text.valid(words_formed, "name"):
+			a.error.label(400, "errors.invalid_words")
+			return
 
 	# Remove used tiles from rack
 	rack_key = "player" + str(pnum) + "_rack"
@@ -1560,7 +1568,10 @@ def event_new(e):
 	if result == 0:
 		return
 
-	sender_name = e.content("player1_name") or "Someone"
+	# The validated local, not a re-read of the payload: the checks above have
+	# already refused an empty or malformed player1_name, so the fallback that
+	# stood here was both unreachable and untranslated.
+	sender_name = p1_name
 	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.started_game", name=sender_name), "/words/" + game_id, event_id="game:" + game_id)
 
 def event_move(e):
@@ -1825,7 +1836,11 @@ def event_message(e):
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
 
 	mochi.db.commit.fire("messages", "insert", id)
-	notify("message", "", mochi.app.label("notifications.title.message"), name + ": " + body, "/words/" + game["id"], event_id="message:" + str(id))
+	# Label rather than concatenation, matching chat: the body may be 10000
+	# characters and a locale may want the name and the text the other way
+	# round, neither of which survives name + ": " + body.
+	excerpt = str(body).strip()[:80]
+	notify("message", "", mochi.app.label("notifications.title.message"), mochi.app.label("notifications.body.message", author=name, excerpt=excerpt), "/words/" + game["id"], event_id="message:" + str(id))
 
 def event_resign(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))

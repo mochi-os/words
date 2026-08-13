@@ -18,6 +18,7 @@ import {
   ConfirmDialog,
   Button,
   IconButton,
+  getAppPath,
   getErrorMessage,
   toast,
   AlertDialog,
@@ -74,6 +75,7 @@ import {
   resolveMoveDraftStatus,
   shouldApplyValidationResult,
   type DraftWordValidationState,
+  type MoveErrorMessages,
 } from './lib/move-draft'
 
 export function WordsGameView() {
@@ -138,21 +140,16 @@ export function WordsGameView() {
     [gamesQuery.data?.games]
   )
 
-  const selectedGame = useMemo(
-    () =>
-      games.find(
-        (g) => g.id === selectedGameId
-      ) ?? null,
-    [games, selectedGameId]
-  )
-
-  // Game detail
+  // The route parameter alone decides which game is open. Gating on the games
+  // list instead meant a game created a moment ago - present in the URL, not
+  // yet in the refetched list - fell through to the empty state, so creating
+  // your first game answered "No games yet".
   const {
     data: gameDetail,
     isLoading: isLoadingDetail,
     error: gameDetailError,
     refetch: refetchGameDetail,
-  } = useGameDetailQuery(selectedGame?.id)
+  } = useGameDetailQuery(selectedGameId)
 
   const game = gameDetail?.game
   const myIdentity = gameDetail?.identity ?? currentUserIdentity
@@ -165,13 +162,19 @@ export function WordsGameView() {
     if (game?.my_rack !== undefined) {
       setRackTiles(game.my_rack.split('').filter(Boolean))
     }
-    // Reset placement state when game changes
+    // Reset placement state when the game changes - including its BOARD. A
+    // pending tile is drawn over whatever the board says (words-board.tsx
+    // tests isPending before isOccupied), so placements left standing when an
+    // opponent's move arrives hide the tiles they just played: the player sees
+    // their own draft where the real move is. Rack and board both come from
+    // the same refetch, but an opponent's move changes only the board, so
+    // watching my_rack alone never fired.
     setPendingPlacements([])
     setSelectedRackIndex(null)
     setDragSource(null)
     setExchangeMode(false)
     setExchangeSelected(new Set())
-  }, [game?.my_rack, game?.id])
+  }, [game?.my_rack, game?.board, game?.id])
 
   // Board state
   const board = useMemo(() => {
@@ -180,9 +183,23 @@ export function WordsGameView() {
   }, [game?.board])
 
   const invalidMoveFallback = t`Invalid move`
+  const moveErrorMessages = useMemo<MoveErrorMessages>(
+    () => ({
+      no_tiles: t`No tiles placed`,
+      out_of_bounds: t`Placement out of bounds`,
+      square_occupied: t`Square already occupied`,
+      not_in_line: t`Tiles must be placed in a single row or column`,
+      not_contiguous: t`Tiles must be contiguous (no gaps)`,
+      first_move_centre: t`First move must cover the central square`,
+      first_move_two_tiles: t`First move must place at least 2 tiles`,
+      not_connected: t`Tiles must connect to existing tiles on the board`,
+      no_words: t`No valid words formed`,
+    }),
+    [t]
+  )
   const moveDraftBase = useMemo(
-    () => deriveMoveDraft(board, pendingPlacements, invalidMoveFallback),
-    [board, pendingPlacements, invalidMoveFallback]
+    () => deriveMoveDraft(board, pendingPlacements, moveErrorMessages, invalidMoveFallback),
+    [board, pendingPlacements, moveErrorMessages, invalidMoveFallback]
   )
 
   const draftWords = useMemo(
@@ -300,7 +317,7 @@ export function WordsGameView() {
   )
 
   // Messages
-  const messagesQuery = useInfiniteMessagesQuery(selectedGame?.id)
+  const messagesQuery = useInfiniteMessagesQuery(selectedGameId)
   const chatMessages = useMemo(() => {
     if (!messagesQuery.data?.pages) return []
     const all = [...messagesQuery.data.pages].reverse().flatMap((p) => p.messages)
@@ -372,7 +389,7 @@ export function WordsGameView() {
 
   // WebSocket
   const { status, retries } = useGameWebsocket(
-    selectedGame?.id,
+    selectedGameId,
     game?.key
   )
   useEffect(() => {
@@ -567,38 +584,38 @@ export function WordsGameView() {
 
   // Submit move
   const handleSubmitMove = useCallback(() => {
-    if (!game || !selectedGame || moveDraftBase.status !== 'ready') return
+    if (!game || !selectedGameId || moveDraftBase.status !== 'ready') return
 
     const result = moveDraftBase.result
     const newBoardStr = serializeBoard(result.newBoard)
     const wordsStr = result.wordsFormed.map((word) => word.word).join(', ')
 
     moveMutation.mutate({
-      gameId: selectedGame.id,
+      gameId: selectedGameId,
       board: newBoardStr,
       score: result.totalScore,
       tiles_used: result.tilesUsed,
       words_formed: wordsStr,
     })
-  }, [game, moveDraftBase, moveMutation, selectedGame])
+  }, [game, moveDraftBase, moveMutation, selectedGameId])
 
   // Pass
   const handlePass = useCallback(() => {
-    if (!selectedGame) return
-    passMutation.mutate({ gameId: selectedGame.id })
-  }, [selectedGame, passMutation])
+    if (!selectedGameId) return
+    passMutation.mutate({ gameId: selectedGameId })
+  }, [selectedGameId, passMutation])
 
   // Exchange
   const handleExchangeConfirm = useCallback(() => {
-    if (!selectedGame || exchangeSelected.size === 0) return
+    if (!selectedGameId || exchangeSelected.size === 0) return
     const tilesToExchange = Array.from(exchangeSelected)
       .map((i) => rackTiles[i])
       .join('')
     exchangeMutation.mutate({
-      gameId: selectedGame.id,
+      gameId: selectedGameId,
       tiles: tilesToExchange,
     })
-  }, [selectedGame, exchangeSelected, rackTiles, exchangeMutation])
+  }, [selectedGameId, exchangeSelected, rackTiles, exchangeMutation])
 
   const handleToggleExchange = useCallback((index: number) => {
     setExchangeSelected((prev) => {
@@ -613,30 +630,55 @@ export function WordsGameView() {
   }, [])
 
   const canRecallMove = isMyTurn && pendingPlacements.length > 0 && !moveMutation.isPending
+  // The rules engine decides whether the move is legal; the dictionary lookup
+  // is advice, and the server takes an unknown word too. So submit on the base
+  // status - which covers checking, unknown-words and validation-offline alike
+  // rather than listing them. Gating on the resolved status left Submit dead
+  // through the 350ms debounce and the round-trip after it, so placing the
+  // last tile and clicking straight away did nothing.
   const canSubmitMove =
-    isMyTurn &&
-    !exchangeMode &&
-    (moveDraftStatus === 'ready' || moveDraftStatus === 'ready_with_invalid_words' || moveDraftStatus === 'validation_unavailable') &&
-    !moveMutation.isPending
+    isMyTurn && !exchangeMode && moveDraftBase.status === 'ready' && !moveMutation.isPending
+  // The server refuses an exchange once the bag is under seven tiles, so at
+  // the end of a game the control was offered, accepted tiles and then failed.
+  const canExchange = (game?.bag_count ?? 0) >= 7
 
   const headerModel = useWordsHeaderModel(game, myIdentity)
 
+  // The opponent's avatar comes through this app's own player-asset route,
+  // the one the Android client already uses. Not the people app: a cross-app
+  // fetch from the shell's sandboxed iframe carries Origin: null and no
+  // cookies, and words has a route of its own that is bound to the game and
+  // so resolves only its own players. Three- and four-player games list
+  // several opponents in the title, where a single avatar would be wrong.
+  const opponent = useMemo(() => {
+    if (!game || !selectedGameId || game.player_count !== 2) return null
+    const number = game.my_player_number === 1 ? 2 : 1
+    const id = game[`player${number}` as keyof typeof game] as string | undefined
+    if (!id) return null
+    const base = `${getAppPath()}/${selectedGameId}/-/user/${id}/asset`
+    return {
+      name: game[`player${number}_name` as keyof typeof game] as string | undefined,
+      avatarUrl: `${base}/avatar`,
+      styleUrl: `${base}/style`,
+    }
+  }, [game, selectedGameId])
+
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!selectedGame) return
+    if (!selectedGameId) return
     const body = newMessage.trim()
     if (!body) return
-    sendMessageMutation.mutate({ gameId: selectedGame.id, body })
+    sendMessageMutation.mutate({ gameId: selectedGameId, body })
   }
 
   const handleResign = () => {
-    if (!selectedGame) return
-    resignMutation.mutate({ gameId: selectedGame.id })
+    if (!selectedGameId) return
+    resignMutation.mutate({ gameId: selectedGameId })
   }
 
   const handleDelete = () => {
-    if (!selectedGame) return
-    deleteGameMutation.mutate({ gameId: selectedGame.id })
+    if (!selectedGameId) return
+    deleteGameMutation.mutate({ gameId: selectedGameId })
   }
 
   const handleRematch = () => {
@@ -676,25 +718,17 @@ export function WordsGameView() {
     </div>
   ) : null
 
-  // Loading / empty
-  if (selectedGameId && gamesQuery.isLoading) {
-    return (
-      <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title={t`Words`} />
-        <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden p-4">
-          <Skeleton className="h-8 w-48" />
-          <Skeleton className="aspect-square max-w-[600px] w-full" />
-        </Main>
-      </div>
-    )
-  }
-
-  if (!selectedGame) {
+  // With no game in the URL there is nothing to render but the empty state -
+  // and not even that until the list has arrived, since "No games yet" and
+  // "Select a game" are the same component told apart by the list's length.
+  if (!selectedGameId) {
     return (
       <div className="flex h-full flex-col overflow-hidden">
         <PageHeader title={t`Words`} />
         <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
-          {gamesQuery.error ? (
+          {gamesQuery.isLoading ? (
+            <Skeleton className="h-8 w-48" />
+          ) : gamesQuery.error ? (
             <GeneralError
               error={gamesQuery.error}
               minimal
@@ -736,6 +770,10 @@ export function WordsGameView() {
                       myTurn={game.status === 'active' ? isMyTurn : undefined}
                       title={headerModel.title}
                       status={headerModel.status}
+                      meta={headerModel.meta}
+                      opponentName={opponent?.name}
+                      opponentAvatarUrl={opponent?.avatarUrl}
+                      opponentStyleUrl={opponent?.styleUrl}
                       stats={
                         <>
                           {headerModel.players.map((player) => (
@@ -751,6 +789,7 @@ export function WordsGameView() {
                           ))}
                           <GameHeaderStat
                             label={headerModel.tilesLeftLabel}
+                            value={headerModel.tilesLeft}
                             labelClassName='max-w-none truncate-none text-muted-foreground'
                           />
                         </>
@@ -790,7 +829,7 @@ export function WordsGameView() {
                                       <SkipForward className='me-2 size-4' /> <Trans>Pass</Trans>
                                     </DropdownMenuItem>
                                   )}
-                                  {isMyTurn && (
+                                  {isMyTurn && (canExchange || exchangeMode) && (
                                     <DropdownMenuItem
                                       onClick={() => {
                                         handleRecall()
@@ -915,7 +954,7 @@ export function WordsGameView() {
               <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
             </div>
             <ChatMessageList
-              key={selectedGame.id}
+              key={selectedGameId}
               messagesQuery={messagesQuery}
               chatMessages={chatMessages}
               isLoadingMessages={messagesQuery.isLoading}
@@ -949,7 +988,7 @@ export function WordsGameView() {
             <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
           </SheetHeader>
           <ChatMessageList
-            key={selectedGame.id}
+            key={selectedGameId}
             messagesQuery={messagesQuery}
             chatMessages={chatMessages}
             isLoadingMessages={messagesQuery.isLoading}

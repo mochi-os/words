@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "Sicela uhlole uxhumano lwakho lwe-inthanethi bese uzama futhi."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " noma "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(kuhleliwe)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(nweba)"
 
@@ -47,7 +47,7 @@ msgstr "{0, plural, one {# kukhethiwe} other {# kukhethiwe}}"
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:219
+#: src/features/words/components/words-board.tsx:228
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} ku-{1}{2}, chofoza ukususa"
 
@@ -64,11 +64,6 @@ msgstr "Ukubuka kuqala kwenketho {0}"
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} udlalile <0>{1}</0>"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/lib/header-model.ts:140
-msgid "{0} tiles left"
-msgstr "{0} amathayela asele"
-
 #: src/features/words/components/chat-message-list.tsx:224
 msgid "{actor} exchanged tiles"
 msgstr "{actor} ushintshe amathayela"
@@ -81,21 +76,27 @@ msgstr "{actor} udlulisile"
 msgid "{actor} passed — game over"
 msgstr "{actor} udlulisile — umdlalo uphelile"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#us} other {#us}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#hr} other {#hr}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#mzu} other {#mzu}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#vk} other {#vk}}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:230
+msgid "{displayLetter} at {0}{1}"
+msgstr "{displayLetter} ku-{0}{1}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:174
 msgid "{entityLabel} name"
@@ -109,17 +110,21 @@ msgstr "Igama le-{entityLabel} liyadingeka"
 msgid "{name} resigned"
 msgstr "{name} udedele"
 
-#: src/features/words/lib/header-model.ts:109
+#: src/features/words/lib/header-model.ts:111
 msgid "{name} wins"
 msgstr "Kuwina u-{name}"
 
-#: src/features/words/lib/header-model.ts:98
+#: src/features/words/lib/header-model.ts:100
 msgid "{name}'s move"
 msgstr "Ukunyakaza kuka-{name}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} unikeze idrowu"
+
+#: src/features/words/lib/header-model.ts:148
+msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
+msgstr "{playerCount, plural, one {Kudlalwa nomdlali ongu-#} other {Kudlalwa nabadlali aba-#}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -137,6 +142,7 @@ msgstr "{selectedCount, plural, one {# okukhethiwe} other {# okukhethiwe}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Izenzo eziningi ze-{entityName} engu-# ekhethiwe} other {Izenzo eziningi ze-{manyName} ezingu-# ezikhethiwe}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{sentLabel} kokungu-{totalLabel}"
@@ -158,11 +164,11 @@ msgstr "{value, plural, one {amaphuzu angu-#} other {amaphuzu angu-#}}"
 msgid "+{0} nested"
 msgstr "+{0} okufakelwe"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} ezinye izimpendulo"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 impendulo"
 
@@ -178,7 +184,7 @@ msgstr "Amahora angu-24"
 msgid "Absolute (date and time)"
 msgstr "Okuphelele (usuku nesikhathi)"
 
-#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:50
 msgid "Accept"
 msgstr "Yamukela"
 
@@ -220,7 +226,7 @@ msgstr "Imidlalo Esebenzayo"
 msgid "Add"
 msgstr "Engeza"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "Engeza umbono..."
 
@@ -348,8 +354,12 @@ msgstr "Noma ubani"
 msgid "Anyone who is logged in"
 msgstr "Noma ubani ongenile"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr "Konke okubhalisele lo mfudlana kuzoyeka ukukuthola. Ungakopisha i-URL entsha ngemva kwalokho."
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Uqinisekile ufuna ukususa okuthi \"{0}\"?"
 
@@ -357,7 +367,7 @@ msgstr "Uqinisekile ufuna ukususa okuthi \"{0}\"?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Uqinisekile ufuna ukususa ikholomu \"{name}\"? Lokhu akukwazi ukuhlehliswa."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Uqinisekile ufuna ukususa lo mbono? Lokhu kuzosusa nazo zonke izimpendulo."
 
@@ -365,7 +375,7 @@ msgstr "Uqinisekile ufuna ukususa lo mbono? Lokhu kuzosusa nazo zonke izimpendul
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Uqinisekile ufuna ukuphuma? Kuzodingeka ungene futhi ukuze ufinyelele i-akhawunti yakho."
 
-#: src/features/words/index.tsx:974
+#: src/features/words/index.tsx:1018
 msgid "Are you sure you want to resign?"
 msgstr "Uqinisekile ufuna ukuyeka?"
 
@@ -377,13 +387,13 @@ msgstr "Khuphukayo"
 msgid "Ascending"
 msgstr "Ukukhuphuka"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "Namathisela amafayela ombono"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "Namathisela amafayela empendulo"
 
@@ -392,7 +402,7 @@ msgstr "Namathisela amafayela empendulo"
 msgid "Authenticated users"
 msgstr "Abasebenzisi abaqinisekisiwe"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Ikhodi yesiqinisekisi"
 
@@ -441,6 +451,7 @@ msgid "Blocks"
 msgstr "Iyavimba"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:318
+#: src/features/words/components/words-board.tsx:161
 msgid "Board"
 msgstr "Ibhodi"
 
@@ -458,11 +469,11 @@ msgid "Browser notifications"
 msgstr "Izaziso zebhrawuza"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -470,24 +481,24 @@ msgstr "Izaziso zebhrawuza"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/words/components/move-composer.tsx:145
+#: src/features/words/components/move-composer.tsx:139
 #: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:875
-#: src/features/words/index.tsx:1047
+#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:1091
 msgid "Cancel"
 msgstr "Khansela"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "Khansela umbono"
 
-#: src/features/words/index.tsx:802
+#: src/features/words/index.tsx:841
 msgid "Cancel exchange"
 msgstr "Khansela ukushintshelana"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Khansela impendulo"
 
@@ -500,8 +511,8 @@ msgstr "Isigaba salezi zaziso"
 msgid "Change notification category"
 msgstr "Shintsha isigaba sesaziso"
 
-#: src/features/words/index.tsx:910
-#: src/features/words/index.tsx:944
+#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:988
 msgid "Chat"
 msgstr "Ingxoxo"
 
@@ -521,7 +532,7 @@ msgstr "Uhlu lokuhlola"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Khetha umdlalo kubha eseceleni noma uqale omusha."
 
-#: src/features/words/index.tsx:1031
+#: src/features/words/index.tsx:1075
 msgid "Choose a letter"
 msgstr "Khetha uhlamvu"
 
@@ -581,8 +592,8 @@ msgstr "Sula ukukhetha"
 msgid "Clear selection (Escape)"
 msgstr "Sula ukukhetha (i-Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -651,8 +662,8 @@ msgstr "Kuyeza Maduze!"
 msgid "Command Palette"
 msgstr "Ipaleti yemiyalo"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Izenzo zokuphawula"
 
@@ -690,7 +701,7 @@ msgstr "Ama-akhawunti axhunyiwe"
 msgid "Connecting..."
 msgstr "Iyaxhuma..."
 
-#: src/features/words/components/move-composer.tsx:117
+#: src/features/words/components/move-composer.tsx:111
 msgid "Contains unknown words. You can still submit."
 msgstr "Iqukethe amagama angaziwa. Usengakwazi ukuthumela."
 
@@ -710,7 +721,7 @@ msgstr "Ulwazi nemininingwane yomongo."
 msgid "Continue"
 msgstr "Qhubeka"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "Qhubeka nge-{label}"
 
@@ -734,22 +745,22 @@ msgstr "Akukwazanga ukulayisha le dokhumenti. Sicela uzame futhi kamuva."
 msgid "Couldn't load notifications"
 msgstr "Yehlulekile ukulayisha izaziso"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "Ayikwazanga ukuthumela ikhodi. Sicela uzame futhi."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Ayikwazanga ukuqala ukuqinisekiswa kabusha. Sicela uzame futhi."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ayikwazanga ukuqinisekisa ngaleyo akhawunti. Sicela uzame futhi."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Dala"
@@ -768,7 +779,7 @@ msgstr "Dala into entsha"
 msgid "Created"
 msgstr "Kudaliwe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/words/components/new-game.tsx:197
 msgid "Creating..."
@@ -819,18 +830,18 @@ msgstr "Ukuhlunga okuzenzakalelayo"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
-#: src/features/words/index.tsx:1003
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
+#: src/features/words/index.tsx:1047
 msgid "Delete"
 msgstr "Susa"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "Susa okunamathiselwe"
 
@@ -838,7 +849,7 @@ msgstr "Susa okunamathiselwe"
 msgid "Delete column"
 msgstr "Susa ikholomu"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "Susa umbono"
 
@@ -846,11 +857,11 @@ msgstr "Susa umbono"
 msgid "Delete field"
 msgstr "Susa inkambu"
 
-#: src/features/words/index.tsx:818
+#: src/features/words/index.tsx:857
 msgid "Delete game"
 msgstr "Susa umdlalo"
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1038
 msgid "Delete game?"
 msgstr "Susa umdlalo?"
 
@@ -872,7 +883,7 @@ msgstr "Susa umbukiso"
 msgid "Delete your account on the old server"
 msgstr "Susa i-akhawunti yakho eservereni endala"
 
-#: src/features/words/index.tsx:1000
+#: src/features/words/index.tsx:1044
 msgid "Deleting..."
 msgstr "Kususwa..."
 
@@ -911,11 +922,11 @@ msgstr "Indlela"
 msgid "Directory"
 msgstr "Uhlu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "Lahla"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "Lahla uhlaka?"
 
@@ -938,7 +949,7 @@ msgstr "Ibonisa ibha eseceleni yefoni."
 msgid "Done"
 msgstr "Kwenziwe"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -956,8 +967,8 @@ msgstr "Iphinda kabili"
 msgid "Dyslexia-friendly"
 msgstr "Sokulungele i-dyslexia"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "Hlela"
 
@@ -995,13 +1006,13 @@ msgstr "Hlela umbukiso"
 msgid "Email"
 msgstr "I-imeyili"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "Ikhodi ye-imeyili"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:221
+#: src/features/words/components/words-board.tsx:232
 msgid "Empty square {0}{1}"
 msgstr "Isikwele esingenalutho {0}{1}"
 
@@ -1017,29 +1028,29 @@ msgstr "IsiNgisi (UK)"
 msgid "English (US)"
 msgstr "IsiNgisi (US)"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "Faka ikhodi evela ku-imeyili yakho"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Faka ikhodi yakho yesiqinisekisi"
 
-#: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:880
+#: src/features/words/components/move-composer.tsx:155
+#: src/features/words/index.tsx:920
 msgid "Exchange"
 msgstr "Shintsha"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:920
 msgid "Exchange ({0})"
 msgstr "Shintsha ({0})"
 
-#: src/features/words/components/move-composer.tsx:159
+#: src/features/words/components/move-composer.tsx:153
 msgid "Exchange ({exchangeCount})"
 msgstr "Shintsha ({exchangeCount})"
 
-#: src/features/words/index.tsx:802
+#: src/features/words/index.tsx:841
 msgid "Exchange tiles"
 msgstr "Shintshanisa amathayela"
 
@@ -1080,23 +1091,23 @@ msgid "Failed to create game"
 msgstr "Kuhlulekile ukudala umdlalo"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Kuhlulekile ukudala isixhumanisi"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:375
 msgid "Failed to create rematch"
 msgstr "Kuhlulekile ukudala umdlalo omusha"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "Kuhlulekile ukususa okunanyathiselwe"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "Kuhlulekile ukususa ukuphawula"
 
-#: src/features/words/index.tsx:369
+#: src/features/words/index.tsx:386
 msgid "Failed to delete game"
 msgstr "Kuhlulekile ukususa umdlalo"
 
@@ -1104,15 +1115,15 @@ msgstr "Kuhlulekile ukususa umdlalo"
 msgid "Failed to delete link"
 msgstr "Kuhlulekile ukususa isixhumanisi"
 
-#: src/features/words/index.tsx:342
+#: src/features/words/index.tsx:359
 msgid "Failed to exchange"
 msgstr "Kuhlulekile ukushintshanisa"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "Kuhlulekile ukuthola ithokeni ye-RSS"
 
-#: ../../../lib/web/src/hooks/use-load-more.ts:74
+#: ../../../lib/web/src/hooks/use-load-more.ts:83
 msgid "Failed to load"
 msgstr "Kuhlulekile ukulayisha"
 
@@ -1128,11 +1139,11 @@ msgstr "Yehlulekile ukulayisha isithombe"
 msgid "Failed to load video"
 msgstr "Yehlulekile ukulayisha ividiyo"
 
-#: src/features/words/index.tsx:332
+#: src/features/words/index.tsx:349
 msgid "Failed to pass"
 msgstr "Kuhlulekile ukudlula"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "Kuhlulekile ukuthumela ukuphawula"
 
@@ -1140,16 +1151,16 @@ msgstr "Kuhlulekile ukuthumela ukuphawula"
 msgid "Failed to remove account"
 msgstr "Kuhlulekile ukususa i-akhawunti"
 
-#: src/features/words/index.tsx:349
+#: src/features/words/index.tsx:366
 msgid "Failed to resign"
 msgstr "Kuhlulekile ukuyeka"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "Yehlulekile ukubuyisela ukufinyelela kwe-RSS"
 
-#: src/features/words/index.tsx:927
-#: src/features/words/index.tsx:961
+#: src/features/words/index.tsx:971
+#: src/features/words/index.tsx:1005
 msgid "Failed to send"
 msgstr "Kuhlulekile ukuthumela"
 
@@ -1157,21 +1168,21 @@ msgstr "Kuhlulekile ukuthumela"
 msgid "Failed to send verification code"
 msgstr "Kuhlulekile ukuthumela ikhodi yokuqinisekisa"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:343
 msgid "Failed to submit move"
 msgstr "Kuhlulekile ukuthumela ukunyakaza"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "Kuhlulekile ukubuyekeza ukuphawula"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Kuhlulekile ukulayisha okunanyathiselwe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Amafayela"
 
@@ -1182,6 +1193,14 @@ msgstr "Hlunga..."
 #: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Qeda ukudlulisa i-akhawunti yakho"
+
+#: src/features/words/index.tsx:193
+msgid "First move must cover the central square"
+msgstr "Ukunyakaza kokuqala kumele kumboze isikwele esimaphakathi"
+
+#: src/features/words/index.tsx:194
+msgid "First move must place at least 2 tiles"
+msgstr "Ukunyakaza kokuqala kumele kubeke okungenani amathayela ama-2"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:221
 msgid "Flags"
@@ -1224,11 +1243,11 @@ msgstr "Isakhiwo esiphelele"
 msgid "Game created"
 msgstr "Umdlalo udaliwe"
 
-#: src/features/words/index.tsx:365
+#: src/features/words/index.tsx:382
 msgid "Game deleted"
 msgstr "Umdlalo ususiwe"
 
-#: src/features/words/lib/header-model.ts:112
+#: src/features/words/lib/header-model.ts:114
 msgid "Game over"
 msgstr "Umdlalo uphelile"
 
@@ -1331,7 +1350,7 @@ msgstr "Izintshisekelo"
 msgid "Invalid date"
 msgstr "Idethi engalungile"
 
-#: src/features/words/index.tsx:182
+#: src/features/words/index.tsx:185
 msgid "Invalid move"
 msgstr "Ukunyakaza okungalungile"
 
@@ -1347,7 +1366,7 @@ msgstr "Ikhodi yokuqinisekisa engalungile"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Kubonakala sengathi ikhasi olifunayo <0/>alikho noma lisusiwe."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "Manje nje"
 
@@ -1388,7 +1407,7 @@ msgstr "Izinhlamvu, izinombolo, izikhala, nemigqa kuphela"
 msgid "Light"
 msgstr "Okukhanyayo"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Isixhumanisi"
 
@@ -1486,7 +1505,7 @@ msgstr "Ubude obuncane"
 msgid "Mochi web"
 msgstr "Iwebhu ye-Mochi"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1494,8 +1513,8 @@ msgstr ""
 msgid "Monday"
 msgstr "UMsombuluko"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Eziningi izinketho"
 
@@ -1520,7 +1539,7 @@ msgstr "Igama kufanele libe nezinhlamvu ezingu-1000 noma ngaphansi"
 msgid "Network error"
 msgstr "Iphutha lenethiwekhi"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Okusha"
@@ -1537,7 +1556,7 @@ msgstr "Umdlalo omusha"
 msgid "Next image"
 msgstr "Isithombe esilandelayo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "Asikho i-{parentClassNames} okufanele kwengezwe kuyo"
 
@@ -1549,7 +1568,7 @@ msgstr "Awekho amarela okufinyelela acushiwe. Engeza amarela ukulawula ukuthi ub
 msgid "No activity yet"
 msgstr "Awukho umsebenzi okwamanje"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "Awekho amazwana okwamanje"
 
@@ -1573,7 +1592,7 @@ msgstr "Ayikho imidlalo okwamanje"
 msgid "No groups available"
 msgstr "Awekho amaqembu atholakalayo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala."
 
@@ -1602,6 +1621,7 @@ msgstr "Azikho izindawo ezitholakele"
 msgid "No profile"
 msgstr "Awukho umbiko womsebenzisi"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1617,6 +1637,10 @@ msgstr "Imiphumela ayitholakali."
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:339
 msgid "No status"
 msgstr "Asikho isimo"
+
+#: src/features/words/index.tsx:188
+msgid "No tiles placed"
+msgstr "Awekho amathayela abekiwe"
 
 #: ../../../lib/web/src/components/timezone-select.tsx:67
 msgid "No time zone found."
@@ -1634,14 +1658,18 @@ msgstr "Azikho izaziso ezingafundiwe"
 msgid "No users found"
 msgstr "Abakho abasebenzisi abatholakele"
 
+#: src/features/words/index.tsx:196
+msgid "No valid words formed"
+msgstr "Awekho amagama avumelekile akhiwe"
+
 #: ../../../lib/web/src/components/entity/entity-design-preview.tsx:115
 msgid "No views"
 msgstr "Akukho ukubukwa"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1708,11 +1736,11 @@ msgstr "Vula izenzo ze-akhawunti"
 msgid "Open actions"
 msgstr "Vula izenzo"
 
-#: src/features/words/index.tsx:764
+#: src/features/words/index.tsx:803
 msgid "Open chat panel"
 msgstr "Vula iphaneli yengxoxo"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:811
 msgid "Open game actions"
 msgstr "Vula izenzo zomdlalo"
 
@@ -1754,7 +1782,7 @@ msgstr "Vula izenzo zokubuka"
 msgid "Open view controls"
 msgstr "Vula izilawuli zokubuka"
 
-#: src/features/words/lib/header-model.ts:116
+#: src/features/words/lib/header-model.ts:118
 msgid "Opponent resigned — you win!"
 msgstr "Ophikisanayo uyekile — uwinile!"
 
@@ -1781,19 +1809,19 @@ msgstr "Umnikazi"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "Ikhasi {currentPage} kwangu-{totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "Umzali"
 
-#: src/features/words/index.tsx:790
+#: src/features/words/index.tsx:829
 msgid "Pass"
 msgstr "Yedlula"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "Ukhiye wokungena"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "Ukuqinisekiswa kwe-passkey kuhlulekile. Sicela uzame futhi."
 
@@ -1809,15 +1837,15 @@ msgstr "Iphethini (i-regex)"
 msgid "Pick a date"
 msgstr "Khetha usuku"
 
-#: src/features/words/lib/header-model.ts:79
+#: src/features/words/index.tsx:189
+msgid "Placement out of bounds"
+msgstr "Ukubeka kungaphandle kwebhodi"
+
+#: src/features/words/lib/header-model.ts:81
 msgid "Player {playerNumber}"
 msgstr "Umdlali {playerNumber}"
 
-#: src/features/words/lib/header-model.ts:138
-msgid "Playing with {playerCount} players"
-msgstr "Kudlalwa nabadlali {playerCount}"
-
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1839,11 +1867,11 @@ msgstr "Sicela uzame futhi."
 msgid "Please wait a moment and try again."
 msgstr "Sicela ulinde isikhashana bese uzama futhi."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Okuthunyelwe"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Okwabiwayo namazwana"
 
@@ -1885,8 +1913,8 @@ msgstr "Xhuma kabusha ama-akhawunti akho kule server"
 msgid "Re-register your passkeys on this server"
 msgstr "Phinda ubhalise okhiye bakho bokungena kule seva"
 
-#: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:886
+#: src/features/words/components/move-composer.tsx:165
+#: src/features/words/index.tsx:926
 msgid "Recall"
 msgstr "Khumbula"
 
@@ -1920,13 +1948,13 @@ msgstr "Okuhlobene (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Okuhlobene phakathi kwamahora angu-24, ngale kwalokho okuphelele"
 
-#: src/features/words/index.tsx:815
+#: src/features/words/index.tsx:854
 msgid "Rematch"
 msgstr "Phindela emdlalweni"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1979,13 +2007,13 @@ msgstr "Qamba kabusha ikholomu"
 msgid "Rename this board column"
 msgstr "Qamba kabusha leli kholomu lebhodi"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Phendula"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "Phendula ku-{0}..."
 
@@ -1993,7 +2021,7 @@ msgstr "Phendula ku-{0}..."
 msgid "Required"
 msgstr "Kuyadingeka"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "Thumela i-imeyili futhi"
 
@@ -2011,26 +2039,34 @@ msgstr "Setha kabusha i-{title}"
 msgid "Reset all settings to default values"
 msgstr "Setha kabusha zonke izilungiselelo emanani okuzenzakalelayo"
 
-#: src/features/words/index.tsx:806
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:845
+#: src/features/words/index.tsx:1026
 msgid "Resign"
 msgstr "Yeka"
 
-#: src/features/words/index.tsx:973
+#: src/features/words/index.tsx:1017
 msgid "Resign game?"
 msgstr "Yeka umdlalo?"
 
-#: src/features/words/index.tsx:979
+#: src/features/words/index.tsx:1023
 msgid "Resigning..."
 msgstr "Iyayeka..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "Zama futhi"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr "Hoxisa"
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Buyisela ukufinyelela"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr "Hoxisa ukufinyelela kwe-RSS?"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2049,15 +2085,15 @@ msgstr "Imigqa iqoqwa nge"
 msgid "Rows per page"
 msgstr "Imigqa ekhasini ngalinye"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "Ukufinyelela kwe-RSS kubuyiselwe"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "Ifidi ye-RSS"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "I-URL ye-RSS ikopishelwe kubhodi"
 
@@ -2065,10 +2101,10 @@ msgstr "I-URL ye-RSS ikopishelwe kubhodi"
 msgid "Saturday"
 msgstr "UMgqibelo"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
-#: ../../../lib/web/src/components/ui/secret-field.tsx:77
+#: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "Londoloza"
 
@@ -2117,6 +2153,7 @@ msgstr "Sesha, buka, futhi uhlunge lokhu okubukwayo."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2220,7 +2257,7 @@ msgstr "Ekhethiwe: <0>{0}</0>"
 msgid "Send again"
 msgstr "Thumela futhi"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "Thumela i-imeyili"
 
@@ -2253,7 +2290,7 @@ msgstr "Misa indawo yokuqala neyokuya"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Izilungiselelo"
 
@@ -2277,7 +2314,7 @@ msgstr "Bonisa lolu sizo"
 msgid "Showing {totalShown} of {total}"
 msgstr "Kuboniswa {totalShown} ku-{total}"
 
-#: src/features/words/index.tsx:782
+#: src/features/words/index.tsx:821
 msgid "Shuffle rack"
 msgstr "Phithizela ishalofu"
 
@@ -2314,13 +2351,17 @@ msgstr "Okuncane"
 msgid "Sort"
 msgstr "Hlunga"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Imithombo"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Ukukhula"
+
+#: src/features/words/index.tsx:190
+msgid "Square already occupied"
+msgstr "Isikwele sesivele sithathiwe"
 
 #: src/features/words/components/new-game.tsx:118
 msgid "Start a new Words game"
@@ -2330,7 +2371,7 @@ msgstr "Qala umdlalo omusha wamaWords"
 msgid "Start game"
 msgstr "Qala umdlalo"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "Qala ingxoxo ngokwengeza amazwana okuqala."
 
@@ -2342,21 +2383,23 @@ msgstr "Kodwa hlala ulindile!"
 msgid "Subject"
 msgstr "Isihloko"
 
-#: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:894
+#: src/features/words/components/move-composer.tsx:173
+#: src/features/words/index.tsx:938
 msgid "Submit"
 msgstr "Hambisa"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "Hambisa amazwana"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Hambisa impendulo"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2408,9 +2451,18 @@ msgstr "Imibandela nemigomo"
 msgid "Text"
 msgstr "Umbhalo"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Leyo khodi ayilungile noma isiphelelwe yisikhathi."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr "Akukwazanga ukuthunyelwa. Amafayela angase abe makhulu kakhulu, noma uxhumano lwakho luhlulekile. Zama amafayela amancane."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr "Bekukukhulu kakhulu ukuthi kulayishwe. Susa noma unciphise amafayela bese uzama futhi."
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2436,13 +2488,29 @@ msgstr "Izilungiselelo Zendikimba"
 msgid "This page has not been created yet."
 msgstr "Leli khasi alikadalwa."
 
-#: src/features/words/index.tsx:995
+#: src/features/words/index.tsx:1039
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Lokhu kuzosusa umdlalo nengxoxo yawo unomphela. Lesi senzo asikwazi ukuhlehliswa."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "ULwesine"
+
+#: src/features/words/lib/header-model.ts:154
+msgid "Tiles left"
+msgstr "Amathayela asele"
+
+#: src/features/words/index.tsx:192
+msgid "Tiles must be contiguous (no gaps)"
+msgstr "Amathayela kumele axhumane (kungabi namagebe)"
+
+#: src/features/words/index.tsx:191
+msgid "Tiles must be placed in a single row or column"
+msgstr "Amathayela kumele abekwe emugqeni owodwa noma ekholomu eyodwa"
+
+#: src/features/words/index.tsx:195
+msgid "Tiles must connect to existing tiles on the board"
+msgstr "Amathayela kumele axhumane namathayela asevele ekhona ebhodini"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:220
 msgid "To"
@@ -2567,11 +2635,11 @@ msgstr "I-United States"
 msgid "Unknown"
 msgstr "Akwaziwa"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Susa ukubhalisa"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2586,8 +2654,8 @@ msgstr "Akuqinisekisiwe"
 msgid "Updated"
 msgstr "Kubuyekeziwe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Layisha"
 
@@ -2595,7 +2663,7 @@ msgstr "Layisha"
 msgid "Upload progress"
 msgstr "Inqubekela phambili yokulayisha"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Sebenzisa i-passkey yakho"
 
@@ -2605,7 +2673,7 @@ msgstr "Sebenzisa i-passkey yakho"
 msgid "User"
 msgstr "Umsebenzisi"
 
-#: src/features/words/components/move-composer.tsx:109
+#: src/features/words/components/move-composer.tsx:103
 msgid "Validation offline — you can still submit."
 msgstr "Ukuqinisekisa akukho ku-inthanethi — usengakwazi ukuthumela."
 
@@ -2621,7 +2689,7 @@ msgstr "Ikhodi yokuqinisekiswa ithunyelwe"
 msgid "Verification failed"
 msgstr "Ukuqinisekiswa kuhlulekile"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2687,20 +2755,19 @@ msgstr "Iwebhusayithi ingaphansi kwezilungiselelo!"
 msgid "Wednesday"
 msgstr "ULwesithathu"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:683
-#: src/features/words/index.tsx:695
+#: src/features/words/index.tsx:83
+#: src/features/words/index.tsx:727
 msgid "Words"
 msgstr "Amagama"
 
-#: src/features/words/components/move-composer.tsx:123
+#: src/features/words/components/move-composer.tsx:117
 msgid "Words formed"
 msgstr "Amagama akhiwe"
 
 #: src/features/words/components/chat-message-list.tsx:208
 #: src/features/words/components/chat-message-list.tsx:237
 #: src/features/words/components/chat-message-list.tsx:246
-#: src/features/words/lib/header-model.ts:127
+#: src/features/words/lib/header-model.ts:129
 msgid "You"
 msgstr "Wena"
 
@@ -2712,11 +2779,11 @@ msgstr "Awunakho ukufinyelela kule ngxenye."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Awunayo imvume edingekayo <0/>yokubuka le nsiza."
 
-#: src/features/words/lib/header-model.ts:117
+#: src/features/words/lib/header-model.ts:119
 msgid "You resigned"
 msgstr "Ushiye phansi"
 
-#: src/features/words/lib/header-model.ts:103
+#: src/features/words/lib/header-model.ts:105
 msgid "You win!"
 msgstr "Uwinile!"
 
@@ -2728,18 +2795,18 @@ msgstr "Usubonile konke!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "I-akhawunti yakho isuswe lapha ivela ku-{source}. Uze uyisuse lapho, imilayezo nezaziso zingafika eziservereni zombili, ingxenye yomqukathi wakho iqhubeka inikezwa eservereni endala, futhi abalandeli bangathatha imizuzu embalwa ukukuthola lapha."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "Okunamathiselwe kwakho kuzolahleka."
 
-#: src/features/words/lib/header-model.ts:95
+#: src/features/words/lib/header-model.ts:97
 msgid "Your move"
 msgstr "Ukunyakaza kwakho"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "Umbhalo nokunamathiselwe kwakho kuzolahleka."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "Umbhalo wakho uzolahleka."

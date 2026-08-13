@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "කරුණාකර ඔබගේ අන්තර්ජාල සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " හෝ "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(සංස්කරණය කළා)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(පුළුල් කරන්න)"
 
@@ -47,7 +47,7 @@ msgstr "{0, plural, one {# තෝරාගත්} other {# තෝරාගත්
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:219
+#: src/features/words/components/words-board.tsx:228
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{1}{2} හි {0}, ඉවත් කිරීමට ක්ලික් කරන්න"
 
@@ -64,11 +64,6 @@ msgstr "{0} විකල්පයේ පෙරදසුන"
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} <0>{1}</0> ක්‍රීඩා කළා"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/lib/header-model.ts:140
-msgid "{0} tiles left"
-msgstr "tiles {0}ක් ඉතිරි"
-
 #: src/features/words/components/chat-message-list.tsx:224
 msgid "{actor} exchanged tiles"
 msgstr "{actor} ටයිල් මාරු කළා"
@@ -81,21 +76,27 @@ msgstr "{actor} මගහැරියා"
 msgid "{actor} passed — game over"
 msgstr "{actor} මගහැරියා — ක්‍රීඩාව අවසන්"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#දි} other {#දි}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#පැ} other {#පැ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#මි} other {#මි}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#සති} other {#සති}}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:230
+msgid "{displayLetter} at {0}{1}"
+msgstr "{0}{1} හි {displayLetter}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:174
 msgid "{entityLabel} name"
@@ -109,17 +110,21 @@ msgstr "{entityLabel} නම අවශ්‍යයි"
 msgid "{name} resigned"
 msgstr "{name} ඉල්ලා අස්විය"
 
-#: src/features/words/lib/header-model.ts:109
+#: src/features/words/lib/header-model.ts:111
 msgid "{name} wins"
 msgstr "{name} ජයග්‍රහණය කරයි"
 
-#: src/features/words/lib/header-model.ts:98
+#: src/features/words/lib/header-model.ts:100
 msgid "{name}'s move"
 msgstr "{name}ගේ ගමන"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ජය පරාජය ඉදිරිපත් කළා"
+
+#: src/features/words/lib/header-model.ts:148
+msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
+msgstr "{playerCount, plural, one {ක්‍රීඩකයන් # දෙනෙකු සමඟ ක්‍රීඩා කරයි} other {ක්‍රීඩකයන් # දෙනෙකු සමඟ ක්‍රීඩා කරයි}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -137,6 +142,7 @@ msgstr "{selectedCount, plural, one {# තෝරාගත්} other {# තෝර
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {තෝරාගත් {entityName} # ක් සඳහා තොග ක්‍රියා} other {තෝරාගත් {manyName} # ක් සඳහා තොග ක්‍රියා}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{totalLabel}න් {sentLabel}"
@@ -158,11 +164,11 @@ msgstr "{value, plural, one {ලකුණු #} other {ලකුණු #}}"
 msgid "+{0} nested"
 msgstr "+{0} කැදලි"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} තවත් පිළිතුරු"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "පිළිතුරු 1"
 
@@ -178,7 +184,7 @@ msgstr "පැය 24"
 msgid "Absolute (date and time)"
 msgstr "නිරපේක්ෂ (දිනය සහ වේලාව)"
 
-#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:50
 msgid "Accept"
 msgstr "පිළිගන්න"
 
@@ -220,7 +226,7 @@ msgstr "සක්‍රීය ක්‍රීඩා"
 msgid "Add"
 msgstr "එක් කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "අදහසක් එක් කරන්න..."
 
@@ -348,8 +354,12 @@ msgstr "ඕනෑම කෙනෙක්"
 msgid "Anyone who is logged in"
 msgstr "පිවිසී සිටින ඕනෑම කෙනෙක්"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr "මෙම සංග්‍රහයට දායක වූ සියල්ල එය ලැබීම නවත්වනු ඇත. පසුව ඔබට නව URL එකක් පිටපත් කළ හැකිය."
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "ඔබට \"{0}\" මැකීමට අවශ්‍ය බව විශ්වාසද?"
 
@@ -357,7 +367,7 @@ msgstr "ඔබට \"{0}\" මැකීමට අවශ්‍ය බව විශ
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "ඔබට \"{name}\" තීරුව මැකීමට අවශ්‍ය බව විශ්වාසද? මෙය අහෝසි කළ නොහැක."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "ඔබට මෙම අදහස මැකීමට අවශ්‍ය බව විශ්වාසද? මෙය සියලු පිළිතුරු ද මකා දමයි."
 
@@ -365,7 +375,7 @@ msgstr "ඔබට මෙම අදහස මැකීමට අවශ්‍ය �
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ඔබට පිටවීමට අවශ්‍ය බව විශ්වාසද? ඔබේ ගිණුමට ප්‍රවේශ වීමට ඔබට නැවත පුරනය විය යුතුය."
 
-#: src/features/words/index.tsx:974
+#: src/features/words/index.tsx:1018
 msgid "Are you sure you want to resign?"
 msgstr "ඔබට ඇත්තටම අත්හැරීමට අවශ්‍යද?"
 
@@ -377,13 +387,13 @@ msgstr "ආරෝහණ"
 msgid "Ascending"
 msgstr "ආරෝහණ"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "අදහස්වල ගොනු අමුණන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "පිළිතුරු ගොනු අමුණන්න"
 
@@ -392,7 +402,7 @@ msgstr "පිළිතුරු ගොනු අමුණන්න"
 msgid "Authenticated users"
 msgstr "සත්‍යාපිත පරිශීලකයන්"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Authenticator කේතය"
 
@@ -441,6 +451,7 @@ msgid "Blocks"
 msgstr "අවහිර කරයි"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:318
+#: src/features/words/components/words-board.tsx:161
 msgid "Board"
 msgstr "පුවරුව"
 
@@ -458,11 +469,11 @@ msgid "Browser notifications"
 msgstr "බ්‍රවුසර දැනුම්දීම්"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -470,24 +481,24 @@ msgstr "බ්‍රවුසර දැනුම්දීම්"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/words/components/move-composer.tsx:145
+#: src/features/words/components/move-composer.tsx:139
 #: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:875
-#: src/features/words/index.tsx:1047
+#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:1091
 msgid "Cancel"
 msgstr "අවලංගු කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "අදහස අවලංගු කරන්න"
 
-#: src/features/words/index.tsx:802
+#: src/features/words/index.tsx:841
 msgid "Cancel exchange"
 msgstr "හුවමාරුව අවලංගු කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "පිළිතුර අවලංගු කරන්න"
 
@@ -500,8 +511,8 @@ msgstr "මෙම දැනුම්දීම් සඳහා ප්‍රවර
 msgid "Change notification category"
 msgstr "දැනුම්දීම් ප්‍රවර්ගය වෙනස් කරන්න"
 
-#: src/features/words/index.tsx:910
-#: src/features/words/index.tsx:944
+#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:988
 msgid "Chat"
 msgstr "චැට්"
 
@@ -521,7 +532,7 @@ msgstr "පරීක්ෂා ලැයිස්තුව"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "පැති තීරුවෙන් ක්‍රීඩාවක් තෝරන්න හෝ නව එකක් ආරම්භ කරන්න."
 
-#: src/features/words/index.tsx:1031
+#: src/features/words/index.tsx:1075
 msgid "Choose a letter"
 msgstr "අකුරක් තෝරන්න"
 
@@ -581,8 +592,8 @@ msgstr "තේරීම හිස් කරන්න"
 msgid "Clear selection (Escape)"
 msgstr "තේරීම හිස් කරන්න (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -651,8 +662,8 @@ msgstr "ළඟදීම පැමිණේ!"
 msgid "Command Palette"
 msgstr "විධාන පැලට්ටුව"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "අදහස් ක්‍රියා"
 
@@ -690,7 +701,7 @@ msgstr "සම්බන්ධිත ගිණුම්"
 msgid "Connecting..."
 msgstr "සම්බන්ධ වෙමින්..."
 
-#: src/features/words/components/move-composer.tsx:117
+#: src/features/words/components/move-composer.tsx:111
 msgid "Contains unknown words. You can still submit."
 msgstr "නොදන්නා වචන අඩංගුයි. ඔබට තවමත් ඉදිරිපත් කළ හැකිය."
 
@@ -710,7 +721,7 @@ msgstr "සන්දර්භීය තොරතුරු සහ විස්ත
 msgid "Continue"
 msgstr "ඉදිරියට"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "{label} සමඟ ඉදිරියට යන්න"
 
@@ -734,22 +745,22 @@ msgstr "මෙම ලේඛනය පූරණය කළ නොහැකි ව�
 msgid "Couldn't load notifications"
 msgstr "දැනුම්දීම් පූරණය කළ නොහැකි විය"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "කේතය යැවිය නොහැකි විය. නැවත උත්සාහ කරන්න."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "නැවත සත්‍යාපනය ආරම්භ කළ නොහැකි විය. නැවත උත්සාහ කරන්න."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "එම ගිණුම සමඟ සත්‍යාපනය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "නිර්මාණය කරන්න"
@@ -768,7 +779,7 @@ msgstr "නව අයිතමයක් නිර්මාණය කරන්න
 msgid "Created"
 msgstr "නිර්මාණය කරන ලදී"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/words/components/new-game.tsx:197
 msgid "Creating..."
@@ -819,18 +830,18 @@ msgstr "පෙරනිමි වර්ග කිරීම"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
-#: src/features/words/index.tsx:1003
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
+#: src/features/words/index.tsx:1047
 msgid "Delete"
 msgstr "මකන්න"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "ඇමුණුම මකන්න"
 
@@ -838,7 +849,7 @@ msgstr "ඇමුණුම මකන්න"
 msgid "Delete column"
 msgstr "තීරුව මකන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "අදහස මකන්න"
 
@@ -846,11 +857,11 @@ msgstr "අදහස මකන්න"
 msgid "Delete field"
 msgstr "ක්ෂේත්‍රය මකන්න"
 
-#: src/features/words/index.tsx:818
+#: src/features/words/index.tsx:857
 msgid "Delete game"
 msgstr "ක්‍රීඩාව මකන්න"
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1038
 msgid "Delete game?"
 msgstr "ක්‍රීඩාව මකන්නද?"
 
@@ -872,7 +883,7 @@ msgstr "දැක්ම මකන්න"
 msgid "Delete your account on the old server"
 msgstr "පැරණි සේවාදායකයේ ඔබේ ගිණුම මකන්න"
 
-#: src/features/words/index.tsx:1000
+#: src/features/words/index.tsx:1044
 msgid "Deleting..."
 msgstr "මකමින්..."
 
@@ -911,11 +922,11 @@ msgstr "දිශාව"
 msgid "Directory"
 msgstr "නාමාවලිය"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "ඉවත ලන්න"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "කෙටුම්පත ඉවත ලන්නද?"
 
@@ -938,7 +949,7 @@ msgstr "ජංගම පැති තීරුව සංදර්ශනය ක�
 msgid "Done"
 msgstr "නිමයි"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -956,8 +967,8 @@ msgstr "අනුපිටපත්"
 msgid "Dyslexia-friendly"
 msgstr "ඩිස්ලෙක්සියාවට මිත්‍ර"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "සංස්කරණය කරන්න"
 
@@ -995,13 +1006,13 @@ msgstr "දසුන සංස්කරණය කරන්න"
 msgid "Email"
 msgstr "ඊමේල්"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "ඊමේල් කේතය"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:221
+#: src/features/words/components/words-board.tsx:232
 msgid "Empty square {0}{1}"
 msgstr "හිස් කොටුව {0}{1}"
 
@@ -1017,29 +1028,29 @@ msgstr "ඉංග්‍රීසි (UK)"
 msgid "English (US)"
 msgstr "ඉංග්‍රීසි (US)"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "ඔබේ විද්‍යුත් තැපෑලෙහි ඇති කේතය ඇතුළු කරන්න"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "ඔබගේ සත්‍යාපන කේතය ඇතුළත් කරන්න"
 
-#: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:880
+#: src/features/words/components/move-composer.tsx:155
+#: src/features/words/index.tsx:920
 msgid "Exchange"
 msgstr "හුවමාරු"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:920
 msgid "Exchange ({0})"
 msgstr "හුවමාරු ({0})"
 
-#: src/features/words/components/move-composer.tsx:159
+#: src/features/words/components/move-composer.tsx:153
 msgid "Exchange ({exchangeCount})"
 msgstr "හුවමාරු ({exchangeCount})"
 
-#: src/features/words/index.tsx:802
+#: src/features/words/index.tsx:841
 msgid "Exchange tiles"
 msgstr "කොටස් හුවමාරු කරන්න"
 
@@ -1080,23 +1091,23 @@ msgid "Failed to create game"
 msgstr "ක්‍රීඩාවක් සෑදීමට අසමත් විය"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "සබැඳියක් සෑදීමට අසමත් විය"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:375
 msgid "Failed to create rematch"
 msgstr "නැවත තරඟයක් සෑදීමට අසමත් විය"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "ඇමුණුම මැකීමට අසමත් විය"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "අදහස මැකීමට අසමත් විය"
 
-#: src/features/words/index.tsx:369
+#: src/features/words/index.tsx:386
 msgid "Failed to delete game"
 msgstr "ක්‍රීඩාව මැකීමට අසමත් විය"
 
@@ -1104,15 +1115,15 @@ msgstr "ක්‍රීඩාව මැකීමට අසමත් විය"
 msgid "Failed to delete link"
 msgstr "සබැඳිය මැකීමට අසමත් විය"
 
-#: src/features/words/index.tsx:342
+#: src/features/words/index.tsx:359
 msgid "Failed to exchange"
 msgstr "හුවමාරුවට අසමත් විය"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "RSS ටෝකනය ලබා ගැනීමට අසමත් විය"
 
-#: ../../../lib/web/src/hooks/use-load-more.ts:74
+#: ../../../lib/web/src/hooks/use-load-more.ts:83
 msgid "Failed to load"
 msgstr "පූරණය කිරීමට අසමත් විය"
 
@@ -1128,11 +1139,11 @@ msgstr "රූපය පූරණය කිරීමට අසමත් වි�
 msgid "Failed to load video"
 msgstr "වීඩියෝව පූරණය කිරීමට අසමත් විය"
 
-#: src/features/words/index.tsx:332
+#: src/features/words/index.tsx:349
 msgid "Failed to pass"
 msgstr "මඟ හැරීමට අසමත් විය"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "අදහස පළ කිරීමට අසමත් විය"
 
@@ -1140,16 +1151,16 @@ msgstr "අදහස පළ කිරීමට අසමත් විය"
 msgid "Failed to remove account"
 msgstr "ගිණුම ඉවත් කිරීමට අසමත් විය"
 
-#: src/features/words/index.tsx:349
+#: src/features/words/index.tsx:366
 msgid "Failed to resign"
 msgstr "ඉල්ලා අස්වීමට අසමත් විය"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "RSS ප්‍රවේශය අවලංගු කිරීමට අසමත් විය"
 
-#: src/features/words/index.tsx:927
-#: src/features/words/index.tsx:961
+#: src/features/words/index.tsx:971
+#: src/features/words/index.tsx:1005
 msgid "Failed to send"
 msgstr "යැවීමට අසමත් විය"
 
@@ -1157,21 +1168,21 @@ msgstr "යැවීමට අසමත් විය"
 msgid "Failed to send verification code"
 msgstr "සත්‍යාපන කේතය යැවීමට අසමත් විය"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:343
 msgid "Failed to submit move"
 msgstr "ගමන ඉදිරිපත් කිරීමට අසමත් විය"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "අදහස යාවත්කාලීන කිරීමට අසමත් විය"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "ඇමුණුම උඩුගත කිරීමට අසමත් විය"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "ගොනු"
 
@@ -1182,6 +1193,14 @@ msgstr "පෙරහන..."
 #: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "ඔබේ ගිණුම ගෙන යාම අවසන් කරන්න"
+
+#: src/features/words/index.tsx:193
+msgid "First move must cover the central square"
+msgstr "පළමු ගමනින් මධ්‍ය කොටුව ආවරණය කළ යුතුය"
+
+#: src/features/words/index.tsx:194
+msgid "First move must place at least 2 tiles"
+msgstr "පළමු ගමනේදී අවම වශයෙන් ටයිල් 2ක් තැබිය යුතුය"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:221
 msgid "Flags"
@@ -1224,11 +1243,11 @@ msgstr "සම්පූර්ණ පිරිසැලසුම"
 msgid "Game created"
 msgstr "ක්‍රීඩාව සාදන ලදී"
 
-#: src/features/words/index.tsx:365
+#: src/features/words/index.tsx:382
 msgid "Game deleted"
 msgstr "ක්‍රීඩාව මකන ලදී"
 
-#: src/features/words/lib/header-model.ts:112
+#: src/features/words/lib/header-model.ts:114
 msgid "Game over"
 msgstr "ක්‍රීඩාව අවසන්"
 
@@ -1331,7 +1350,7 @@ msgstr "උනන්දු"
 msgid "Invalid date"
 msgstr "අවලංගු දිනය"
 
-#: src/features/words/index.tsx:182
+#: src/features/words/index.tsx:185
 msgid "Invalid move"
 msgstr "අවලංගු ගමනකි"
 
@@ -1347,7 +1366,7 @@ msgstr "අවලංගු සත්‍යාපන කේතය"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ඔබ සොයන පිටුව <0/>නොපවතින බවක් හෝ ඉවත් කර ඇති බවක් පෙනේ."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "මේ දැන්"
 
@@ -1388,7 +1407,7 @@ msgstr "අකුරු, අංක, හිස්තැන් සහ යා-ක�
 msgid "Light"
 msgstr "ලා"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "සබැඳිය"
 
@@ -1486,7 +1505,7 @@ msgstr "අවම දිග"
 msgid "Mochi web"
 msgstr "Mochi වෙබ්"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1494,8 +1513,8 @@ msgstr ""
 msgid "Monday"
 msgstr "සඳුදා"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "තවත් විකල්ප"
 
@@ -1520,7 +1539,7 @@ msgstr "නම අක්ෂර 1000 ක් හෝ ඊට අඩු විය ය
 msgid "Network error"
 msgstr "ජාල දෝෂය"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "අලුත්"
@@ -1537,7 +1556,7 @@ msgstr "නව ක්‍රීඩාවක්"
 msgid "Next image"
 msgstr "ඊළඟ පින්තූරය"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "එක් කිරීමට {parentClassNames} නොමැත"
 
@@ -1549,7 +1568,7 @@ msgstr "ප්‍රවේශ නියමයන් කිසිවක් සැ
 msgid "No activity yet"
 msgstr "තවම ක්‍රියාකාරකම් නැත"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "තවම අදහස් නැත"
 
@@ -1573,7 +1592,7 @@ msgstr "තවම ක්‍රීඩා නැත"
 msgid "No groups available"
 msgstr "කණ්ඩායම් ලබා ගත නොහැක"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න."
 
@@ -1602,6 +1621,7 @@ msgstr "ස්ථාන හමු නොවීය"
 msgid "No profile"
 msgstr "පැතිකඩක් නැත"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1617,6 +1637,10 @@ msgstr "ප්‍රතිඵල හමු නොවීය."
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:339
 msgid "No status"
 msgstr "තත්වයක් නැත"
+
+#: src/features/words/index.tsx:188
+msgid "No tiles placed"
+msgstr "ටයිල් තබා නැත"
 
 #: ../../../lib/web/src/components/timezone-select.tsx:67
 msgid "No time zone found."
@@ -1634,14 +1658,18 @@ msgstr "නොකියවූ දැනුම්දීම් නැත"
 msgid "No users found"
 msgstr "පරිශීලකයන් හමු නොවීය"
 
+#: src/features/words/index.tsx:196
+msgid "No valid words formed"
+msgstr "වලංගු වචන කිසිවක් සෑදී නැත"
+
 #: ../../../lib/web/src/components/entity/entity-design-preview.tsx:115
 msgid "No views"
 msgstr "බැලීම් නැත"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1708,11 +1736,11 @@ msgstr "ගිණුම් ක්‍රියා විවෘත කරන්න
 msgid "Open actions"
 msgstr "ක්‍රියා විවෘත කරන්න"
 
-#: src/features/words/index.tsx:764
+#: src/features/words/index.tsx:803
 msgid "Open chat panel"
 msgstr "චැට් පැනලය විවෘත කරන්න"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:811
 msgid "Open game actions"
 msgstr "ක්‍රීඩා ක්‍රියා විවෘත කරන්න"
 
@@ -1754,7 +1782,7 @@ msgstr "view ක්‍රියා විවෘත කරන්න"
 msgid "Open view controls"
 msgstr "view පාලන විවෘත කරන්න"
 
-#: src/features/words/lib/header-model.ts:116
+#: src/features/words/lib/header-model.ts:118
 msgid "Opponent resigned — you win!"
 msgstr "ප්‍රතිවාදියා ඉල්ලා අස්වුණා — ඔබ දිනුවා!"
 
@@ -1781,19 +1809,19 @@ msgstr "හිමිකරු"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "පිටුව {currentPage} / {totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "මව්"
 
-#: src/features/words/index.tsx:790
+#: src/features/words/index.tsx:829
 msgid "Pass"
 msgstr "pass කරන්න"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "ප්‍රවේශ යතුර"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "මුරයතුර සත්‍යාපනය අසාර්ථක විය. නැවත උත්සාහ කරන්න."
 
@@ -1809,15 +1837,15 @@ msgstr "රටාව (regex)"
 msgid "Pick a date"
 msgstr "දිනයක් තෝරන්න"
 
-#: src/features/words/lib/header-model.ts:79
+#: src/features/words/index.tsx:189
+msgid "Placement out of bounds"
+msgstr "තැබීම පුවරුවෙන් පිටත ය"
+
+#: src/features/words/lib/header-model.ts:81
 msgid "Player {playerNumber}"
 msgstr "ක්‍රීඩකයා {playerNumber}"
 
-#: src/features/words/lib/header-model.ts:138
-msgid "Playing with {playerCount} players"
-msgstr "ක්‍රීඩකයන් {playerCount} දෙනා සමඟ ක්‍රීඩා කරයි"
-
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1839,11 +1867,11 @@ msgstr "කරුණාකර නැවත උත්සාහ කරන්න."
 msgid "Please wait a moment and try again."
 msgstr "කරුණාකර මොහොතක් රැඳී සිට නැවත උත්සාහ කරන්න."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "පළ කිරීම්"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "පළ කිරීම් සහ අදහස්"
 
@@ -1885,8 +1913,8 @@ msgstr "මෙම සේවාදායකයේ ඔබේ ගිණුම් �
 msgid "Re-register your passkeys on this server"
 msgstr "මෙම සේවාදායකයේ ඔබගේ මුරයතුරු නැවත ලියාපදිංචි කරන්න"
 
-#: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:886
+#: src/features/words/components/move-composer.tsx:165
+#: src/features/words/index.tsx:926
 msgid "Recall"
 msgstr "recall කරන්න"
 
@@ -1920,13 +1948,13 @@ msgstr "සාපේක්ෂ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "පැය 24 තුළ සාපේක්ෂ, නැතහොත් නිරපේක්ෂ"
 
-#: src/features/words/index.tsx:815
+#: src/features/words/index.tsx:854
 msgid "Rematch"
 msgstr "නැවත ක්‍රීඩාව"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1979,13 +2007,13 @@ msgstr "තීරුව නැවත නම් කරන්න"
 msgid "Rename this board column"
 msgstr "මෙම board තීරුව නැවත නම් කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "පිළිතුර"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "{0} ට පිළිතුරු දෙන්න..."
 
@@ -1993,7 +2021,7 @@ msgstr "{0} ට පිළිතුරු දෙන්න..."
 msgid "Required"
 msgstr "අවශ්‍යයි"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "විද්‍යුත් තැපෑල නැවත එවන්න"
 
@@ -2011,26 +2039,34 @@ msgstr "{title} යළි සකසන්න"
 msgid "Reset all settings to default values"
 msgstr "සියලු සැකසුම් පෙරනිමි අගයන් වෙත reset කරන්න"
 
-#: src/features/words/index.tsx:806
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:845
+#: src/features/words/index.tsx:1026
 msgid "Resign"
 msgstr "ඉල්ලා අස්වන්න"
 
-#: src/features/words/index.tsx:973
+#: src/features/words/index.tsx:1017
 msgid "Resign game?"
 msgstr "ක්‍රීඩාවෙන් ඉල්ලා අස්වන්නද?"
 
-#: src/features/words/index.tsx:979
+#: src/features/words/index.tsx:1023
 msgid "Resigning..."
 msgstr "ඉල්ලා අස්වෙමින්..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "නැවත උත්සාහ කරන්න"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr "අවලංගු කරන්න"
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "ප්‍රවේශය අවලංගු කරන්න"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr "RSS ප්‍රවේශය අවලංගු කරන්නද?"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2049,15 +2085,15 @@ msgstr "පේළි කාණ්ඩගත කරන්නේ"
 msgid "Rows per page"
 msgstr "පිටුවකට පේළි"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "RSS ප්‍රවේශය අවලංගු කරන ලදී"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "RSS පෝෂණය"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී"
 
@@ -2065,10 +2101,10 @@ msgstr "RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් ක�
 msgid "Saturday"
 msgstr "සෙනසුරාදා"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
-#: ../../../lib/web/src/components/ui/secret-field.tsx:77
+#: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "සුරකින්න"
 
@@ -2117,6 +2153,7 @@ msgstr "මෙම දසුන සොයන්න, නරඹන්න, සහ �
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2220,7 +2257,7 @@ msgstr "තෝරාගත්: <0>{0}</0>"
 msgid "Send again"
 msgstr "නැවත යවන්න"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "ඊමේල් යවන්න"
 
@@ -2253,7 +2290,7 @@ msgstr "මූලාරම්භය සහ ගමනාන්තය සකසන
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "සැකසුම්"
 
@@ -2277,7 +2314,7 @@ msgstr "මෙම උදව් පෙන්වන්න"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total}න් {totalShown}ක් පෙන්වමින්"
 
-#: src/features/words/index.tsx:782
+#: src/features/words/index.tsx:821
 msgid "Shuffle rack"
 msgstr "rack එක shuffle කරන්න"
 
@@ -2314,13 +2351,17 @@ msgstr "කුඩා"
 msgid "Sort"
 msgstr "වර්ග කරන්න"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "මූලාරම්භ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "විශාල"
+
+#: src/features/words/index.tsx:190
+msgid "Square already occupied"
+msgstr "එම කොටුව දැනටමත් පිරී ඇත"
 
 #: src/features/words/components/new-game.tsx:118
 msgid "Start a new Words game"
@@ -2330,7 +2371,7 @@ msgstr "නව Words ක්‍රීඩාවක් ආරම්භ කරන්
 msgid "Start game"
 msgstr "ක්‍රීඩාව ආරම්භ කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "පළමු අදහස එක් කිරීමෙන් සාකච්ඡාව ආරම්භ කරන්න."
 
@@ -2342,21 +2383,23 @@ msgstr "නමුත් රැඳී සිටින්න!"
 msgid "Subject"
 msgstr "විෂය"
 
-#: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:894
+#: src/features/words/components/move-composer.tsx:173
+#: src/features/words/index.tsx:938
 msgid "Submit"
 msgstr "ඉදිරිපත් කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "අදහස ඉදිරිපත් කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "පිළිතුර ඉදිරිපත් කරන්න"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2408,9 +2451,18 @@ msgstr "නියම සහ කොන්දේසි"
 msgid "Text"
 msgstr "පෙළ"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "එම කේතය වැරදියි හෝ කල් ඉකුත් වී ඇත."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr "යැවීමට නොහැකි විය. ගොනු ඉතා විශාල විය හැක, නැතහොත් ඔබේ සම්බන්ධතාවය අසාර්ථක විය. කුඩා ගොනු උත්සාහ කරන්න."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr "උඩුගත කිරීමට ඉතා විශාල විය. ගොනු ඉවත් කරන්න හෝ කුඩා කර නැවත උත්සාහ කරන්න."
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2436,13 +2488,29 @@ msgstr "theme සැකසුම්"
 msgid "This page has not been created yet."
 msgstr "මෙම පිටුව තවම සාදා නැත."
 
-#: src/features/words/index.tsx:995
+#: src/features/words/index.tsx:1039
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "මෙය ක්‍රීඩාව සහ එහි කතාබස් ස්ථිරවම මකා දමයි. මෙම ක්‍රියාව අහෝසි කළ නොහැක."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "බ්‍රහස්පතින්දා"
+
+#: src/features/words/lib/header-model.ts:154
+msgid "Tiles left"
+msgstr "ඉතිරි tiles"
+
+#: src/features/words/index.tsx:192
+msgid "Tiles must be contiguous (no gaps)"
+msgstr "ටයිල් එකට යාව තිබිය යුතුය (හිස් තැන් නොමැතිව)"
+
+#: src/features/words/index.tsx:191
+msgid "Tiles must be placed in a single row or column"
+msgstr "ටයිල් එකම පේළියක හෝ තීරුවක තැබිය යුතුය"
+
+#: src/features/words/index.tsx:195
+msgid "Tiles must connect to existing tiles on the board"
+msgstr "ටයිල් පුවරුවේ ඇති ටයිල් සමඟ සම්බන්ධ විය යුතුය"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:220
 msgid "To"
@@ -2567,11 +2635,11 @@ msgstr "එක්සත් ජනපදය"
 msgid "Unknown"
 msgstr "නොදන්නා"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "දායකත්වය ඉවත් කරන්න"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2586,8 +2654,8 @@ msgstr "සත්‍යාපනය නොකළ"
 msgid "Updated"
 msgstr "යාවත්කාලීන කරන ලදී"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "උඩුගත කරන්න"
 
@@ -2595,7 +2663,7 @@ msgstr "උඩුගත කරන්න"
 msgid "Upload progress"
 msgstr "උඩුගත කිරීමේ ප්‍රගතිය"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "ඔබගේ මුරයතුර භාවිතා කරන්න"
 
@@ -2605,7 +2673,7 @@ msgstr "ඔබගේ මුරයතුර භාවිතා කරන්න"
 msgid "User"
 msgstr "පරිශීලකයා"
 
-#: src/features/words/components/move-composer.tsx:109
+#: src/features/words/components/move-composer.tsx:103
 msgid "Validation offline — you can still submit."
 msgstr "තහවුරු කිරීම නොබැඳිය — ඔබට තවමත් ඉදිරිපත් කළ හැකිය."
 
@@ -2621,7 +2689,7 @@ msgstr "සත්‍යාපන කේතය යවන ලදී"
 msgid "Verification failed"
 msgstr "සත්‍යාපනය අසාර්ථක විය"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2687,20 +2755,19 @@ msgstr "වෙබ් අඩවිය නඩත්තු යටතේ පවත�
 msgid "Wednesday"
 msgstr "බදාදා"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:683
-#: src/features/words/index.tsx:695
+#: src/features/words/index.tsx:83
+#: src/features/words/index.tsx:727
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:123
+#: src/features/words/components/move-composer.tsx:117
 msgid "Words formed"
 msgstr "සාදන ලද වචන"
 
 #: src/features/words/components/chat-message-list.tsx:208
 #: src/features/words/components/chat-message-list.tsx:237
 #: src/features/words/components/chat-message-list.tsx:246
-#: src/features/words/lib/header-model.ts:127
+#: src/features/words/lib/header-model.ts:129
 msgid "You"
 msgstr "ඔබ"
 
@@ -2712,11 +2779,11 @@ msgstr "ඔබට මෙම කොටසට ප්‍රවේශය නොම�
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "මෙම සම්පත බැලීමට <0/>ඔබට අවශ්‍ය අවසරය නොමැත."
 
-#: src/features/words/lib/header-model.ts:117
+#: src/features/words/lib/header-model.ts:119
 msgid "You resigned"
 msgstr "ඔබ ඉල්ලා අස් විය"
 
-#: src/features/words/lib/header-model.ts:103
+#: src/features/words/lib/header-model.ts:105
 msgid "You win!"
 msgstr "ඔබ ජයග්‍රහණය කරයි!"
 
@@ -2728,18 +2795,18 @@ msgstr "ඔබ සියල්ල බැලුවා!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ඔබේ ගිණුම {source} සිට මෙහි ගෙන ආවා. එතන ඉවත් කරන තෙක්, පණිවිඩ සහ දැනුම්දීම් සේවාදායකයන් දෙකටම ළඟා විය හැකිය, ඔබේ සමහර අන්තර්ගතය පැරණි සේවාදායකයෙන් ලබාදීම ඉදිරියටත් සිදු වේ, සහ අනුගාමිකයින්ට ඔබව මෙහිදී සොයා ගැනීමට මිනිත්තු කිහිපයක් ගත වනු ඇත."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "ඔබගේ ඇමුණුම් නැති වනු ඇත."
 
-#: src/features/words/lib/header-model.ts:95
+#: src/features/words/lib/header-model.ts:97
 msgid "Your move"
 msgstr "ඔබේ ගමන"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "ඔබගේ පෙළ සහ ඇමුණුම් නැති වනු ඇත."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "ඔබේ පෙළ නැති වී යයි."

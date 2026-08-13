@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "Controleer je internetverbinding en probeer het opnieuw."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " of "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(bewerkt)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(uitvouwen)"
 
@@ -47,7 +47,7 @@ msgstr "{0, plural, one {# geselecteerd} other {# geselecteerd}}"
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:219
+#: src/features/words/components/words-board.tsx:228
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} op {1}{2}, klik om te verwijderen"
 
@@ -64,11 +64,6 @@ msgstr "Voorbeeld van optie {0}"
 msgid "{0} played <0>{1}</0>"
 msgstr "{0} speelde <0>{1}</0>"
 
-#. placeholder {0}: game.bag_count
-#: src/features/words/lib/header-model.ts:140
-msgid "{0} tiles left"
-msgstr "{0} stenen over"
-
 #: src/features/words/components/chat-message-list.tsx:224
 msgid "{actor} exchanged tiles"
 msgstr "{actor} heeft stenen geruild"
@@ -81,21 +76,27 @@ msgstr "{actor} heeft gepast"
 msgid "{actor} passed — game over"
 msgstr "{actor} heeft gepast — spel voorbij"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#d} other {#d}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#u} other {#u}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#min} other {#min}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#w} other {#w}}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: BOARD_SIZE - row
+#: src/features/words/components/words-board.tsx:230
+msgid "{displayLetter} at {0}{1}"
+msgstr "{displayLetter} op {0}{1}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:174
 msgid "{entityLabel} name"
@@ -109,17 +110,21 @@ msgstr "{entityLabel}-naam is vereist"
 msgid "{name} resigned"
 msgstr "{name} gaf op"
 
-#: src/features/words/lib/header-model.ts:109
+#: src/features/words/lib/header-model.ts:111
 msgid "{name} wins"
 msgstr "{name} wint"
 
-#: src/features/words/lib/header-model.ts:98
+#: src/features/words/lib/header-model.ts:100
 msgid "{name}'s move"
 msgstr "Zet van {name}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} bood remise aan"
+
+#: src/features/words/lib/header-model.ts:148
+msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
+msgstr "{playerCount, plural, one {Spelen met # speler} other {Spelen met # spelers}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -137,6 +142,7 @@ msgstr "{selectedCount, plural, one {# geselecteerd} other {# geselecteerd}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Bulkacties voor # geselecteerd {entityName}} other {Bulkacties voor # geselecteerde {manyName}}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{sentLabel} van {totalLabel}"
@@ -158,11 +164,11 @@ msgstr "{value, plural, one {# punt} other {# punten}}"
 msgid "+{0} nested"
 msgstr "+{0} geneste"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} meer antwoorden"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 antwoord"
 
@@ -178,7 +184,7 @@ msgstr "24 uur"
 msgid "Absolute (date and time)"
 msgstr "Absoluut (datum en tijd)"
 
-#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:50
 msgid "Accept"
 msgstr "Accepteren"
 
@@ -220,7 +226,7 @@ msgstr "Actieve games"
 msgid "Add"
 msgstr "Toevoegen"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "Voeg een reactie toe..."
 
@@ -348,8 +354,12 @@ msgstr "Iedereen"
 msgid "Anyone who is logged in"
 msgstr "Iedereen die is ingelogd"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr "Alles wat op deze feed is geabonneerd, ontvangt deze niet meer. Je kunt daarna een nieuwe URL kopiëren."
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Weet je zeker dat je \"{0}\" wilt verwijderen?"
 
@@ -357,7 +367,7 @@ msgstr "Weet je zeker dat je \"{0}\" wilt verwijderen?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Weet je zeker dat je de kolom \"{name}\" wilt verwijderen? Dit kan niet ongedaan worden gemaakt."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Weet je zeker dat je deze reactie wilt verwijderen? Hiermee worden ook alle antwoorden verwijderd."
 
@@ -365,7 +375,7 @@ msgstr "Weet je zeker dat je deze reactie wilt verwijderen? Hiermee worden ook a
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Weet je zeker dat je wilt uitloggen? Je moet opnieuw inloggen om toegang te krijgen tot je account."
 
-#: src/features/words/index.tsx:974
+#: src/features/words/index.tsx:1018
 msgid "Are you sure you want to resign?"
 msgstr "Weet je zeker dat je wilt opgeven?"
 
@@ -377,13 +387,13 @@ msgstr "Oplopend"
 msgid "Ascending"
 msgstr "Oplopend"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "Reactiebestanden bijvoegen"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "Antwoordbestanden bijvoegen"
 
@@ -392,7 +402,7 @@ msgstr "Antwoordbestanden bijvoegen"
 msgid "Authenticated users"
 msgstr "Geverifieerde gebruikers"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Authenticator-code"
 
@@ -441,6 +451,7 @@ msgid "Blocks"
 msgstr "Blokkeert"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:318
+#: src/features/words/components/words-board.tsx:161
 msgid "Board"
 msgstr "Bord"
 
@@ -458,11 +469,11 @@ msgid "Browser notifications"
 msgstr "Browsermeldingen"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -470,24 +481,24 @@ msgstr "Browsermeldingen"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/words/components/move-composer.tsx:145
+#: src/features/words/components/move-composer.tsx:139
 #: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:875
-#: src/features/words/index.tsx:1047
+#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:1091
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "Reactie annuleren"
 
-#: src/features/words/index.tsx:802
+#: src/features/words/index.tsx:841
 msgid "Cancel exchange"
 msgstr "Ruil annuleren"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Antwoord annuleren"
 
@@ -500,8 +511,8 @@ msgstr "Categorie voor deze meldingen"
 msgid "Change notification category"
 msgstr "Meldingscategorie wijzigen"
 
-#: src/features/words/index.tsx:910
-#: src/features/words/index.tsx:944
+#: src/features/words/index.tsx:954
+#: src/features/words/index.tsx:988
 msgid "Chat"
 msgstr "Chat"
 
@@ -521,7 +532,7 @@ msgstr "Checklist"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Kies een game in de zijbalk of start een nieuw spel."
 
-#: src/features/words/index.tsx:1031
+#: src/features/words/index.tsx:1075
 msgid "Choose a letter"
 msgstr "Kies een letter"
 
@@ -581,8 +592,8 @@ msgstr "Selectie wissen"
 msgid "Clear selection (Escape)"
 msgstr "Selectie wissen (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -651,8 +662,8 @@ msgstr "Binnenkort beschikbaar!"
 msgid "Command Palette"
 msgstr "Opdrachtenpalet"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Reactieacties"
 
@@ -690,7 +701,7 @@ msgstr "Verbonden accounts"
 msgid "Connecting..."
 msgstr "Verbinden..."
 
-#: src/features/words/components/move-composer.tsx:117
+#: src/features/words/components/move-composer.tsx:111
 msgid "Contains unknown words. You can still submit."
 msgstr "Bevat onbekende woorden. Je kunt toch indienen."
 
@@ -710,7 +721,7 @@ msgstr "Contextuele informatie en details."
 msgid "Continue"
 msgstr "Doorgaan"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "Doorgaan met {label}"
 
@@ -734,22 +745,22 @@ msgstr "Kan dit document niet laden. Probeer het later opnieuw."
 msgid "Couldn't load notifications"
 msgstr "Kon meldingen niet laden"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "Kon de code niet verzenden. Probeer het opnieuw."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Kon de herauthenticatie niet starten. Probeer het opnieuw."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Kan niet verifiëren met dat account. Probeer het opnieuw."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Aanmaken"
@@ -768,7 +779,7 @@ msgstr "Nieuw item aanmaken"
 msgid "Created"
 msgstr "Aangemaakt"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/words/components/new-game.tsx:197
 msgid "Creating..."
@@ -819,18 +830,18 @@ msgstr "Standaardsortering"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
-#: src/features/words/index.tsx:1003
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
+#: src/features/words/index.tsx:1047
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "Bijlage verwijderen"
 
@@ -838,7 +849,7 @@ msgstr "Bijlage verwijderen"
 msgid "Delete column"
 msgstr "Kolom verwijderen"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "Reactie verwijderen"
 
@@ -846,11 +857,11 @@ msgstr "Reactie verwijderen"
 msgid "Delete field"
 msgstr "Veld verwijderen"
 
-#: src/features/words/index.tsx:818
+#: src/features/words/index.tsx:857
 msgid "Delete game"
 msgstr "Game verwijderen"
 
-#: src/features/words/index.tsx:994
+#: src/features/words/index.tsx:1038
 msgid "Delete game?"
 msgstr "Spel verwijderen?"
 
@@ -872,7 +883,7 @@ msgstr "Weergave verwijderen"
 msgid "Delete your account on the old server"
 msgstr "Verwijder uw account op de oude server"
 
-#: src/features/words/index.tsx:1000
+#: src/features/words/index.tsx:1044
 msgid "Deleting..."
 msgstr "Verwijderen..."
 
@@ -911,11 +922,11 @@ msgstr "Richting"
 msgid "Directory"
 msgstr "Gids"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "Verwerpen"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "Concept verwerpen?"
 
@@ -938,7 +949,7 @@ msgstr "Toont de mobiele zijbalk."
 msgid "Done"
 msgstr "Klaar"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -956,8 +967,8 @@ msgstr "Dupliceert"
 msgid "Dyslexia-friendly"
 msgstr "Dyslexie-vriendelijk"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "Bewerken"
 
@@ -995,13 +1006,13 @@ msgstr "Weergave bewerken"
 msgid "Email"
 msgstr "E-mail"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "E-mailcode"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:221
+#: src/features/words/components/words-board.tsx:232
 msgid "Empty square {0}{1}"
 msgstr "Leeg vakje {0}{1}"
 
@@ -1017,29 +1028,29 @@ msgstr "Engels (VK)"
 msgid "English (US)"
 msgstr "Engels (VS)"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "Voer de code uit je e-mail in"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Voer je authenticatorcode in"
 
-#: src/features/words/components/move-composer.tsx:161
-#: src/features/words/index.tsx:880
+#: src/features/words/components/move-composer.tsx:155
+#: src/features/words/index.tsx:920
 msgid "Exchange"
 msgstr "Wisselen"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:880
+#: src/features/words/index.tsx:920
 msgid "Exchange ({0})"
 msgstr "Wisselen ({0})"
 
-#: src/features/words/components/move-composer.tsx:159
+#: src/features/words/components/move-composer.tsx:153
 msgid "Exchange ({exchangeCount})"
 msgstr "Wisselen ({exchangeCount})"
 
-#: src/features/words/index.tsx:802
+#: src/features/words/index.tsx:841
 msgid "Exchange tiles"
 msgstr "Stenen omruilen"
 
@@ -1080,23 +1091,23 @@ msgid "Failed to create game"
 msgstr "Spel aanmaken mislukt"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Link aanmaken mislukt"
 
-#: src/features/words/index.tsx:358
+#: src/features/words/index.tsx:375
 msgid "Failed to create rematch"
 msgstr "Revanche aanmaken mislukt"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "Bijlage verwijderen mislukt"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "Reactie verwijderen mislukt"
 
-#: src/features/words/index.tsx:369
+#: src/features/words/index.tsx:386
 msgid "Failed to delete game"
 msgstr "Spel verwijderen mislukt"
 
@@ -1104,15 +1115,15 @@ msgstr "Spel verwijderen mislukt"
 msgid "Failed to delete link"
 msgstr "Link verwijderen mislukt"
 
-#: src/features/words/index.tsx:342
+#: src/features/words/index.tsx:359
 msgid "Failed to exchange"
 msgstr "Omruilen mislukt"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "RSS-token ophalen mislukt"
 
-#: ../../../lib/web/src/hooks/use-load-more.ts:74
+#: ../../../lib/web/src/hooks/use-load-more.ts:83
 msgid "Failed to load"
 msgstr "Laden mislukt"
 
@@ -1128,11 +1139,11 @@ msgstr "Kan afbeelding niet laden"
 msgid "Failed to load video"
 msgstr "Kan video niet laden"
 
-#: src/features/words/index.tsx:332
+#: src/features/words/index.tsx:349
 msgid "Failed to pass"
 msgstr "Passen mislukt"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "Reactie plaatsen mislukt"
 
@@ -1140,16 +1151,16 @@ msgstr "Reactie plaatsen mislukt"
 msgid "Failed to remove account"
 msgstr "Account verwijderen mislukt"
 
-#: src/features/words/index.tsx:349
+#: src/features/words/index.tsx:366
 msgid "Failed to resign"
 msgstr "Opgeven mislukt"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "Kan RSS-toegang niet intrekken"
 
-#: src/features/words/index.tsx:927
-#: src/features/words/index.tsx:961
+#: src/features/words/index.tsx:971
+#: src/features/words/index.tsx:1005
 msgid "Failed to send"
 msgstr "Verzenden mislukt"
 
@@ -1157,21 +1168,21 @@ msgstr "Verzenden mislukt"
 msgid "Failed to send verification code"
 msgstr "Verificatiecode verzenden mislukt"
 
-#: src/features/words/index.tsx:326
+#: src/features/words/index.tsx:343
 msgid "Failed to submit move"
 msgstr "Zet indienen mislukt"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "Reactie bijwerken mislukt"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Bijlage uploaden mislukt"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Bestanden"
 
@@ -1182,6 +1193,14 @@ msgstr "Filteren..."
 #: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Voltooi het verplaatsen van uw account"
+
+#: src/features/words/index.tsx:193
+msgid "First move must cover the central square"
+msgstr "Eerste zet moet het middelste vakje bedekken"
+
+#: src/features/words/index.tsx:194
+msgid "First move must place at least 2 tiles"
+msgstr "Eerste zet moet minstens 2 stenen plaatsen"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:221
 msgid "Flags"
@@ -1224,11 +1243,11 @@ msgstr "Volledige lay-out"
 msgid "Game created"
 msgstr "Spel aangemaakt"
 
-#: src/features/words/index.tsx:365
+#: src/features/words/index.tsx:382
 msgid "Game deleted"
 msgstr "Spel verwijderd"
 
-#: src/features/words/lib/header-model.ts:112
+#: src/features/words/lib/header-model.ts:114
 msgid "Game over"
 msgstr "Spel afgelopen"
 
@@ -1331,7 +1350,7 @@ msgstr "Interesses"
 msgid "Invalid date"
 msgstr "Ongeldige datum"
 
-#: src/features/words/index.tsx:182
+#: src/features/words/index.tsx:185
 msgid "Invalid move"
 msgstr "Ongeldige zet"
 
@@ -1347,7 +1366,7 @@ msgstr "Ongeldige verificatiecode"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Het lijkt erop dat de pagina die je zoekt <0/>niet bestaat of is verwijderd."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "Zojuist"
 
@@ -1388,7 +1407,7 @@ msgstr "Alleen letters, cijfers, spaties en koppeltekens"
 msgid "Light"
 msgstr "Licht"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Link"
 
@@ -1486,7 +1505,7 @@ msgstr "Min. lengte"
 msgid "Mochi web"
 msgstr "Mochi-web"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1494,8 +1513,8 @@ msgstr ""
 msgid "Monday"
 msgstr "Maandag"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Meer opties"
 
@@ -1520,7 +1539,7 @@ msgstr "Naam mag maximaal 1000 tekens bevatten"
 msgid "Network error"
 msgstr "Netwerkfout"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Nieuw"
@@ -1537,7 +1556,7 @@ msgstr "Nieuw spel"
 msgid "Next image"
 msgstr "Volgende afbeelding"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "Geen {parentClassNames} om aan toe te voegen"
 
@@ -1549,7 +1568,7 @@ msgstr "Geen toegangsregels geconfigureerd. Voeg regels toe om te bepalen wie to
 msgid "No activity yet"
 msgstr "Nog geen activiteit"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "Nog geen reacties"
 
@@ -1573,7 +1592,7 @@ msgstr "Nog geen spellen"
 msgid "No groups available"
 msgstr "Geen groepen beschikbaar"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Er kunnen nog geen itemtypen worden aangemaakt. Maak eerst de vereiste bovenliggende items aan."
 
@@ -1602,6 +1621,7 @@ msgstr "Geen plaatsen gevonden"
 msgid "No profile"
 msgstr "Geen profiel"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1617,6 +1637,10 @@ msgstr "Geen resultaten gevonden."
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:339
 msgid "No status"
 msgstr "Geen status"
+
+#: src/features/words/index.tsx:188
+msgid "No tiles placed"
+msgstr "Geen stenen geplaatst"
 
 #: ../../../lib/web/src/components/timezone-select.tsx:67
 msgid "No time zone found."
@@ -1634,14 +1658,18 @@ msgstr "Geen ongelezen meldingen"
 msgid "No users found"
 msgstr "Geen gebruikers gevonden"
 
+#: src/features/words/index.tsx:196
+msgid "No valid words formed"
+msgstr "Geen geldige woorden gevormd"
+
 #: ../../../lib/web/src/components/entity/entity-design-preview.tsx:115
 msgid "No views"
 msgstr "Geen weergaven"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1708,11 +1736,11 @@ msgstr "Account-acties openen"
 msgid "Open actions"
 msgstr "Acties openen"
 
-#: src/features/words/index.tsx:764
+#: src/features/words/index.tsx:803
 msgid "Open chat panel"
 msgstr "Chatvenster openen"
 
-#: src/features/words/index.tsx:772
+#: src/features/words/index.tsx:811
 msgid "Open game actions"
 msgstr "Spel-acties openen"
 
@@ -1754,7 +1782,7 @@ msgstr "Weergave-acties openen"
 msgid "Open view controls"
 msgstr "Weergavebediening openen"
 
-#: src/features/words/lib/header-model.ts:116
+#: src/features/words/lib/header-model.ts:118
 msgid "Opponent resigned — you win!"
 msgstr "Tegenstander heeft opgegeven — je hebt gewonnen!"
 
@@ -1781,19 +1809,19 @@ msgstr "Eigenaar"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "Pagina {currentPage} van {totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "Bovenliggend"
 
-#: src/features/words/index.tsx:790
+#: src/features/words/index.tsx:829
 msgid "Pass"
 msgstr "Passen"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "Toegangssleutel"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "Verificatie met passkey is mislukt. Probeer het opnieuw."
 
@@ -1809,15 +1837,15 @@ msgstr "Patroon (regex)"
 msgid "Pick a date"
 msgstr "Kies een datum"
 
-#: src/features/words/lib/header-model.ts:79
+#: src/features/words/index.tsx:189
+msgid "Placement out of bounds"
+msgstr "Plaatsing valt buiten het bord"
+
+#: src/features/words/lib/header-model.ts:81
 msgid "Player {playerNumber}"
 msgstr "Speler {playerNumber}"
 
-#: src/features/words/lib/header-model.ts:138
-msgid "Playing with {playerCount} players"
-msgstr "Spelen met {playerCount} spelers"
-
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1839,11 +1867,11 @@ msgstr "Probeer het opnieuw."
 msgid "Please wait a moment and try again."
 msgstr "Wacht even en probeer het opnieuw."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Posts"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Posts en reacties"
 
@@ -1885,8 +1913,8 @@ msgstr "Koppel uw accounts opnieuw op deze server"
 msgid "Re-register your passkeys on this server"
 msgstr "Registreer je toegangssleutels opnieuw op deze server"
 
-#: src/features/words/components/move-composer.tsx:171
-#: src/features/words/index.tsx:886
+#: src/features/words/components/move-composer.tsx:165
+#: src/features/words/index.tsx:926
 msgid "Recall"
 msgstr "Terugroepen"
 
@@ -1920,13 +1948,13 @@ msgstr "Relatief (5m, 3u, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatief binnen 24 uur, anders absoluut"
 
-#: src/features/words/index.tsx:815
+#: src/features/words/index.tsx:854
 msgid "Rematch"
 msgstr "Revanche"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1979,13 +2007,13 @@ msgstr "Kolom hernoemen"
 msgid "Rename this board column"
 msgstr "Deze bord-kolom hernoemen"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Antwoorden"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "Reactie op {0}..."
 
@@ -1993,7 +2021,7 @@ msgstr "Reactie op {0}..."
 msgid "Required"
 msgstr "Verplicht"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "E-mail opnieuw verzenden"
 
@@ -2011,26 +2039,34 @@ msgstr "{title} opnieuw instellen"
 msgid "Reset all settings to default values"
 msgstr "Alle instellingen resetten naar standaardwaarden"
 
-#: src/features/words/index.tsx:806
-#: src/features/words/index.tsx:982
+#: src/features/words/index.tsx:845
+#: src/features/words/index.tsx:1026
 msgid "Resign"
 msgstr "Opgeven"
 
-#: src/features/words/index.tsx:973
+#: src/features/words/index.tsx:1017
 msgid "Resign game?"
 msgstr "Spel opgeven?"
 
-#: src/features/words/index.tsx:979
+#: src/features/words/index.tsx:1023
 msgid "Resigning..."
 msgstr "Bezig met opgeven..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "Opnieuw proberen"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr "Intrekken"
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Toegang intrekken"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr "RSS-toegang intrekken?"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2049,15 +2085,15 @@ msgstr "Rijen groeperen op"
 msgid "Rows per page"
 msgstr "Rijen per pagina"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "RSS-toegang ingetrokken"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "RSS-feed"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "RSS-URL gekopieerd naar het klembord"
 
@@ -2065,10 +2101,10 @@ msgstr "RSS-URL gekopieerd naar het klembord"
 msgid "Saturday"
 msgstr "Zaterdag"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
-#: ../../../lib/web/src/components/ui/secret-field.tsx:77
+#: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "Opslaan"
 
@@ -2117,6 +2153,7 @@ msgstr "Doorzoek, volg en sorteer deze weergave."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2220,7 +2257,7 @@ msgstr "Geselecteerd: <0>{0}</0>"
 msgid "Send again"
 msgstr "Opnieuw verzenden"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "E-mail verzenden"
 
@@ -2253,7 +2290,7 @@ msgstr "Vertrek en bestemming instellen"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Instellingen"
 
@@ -2277,7 +2314,7 @@ msgstr "Deze hulp weergeven"
 msgid "Showing {totalShown} of {total}"
 msgstr "Toont {totalShown} van {total}"
 
-#: src/features/words/index.tsx:782
+#: src/features/words/index.tsx:821
 msgid "Shuffle rack"
 msgstr "Rek schudden"
 
@@ -2314,13 +2351,17 @@ msgstr "Klein"
 msgid "Sort"
 msgstr "Sorteren"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Bronnen"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Ruim"
+
+#: src/features/words/index.tsx:190
+msgid "Square already occupied"
+msgstr "Vakje is al bezet"
 
 #: src/features/words/components/new-game.tsx:118
 msgid "Start a new Words game"
@@ -2330,7 +2371,7 @@ msgstr "Start een nieuw Words-spel"
 msgid "Start game"
 msgstr "Spel starten"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "Start de discussie door de eerste reactie toe te voegen."
 
@@ -2342,21 +2383,23 @@ msgstr "Houd het in de gaten!"
 msgid "Subject"
 msgstr "Onderwerp"
 
-#: src/features/words/components/move-composer.tsx:175
-#: src/features/words/index.tsx:894
+#: src/features/words/components/move-composer.tsx:173
+#: src/features/words/index.tsx:938
 msgid "Submit"
 msgstr "Verzenden"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "Reactie verzenden"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Antwoord verzenden"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2408,9 +2451,18 @@ msgstr "Algemene voorwaarden"
 msgid "Text"
 msgstr "Tekst"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Die code is onjuist of verlopen."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr "Het kon niet worden verzonden. De bestanden zijn mogelijk te groot, of je verbinding is mislukt. Probeer kleinere bestanden."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr "Het was te groot om te uploaden. Verwijder of verklein bestanden en probeer het opnieuw."
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2436,13 +2488,29 @@ msgstr "Thema-instellingen"
 msgid "This page has not been created yet."
 msgstr "Deze pagina is nog niet aangemaakt."
 
-#: src/features/words/index.tsx:995
+#: src/features/words/index.tsx:1039
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Hierdoor worden het spel en de bijbehorende chat permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Donderdag"
+
+#: src/features/words/lib/header-model.ts:154
+msgid "Tiles left"
+msgstr "Stenen over"
+
+#: src/features/words/index.tsx:192
+msgid "Tiles must be contiguous (no gaps)"
+msgstr "Stenen moeten aaneengesloten liggen (geen gaten)"
+
+#: src/features/words/index.tsx:191
+msgid "Tiles must be placed in a single row or column"
+msgstr "Stenen moeten in één rij of kolom liggen"
+
+#: src/features/words/index.tsx:195
+msgid "Tiles must connect to existing tiles on the board"
+msgstr "Stenen moeten aansluiten op stenen die al op het bord liggen"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:220
 msgid "To"
@@ -2567,11 +2635,11 @@ msgstr "Verenigde Staten"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Abonnement opzeggen"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2586,8 +2654,8 @@ msgstr "Niet geverifieerd"
 msgid "Updated"
 msgstr "Bijgewerkt"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Uploaden"
 
@@ -2595,7 +2663,7 @@ msgstr "Uploaden"
 msgid "Upload progress"
 msgstr "Uploadvoortgang"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Gebruik je passkey"
 
@@ -2605,7 +2673,7 @@ msgstr "Gebruik je passkey"
 msgid "User"
 msgstr "Gebruiker"
 
-#: src/features/words/components/move-composer.tsx:109
+#: src/features/words/components/move-composer.tsx:103
 msgid "Validation offline — you can still submit."
 msgstr "Validatie offline — je kunt toch indienen."
 
@@ -2621,7 +2689,7 @@ msgstr "Verificatiecode verzonden"
 msgid "Verification failed"
 msgstr "Verificatie mislukt"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2687,20 +2755,19 @@ msgstr "Website is in onderhoud!"
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#: src/features/words/index.tsx:81
-#: src/features/words/index.tsx:683
-#: src/features/words/index.tsx:695
+#: src/features/words/index.tsx:83
+#: src/features/words/index.tsx:727
 msgid "Words"
 msgstr "Woorden"
 
-#: src/features/words/components/move-composer.tsx:123
+#: src/features/words/components/move-composer.tsx:117
 msgid "Words formed"
 msgstr "Gevormde woorden"
 
 #: src/features/words/components/chat-message-list.tsx:208
 #: src/features/words/components/chat-message-list.tsx:237
 #: src/features/words/components/chat-message-list.tsx:246
-#: src/features/words/lib/header-model.ts:127
+#: src/features/words/lib/header-model.ts:129
 msgid "You"
 msgstr "Jij"
 
@@ -2712,11 +2779,11 @@ msgstr "Je hebt geen toegang tot dit onderdeel."
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Je hebt niet de benodigde toestemming <0/>om deze bron te bekijken."
 
-#: src/features/words/lib/header-model.ts:117
+#: src/features/words/lib/header-model.ts:119
 msgid "You resigned"
 msgstr "Je hebt opgegeven"
 
-#: src/features/words/lib/header-model.ts:103
+#: src/features/words/lib/header-model.ts:105
 msgid "You win!"
 msgstr "Je wint!"
 
@@ -2728,18 +2795,18 @@ msgstr "Je bent helemaal bij!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Uw account is hier naartoe verplaatst van {source}. Totdat u het daar verwijdert, kunnen berichten en meldingen beide servers bereiken, wordt een deel van uw inhoud nog steeds geleverd vanuit de oude server en kunnen volgers een paar minuten nodig hebben om u hier te vinden."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "Je bijlagen gaan verloren."
 
-#: src/features/words/lib/header-model.ts:95
+#: src/features/words/lib/header-model.ts:97
 msgid "Your move"
 msgstr "Jouw zet"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "Je tekst en bijlagen gaan verloren."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "Je tekst gaat verloren."

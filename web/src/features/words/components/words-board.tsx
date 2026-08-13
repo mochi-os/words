@@ -154,6 +154,13 @@ export function WordsBoard({
     >
       <div
         ref={gridRef}
+        // A screen reader reading 225 loose divs announces bare letters with
+        // no idea where they sit. The grid roles give every square its
+        // coordinates, so the board can be read row by row.
+        role="grid"
+        aria-label={t`Board`}
+        aria-rowcount={BOARD_SIZE}
+        aria-colcount={BOARD_SIZE}
         className="grid aspect-square w-full gap-px bg-neutral-300 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-700"
         style={{
           gridTemplateColumns: `repeat(${BOARD_SIZE}, 1fr)`,
@@ -176,8 +183,12 @@ export function WordsBoard({
           }
         }}
       >
-        {Array.from({ length: BOARD_SIZE }).map((_, row) =>
-          Array.from({ length: BOARD_SIZE }).map((_, col) => {
+        {Array.from({ length: BOARD_SIZE }).map((_, row) => (
+          // display:contents keeps the row out of the layout, so the squares
+          // stay direct grid items of the 15x15 template above while the
+          // accessibility tree still sees grid > row > gridcell.
+          <div key={`row-${row}`} role="row" aria-rowindex={row + 1} style={{ display: 'contents' }}>
+          {Array.from({ length: BOARD_SIZE }).map((_, col) => {
             const cellValue = board[row][col]
             const pending = getPending(row, col)
             const premium = getPremium(row, col)
@@ -209,18 +220,25 @@ export function WordsBoard({
             const canDragThis = isActive && isMyTurn && isPending
             const isBeingDragged = dragSource?.type === 'board' && dragSource.row === row && dragSource.col === col
 
+            // A played square announced its bare letter and nothing else,
+            // which is the least useful thing a board can say. The other two
+            // labels are unchanged, placeholders included, so their existing
+            // translations still apply.
+            const label = isPending
+              ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}, click to remove`
+              : isOccupied
+                ? t`${displayLetter} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
+                : canClickToPlace
+                  ? t`Empty square ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
+                  : undefined
+
             return (
               <div
                 key={`${row}-${col}`}
-                role={canClickToPlace || canClickToRemove ? 'button' : undefined}
+                role="gridcell"
+                aria-colindex={col + 1}
                 tabIndex={canClickToPlace || canClickToRemove ? 0 : -1}
-                aria-label={
-                  isPending
-                    ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}, click to remove`
-                    : canClickToPlace
-                      ? t`Empty square ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
-                      : undefined
-                }
+                aria-label={label}
                 draggable={canDragThis}
                 onDragStart={(e) => {
                   if (!canDragThis) return
@@ -289,16 +307,18 @@ export function WordsBoard({
                   </div>
                 )}
 
+                {/* The cell's label already says the letter and the square,
+                    so these glyphs are decoration and would be read twice. */}
                 {(isOccupied || isPending) && (
                   <>
-                    <span className={cn(
+                    <span aria-hidden className={cn(
                       'text-sm font-bold leading-none',
                       isBlank && 'text-gray-500 dark:text-gray-400',
                     )}>
                       {displayLetter}
                     </span>
                     {letterValue > 0 && (
-                      <span className="absolute right-0 bottom-0 origin-bottom-right scale-[0.45] text-sm font-medium text-gray-600 dark:text-gray-400 leading-none">
+                      <span aria-hidden className="absolute right-0 bottom-0 origin-bottom-right scale-[0.45] text-sm font-medium text-gray-600 dark:text-gray-400 leading-none">
                         {letterValue}
                       </span>
                     )}
@@ -306,8 +326,9 @@ export function WordsBoard({
                 )}
               </div>
             )
-          })
-        )}
+          })}
+          </div>
+        ))}
       </div>
     </div>
   )

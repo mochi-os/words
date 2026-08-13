@@ -188,8 +188,11 @@ export const useMoveMutation = (
       // so a rejected move leaves the client showing tiles the server never
       // took. That matters most for the 409 the server returns when the turn
       // moved on under us (double submit, or an opponent's move landing
-      // first): refetch so the board and rack snap back to server truth
-      // instead of silently disagreeing with it.
+      // first). Refetching is necessary but not sufficient: the local rack and
+      // pending placements are React state, and a response identical to what
+      // the view already holds changes nothing, so nothing resets. The reset
+      // is driven by the game's board and rack changing (see the effect in
+      // features/words/index.tsx) — this refetch is what makes them change.
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
         exact: true,

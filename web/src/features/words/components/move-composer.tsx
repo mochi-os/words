@@ -164,7 +164,16 @@ export function MoveComposer({
           <Button variant="outline" size="sm" onClick={onRecall} disabled={!canRecall}>
             <Trans>Recall</Trans>
           </Button>
-          <Button size="sm" onClick={onSubmit} disabled={!canSubmit} className="flex-1">
+          {/* Named for the browser test, as the board is by data-game-status:
+              picking this button out by position or by its label would break
+              on any layout change or in any locale but English. */}
+          <Button
+            size="sm"
+            onClick={onSubmit}
+            disabled={!canSubmit}
+            className="flex-1"
+            data-move-submit
+          >
             {isSubmitting ? (
               <Loader2 className="size-3 animate-spin" />
             ) : (

@@ -4,9 +4,15 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
+  // Mirror the build's Lingui macro transform (see vite.config.ts) so that
+  // modules importing @lingui/*/macro compile in tests instead of falling
+  // through to babel-plugin-macros (which isn't installed). Same treatment as
+  // crm, menu and projects.
+  plugins: [react({ plugins: [["@lingui/swc-plugin", {}]] })],
   test: {
     environment: "node",
     globals: true,

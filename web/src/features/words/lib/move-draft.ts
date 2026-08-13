@@ -3,13 +3,19 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { getErrorMessage, naturalCompare } from '@mochi/web'
+import { naturalCompare } from '@mochi/web'
 import {
+  type MoveErrorCode,
   type MoveResult,
   type Placement,
   type ScoredWord,
+  moveErrorCode,
   validateAndScoreMove,
 } from '@/lib/words-engine'
+
+// Translated text for each engine rejection, supplied by the component that
+// has the Lingui context.
+export type MoveErrorMessages = Readonly<Record<MoveErrorCode, string>>
 
 export type DraftWordValidationState =
   | 'checking'
@@ -40,6 +46,7 @@ interface ResolveMoveDraftStatusArgs {
 export function deriveMoveDraft(
   board: string[][],
   placements: readonly Placement[],
+  messages: MoveErrorMessages,
   invalidMoveFallback: string,
 ): MoveDraftBase {
   if (placements.length === 0) {
@@ -50,9 +57,14 @@ export function deriveMoveDraft(
     const result = validateAndScoreMove(board, [...placements])
     return { status: 'ready', errorMessage: null, result }
   } catch (error) {
+    // A rejection the engine names gets the caller's translated text. Anything
+    // else is a programming error, and its JavaScript message is both
+    // untranslatable and meaningless to a player, so it gets the fallback
+    // rather than being passed through.
+    const code = moveErrorCode(error)
     return {
       status: 'invalid_local',
-      errorMessage: getErrorMessage(error, invalidMoveFallback),
+      errorMessage: code ? messages[code] : invalidMoveFallback,
       result: null,
     }
   }
