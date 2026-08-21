@@ -49,11 +49,9 @@ export function ChatMessageList({
         resigned: (name) => (name ? <Trans>{name} resigned</Trans> : null),
       }}
       renderMove={(message, isSent) => {
-        // Plays, passes and exchanges all arrive as type 'move' and are told
-        // apart by the event marker, which also lets this viewer render
-        // localised text. The stored body wrapped every row in "played",
-        // producing "Alice played Alice passed" for pass rows; legacy rows
-        // without a marker keep that behaviour rather than guessing.
+        // Plays, passes and exchanges all arrive as type 'move', told apart by
+        // the event marker. Rows without a marker (stored before markers) fall
+        // back to the stored body.
         const actor = isSent ? t`You` : message.name
         const marker = message.event ?? ''
         let content: ReactNode
@@ -65,11 +63,8 @@ export function ChatMessageList({
               <Trans>{actor} passed</Trans>
             )
         } else if (marker.startsWith('exchange:')) {
-          // The marker carries the tile count, but rendering it needs a
-          // count-inflected noun in every locale's plural categories -
-          // hand-filling that across 105 catalogs is where quality collapses,
-          // so the sentence omits the number. The count stays stored in the
-          // marker for a future plural pass.
+          // The marker's tile count is not rendered: it would need a
+          // plural-inflected noun in every locale.
           content = <Trans>{actor} exchanged tiles</Trans>
         } else if (marker.startsWith('play:')) {
           const score = marker.slice('play:'.length)

@@ -236,11 +236,7 @@ describe('validateAndScoreMove — scoring', () => {
       { row: 0, col: 3, letter: 'E', rackTile: 'E' },
     ]
     const result = validateAndScoreMove(board, placements)
-    // Word: ATE
-    // A (existing, col 1, normal): 1
-    // T (existing, col 2, normal): 1
-    // E (new, col 3, DL): 1*2 = 2
-    // Total: 1+1+2 = 4
+    // ATE: A 1 + T 1 + E on DL 2 = 4
     expect(result.totalScore).toBe(4)
     expect(result.wordsFormed[0].word).toBe('ATE')
   })
@@ -309,20 +305,6 @@ describe('validateAndScoreMove — scoring', () => {
   })
 
   it('stacks word multipliers (two DW = 4x)', () => {
-    // (1,1) and (2,2) are both DW
-    // Place both in one move, need vertical word through them
-    // Actually we need a diagonal... they're on a diagonal not in a line
-    // Let's use (3,3) DW and (4,4) DW — still diagonal
-    // Better: use (1,1) DW and (1,13) DW — same row
-    // Actually row 1: (1,1)=DW, (1,13)=DW, with tiles between
-    // That's too far apart, need existing tiles to fill gap
-    // Simpler: first move on center covers ST(DW at 7,7), place another on (3,3)DW via vertical
-    // Let's do: existing tiles from (2,2) to (4,4) col=2 vertical
-    // (2,2) is DW, (4,4) is DW — different columns
-    // Let me think... (2,2) DW, (3,3) DW are diagonal
-    // Actually let's just test with existing board state:
-    // Row 4: (4,4) is DW, (4,10) is DW
-    // Place a word from col 4 to col 10 in row 4 with existing tiles in between
     const board = makeEmptyBoard()
     board[4][5] = 'A'
     board[4][6] = 'B'
@@ -334,15 +316,7 @@ describe('validateAndScoreMove — scoring', () => {
       { row: 4, col: 10, letter: 'G', rackTile: 'G' }, // DW
     ]
     const result = validateAndScoreMove(board, placements)
-    // Word: FABCDEG
-    // F (new, DW): 4, multiplier *=2
-    // A (existing): 1
-    // B (existing): 3
-    // C (existing): 3
-    // D (existing): 2
-    // E (existing): 1
-    // G (new, DW): 2, multiplier *=2
-    // Total: (4+1+3+3+2+1+2) * 4 = 16 * 4 = 64
+    // FABCDEG: 4+1+3+3+2+1+2 = 16, two DW = x4 = 64
     expect(result.totalScore).toBe(64)
   })
 
@@ -377,12 +351,7 @@ describe('validateAndScoreMove — scoring', () => {
       { row: 8, col: 8, letter: 'T', rackTile: 'T' },
     ]
     const result = validateAndScoreMove(board, placements)
-    // Vertical cross-word: AIT (A at 6,8 + I at 7,8 + T at 8,8)
-    // A (existing): 1, I (existing): 1, T (new, DL at 8,8 — check: (8,6) is DL but (8,8) is .)
-    // Actually check PREMIUM_MAP row 8: ['.', '.', 'DL', '.', '.', '.', 'DL', '.', 'DL', '.', '.', '.', 'DL', '.', '.']
-    // (8,8) is DL!
-    // T (new, DL): 1*2=2
-    // Vertical: 1+1+2 = 4
+    // AIT: A 1 + I 1 + T on DL (8,8) 2 = 4; no new horizontal word
     expect(result.wordsFormed.length).toBe(1)
     expect(result.wordsFormed[0].word).toBe('AIT')
     expect(result.totalScore).toBe(4)
@@ -400,17 +369,7 @@ describe('validateAndScoreMove — scoring', () => {
       { row: 7, col: 10, letter: 'D', rackTile: 'D' },
     ]
     const result = validateAndScoreMove(board, placements)
-    // Word: STARTED across row 7
-    // Row 7 premiums: TW . . DL . . . ST . . . DL . . TW
-    // (7,4): S=1, normal
-    // (7,5): T=1, normal
-    // (7,6): A=1, normal
-    // (7,7): R=1, ST(DW) → wordMult *=2
-    // (7,8): T=1, normal
-    // (7,9): E=1, normal
-    // (7,10): D=2, normal
-    // rawScore: 1+1+1+1+1+1+2 = 8, multiplier=2 → 16
-    // + 50 bingo bonus = 66
+    // STARTED: 1+1+1+1+1+1+2 = 8, centre DW x2 = 16, + 50 bingo = 66
     expect(result.totalScore).toBe(66)
     expect(result.wordsFormed[0].word).toBe('STARTED')
   })

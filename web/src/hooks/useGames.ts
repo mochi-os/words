@@ -53,9 +53,8 @@ export const getValidateWordQueryOptions = (
 })
 
 /**
- * Passing and exchanging both advance the turn without placing a word, so they
- * invalidate exactly what a move does. Neither has an equivalent in chess, and
- * only go has a pass.
+ * Pass and exchange advance the turn without placing a word, so they invalidate
+ * exactly what a move does.
  */
 const turnAction = <R, V extends { gameId: string }>(
   call: (variables: V) => Promise<R>

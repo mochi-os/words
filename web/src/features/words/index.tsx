@@ -162,13 +162,9 @@ export function WordsGameView() {
     if (game?.my_rack !== undefined) {
       setRackTiles(game.my_rack.split('').filter(Boolean))
     }
-    // Reset placement state when the game changes - including its BOARD. A
-    // pending tile is drawn over whatever the board says (words-board.tsx
-    // tests isPending before isOccupied), so placements left standing when an
-    // opponent's move arrives hide the tiles they just played: the player sees
-    // their own draft where the real move is. Rack and board both come from
-    // the same refetch, but an opponent's move changes only the board, so
-    // watching my_rack alone never fired.
+    // Reset on board change too, not just the rack: an opponent's move changes
+    // only the board, and a pending tile is drawn over whatever the board says,
+    // hiding the tiles they just played.
     setPendingPlacements([])
     setSelectedRackIndex(null)
     setDragSource(null)
@@ -630,12 +626,9 @@ export function WordsGameView() {
   }, [])
 
   const canRecallMove = isMyTurn && pendingPlacements.length > 0 && !moveMutation.isPending
-  // The rules engine decides whether the move is legal; the dictionary lookup
-  // is advice, and the server takes an unknown word too. So submit on the base
-  // status - which covers checking, unknown-words and validation-offline alike
-  // rather than listing them. Gating on the resolved status left Submit dead
-  // through the 350ms debounce and the round-trip after it, so placing the
-  // last tile and clicking straight away did nothing.
+  // Submit on the base status: the rules engine decides legality, the
+  // dictionary lookup is advice and the server accepts unknown words. Gating on
+  // the resolved status left Submit dead through the debounce.
   const canSubmitMove =
     isMyTurn && !exchangeMode && moveDraftBase.status === 'ready' && !moveMutation.isPending
   // The server refuses an exchange once the bag is under seven tiles, so at
@@ -644,12 +637,9 @@ export function WordsGameView() {
 
   const headerModel = useWordsHeaderModel(game, myIdentity)
 
-  // The opponent's avatar comes through this app's own player-asset route,
-  // the one the Android client already uses. Not the people app: a cross-app
-  // fetch from the shell's sandboxed iframe carries Origin: null and no
-  // cookies, and words has a route of its own that is bound to the game and
-  // so resolves only its own players. Three- and four-player games list
-  // several opponents in the title, where a single avatar would be wrong.
+  // The avatar comes through this app's own game-bound player-asset route (as
+  // on Android), never a cross-app fetch from the people app. Two-player games
+  // only: larger games list several opponents.
   const opponent = useMemo(() => {
     if (!game || !selectedGameId || game.player_count !== 2) return null
     const number = game.my_player_number === 1 ? 2 : 1

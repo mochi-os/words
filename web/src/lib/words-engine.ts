@@ -91,12 +91,8 @@ export interface MoveResult {
   tilesUsed: string  // rack tiles consumed (for server)
 }
 
-// Why a move was rejected. The engine names the reason and the UI supplies
-// the words: this module has no Lingui context, and the English literals that
-// used to be thrown here reached the composer verbatim in all 106 locales
-// (getErrorMessage returns a non-empty error.message unchanged, so the
-// translated fallback beside it never ran). The Android client splits it the
-// same way — see MoveError in WordsEngine.kt, whose members these mirror.
+// Why a move was rejected. The engine names the reason and the UI supplies the
+// words (no Lingui here). Mirrors MoveError in the Android WordsEngine.kt.
 export type MoveErrorCode =
   | 'no_tiles'
   | 'out_of_bounds'

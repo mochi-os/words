@@ -133,12 +133,9 @@ export function useWordsHeaderModel(
     })
   }
 
-  // The tile count is a stat like the scores beside it, so it is a label and a
-  // value rather than a sentence with the number inside. As one sentence it
-  // read "1 tiles left" at the end of every game, and no wording could be
-  // right in a language with more than two number forms.
-  //
-  // The player line has no such split: it is prose, so it takes plural forms.
+  // Tiles left is a label and a value, not a sentence: "1 tiles left" has no
+  // wording that is right in every locale's plural forms. The player line is
+  // prose and takes plural().
   const playerCount = game.player_count
   return {
     title: getOppositionNames().join(', '),

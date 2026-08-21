@@ -15,9 +15,8 @@ vi.mock('@mochi/web', () => ({
   naturalCompare: (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0),
 }))
 
-// Stands in for the Lingui catalogue: every value is unmistakably not the
-// English the engine used to throw, so a test passes only if the caller's
-// text is what comes back.
+// Stands in for the Lingui catalogue; every value is unmistakably not the
+// engine's English.
 const MESSAGES: MoveErrorMessages = {
   no_tiles: 'catalogue:no_tiles',
   out_of_bounds: 'catalogue:out_of_bounds',
@@ -37,14 +36,9 @@ function draft(placements: Placement[], board = emptyBoard()) {
 }
 
 describe('deriveMoveDraft — rejection text', () => {
-  // Each row is a rejection the composer renders whenever tiles are on the
-  // board, which is most of the time a player is composing a word. Before the
-  // engine carried codes these came back as the engine's English literals in
-  // every locale, because getErrorMessage passes a non-empty error.message
-  // through unchanged and so never reached the translated fallback.
   // no_tiles is absent deliberately: deriveMoveDraft answers 'empty' for an
-  // empty placement list and never reaches the engine, so that code cannot
-  // arrive here. words-engine.test.ts covers the throw itself.
+  // empty placement list and never reaches the engine. words-engine.test.ts
+  // covers the throw.
   const cases: Array<[string, MoveErrorCode, Placement[], string[][] | undefined]> = [
     [
       'off the board',
