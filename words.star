@@ -25,6 +25,14 @@ TILES_EN = [
 
 TILE_VALUES = {t[0]: t[1] for t in TILES_EN}
 
+# Packaged word lists, consulted by dictionary_contains. Held as files rather
+# than loaded into a table: the words are identical for every account, so a
+# per-user copy cost 22 MB each.
+DICTIONARIES = {
+	"en_US": "dictionaries/en_US.txt",
+	"en_UK": "dictionaries/en_UK.txt",
+}
+
 def rack_value(rack):
 	"""Sum the point values of tiles in a rack string."""
 	total = 0
@@ -148,6 +156,10 @@ def words_ensure_commit_hook():
 # Database
 
 def database_upgrade(version):
+	if version == 6:
+		# The word lists are read from the packaged files now. Each account held
+		# its own copy of the same 451,897 immutable rows - 22 MB per database.
+		mochi.db.execute("drop table if exists dictionary")
 	if version == 5:
 		# Event marker on game messages, so the client renders localised text
 		# per viewer instead of the English sentence the acting host stored in
@@ -239,16 +251,6 @@ def database_create():
 	)""")
 	mochi.db.execute("create index if not exists messages_game_created on messages( game, created )")
 
-	mochi.db.execute("""create table if not exists dictionary (
-		word text not null,
-		language text not null,
-		primary key (word, language)
-	)""")
-
-	# Load dictionaries
-	load_dictionary("en_US", "dictionaries/en_US.txt")
-	load_dictionary("en_UK", "dictionaries/en_UK.txt")
-
 def stream_asset(a, entity_id, service, asset):
 	if not entity_id:
 		a.error.label(404, "errors.asset_unavailable", asset=asset)
@@ -294,35 +296,6 @@ def action_user_asset(a):
 		a.error.label(404, "errors.unknown_asset")
 		return
 	return stream_asset(a, a.input("user") or "", "people", asset)
-
-def load_dictionary(language, filename):
-	"""Load a word list file into the dictionary table."""
-	content = mochi.app.asset.read(filename)
-	if not content:
-		return
-	words = str(content).split("\n")
-	batch = []
-	for w in words:
-		w = w.strip().upper()
-		if w and len(w) >= 2:
-			batch.append(w)
-			if len(batch) >= 500:
-				insert_word_batch(batch, language)
-				batch = []
-	if batch:
-		insert_word_batch(batch, language)
-
-def insert_word_batch(words, language):
-	"""Insert a batch of words into the dictionary. 500 rows is 1000 bound
-	parameters, well inside the bundled SQLite's 32766 limit."""
-	placeholders = []
-	params = []
-	for w in words:
-		placeholders.append("(?, ?)")
-		params.append(w)
-		params.append(language)
-	sql = "insert or ignore into dictionary (word, language) values " + ", ".join(placeholders)
-	mochi.db.execute(sql, *params)
 
 # Helpers
 
@@ -1268,15 +1241,41 @@ def action_validate_word(a):
 		a.error.label(400, "errors.invalid_language")
 		return
 
-	word = word.upper().strip()
+	word = word.strip()
 	if len(word) < 2 or len(word) > 15:
 		return {"data": {"valid": False}}
 
-	row = mochi.db.row("select word from dictionary where word=? and language=?", word, language)
-	valid = True if row else False
 	return {
-		"data": {"valid": valid}
+		"data": {"valid": dictionary_contains(word, language)}
 	}
+
+def dictionary_contains(word, language):
+	"""Whether word appears in the packaged word list for language.
+
+	Reads the list per call. mochi.app.asset.read is uncached and the read
+	cannot be hoisted: a module-level call runs on a thread carrying no app,
+	so it fails and takes every definition in this file with it, and a global
+	cache is impossible because Starlark freezes module globals.
+
+	What makes that affordable is scanning for the word rather than splitting
+	on newlines - the scan is a single pass in Go over the bytes, where
+	split() would build a list of 279,000 strings and cost nine times as much.
+	"""
+	file = DICTIONARIES.get(language)
+	if not file:
+		return False
+	content = mochi.app.asset.read(file)
+	if not content:
+		return False
+
+	# The lists are lowercase, one word per line, and end WITHOUT a trailing
+	# newline - so the first and last words carry a separator on one side
+	# only and a "\n<word>\n" scan alone would report both as invalid.
+	text = str(content)
+	needle = word.lower()
+	if text.startswith(needle + "\n") or text.endswith("\n" + needle):
+		return True
+	return ("\n" + needle + "\n") in text
 
 # P2P Events
 
