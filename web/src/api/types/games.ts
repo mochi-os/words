@@ -22,6 +22,12 @@ export interface Game {
   current_turn: number
   status: 'active' | 'finished' | 'resigned'
   winner: string | null
+  // Identity of the last player to change the game. Part of the peers' ordering
+  // tuple, but on a RESIGNED game it is the resigner: every play action refuses
+  // a game that is not active, and a terminal status dominates the ordering, so
+  // nothing writes after the resignation. That is what lets the header tell the
+  // resigner apart from the other players who did not win.
+  writer?: string
   board: string
   my_rack: string
   my_player_number: number

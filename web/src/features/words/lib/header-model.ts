@@ -56,6 +56,30 @@ function isCurrentUserWinner(game: Game, myIdentity?: string | null): boolean {
   return game.winner === getPlayerIdentity(game, game.my_player_number)
 }
 
+function isCurrentUserResigner(game: Game, myIdentity?: string | null): boolean {
+  if (!game.writer) {
+    return false
+  }
+
+  if (myIdentity) {
+    return game.writer === myIdentity
+  }
+
+  return game.writer === getPlayerIdentity(game, game.my_player_number)
+}
+
+function getResignerPlayerNumber(game: Game): number | null {
+  if (!game.writer) {
+    return null
+  }
+  for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
+    if (getPlayerIdentity(game, playerNumber) === game.writer) {
+      return playerNumber
+    }
+  }
+  return null
+}
+
 function getWinnerPlayerNumber(game: Game): number | null {
   if (!game.winner) {
     return null
@@ -114,9 +138,22 @@ export function useWordsHeaderModel(
       return t`Game over`
     }
 
-    return isCurrentUserWinner(game, myIdentity)
-      ? t`Opponent resigned — you win!`
-      : t`You resigned`
+    // Three outcomes, not two. With up to four seats a resignation leaves
+    // players who neither resigned nor won, and they used to fall into the
+    // else and be told they had resigned - contradicting the "<name> resigned"
+    // line in the log beside it.
+    if (isCurrentUserResigner(game, myIdentity)) {
+      return t`You resigned`
+    }
+    if (isCurrentUserWinner(game, myIdentity)) {
+      return t`Opponent resigned — you win!`
+    }
+    const resignerPlayerNumber = getResignerPlayerNumber(game)
+    if (resignerPlayerNumber) {
+      const name = getPlayerName(resignerPlayerNumber)
+      return t`${name} resigned`
+    }
+    return t`Game over`
   }
 
   const players: WordsHeaderPlayer[] = []
