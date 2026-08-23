@@ -91,6 +91,22 @@ export function resolveMoveDraftStatus({
   return 'ready'
 }
 
+// Translated text for each badge state, supplied by the component that has the
+// Lingui context. `waiting` is not a draft status: an empty draft on the
+// opponent's turn reads differently from an empty draft on your own.
+export type MoveStatusMessages = Readonly<Record<MoveDraftStatus | 'waiting', string>>
+
+export function getMoveStatusLabel(
+  status: MoveDraftStatus,
+  isMyTurn: boolean,
+  messages: MoveStatusMessages
+): string {
+  if (!isMyTurn && status === 'empty') {
+    return messages.waiting
+  }
+  return messages[status]
+}
+
 export function getUniqueDraftWords(wordsFormed: readonly ScoredWord[]): string[] {
   const uniqueWords = new Set<string>()
   for (const entry of wordsFormed) {

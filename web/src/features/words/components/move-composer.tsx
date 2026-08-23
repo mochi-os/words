@@ -10,9 +10,12 @@ import {
 } from '@mochi/web'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { AlertTriangle, ArrowLeftRight, CheckCircle2, Loader2, Send, XCircle } from 'lucide-react'
-import type {
-  DraftWordValidationState,
-  MoveDraftStatus,
+import { useMemo } from 'react'
+import {
+  getMoveStatusLabel,
+  type DraftWordValidationState,
+  type MoveDraftStatus,
+  type MoveStatusMessages,
 } from '../lib/move-draft'
 
 interface DraftWordPreview {
@@ -62,7 +65,19 @@ export function MoveComposer({
   onConfirmExchange,
 }: MoveComposerProps) {
   const { t } = useLingui()
-  const statusLabel = getStatusLabel(draftStatus, isMyTurn, t)
+  const statusMessages = useMemo<MoveStatusMessages>(
+    () => ({
+      waiting: t`Waiting for your turn`,
+      empty: t`Waiting for tiles`,
+      invalid_local: t`Invalid move`,
+      ready: t`Ready`,
+      checking: t`Checking`,
+      ready_with_invalid_words: t`Has unknown words`,
+      validation_unavailable: t`Validation offline`,
+    }),
+    [t]
+  )
+  const statusLabel = getMoveStatusLabel(draftStatus, isMyTurn, statusMessages)
   const hasAdvisoryInvalidWords = draftStatus === 'ready_with_invalid_words'
   const showWordList = words.length > 0
   const isChecking = draftStatus === 'checking'
@@ -231,26 +246,3 @@ function getStatusBadgeClass(status: MoveDraftStatus): string {
   return ''
 }
 
-type LinguiT = ReturnType<typeof useLingui>['t']
-
-function getStatusLabel(status: MoveDraftStatus, isMyTurn: boolean, t: LinguiT): string {
-  if (!isMyTurn && status === 'empty') {
-    return t`Waiting for your turn`
-  }
-  switch (status) {
-    case 'empty':
-      return t`Waiting for tiles`
-    case 'invalid_local':
-      return t`Invalid move`
-    case 'ready':
-      return t`Ready`
-    case 'checking':
-      return t`Checking`
-    case 'ready_with_invalid_words':
-      return t`Has unknown words`
-    case 'validation_unavailable':
-      return t`Validation offline`
-    default:
-      return t`Ready`
-  }
-}

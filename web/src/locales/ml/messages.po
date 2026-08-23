@@ -485,7 +485,7 @@ msgstr "ബ്രൗസർ അറിയിപ്പുകൾ"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/words/components/move-composer.tsx:139
+#: src/features/words/components/move-composer.tsx:154
 #: src/features/words/components/new-game.tsx:189
 #: src/features/words/index.tsx:904
 #: src/features/words/index.tsx:1081
@@ -530,6 +530,10 @@ msgstr "മുൻ അറിയിപ്പുകൾ കാണാൻ \"എല്�
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
 msgstr "ചെക്ക്ബോക്സ്"
+
+#: src/features/words/components/move-composer.tsx:74
+msgid "Checking"
+msgstr "പരിശോധിക്കുന്നു"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:138
 msgid "Checklist"
@@ -713,7 +717,7 @@ msgstr "കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുക�
 msgid "Connecting..."
 msgstr "ബന്ധിപ്പിക്കുന്നു..."
 
-#: src/features/words/components/move-composer.tsx:111
+#: src/features/words/components/move-composer.tsx:126
 msgid "Contains unknown words. You can still submit."
 msgstr "അജ്ഞാതമായ വാക്കുകൾ അടങ്ങിയിരിക്കുന്നു. നിങ്ങൾക്ക് ഇപ്പോഴും സമർപ്പിക്കാം."
 
@@ -1052,7 +1056,7 @@ msgstr "നിങ്ങളുടെ ഇമെയിലിലെ കോഡ് ന
 msgid "Enter your authenticator code"
 msgstr "നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക"
 
-#: src/features/words/components/move-composer.tsx:155
+#: src/features/words/components/move-composer.tsx:170
 #: src/features/words/index.tsx:910
 msgid "Exchange"
 msgstr "മാറ്റുക"
@@ -1062,7 +1066,7 @@ msgstr "മാറ്റുക"
 msgid "Exchange ({0})"
 msgstr "മാറ്റുക ({0})"
 
-#: src/features/words/components/move-composer.tsx:153
+#: src/features/words/components/move-composer.tsx:168
 msgid "Exchange ({exchangeCount})"
 msgstr "മാറ്റുക ({exchangeCount})"
 
@@ -1307,6 +1311,10 @@ msgstr "ഇത് പ്രകാരം ഗ്രൂപ്പുചെയ്യ�
 msgid "Group: {0}"
 msgstr "ഗ്രൂപ്പ്: {0}"
 
+#: src/features/words/components/move-composer.tsx:75
+msgid "Has unknown words"
+msgstr "അജ്ഞാത വാക്കുകളുണ്ട്"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
 msgid "Hide"
 msgstr "മറയ്ക്കുക"
@@ -1367,6 +1375,7 @@ msgstr "താൽപ്പര്യങ്ങൾ"
 msgid "Invalid date"
 msgstr "അസാധുവായ തീയതി"
 
+#: src/features/words/components/move-composer.tsx:72
 #: src/features/words/index.tsx:181
 msgid "Invalid move"
 msgstr "അസാധുവായ നീക്കം"
@@ -1931,7 +1940,11 @@ msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ
 msgid "Re-register your passkeys on this server"
 msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ പാസ്‌കീകൾ വീണ്ടും രജിസ്റ്റർ ചെയ്യുക"
 
-#: src/features/words/components/move-composer.tsx:165
+#: src/features/words/components/move-composer.tsx:73
+msgid "Ready"
+msgstr "തയ്യാർ"
+
+#: src/features/words/components/move-composer.tsx:180
 #: src/features/words/index.tsx:916
 msgid "Recall"
 msgstr "രസീത് സ്ഥിരീകരിച്ചു"
@@ -2402,7 +2415,7 @@ msgstr "ശ്രദ്ധിച്ചുകൊണ്ടിരിക്കുക
 msgid "Subject"
 msgstr "വിഷയം"
 
-#: src/features/words/components/move-composer.tsx:182
+#: src/features/words/components/move-composer.tsx:197
 #: src/features/words/index.tsx:928
 msgid "Submit"
 msgstr "സമർപ്പിക്കുക"
@@ -2694,7 +2707,11 @@ msgstr "നിങ്ങളുടെ പാസ്‌കീ ഉപയോഗിക�
 msgid "User"
 msgstr "ഉപയോക്താവ്"
 
-#: src/features/words/components/move-composer.tsx:103
+#: src/features/words/components/move-composer.tsx:76
+msgid "Validation offline"
+msgstr "പരിശോധന ഓഫ്‌ലൈൻ"
+
+#: src/features/words/components/move-composer.tsx:118
 msgid "Validation offline — you can still submit."
 msgstr "സ്ഥിരീകരണം ഓഫ്‌ലൈനാണ് — നിങ്ങൾക്ക് ഇപ്പോഴും സമർപ്പിക്കാം."
 
@@ -2746,6 +2763,14 @@ msgstr "എല്ലാ അറിയിപ്പുകളും കാണുക"
 msgid "View controls"
 msgstr "നിയന്ത്രണങ്ങൾ കാണുക"
 
+#: src/features/words/components/move-composer.tsx:71
+msgid "Waiting for tiles"
+msgstr "ടൈലുകൾക്കായി കാത്തിരിക്കുന്നു"
+
+#: src/features/words/components/move-composer.tsx:70
+msgid "Waiting for your turn"
+msgstr "നിങ്ങളുടെ ഊഴത്തിനായി കാത്തിരിക്കുന്നു"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
 msgid "Watched"
@@ -2781,7 +2806,7 @@ msgstr "ബുധനാഴ്ച"
 msgid "Words"
 msgstr "Words"
 
-#: src/features/words/components/move-composer.tsx:117
+#: src/features/words/components/move-composer.tsx:132
 msgid "Words formed"
 msgstr "രൂപീകരിച്ച വാക്കുകൾ"
 

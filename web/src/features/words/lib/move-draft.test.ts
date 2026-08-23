@@ -6,7 +6,13 @@
 /* eslint-disable lingui/no-unlocalized-strings -- vitest names and the fake catalogue below are not user-facing */
 import { describe, it, expect, vi } from 'vitest'
 import { emptyBoard, type MoveErrorCode, type Placement } from '@/lib/words-engine'
-import { deriveMoveDraft, type MoveErrorMessages } from './move-draft'
+import {
+  deriveMoveDraft,
+  getMoveStatusLabel,
+  type MoveDraftStatus,
+  type MoveErrorMessages,
+  type MoveStatusMessages,
+} from './move-draft'
 
 // The suite runs under the node environment (the engine it exercises is pure),
 // but @mochi/web's barrel touches document at import time. Only naturalCompare
@@ -146,5 +152,55 @@ describe('deriveMoveDraft — rejection text', () => {
     ])
     expect(result.status).toBe('ready')
     expect(result.errorMessage).toBeNull()
+  })
+})
+
+// Same sentinel convention: a value that could not have come from a Lingui
+// macro the caller forgot to let fire.
+const STATUS_MESSAGES: MoveStatusMessages = {
+  waiting: 'catalogue:waiting',
+  empty: 'catalogue:empty',
+  invalid_local: 'catalogue:invalid_local',
+  ready: 'catalogue:ready',
+  checking: 'catalogue:checking',
+  ready_with_invalid_words: 'catalogue:ready_with_invalid_words',
+  validation_unavailable: 'catalogue:validation_unavailable',
+}
+
+describe('getMoveStatusLabel', () => {
+  const statuses: MoveDraftStatus[] = [
+    'empty',
+    'invalid_local',
+    'ready',
+    'checking',
+    'ready_with_invalid_words',
+    'validation_unavailable',
+  ]
+
+  it.each(statuses)('gives the caller its own text for %s', (status) => {
+    expect(getMoveStatusLabel(status, true, STATUS_MESSAGES)).toBe(
+      STATUS_MESSAGES[status]
+    )
+  })
+
+  it('reads an empty draft differently on the opponent\'s turn', () => {
+    expect(getMoveStatusLabel('empty', false, STATUS_MESSAGES)).toBe('catalogue:waiting')
+    expect(getMoveStatusLabel('empty', true, STATUS_MESSAGES)).toBe('catalogue:empty')
+  })
+
+  it('waits only on an empty draft, never on one with tiles down', () => {
+    for (const status of statuses.filter((s) => s !== 'empty')) {
+      expect(getMoveStatusLabel(status, false, STATUS_MESSAGES)).toBe(
+        STATUS_MESSAGES[status]
+      )
+    }
+  })
+
+  it('never answers with the empty string the badge used to show', () => {
+    for (const status of statuses) {
+      for (const isMyTurn of [true, false]) {
+        expect(getMoveStatusLabel(status, isMyTurn, STATUS_MESSAGES)).not.toBe('')
+      }
+    }
   })
 })
