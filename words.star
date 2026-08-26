@@ -100,8 +100,16 @@ def empty_board():
 		rows.append(row)
 	return "/".join(rows)
 
+# textual(value) -> bool: whether a peer-supplied value is a string. Event
+# content is decoded JSON, so a peer controls the types; len() on a number
+# raises, and Starlark has no try/except, so the handler aborts part-done.
+def textual(value):
+	return type(value) == "string"
+
 def valid_board(board_str):
 	"""Validate a board string."""
+	if not textual(board_str):
+		return False
 	if not board_str or len(board_str) > 500:
 		return False
 	rows = board_str.split("/")
@@ -253,6 +261,11 @@ def database_create():
 
 def stream_asset(a, entity_id, service, asset):
 	if not entity_id:
+		a.error.label(404, "errors.asset_unavailable", asset=asset)
+		return None
+	# mochi.remote.stream aborts the action as a 500 on a malformed entity, so
+	# refuse one here as a 404 instead. Matches chess.
+	if not mochi.text.valid(entity_id, "entity"):
 		a.error.label(404, "errors.asset_unavailable", asset=asset)
 		return None
 	s = mochi.remote.stream(entity_id, service, asset, {})
@@ -455,6 +468,8 @@ def game_snapshot_valid(game, state):
 	snapshot on any event type can replace board, bag, racks and scores, and no
 	handler validates those fields itself."""
 	if not valid_board(state["board"]):
+		return False
+	if not textual(state["bag"]):
 		return False
 	if len(state["bag"]) > 200:
 		return False
@@ -1177,13 +1192,16 @@ def action_resign(a):
 
 	# Find winner: highest score among remaining players
 	pnum = get_player_number(game, a.user.identity.id)
-	best_score = -1
+	# Seeded from None rather than a numeric floor: scores go negative (a move
+	# may score negative, and end-of-game rack penalties subtract), so any
+	# starting number can be above every remaining player and leave no winner.
+	best_score = None
 	winner = None
 	for i in range(1, game["player_count"] + 1):
 		if i == pnum:
 			continue
 		s = game["player" + str(i) + "_score"]
-		if s > best_score:
+		if best_score == None or s > best_score:
 			best_score = s
 			winner = game["player" + str(i)]
 
@@ -1428,34 +1446,22 @@ def event_move(e):
 	if new_score == None:
 		return
 
-	status = e.content("status") or "active"
-	if status not in ["active", "finished", "resigned"]:
-		status = "active"
-	winner = e.content("winner") or None
-	# Clamp winner to an actual player of this game - a player must not be able
-	# to declare an arbitrary entity the winner (matches chess/go).
-	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
-	if winner and winner not in players:
-		winner = None
 	body = event_body(e.content("body"), 10000, "")
 	name = event_name(e.content("name"))
 
 	bag = e.content("bag")
 
-	# Read back the end-of-game rack penalties action_move ships as playerN_score
-	# keys, or the mover's scoreboard and every opponent's disagree. The slot index
-	# comes from this loop over player_count, never from the payload.
-	penalties = {}
+	# Gate only: the end-of-game rack penalties action_move ships as playerN_score
+	# keys are re-read from the applied snapshot below, so refuse a malformed one
+	# rather than carrying it. The slot index comes from this loop, never the payload.
 	for n in range(1, game["player_count"] + 1):
 		if n == player_number:
 			continue
-		key = "player" + str(n) + "_score"
-		value = e.content(key)
+		value = e.content("player" + str(n) + "_score")
 		if value == None or value == "":
 			continue
 		if not mochi.text.valid(str(value), "integer"):
 			return
-		penalties[key] = int(value)
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1476,19 +1482,15 @@ def event_move(e):
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, "play:" + str(score), created)
 
 	bag_count = len(bag) if bag != None else len(game["bag"])
+	# Only the keys GAME_PUBLIC does not carry: everything it does list - board,
+	# current_turn, move_count, status, winner and every playerN_score - is
+	# overwritten from the applied snapshot by the loop below.
 	ws_data = {
 		"type": "move", "created": created, "member": sender, "name": name,
 		"body": body, "event": "play:" + str(score),
-		"board": board, "score": score, "player_number": player_number,
-		"current_turn": current_turn, "move_count": move_count,
-		"status": status, "winner": winner or "",
-		"player" + str(player_number) + "_score": new_score,
+		"score": score, "player_number": player_number,
 		"bag_count": bag_count,
 	}
-	# Mirror action_move: an open client must see the penalised opponent
-	# scores land, not just the mover's own.
-	for k, v in penalties.items():
-		ws_data[k] = v
 	# Skip commit-hook conversion: matches action_move — shared (games, update) shape and per-move score delta isn't in the row.
 	# A snapshot may have repaired more than this event's own subject - a pass
 	# can carry a board and scores the peer never received - so send the

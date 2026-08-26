@@ -53,6 +53,9 @@ export function parseBoard(boardStr: string): string[][] {
   if (!boardStr) return emptyBoard()
   const rows = boardStr.split('/')
   if (rows.length !== BOARD_SIZE) return emptyBoard()
+  // Width too, not just the row count: one short row leaves board[row][col]
+  // undefined, which the board reads as occupied and getDisplayLetter throws on.
+  if (rows.some((row) => row.length !== BOARD_SIZE)) return emptyBoard()
   return rows.map((row) => row.split(''))
 }
 
@@ -142,6 +145,14 @@ export function validateAndScoreMove(
     }
   }
 
+  // One tile per square. Two placements on the same square give
+  // rows.size === cols.size === 1 and pass every check below, and tilesUsed
+  // then names two rack tiles for one board square.
+  const squares = new Set(placements.map((p) => `${p.row},${p.col}`))
+  if (squares.size !== placements.length) {
+    throw new MoveError('square_occupied')
+  }
+
   // Check all placements are in a single row or column
   const rows = new Set(placements.map((p) => p.row))
   const cols = new Set(placements.map((p) => p.col))
@@ -184,8 +195,9 @@ export function validateAndScoreMove(
   // Check connectivity: must touch existing tiles (or center on first move)
   const boardIsEmpty = isBoardEmpty(board)
   if (boardIsEmpty) {
-    // First move must cover center square (7,7)
-    const coversCenter = placements.some((p) => p.row === 7 && p.col === 7)
+    // First move must cover the centre square
+    const centre = Math.floor(BOARD_SIZE / 2)
+    const coversCenter = placements.some((p) => p.row === centre && p.col === centre)
     if (!coversCenter) {
       throw new MoveError('first_move_centre')
     }

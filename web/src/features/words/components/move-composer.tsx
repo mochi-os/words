@@ -130,12 +130,15 @@ export function MoveComposer({
       {/* Horizontal word pills */}
       {showWordList && (
         <div className="flex flex-wrap gap-1" aria-label={t`Words formed`}>
-          {words.map(({ word, score }) => {
+          {words.map(({ word, score }, index) => {
             const normalizedWord = word.toUpperCase()
             const validationState = wordValidationState[normalizedWord] ?? 'unknown'
             return (
               <span
-                key={`${normalizedWord}-${score}`}
+                // Index, because wordsFormed is not deduplicated: one parallel
+                // play routinely forms the same cross-word twice at the same
+                // score, and word+score then collides.
+                key={`${normalizedWord}-${score}-${index}`}
                 className="inline-flex items-center gap-1 rounded bg-muted px-1.5 py-0.5 text-xs"
               >
                 <ValidationIndicator state={validationState} />

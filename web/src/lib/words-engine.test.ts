@@ -57,6 +57,23 @@ describe('parseBoard', () => {
     expect(board.length).toBe(BOARD_SIZE)
     expect(isBoardEmpty(board)).toBe(true)
   })
+
+  it('returns empty board when a row is the wrong width', () => {
+    // A ragged row leaves board[row][col] undefined, which the board reads as
+    // occupied and getDisplayLetter throws on.
+    const rows = Array.from({ length: BOARD_SIZE }, () => '.'.repeat(BOARD_SIZE))
+    rows[7] = '.'.repeat(BOARD_SIZE - 1)
+    const board = parseBoard(rows.join('/'))
+    expect(board.length).toBe(BOARD_SIZE)
+    expect(board.every((row) => row.length === BOARD_SIZE)).toBe(true)
+    expect(isBoardEmpty(board)).toBe(true)
+  })
+
+  it('returns empty board when a row is too wide', () => {
+    const rows = Array.from({ length: BOARD_SIZE }, () => '.'.repeat(BOARD_SIZE))
+    rows[0] = '.'.repeat(BOARD_SIZE + 1)
+    expect(parseBoard(rows.join('/')).every((row) => row.length === BOARD_SIZE)).toBe(true)
+  })
 })
 
 describe('isBoardEmpty', () => {
@@ -170,6 +187,31 @@ describe('validateAndScoreMove — validation', () => {
       { row: 8, col: 8, letter: 'B', rackTile: 'B' },
     ]
     expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('not_in_line'))
+  })
+
+  it('rejects two placements on the same square', () => {
+    // rows.size === cols.size === 1, so every later check passes and tilesUsed
+    // names two rack tiles for one board square.
+    const centre = Math.floor(BOARD_SIZE / 2)
+    const p: Placement[] = [
+      { row: centre, col: centre, letter: 'A', rackTile: 'A' },
+      { row: centre, col: centre, letter: 'B', rackTile: 'B' },
+    ]
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('square_occupied'))
+  })
+
+  it('requires the first move to cover the centre derived from BOARD_SIZE', () => {
+    const centre = Math.floor(BOARD_SIZE / 2)
+    const off: Placement[] = [
+      { row: 0, col: 0, letter: 'A', rackTile: 'A' },
+      { row: 0, col: 1, letter: 'B', rackTile: 'B' },
+    ]
+    expect(() => validateAndScoreMove(makeEmptyBoard(), off)).toThrow(new MoveError('first_move_centre'))
+    const on: Placement[] = [
+      { row: centre, col: centre, letter: 'A', rackTile: 'A' },
+      { row: centre, col: centre + 1, letter: 'B', rackTile: 'B' },
+    ]
+    expect(() => validateAndScoreMove(makeEmptyBoard(), on)).not.toThrow()
   })
 
   it('throws on gap between tiles', () => {

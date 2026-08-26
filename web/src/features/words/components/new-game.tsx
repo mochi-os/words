@@ -55,7 +55,7 @@ export function NewGame() {
     onSuccess: (data) => {
       onOpenChange(false)
       if (data.id) {
-        navigate({ to: '/$gameId', params: { gameId: data.id } })
+        void navigate({ to: '/$gameId', params: { gameId: data.id } })
         toast.success(t`Game created`)
       }
     },

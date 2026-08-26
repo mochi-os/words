@@ -223,13 +223,14 @@ export function WordsBoard({
             // A played square announced its bare letter and nothing else,
             // which is the least useful thing a board can say. The other two
             // labels are unchanged, placeholders included, so their existing
-            // translations still apply.
+            // translations still apply. Rows are numbered 1-15 top to bottom,
+            // as Scrabble numbers them - not bottom-up as in chess.
             const label = isPending
-              ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}, click to remove`
+              ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${row + 1}, click to remove`
               : isOccupied
-                ? t`${displayLetter} at ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
+                ? t`${displayLetter} at ${String.fromCharCode(65 + col)}${row + 1}`
                 : canClickToPlace
-                  ? t`Empty square ${String.fromCharCode(65 + col)}${BOARD_SIZE - row}`
+                  ? t`Empty square ${String.fromCharCode(65 + col)}${row + 1}`
                   : undefined
 
             return (

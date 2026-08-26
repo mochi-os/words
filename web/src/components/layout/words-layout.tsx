@@ -32,7 +32,7 @@ function WordsLayoutInner() {
     } else {
       setGame(null)
     }
-  }, [urlGameId, games, myIdentity, setGame])
+  }, [urlGameId, setGame])
 
   // A words game can seat up to four, so the entry names every other player
   // rather than a single opponent - which is also why no avatar is drawn.

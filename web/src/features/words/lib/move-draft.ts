@@ -3,7 +3,6 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { naturalCompare } from '@mochi/web'
 import {
   type MoveErrorCode,
   type MoveResult,
@@ -134,8 +133,12 @@ export function createDraftSignature(
     .sort((a, b) => {
       if (a.row !== b.row) return a.row - b.row
       if (a.col !== b.col) return a.col - b.col
-      if (a.letter !== b.letter) return naturalCompare(a.letter, b.letter)
-      return naturalCompare(a.rackTile, b.rackTile)
+      // Codepoint order, not naturalCompare: this is a cache signature, and
+      // naturalCompare is case- and accent-insensitive, so it can call two
+      // tile codes equal that the signature has to tell apart.
+      if (a.letter !== b.letter) return a.letter < b.letter ? -1 : 1
+      if (a.rackTile !== b.rackTile) return a.rackTile < b.rackTile ? -1 : 1
+      return 0
     })
     .map((placement) =>
       `${placement.row},${placement.col},${placement.letter},${placement.rackTile}`
