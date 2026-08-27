@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:225
+#: ../../../lib/web/src/lib/error-normalizer.ts:215
 msgid "Please check your internet connection and try again."
 msgstr "Интернет холболтоо шалгаад дахин оролдоно уу."
 
@@ -39,22 +39,20 @@ msgstr "[тогтоогоогүй]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# тоглогч} other {# тоглогч}}"
 
-#. placeholder {0}: selectedValues.size
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
-msgid "{0, plural, one {# selected} other {# selected}}"
-msgstr "{0, plural, one {# сонгогдсон} other {# сонгогдсон}}"
+#~ msgid "{0, plural, one {# selected} other {# selected}}"
+#~ msgstr "{0, plural, one {# сонгогдсон} other {# сонгогдсон}}"
 
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
-#. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:228
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{1}{2} дээрх {0}, хасахын тулд дар"
 
-#. placeholder {0}: item.label
 #: ../../../lib/web/src/components/config-drawer.tsx:160
-msgid "{0} option preview"
-msgstr "{0} сонголтын урьдчилан харах"
+#~ msgid "{0} option preview"
+#~ msgstr "{0} сонголтын урьдчилан харах"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -93,8 +91,8 @@ msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#дол} other {#дол}}"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
-#. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:230
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx:231
 msgid "{displayLetter} at {0}{1}"
 msgstr "{0}{1} дээрх {displayLetter}"
 
@@ -128,20 +126,20 @@ msgid "{playerCount, plural, one {Playing with # player} other {Playing with # p
 msgstr "{playerCount, plural, one {# тоглогчтой тоглож байна} other {# тоглогчтой тоглож байна}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-msgstr "{selectedCount, plural, one {{entityName} сонгогдсон} other {{manyName} сонгогдсон}}"
+#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+#~ msgstr "{selectedCount, plural, one {{entityName} сонгогдсон} other {{manyName} сонгогдсон}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-msgstr "{selectedCount, plural, one {# {entityName} сонгогдсон. Бөөнөөр үйлдлийн хэрэгслийн мөр боломжтой.} other {# {manyName} сонгогдсон. Бөөнөөр үйлдлийн хэрэгслийн мөр боломжтой.}}"
+#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+#~ msgstr "{selectedCount, plural, one {# {entityName} сонгогдсон. Бөөнөөр үйлдлийн хэрэгслийн мөр боломжтой.} other {# {manyName} сонгогдсон. Бөөнөөр үйлдлийн хэрэгслийн мөр боломжтой.}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-msgstr "{selectedCount, plural, one {# сонгогдсон} other {# сонгогдсон}}"
+#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+#~ msgstr "{selectedCount, plural, one {# сонгогдсон} other {# сонгогдсон}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-msgstr "{selectedCount, plural, one {# сонгосон {entityName}-д зориулсан бөөнөөр үйлдэл} other {# сонгосон {manyName}-д зориулсан бөөнөөр үйлдэл}}"
+#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+#~ msgstr "{selectedCount, plural, one {# сонгосон {entityName}-д зориулсан бөөнөөр үйлдэл} other {# сонгосон {manyName}-д зориулсан бөөнөөр үйлдэл}}"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
@@ -194,34 +192,34 @@ msgid "Access denied"
 msgstr "Хандалтыг татгалзсан"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
-msgid "Access Forbidden"
-msgstr "Хандалт хориотой"
+#~ msgid "Access Forbidden"
+#~ msgstr "Хандалт хориотой"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Хандалтын түвшин"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-msgid "Account added"
-msgstr "Бүртгэл нэмэгдсэн"
+#~ msgid "Account added"
+#~ msgstr "Бүртгэл нэмэгдсэн"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-msgid "Account removed"
-msgstr "Бүртгэл хасагдсан"
+#~ msgid "Account removed"
+#~ msgstr "Бүртгэл хасагдсан"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "Бүртгэлийн төрөл"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-msgid "Account verified"
-msgstr "Бүртгэл баталгаажсан"
+#~ msgid "Account verified"
+#~ msgstr "Бүртгэл баталгаажсан"
 
 #: src/components/layout/words-layout.tsx:61
 msgid "Active games"
 msgstr "Идэвхтэй тоглоомууд"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:712
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:209
 msgid "Add"
@@ -244,19 +242,18 @@ msgid "Add access"
 msgstr "Хандалт нэмэх"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:132
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:288
 msgid "Add account"
 msgstr "Бүртгэл нэмэх"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-msgid "Add an account to receive notifications and use services."
-msgstr "Мэдэгдэл хүлээн авах болон үйлчилгээ ашиглахын тулд бүртгэл нэмнэ."
+#~ msgid "Add an account to receive notifications and use services."
+#~ msgstr "Мэдэгдэл хүлээн авах болон үйлчилгээ ашиглахын тулд бүртгэл нэмнэ."
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "Тайлбар нэмэх"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:682
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:690
 msgid "Add checklist item"
 msgstr "Жагсаалтын зүйл нэмэх"
 
@@ -273,7 +270,7 @@ msgstr "Найзууд нэмэх"
 msgid "Add friends in the People app to start playing"
 msgstr "Тоглоом эхлүүлэхийн тулд People апп дотор найз нэмнэ үү"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:700
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:708
 msgid "Add item..."
 msgstr "Зүйл нэмэх..."
 
@@ -282,8 +279,8 @@ msgid "Add link"
 msgstr "Холбоос нэмэх"
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-msgid "Add new account"
-msgstr "Шинэ бүртгэл нэмэх"
+#~ msgid "Add new account"
+#~ msgstr "Шинэ бүртгэл нэмэх"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:215
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:220
@@ -294,13 +291,12 @@ msgid "Add option"
 msgstr "Сонголт нэмэх"
 
 #: ../../../lib/web/src/components/post-tags.tsx:137
-#: ../../../lib/web/src/components/tag-input.tsx:40
 msgid "Add tag..."
 msgstr "Шошго нэмэх..."
 
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-msgid "Add team/app"
-msgstr "Баг/апп нэмэх"
+#~ msgid "Add team/app"
+#~ msgstr "Баг/апп нэмэх"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -318,16 +314,16 @@ msgid "Adding..."
 msgstr "Нэмж байна..."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:72
-msgid "Adjust the appearance and layout to suit your preferences."
-msgstr "Тохиргоог өөрийнхөөрөө тохируулна."
+#~ msgid "Adjust the appearance and layout to suit your preferences."
+#~ msgstr "Тохиргоог өөрийнхөөрөө тохируулна."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "AI"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-msgid "All"
-msgstr "Бүгд"
+#~ msgid "All"
+#~ msgstr "Бүгд"
 
 #. placeholder {0}: entityLabel.toLowerCase()
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
@@ -342,7 +338,7 @@ msgstr "Дараах байдлаар эрэмбэлэхийг зөвшөөрө�
 msgid "An error occurred"
 msgstr "Алдаа гарлаа"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:275
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:266
 msgid "An unexpected error occurred"
 msgstr "Гэнэтийн алдаа гарлаа"
 
@@ -351,11 +347,11 @@ msgid "Android push"
 msgstr "Android push мэдэгдэл"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:45
-#: ../../../lib/web/src/features/access/types.ts:42
+#: ../../../lib/web/src/features/access/types.ts:36
 msgid "Anyone"
 msgstr "Хэн ч"
 
-#: ../../../lib/web/src/features/access/types.ts:41
+#: ../../../lib/web/src/features/access/types.ts:35
 msgid "Anyone who is logged in"
 msgstr "Нэвтэрсэн хэн ч"
 
@@ -385,8 +381,8 @@ msgid "Are you sure you want to resign?"
 msgstr "Бууж өгөхдөө итгэлтэй байна уу?"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:59
-msgid "Asc"
-msgstr "Өсөх"
+#~ msgid "Asc"
+#~ msgstr "Өсөх"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -401,7 +397,7 @@ msgid "Attach reply files"
 msgstr "Хариултын файл хавсаргах"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:46
-#: ../../../lib/web/src/features/access/types.ts:41
+#: ../../../lib/web/src/features/access/types.ts:35
 msgid "Authenticated users"
 msgstr "Баталгаажсан хэрэглэгчид"
 
@@ -425,7 +421,6 @@ msgstr "{name}-ийн аватар"
 msgid "Back"
 msgstr "Буцах"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:28
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:28
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
@@ -444,8 +439,8 @@ msgstr "Хоосон хавтан"
 msgid "Blocked by"
 msgstr "Блоклосон"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:227
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:237
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:242
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:252
 msgid "Blocked navigation to untrusted link"
 msgstr "Найдвартай биш холбоос руу шилжихийг блоклосон"
 
@@ -485,7 +480,7 @@ msgstr "Хөтчийн мэдэгдэл"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/words/components/move-composer.tsx:154
+#: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:189
 #: src/features/words/index.tsx:904
 #: src/features/words/index.tsx:1081
@@ -509,12 +504,12 @@ msgstr "Хариултыг цуцлах"
 msgid "Caption"
 msgstr "Тайлбар"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:97
+#: ../../../lib/web/src/components/notification-category-button.tsx:99
 msgid "Category for these notifications"
 msgstr "Эдгээр мэдэгдлийн ангилал"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:78
-#: ../../../lib/web/src/components/notification-category-button.tsx:89
+#: ../../../lib/web/src/components/notification-category-button.tsx:80
+#: ../../../lib/web/src/components/notification-category-button.tsx:91
 msgid "Change notification category"
 msgstr "Мэдэгдлийн ангиллыг солих"
 
@@ -524,8 +519,8 @@ msgid "Chat"
 msgstr "Чат"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-msgid "Check \"All\" to see your past notifications."
-msgstr "Өмнөх мэдэгдлүүдийг харахын тулд \"Бүгд\"-ийг сонгоно уу."
+#~ msgid "Check \"All\" to see your past notifications."
+#~ msgstr "Өмнөх мэдэгдлүүдийг харахын тулд \"Бүгд\"-ийг сонгоно уу."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -548,20 +543,20 @@ msgid "Choose a letter"
 msgstr "Үсэг сонгох"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
-msgid "Choose between default expanded, compact icon-only, or full layout mode"
-msgstr "Default expanded, compact icon-only, эсвэл full layout горимоос сонгоно"
+#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
+#~ msgstr "Default expanded, compact icon-only, эсвэл full layout горимоос сонгоно"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:271
-msgid "Choose between inset, floating, or standard sidebar layout"
-msgstr "Inset, floating эсвэл стандарт sidebar layout-аас сонгоно"
+#~ msgid "Choose between inset, floating, or standard sidebar layout"
+#~ msgstr "Inset, floating эсвэл стандарт sidebar layout-аас сонгоно"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:372
-msgid "Choose between left-to-right or right-to-left site direction"
-msgstr "Зүүнээс баруун эсвэл баруунаас зүүн чиглэлийг сонгоно"
+#~ msgid "Choose between left-to-right or right-to-left site direction"
+#~ msgstr "Зүүнээс баруун эсвэл баруунаас зүүн чиглэлийг сонгоно"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:227
-msgid "Choose between system preference, light mode, or dark mode"
-msgstr "Системийн тохиргоо, гэрэл горим, эсвэл харанхуй горимоос сонгоно"
+#~ msgid "Choose between system preference, light mode, or dark mode"
+#~ msgstr "Системийн тохиргоо, гэрэл горим, эсвэл харанхуй горимоос сонгоно"
 
 #: ../../../lib/web/src/components/language-picker.tsx:264
 #: ../../../lib/web/src/components/language-picker.tsx:271
@@ -586,8 +581,8 @@ msgid "Clear all"
 msgstr "Бүгдийг цэвэрлэх"
 
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-msgid "Clear filters"
-msgstr "Шүүлтүүрүүдийг арилгах"
+#~ msgid "Clear filters"
+#~ msgstr "Шүүлтүүрүүдийг арилгах"
 
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
@@ -595,19 +590,19 @@ msgstr "Хайлтыг цэвэрлэх"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-msgid "Clear selection"
-msgstr "Сонголтыг цэвэрлэх"
+#~ msgid "Clear selection"
+#~ msgstr "Сонголтыг цэвэрлэх"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-msgid "Clear selection (Escape)"
-msgstr "Сонголтыг цэвэрлэх (Escape)"
+#~ msgid "Clear selection (Escape)"
+#~ msgstr "Сонголтыг цэвэрлэх (Escape)"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:470
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:473
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Хаах"
@@ -624,8 +619,8 @@ msgstr "Цонхыг хаах"
 msgid "Close navigation"
 msgstr "Навигацийг хаах"
 
-#: ../../../lib/web/src/components/layout/right-panel.tsx:265
-#: ../../../lib/web/src/components/layout/right-panel.tsx:268
+#: ../../../lib/web/src/components/layout/right-panel.tsx:234
+#: ../../../lib/web/src/components/layout/right-panel.tsx:237
 msgid "Close panel"
 msgstr "Самбарыг хаах"
 
@@ -666,8 +661,8 @@ msgid "Comfortable"
 msgstr "Тав тухтай"
 
 #: ../../../lib/web/src/components/coming-soon.tsx:12
-msgid "Coming Soon!"
-msgstr "Удахгүй!"
+#~ msgid "Coming Soon!"
+#~ msgstr "Удахгүй!"
 
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
@@ -678,12 +673,11 @@ msgstr "Командын самбар"
 msgid "Comment actions"
 msgstr "Сэтгэгдлийн үйлдлүүд"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:433
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:445
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:431
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:443
 msgid "Comments"
 msgstr "Сэтгэгдэлүүд"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:316
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Хумисан"
@@ -710,8 +704,8 @@ msgid "Connected"
 msgstr "Холбогдсон"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-msgid "Connected accounts"
-msgstr "Холбогдсон бүртгэлүүд"
+#~ msgid "Connected accounts"
+#~ msgstr "Холбогдсон бүртгэлүүд"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -757,7 +751,7 @@ msgstr "Хуулах"
 msgid "Could not load this document. Please try again later."
 msgstr "Энэ баримт бичгийг ачаалж чадсангүй. Дараа дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:128
 msgid "Couldn't load notifications"
 msgstr "Мэдэгдлийг ачаалж чадсангүй"
 
@@ -809,18 +803,16 @@ msgstr "Одоогийн байршил"
 msgid "Custom"
 msgstr "Захиалгат"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:219
-#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "Харанхуй"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:87
 #: ../../../lib/web/src/components/profile-dropdown.tsx:123
-msgid "Dark mode"
-msgstr "Харанхуй горим"
+#~ msgid "Dark mode"
+#~ msgstr "Харанхуй горим"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:259
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
 msgstr "Өгөгдлийн зөрчил"
 
@@ -833,8 +825,8 @@ msgid "Decline"
 msgstr "Татгалзах"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:311
-msgid "Default"
-msgstr "Үндсэн"
+#~ msgid "Default"
+#~ msgstr "Үндсэн"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
@@ -904,8 +896,8 @@ msgid "Deleting..."
 msgstr "Устгаж байна..."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
-msgid "Desc"
-msgstr "Буурах"
+#~ msgid "Desc"
+#~ msgstr "Буурах"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -931,8 +923,8 @@ msgid "Detect from web browser"
 msgstr "Хөтчөөс илрүүлэх"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:341
-msgid "Direction"
-msgstr "Чиглэл"
+#~ msgid "Direction"
+#~ msgstr "Чиглэл"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
@@ -956,7 +948,7 @@ msgstr "Салгагдсан"
 msgid "Dismiss"
 msgstr "Болих"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:238
+#: ../../../lib/web/src/components/ui/sidebar.tsx:258
 msgid "Displays the mobile sidebar."
 msgstr "Гар утасны хажуугийн самбарыг харуулна."
 
@@ -966,12 +958,12 @@ msgid "Done"
 msgstr "Дууссан"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:454
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:464
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:452
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:462
 msgid "Download"
 msgstr "Татах"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:100
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:98
 msgid "Download failed"
 msgstr "Татаж чадсангүй"
 
@@ -979,7 +971,7 @@ msgstr "Татаж чадсангүй"
 msgid "Duplicates"
 msgstr "Давхардлууд"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:141
+#: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Дислексид зориулсан"
 
@@ -1031,8 +1023,8 @@ msgid "Email code"
 msgstr "Имэйл код"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
-#. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:232
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx:233
 msgid "Empty square {0}{1}"
 msgstr "Хоосон дөрвөлжин {0}{1}"
 
@@ -1056,7 +1048,7 @@ msgstr "Имэйлд ирсэн кодоо оруулна уу"
 msgid "Enter your authenticator code"
 msgstr "Баталгаажуулагчийн кодоо оруулна уу"
 
-#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/components/move-composer.tsx:173
 #: src/features/words/index.tsx:910
 msgid "Exchange"
 msgstr "Солих"
@@ -1066,7 +1058,7 @@ msgstr "Солих"
 msgid "Exchange ({0})"
 msgstr "Солих ({0})"
 
-#: src/features/words/components/move-composer.tsx:168
+#: src/features/words/components/move-composer.tsx:171
 msgid "Exchange ({exchangeCount})"
 msgstr "Солих ({exchangeCount})"
 
@@ -1089,17 +1081,17 @@ msgstr "Хажуугийн самбарыг тэлэх"
 msgid "External URL"
 msgstr "Гадаад URL"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:131
+#: ../../../lib/web/src/lib/preference-utils.ts:124
 msgid "Extra large"
 msgstr "Маш том"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:225
-msgid "Failed to add account"
-msgstr "Бүртгэл нэмж чадсангүй"
+#~ msgid "Failed to add account"
+#~ msgstr "Бүртгэл нэмж чадсангүй"
 
 #: ../../../lib/web/src/components/tag-input.tsx:39
-msgid "Failed to add tag"
-msgstr "Шошго нэмж чадсангүй"
+#~ msgid "Failed to add tag"
+#~ msgstr "Шошго нэмж чадсангүй"
 
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
@@ -1151,11 +1143,11 @@ msgstr "Ачаалж чадсангүй"
 msgid "Failed to load history"
 msgstr "Түүх ачаалж чадсангүй"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:340
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load image"
 msgstr "Зургийг ачаалж чадсангүй"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:340
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Видеог ачаалж чадсангүй"
 
@@ -1168,8 +1160,8 @@ msgid "Failed to post comment"
 msgstr "Сэтгэгдэл нийтэлж чадсангүй"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-msgid "Failed to remove account"
-msgstr "Бүртгэл хасч чадсангүй"
+#~ msgid "Failed to remove account"
+#~ msgstr "Бүртгэл хасч чадсангүй"
 
 #: src/features/words/index.tsx:362
 msgid "Failed to resign"
@@ -1185,8 +1177,8 @@ msgid "Failed to send"
 msgstr "Илгээж чадсангүй"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-msgid "Failed to send verification code"
-msgstr "Баталгаажуулах код илгээж чадсангүй"
+#~ msgid "Failed to send verification code"
+#~ msgstr "Баталгаажуулах код илгээж чадсангүй"
 
 #: src/features/words/index.tsx:339
 msgid "Failed to submit move"
@@ -1207,8 +1199,8 @@ msgid "Files"
 msgstr "Файлууд"
 
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-msgid "Filter..."
-msgstr "Шүүх..."
+#~ msgid "Filter..."
+#~ msgstr "Шүүх..."
 
 #: ../../../lib/web/src/components/restore-banner.tsx:97
 msgid "Finish moving your account"
@@ -1231,8 +1223,8 @@ msgid "Flat"
 msgstr "Хавтгай"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:258
-msgid "Floating"
-msgstr "Хөвөгч"
+#~ msgid "Floating"
+#~ msgstr "Хөвөгч"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
@@ -1249,15 +1241,14 @@ msgstr "Эхлэх"
 #: ../../../lib/web/src/lib/preference-utils.ts:89
 #: ../../../lib/web/src/lib/preference-utils.ts:99
 #: ../../../lib/web/src/lib/preference-utils.ts:110
-#: ../../../lib/web/src/lib/preference-utils.ts:119
-#: ../../../lib/web/src/lib/preference-utils.ts:127
-#: ../../../lib/web/src/lib/preference-utils.ts:138
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
 msgid "From theme"
 msgstr "Загвараас"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:321
-msgid "Full layout"
-msgstr "Бүрэн зохион байгуулалт"
+#~ msgid "Full layout"
+#~ msgstr "Бүрэн зохион байгуулалт"
 
 #: src/features/words/components/new-game.tsx:59
 msgid "Game created"
@@ -1272,31 +1263,30 @@ msgstr "Тоглоом устгагдсан"
 msgid "Game over"
 msgstr "Тоглоом дууссан"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Буцах"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:82
-msgid "Go to first page"
-msgstr "Эхний хуудас руу очих"
+#~ msgid "Go to first page"
+#~ msgstr "Эхний хуудас руу очих"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:128
-msgid "Go to last page"
-msgstr "Сүүлийн хуудас руу очих"
+#~ msgid "Go to last page"
+#~ msgstr "Сүүлийн хуудас руу очих"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:119
-msgid "Go to next page"
-msgstr "Дараагийн хуудас руу очих"
+#~ msgid "Go to next page"
+#~ msgstr "Дараагийн хуудас руу очих"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:106
-msgid "Go to page {pageNumber}"
-msgstr "{pageNumber} хуудас руу очих"
+#~ msgid "Go to page {pageNumber}"
+#~ msgstr "{pageNumber} хуудас руу очих"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:91
-msgid "Go to previous page"
-msgstr "Өмнөх хуудас руу очих"
+#~ msgid "Go to previous page"
+#~ msgstr "Өмнөх хуудас руу очих"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -1316,12 +1306,12 @@ msgid "Has unknown words"
 msgstr "Үл мэдэгдэх үг агуулна"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
-msgid "Hide"
-msgstr "Нуух"
+#~ msgid "Hide"
+#~ msgstr "Нуух"
 
 #: ../../../lib/web/src/components/password-input.tsx:27
-msgid "Hide password"
-msgstr "Нууц үг нуух"
+#~ msgid "Hide password"
+#~ msgstr "Нууц үг нуух"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1343,7 +1333,7 @@ msgid "ID"
 msgstr "ID"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:318
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:316
 msgid "Image viewer: {0}"
 msgstr "Зураг үзэгч: {0}"
 
@@ -1351,7 +1341,7 @@ msgstr "Зураг үзэгч: {0}"
 msgid "Imperial"
 msgstr "Imperial"
 
-#: ../../../lib/web/src/features/access/types.ts:42
+#: ../../../lib/web/src/features/access/types.ts:36
 msgid "Including anonymous users"
 msgstr "Нэргүй хэрэглэгчид оролцуулан"
 
@@ -1364,14 +1354,14 @@ msgid "Initials avatar for {name}"
 msgstr "{name}-ийн товч нэрийн аватар"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:253
-msgid "Inset"
-msgstr "Дотогшоо"
+#~ msgid "Inset"
+#~ msgstr "Дотогшоо"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Сонирхлууд"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:545
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
 msgstr "Огноо хүчингүй"
 
@@ -1381,12 +1371,12 @@ msgid "Invalid move"
 msgstr "Нүүдэл хүчингүй"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
-msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-msgstr "Буруу шошго: зөвхөн үсэг, тоо, зай, зураас, ташуу зураас (дээд тал нь 50 тэмдэгт)"
+#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
+#~ msgstr "Буруу шошго: зөвхөн үсэг, тоо, зай, зураас, ташуу зураас (дээд тал нь 50 тэмдэгт)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-msgid "Invalid verification code"
-msgstr "Баталгаажуулах код хүчингүй"
+#~ msgid "Invalid verification code"
+#~ msgstr "Баталгаажуулах код хүчингүй"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -1405,30 +1395,27 @@ msgid "Language"
 msgstr "Хэл"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:103
-#: ../../../lib/web/src/lib/preference-utils.ts:130
+#: ../../../lib/web/src/lib/preference-utils.ts:123
 msgid "Large"
 msgstr "Том"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:287
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:306
 msgid "Layout"
 msgstr "Зохион байгуулалт"
 
 #: ../../../lib/web/src/components/learn-more.tsx:33
 #: ../../../lib/web/src/components/learn-more.tsx:38
-msgid "Learn more"
-msgstr "Илүү ихийг мэдэх"
+#~ msgid "Learn more"
+#~ msgstr "Илүү ихийг мэдэх"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:355
-msgid "Left to Right"
-msgstr "Зүүнээс баруун"
+#~ msgid "Left to Right"
+#~ msgstr "Зүүнээс баруун"
 
 #: ../../../lib/web/src/components/post-tags.tsx:72
 msgid "Letters, numbers, spaces, and hyphens only"
 msgstr "Зөвхөн үсэг, тоо, зай, зураас"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:214
-#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:14
 msgid "Light"
 msgstr "Цайвар"
@@ -1458,8 +1445,6 @@ msgstr "Контент ачааллаж байна…"
 msgid "Loading..."
 msgstr "Ачаалж байна..."
 
-#: ../../../lib/web/src/components/profile-dropdown.tsx:69
-#: ../../../lib/web/src/components/profile-dropdown.tsx:98
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:26
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:28
 msgid "Log out"
@@ -1477,21 +1462,20 @@ msgstr "Амжилттай гарлаа"
 msgid "Logging out…"
 msgstr "Гарч байна…"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "Ангиллуудыг удирдах"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-msgid "Manage your connected accounts for notifications and services."
-msgstr "Мэдэгдэл, үйлчилгээнд зориулж холбогдсон дансаа удирдана уу."
+#~ msgid "Manage your connected accounts for notifications and services."
+#~ msgstr "Мэдэгдэл, үйлчилгээнд зориулж холбогдсон дансаа удирдана уу."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "Гар аргаар"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:192
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:199
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:224
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:207
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:214
 msgid "Mark all as read"
 msgstr "Бүгдийг уншсан гэж тэмдэглэх"
 
@@ -1561,7 +1545,7 @@ msgid "Name must be 1000 characters or less"
 msgstr "Нэр 1000 тэмдэгтээс хэтрэхгүй байх ёстой"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:53
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:322
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:313
 msgid "Network error"
 msgstr "Сүлжээний алдаа"
 
@@ -1577,8 +1561,8 @@ msgstr "Шинэ"
 msgid "New game"
 msgstr "Шинэ тоглоом"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:527
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:532
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:525
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:530
 msgid "Next image"
 msgstr "Дараагийн зураг"
 
@@ -1599,8 +1583,8 @@ msgid "No comments yet"
 msgstr "Сэтгэгдэл алга"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-msgid "No connected accounts"
-msgstr "Холбогдсон бүртгэл байхгүй"
+#~ msgid "No connected accounts"
+#~ msgstr "Холбогдсон бүртгэл байхгүй"
 
 #: src/features/words/components/new-game.tsx:152
 msgid "No friends found"
@@ -1631,10 +1615,10 @@ msgid "No messages yet"
 msgstr "Зурвас алга"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-msgid "No notifications yet"
-msgstr "Одоогоор мэдэгдэл алга"
+#~ msgid "No notifications yet"
+#~ msgstr "Одоогоор мэдэгдэл алга"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:341
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Хүн олдсонгүй"
@@ -1644,17 +1628,15 @@ msgid "No places found"
 msgstr "Газар олдсонгүй"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:58
-msgid "No profile"
-msgstr "Профайл алга"
+#~ msgid "No profile"
+#~ msgstr "Профайл алга"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
 msgstr "Үр дүн олдсонгүй"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Үр дүн олдсонгүй."
 
@@ -1672,11 +1654,11 @@ msgstr "Хавтан тавиагүй байна"
 msgid "No time zone found."
 msgstr "Цагийн бүс олдсонгүй."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:106
 msgid "No topic record yet — try again after the next notification."
 msgstr "Сэдвийн бичлэг алга — дараагийн мэдэгдлийн дараа дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:124
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "No unread notifications"
 msgstr "Уншаагүй мэдэгдэл алга"
 
@@ -1705,11 +1687,10 @@ msgstr "Үзэлт алга"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:491
 #: ../../../lib/web/src/components/person-picker.tsx:350
 #: ../../../lib/web/src/lib/preference-utils.ts:100
-#: ../../../lib/web/src/lib/preference-utils.ts:120
 msgid "None"
 msgstr "Алга"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:129
+#: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Энгийн"
 
@@ -1731,11 +1712,11 @@ msgstr "Юу ч олдсонгүй"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:236
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:257
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-msgid "Notifications"
-msgstr "Мэдэгдэл"
+#~ msgid "Notifications"
+#~ msgstr "Мэдэгдэл"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:185
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:200
 msgid "Notifications: {0}"
 msgstr "Мэдэгдэл: {0}"
 
@@ -1755,8 +1736,8 @@ msgstr "Уучлаарай! Хуудас олдсонгүй!"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:156
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-msgid "Open account actions"
-msgstr "Бүртгэлийн үйлдлүүдийг нээх"
+#~ msgid "Open account actions"
+#~ msgstr "Бүртгэлийн үйлдлүүдийг нээх"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:199
 #: ../../../lib/web/src/components/layout/nav-group.tsx:204
@@ -1782,8 +1763,8 @@ msgstr "Навигац нээх"
 
 #: ../../../lib/web/src/components/layout/top-nav.tsx:38
 #: ../../../lib/web/src/components/layout/top-nav.tsx:44
-msgid "Open navigation menu"
-msgstr "Навигацийн цэс нээх"
+#~ msgid "Open navigation menu"
+#~ msgstr "Навигацийн цэс нээх"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:105
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:111
@@ -1796,8 +1777,8 @@ msgstr "Сонгосон картыг нээх"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:58
 #: ../../../lib/web/src/components/config-drawer.tsx:66
-msgid "Open theme settings"
-msgstr "Сэдвийн тохиргоо нээх"
+#~ msgid "Open theme settings"
+#~ msgstr "Сэдвийн тохиргоо нээх"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:274
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:279
@@ -1833,8 +1814,8 @@ msgstr "Эзэмшигч"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:43
 #: ../../../lib/web/src/components/data-table/pagination.tsx:71
-msgid "Page {currentPage} of {totalPages}"
-msgstr "{totalPages}-с {currentPage}-р хуудас"
+#~ msgid "Page {currentPage} of {totalPages}"
+#~ msgstr "{totalPages}-с {currentPage}-р хуудас"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
 msgid "Parent"
@@ -1861,8 +1842,8 @@ msgid "Pattern (regex)"
 msgstr "Загвар (regex)"
 
 #: ../../../lib/web/src/components/date-picker.tsx:20
-msgid "Pick a date"
-msgstr "Огноо сонгох"
+#~ msgid "Pick a date"
+#~ msgstr "Огноо сонгох"
 
 #: src/features/words/index.tsx:185
 msgid "Placement out of bounds"
@@ -1874,7 +1855,7 @@ msgstr "Тоглогч {playerNumber}"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:89
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:323
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:314
 msgid "Please check your internet connection and try again."
 msgstr "Интернет холболтоо шалгаад дахин оролдоно уу."
 
@@ -1902,8 +1883,8 @@ msgstr "Нийтлэлүүд"
 msgid "Posts and comments"
 msgstr "Нийтлэл болон сэтгэгдэл"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:511
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:516
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:509
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:514
 msgid "Previous image"
 msgstr "Өмнөх зураг"
 
@@ -1917,8 +1898,8 @@ msgid "Processing…"
 msgstr "Боловсруулж байна…"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
-msgid "Profile"
-msgstr "Профайл"
+#~ msgid "Profile"
+#~ msgstr "Профайл"
 
 #: ../../../lib/web/src/components/person-picker.tsx:200
 msgid "Project members"
@@ -1944,12 +1925,11 @@ msgstr "Энэ серверт нэвтрэх түлхүүрээ дахин бү�
 msgid "Ready"
 msgstr "Бэлэн"
 
-#: src/features/words/components/move-composer.tsx:180
+#: src/features/words/components/move-composer.tsx:183
 #: src/features/words/index.tsx:916
 msgid "Recall"
 msgstr "Эргэн санах"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:220
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
 msgid "Recommended"
 msgstr "Зөвлөмжтэй"
@@ -1987,7 +1967,6 @@ msgstr "Дахин тоглох"
 #: ../../../lib/web/src/components/attachment-composer.tsx:330
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
 #: ../../../lib/web/src/features/access/access-list.tsx:270
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "Хасах"
 
@@ -2016,7 +1995,7 @@ msgstr "Хандалтыг хасах уу?"
 msgid "Remove interest"
 msgstr "Сонирхол хасах"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:666
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:674
 msgid "Remove item"
 msgstr "Зүйл хасах"
 
@@ -2058,17 +2037,17 @@ msgstr "Имэйлийг дахин илгээх"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:87
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-msgid "Reset"
-msgstr "Шинэчлэх"
+#~ msgid "Reset"
+#~ msgstr "Шинэчлэх"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:122
 #: ../../../lib/web/src/components/config-drawer.tsx:127
-msgid "Reset {title}"
-msgstr "{title}-ийг шинэчлэх"
+#~ msgid "Reset {title}"
+#~ msgstr "{title}-ийг шинэчлэх"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:85
-msgid "Reset all settings to default values"
-msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
+#~ msgid "Reset all settings to default values"
+#~ msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
 
 #: src/features/words/index.tsx:835
 #: src/features/words/index.tsx:1016
@@ -2100,8 +2079,8 @@ msgid "Revoke RSS access?"
 msgstr "RSS хандалтыг цуцлах уу?"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
-msgid "Right to Left"
-msgstr "Баруунаас зүүн"
+#~ msgid "Right to Left"
+#~ msgstr "Баруунаас зүүн"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:150
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:168
@@ -2113,8 +2092,8 @@ msgid "Rows group by"
 msgstr "Мөрүүдийг группд хуваах"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:65
-msgid "Rows per page"
-msgstr "Хуудас тутамын мөр"
+#~ msgid "Rows per page"
+#~ msgstr "Хуудас тутамын мөр"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2187,12 +2166,10 @@ msgstr "Энэ үзэмжээр хайх, ажиглах, эрэмбэлэх."
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:255
 #: ../../../lib/web/src/components/inline-entity-search.tsx:63
 #: ../../../lib/web/src/components/person-picker.tsx:324
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Хайх..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:178
 #: ../../../lib/web/src/components/search-entity-page.tsx:201
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
@@ -2202,10 +2179,9 @@ msgstr "Хайж байна..."
 msgid "Select"
 msgstr "Сонгох"
 
-#. placeholder {0}: item.label.toLowerCase()
 #: ../../../lib/web/src/components/config-drawer.tsx:149
-msgid "Select {0}"
-msgstr "{0} сонгох"
+#~ msgid "Select {0}"
+#~ msgstr "{0} сонгох"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:356
 msgid "Select a field"
@@ -2224,8 +2200,8 @@ msgid "Select access rule"
 msgstr "Хандалтын дүрэм сонгох"
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-msgid "Select account"
-msgstr "Данс сонгох"
+#~ msgid "Select account"
+#~ msgstr "Данс сонгох"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
@@ -2240,8 +2216,8 @@ msgid "Select group"
 msgstr "Бүлэг сонгох"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:305
-msgid "Select layout style"
-msgstr "Байршуулалтын хэв сонгох"
+#~ msgid "Select layout style"
+#~ msgstr "Байршуулалтын хэв сонгох"
 
 #: ../../../lib/web/src/components/place-picker.tsx:49
 msgid "Select location"
@@ -2260,25 +2236,25 @@ msgid "Select previous card"
 msgstr "Өмнөх карт сонгох"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:247
-msgid "Select sidebar style"
-msgstr "Хажуугийн самбарын хэв сонгох"
+#~ msgid "Select sidebar style"
+#~ msgstr "Хажуугийн самбарын хэв сонгох"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:349
-msgid "Select site direction"
-msgstr "Сайтын чиглэл сонгох"
+#~ msgid "Select site direction"
+#~ msgstr "Сайтын чиглэл сонгох"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:203
-msgid "Select theme preference"
-msgstr "Загварын тохируулга сонгох"
+#~ msgid "Select theme preference"
+#~ msgstr "Загварын тохируулга сонгох"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:257
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:340
 msgid "Select..."
 msgstr "Сонгох..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-msgid "selected"
-msgstr "сонгогдсон"
+#~ msgid "selected"
+#~ msgstr "сонгогдсон"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2298,12 +2274,12 @@ msgstr "Имэйл илгээх"
 msgid "Send message"
 msgstr "Зурвас илгээх"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:140
+#: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
 msgstr "Сериф"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:279
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:305
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:270
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:296
 msgid "Server error"
 msgstr "Серверийн алдаа"
 
@@ -2312,7 +2288,7 @@ msgstr "Серверийн алдаа"
 msgid "Server rules"
 msgstr "Серверийн дүрэм"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:229
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:220
 msgid "Session expired. Please log in again."
 msgstr "Сессийн хугацаа дууссан. Дахин нэвтэрнэ үү."
 
@@ -2335,8 +2311,8 @@ msgid "Show fields"
 msgstr "Талбаруудыг харуулах"
 
 #: ../../../lib/web/src/components/password-input.tsx:27
-msgid "Show password"
-msgstr "Нууц үг харуулах"
+#~ msgid "Show password"
+#~ msgstr "Нууц үг харуулах"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
@@ -2350,9 +2326,7 @@ msgstr "Нийт {total}-аас {totalShown} харуулж байна"
 msgid "Shuffle rack"
 msgstr "Тавиурыг холих"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:239
-#: ../../../lib/web/src/components/config-drawer.tsx:263
-#: ../../../lib/web/src/components/ui/sidebar.tsx:237
+#: ../../../lib/web/src/components/ui/sidebar.tsx:257
 msgid "Sidebar"
 msgstr "Хажуугийн самбар"
 
@@ -2371,11 +2345,11 @@ msgid "Single line of text only"
 msgstr "Зөвхөн нэг мөр текст"
 
 #: ../../../lib/web/src/components/skip-to-main.tsx:11
-msgid "Skip to Main"
-msgstr "Үндсэн рүү алгасах"
+#~ msgid "Skip to Main"
+#~ msgstr "Үндсэн рүү алгасах"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:101
-#: ../../../lib/web/src/lib/preference-utils.ts:128
+#: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
 msgstr "Жижиг"
 
@@ -2408,14 +2382,14 @@ msgid "Start the discussion by adding the first comment."
 msgstr "Эхний сэтгэгдэл нэмж хэлэлцүүлэг эхлүүл."
 
 #: ../../../lib/web/src/components/coming-soon.tsx:15
-msgid "Stay tuned though!"
-msgstr "Гэхдээ хүлээж бай!"
+#~ msgid "Stay tuned though!"
+#~ msgstr "Гэхдээ хүлээж бай!"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Сэдэв"
 
-#: src/features/words/components/move-composer.tsx:197
+#: src/features/words/components/move-composer.tsx:200
 #: src/features/words/index.tsx:928
 msgid "Submit"
 msgstr "Илгээх"
@@ -2430,7 +2404,6 @@ msgstr "Хариу илгээх"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:66
 #: ../../../lib/web/src/components/recommended-entities.tsx:58
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
 msgstr "Захиалах"
@@ -2444,16 +2417,14 @@ msgid "Switch to view 1-9"
 msgstr "1-9 харагдац руу шилжих"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:107
-#: ../../../lib/web/src/components/config-drawer.tsx:209
-#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:16
-#: ../../../lib/web/src/lib/preference-utils.ts:139
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Систем"
 
 #: ../../../lib/web/src/components/tag-input.tsx:95
-msgid "Tag"
-msgstr "Тэг"
+#~ msgid "Tag"
+#~ msgstr "Тэг"
 
 #: ../../../lib/web/src/components/post-tags.tsx:76
 msgid "Tag already exists"
@@ -2469,8 +2440,8 @@ msgid "Tags"
 msgstr "Тэгүүд"
 
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-msgid "Teams/Apps"
-msgstr "Баг/Программууд"
+#~ msgid "Teams/Apps"
+#~ msgstr "Баг/Программууд"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2503,20 +2474,20 @@ msgid "The server returned a web page instead of data."
 msgstr "Сервер өгөгдлийн оронд вэб хуудас буцаалаа."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-msgid "The site is not available at the moment."
-msgstr "Сайт одоогоор боломжгүй байна."
+#~ msgid "The site is not available at the moment."
+#~ msgstr "Сайт одоогоор боломжгүй байна."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
-msgid "Theme"
-msgstr "Загвар"
+#~ msgid "Theme"
+#~ msgstr "Загвар"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:70
-msgid "Theme Settings"
-msgstr "Загварын тохиргоо"
+#~ msgid "Theme Settings"
+#~ msgstr "Загварын тохиргоо"
 
 #: ../../../lib/web/src/components/coming-soon.tsx:14
-msgid "This page has not been created yet."
-msgstr "Энэ хуудсыг хараахан үүсгээгүй байна."
+#~ msgid "This page has not been created yet."
+#~ msgstr "Энэ хуудсыг хараахан үүсгээгүй байна."
 
 #: src/features/words/index.tsx:1029
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2547,13 +2518,13 @@ msgid "To"
 msgstr "Хаашаа"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
-msgid "Toggle columns"
-msgstr "Багануудыг сэлгэх"
+#~ msgid "Toggle columns"
+#~ msgstr "Багануудыг сэлгэх"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:233
 #: ../../../lib/web/src/components/layout/right-panel.tsx:236
-msgid "Toggle right panel"
-msgstr "Баруун самбарыг солих"
+#~ msgid "Toggle right panel"
+#~ msgstr "Баруун самбарыг солих"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:365
 #: ../../../lib/web/src/components/layout/nav-group.tsx:372
@@ -2562,20 +2533,20 @@ msgstr "Баруун самбарыг солих"
 msgid "Toggle section"
 msgstr "Хэсгийг сэлгэх"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:317
-#: ../../../lib/web/src/components/ui/sidebar.tsx:320
+#: ../../../lib/web/src/components/ui/sidebar.tsx:337
+#: ../../../lib/web/src/components/ui/sidebar.tsx:340
 msgid "Toggle sidebar"
 msgstr "Хажуугийн самбарыг солих"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:332
-#: ../../../lib/web/src/components/ui/sidebar.tsx:335
+#: ../../../lib/web/src/components/ui/sidebar.tsx:352
+#: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle Sidebar"
 msgstr "Хажуугийн самбарыг сэлгэх"
 
 #: ../../../lib/web/src/components/theme-switch.tsx:37
 #: ../../../lib/web/src/components/theme-switch.tsx:41
-msgid "Toggle theme"
-msgstr "Загварыг сэлгэх"
+#~ msgid "Toggle theme"
+#~ msgstr "Загварыг сэлгэх"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2598,14 +2569,12 @@ msgstr "Дээд"
 msgid "Travelling"
 msgstr "Аялж байна"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:194
 #: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
 msgstr "Хайлтын үгсээ засахыг туршаад үз"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:140
 #: ../../../lib/web/src/features/errors/general-error.tsx:180
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Дахин оролдох"
 
@@ -2634,7 +2603,7 @@ msgstr "Хэрэглэгч хайхын тулд бичих"
 msgid "Type to search..."
 msgstr "Хайхын тулд бичих..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:292
 msgid "Unable to connect to remote server"
 msgstr "Алсын сервер рүү холбогдож чадсангүй"
 
@@ -2643,7 +2612,7 @@ msgstr "Алсын сервер рүү холбогдож чадсангүй"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Нэвтрэлт рүү чиглүүлэх боломжгүй. Дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Unassigned"
 msgstr "Хариуцсан хүн оноогоогүй"
 
@@ -2680,8 +2649,8 @@ msgid "Untitled"
 msgstr "Гарчиггүй"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-msgid "Unverified"
-msgstr "Баталгаажаагүй"
+#~ msgid "Unverified"
+#~ msgstr "Баталгаажаагүй"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
@@ -2720,15 +2689,14 @@ msgid "Verification code"
 msgstr "Баталгаажуулах код"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-msgid "Verification code sent"
-msgstr "Баталгаажуулах код илгээгдсэн"
+#~ msgid "Verification code sent"
+#~ msgstr "Баталгаажуулах код илгээгдсэн"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-msgid "Verification failed"
-msgstr "Баталгаажуулалт амжилтгүй"
+#~ msgid "Verification failed"
+#~ msgstr "Баталгаажуулалт амжилтгүй"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:391
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Баталгаажуулах"
@@ -2742,20 +2710,20 @@ msgid "Video thumbnail"
 msgstr "Видеоны жижиг зураг"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:317
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:315
 msgid "Video viewer: {0}"
 msgstr "Видео үзэгч: {0}"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
-msgid "View"
-msgstr "Үзэх"
+#~ msgid "View"
+#~ msgstr "Үзэх"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-msgid "View all"
-msgstr "Бүгдийг үзэх"
+#~ msgid "View all"
+#~ msgstr "Бүгдийг үзэх"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:205
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:213
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:220
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:228
 msgid "View all notifications"
 msgstr "Бүх мэдэгдлүүдийг үзэх"
 
@@ -2786,16 +2754,16 @@ msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify
 msgstr "Бид <0>{0}</0> хаяг руу баталгаажуулах код илгээлээ. Имэйл хаягаа баталгаажуулахын тулд доор кодоо оруулна уу."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-msgid "We'll be back online shortly."
-msgstr "Бид удахгүй буцаж онлайн болно."
+#~ msgid "We'll be back online shortly."
+#~ msgstr "Бид удахгүй буцаж онлайн болно."
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-msgid "We'll notify you when something important happens."
-msgstr "Чухал зүйл болвол бид танд мэдэгдэнэ."
+#~ msgid "We'll notify you when something important happens."
+#~ msgstr "Чухал зүйл болвол бид танд мэдэгдэнэ."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-msgid "Website is under maintenance!"
-msgstr "Вэбсайт засвартай байна!"
+#~ msgid "Website is under maintenance!"
+#~ msgstr "Вэбсайт засвартай байна!"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
@@ -2822,8 +2790,8 @@ msgid "You do not have access to this section."
 msgstr "Та энэ хэсэгт хандах эрхгүй байна."
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
-msgid "You don't have necessary permission <0/>to view this resource."
-msgstr "Танд энэ нөөцийг үзэх <0/>шаардлагатай зөвшөөрөл байхгүй."
+#~ msgid "You don't have necessary permission <0/>to view this resource."
+#~ msgstr "Танд энэ нөөцийг үзэх <0/>шаардлагатай зөвшөөрөл байхгүй."
 
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
@@ -2834,8 +2802,8 @@ msgid "You win!"
 msgstr "Та хождог!"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-msgid "You're all caught up!"
-msgstr "Та бүгдийг үзсэн!"
+#~ msgid "You're all caught up!"
+#~ msgstr "Та бүгдийг үзсэн!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

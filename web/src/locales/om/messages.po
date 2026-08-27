@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:225
+#: ../../../lib/web/src/lib/error-normalizer.ts:215
 msgid "Please check your internet connection and try again."
 msgstr "Maaloo walqunnamtii intarneetii kee mirkaneeffadhuutii irra deebi'ii yaali."
 
@@ -39,22 +39,20 @@ msgstr "[hin qindoofne]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# taphataa} other {# taphattoota}}"
 
-#. placeholder {0}: selectedValues.size
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
-msgid "{0, plural, one {# selected} other {# selected}}"
-msgstr "{0, plural, one {# filatame} other {# filataman}}"
+#~ msgid "{0, plural, one {# selected} other {# selected}}"
+#~ msgstr "{0, plural, one {# filatame} other {# filataman}}"
 
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
-#. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:228
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} {1}{2} irratti, haquuf cuqaasi"
 
-#. placeholder {0}: item.label
 #: ../../../lib/web/src/components/config-drawer.tsx:160
-msgid "{0} option preview"
-msgstr "Durduubbii filannoo {0}"
+#~ msgid "{0} option preview"
+#~ msgstr "Durduubbii filannoo {0}"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -93,8 +91,8 @@ msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#tor} other {#tor}}"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
-#. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:230
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx:231
 msgid "{displayLetter} at {0}{1}"
 msgstr "{displayLetter} {0}{1} irratti"
 
@@ -128,20 +126,20 @@ msgid "{playerCount, plural, one {Playing with # player} other {Playing with # p
 msgstr "{playerCount, plural, one {Taphataa # waliin taphachaa} other {Taphattoota # waliin taphachaa}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-msgstr "{selectedCount, plural, one {{entityName} filatame} other {{manyName} filataman}}"
+#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+#~ msgstr "{selectedCount, plural, one {{entityName} filatame} other {{manyName} filataman}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-msgstr "{selectedCount, plural, one {# {entityName} filatame. Gabatee gochawwan waliigalaa ni argama.} other {# {manyName} filataman. Gabatee gochawwan waliigalaa ni argama.}}"
+#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+#~ msgstr "{selectedCount, plural, one {# {entityName} filatame. Gabatee gochawwan waliigalaa ni argama.} other {# {manyName} filataman. Gabatee gochawwan waliigalaa ni argama.}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-msgstr "{selectedCount, plural, one {# filatame} other {# filatame}}"
+#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+#~ msgstr "{selectedCount, plural, one {# filatame} other {# filatame}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-msgstr "{selectedCount, plural, one {Gochawwan waliigalaa {entityName} # filatameef} other {Gochawwan waliigalaa {manyName} # filatamaniif}}"
+#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+#~ msgstr "{selectedCount, plural, one {Gochawwan waliigalaa {entityName} # filatameef} other {Gochawwan waliigalaa {manyName} # filatamaniif}}"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
@@ -194,34 +192,34 @@ msgid "Access denied"
 msgstr "Seensi dhorkamee jira"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
-msgid "Access Forbidden"
-msgstr "Seensi Dhorkamaadha"
+#~ msgid "Access Forbidden"
+#~ msgstr "Seensi Dhorkamaadha"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Sadarkaa seensaa"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-msgid "Account added"
-msgstr "Akkaawuntiin dabalame"
+#~ msgid "Account added"
+#~ msgstr "Akkaawuntiin dabalame"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-msgid "Account removed"
-msgstr "Akkaawuntiin haqame"
+#~ msgid "Account removed"
+#~ msgstr "Akkaawuntiin haqame"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "Gosa akkaawuntii"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-msgid "Account verified"
-msgstr "Akkaawuntiin mirkanaa'e"
+#~ msgid "Account verified"
+#~ msgstr "Akkaawuntiin mirkanaa'e"
 
 #: src/components/layout/words-layout.tsx:61
 msgid "Active games"
 msgstr "Taphoota Hojii Irra Jiran"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:712
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:209
 msgid "Add"
@@ -244,19 +242,18 @@ msgid "Add access"
 msgstr "Seensa dabali"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:132
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:288
 msgid "Add account"
 msgstr "Akkaawuntii dabali"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-msgid "Add an account to receive notifications and use services."
-msgstr "Akkaawuntii dabali beeksisa fi tajaajila fayyadamuuf."
+#~ msgid "Add an account to receive notifications and use services."
+#~ msgstr "Akkaawuntii dabali beeksisa fi tajaajila fayyadamuuf."
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "Ibsa dabaluu"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:682
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:690
 msgid "Add checklist item"
 msgstr "Tarree shakkii dabali"
 
@@ -273,7 +270,7 @@ msgstr "Michoota dabali"
 msgid "Add friends in the People app to start playing"
 msgstr "Tapha eegaluuf appii Namootaa keessatti michoota dabali"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:700
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:708
 msgid "Add item..."
 msgstr "Wanta dabali..."
 
@@ -282,8 +279,8 @@ msgid "Add link"
 msgstr "Hidhaa dabali"
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-msgid "Add new account"
-msgstr "Akkaawuntii haaraa dabali"
+#~ msgid "Add new account"
+#~ msgstr "Akkaawuntii haaraa dabali"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:215
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:220
@@ -294,13 +291,12 @@ msgid "Add option"
 msgstr "Filannoo dabali"
 
 #: ../../../lib/web/src/components/post-tags.tsx:137
-#: ../../../lib/web/src/components/tag-input.tsx:40
 msgid "Add tag..."
 msgstr "Tag dabali..."
 
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-msgid "Add team/app"
-msgstr "Garee/appii dabali"
+#~ msgid "Add team/app"
+#~ msgstr "Garee/appii dabali"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -318,16 +314,16 @@ msgid "Adding..."
 msgstr "Dabalaa jira..."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:72
-msgid "Adjust the appearance and layout to suit your preferences."
-msgstr "Mul'ataa fi caasaa fedhii kee waliin haa wal simu sirreessi."
+#~ msgid "Adjust the appearance and layout to suit your preferences."
+#~ msgstr "Mul'ataa fi caasaa fedhii kee waliin haa wal simu sirreessi."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "AI"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-msgid "All"
-msgstr "Hunda"
+#~ msgid "All"
+#~ msgstr "Hunda"
 
 #. placeholder {0}: entityLabel.toLowerCase()
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
@@ -342,7 +338,7 @@ msgstr "Akkaataa kana taasifachuu hayyami"
 msgid "An error occurred"
 msgstr "Dogoggorri uumame"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:275
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:266
 msgid "An unexpected error occurred"
 msgstr "Dogoggorri hin eegamne uumame"
 
@@ -351,11 +347,11 @@ msgid "Android push"
 msgstr "Push Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:45
-#: ../../../lib/web/src/features/access/types.ts:42
+#: ../../../lib/web/src/features/access/types.ts:36
 msgid "Anyone"
 msgstr "Nama kamiyyuu"
 
-#: ../../../lib/web/src/features/access/types.ts:41
+#: ../../../lib/web/src/features/access/types.ts:35
 msgid "Anyone who is logged in"
 msgstr "Namni seene kamiyyuu"
 
@@ -385,8 +381,8 @@ msgid "Are you sure you want to resign?"
 msgstr "Of harkatti kennuu mirkanaa'oo dha?"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:59
-msgid "Asc"
-msgstr "Olka'aa"
+#~ msgid "Asc"
+#~ msgstr "Olka'aa"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -401,7 +397,7 @@ msgid "Attach reply files"
 msgstr "Faayiloota deebii hidhi"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:46
-#: ../../../lib/web/src/features/access/types.ts:41
+#: ../../../lib/web/src/features/access/types.ts:35
 msgid "Authenticated users"
 msgstr "Fayyadamtoota mirkanaa'an"
 
@@ -425,7 +421,6 @@ msgstr "Fakkii {name}"
 msgid "Back"
 msgstr "Duuba"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:28
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:28
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
@@ -444,8 +439,8 @@ msgstr "Tile duwwaa"
 msgid "Blocked by"
 msgstr "Kan dhorkame"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:227
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:237
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:242
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:252
 msgid "Blocked navigation to untrusted link"
 msgstr "Karaa hin amanamne irraa qajeelfamni dhorkame"
 
@@ -485,7 +480,7 @@ msgstr "Beeksisa barreessaa"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/words/components/move-composer.tsx:154
+#: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:189
 #: src/features/words/index.tsx:904
 #: src/features/words/index.tsx:1081
@@ -509,12 +504,12 @@ msgstr "Deebii haquu"
 msgid "Caption"
 msgstr "Ibsa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:97
+#: ../../../lib/web/src/components/notification-category-button.tsx:99
 msgid "Category for these notifications"
 msgstr "Beeksisota kanaaf ramaddii"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:78
-#: ../../../lib/web/src/components/notification-category-button.tsx:89
+#: ../../../lib/web/src/components/notification-category-button.tsx:80
+#: ../../../lib/web/src/components/notification-category-button.tsx:91
 msgid "Change notification category"
 msgstr "Ramaddii beeksisaa jijjiiri"
 
@@ -524,8 +519,8 @@ msgid "Chat"
 msgstr "Chaattii"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-msgid "Check \"All\" to see your past notifications."
-msgstr "Beeksisawwan darban ilaaluuf \"Hunda\" filadhu."
+#~ msgid "Check \"All\" to see your past notifications."
+#~ msgstr "Beeksisawwan darban ilaaluuf \"Hunda\" filadhu."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -548,20 +543,20 @@ msgid "Choose a letter"
 msgstr "Qubee filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
-msgid "Choose between default expanded, compact icon-only, or full layout mode"
-msgstr "Akaakuu jechaa kan duraan baballate, dhokkachaa mallattoo qofa, ykn caasaa guutuu gidduu filadhu"
+#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
+#~ msgstr "Akaakuu jechaa kan duraan baballate, dhokkachaa mallattoo qofa, ykn caasaa guutuu gidduu filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:271
-msgid "Choose between inset, floating, or standard sidebar layout"
-msgstr "Caasaa cinaa kan keessa galame, ofkalaa, ykn idilee gidduu filadhu"
+#~ msgid "Choose between inset, floating, or standard sidebar layout"
+#~ msgstr "Caasaa cinaa kan keessa galame, ofkalaa, ykn idilee gidduu filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:372
-msgid "Choose between left-to-right or right-to-left site direction"
-msgstr "Kallatti weebsaayitii bitaa-irraa-mirgatti ykn mirgaa-irraa-bitaa gidduu filadhu"
+#~ msgid "Choose between left-to-right or right-to-left site direction"
+#~ msgstr "Kallatti weebsaayitii bitaa-irraa-mirgatti ykn mirgaa-irraa-bitaa gidduu filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:227
-msgid "Choose between system preference, light mode, or dark mode"
-msgstr "Filannoo sirnaa, ifaan, ykn dukkanaan gidduu filadhu"
+#~ msgid "Choose between system preference, light mode, or dark mode"
+#~ msgstr "Filannoo sirnaa, ifaan, ykn dukkanaan gidduu filadhu"
 
 #: ../../../lib/web/src/components/language-picker.tsx:264
 #: ../../../lib/web/src/components/language-picker.tsx:271
@@ -586,8 +581,8 @@ msgid "Clear all"
 msgstr "Hunda cilliisi"
 
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-msgid "Clear filters"
-msgstr "Calalii cilliisi"
+#~ msgid "Clear filters"
+#~ msgstr "Calalii cilliisi"
 
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
@@ -595,19 +590,19 @@ msgstr "Barbaadii cilliisi"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-msgid "Clear selection"
-msgstr "Filannoo cilliisi"
+#~ msgid "Clear selection"
+#~ msgstr "Filannoo cilliisi"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-msgid "Clear selection (Escape)"
-msgstr "Filannoo cilliisi (Escape)"
+#~ msgid "Clear selection (Escape)"
+#~ msgstr "Filannoo cilliisi (Escape)"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:470
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:473
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Cufi"
@@ -624,8 +619,8 @@ msgstr "Marii cufi"
 msgid "Close navigation"
 msgstr "Naannoo cufi"
 
-#: ../../../lib/web/src/components/layout/right-panel.tsx:265
-#: ../../../lib/web/src/components/layout/right-panel.tsx:268
+#: ../../../lib/web/src/components/layout/right-panel.tsx:234
+#: ../../../lib/web/src/components/layout/right-panel.tsx:237
 msgid "Close panel"
 msgstr "Panela cufuu"
 
@@ -666,8 +661,8 @@ msgid "Comfortable"
 msgstr "Bal'aa"
 
 #: ../../../lib/web/src/components/coming-soon.tsx:12
-msgid "Coming Soon!"
-msgstr "Dhihoo Dhufuuf!"
+#~ msgid "Coming Soon!"
+#~ msgstr "Dhihoo Dhufuuf!"
 
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
@@ -678,12 +673,11 @@ msgstr "Paaleetii ajaja"
 msgid "Comment actions"
 msgstr "Gocha yaadaa"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:433
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:445
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:431
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:443
 msgid "Comments"
 msgstr "Yaadawwan"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:316
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Compact"
@@ -710,8 +704,8 @@ msgid "Connected"
 msgstr "Walitti hidhame"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-msgid "Connected accounts"
-msgstr "Akkaawuntiilee walitti hidhaman"
+#~ msgid "Connected accounts"
+#~ msgstr "Akkaawuntiilee walitti hidhaman"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -757,7 +751,7 @@ msgstr "Garagalchi"
 msgid "Could not load this document. Please try again later."
 msgstr "Galmee kana fe'uu hin dandeenye. Booda yaali."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:128
 msgid "Couldn't load notifications"
 msgstr "Beeksisawwan fe'uu hin danda'amne"
 
@@ -809,18 +803,16 @@ msgstr "Bakka ammaa"
 msgid "Custom"
 msgstr "Mataa keetiin"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:219
-#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "Dukkanaa"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:87
 #: ../../../lib/web/src/components/profile-dropdown.tsx:123
-msgid "Dark mode"
-msgstr "Akkaataa dukkanaa"
+#~ msgid "Dark mode"
+#~ msgstr "Akkaataa dukkanaa"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:259
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
 msgstr "Walitti bu'iinsa deetaa"
 
@@ -833,8 +825,8 @@ msgid "Decline"
 msgstr "Dhiisi"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:311
-msgid "Default"
-msgstr "Idilee"
+#~ msgid "Default"
+#~ msgstr "Idilee"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
@@ -904,8 +896,8 @@ msgid "Deleting..."
 msgstr "Haqaa jira..."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
-msgid "Desc"
-msgstr "Gadii"
+#~ msgid "Desc"
+#~ msgstr "Gadii"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -931,8 +923,8 @@ msgid "Detect from web browser"
 msgstr "Weeb biraawsarii irraa argi"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:341
-msgid "Direction"
-msgstr "Kallatti"
+#~ msgid "Direction"
+#~ msgstr "Kallatti"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
@@ -956,7 +948,7 @@ msgstr "Hidhaan citeera"
 msgid "Dismiss"
 msgstr "Dhiisi"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:238
+#: ../../../lib/web/src/components/ui/sidebar.tsx:258
 msgid "Displays the mobile sidebar."
 msgstr "Cinaa moobaayilaa mul'isa."
 
@@ -966,12 +958,12 @@ msgid "Done"
 msgstr "Xumurame"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:454
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:464
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:452
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:462
 msgid "Download"
 msgstr "Buufadhu"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:100
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:98
 msgid "Download failed"
 msgstr "Buufachuun hin milkoofne"
 
@@ -979,7 +971,7 @@ msgstr "Buufachuun hin milkoofne"
 msgid "Duplicates"
 msgstr "Lameetfamtoota"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:141
+#: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Dyslexiyaa Walitti Dhufu"
 
@@ -1031,8 +1023,8 @@ msgid "Email code"
 msgstr "Koodii imeelii"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
-#. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:232
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx:233
 msgid "Empty square {0}{1}"
 msgstr "Iddoo duwwaa {0}{1}"
 
@@ -1056,7 +1048,7 @@ msgstr "Koodii imeelii kee irraa galchi"
 msgid "Enter your authenticator code"
 msgstr "Koodii mirkaneessaa kee galchi"
 
-#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/components/move-composer.tsx:173
 #: src/features/words/index.tsx:910
 msgid "Exchange"
 msgstr "Jijjiirraa"
@@ -1066,7 +1058,7 @@ msgstr "Jijjiirraa"
 msgid "Exchange ({0})"
 msgstr "Jijjiirraa ({0})"
 
-#: src/features/words/components/move-composer.tsx:168
+#: src/features/words/components/move-composer.tsx:171
 msgid "Exchange ({exchangeCount})"
 msgstr "Jijjiirraa ({exchangeCount})"
 
@@ -1089,17 +1081,17 @@ msgstr "Sidebar baldhisi"
 msgid "External URL"
 msgstr "URL alaa"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:131
+#: ../../../lib/web/src/lib/preference-utils.ts:124
 msgid "Extra large"
 msgstr "Guddaa Akkaan"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:225
-msgid "Failed to add account"
-msgstr "Akkaawuntii dabaluu hin dandeenye"
+#~ msgid "Failed to add account"
+#~ msgstr "Akkaawuntii dabaluu hin dandeenye"
 
 #: ../../../lib/web/src/components/tag-input.tsx:39
-msgid "Failed to add tag"
-msgstr "Mallattoo dabaluu hin dandeenye"
+#~ msgid "Failed to add tag"
+#~ msgstr "Mallattoo dabaluu hin dandeenye"
 
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
@@ -1151,11 +1143,11 @@ msgstr "Fe'achuu hin dandeenye"
 msgid "Failed to load history"
 msgstr "Seenaa fe'achuu hin dandeenye"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:340
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load image"
 msgstr "Fakkii fe'uu hin dandeenye"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:340
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Viidiyoo fe'uu hin dandeenye"
 
@@ -1168,8 +1160,8 @@ msgid "Failed to post comment"
 msgstr "Yaada maxxansuu hin dandeenye"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-msgid "Failed to remove account"
-msgstr "Akkaawuntii haquu hin dandeenye"
+#~ msgid "Failed to remove account"
+#~ msgstr "Akkaawuntii haquu hin dandeenye"
 
 #: src/features/words/index.tsx:362
 msgid "Failed to resign"
@@ -1185,8 +1177,8 @@ msgid "Failed to send"
 msgstr "Ergamuu hin dandeenye"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-msgid "Failed to send verification code"
-msgstr "Koodii mirkanaa ergamuu hin dandeenye"
+#~ msgid "Failed to send verification code"
+#~ msgstr "Koodii mirkanaa ergamuu hin dandeenye"
 
 #: src/features/words/index.tsx:339
 msgid "Failed to submit move"
@@ -1207,8 +1199,8 @@ msgid "Files"
 msgstr "Faayilota"
 
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-msgid "Filter..."
-msgstr "Gingilchaa..."
+#~ msgid "Filter..."
+#~ msgstr "Gingilchaa..."
 
 #: ../../../lib/web/src/components/restore-banner.tsx:97
 msgid "Finish moving your account"
@@ -1231,8 +1223,8 @@ msgid "Flat"
 msgstr "Diriiraa"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:258
-msgid "Floating"
-msgstr "Bilisa"
+#~ msgid "Floating"
+#~ msgstr "Bilisa"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
@@ -1249,15 +1241,14 @@ msgstr "Irraa"
 #: ../../../lib/web/src/lib/preference-utils.ts:89
 #: ../../../lib/web/src/lib/preference-utils.ts:99
 #: ../../../lib/web/src/lib/preference-utils.ts:110
-#: ../../../lib/web/src/lib/preference-utils.ts:119
-#: ../../../lib/web/src/lib/preference-utils.ts:127
-#: ../../../lib/web/src/lib/preference-utils.ts:138
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
 msgid "From theme"
 msgstr "Akeeka irraa"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:321
-msgid "Full layout"
-msgstr "Bocii guutuu"
+#~ msgid "Full layout"
+#~ msgstr "Bocii guutuu"
 
 #: src/features/words/components/new-game.tsx:59
 msgid "Game created"
@@ -1272,31 +1263,30 @@ msgstr "Taphichi haqame"
 msgid "Game over"
 msgstr "Taphichi xumurame"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Duubatti deebi’uu"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:82
-msgid "Go to first page"
-msgstr "Fuula jalqabaa deemi"
+#~ msgid "Go to first page"
+#~ msgstr "Fuula jalqabaa deemi"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:128
-msgid "Go to last page"
-msgstr "Fuula dhumaa deemi"
+#~ msgid "Go to last page"
+#~ msgstr "Fuula dhumaa deemi"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:119
-msgid "Go to next page"
-msgstr "Fuula itti aanu deemi"
+#~ msgid "Go to next page"
+#~ msgstr "Fuula itti aanu deemi"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:106
-msgid "Go to page {pageNumber}"
-msgstr "Fuula {pageNumber} deemuu"
+#~ msgid "Go to page {pageNumber}"
+#~ msgstr "Fuula {pageNumber} deemuu"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:91
-msgid "Go to previous page"
-msgstr "Fuula duraa deemi"
+#~ msgid "Go to previous page"
+#~ msgstr "Fuula duraa deemi"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -1316,12 +1306,12 @@ msgid "Has unknown words"
 msgstr "Jechoota hin beekamne qaba"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
-msgid "Hide"
-msgstr "Dhoksi"
+#~ msgid "Hide"
+#~ msgstr "Dhoksi"
 
 #: ../../../lib/web/src/components/password-input.tsx:27
-msgid "Hide password"
-msgstr "Jecha darbii dhoksi"
+#~ msgid "Hide password"
+#~ msgstr "Jecha darbii dhoksi"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1343,7 +1333,7 @@ msgid "ID"
 msgstr "ID"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:318
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:316
 msgid "Image viewer: {0}"
 msgstr "Ilaaltuu fakkii: {0}"
 
@@ -1351,7 +1341,7 @@ msgstr "Ilaaltuu fakkii: {0}"
 msgid "Imperial"
 msgstr "Imperial"
 
-#: ../../../lib/web/src/features/access/types.ts:42
+#: ../../../lib/web/src/features/access/types.ts:36
 msgid "Including anonymous users"
 msgstr "Fayyadamtoota maqaa hin qabne dabalatee"
 
@@ -1364,14 +1354,14 @@ msgid "Initials avatar for {name}"
 msgstr "Fakkii qubee jalqabaa {name}"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:253
-msgid "Inset"
-msgstr "Inset"
+#~ msgid "Inset"
+#~ msgstr "Inset"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Fedhota"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:545
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
 msgstr "Guyyaa sirrii hin taane"
 
@@ -1381,12 +1371,12 @@ msgid "Invalid move"
 msgstr "Sochii sirrii hin taane"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
-msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-msgstr "Mallattoo sirrii hin taane: qubee, lakkoofsa, iddoo duwwaa, sararaa fi slaash qofa (ol'aanaan arfii 50)"
+#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
+#~ msgstr "Mallattoo sirrii hin taane: qubee, lakkoofsa, iddoo duwwaa, sararaa fi slaash qofa (ol'aanaan arfii 50)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-msgid "Invalid verification code"
-msgstr "Koodii mirkanaa sirrii hin taane"
+#~ msgid "Invalid verification code"
+#~ msgstr "Koodii mirkanaa sirrii hin taane"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -1405,30 +1395,27 @@ msgid "Language"
 msgstr "Afaan"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:103
-#: ../../../lib/web/src/lib/preference-utils.ts:130
+#: ../../../lib/web/src/lib/preference-utils.ts:123
 msgid "Large"
 msgstr "Guddaa"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:287
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:306
 msgid "Layout"
 msgstr "Bocii"
 
 #: ../../../lib/web/src/components/learn-more.tsx:33
 #: ../../../lib/web/src/components/learn-more.tsx:38
-msgid "Learn more"
-msgstr "Caalaatti baradhu"
+#~ msgid "Learn more"
+#~ msgstr "Caalaatti baradhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:355
-msgid "Left to Right"
-msgstr "Bitaa Mirgatti"
+#~ msgid "Left to Right"
+#~ msgstr "Bitaa Mirgatti"
 
 #: ../../../lib/web/src/components/post-tags.tsx:72
 msgid "Letters, numbers, spaces, and hyphens only"
 msgstr "Qubee, lakkoofsa, iddoo duwwaa fi sarara qofa"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:214
-#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:14
 msgid "Light"
 msgstr "Ifaa"
@@ -1458,8 +1445,6 @@ msgstr "Qabiyyee fe’aa jira…"
 msgid "Loading..."
 msgstr "Fe'aa jiraa..."
 
-#: ../../../lib/web/src/components/profile-dropdown.tsx:69
-#: ../../../lib/web/src/components/profile-dropdown.tsx:98
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:26
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:28
 msgid "Log out"
@@ -1477,21 +1462,20 @@ msgstr "Milkaa'inaan ba'e"
 msgid "Logging out…"
 msgstr "Ba'aa jiraa…"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "Ramaddilee bulchi"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-msgid "Manage your connected accounts for notifications and services."
-msgstr "Beeksisaa fi tajaajilaaf herregawwan walqabatan kee bulchi."
+#~ msgid "Manage your connected accounts for notifications and services."
+#~ msgstr "Beeksisaa fi tajaajilaaf herregawwan walqabatan kee bulchi."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "Harkaan"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:192
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:199
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:224
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:207
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:214
 msgid "Mark all as read"
 msgstr "Hunda dubbifame jechuu mallatteessi"
 
@@ -1561,7 +1545,7 @@ msgid "Name must be 1000 characters or less"
 msgstr "Maqaan arfiilee 1000 ykn isaa gadi ta'uu qaba"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:53
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:322
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:313
 msgid "Network error"
 msgstr "Dogoggora networkii"
 
@@ -1577,8 +1561,8 @@ msgstr "Haaraa"
 msgid "New game"
 msgstr "Taphaa haaraa"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:527
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:532
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:525
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:530
 msgid "Next image"
 msgstr "Suuraa itti aanu"
 
@@ -1599,8 +1583,8 @@ msgid "No comments yet"
 msgstr "Hanga ammaatti yaadni hin jiru"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-msgid "No connected accounts"
-msgstr "Akkaawuntiiwwan walqabsiifaman hin jiran"
+#~ msgid "No connected accounts"
+#~ msgstr "Akkaawuntiiwwan walqabsiifaman hin jiran"
 
 #: src/features/words/components/new-game.tsx:152
 msgid "No friends found"
@@ -1631,10 +1615,10 @@ msgid "No messages yet"
 msgstr "Hanga ammaatti ergaawwan hin jiran"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-msgid "No notifications yet"
-msgstr "Hanga ammaatti beeksisni hin jiru"
+#~ msgid "No notifications yet"
+#~ msgstr "Hanga ammaatti beeksisni hin jiru"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:341
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Namoonni hin argamne"
@@ -1644,17 +1628,15 @@ msgid "No places found"
 msgstr "Bakkeewwan hin argamne"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:58
-msgid "No profile"
-msgstr "Piroofaayiliin hin jiru"
+#~ msgid "No profile"
+#~ msgstr "Piroofaayiliin hin jiru"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
 msgstr "Bu'aan hin argamne"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Bu'aan hin argamne."
 
@@ -1672,11 +1654,11 @@ msgstr "Taayiliin hin kaa'amne"
 msgid "No time zone found."
 msgstr "Aanaan sa'aatii hin argamne."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:106
 msgid "No topic record yet — try again after the next notification."
 msgstr "Hanga ammaatti galmeen mata duree hin jiru — beeksisa itti aanu booda irra deebi'ii yaali."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:124
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "No unread notifications"
 msgstr "Beeksisoonni hin dubbifamne hin jiran"
 
@@ -1705,11 +1687,10 @@ msgstr "Mul'annoon hin jiru"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:491
 #: ../../../lib/web/src/components/person-picker.tsx:350
 #: ../../../lib/web/src/lib/preference-utils.ts:100
-#: ../../../lib/web/src/lib/preference-utils.ts:120
 msgid "None"
 msgstr "Tokko illee"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:129
+#: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Idilee"
 
@@ -1731,11 +1712,11 @@ msgstr "Wanti argame hin jiru"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:236
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:257
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-msgid "Notifications"
-msgstr "Beeksisaalee"
+#~ msgid "Notifications"
+#~ msgstr "Beeksisaalee"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:185
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:200
 msgid "Notifications: {0}"
 msgstr "Beeksisawwan: {0}"
 
@@ -1755,8 +1736,8 @@ msgstr "Hoo! Fuulli hin argamne!"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:156
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-msgid "Open account actions"
-msgstr "Sochiiwwan akkaawuntii bani"
+#~ msgid "Open account actions"
+#~ msgstr "Sochiiwwan akkaawuntii bani"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:199
 #: ../../../lib/web/src/components/layout/nav-group.tsx:204
@@ -1782,8 +1763,8 @@ msgstr "Naviigeeshinii bani"
 
 #: ../../../lib/web/src/components/layout/top-nav.tsx:38
 #: ../../../lib/web/src/components/layout/top-nav.tsx:44
-msgid "Open navigation menu"
-msgstr "Menyuu naviigeeshinii bani"
+#~ msgid "Open navigation menu"
+#~ msgstr "Menyuu naviigeeshinii bani"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:105
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:111
@@ -1796,8 +1777,8 @@ msgstr "Kaardii filatame bani"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:58
 #: ../../../lib/web/src/components/config-drawer.tsx:66
-msgid "Open theme settings"
-msgstr "Qindaa'inoota mata duree bani"
+#~ msgid "Open theme settings"
+#~ msgstr "Qindaa'inoota mata duree bani"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:274
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:279
@@ -1833,8 +1814,8 @@ msgstr "Abbaa qabeenyaa"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:43
 #: ../../../lib/web/src/components/data-table/pagination.tsx:71
-msgid "Page {currentPage} of {totalPages}"
-msgstr "Fuula {currentPage} kan {totalPages}"
+#~ msgid "Page {currentPage} of {totalPages}"
+#~ msgstr "Fuula {currentPage} kan {totalPages}"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
 msgid "Parent"
@@ -1861,8 +1842,8 @@ msgid "Pattern (regex)"
 msgstr "Bocaa (regex)"
 
 #: ../../../lib/web/src/components/date-picker.tsx:20
-msgid "Pick a date"
-msgstr "Guyyaa filadhu"
+#~ msgid "Pick a date"
+#~ msgstr "Guyyaa filadhu"
 
 #: src/features/words/index.tsx:185
 msgid "Placement out of bounds"
@@ -1874,7 +1855,7 @@ msgstr "Taphataa {playerNumber}"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:89
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:323
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:314
 msgid "Please check your internet connection and try again."
 msgstr "Maaloo walqunnamtii intarneetii kee mirkaneeffadhuutii irra deebi'ii yaali."
 
@@ -1902,8 +1883,8 @@ msgstr "Maxxansoota"
 msgid "Posts and comments"
 msgstr "Maxxansoota fi yaadawwan"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:511
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:516
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:509
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:514
 msgid "Previous image"
 msgstr "Suuraa duraa"
 
@@ -1917,8 +1898,8 @@ msgid "Processing…"
 msgstr "Adeemsifamaa jira…"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
-msgid "Profile"
-msgstr "Piroofaayilii"
+#~ msgid "Profile"
+#~ msgstr "Piroofaayilii"
 
 #: ../../../lib/web/src/components/person-picker.tsx:200
 msgid "Project members"
@@ -1944,12 +1925,11 @@ msgstr "Furtuuwwan seensaa kee sajoo kana irratti irra deebi'ii galmeessi"
 msgid "Ready"
 msgstr "Qophii"
 
-#: src/features/words/components/move-composer.tsx:180
+#: src/features/words/components/move-composer.tsx:183
 #: src/features/words/index.tsx:916
 msgid "Recall"
 msgstr "Yaadachisuu"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:220
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
 msgid "Recommended"
 msgstr "Yaadachifame"
@@ -1987,7 +1967,6 @@ msgstr "Walqixxummaa deebi'ee"
 #: ../../../lib/web/src/components/attachment-composer.tsx:330
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
 #: ../../../lib/web/src/features/access/access-list.tsx:270
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "Haqi"
 
@@ -2016,7 +1995,7 @@ msgstr "Itti seenumsa haquuf?"
 msgid "Remove interest"
 msgstr "Dantaa haqi"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:666
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:674
 msgid "Remove item"
 msgstr "Meeshaa haqi"
 
@@ -2058,17 +2037,17 @@ msgstr "Imeelii irra deebi'ii ergi"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:87
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-msgid "Reset"
-msgstr "Haaromsi"
+#~ msgid "Reset"
+#~ msgstr "Haaromsi"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:122
 #: ../../../lib/web/src/components/config-drawer.tsx:127
-msgid "Reset {title}"
-msgstr "{title} haaromsi"
+#~ msgid "Reset {title}"
+#~ msgstr "{title} haaromsi"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:85
-msgid "Reset all settings to default values"
-msgstr "Qindaa'inoota hunda gara durtiitti deebisi"
+#~ msgid "Reset all settings to default values"
+#~ msgstr "Qindaa'inoota hunda gara durtiitti deebisi"
 
 #: src/features/words/index.tsx:835
 #: src/features/words/index.tsx:1016
@@ -2100,8 +2079,8 @@ msgid "Revoke RSS access?"
 msgstr "Argaa RSS haqamuu?"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
-msgid "Right to Left"
-msgstr "Mirgaa Bitaatti"
+#~ msgid "Right to Left"
+#~ msgstr "Mirgaa Bitaatti"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:150
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:168
@@ -2113,8 +2092,8 @@ msgid "Rows group by"
 msgstr "Tarjaalee garreessi"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:65
-msgid "Rows per page"
-msgstr "Fuula tokko keessa tarjaalee"
+#~ msgid "Rows per page"
+#~ msgstr "Fuula tokko keessa tarjaalee"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2187,12 +2166,10 @@ msgstr "Mul'annoo kana barbaadi, ilaali, fi tartiibessi."
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:255
 #: ../../../lib/web/src/components/inline-entity-search.tsx:63
 #: ../../../lib/web/src/components/person-picker.tsx:324
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Barbaadi..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:178
 #: ../../../lib/web/src/components/search-entity-page.tsx:201
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
@@ -2202,10 +2179,9 @@ msgstr "Barbaadaa jira..."
 msgid "Select"
 msgstr "Fili"
 
-#. placeholder {0}: item.label.toLowerCase()
 #: ../../../lib/web/src/components/config-drawer.tsx:149
-msgid "Select {0}"
-msgstr "{0} filadhu"
+#~ msgid "Select {0}"
+#~ msgstr "{0} filadhu"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:356
 msgid "Select a field"
@@ -2224,8 +2200,8 @@ msgid "Select access rule"
 msgstr "Seera itti seenumsaa fili"
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-msgid "Select account"
-msgstr "Herrega filadhu"
+#~ msgid "Select account"
+#~ msgstr "Herrega filadhu"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
@@ -2240,8 +2216,8 @@ msgid "Select group"
 msgstr "Garee filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:305
-msgid "Select layout style"
-msgstr "Akkaataa qindaa'inaa filadhu"
+#~ msgid "Select layout style"
+#~ msgstr "Akkaataa qindaa'inaa filadhu"
 
 #: ../../../lib/web/src/components/place-picker.tsx:49
 msgid "Select location"
@@ -2260,25 +2236,25 @@ msgid "Select previous card"
 msgstr "Kaardii kanaan dura turu filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:247
-msgid "Select sidebar style"
-msgstr "Akkaataa cinaa filadhu"
+#~ msgid "Select sidebar style"
+#~ msgstr "Akkaataa cinaa filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:349
-msgid "Select site direction"
-msgstr "Kallattii saayitii filadhu"
+#~ msgid "Select site direction"
+#~ msgstr "Kallattii saayitii filadhu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:203
-msgid "Select theme preference"
-msgstr "Filannoo akeeka filadhu"
+#~ msgid "Select theme preference"
+#~ msgstr "Filannoo akeeka filadhu"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:257
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:340
 msgid "Select..."
 msgstr "Filadhu..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-msgid "selected"
-msgstr "filatame"
+#~ msgid "selected"
+#~ msgstr "filatame"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2298,12 +2274,12 @@ msgstr "Imeelii ergi"
 msgid "Send message"
 msgstr "Ergaa ergi"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:140
+#: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:279
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:305
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:270
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:296
 msgid "Server error"
 msgstr "Dogoggora sarvarii"
 
@@ -2312,7 +2288,7 @@ msgstr "Dogoggora sarvarii"
 msgid "Server rules"
 msgstr "Seerota server"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:229
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:220
 msgid "Session expired. Please log in again."
 msgstr "Seeshinichi dhumateera. Maaloo irra deebi'ii seeni."
 
@@ -2335,8 +2311,8 @@ msgid "Show fields"
 msgstr "Bakkawwan agarsiisi"
 
 #: ../../../lib/web/src/components/password-input.tsx:27
-msgid "Show password"
-msgstr "Jecha darbii agarsiisi"
+#~ msgid "Show password"
+#~ msgstr "Jecha darbii agarsiisi"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
@@ -2350,9 +2326,7 @@ msgstr "Agarsiisaa jira {totalShown} keessaa {total}"
 msgid "Shuffle rack"
 msgstr "Raakii makaa"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:239
-#: ../../../lib/web/src/components/config-drawer.tsx:263
-#: ../../../lib/web/src/components/ui/sidebar.tsx:237
+#: ../../../lib/web/src/components/ui/sidebar.tsx:257
 msgid "Sidebar"
 msgstr "Cinaa"
 
@@ -2371,11 +2345,11 @@ msgid "Single line of text only"
 msgstr "Sararoota barreeffamaa qofa"
 
 #: ../../../lib/web/src/components/skip-to-main.tsx:11
-msgid "Skip to Main"
-msgstr "Gara isa Guddaatti darbi"
+#~ msgid "Skip to Main"
+#~ msgstr "Gara isa Guddaatti darbi"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:101
-#: ../../../lib/web/src/lib/preference-utils.ts:128
+#: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
 msgstr "Xiqqaa"
 
@@ -2408,14 +2382,14 @@ msgid "Start the discussion by adding the first comment."
 msgstr "Yaada jalqabaa dabaluudhaan marii jalqabi."
 
 #: ../../../lib/web/src/components/coming-soon.tsx:15
-msgid "Stay tuned though!"
-msgstr "Garuu nu hordofa!"
+#~ msgid "Stay tuned though!"
+#~ msgstr "Garuu nu hordofa!"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Mata duree"
 
-#: src/features/words/components/move-composer.tsx:197
+#: src/features/words/components/move-composer.tsx:200
 #: src/features/words/index.tsx:928
 msgid "Submit"
 msgstr "Galchaa"
@@ -2430,7 +2404,6 @@ msgstr "Deebii galchaa"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:66
 #: ../../../lib/web/src/components/recommended-entities.tsx:58
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
 msgstr "Galaa'i"
@@ -2444,16 +2417,14 @@ msgid "Switch to view 1-9"
 msgstr "Gara argaa 1-9 jijjiiri"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:107
-#: ../../../lib/web/src/components/config-drawer.tsx:209
-#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:16
-#: ../../../lib/web/src/lib/preference-utils.ts:139
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Sirna"
 
 #: ../../../lib/web/src/components/tag-input.tsx:95
-msgid "Tag"
-msgstr "Tag"
+#~ msgid "Tag"
+#~ msgstr "Tag"
 
 #: ../../../lib/web/src/components/post-tags.tsx:76
 msgid "Tag already exists"
@@ -2469,8 +2440,8 @@ msgid "Tags"
 msgstr "Tagoota"
 
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-msgid "Teams/Apps"
-msgstr "Gareewwan/Apps"
+#~ msgid "Teams/Apps"
+#~ msgstr "Gareewwan/Apps"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2503,20 +2474,20 @@ msgid "The server returned a web page instead of data."
 msgstr "Sarviichiin qooda daataa fuula weebii deebise."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-msgid "The site is not available at the moment."
-msgstr "Marsariitiin yeroo ammaa hin argamu."
+#~ msgid "The site is not available at the moment."
+#~ msgstr "Marsariitiin yeroo ammaa hin argamu."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
-msgid "Theme"
-msgstr "Akeeka"
+#~ msgid "Theme"
+#~ msgstr "Akeeka"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:70
-msgid "Theme Settings"
-msgstr "Qindaa'inoota Akeeka"
+#~ msgid "Theme Settings"
+#~ msgstr "Qindaa'inoota Akeeka"
 
 #: ../../../lib/web/src/components/coming-soon.tsx:14
-msgid "This page has not been created yet."
-msgstr "Fuulli kun hanga ammaatti hin uumamne."
+#~ msgid "This page has not been created yet."
+#~ msgstr "Fuulli kun hanga ammaatti hin uumamne."
 
 #: src/features/words/index.tsx:1029
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2547,13 +2518,13 @@ msgid "To"
 msgstr "Gara"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
-msgid "Toggle columns"
-msgstr "Tarreelee jijjiiri"
+#~ msgid "Toggle columns"
+#~ msgstr "Tarreelee jijjiiri"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:233
 #: ../../../lib/web/src/components/layout/right-panel.tsx:236
-msgid "Toggle right panel"
-msgstr "Panela mirgaa jijjiiruu"
+#~ msgid "Toggle right panel"
+#~ msgstr "Panela mirgaa jijjiiruu"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:365
 #: ../../../lib/web/src/components/layout/nav-group.tsx:372
@@ -2562,20 +2533,20 @@ msgstr "Panela mirgaa jijjiiruu"
 msgid "Toggle section"
 msgstr "Kutaa jijjiiruu"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:317
-#: ../../../lib/web/src/components/ui/sidebar.tsx:320
+#: ../../../lib/web/src/components/ui/sidebar.tsx:337
+#: ../../../lib/web/src/components/ui/sidebar.tsx:340
 msgid "Toggle sidebar"
 msgstr "Saayidbaarii jijjiiruu"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:332
-#: ../../../lib/web/src/components/ui/sidebar.tsx:335
+#: ../../../lib/web/src/components/ui/sidebar.tsx:352
+#: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle Sidebar"
 msgstr "Cinaa Jijjiiri"
 
 #: ../../../lib/web/src/components/theme-switch.tsx:37
 #: ../../../lib/web/src/components/theme-switch.tsx:41
-msgid "Toggle theme"
-msgstr "Akeeka jijjiiri"
+#~ msgid "Toggle theme"
+#~ msgstr "Akeeka jijjiiri"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2598,14 +2569,12 @@ msgstr "Ol"
 msgid "Travelling"
 msgstr "Imala"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:194
 #: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
 msgstr "Jechoota barbaacha kee sirreessuu yaali"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:140
 #: ../../../lib/web/src/features/errors/general-error.tsx:180
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Irra deebi'ii yaali"
 
@@ -2634,7 +2603,7 @@ msgstr "Fayyadamtoota barbaaduuf barreessi"
 msgid "Type to search..."
 msgstr "Barbaaduuf barreessi..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:292
 msgid "Unable to connect to remote server"
 msgstr "Sarvara fagoo waliin walqunnamuu hin dandeenye"
 
@@ -2643,7 +2612,7 @@ msgstr "Sarvara fagoo waliin walqunnamuu hin dandeenye"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Galaa'uutti deebi'uu hin dandeenye. Mee deebi'iitii yaali."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Unassigned"
 msgstr "Hin ramadamne"
 
@@ -2680,8 +2649,8 @@ msgid "Untitled"
 msgstr "Mata dureen hin qabne"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-msgid "Unverified"
-msgstr "Hin mirkanaa'amne"
+#~ msgid "Unverified"
+#~ msgstr "Hin mirkanaa'amne"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
@@ -2720,15 +2689,14 @@ msgid "Verification code"
 msgstr "Koodii mirkaneessaa"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-msgid "Verification code sent"
-msgstr "Koodiin mirkaneessaa ergameera"
+#~ msgid "Verification code sent"
+#~ msgstr "Koodiin mirkaneessaa ergameera"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-msgid "Verification failed"
-msgstr "Mirkaneessuun hin milkoofne"
+#~ msgid "Verification failed"
+#~ msgstr "Mirkaneessuun hin milkoofne"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:391
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Mirkaneessi"
@@ -2742,20 +2710,20 @@ msgid "Video thumbnail"
 msgstr "Suuraa duraa viidiyoo"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:317
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:315
 msgid "Video viewer: {0}"
 msgstr "Ilaaltuu viidiyoo: {0}"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
-msgid "View"
-msgstr "Daawwadhu"
+#~ msgid "View"
+#~ msgstr "Daawwadhu"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-msgid "View all"
-msgstr "Hunda daawwadhu"
+#~ msgid "View all"
+#~ msgstr "Hunda daawwadhu"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:205
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:213
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:220
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:228
 msgid "View all notifications"
 msgstr "Beeksisa hunda daawwadhu"
 
@@ -2786,16 +2754,16 @@ msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify
 msgstr "Koodii mirkaneessaa gara <0>{0}</0> ergineerra. Teessoo imeelii kee mirkaneessuuf koodii armaan gadii galchi."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-msgid "We'll be back online shortly."
-msgstr "Yeroo dhihootti deebina onlaayinii."
+#~ msgid "We'll be back online shortly."
+#~ msgstr "Yeroo dhihootti deebina onlaayinii."
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-msgid "We'll notify you when something important happens."
-msgstr "Wanti barbaachisaan yoo uumame si beeksifna."
+#~ msgid "We'll notify you when something important happens."
+#~ msgstr "Wanti barbaachisaan yoo uumame si beeksifna."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-msgid "Website is under maintenance!"
-msgstr "Saayitiin sirreeffama jala jira!"
+#~ msgid "Website is under maintenance!"
+#~ msgstr "Saayitiin sirreeffama jala jira!"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
@@ -2822,8 +2790,8 @@ msgid "You do not have access to this section."
 msgstr "Kutaa kanaaf dhaqqabummaa hin qabdu."
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
-msgid "You don't have necessary permission <0/>to view this resource."
-msgstr "Qabeenya kana ilaaluuf <0/>hayyama barbaachisu hin qabdu."
+#~ msgid "You don't have necessary permission <0/>to view this resource."
+#~ msgstr "Qabeenya kana ilaaluuf <0/>hayyama barbaachisu hin qabdu."
 
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
@@ -2834,8 +2802,8 @@ msgid "You win!"
 msgstr "Mo'atte!"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-msgid "You're all caught up!"
-msgstr "Hunda ilaalteetta!"
+#~ msgid "You're all caught up!"
+#~ msgstr "Hunda ilaalteetta!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

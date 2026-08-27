@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:225
+#: ../../../lib/web/src/lib/error-normalizer.ts:215
 msgid "Please check your internet connection and try again."
 msgstr "Tarkista internetyhteytesi ja yritä uudelleen."
 
@@ -39,22 +39,20 @@ msgstr "[ei asetettu]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# pelaaja} other {# pelaajaa}}"
 
-#. placeholder {0}: selectedValues.size
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
-msgid "{0, plural, one {# selected} other {# selected}}"
-msgstr "{0, plural, one {# valittu} other {# valittu}}"
+#~ msgid "{0, plural, one {# selected} other {# selected}}"
+#~ msgstr "{0, plural, one {# valittu} other {# valittu}}"
 
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
-#. placeholder {2}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:228
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} kohdassa {1}{2}, poista napsauttamalla"
 
-#. placeholder {0}: item.label
 #: ../../../lib/web/src/components/config-drawer.tsx:160
-msgid "{0} option preview"
-msgstr "Vaihtoehdon {0} esikatselu"
+#~ msgid "{0} option preview"
+#~ msgstr "Vaihtoehdon {0} esikatselu"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -93,8 +91,8 @@ msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#vk} other {#vk}}"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
-#. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:230
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx:231
 msgid "{displayLetter} at {0}{1}"
 msgstr "{displayLetter} kohdassa {0}{1}"
 
@@ -128,20 +126,20 @@ msgid "{playerCount, plural, one {Playing with # player} other {Playing with # p
 msgstr "{playerCount, plural, one {Pelissä # pelaaja} other {Pelissä # pelaajaa}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-msgstr "{selectedCount, plural, one {{entityName} valittu} other {{manyName} valittu}}"
+#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+#~ msgstr "{selectedCount, plural, one {{entityName} valittu} other {{manyName} valittu}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-msgstr "{selectedCount, plural, one {# {entityName} valittu. Joukkotoimintojen työkalurivi on käytettävissä.} other {# {manyName} valittu. Joukkotoimintojen työkalurivi on käytettävissä.}}"
+#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+#~ msgstr "{selectedCount, plural, one {# {entityName} valittu. Joukkotoimintojen työkalurivi on käytettävissä.} other {# {manyName} valittu. Joukkotoimintojen työkalurivi on käytettävissä.}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-msgstr "{selectedCount, plural, one {# valittu} other {# valittu}}"
+#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+#~ msgstr "{selectedCount, plural, one {# valittu} other {# valittu}}"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-msgstr "{selectedCount, plural, one {Joukkotoiminnot # valitulle {entityName}} other {Joukkotoiminnot # valitulle {manyName}}}"
+#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+#~ msgstr "{selectedCount, plural, one {Joukkotoiminnot # valitulle {entityName}} other {Joukkotoiminnot # valitulle {manyName}}}"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
@@ -194,34 +192,34 @@ msgid "Access denied"
 msgstr "Käyttö evätty"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
-msgid "Access Forbidden"
-msgstr "Käyttö estetty"
+#~ msgid "Access Forbidden"
+#~ msgstr "Käyttö estetty"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Käyttöoikeustaso"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-msgid "Account added"
-msgstr "Tili lisätty"
+#~ msgid "Account added"
+#~ msgstr "Tili lisätty"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-msgid "Account removed"
-msgstr "Tili poistettu"
+#~ msgid "Account removed"
+#~ msgstr "Tili poistettu"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "Tilin tyyppi"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-msgid "Account verified"
-msgstr "Tili vahvistettu"
+#~ msgid "Account verified"
+#~ msgstr "Tili vahvistettu"
 
 #: src/components/layout/words-layout.tsx:61
 msgid "Active games"
 msgstr "Aktiiviset pelit"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:712
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:209
 msgid "Add"
@@ -244,19 +242,18 @@ msgid "Add access"
 msgstr "Lisää käyttöoikeus"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:132
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:288
 msgid "Add account"
 msgstr "Lisää tili"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-msgid "Add an account to receive notifications and use services."
-msgstr "Lisää tili saadaksesi ilmoituksia ja käyttääksesi palveluita."
+#~ msgid "Add an account to receive notifications and use services."
+#~ msgstr "Lisää tili saadaksesi ilmoituksia ja käyttääksesi palveluita."
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "Lisää kuvateksti"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:682
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:690
 msgid "Add checklist item"
 msgstr "Lisää tarkistuslistakohde"
 
@@ -273,7 +270,7 @@ msgstr "Lisää kavereita"
 msgid "Add friends in the People app to start playing"
 msgstr "Lisää kavereita People-sovelluksessa aloittaaksesi pelin"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:700
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:708
 msgid "Add item..."
 msgstr "Lisää kohde..."
 
@@ -282,8 +279,8 @@ msgid "Add link"
 msgstr "Lisää linkki"
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-msgid "Add new account"
-msgstr "Lisää uusi tili"
+#~ msgid "Add new account"
+#~ msgstr "Lisää uusi tili"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:215
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:220
@@ -294,13 +291,12 @@ msgid "Add option"
 msgstr "Lisää vaihtoehto"
 
 #: ../../../lib/web/src/components/post-tags.tsx:137
-#: ../../../lib/web/src/components/tag-input.tsx:40
 msgid "Add tag..."
 msgstr "Lisää tunniste..."
 
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-msgid "Add team/app"
-msgstr "Lisää tiimi/sovellus"
+#~ msgid "Add team/app"
+#~ msgstr "Lisää tiimi/sovellus"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -318,16 +314,16 @@ msgid "Adding..."
 msgstr "Lisätään..."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:72
-msgid "Adjust the appearance and layout to suit your preferences."
-msgstr "Säädä ulkoasua ja asettelua mieltymystesi mukaan."
+#~ msgid "Adjust the appearance and layout to suit your preferences."
+#~ msgstr "Säädä ulkoasua ja asettelua mieltymystesi mukaan."
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "Tekoäly"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-msgid "All"
-msgstr "Kaikki"
+#~ msgid "All"
+#~ msgstr "Kaikki"
 
 #. placeholder {0}: entityLabel.toLowerCase()
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
@@ -342,7 +338,7 @@ msgstr "Salli järjestäminen"
 msgid "An error occurred"
 msgstr "Tapahtui virhe"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:275
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:266
 msgid "An unexpected error occurred"
 msgstr "Tapahtui odottamaton virhe"
 
@@ -351,11 +347,11 @@ msgid "Android push"
 msgstr "Android-push"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:45
-#: ../../../lib/web/src/features/access/types.ts:42
+#: ../../../lib/web/src/features/access/types.ts:36
 msgid "Anyone"
 msgstr "Kuka tahansa"
 
-#: ../../../lib/web/src/features/access/types.ts:41
+#: ../../../lib/web/src/features/access/types.ts:35
 msgid "Anyone who is logged in"
 msgstr "Kuka tahansa kirjautunut"
 
@@ -385,8 +381,8 @@ msgid "Are you sure you want to resign?"
 msgstr "Haluatko varmasti luovuttaa?"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:59
-msgid "Asc"
-msgstr "Nouseva"
+#~ msgid "Asc"
+#~ msgstr "Nouseva"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -401,7 +397,7 @@ msgid "Attach reply files"
 msgstr "Liitä vastaustiedostoja"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:46
-#: ../../../lib/web/src/features/access/types.ts:41
+#: ../../../lib/web/src/features/access/types.ts:35
 msgid "Authenticated users"
 msgstr "Kirjautuneet käyttäjät"
 
@@ -425,7 +421,6 @@ msgstr "Käyttäjän {name} avatar"
 msgid "Back"
 msgstr "Takaisin"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:28
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:28
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
@@ -444,8 +439,8 @@ msgstr "Tyhjä laatta"
 msgid "Blocked by"
 msgstr "Estää"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:227
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:237
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:242
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:252
 msgid "Blocked navigation to untrusted link"
 msgstr "Estetty siirtyminen epäluotettavaan linkkiin"
 
@@ -485,7 +480,7 @@ msgstr "Selaimen ilmoitukset"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/words/components/move-composer.tsx:154
+#: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:189
 #: src/features/words/index.tsx:904
 #: src/features/words/index.tsx:1081
@@ -509,12 +504,12 @@ msgstr "Peruuta vastaus"
 msgid "Caption"
 msgstr "Kuvateksti"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:97
+#: ../../../lib/web/src/components/notification-category-button.tsx:99
 msgid "Category for these notifications"
 msgstr "Näiden ilmoitusten kategoria"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:78
-#: ../../../lib/web/src/components/notification-category-button.tsx:89
+#: ../../../lib/web/src/components/notification-category-button.tsx:80
+#: ../../../lib/web/src/components/notification-category-button.tsx:91
 msgid "Change notification category"
 msgstr "Vaihda ilmoituksen kategoria"
 
@@ -524,8 +519,8 @@ msgid "Chat"
 msgstr "Chat"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-msgid "Check \"All\" to see your past notifications."
-msgstr "Valitse ”Kaikki” nähdäksesi aiemmat ilmoitukset."
+#~ msgid "Check \"All\" to see your past notifications."
+#~ msgstr "Valitse ”Kaikki” nähdäksesi aiemmat ilmoitukset."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -548,20 +543,20 @@ msgid "Choose a letter"
 msgstr "Valitse kirjain"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
-msgid "Choose between default expanded, compact icon-only, or full layout mode"
-msgstr "Valitse oletusarvoinen laajennettu, tiivis vain kuvakkeet -tila tai täysi asettelu"
+#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
+#~ msgstr "Valitse oletusarvoinen laajennettu, tiivis vain kuvakkeet -tila tai täysi asettelu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:271
-msgid "Choose between inset, floating, or standard sidebar layout"
-msgstr "Valitse upotettu, kelluva tai tavallinen sivupalkin asettelu"
+#~ msgid "Choose between inset, floating, or standard sidebar layout"
+#~ msgstr "Valitse upotettu, kelluva tai tavallinen sivupalkin asettelu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:372
-msgid "Choose between left-to-right or right-to-left site direction"
-msgstr "Valitse vasemmalta oikealle tai oikealta vasemmalle -sivun suunta"
+#~ msgid "Choose between left-to-right or right-to-left site direction"
+#~ msgstr "Valitse vasemmalta oikealle tai oikealta vasemmalle -sivun suunta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:227
-msgid "Choose between system preference, light mode, or dark mode"
-msgstr "Valitse järjestelmän asetus, vaalea tila tai tumma tila"
+#~ msgid "Choose between system preference, light mode, or dark mode"
+#~ msgstr "Valitse järjestelmän asetus, vaalea tila tai tumma tila"
 
 #: ../../../lib/web/src/components/language-picker.tsx:264
 #: ../../../lib/web/src/components/language-picker.tsx:271
@@ -586,8 +581,8 @@ msgid "Clear all"
 msgstr "Tyhjennä kaikki"
 
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-msgid "Clear filters"
-msgstr "Tyhjennä suodattimet"
+#~ msgid "Clear filters"
+#~ msgstr "Tyhjennä suodattimet"
 
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
@@ -595,19 +590,19 @@ msgstr "Tyhjennä haku"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-msgid "Clear selection"
-msgstr "Tyhjennä valinta"
+#~ msgid "Clear selection"
+#~ msgstr "Tyhjennä valinta"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-msgid "Clear selection (Escape)"
-msgstr "Tyhjennä valinta (Escape)"
+#~ msgid "Clear selection (Escape)"
+#~ msgstr "Tyhjennä valinta (Escape)"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:470
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:473
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Sulje"
@@ -624,8 +619,8 @@ msgstr "Sulje valintaikkuna"
 msgid "Close navigation"
 msgstr "Sulje navigointi"
 
-#: ../../../lib/web/src/components/layout/right-panel.tsx:265
-#: ../../../lib/web/src/components/layout/right-panel.tsx:268
+#: ../../../lib/web/src/components/layout/right-panel.tsx:234
+#: ../../../lib/web/src/components/layout/right-panel.tsx:237
 msgid "Close panel"
 msgstr "Sulje paneeli"
 
@@ -666,8 +661,8 @@ msgid "Comfortable"
 msgstr "Mukava"
 
 #: ../../../lib/web/src/components/coming-soon.tsx:12
-msgid "Coming Soon!"
-msgstr "Tulossa pian!"
+#~ msgid "Coming Soon!"
+#~ msgstr "Tulossa pian!"
 
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
@@ -678,12 +673,11 @@ msgstr "Komentopaletti"
 msgid "Comment actions"
 msgstr "Kommentin toiminnot"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:433
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:445
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:431
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:443
 msgid "Comments"
 msgstr "Kommentit"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:316
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Tiivis"
@@ -710,8 +704,8 @@ msgid "Connected"
 msgstr "Yhdistetty"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-msgid "Connected accounts"
-msgstr "Yhdistetyt tilit"
+#~ msgid "Connected accounts"
+#~ msgstr "Yhdistetyt tilit"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -757,7 +751,7 @@ msgstr "Kopioi"
 msgid "Could not load this document. Please try again later."
 msgstr "Tätä dokumenttia ei voitu ladata. Yritä myöhemmin uudelleen."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:128
 msgid "Couldn't load notifications"
 msgstr "Ilmoituksia ei voitu ladata"
 
@@ -809,18 +803,16 @@ msgstr "Nykyinen sijainti"
 msgid "Custom"
 msgstr "Mukautettu"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:219
-#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "Tumma"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:87
 #: ../../../lib/web/src/components/profile-dropdown.tsx:123
-msgid "Dark mode"
-msgstr "Tumma tila"
+#~ msgid "Dark mode"
+#~ msgstr "Tumma tila"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:259
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
 msgstr "Tietoristiriita"
 
@@ -833,8 +825,8 @@ msgid "Decline"
 msgstr "Hylkää"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:311
-msgid "Default"
-msgstr "Oletus"
+#~ msgid "Default"
+#~ msgstr "Oletus"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
@@ -904,8 +896,8 @@ msgid "Deleting..."
 msgstr "Poistetaan..."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
-msgid "Desc"
-msgstr "Laskeva"
+#~ msgid "Desc"
+#~ msgstr "Laskeva"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -931,8 +923,8 @@ msgid "Detect from web browser"
 msgstr "Tunnista selaimesta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:341
-msgid "Direction"
-msgstr "Suunta"
+#~ msgid "Direction"
+#~ msgstr "Suunta"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
@@ -956,7 +948,7 @@ msgstr "Ei yhteyttä"
 msgid "Dismiss"
 msgstr "Hylkää"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:238
+#: ../../../lib/web/src/components/ui/sidebar.tsx:258
 msgid "Displays the mobile sidebar."
 msgstr "Näyttää mobiilisivupalkin."
 
@@ -966,12 +958,12 @@ msgid "Done"
 msgstr "Valmis"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:454
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:464
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:452
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:462
 msgid "Download"
 msgstr "Lataa"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:100
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:98
 msgid "Download failed"
 msgstr "Lataus epäonnistui"
 
@@ -979,7 +971,7 @@ msgstr "Lataus epäonnistui"
 msgid "Duplicates"
 msgstr "Duplikoi"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:141
+#: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Lukihäiriöystävällinen"
 
@@ -1031,8 +1023,8 @@ msgid "Email code"
 msgstr "Sähköpostikoodi"
 
 #. placeholder {0}: String.fromCharCode(65 + col)
-#. placeholder {1}: BOARD_SIZE - row
-#: src/features/words/components/words-board.tsx:232
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx:233
 msgid "Empty square {0}{1}"
 msgstr "Tyhjä ruutu {0}{1}"
 
@@ -1056,7 +1048,7 @@ msgstr "Anna sähköpostiisi saamasi koodi"
 msgid "Enter your authenticator code"
 msgstr "Anna todennussovelluksen koodi"
 
-#: src/features/words/components/move-composer.tsx:170
+#: src/features/words/components/move-composer.tsx:173
 #: src/features/words/index.tsx:910
 msgid "Exchange"
 msgstr "Vaihda"
@@ -1066,7 +1058,7 @@ msgstr "Vaihda"
 msgid "Exchange ({0})"
 msgstr "Vaihda ({0})"
 
-#: src/features/words/components/move-composer.tsx:168
+#: src/features/words/components/move-composer.tsx:171
 msgid "Exchange ({exchangeCount})"
 msgstr "Vaihda ({exchangeCount})"
 
@@ -1089,17 +1081,17 @@ msgstr "Laajenna sivupalkki"
 msgid "External URL"
 msgstr "Ulkoinen URL-osoite"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:131
+#: ../../../lib/web/src/lib/preference-utils.ts:124
 msgid "Extra large"
 msgstr "Erittäin suuri"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:225
-msgid "Failed to add account"
-msgstr "Tilin lisääminen epäonnistui"
+#~ msgid "Failed to add account"
+#~ msgstr "Tilin lisääminen epäonnistui"
 
 #: ../../../lib/web/src/components/tag-input.tsx:39
-msgid "Failed to add tag"
-msgstr "Tunnisteen lisääminen epäonnistui"
+#~ msgid "Failed to add tag"
+#~ msgstr "Tunnisteen lisääminen epäonnistui"
 
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
@@ -1151,11 +1143,11 @@ msgstr "Lataus epäonnistui"
 msgid "Failed to load history"
 msgstr "Historian lataus epäonnistui"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:340
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load image"
 msgstr "Kuvan lataus epäonnistui"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:340
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Videon lataus epäonnistui"
 
@@ -1168,8 +1160,8 @@ msgid "Failed to post comment"
 msgstr "Kommentin lähettäminen epäonnistui"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-msgid "Failed to remove account"
-msgstr "Tilin poisto epäonnistui"
+#~ msgid "Failed to remove account"
+#~ msgstr "Tilin poisto epäonnistui"
 
 #: src/features/words/index.tsx:362
 msgid "Failed to resign"
@@ -1185,8 +1177,8 @@ msgid "Failed to send"
 msgstr "Lähetys epäonnistui"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-msgid "Failed to send verification code"
-msgstr "Vahvistuskoodin lähetys epäonnistui"
+#~ msgid "Failed to send verification code"
+#~ msgstr "Vahvistuskoodin lähetys epäonnistui"
 
 #: src/features/words/index.tsx:339
 msgid "Failed to submit move"
@@ -1207,8 +1199,8 @@ msgid "Files"
 msgstr "Tiedostot"
 
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-msgid "Filter..."
-msgstr "Suodata..."
+#~ msgid "Filter..."
+#~ msgstr "Suodata..."
 
 #: ../../../lib/web/src/components/restore-banner.tsx:97
 msgid "Finish moving your account"
@@ -1231,8 +1223,8 @@ msgid "Flat"
 msgstr "Litteä"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:258
-msgid "Floating"
-msgstr "Kelluva"
+#~ msgid "Floating"
+#~ msgstr "Kelluva"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
@@ -1249,15 +1241,14 @@ msgstr "Lähettäjä"
 #: ../../../lib/web/src/lib/preference-utils.ts:89
 #: ../../../lib/web/src/lib/preference-utils.ts:99
 #: ../../../lib/web/src/lib/preference-utils.ts:110
-#: ../../../lib/web/src/lib/preference-utils.ts:119
-#: ../../../lib/web/src/lib/preference-utils.ts:127
-#: ../../../lib/web/src/lib/preference-utils.ts:138
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
 msgid "From theme"
 msgstr "Teemasta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:321
-msgid "Full layout"
-msgstr "Täysi asettelu"
+#~ msgid "Full layout"
+#~ msgstr "Täysi asettelu"
 
 #: src/features/words/components/new-game.tsx:59
 msgid "Game created"
@@ -1272,31 +1263,30 @@ msgstr "Peli poistettu"
 msgid "Game over"
 msgstr "Peli päättyi"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Takaisin"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:82
-msgid "Go to first page"
-msgstr "Siirry ensimmäiselle sivulle"
+#~ msgid "Go to first page"
+#~ msgstr "Siirry ensimmäiselle sivulle"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:128
-msgid "Go to last page"
-msgstr "Siirry viimeiselle sivulle"
+#~ msgid "Go to last page"
+#~ msgstr "Siirry viimeiselle sivulle"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:119
-msgid "Go to next page"
-msgstr "Siirry seuraavalle sivulle"
+#~ msgid "Go to next page"
+#~ msgstr "Siirry seuraavalle sivulle"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:106
-msgid "Go to page {pageNumber}"
-msgstr "Siirry sivulle {pageNumber}"
+#~ msgid "Go to page {pageNumber}"
+#~ msgstr "Siirry sivulle {pageNumber}"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:91
-msgid "Go to previous page"
-msgstr "Siirry edelliselle sivulle"
+#~ msgid "Go to previous page"
+#~ msgstr "Siirry edelliselle sivulle"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -1316,12 +1306,12 @@ msgid "Has unknown words"
 msgstr "Sisältää tuntemattomia sanoja"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
-msgid "Hide"
-msgstr "Piilota"
+#~ msgid "Hide"
+#~ msgstr "Piilota"
 
 #: ../../../lib/web/src/components/password-input.tsx:27
-msgid "Hide password"
-msgstr "Piilota salasana"
+#~ msgid "Hide password"
+#~ msgstr "Piilota salasana"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1343,7 +1333,7 @@ msgid "ID"
 msgstr "Tunnus"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:318
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:316
 msgid "Image viewer: {0}"
 msgstr "Kuvankatselin: {0}"
 
@@ -1351,7 +1341,7 @@ msgstr "Kuvankatselin: {0}"
 msgid "Imperial"
 msgstr "Brittiläinen"
 
-#: ../../../lib/web/src/features/access/types.ts:42
+#: ../../../lib/web/src/features/access/types.ts:36
 msgid "Including anonymous users"
 msgstr "Mukaan lukien anonyymit käyttäjät"
 
@@ -1364,14 +1354,14 @@ msgid "Initials avatar for {name}"
 msgstr "Käyttäjän {name} nimikirjainavatar"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:253
-msgid "Inset"
-msgstr "Sisennetty"
+#~ msgid "Inset"
+#~ msgstr "Sisennetty"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Kiinnostuksen kohteet"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:545
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
 msgstr "Virheellinen päivämäärä"
 
@@ -1381,12 +1371,12 @@ msgid "Invalid move"
 msgstr "Virheellinen siirto"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
-msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-msgstr "Virheellinen tunniste: vain kirjaimet, numerot, välilyönnit, yhdysmerkit ja kauttaviivat (enintään 50 merkkiä)"
+#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
+#~ msgstr "Virheellinen tunniste: vain kirjaimet, numerot, välilyönnit, yhdysmerkit ja kauttaviivat (enintään 50 merkkiä)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-msgid "Invalid verification code"
-msgstr "Virheellinen vahvistuskoodi"
+#~ msgid "Invalid verification code"
+#~ msgstr "Virheellinen vahvistuskoodi"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -1405,30 +1395,27 @@ msgid "Language"
 msgstr "Kieli"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:103
-#: ../../../lib/web/src/lib/preference-utils.ts:130
+#: ../../../lib/web/src/lib/preference-utils.ts:123
 msgid "Large"
 msgstr "Suuri"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:287
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:306
 msgid "Layout"
 msgstr "Asettelu"
 
 #: ../../../lib/web/src/components/learn-more.tsx:33
 #: ../../../lib/web/src/components/learn-more.tsx:38
-msgid "Learn more"
-msgstr "Lue lisää"
+#~ msgid "Learn more"
+#~ msgstr "Lue lisää"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:355
-msgid "Left to Right"
-msgstr "Vasemmalta oikealle"
+#~ msgid "Left to Right"
+#~ msgstr "Vasemmalta oikealle"
 
 #: ../../../lib/web/src/components/post-tags.tsx:72
 msgid "Letters, numbers, spaces, and hyphens only"
 msgstr "Vain kirjaimia, numeroita, välilyöntejä ja väliviivoja"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:214
-#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:14
 msgid "Light"
 msgstr "Vaalea"
@@ -1458,8 +1445,6 @@ msgstr "Ladataan sisältöä…"
 msgid "Loading..."
 msgstr "Ladataan..."
 
-#: ../../../lib/web/src/components/profile-dropdown.tsx:69
-#: ../../../lib/web/src/components/profile-dropdown.tsx:98
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:26
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:28
 msgid "Log out"
@@ -1477,21 +1462,20 @@ msgstr "Uloskirjautuminen onnistui"
 msgid "Logging out…"
 msgstr "Kirjaudutaan ulos…"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
 msgid "Manage categories"
 msgstr "Hallitse kategorioita"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-msgid "Manage your connected accounts for notifications and services."
-msgstr "Hallitse yhdistettyjä tilejäsi ilmoituksia ja palveluita varten."
+#~ msgid "Manage your connected accounts for notifications and services."
+#~ msgstr "Hallitse yhdistettyjä tilejäsi ilmoituksia ja palveluita varten."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "Manuaalinen"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:192
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:199
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:224
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:207
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:214
 msgid "Mark all as read"
 msgstr "Merkitse kaikki luetuiksi"
 
@@ -1561,7 +1545,7 @@ msgid "Name must be 1000 characters or less"
 msgstr "Nimen on oltava enintään 1000 merkkiä"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:53
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:322
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:313
 msgid "Network error"
 msgstr "Verkkovirhe"
 
@@ -1577,8 +1561,8 @@ msgstr "Uusi"
 msgid "New game"
 msgstr "Uusi peli"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:527
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:532
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:525
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:530
 msgid "Next image"
 msgstr "Seuraava kuva"
 
@@ -1599,8 +1583,8 @@ msgid "No comments yet"
 msgstr "Ei vielä kommentteja"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-msgid "No connected accounts"
-msgstr "Ei yhdistettyjä tilejä"
+#~ msgid "No connected accounts"
+#~ msgstr "Ei yhdistettyjä tilejä"
 
 #: src/features/words/components/new-game.tsx:152
 msgid "No friends found"
@@ -1631,10 +1615,10 @@ msgid "No messages yet"
 msgstr "Ei vielä viestejä"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-msgid "No notifications yet"
-msgstr "Ei vielä ilmoituksia"
+#~ msgid "No notifications yet"
+#~ msgstr "Ei vielä ilmoituksia"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:341
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Henkilöitä ei löytynyt"
@@ -1644,17 +1628,15 @@ msgid "No places found"
 msgstr "Paikkoja ei löytynyt"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:58
-msgid "No profile"
-msgstr "Ei profiilia"
+#~ msgid "No profile"
+#~ msgstr "Ei profiilia"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
 msgstr "Tuloksia ei löytynyt"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Tuloksia ei löytynyt."
 
@@ -1672,11 +1654,11 @@ msgstr "Ei asetettuja laattoja"
 msgid "No time zone found."
 msgstr "Aikavyöhykettä ei löytynyt."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:106
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ei vielä aihetietoa — yritä uudelleen seuraavan ilmoituksen jälkeen."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:124
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "No unread notifications"
 msgstr "Ei lukemattomia ilmoituksia"
 
@@ -1705,11 +1687,10 @@ msgstr "Ei näkymiä"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:491
 #: ../../../lib/web/src/components/person-picker.tsx:350
 #: ../../../lib/web/src/lib/preference-utils.ts:100
-#: ../../../lib/web/src/lib/preference-utils.ts:120
 msgid "None"
 msgstr "Ei mitään"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:129
+#: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Normaali"
 
@@ -1731,11 +1712,11 @@ msgstr "Mitään ei löytynyt"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:236
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:257
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-msgid "Notifications"
-msgstr "Ilmoitukset"
+#~ msgid "Notifications"
+#~ msgstr "Ilmoitukset"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:185
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:200
 msgid "Notifications: {0}"
 msgstr "Ilmoitukset: {0}"
 
@@ -1755,8 +1736,8 @@ msgstr "Hups! Sivua ei löytynyt!"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:156
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-msgid "Open account actions"
-msgstr "Avaa tilin toiminnot"
+#~ msgid "Open account actions"
+#~ msgstr "Avaa tilin toiminnot"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:199
 #: ../../../lib/web/src/components/layout/nav-group.tsx:204
@@ -1782,8 +1763,8 @@ msgstr "Avaa navigointi"
 
 #: ../../../lib/web/src/components/layout/top-nav.tsx:38
 #: ../../../lib/web/src/components/layout/top-nav.tsx:44
-msgid "Open navigation menu"
-msgstr "Avaa navigointivalikko"
+#~ msgid "Open navigation menu"
+#~ msgstr "Avaa navigointivalikko"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:105
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:111
@@ -1796,8 +1777,8 @@ msgstr "Avaa valittu kortti"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:58
 #: ../../../lib/web/src/components/config-drawer.tsx:66
-msgid "Open theme settings"
-msgstr "Avaa teeman asetukset"
+#~ msgid "Open theme settings"
+#~ msgstr "Avaa teeman asetukset"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:274
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:279
@@ -1833,8 +1814,8 @@ msgstr "Omistaja"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:43
 #: ../../../lib/web/src/components/data-table/pagination.tsx:71
-msgid "Page {currentPage} of {totalPages}"
-msgstr "Sivu {currentPage} / {totalPages}"
+#~ msgid "Page {currentPage} of {totalPages}"
+#~ msgstr "Sivu {currentPage} / {totalPages}"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
 msgid "Parent"
@@ -1861,8 +1842,8 @@ msgid "Pattern (regex)"
 msgstr "Kuvio (regex)"
 
 #: ../../../lib/web/src/components/date-picker.tsx:20
-msgid "Pick a date"
-msgstr "Valitse päivä"
+#~ msgid "Pick a date"
+#~ msgstr "Valitse päivä"
 
 #: src/features/words/index.tsx:185
 msgid "Placement out of bounds"
@@ -1874,7 +1855,7 @@ msgstr "Pelaaja {playerNumber}"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:89
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:323
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:314
 msgid "Please check your internet connection and try again."
 msgstr "Tarkista internetyhteytesi ja yritä uudelleen."
 
@@ -1902,8 +1883,8 @@ msgstr "Julkaisut"
 msgid "Posts and comments"
 msgstr "Julkaisut ja kommentit"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:511
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:516
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:509
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:514
 msgid "Previous image"
 msgstr "Edellinen kuva"
 
@@ -1917,8 +1898,8 @@ msgid "Processing…"
 msgstr "Käsitellään…"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
-msgid "Profile"
-msgstr "Profiili"
+#~ msgid "Profile"
+#~ msgstr "Profiili"
 
 #: ../../../lib/web/src/components/person-picker.tsx:200
 msgid "Project members"
@@ -1944,12 +1925,11 @@ msgstr "Rekisteröi pääsyavaimesi uudelleen tällä palvelimella"
 msgid "Ready"
 msgstr "Valmis"
 
-#: src/features/words/components/move-composer.tsx:180
+#: src/features/words/components/move-composer.tsx:183
 #: src/features/words/index.tsx:916
 msgid "Recall"
 msgstr "Peruuta"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:220
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
 msgid "Recommended"
 msgstr "Suositeltu"
@@ -1987,7 +1967,6 @@ msgstr "Uusinta"
 #: ../../../lib/web/src/components/attachment-composer.tsx:330
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
 #: ../../../lib/web/src/features/access/access-list.tsx:270
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "Poista"
 
@@ -2016,7 +1995,7 @@ msgstr "Poistetaanko käyttöoikeus?"
 msgid "Remove interest"
 msgstr "Poista kiinnostus"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:666
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:674
 msgid "Remove item"
 msgstr "Poista kohde"
 
@@ -2058,17 +2037,17 @@ msgstr "Lähetä sähköposti uudelleen"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:87
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-msgid "Reset"
-msgstr "Nollaa"
+#~ msgid "Reset"
+#~ msgstr "Nollaa"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:122
 #: ../../../lib/web/src/components/config-drawer.tsx:127
-msgid "Reset {title}"
-msgstr "Palauta {title}"
+#~ msgid "Reset {title}"
+#~ msgstr "Palauta {title}"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:85
-msgid "Reset all settings to default values"
-msgstr "Palauta kaikki asetukset oletusarvoihin"
+#~ msgid "Reset all settings to default values"
+#~ msgstr "Palauta kaikki asetukset oletusarvoihin"
 
 #: src/features/words/index.tsx:835
 #: src/features/words/index.tsx:1016
@@ -2100,8 +2079,8 @@ msgid "Revoke RSS access?"
 msgstr "Kumotaanko RSS-käyttöoikeus?"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
-msgid "Right to Left"
-msgstr "Oikealta vasemmalle"
+#~ msgid "Right to Left"
+#~ msgstr "Oikealta vasemmalle"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:150
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:168
@@ -2113,8 +2092,8 @@ msgid "Rows group by"
 msgstr "Rivien ryhmittely"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:65
-msgid "Rows per page"
-msgstr "Rivejä sivulla"
+#~ msgid "Rows per page"
+#~ msgstr "Rivejä sivulla"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2187,12 +2166,10 @@ msgstr "Hae, seuraa ja lajittele tätä näkymää."
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:255
 #: ../../../lib/web/src/components/inline-entity-search.tsx:63
 #: ../../../lib/web/src/components/person-picker.tsx:324
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Hae..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:178
 #: ../../../lib/web/src/components/search-entity-page.tsx:201
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
@@ -2202,10 +2179,9 @@ msgstr "Haetaan..."
 msgid "Select"
 msgstr "Valitse"
 
-#. placeholder {0}: item.label.toLowerCase()
 #: ../../../lib/web/src/components/config-drawer.tsx:149
-msgid "Select {0}"
-msgstr "Valitse {0}"
+#~ msgid "Select {0}"
+#~ msgstr "Valitse {0}"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:356
 msgid "Select a field"
@@ -2224,8 +2200,8 @@ msgid "Select access rule"
 msgstr "Valitse käyttöoikeussääntö"
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-msgid "Select account"
-msgstr "Valitse tili"
+#~ msgid "Select account"
+#~ msgstr "Valitse tili"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
@@ -2240,8 +2216,8 @@ msgid "Select group"
 msgstr "Valitse ryhmä"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:305
-msgid "Select layout style"
-msgstr "Valitse asettelutyyli"
+#~ msgid "Select layout style"
+#~ msgstr "Valitse asettelutyyli"
 
 #: ../../../lib/web/src/components/place-picker.tsx:49
 msgid "Select location"
@@ -2260,25 +2236,25 @@ msgid "Select previous card"
 msgstr "Valitse edellinen kortti"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:247
-msgid "Select sidebar style"
-msgstr "Valitse sivupalkin tyyli"
+#~ msgid "Select sidebar style"
+#~ msgstr "Valitse sivupalkin tyyli"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:349
-msgid "Select site direction"
-msgstr "Valitse sivuston suunta"
+#~ msgid "Select site direction"
+#~ msgstr "Valitse sivuston suunta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:203
-msgid "Select theme preference"
-msgstr "Valitse teeman asetus"
+#~ msgid "Select theme preference"
+#~ msgstr "Valitse teeman asetus"
 
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
-#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:257
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:340
 msgid "Select..."
 msgstr "Valitse..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-msgid "selected"
-msgstr "valittu"
+#~ msgid "selected"
+#~ msgstr "valittu"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2298,12 +2274,12 @@ msgstr "Lähetä sähköposti"
 msgid "Send message"
 msgstr "Lähetä viesti"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:140
+#: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Serif"
 msgstr "Pääteviivallinen"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:279
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:305
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:270
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:296
 msgid "Server error"
 msgstr "Palvelinvirhe"
 
@@ -2312,7 +2288,7 @@ msgstr "Palvelinvirhe"
 msgid "Server rules"
 msgstr "Palvelimen säännöt"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:229
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:220
 msgid "Session expired. Please log in again."
 msgstr "Istunto on vanhentunut. Kirjaudu sisään uudelleen."
 
@@ -2335,8 +2311,8 @@ msgid "Show fields"
 msgstr "Näytä kentät"
 
 #: ../../../lib/web/src/components/password-input.tsx:27
-msgid "Show password"
-msgstr "Näytä salasana"
+#~ msgid "Show password"
+#~ msgstr "Näytä salasana"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
@@ -2350,9 +2326,7 @@ msgstr "Näytetään {totalShown} / {total}"
 msgid "Shuffle rack"
 msgstr "Sekoita teline"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:239
-#: ../../../lib/web/src/components/config-drawer.tsx:263
-#: ../../../lib/web/src/components/ui/sidebar.tsx:237
+#: ../../../lib/web/src/components/ui/sidebar.tsx:257
 msgid "Sidebar"
 msgstr "Sivupalkki"
 
@@ -2371,11 +2345,11 @@ msgid "Single line of text only"
 msgstr "Vain yksi tekstirivi"
 
 #: ../../../lib/web/src/components/skip-to-main.tsx:11
-msgid "Skip to Main"
-msgstr "Siirry pääsisältöön"
+#~ msgid "Skip to Main"
+#~ msgstr "Siirry pääsisältöön"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:101
-#: ../../../lib/web/src/lib/preference-utils.ts:128
+#: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
 msgstr "Pieni"
 
@@ -2408,14 +2382,14 @@ msgid "Start the discussion by adding the first comment."
 msgstr "Aloita keskustelu lisäämällä ensimmäinen kommentti."
 
 #: ../../../lib/web/src/components/coming-soon.tsx:15
-msgid "Stay tuned though!"
-msgstr "Pysy kuulolla!"
+#~ msgid "Stay tuned though!"
+#~ msgstr "Pysy kuulolla!"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Aihe"
 
-#: src/features/words/components/move-composer.tsx:197
+#: src/features/words/components/move-composer.tsx:200
 #: src/features/words/index.tsx:928
 msgid "Submit"
 msgstr "Lähetä"
@@ -2430,7 +2404,6 @@ msgstr "Lähetä vastaus"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:66
 #: ../../../lib/web/src/components/recommended-entities.tsx:58
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
 msgstr "Tilaa"
@@ -2444,16 +2417,14 @@ msgid "Switch to view 1-9"
 msgstr "Vaihda näkymään 1-9"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:107
-#: ../../../lib/web/src/components/config-drawer.tsx:209
-#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:16
-#: ../../../lib/web/src/lib/preference-utils.ts:139
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Järjestelmä"
 
 #: ../../../lib/web/src/components/tag-input.tsx:95
-msgid "Tag"
-msgstr "Tunniste"
+#~ msgid "Tag"
+#~ msgstr "Tunniste"
 
 #: ../../../lib/web/src/components/post-tags.tsx:76
 msgid "Tag already exists"
@@ -2469,8 +2440,8 @@ msgid "Tags"
 msgstr "Tunnisteet"
 
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-msgid "Teams/Apps"
-msgstr "Tiimit/Sovellukset"
+#~ msgid "Teams/Apps"
+#~ msgstr "Tiimit/Sovellukset"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2503,20 +2474,20 @@ msgid "The server returned a web page instead of data."
 msgstr "Palvelin palautti verkkosivun tietojen sijaan."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-msgid "The site is not available at the moment."
-msgstr "Sivusto ei ole tällä hetkellä käytettävissä."
+#~ msgid "The site is not available at the moment."
+#~ msgstr "Sivusto ei ole tällä hetkellä käytettävissä."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
-msgid "Theme"
-msgstr "Teema"
+#~ msgid "Theme"
+#~ msgstr "Teema"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:70
-msgid "Theme Settings"
-msgstr "Teema-asetukset"
+#~ msgid "Theme Settings"
+#~ msgstr "Teema-asetukset"
 
 #: ../../../lib/web/src/components/coming-soon.tsx:14
-msgid "This page has not been created yet."
-msgstr "Tätä sivua ei ole vielä luotu."
+#~ msgid "This page has not been created yet."
+#~ msgstr "Tätä sivua ei ole vielä luotu."
 
 #: src/features/words/index.tsx:1029
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2547,13 +2518,13 @@ msgid "To"
 msgstr "Määränpää"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
-msgid "Toggle columns"
-msgstr "Vaihda sarakkeet"
+#~ msgid "Toggle columns"
+#~ msgstr "Vaihda sarakkeet"
 
 #: ../../../lib/web/src/components/layout/right-panel.tsx:233
 #: ../../../lib/web/src/components/layout/right-panel.tsx:236
-msgid "Toggle right panel"
-msgstr "Vaihda oikeaa paneelia"
+#~ msgid "Toggle right panel"
+#~ msgstr "Vaihda oikeaa paneelia"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:365
 #: ../../../lib/web/src/components/layout/nav-group.tsx:372
@@ -2562,20 +2533,20 @@ msgstr "Vaihda oikeaa paneelia"
 msgid "Toggle section"
 msgstr "Näytä tai piilota osio"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:317
-#: ../../../lib/web/src/components/ui/sidebar.tsx:320
+#: ../../../lib/web/src/components/ui/sidebar.tsx:337
+#: ../../../lib/web/src/components/ui/sidebar.tsx:340
 msgid "Toggle sidebar"
 msgstr "Vaihda sivupalkkia"
 
-#: ../../../lib/web/src/components/ui/sidebar.tsx:332
-#: ../../../lib/web/src/components/ui/sidebar.tsx:335
+#: ../../../lib/web/src/components/ui/sidebar.tsx:352
+#: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle Sidebar"
 msgstr "Vaihda sivupalkki"
 
 #: ../../../lib/web/src/components/theme-switch.tsx:37
 #: ../../../lib/web/src/components/theme-switch.tsx:41
-msgid "Toggle theme"
-msgstr "Vaihda teema"
+#~ msgid "Toggle theme"
+#~ msgstr "Vaihda teema"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2598,14 +2569,12 @@ msgstr "Ylin"
 msgid "Travelling"
 msgstr "Matkustetaan"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:194
 #: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
 msgstr "Kokeile muuttaa hakuehtoja"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:140
 #: ../../../lib/web/src/features/errors/general-error.tsx:180
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Yritä uudelleen"
 
@@ -2634,7 +2603,7 @@ msgstr "Kirjoita hakeaksesi käyttäjiä"
 msgid "Type to search..."
 msgstr "Kirjoita hakeaksesi..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:292
 msgid "Unable to connect to remote server"
 msgstr "Etäpalvelimeen ei saatu yhteyttä"
 
@@ -2643,7 +2612,7 @@ msgstr "Etäpalvelimeen ei saatu yhteyttä"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Kirjautumiseen ei voi siirtyä. Yritä uudelleen."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Unassigned"
 msgstr "Ei määritetty"
 
@@ -2680,8 +2649,8 @@ msgid "Untitled"
 msgstr "Nimetön"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-msgid "Unverified"
-msgstr "Vahvistamaton"
+#~ msgid "Unverified"
+#~ msgstr "Vahvistamaton"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
@@ -2720,15 +2689,14 @@ msgid "Verification code"
 msgstr "Vahvistuskoodi"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-msgid "Verification code sent"
-msgstr "Vahvistuskoodi lähetetty"
+#~ msgid "Verification code sent"
+#~ msgstr "Vahvistuskoodi lähetetty"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-msgid "Verification failed"
-msgstr "Vahvistus epäonnistui"
+#~ msgid "Verification failed"
+#~ msgstr "Vahvistus epäonnistui"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:391
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Vahvista"
@@ -2742,20 +2710,20 @@ msgid "Video thumbnail"
 msgstr "Videon pikkukuva"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:317
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:315
 msgid "Video viewer: {0}"
 msgstr "Videokatselin: {0}"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
-msgid "View"
-msgstr "Näytä"
+#~ msgid "View"
+#~ msgstr "Näytä"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-msgid "View all"
-msgstr "Näytä kaikki"
+#~ msgid "View all"
+#~ msgstr "Näytä kaikki"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:205
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:213
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:220
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:228
 msgid "View all notifications"
 msgstr "Näytä kaikki ilmoitukset"
 
@@ -2786,16 +2754,16 @@ msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify
 msgstr "Lähetimme vahvistuskoodin osoitteeseen <0>{0}</0>. Syötä koodi alle vahvistaaksesi sähköpostiosoitteesi."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-msgid "We'll be back online shortly."
-msgstr "Palaamme pian verkkoon."
+#~ msgid "We'll be back online shortly."
+#~ msgstr "Palaamme pian verkkoon."
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-msgid "We'll notify you when something important happens."
-msgstr "Ilmoitamme, kun jotain tärkeää tapahtuu."
+#~ msgid "We'll notify you when something important happens."
+#~ msgstr "Ilmoitamme, kun jotain tärkeää tapahtuu."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-msgid "Website is under maintenance!"
-msgstr "Sivusto on huoltotilassa!"
+#~ msgid "Website is under maintenance!"
+#~ msgstr "Sivusto on huoltotilassa!"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
@@ -2822,8 +2790,8 @@ msgid "You do not have access to this section."
 msgstr "Sinulla ei ole pääsyä tähän osioon."
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
-msgid "You don't have necessary permission <0/>to view this resource."
-msgstr "Sinulla ei ole tarvittavaa käyttöoikeutta <0/>tämän resurssin tarkasteluun."
+#~ msgid "You don't have necessary permission <0/>to view this resource."
+#~ msgstr "Sinulla ei ole tarvittavaa käyttöoikeutta <0/>tämän resurssin tarkasteluun."
 
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
@@ -2834,8 +2802,8 @@ msgid "You win!"
 msgstr "Voitit!"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-msgid "You're all caught up!"
-msgstr "Olet ajan tasalla!"
+#~ msgid "You're all caught up!"
+#~ msgstr "Olet ajan tasalla!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
