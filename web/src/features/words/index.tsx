@@ -28,10 +28,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   Skeleton,
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
+  GameChatSidebar,
+  GameChatSheet,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -64,7 +62,6 @@ import { GameEmptyState } from './components/game-empty-state'
 import { WordsBoard } from './components/words-board'
 import { TileRack } from './components/tile-rack'
 import { ChatMessageList } from './components/chat-message-list'
-import { ChatInput } from './components/chat-input'
 import { MoveComposer } from './components/move-composer'
 import { useWordsHeaderModel } from './lib/header-model'
 import {
@@ -788,7 +785,7 @@ export function WordsGameView() {
                         <>
                           <IconButton
                             variant='ghost'
-                            className='md:hidden'
+                            className='lg:hidden'
                             onClick={() => setShowMobileChat(true)}
                             label={t`Open chat panel`}
                           >
@@ -897,7 +894,7 @@ export function WordsGameView() {
 
                       {/* Compact action bar — mobile only (composer lives in the right panel on md+) */}
                       {(pendingPlacements.length > 0 || exchangeMode) && (
-                        <div className="md:hidden flex items-center gap-2 pt-1">
+                        <div className="lg:hidden flex items-center gap-2 pt-1">
                           {exchangeMode ? (
                             <>
                               <Button variant="outline" size="sm" onClick={() => { setExchangeMode(false); setExchangeSelected(new Set()) }}>
@@ -939,44 +936,39 @@ export function WordsGameView() {
           </div>
 
           {/* Right: Chat sidebar */}
-          <div className="hidden md:flex w-72 lg:w-80 flex-col border-s">
-            <div className="border-b px-3 py-2">
-              <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
-            </div>
-            <ChatMessageList
-              key={selectedGameId}
-              messagesQuery={messagesQuery}
-              chatMessages={chatMessages}
-              isLoadingMessages={messagesQuery.isLoading}
-              messagesError={messagesQuery.error}
-              currentUserIdentity={myIdentity}
-            />
-            <ChatInput
-              newMessage={newMessage}
-              setNewMessage={setNewMessage}
-              onSendMessage={handleSendMessage}
-              isSending={sendMessageMutation.isPending}
-              errorMessage={
-                sendMessageMutation.error
-                  ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
-                  : null
-              }
-            />
-            {moveComposerSection}
-          </div>
+          <GameChatSidebar
+            className="hidden lg:flex w-72 xl:w-80"
+            title={<Trans>Chat</Trans>}
+            messageList={
+              <ChatMessageList
+                key={selectedGameId}
+                messagesQuery={messagesQuery}
+                chatMessages={chatMessages}
+                isLoadingMessages={messagesQuery.isLoading}
+                messagesError={messagesQuery.error}
+                currentUserIdentity={myIdentity}
+              />
+            }
+            newMessage={newMessage}
+            setNewMessage={setNewMessage}
+            onSendMessage={handleSendMessage}
+            isSending={sendMessageMutation.isPending}
+            sendErrorMessage={
+              sendMessageMutation.error
+                ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
+                : null
+            }
+            footer={moveComposerSection}
+          />
         </Main>
       </div>
 
       {/* Mobile chat sheet */}
-      <Sheet open={showMobileChat} onOpenChange={setShowMobileChat}>
-        <SheetContent
-          side="right"
-          className="flex flex-col p-0 w-80"
-          onOpenAutoFocus={(event) => event.preventDefault()}
-        >
-          <SheetHeader className="border-b px-3 py-2">
-            <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
-          </SheetHeader>
+      <GameChatSheet
+        open={showMobileChat}
+        onOpenChange={setShowMobileChat}
+        title={<Trans>Chat</Trans>}
+        messageList={
           <ChatMessageList
             key={selectedGameId}
             messagesQuery={messagesQuery}
@@ -985,20 +977,18 @@ export function WordsGameView() {
             messagesError={messagesQuery.error}
             currentUserIdentity={myIdentity}
           />
-          <ChatInput
-            newMessage={newMessage}
-            setNewMessage={setNewMessage}
-            onSendMessage={handleSendMessage}
-            isSending={sendMessageMutation.isPending}
-            errorMessage={
-              sendMessageMutation.error
-                ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
-                : null
-            }
-          />
-          {moveComposerSection}
-        </SheetContent>
-      </Sheet>
+        }
+        newMessage={newMessage}
+        setNewMessage={setNewMessage}
+        onSendMessage={handleSendMessage}
+        isSending={sendMessageMutation.isPending}
+        sendErrorMessage={
+          sendMessageMutation.error
+            ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
+            : null
+        }
+        footer={moveComposerSection}
+      />
 
       {/* Resign confirmation */}
       <ConfirmDialog
