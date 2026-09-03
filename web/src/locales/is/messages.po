@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Athugaðu nettenginguna og reyndu aftur."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " eða "
 
@@ -35,13 +35,9 @@ msgid "[not set]"
 msgstr "[ekki stillt]"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:99
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# leikmaður} other {# leikmenn}}"
-
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
-#~ msgid "{0, plural, one {# selected} other {# selected}}"
-#~ msgstr "{0, plural, one {# valið} other {# valin}}"
 
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
@@ -49,10 +45,6 @@ msgstr "{0, plural, one {# leikmaður} other {# leikmenn}}"
 #: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} á {1}{2}, smelltu til að fjarlægja"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:160
-#~ msgid "{0} option preview"
-#~ msgstr "Forskoðun á valkosti {0}"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -125,22 +117,6 @@ msgstr "{opponentName} bauð jafntefli"
 msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
 msgstr "{playerCount, plural, one {Spilað með # leikmanni} other {Spilað með # leikmönnum}}"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-#~ msgstr "{selectedCount, plural, one {{entityName} valið} other {{manyName} valin}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-#~ msgstr "{selectedCount, plural, one {# {entityName} valið. Tækjastika magnaðgerða er tiltæk.} other {# {manyName} valin. Tækjastika magnaðgerða er tiltæk.}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-#~ msgstr "{selectedCount, plural, one {# valin} other {# valin}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-#~ msgstr "{selectedCount, plural, one {Magnaðgerðir fyrir # valið {entityName}} other {Magnaðgerðir fyrir # valin {manyName}}}"
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -191,33 +167,21 @@ msgstr "Samþykkja"
 msgid "Access denied"
 msgstr "Aðgangi hafnað"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:16
-#~ msgid "Access Forbidden"
-#~ msgstr "Aðgangur bannaður"
-
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Aðgangsstig"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-#~ msgid "Account added"
-#~ msgstr "Reikningi bætt við"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-#~ msgid "Account removed"
-#~ msgstr "Reikningur fjarlægður"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "Tegund reiknings"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-#~ msgid "Account verified"
-#~ msgstr "Reikningur staðfestur"
-
-#: src/components/layout/words-layout.tsx:61
+#: src/components/layout/words-layout.tsx:45
 msgid "Active games"
 msgstr "Virkir leikir"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -245,10 +209,6 @@ msgstr "Bæta við aðgangi"
 msgid "Add account"
 msgstr "Bæta við reikningi"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-#~ msgid "Add an account to receive notifications and use services."
-#~ msgstr "Bæta við reikningi til að fá tilkynningar og nota þjónustur."
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "Bæta við myndatexta"
@@ -262,11 +222,11 @@ msgstr "Bæta við gátlistaratriði"
 msgid "Add field"
 msgstr "Bæta við sviði"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends"
 msgstr "Bæta við vinum"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:139
 msgid "Add friends in the People app to start playing"
 msgstr "Bættu við vinum í Fólk-forritinu til að byrja að spila"
 
@@ -274,13 +234,9 @@ msgstr "Bættu við vinum í Fólk-forritinu til að byrja að spila"
 msgid "Add item..."
 msgstr "Bæta við atriði..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Bæta við tengli"
-
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-#~ msgid "Add new account"
-#~ msgstr "Bæta við nýjum reikningi"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:215
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:220
@@ -293,10 +249,6 @@ msgstr "Bæta við valkosti"
 #: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "Bæta við merki..."
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-#~ msgid "Add team/app"
-#~ msgstr "Bæta við hópi/forriti"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -313,17 +265,9 @@ msgstr "Bæta við sýn"
 msgid "Adding..."
 msgstr "Bæti við..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:72
-#~ msgid "Adjust the appearance and layout to suit your preferences."
-#~ msgstr "Stilltu útlit og uppsetningu eftir þínum smekk."
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "Gervigreind"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-#~ msgid "All"
-#~ msgstr "Allt"
 
 #. placeholder {0}: entityLabel.toLowerCase()
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
@@ -364,6 +308,10 @@ msgstr "Allt sem er áskrifandi að þessari veitu hættir að fá hana. Þú ge
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Ertu viss um að þú viljir eyða „{0}“?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Ertu viss um að þú viljir eyða dálknum „{name}“? Þessu er ekki hægt að afturkalla."
@@ -376,13 +324,13 @@ msgstr "Ertu viss um að þú viljir eyða þessari athugasemd? Þetta mun einni
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ertu viss um að þú viljir skrá þig út? Þú þarft að skrá þig inn aftur til að komast að reikningnum þínum."
 
-#: src/features/words/index.tsx:1008
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
 msgid "Are you sure you want to resign?"
 msgstr "Ertu viss um að þú viljir gefast upp?"
 
-#: ../../../lib/web/src/components/data-table/column-header.tsx:59
-#~ msgid "Asc"
-#~ msgstr "Hækkandi"
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -426,16 +374,25 @@ msgstr "Til baka"
 msgid "Back to home"
 msgstr "Til baka á forsíðu"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Borði"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/words/components/tile-rack.tsx:85
 msgid "Blank tile"
 msgstr "Auð flís"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Lokað af"
 
@@ -444,7 +401,7 @@ msgstr "Lokað af"
 msgid "Blocked navigation to untrusted link"
 msgstr "Blokkaði leiðsögn á ótraustan tengil"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Lokar"
 
@@ -481,9 +438,9 @@ msgstr "Tilkynningar vafra"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:157
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:904
-#: src/features/words/index.tsx:1081
+#: src/features/words/components/new-game.tsx:143
+#: src/features/words/index.tsx:890
+#: src/features/words/index.tsx:1009
 msgid "Cancel"
 msgstr "Hætta við"
 
@@ -491,7 +448,7 @@ msgstr "Hætta við"
 msgid "Cancel comment"
 msgstr "Hætta við athugasemd"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Cancel exchange"
 msgstr "Hætta við skipti"
 
@@ -513,14 +470,9 @@ msgstr "Flokkur fyrir þessar tilkynningar"
 msgid "Change notification category"
 msgstr "Breyta flokki tilkynningar"
 
-#: src/features/words/index.tsx:944
-#: src/features/words/index.tsx:978
+#: src/features/words/index.tsx:930
 msgid "Chat"
 msgstr "Spjall"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-#~ msgid "Check \"All\" to see your past notifications."
-#~ msgstr "Veldu \"Allt\" til að sjá fyrri tilkynningar."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -538,35 +490,20 @@ msgstr "Gátlisti"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Veldu leik úr hliðarstikunni eða byrjaðu nýjan."
 
-#: src/features/words/index.tsx:1065
+#: src/features/words/index.tsx:993
 msgid "Choose a letter"
 msgstr "Veldu staf"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:329
-#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
-#~ msgstr "Veldu milli sjálfgefins útvíkkaðs, þétts (aðeins táknmyndir) eða fulls uppsetningarham"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:271
-#~ msgid "Choose between inset, floating, or standard sidebar layout"
-#~ msgstr "Veldu milli innskotinnar, fljótandi eða venjulegrar hliðarstiku"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:372
-#~ msgid "Choose between left-to-right or right-to-left site direction"
-#~ msgstr "Veldu milli stefnu vefsvæðis frá vinstri til hægri eða hægri til vinstri"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:227
-#~ msgid "Choose between system preference, light mode, or dark mode"
-#~ msgstr "Veldu milli kerfisstillingar, ljóss hams eða dökks hams"
-
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "Veldu tungumál"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:136
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Veldu andstæðinga <0>(1-3)</0>"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -580,26 +517,12 @@ msgstr "Hreinsa"
 msgid "Clear all"
 msgstr "Hreinsa allt"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-#~ msgid "Clear filters"
-#~ msgstr "Hreinsa síur"
-
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
 msgstr "Hreinsa leit"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-#~ msgid "Clear selection"
-#~ msgstr "Hreinsa val"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-#~ msgid "Clear selection (Escape)"
-#~ msgstr "Hreinsa val (Escape)"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -660,10 +583,6 @@ msgstr "Dálkar flokkast eftir"
 msgid "Comfortable"
 msgstr "Þægilegt"
 
-#: ../../../lib/web/src/components/coming-soon.tsx:12
-#~ msgid "Coming Soon!"
-#~ msgstr "Væntanlegt!"
-
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
 msgstr "Skipanaspjald"
@@ -678,11 +597,16 @@ msgstr "Aðgerðir athugasemdar"
 msgid "Comments"
 msgstr "Athugasemdir"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Þétt"
 
-#: src/components/layout/words-layout.tsx:62
+#: src/components/layout/words-layout.tsx:46
 msgid "Completed"
 msgstr "Lokið"
 
@@ -702,10 +626,6 @@ msgstr "Staðfesta"
 #: ../../../lib/web/src/lib/chat-ui.ts:18
 msgid "Connected"
 msgstr "Tengt"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-#~ msgid "Connected accounts"
-#~ msgstr "Tengdir reikningar"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -769,8 +689,8 @@ msgstr "Ekki tókst að staðfesta með þeim reikningi. Reyndu aftur."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "Búa til"
@@ -789,9 +709,9 @@ msgstr "Búa til nýtt atriði"
 msgid "Created"
 msgstr "Búið til"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:145
 msgid "Creating..."
 msgstr "Bý til..."
 
@@ -799,6 +719,7 @@ msgstr "Bý til..."
 msgid "Current location"
 msgstr "Núverandi staðsetning"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "Sérsniðið"
@@ -806,11 +727,6 @@ msgstr "Sérsniðið"
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "Dökkt"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:87
-#: ../../../lib/web/src/components/profile-dropdown.tsx:123
-#~ msgid "Dark mode"
-#~ msgstr "Dökkur hamur"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
@@ -824,9 +740,9 @@ msgstr "Dagsetning"
 msgid "Decline"
 msgstr "Hafna"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:311
-#~ msgid "Default"
-#~ msgstr "Sjálfgefið"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr "Sjálfgefið"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
@@ -845,7 +761,8 @@ msgstr "Sjálfgefin röðun"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/words/index.tsx:1037
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Eyða"
 
@@ -865,13 +782,19 @@ msgstr "Eyða athugasemd"
 msgid "Delete field"
 msgstr "Eyða sviði"
 
-#: src/features/words/index.tsx:847
+#: src/features/words/index.tsx:833
 msgid "Delete game"
 msgstr "Eyða leik"
 
-#: src/features/words/index.tsx:1028
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "Eyða leiknum?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -891,13 +814,9 @@ msgstr "Eyða sýn"
 msgid "Delete your account on the old server"
 msgstr "Eyddu reikningnum þínum á gamla þjóninum"
 
-#: src/features/words/index.tsx:1034
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "Eyði..."
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:63
-#~ msgid "Desc"
-#~ msgstr "Lækkandi"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -911,7 +830,7 @@ msgstr "Lýsing"
 msgid "Details Panel"
 msgstr "Smáatriðaspjald"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -921,10 +840,6 @@ msgstr "Smáatriðaspjald"
 #: ../../../lib/web/src/lib/preference-utils.ts:79
 msgid "Detect from web browser"
 msgstr "Greina út frá vafra"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:341
-#~ msgid "Direction"
-#~ msgstr "Stefna"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
@@ -953,6 +868,7 @@ msgid "Displays the mobile sidebar."
 msgstr "Sýnir hliðarstiku farsíma."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "Lokið"
@@ -967,7 +883,7 @@ msgstr "Hlaða niður"
 msgid "Download failed"
 msgstr "Niðurhal mistókst"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Tvítekur"
 
@@ -1032,13 +948,17 @@ msgstr "Auður reitur {0}{1}"
 msgid "Empty tile slot"
 msgstr "Autt flísapláss"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:23
 msgid "English (UK)"
 msgstr "Enska (UK)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:24
 msgid "English (US)"
 msgstr "Enska (US)"
+
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
@@ -1048,13 +968,17 @@ msgstr "Sláðu inn kóðann úr tölvupóstinum þínum"
 msgid "Enter your authenticator code"
 msgstr "Sláðu inn auðkenniskóðann þinn"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
+
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange"
 msgstr "Skipta"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange ({0})"
 msgstr "Skipta ({0})"
 
@@ -1062,7 +986,7 @@ msgstr "Skipta ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Skipta ({exchangeCount})"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Exchange tiles"
 msgstr "Skipta um flísar"
 
@@ -1085,31 +1009,27 @@ msgstr "Ytri slóð"
 msgid "Extra large"
 msgstr "Mjög stórt"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:225
-#~ msgid "Failed to add account"
-#~ msgstr "Tókst ekki að bæta við reikningi"
-
-#: ../../../lib/web/src/components/tag-input.tsx:39
-#~ msgid "Failed to add tag"
-#~ msgstr "Tókst ekki að bæta við merki"
-
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
 msgid "Failed to copy"
 msgstr "Tókst ekki að afrita"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:52
 msgid "Failed to create game"
 msgstr "Tókst ekki að búa til leik"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Tókst ekki að búa til tengil"
 
-#: src/features/words/index.tsx:371
+#: src/features/words/index.tsx:360
 msgid "Failed to create rematch"
 msgstr "Tókst ekki að búa til endurleik"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1119,15 +1039,15 @@ msgstr "Tókst ekki að eyða viðhengi"
 msgid "Failed to delete comment"
 msgstr "Tókst ekki að eyða athugasemd"
 
-#: src/features/words/index.tsx:382
+#: src/features/words/index.tsx:371
 msgid "Failed to delete game"
 msgstr "Tókst ekki að eyða leik"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Tókst ekki að eyða tengli"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:344
 msgid "Failed to exchange"
 msgstr "Tókst ekki að skipta"
 
@@ -1147,11 +1067,24 @@ msgstr "Tókst ekki að hlaða sögu"
 msgid "Failed to load image"
 msgstr "Ekki tókst að hlaða mynd"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Ekki tókst að hlaða myndskeið"
 
-#: src/features/words/index.tsx:345
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/words/index.tsx:334
 msgid "Failed to pass"
 msgstr "Tókst ekki að sleppa"
 
@@ -1159,11 +1092,11 @@ msgstr "Tókst ekki að sleppa"
 msgid "Failed to post comment"
 msgstr "Tókst ekki að senda athugasemd"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-#~ msgid "Failed to remove account"
-#~ msgstr "Tókst ekki að fjarlægja reikning"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:351
 msgid "Failed to resign"
 msgstr "Tókst ekki að gefast upp"
 
@@ -1171,46 +1104,53 @@ msgstr "Tókst ekki að gefast upp"
 msgid "Failed to revoke RSS access"
 msgstr "Ekki tókst að afturkalla RSS-aðgang"
 
-#: src/features/words/index.tsx:961
-#: src/features/words/index.tsx:995
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/words/index.tsx:947
 msgid "Failed to send"
 msgstr "Tókst ekki að senda"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-#~ msgid "Failed to send verification code"
-#~ msgstr "Tókst ekki að senda staðfestingarkóða"
-
-#: src/features/words/index.tsx:339
+#: src/features/words/index.tsx:328
 msgid "Failed to submit move"
 msgstr "Tókst ekki að senda leik"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "Tókst ekki að uppfæra athugasemd"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Tókst ekki að hlaða upp viðhengi"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Skrár"
 
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-#~ msgid "Filter..."
-#~ msgstr "Sía..."
-
 #: ../../../lib/web/src/components/restore-banner.tsx:97
 msgid "Finish moving your account"
 msgstr "Kláraðu að færa reikninginn þinn"
 
-#: src/features/words/index.tsx:189
+#: src/features/words/index.tsx:187
 msgid "First move must cover the central square"
 msgstr "Fyrsti leikur verður að ná yfir miðreitinn"
 
-#: src/features/words/index.tsx:190
+#: src/features/words/index.tsx:188
 msgid "First move must place at least 2 tiles"
 msgstr "Fyrsti leikur verður að leggja að minnsta kosti 2 stafi"
 
@@ -1221,10 +1161,6 @@ msgstr "Flögg"
 #: ../../../lib/web/src/lib/preference-utils.ts:111
 msgid "Flat"
 msgstr "Flatt"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:258
-#~ msgid "Floating"
-#~ msgstr "Fljótandi"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
@@ -1246,15 +1182,11 @@ msgstr "Frá"
 msgid "From theme"
 msgstr "Frá þema"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:321
-#~ msgid "Full layout"
-#~ msgstr "Full umgjörð"
-
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:48
 msgid "Game created"
 msgstr "Leikur búinn til"
 
-#: src/features/words/index.tsx:378
+#: src/features/words/index.tsx:367
 msgid "Game deleted"
 msgstr "Leik eytt"
 
@@ -1267,26 +1199,6 @@ msgstr "Leik lokið"
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Til baka"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:82
-#~ msgid "Go to first page"
-#~ msgstr "Fara á fyrstu síðu"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:128
-#~ msgid "Go to last page"
-#~ msgstr "Fara á síðustu síðu"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:119
-#~ msgid "Go to next page"
-#~ msgstr "Fara á næstu síðu"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:106
-#~ msgid "Go to page {pageNumber}"
-#~ msgstr "Fara á síðu {pageNumber}"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:91
-#~ msgid "Go to previous page"
-#~ msgstr "Fara á fyrri síðu"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -1304,14 +1216,6 @@ msgstr "Hópur: {0}"
 #: src/features/words/components/move-composer.tsx:75
 msgid "Has unknown words"
 msgstr "Inniheldur óþekkt orð"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:70
-#~ msgid "Hide"
-#~ msgstr "Fela"
-
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Hide password"
-#~ msgstr "Fela lykilorð"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1353,10 +1257,6 @@ msgstr "Upphafsstafaauðkenni"
 msgid "Initials avatar for {name}"
 msgstr "Upphafsstafaauðkenni fyrir {name}"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:253
-#~ msgid "Inset"
-#~ msgstr "Innfellt"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Áhugaefni"
@@ -1366,21 +1266,17 @@ msgid "Invalid date"
 msgstr "Ógild dagsetning"
 
 #: src/features/words/components/move-composer.tsx:72
-#: src/features/words/index.tsx:181
+#: src/features/words/index.tsx:179
 msgid "Invalid move"
 msgstr "Ógildur leikur"
-
-#: ../../../lib/web/src/components/tag-input.tsx:38
-#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-#~ msgstr "Ógilt merki: aðeins bókstafir, tölur, bil, bandstrik og skástrik (að hámarki 50 stafir)"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#~ msgid "Invalid verification code"
-#~ msgstr "Ógildur staðfestingarkóði"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Svo virðist sem síðan sem þú leitar að <0/>sé ekki til eða hafi verið fjarlægð."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
 
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
@@ -1390,7 +1286,7 @@ msgstr "Rétt í þessu"
 msgid "Keyboard shortcuts"
 msgstr "Flýtilyklar"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:115
 msgid "Language"
 msgstr "Tungumál"
 
@@ -1402,15 +1298,6 @@ msgstr "Stórt"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:306
 msgid "Layout"
 msgstr "Umgjörð"
-
-#: ../../../lib/web/src/components/learn-more.tsx:33
-#: ../../../lib/web/src/components/learn-more.tsx:38
-#~ msgid "Learn more"
-#~ msgstr "Læra meira"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:355
-#~ msgid "Left to Right"
-#~ msgstr "Vinstri til hægri"
 
 #: ../../../lib/web/src/components/post-tags.tsx:72
 msgid "Letters, numbers, spaces, and hyphens only"
@@ -1424,7 +1311,7 @@ msgstr "Ljóst"
 msgid "Link"
 msgstr "Tengill"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Tenglar"
 
@@ -1439,6 +1326,14 @@ msgstr "Hlaða meiru"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Hleð inn efni…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1466,10 +1361,6 @@ msgstr "Útskrái…"
 msgid "Manage categories"
 msgstr "Stjórna flokkum"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-#~ msgid "Manage your connected accounts for notifications and services."
-#~ msgstr "Sýslaðu með tengda reikninga þína fyrir tilkynningar og þjónustur."
-
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "Handvirkt"
@@ -1479,7 +1370,7 @@ msgstr "Handvirkt"
 msgid "Mark all as read"
 msgstr "Merkja allt sem lesið"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:69
 msgid "Maximum 3 opponents"
 msgstr "Hámark 3 andstæðingar"
 
@@ -1549,15 +1440,15 @@ msgstr "Nafn má ekki vera lengra en 1000 stafir"
 msgid "Network error"
 msgstr "Netvilla"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Nýtt"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/words-layout.tsx:63
-#: src/features/words/components/new-game.tsx:115
+#: src/components/layout/words-layout.tsx:47
+#: src/features/words/components/new-game.tsx:133
 msgid "New game"
 msgstr "Nýr leikur"
 
@@ -1566,7 +1457,7 @@ msgstr "Nýr leikur"
 msgid "Next image"
 msgstr "Næsta mynd"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "Engin {parentClassNames} til að bæta við"
 
@@ -1582,15 +1473,11 @@ msgstr "Engin virkni ennþá"
 msgid "No comments yet"
 msgstr "Engar athugasemdir ennþá"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-#~ msgid "No connected accounts"
-#~ msgstr "Engir tengdir reikningar"
-
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:142
 msgid "No friends found"
 msgstr "Engir vinir fundust"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:138
 msgid "No friends yet"
 msgstr "Engir vinir ennþá"
 
@@ -1602,21 +1489,17 @@ msgstr "Engir leikir ennþá"
 msgid "No groups available"
 msgstr "Engir hópar tiltækir"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Engir samsvarandi hlutir"
 
 #: src/features/words/components/chat-message-list.tsx:42
 msgid "No messages yet"
 msgstr "Engin skilaboð ennþá"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "No notifications yet"
-#~ msgstr "Engar tilkynningar enn"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:341
 #: ../../../lib/web/src/components/person-picker.tsx:84
@@ -1626,10 +1509,6 @@ msgstr "Engir notendur fundust"
 #: ../../../lib/web/src/components/place-picker.tsx:133
 msgid "No places found"
 msgstr "Engir staðir fundust"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:58
-#~ msgid "No profile"
-#~ msgstr "Engin síða"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
@@ -1646,7 +1525,7 @@ msgstr "Engar niðurstöður fundust."
 msgid "No status"
 msgstr "Engin staða"
 
-#: src/features/words/index.tsx:184
+#: src/features/words/index.tsx:182
 msgid "No tiles placed"
 msgstr "Engir stafir lagðir"
 
@@ -1666,7 +1545,7 @@ msgstr "Engar ólesnar tilkynningar"
 msgid "No users found"
 msgstr "Engir notendur fundust"
 
-#: src/features/words/index.tsx:192
+#: src/features/words/index.tsx:190
 msgid "No valid words formed"
 msgstr "Engin gild orð mynduð"
 
@@ -1675,9 +1554,13 @@ msgid "No views"
 msgstr "Engar skoðanir"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1707,14 +1590,6 @@ msgstr "Ekki stillt"
 msgid "Nothing found"
 msgstr "Ekkert fundið"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:136
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:150
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:236
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:257
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-#~ msgid "Notifications"
-#~ msgstr "Tilkynningar"
-
 #. placeholder {0}: unread.length
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:200
 msgid "Notifications: {0}"
@@ -1734,21 +1609,16 @@ msgstr "Kveikt"
 msgid "Oops! Page Not Found!"
 msgstr "Úps! Síða fannst ekki!"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:156
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-#~ msgid "Open account actions"
-#~ msgstr "Opna reikningsaðgerðir"
-
 #: ../../../lib/web/src/components/layout/nav-group.tsx:199
 #: ../../../lib/web/src/components/layout/nav-group.tsx:204
 msgid "Open actions"
 msgstr "Opna aðgerðir"
 
-#: src/features/words/index.tsx:793
+#: src/features/words/index.tsx:779
 msgid "Open chat panel"
 msgstr "Opna spjallspjald"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:787
 msgid "Open game actions"
 msgstr "Opna leikjaaðgerðir"
 
@@ -1761,11 +1631,6 @@ msgstr "Opna valmynd"
 msgid "Open navigation"
 msgstr "Opna leiðsögn"
 
-#: ../../../lib/web/src/components/layout/top-nav.tsx:38
-#: ../../../lib/web/src/components/layout/top-nav.tsx:44
-#~ msgid "Open navigation menu"
-#~ msgstr "Opna leiðsögnarvalmynd"
-
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:105
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:111
 msgid "Open option actions"
@@ -1774,11 +1639,6 @@ msgstr "Opna valkostsaðgerðir"
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:30
 msgid "Open selected card"
 msgstr "Opna valið spjald"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:58
-#: ../../../lib/web/src/components/config-drawer.tsx:66
-#~ msgid "Open theme settings"
-#~ msgstr "Opna þemastillingar"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:274
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:279
@@ -1812,16 +1672,12 @@ msgstr "Annað"
 msgid "Owner"
 msgstr "Eigandi"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:43
-#: ../../../lib/web/src/components/data-table/pagination.tsx:71
-#~ msgid "Page {currentPage} of {totalPages}"
-#~ msgstr "Síða {currentPage} af {totalPages}"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "Foreldri"
 
-#: src/features/words/index.tsx:819
+#: src/features/words/index.tsx:805
 msgid "Pass"
 msgstr "Pass"
 
@@ -1841,11 +1697,7 @@ msgstr "Aðgangslyklar"
 msgid "Pattern (regex)"
 msgstr "Mynstur (regex)"
 
-#: ../../../lib/web/src/components/date-picker.tsx:20
-#~ msgid "Pick a date"
-#~ msgstr "Veldu dagsetningu"
-
-#: src/features/words/index.tsx:185
+#: src/features/words/index.tsx:183
 msgid "Placement out of bounds"
 msgstr "Staðsetning utan borðs"
 
@@ -1863,7 +1715,7 @@ msgstr "Athugaðu nettenginguna og reyndu aftur."
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Skráðu þig inn með viðeigandi auðkennum <0/> til að fá aðgang að þessu efni."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:65
 msgid "Please select at least one friend"
 msgstr "Veldu að minnsta kosti einn vin"
 
@@ -1897,13 +1749,17 @@ msgstr "Friðhelgi"
 msgid "Processing…"
 msgstr "Í vinnslu…"
 
-#: ../../../lib/web/src/components/profile-dropdown.tsx:114
-#~ msgid "Profile"
-#~ msgstr "Síða"
-
 #: ../../../lib/web/src/components/person-picker.tsx:200
 msgid "Project members"
 msgstr "Meðlimir verkefnis"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
@@ -1926,7 +1782,7 @@ msgid "Ready"
 msgstr "Tilbúið"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:916
+#: src/features/words/index.tsx:902
 msgid "Recall"
 msgstr "Innkalla"
 
@@ -1947,7 +1803,7 @@ msgstr "Áframsendi á innskráningu."
 msgid "Reduce interest"
 msgstr "Minnka áhuga"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Tengist"
 
@@ -1959,7 +1815,7 @@ msgstr "Afstætt (5 mín, 3 klst, 2 d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Afstætt innan 24 klst, annars algjört"
 
-#: src/features/words/index.tsx:844
+#: src/features/words/index.tsx:830
 msgid "Rematch"
 msgstr "Endurleikur"
 
@@ -1999,8 +1855,8 @@ msgstr "Fjarlægja áhuga"
 msgid "Remove item"
 msgstr "Fjarlægja atriði"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Fjarlægja tengil"
 
@@ -2035,30 +1891,16 @@ msgstr "Nauðsynlegt"
 msgid "Resend email"
 msgstr "Senda tölvupóst aftur"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:87
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-#~ msgid "Reset"
-#~ msgstr "Endurstilla"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:122
-#: ../../../lib/web/src/components/config-drawer.tsx:127
-#~ msgid "Reset {title}"
-#~ msgstr "Endurstilla {title}"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:85
-#~ msgid "Reset all settings to default values"
-#~ msgstr "Endurstilla allar stillingar á sjálfgefin gildi"
-
-#: src/features/words/index.tsx:835
-#: src/features/words/index.tsx:1016
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/words/index.tsx:821
 msgid "Resign"
 msgstr "Gefast upp"
 
-#: src/features/words/index.tsx:1007
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "Gefast upp í leik?"
 
-#: src/features/words/index.tsx:1013
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "Gefst upp..."
 
@@ -2078,10 +1920,6 @@ msgstr "Afturkalla aðgang"
 msgid "Revoke RSS access?"
 msgstr "Afturkalla RSS-aðgang?"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:362
-#~ msgid "Right to Left"
-#~ msgstr "Hægri til vinstri"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:150
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:168
 msgid "Rows"
@@ -2090,10 +1928,6 @@ msgstr "Raðir"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:373
 msgid "Rows group by"
 msgstr "Raðir flokkaðar eftir"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:65
-#~ msgid "Rows per page"
-#~ msgstr "Raðir á síðu"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2111,13 +1945,19 @@ msgstr "RSS-vefslóð afrituð á klippiborð"
 msgid "Saturday"
 msgstr "Laugardagur"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "Vista"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -2146,7 +1986,7 @@ msgstr "Leita að áfangastað..."
 msgid "Search for origin..."
 msgstr "Leita að upphafsstað..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Leita að hlutum..."
 
@@ -2179,10 +2019,6 @@ msgstr "Leita..."
 msgid "Select"
 msgstr "Velja"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:149
-#~ msgid "Select {0}"
-#~ msgstr "Velja {0}"
-
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:356
 msgid "Select a field"
 msgstr "Veldu reit"
@@ -2199,25 +2035,17 @@ msgstr "Veldu notanda, hóp eða aðra reglu til að veita aðgang."
 msgid "Select access rule"
 msgstr "Veldu aðgangsreglu"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-#~ msgid "Select account"
-#~ msgstr "Veldu reikning"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
 msgstr "Veldu reikningstegund"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:141
 msgid "Select friends..."
 msgstr "Veldu vini..."
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:231
 msgid "Select group"
 msgstr "Veldu hóp"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:305
-#~ msgid "Select layout style"
-#~ msgstr "Veldu uppsetningarstíl"
 
 #: ../../../lib/web/src/components/place-picker.tsx:49
 msgid "Select location"
@@ -2235,26 +2063,10 @@ msgstr "Veldu einstakling..."
 msgid "Select previous card"
 msgstr "Velja fyrra spjald"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:247
-#~ msgid "Select sidebar style"
-#~ msgstr "Veldu stíl hliðarstiku"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:349
-#~ msgid "Select site direction"
-#~ msgstr "Veldu stefnu vefsvæðis"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:203
-#~ msgid "Select theme preference"
-#~ msgstr "Veldu þemastillingu"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:257
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:340
 msgid "Select..."
 msgstr "Velja..."
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-#~ msgid "selected"
-#~ msgstr "valin"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2310,10 +2122,6 @@ msgstr "Sýna flokka"
 msgid "Show fields"
 msgstr "Sýna reiti"
 
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Show password"
-#~ msgstr "Sýna lykilorð"
-
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
 msgstr "Sýna þessa hjálp"
@@ -2322,7 +2130,7 @@ msgstr "Sýna þessa hjálp"
 msgid "Showing {totalShown} of {total}"
 msgstr "Sýni {totalShown} af {total}"
 
-#: src/features/words/index.tsx:811
+#: src/features/words/index.tsx:797
 msgid "Shuffle rack"
 msgstr "Stokka grind"
 
@@ -2344,10 +2152,6 @@ msgstr "Skrái út..."
 msgid "Single line of text only"
 msgstr "Aðeins ein lína af texta"
 
-#: ../../../lib/web/src/components/skip-to-main.tsx:11
-#~ msgid "Skip to Main"
-#~ msgstr "Fara í aðalefni"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:101
 #: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
@@ -2365,15 +2169,15 @@ msgstr "Uppruni"
 msgid "Spacious"
 msgstr "Rúmgott"
 
-#: src/features/words/index.tsx:186
+#: src/features/words/index.tsx:184
 msgid "Square already occupied"
 msgstr "Reiturinn er þegar upptekinn"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:134
 msgid "Start a new Words game"
 msgstr "Hefja nýjan Words-leik"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:144
 msgid "Start game"
 msgstr "Hefja leik"
 
@@ -2381,16 +2185,17 @@ msgstr "Hefja leik"
 msgid "Start the discussion by adding the first comment."
 msgstr "Hefjaðu umræðuna með því að bæta við fyrstu athugasemdinni."
 
-#: ../../../lib/web/src/components/coming-soon.tsx:15
-#~ msgid "Stay tuned though!"
-#~ msgstr "En haltu áfram að fylgjast með!"
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Efni"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:928
+#: src/features/words/index.tsx:914
 msgid "Submit"
 msgstr "Senda"
 
@@ -2422,10 +2227,6 @@ msgstr "Skipta yfir í sýn 1-9"
 msgid "System"
 msgstr "Kerfi"
 
-#: ../../../lib/web/src/components/tag-input.tsx:95
-#~ msgid "Tag"
-#~ msgstr "Merki"
-
 #: ../../../lib/web/src/components/post-tags.tsx:76
 msgid "Tag already exists"
 msgstr "Merki er þegar til"
@@ -2438,10 +2239,6 @@ msgstr "Merkið má mest vera 50 stafir"
 #: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "Merki"
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-#~ msgid "Teams/Apps"
-#~ msgstr "Teymi/Forrit"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2473,23 +2270,7 @@ msgstr "Umbeðið efni fannst ekki."
 msgid "The server returned a web page instead of data."
 msgstr "Þjónninn skilaði vefsíðu í stað gagna."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-#~ msgid "The site is not available at the moment."
-#~ msgstr "Vefurinn er ekki tiltækur í augnablikinu."
-
-#: ../../../lib/web/src/components/config-drawer.tsx:195
-#~ msgid "Theme"
-#~ msgstr "Þema"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:70
-#~ msgid "Theme Settings"
-#~ msgstr "Þemastillingar"
-
-#: ../../../lib/web/src/components/coming-soon.tsx:14
-#~ msgid "This page has not been created yet."
-#~ msgstr "Þessi síða hefur ekki verið búin til enn."
-
-#: src/features/words/index.tsx:1029
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Þetta eyðir leiknum og spjallinu varanlega. Ekki er hægt að afturkalla þessa aðgerð."
 
@@ -2501,30 +2282,21 @@ msgstr "Fimmtudagur"
 msgid "Tiles left"
 msgstr "Flísar eftir"
 
-#: src/features/words/index.tsx:188
+#: src/features/words/index.tsx:186
 msgid "Tiles must be contiguous (no gaps)"
 msgstr "Stafir verða að liggja saman (engin eyða)"
 
-#: src/features/words/index.tsx:187
+#: src/features/words/index.tsx:185
 msgid "Tiles must be placed in a single row or column"
 msgstr "Stafir verða að liggja í einni röð eða dálki"
 
-#: src/features/words/index.tsx:191
+#: src/features/words/index.tsx:189
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Stafir verða að tengjast stöfum sem fyrir eru á borðinu"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:220
 msgid "To"
 msgstr "Til"
-
-#: ../../../lib/web/src/components/data-table/view-options.tsx:37
-#~ msgid "Toggle columns"
-#~ msgstr "Skipta um dálka"
-
-#: ../../../lib/web/src/components/layout/right-panel.tsx:233
-#: ../../../lib/web/src/components/layout/right-panel.tsx:236
-#~ msgid "Toggle right panel"
-#~ msgstr "Skipta hægra spjaldi"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:365
 #: ../../../lib/web/src/components/layout/nav-group.tsx:372
@@ -2542,11 +2314,6 @@ msgstr "Skipta hliðarstiku"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle Sidebar"
 msgstr "Skipta um hliðarstiku"
-
-#: ../../../lib/web/src/components/theme-switch.tsx:37
-#: ../../../lib/web/src/components/theme-switch.tsx:41
-#~ msgid "Toggle theme"
-#~ msgstr "Skipta um þema"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2642,22 +2409,17 @@ msgstr "Óþekkt"
 msgid "Unsubscribe"
 msgstr "Afskrá áskrift"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Án titils"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-#~ msgid "Unverified"
-#~ msgstr "Óstaðfest"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
 msgid "Updated"
 msgstr "Uppfært"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Hlaða upp"
@@ -2684,17 +2446,13 @@ msgstr "Staðfesting ótengd"
 msgid "Validation offline — you can still submit."
 msgstr "Staðfesting án nettengingar — þú getur samt sent inn."
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Sannprófunarkóði"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-#~ msgid "Verification code sent"
-#~ msgstr "Sannprófunarkóði sendur"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#~ msgid "Verification failed"
-#~ msgstr "Sannprófun mistókst"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:391
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
@@ -2714,18 +2472,14 @@ msgstr "Smámynd myndbands"
 msgid "Video viewer: {0}"
 msgstr "Myndskeiðaskoðari: {0}"
 
-#: ../../../lib/web/src/components/data-table/view-options.tsx:33
-#~ msgid "View"
-#~ msgstr "Skoða"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-#~ msgid "View all"
-#~ msgstr "Skoða allt"
-
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:220
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:228
 msgid "View all notifications"
 msgstr "Skoða allar tilkynningar"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
@@ -2738,6 +2492,11 @@ msgstr "Bíður eftir kubbum"
 #: src/features/words/components/move-composer.tsx:70
 msgid "Waiting for your turn"
 msgstr "Bíður eftir þínum leik"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2753,24 +2512,12 @@ msgstr "Aðeins það sem fylgst er með"
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
 msgstr "Við sendum staðfestingarkóða á <0>{0}</0>. Sláðu inn kóðann hér að neðan til að staðfesta netfangið þitt."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-#~ msgid "We'll be back online shortly."
-#~ msgstr "Við verðum aftur tengd fljótlega."
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-#~ msgid "We'll notify you when something important happens."
-#~ msgstr "Við látum þig vita þegar eitthvað mikilvægt gerist."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-#~ msgid "Website is under maintenance!"
-#~ msgstr "Vefsvæðið er í viðhaldi!"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
 msgstr "Miðvikudagur"
 
-#: src/features/words/index.tsx:83
-#: src/features/words/index.tsx:717
+#: src/features/words/index.tsx:81
+#: src/features/words/index.tsx:705
 msgid "Words"
 msgstr "Orð"
 
@@ -2789,10 +2536,6 @@ msgstr "Þú"
 msgid "You do not have access to this section."
 msgstr "Þú hefur ekki aðgang að þessum hluta."
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:18
-#~ msgid "You don't have necessary permission <0/>to view this resource."
-#~ msgstr "Þú hefur ekki nauðsynlega heimild <0/>til að skoða þetta efni."
-
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
 msgstr "Þú gafst upp"
@@ -2800,10 +2543,6 @@ msgstr "Þú gafst upp"
 #: src/features/words/lib/header-model.ts:129
 msgid "You win!"
 msgstr "Þú vannst!"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "You're all caught up!"
-#~ msgstr "Þú hefur séð allt!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

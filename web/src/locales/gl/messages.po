@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Comproba a túa conexión a internet e téntao de novo."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " ou "
 
@@ -35,13 +35,9 @@ msgid "[not set]"
 msgstr "[non establecido]"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:99
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# xogador} other {# xogadores}}"
-
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
-#~ msgid "{0, plural, one {# selected} other {# selected}}"
-#~ msgstr "{0, plural, one {# seleccionado} other {# seleccionados}}"
 
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
@@ -49,10 +45,6 @@ msgstr "{0, plural, one {# xogador} other {# xogadores}}"
 #: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} en {1}{2}, fai clic para eliminar"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:160
-#~ msgid "{0} option preview"
-#~ msgstr "Vista previa da opción {0}"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -125,22 +117,6 @@ msgstr "{opponentName} ofreceu un empate"
 msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
 msgstr "{playerCount, plural, one {Xogando con # xogador} other {Xogando con # xogadores}}"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-#~ msgstr "{selectedCount, plural, one {{entityName} seleccionado} other {{manyName} seleccionados}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-#~ msgstr "{selectedCount, plural, one {# {entityName} seleccionado. A barra de accións masivas está dispoñible.} other {# {manyName} seleccionados. A barra de accións masivas está dispoñible.}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-#~ msgstr "{selectedCount, plural, one {# seleccionados} other {# seleccionados}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-#~ msgstr "{selectedCount, plural, one {Accións masivas para # {entityName} seleccionado} other {Accións masivas para # {manyName} seleccionados}}"
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -191,33 +167,21 @@ msgstr "Aceptar"
 msgid "Access denied"
 msgstr "Acceso denegado"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:16
-#~ msgid "Access Forbidden"
-#~ msgstr "Acceso prohibido"
-
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Nivel de acceso"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-#~ msgid "Account added"
-#~ msgstr "Conta engadida"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-#~ msgid "Account removed"
-#~ msgstr "Conta eliminada"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "Tipo de conta"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-#~ msgid "Account verified"
-#~ msgstr "Conta verificada"
-
-#: src/components/layout/words-layout.tsx:61
+#: src/components/layout/words-layout.tsx:45
 msgid "Active games"
 msgstr "Partidas activas"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -245,10 +209,6 @@ msgstr "Engadir acceso"
 msgid "Add account"
 msgstr "Engadir conta"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-#~ msgid "Add an account to receive notifications and use services."
-#~ msgstr "Engade unha conta para recibir notificacións e usar servizos."
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "Engadir lenda"
@@ -262,11 +222,11 @@ msgstr "Engadir elemento da lista"
 msgid "Add field"
 msgstr "Engadir campo"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends"
 msgstr "Engadir amizades"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:139
 msgid "Add friends in the People app to start playing"
 msgstr "Engade amizades na aplicación Persoas para comezar a xogar"
 
@@ -274,13 +234,9 @@ msgstr "Engade amizades na aplicación Persoas para comezar a xogar"
 msgid "Add item..."
 msgstr "Engadir elemento..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Engadir ligazón"
-
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-#~ msgid "Add new account"
-#~ msgstr "Engadir nova conta"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:215
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:220
@@ -293,10 +249,6 @@ msgstr "Engadir opción"
 #: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "Engadir etiqueta..."
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-#~ msgid "Add team/app"
-#~ msgstr "Engadir equipo/aplicación"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -313,17 +265,9 @@ msgstr "Engadir vista"
 msgid "Adding..."
 msgstr "Engadindo..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:72
-#~ msgid "Adjust the appearance and layout to suit your preferences."
-#~ msgstr "Axusta a aparencia e o deseño á túa preferencia."
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "IA"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-#~ msgid "All"
-#~ msgstr "Todos"
 
 #. placeholder {0}: entityLabel.toLowerCase()
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
@@ -364,6 +308,10 @@ msgstr "Todo o subscrito a esta fonte deixará de recibila. Despois podes copiar
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Seguro que queres eliminar \"{0}\"?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Seguro que queres eliminar a columna \"{name}\"? Isto non se pode desfacer."
@@ -376,13 +324,13 @@ msgstr "Seguro que queres eliminar este comentario? Isto tamén eliminará todas
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Seguro que queres pechar a sesión? Terás que iniciar sesión de novo para acceder á túa conta."
 
-#: src/features/words/index.tsx:1008
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
 msgid "Are you sure you want to resign?"
 msgstr "Seguro que queres renderte?"
 
-#: ../../../lib/web/src/components/data-table/column-header.tsx:59
-#~ msgid "Asc"
-#~ msgstr "Asc"
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -426,16 +374,25 @@ msgstr "Atrás"
 msgid "Back to home"
 msgstr "Volver ao inicio"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Báner"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/words/components/tile-rack.tsx:85
 msgid "Blank tile"
 msgstr "Peza en branco"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Bloqueado por"
 
@@ -444,7 +401,7 @@ msgstr "Bloqueado por"
 msgid "Blocked navigation to untrusted link"
 msgstr "Navegación bloqueada a unha ligazón non fiable"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Bloques"
 
@@ -481,9 +438,9 @@ msgstr "Notificacións do navegador"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:157
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:904
-#: src/features/words/index.tsx:1081
+#: src/features/words/components/new-game.tsx:143
+#: src/features/words/index.tsx:890
+#: src/features/words/index.tsx:1009
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -491,7 +448,7 @@ msgstr "Cancelar"
 msgid "Cancel comment"
 msgstr "Cancelar comentario"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Cancel exchange"
 msgstr "Cancelar intercambio"
 
@@ -513,14 +470,9 @@ msgstr "Categoría destas notificacións"
 msgid "Change notification category"
 msgstr "Cambiar categoría de notificación"
 
-#: src/features/words/index.tsx:944
-#: src/features/words/index.tsx:978
+#: src/features/words/index.tsx:930
 msgid "Chat"
 msgstr "Chat"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-#~ msgid "Check \"All\" to see your past notifications."
-#~ msgstr "Marca «Todo» para ver as túas notificacións anteriores."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -538,35 +490,20 @@ msgstr "Lista de comprobación"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Escolle unha partida da barra lateral ou inicia unha nova."
 
-#: src/features/words/index.tsx:1065
+#: src/features/words/index.tsx:993
 msgid "Choose a letter"
 msgstr "Escolle unha letra"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:329
-#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
-#~ msgstr "Escolle entre modo predeterminado expandido, compacto só con iconas, ou modo de deseño completo"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:271
-#~ msgid "Choose between inset, floating, or standard sidebar layout"
-#~ msgstr "Escolle entre barra lateral inserida, flotante ou estándar"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:372
-#~ msgid "Choose between left-to-right or right-to-left site direction"
-#~ msgstr "Escolle entre dirección do sitio de esquerda a dereita ou de dereita a esquerda"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:227
-#~ msgid "Choose between system preference, light mode, or dark mode"
-#~ msgstr "Escolle entre preferencia do sistema, modo claro ou modo escuro"
-
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "Escoller idioma"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:136
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Escolle oponentes <0>(1-3)</0>"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -580,26 +517,12 @@ msgstr "Borrar"
 msgid "Clear all"
 msgstr "Borrar todo"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-#~ msgid "Clear filters"
-#~ msgstr "Borrar filtros"
-
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
 msgstr "Borrar busca"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-#~ msgid "Clear selection"
-#~ msgstr "Borrar selección"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-#~ msgid "Clear selection (Escape)"
-#~ msgstr "Borrar selección (Escape)"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -660,10 +583,6 @@ msgstr "As columnas agrúpanse por"
 msgid "Comfortable"
 msgstr "Cómodo"
 
-#: ../../../lib/web/src/components/coming-soon.tsx:12
-#~ msgid "Coming Soon!"
-#~ msgstr "Próximamente!"
-
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
 msgstr "Paleta de comandos"
@@ -678,11 +597,16 @@ msgstr "Accións do comentario"
 msgid "Comments"
 msgstr "Comentarios"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Compacto"
 
-#: src/components/layout/words-layout.tsx:62
+#: src/components/layout/words-layout.tsx:46
 msgid "Completed"
 msgstr "Completado"
 
@@ -702,10 +626,6 @@ msgstr "Confirmar"
 #: ../../../lib/web/src/lib/chat-ui.ts:18
 msgid "Connected"
 msgstr "Conectado"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-#~ msgid "Connected accounts"
-#~ msgstr "Contas conectadas"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -769,8 +689,8 @@ msgstr "Non se puido verificar con esa conta. Téntao de novo."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "Crear"
@@ -789,9 +709,9 @@ msgstr "Crear novo elemento"
 msgid "Created"
 msgstr "Creado"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:145
 msgid "Creating..."
 msgstr "Creando..."
 
@@ -799,6 +719,7 @@ msgstr "Creando..."
 msgid "Current location"
 msgstr "Localización actual"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "Personalizado"
@@ -806,11 +727,6 @@ msgstr "Personalizado"
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "Escuro"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:87
-#: ../../../lib/web/src/components/profile-dropdown.tsx:123
-#~ msgid "Dark mode"
-#~ msgstr "Modo escuro"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
@@ -824,9 +740,9 @@ msgstr "Data"
 msgid "Decline"
 msgstr "Rexeitar"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:311
-#~ msgid "Default"
-#~ msgstr "Predeterminado"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr "Predeterminado"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
@@ -845,7 +761,8 @@ msgstr "Orde predeterminada"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/words/index.tsx:1037
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -865,13 +782,19 @@ msgstr "Eliminar comentario"
 msgid "Delete field"
 msgstr "Eliminar campo"
 
-#: src/features/words/index.tsx:847
+#: src/features/words/index.tsx:833
 msgid "Delete game"
 msgstr "Eliminar partida"
 
-#: src/features/words/index.tsx:1028
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "Eliminar a partida?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -891,13 +814,9 @@ msgstr "Eliminar vista"
 msgid "Delete your account on the old server"
 msgstr "Elimina a túa conta no servidor antigo"
 
-#: src/features/words/index.tsx:1034
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "Eliminando..."
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:63
-#~ msgid "Desc"
-#~ msgstr "Desc"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -911,7 +830,7 @@ msgstr "Descrición"
 msgid "Details Panel"
 msgstr "Panel de detalles"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -921,10 +840,6 @@ msgstr "Panel de detalles"
 #: ../../../lib/web/src/lib/preference-utils.ts:79
 msgid "Detect from web browser"
 msgstr "Detectar do navegador web"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:341
-#~ msgid "Direction"
-#~ msgstr "Dirección"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
@@ -953,6 +868,7 @@ msgid "Displays the mobile sidebar."
 msgstr "Mostra a barra lateral móbil."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "Feito"
@@ -967,7 +883,7 @@ msgstr "Descargar"
 msgid "Download failed"
 msgstr "Fallou a descarga"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Duplicados"
 
@@ -1032,13 +948,17 @@ msgstr "Cadrado baleiro {0}{1}"
 msgid "Empty tile slot"
 msgstr "Espazo de ficha baleiro"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:23
 msgid "English (UK)"
 msgstr "Inglés (RU)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:24
 msgid "English (US)"
 msgstr "Inglés (EUA)"
+
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
@@ -1048,13 +968,17 @@ msgstr "Introduce o código do teu correo"
 msgid "Enter your authenticator code"
 msgstr "Introduce o código do autenticador"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
+
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange"
 msgstr "Intercambiar"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange ({0})"
 msgstr "Intercambiar ({0})"
 
@@ -1062,7 +986,7 @@ msgstr "Intercambiar ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Intercambiar ({exchangeCount})"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Exchange tiles"
 msgstr "Intercambiar fichas"
 
@@ -1085,31 +1009,27 @@ msgstr "URL externo"
 msgid "Extra large"
 msgstr "Extra grande"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:225
-#~ msgid "Failed to add account"
-#~ msgstr "Non se puido engadir a conta"
-
-#: ../../../lib/web/src/components/tag-input.tsx:39
-#~ msgid "Failed to add tag"
-#~ msgstr "Non se puido engadir a etiqueta"
-
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
 msgid "Failed to copy"
 msgstr "Non se puido copiar"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:52
 msgid "Failed to create game"
 msgstr "Non se puido crear a partida"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Non se puido crear a ligazón"
 
-#: src/features/words/index.tsx:371
+#: src/features/words/index.tsx:360
 msgid "Failed to create rematch"
 msgstr "Non se puido crear a revancha"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1119,15 +1039,15 @@ msgstr "Non se puido eliminar o anexo"
 msgid "Failed to delete comment"
 msgstr "Non se puido eliminar o comentario"
 
-#: src/features/words/index.tsx:382
+#: src/features/words/index.tsx:371
 msgid "Failed to delete game"
 msgstr "Non se puido eliminar a partida"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Non se puido eliminar a ligazón"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:344
 msgid "Failed to exchange"
 msgstr "Non se puido intercambiar"
 
@@ -1147,11 +1067,24 @@ msgstr "Non se puido cargar o historial"
 msgid "Failed to load image"
 msgstr "Non se puido cargar a imaxe"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Non se puido cargar o vídeo"
 
-#: src/features/words/index.tsx:345
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/words/index.tsx:334
 msgid "Failed to pass"
 msgstr "Non se puido pasar"
 
@@ -1159,11 +1092,11 @@ msgstr "Non se puido pasar"
 msgid "Failed to post comment"
 msgstr "Non se puido publicar o comentario"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-#~ msgid "Failed to remove account"
-#~ msgstr "Non se puido eliminar a conta"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:351
 msgid "Failed to resign"
 msgstr "Non se puido renunciar"
 
@@ -1171,46 +1104,53 @@ msgstr "Non se puido renunciar"
 msgid "Failed to revoke RSS access"
 msgstr "Non se puido revogar o acceso RSS"
 
-#: src/features/words/index.tsx:961
-#: src/features/words/index.tsx:995
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/words/index.tsx:947
 msgid "Failed to send"
 msgstr "Non se puido enviar"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-#~ msgid "Failed to send verification code"
-#~ msgstr "Non se puido enviar o código de verificación"
-
-#: src/features/words/index.tsx:339
+#: src/features/words/index.tsx:328
 msgid "Failed to submit move"
 msgstr "Non se puido enviar o movemento"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "Non se puido actualizar o comentario"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Non se puido subir o anexo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Ficheiros"
 
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-#~ msgid "Filter..."
-#~ msgstr "Filtrar..."
-
 #: ../../../lib/web/src/components/restore-banner.tsx:97
 msgid "Finish moving your account"
 msgstr "Remata de mover a túa conta"
 
-#: src/features/words/index.tsx:189
+#: src/features/words/index.tsx:187
 msgid "First move must cover the central square"
 msgstr "A primeira xogada debe cubrir a casa central"
 
-#: src/features/words/index.tsx:190
+#: src/features/words/index.tsx:188
 msgid "First move must place at least 2 tiles"
 msgstr "A primeira xogada debe colocar polo menos 2 fichas"
 
@@ -1221,10 +1161,6 @@ msgstr "Marcas"
 #: ../../../lib/web/src/lib/preference-utils.ts:111
 msgid "Flat"
 msgstr "Plana"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:258
-#~ msgid "Floating"
-#~ msgstr "Flotante"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
@@ -1246,15 +1182,11 @@ msgstr "De"
 msgid "From theme"
 msgstr "Do tema"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:321
-#~ msgid "Full layout"
-#~ msgstr "Deseño completo"
-
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:48
 msgid "Game created"
 msgstr "Partida creada"
 
-#: src/features/words/index.tsx:378
+#: src/features/words/index.tsx:367
 msgid "Game deleted"
 msgstr "Partida eliminada"
 
@@ -1267,26 +1199,6 @@ msgstr "Fin da partida"
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Volver"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:82
-#~ msgid "Go to first page"
-#~ msgstr "Ir á primeira páxina"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:128
-#~ msgid "Go to last page"
-#~ msgstr "Ir á última páxina"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:119
-#~ msgid "Go to next page"
-#~ msgstr "Ir á páxina seguinte"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:106
-#~ msgid "Go to page {pageNumber}"
-#~ msgstr "Ir á páxina {pageNumber}"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:91
-#~ msgid "Go to previous page"
-#~ msgstr "Ir á páxina anterior"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -1304,14 +1216,6 @@ msgstr "Grupo: {0}"
 #: src/features/words/components/move-composer.tsx:75
 msgid "Has unknown words"
 msgstr "Contén palabras descoñecidas"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:70
-#~ msgid "Hide"
-#~ msgstr "Ocultar"
-
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Hide password"
-#~ msgstr "Ocultar o contrasinal"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1353,10 +1257,6 @@ msgstr "Avatar con iniciais"
 msgid "Initials avatar for {name}"
 msgstr "Avatar con iniciais de {name}"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:253
-#~ msgid "Inset"
-#~ msgstr "Encaixado"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Intereses"
@@ -1366,21 +1266,17 @@ msgid "Invalid date"
 msgstr "Data non válida"
 
 #: src/features/words/components/move-composer.tsx:72
-#: src/features/words/index.tsx:181
+#: src/features/words/index.tsx:179
 msgid "Invalid move"
 msgstr "Movemento non válido"
-
-#: ../../../lib/web/src/components/tag-input.tsx:38
-#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-#~ msgstr "Etiqueta non válida: só letras, números, espazos, guións e barras (máximo 50 caracteres)"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#~ msgid "Invalid verification code"
-#~ msgstr "Código de verificación non válido"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Semella que a páxina que buscas <0/>non existe ou foi eliminada."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
 
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
@@ -1390,7 +1286,7 @@ msgstr "Agora mesmo"
 msgid "Keyboard shortcuts"
 msgstr "Atallos de teclado"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:115
 msgid "Language"
 msgstr "Idioma"
 
@@ -1402,15 +1298,6 @@ msgstr "Grande"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:306
 msgid "Layout"
 msgstr "Deseño"
-
-#: ../../../lib/web/src/components/learn-more.tsx:33
-#: ../../../lib/web/src/components/learn-more.tsx:38
-#~ msgid "Learn more"
-#~ msgstr "Máis información"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:355
-#~ msgid "Left to Right"
-#~ msgstr "De esquerda a dereita"
 
 #: ../../../lib/web/src/components/post-tags.tsx:72
 msgid "Letters, numbers, spaces, and hyphens only"
@@ -1424,7 +1311,7 @@ msgstr "Claro"
 msgid "Link"
 msgstr "Ligazón"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Ligazóns"
 
@@ -1439,6 +1326,14 @@ msgstr "Cargar máis"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Cargando contido…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1466,10 +1361,6 @@ msgstr "Pechando sesión…"
 msgid "Manage categories"
 msgstr "Xestionar categorías"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-#~ msgid "Manage your connected accounts for notifications and services."
-#~ msgstr "Xestiona as túas contas conectadas para notificacións e servizos."
-
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "Manual"
@@ -1479,7 +1370,7 @@ msgstr "Manual"
 msgid "Mark all as read"
 msgstr "Marcar todas como lidas"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:69
 msgid "Maximum 3 opponents"
 msgstr "Máximo 3 opoñentes"
 
@@ -1549,15 +1440,15 @@ msgstr "O nome debe ter 1000 caracteres ou menos"
 msgid "Network error"
 msgstr "Erro de rede"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Novo"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/words-layout.tsx:63
-#: src/features/words/components/new-game.tsx:115
+#: src/components/layout/words-layout.tsx:47
+#: src/features/words/components/new-game.tsx:133
 msgid "New game"
 msgstr "Novo xogo"
 
@@ -1566,7 +1457,7 @@ msgstr "Novo xogo"
 msgid "Next image"
 msgstr "Imaxe seguinte"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "Non hai {parentClassNames} para engadir"
 
@@ -1582,15 +1473,11 @@ msgstr "Aínda non hai actividade"
 msgid "No comments yet"
 msgstr "Aínda non hai comentarios"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-#~ msgid "No connected accounts"
-#~ msgstr "Non hai contas conectadas"
-
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:142
 msgid "No friends found"
 msgstr "Non se atoparon amigos"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:138
 msgid "No friends yet"
 msgstr "Aínda non tes amigos"
 
@@ -1602,21 +1489,17 @@ msgstr "Aínda non hai xogos"
 msgid "No groups available"
 msgstr "Non hai grupos dispoñibles"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Aínda non se poden crear tipos de elementos. Crea primeiro os elementos pai requiridos."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Non hai obxectos coincidentes"
 
 #: src/features/words/components/chat-message-list.tsx:42
 msgid "No messages yet"
 msgstr "Aínda non hai mensaxes"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "No notifications yet"
-#~ msgstr "Aínda non hai notificacións"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:341
 #: ../../../lib/web/src/components/person-picker.tsx:84
@@ -1626,10 +1509,6 @@ msgstr "Non se atoparon persoas"
 #: ../../../lib/web/src/components/place-picker.tsx:133
 msgid "No places found"
 msgstr "Non se atoparon lugares"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:58
-#~ msgid "No profile"
-#~ msgstr "Sen perfil"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
@@ -1646,7 +1525,7 @@ msgstr "Non se atoparon resultados."
 msgid "No status"
 msgstr "Sen estado"
 
-#: src/features/words/index.tsx:184
+#: src/features/words/index.tsx:182
 msgid "No tiles placed"
 msgstr "Non se colocou ningunha ficha"
 
@@ -1666,7 +1545,7 @@ msgstr "Non hai notificacións sen ler"
 msgid "No users found"
 msgstr "Non se atoparon usuarios"
 
-#: src/features/words/index.tsx:192
+#: src/features/words/index.tsx:190
 msgid "No valid words formed"
 msgstr "Non se formou ningunha palabra válida"
 
@@ -1675,9 +1554,13 @@ msgid "No views"
 msgstr "Sen visualizacións"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1707,14 +1590,6 @@ msgstr "Non definido"
 msgid "Nothing found"
 msgstr "Non se atopou nada"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:136
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:150
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:236
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:257
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-#~ msgid "Notifications"
-#~ msgstr "Notificacións"
-
 #. placeholder {0}: unread.length
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:200
 msgid "Notifications: {0}"
@@ -1734,21 +1609,16 @@ msgstr "Activado"
 msgid "Oops! Page Not Found!"
 msgstr "Vaites! Páxina non atopada!"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:156
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-#~ msgid "Open account actions"
-#~ msgstr "Abrir accións de conta"
-
 #: ../../../lib/web/src/components/layout/nav-group.tsx:199
 #: ../../../lib/web/src/components/layout/nav-group.tsx:204
 msgid "Open actions"
 msgstr "Abrir accións"
 
-#: src/features/words/index.tsx:793
+#: src/features/words/index.tsx:779
 msgid "Open chat panel"
 msgstr "Abrir o panel do chat"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:787
 msgid "Open game actions"
 msgstr "Abrir accións do xogo"
 
@@ -1761,11 +1631,6 @@ msgstr "Abrir menú"
 msgid "Open navigation"
 msgstr "Abrir navegación"
 
-#: ../../../lib/web/src/components/layout/top-nav.tsx:38
-#: ../../../lib/web/src/components/layout/top-nav.tsx:44
-#~ msgid "Open navigation menu"
-#~ msgstr "Abrir menú de navegación"
-
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:105
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:111
 msgid "Open option actions"
@@ -1774,11 +1639,6 @@ msgstr "Abrir accións da opción"
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:30
 msgid "Open selected card"
 msgstr "Abrir tarxeta seleccionada"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:58
-#: ../../../lib/web/src/components/config-drawer.tsx:66
-#~ msgid "Open theme settings"
-#~ msgstr "Abrir configuración do tema"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:274
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:279
@@ -1812,16 +1672,12 @@ msgstr "Outro"
 msgid "Owner"
 msgstr "Propietario"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:43
-#: ../../../lib/web/src/components/data-table/pagination.tsx:71
-#~ msgid "Page {currentPage} of {totalPages}"
-#~ msgstr "Páxina {currentPage} de {totalPages}"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "Pai"
 
-#: src/features/words/index.tsx:819
+#: src/features/words/index.tsx:805
 msgid "Pass"
 msgstr "Pasar"
 
@@ -1841,11 +1697,7 @@ msgstr "Chaves de acceso"
 msgid "Pattern (regex)"
 msgstr "Patrón (regex)"
 
-#: ../../../lib/web/src/components/date-picker.tsx:20
-#~ msgid "Pick a date"
-#~ msgstr "Escolle unha data"
-
-#: src/features/words/index.tsx:185
+#: src/features/words/index.tsx:183
 msgid "Placement out of bounds"
 msgstr "Colocación fóra do taboleiro"
 
@@ -1863,7 +1715,7 @@ msgstr "Comproba a túa conexión a internet e téntao de novo."
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Inicia sesión coas credenciais axeitadas <0/> para acceder a este recurso."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:65
 msgid "Please select at least one friend"
 msgstr "Selecciona polo menos un amigo"
 
@@ -1897,13 +1749,17 @@ msgstr "Privacidade"
 msgid "Processing…"
 msgstr "Procesando…"
 
-#: ../../../lib/web/src/components/profile-dropdown.tsx:114
-#~ msgid "Profile"
-#~ msgstr "Perfil"
-
 #: ../../../lib/web/src/components/person-picker.tsx:200
 msgid "Project members"
 msgstr "Membros do proxecto"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
@@ -1926,7 +1782,7 @@ msgid "Ready"
 msgstr "Listo"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:916
+#: src/features/words/index.tsx:902
 msgid "Recall"
 msgstr "Recuperar"
 
@@ -1947,7 +1803,7 @@ msgstr "Redirixindo ao inicio de sesión."
 msgid "Reduce interest"
 msgstr "Reducir interese"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Relaciónase"
 
@@ -1959,7 +1815,7 @@ msgstr "Relativo (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativo nas últimas 24 horas, se non absoluto"
 
-#: src/features/words/index.tsx:844
+#: src/features/words/index.tsx:830
 msgid "Rematch"
 msgstr "Revancha"
 
@@ -1999,8 +1855,8 @@ msgstr "Eliminar interese"
 msgid "Remove item"
 msgstr "Eliminar elemento"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Quitar a ligazón"
 
@@ -2035,30 +1891,16 @@ msgstr "Obrigatorio"
 msgid "Resend email"
 msgstr "Reenviar o correo"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:87
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-#~ msgid "Reset"
-#~ msgstr "Restablecer"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:122
-#: ../../../lib/web/src/components/config-drawer.tsx:127
-#~ msgid "Reset {title}"
-#~ msgstr "Restablecer {title}"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:85
-#~ msgid "Reset all settings to default values"
-#~ msgstr "Restablecer toda a configuración aos valores por defecto"
-
-#: src/features/words/index.tsx:835
-#: src/features/words/index.tsx:1016
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/words/index.tsx:821
 msgid "Resign"
 msgstr "Abandonar"
 
-#: src/features/words/index.tsx:1007
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "Abandonar a partida?"
 
-#: src/features/words/index.tsx:1013
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "Abandonando..."
 
@@ -2078,10 +1920,6 @@ msgstr "Revogar o acceso"
 msgid "Revoke RSS access?"
 msgstr "Revogar o acceso RSS?"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:362
-#~ msgid "Right to Left"
-#~ msgstr "Dereita a esquerda"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:150
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:168
 msgid "Rows"
@@ -2090,10 +1928,6 @@ msgstr "Filas"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:373
 msgid "Rows group by"
 msgstr "Filas agrupadas por"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:65
-#~ msgid "Rows per page"
-#~ msgstr "Filas por páxina"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2111,13 +1945,19 @@ msgstr "URL RSS copiada ao portapapeis"
 msgid "Saturday"
 msgstr "Sábado"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "Gardar"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -2146,7 +1986,7 @@ msgstr "Buscar destino..."
 msgid "Search for origin..."
 msgstr "Buscar orixe..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Buscar obxectos..."
 
@@ -2179,10 +2019,6 @@ msgstr "Buscando..."
 msgid "Select"
 msgstr "Seleccionar"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:149
-#~ msgid "Select {0}"
-#~ msgstr "Selecciona {0}"
-
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:356
 msgid "Select a field"
 msgstr "Selecciona un campo"
@@ -2199,25 +2035,17 @@ msgstr "Selecciona un usuario, grupo ou outra regra para conceder acceso."
 msgid "Select access rule"
 msgstr "Seleccionar regra de acceso"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-#~ msgid "Select account"
-#~ msgstr "Selecciona unha conta"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
 msgstr "Selecciona o tipo de conta"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:141
 msgid "Select friends..."
 msgstr "Seleccionar amigos..."
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:231
 msgid "Select group"
 msgstr "Seleccionar grupo"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:305
-#~ msgid "Select layout style"
-#~ msgstr "Seleccionar estilo de disposición"
 
 #: ../../../lib/web/src/components/place-picker.tsx:49
 msgid "Select location"
@@ -2235,26 +2063,10 @@ msgstr "Selecciona unha persoa..."
 msgid "Select previous card"
 msgstr "Seleccionar tarxeta anterior"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:247
-#~ msgid "Select sidebar style"
-#~ msgstr "Seleccionar estilo da barra lateral"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:349
-#~ msgid "Select site direction"
-#~ msgstr "Seleccionar dirección do sitio"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:203
-#~ msgid "Select theme preference"
-#~ msgstr "Seleccionar preferencia de tema"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:257
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:340
 msgid "Select..."
 msgstr "Seleccionar..."
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-#~ msgid "selected"
-#~ msgstr "seleccionados"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2310,10 +2122,6 @@ msgstr "Mostrar clases"
 msgid "Show fields"
 msgstr "Mostrar campos"
 
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Show password"
-#~ msgstr "Mostrar o contrasinal"
-
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
 msgstr "Mostrar esta axuda"
@@ -2322,7 +2130,7 @@ msgstr "Mostrar esta axuda"
 msgid "Showing {totalShown} of {total}"
 msgstr "Mostrando {totalShown} de {total}"
 
-#: src/features/words/index.tsx:811
+#: src/features/words/index.tsx:797
 msgid "Shuffle rack"
 msgstr "Barallar atril"
 
@@ -2344,10 +2152,6 @@ msgstr "Pechando sesión..."
 msgid "Single line of text only"
 msgstr "Só unha liña de texto"
 
-#: ../../../lib/web/src/components/skip-to-main.tsx:11
-#~ msgid "Skip to Main"
-#~ msgstr "Saltar ao Principal"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:101
 #: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
@@ -2365,15 +2169,15 @@ msgstr "Fontes"
 msgid "Spacious"
 msgstr "Espazoso"
 
-#: src/features/words/index.tsx:186
+#: src/features/words/index.tsx:184
 msgid "Square already occupied"
 msgstr "A casa xa está ocupada"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:134
 msgid "Start a new Words game"
 msgstr "Iniciar nova partida de Words"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:144
 msgid "Start game"
 msgstr "Iniciar partida"
 
@@ -2381,16 +2185,17 @@ msgstr "Iniciar partida"
 msgid "Start the discussion by adding the first comment."
 msgstr "Inicia a discusión engadindo o primeiro comentario."
 
-#: ../../../lib/web/src/components/coming-soon.tsx:15
-#~ msgid "Stay tuned though!"
-#~ msgstr "Estade atentos!"
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Asunto"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:928
+#: src/features/words/index.tsx:914
 msgid "Submit"
 msgstr "Enviar"
 
@@ -2422,10 +2227,6 @@ msgstr "Cambiar á vista 1-9"
 msgid "System"
 msgstr "Sistema"
 
-#: ../../../lib/web/src/components/tag-input.tsx:95
-#~ msgid "Tag"
-#~ msgstr "Etiqueta"
-
 #: ../../../lib/web/src/components/post-tags.tsx:76
 msgid "Tag already exists"
 msgstr "A etiqueta xa existe"
@@ -2438,10 +2239,6 @@ msgstr "A etiqueta debe ter 50 caracteres ou menos"
 #: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "Etiquetas"
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-#~ msgid "Teams/Apps"
-#~ msgstr "Equipos/Aplicacións"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2473,23 +2270,7 @@ msgstr "Non se puido atopar o contido solicitado."
 msgid "The server returned a web page instead of data."
 msgstr "O servidor devolveu unha páxina web en lugar de datos."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-#~ msgid "The site is not available at the moment."
-#~ msgstr "O sitio non está dispoñible neste momento."
-
-#: ../../../lib/web/src/components/config-drawer.tsx:195
-#~ msgid "Theme"
-#~ msgstr "Tema"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:70
-#~ msgid "Theme Settings"
-#~ msgstr "Axustes do tema"
-
-#: ../../../lib/web/src/components/coming-soon.tsx:14
-#~ msgid "This page has not been created yet."
-#~ msgstr "Esta páxina aínda non se creou."
-
-#: src/features/words/index.tsx:1029
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Isto eliminará permanentemente a partida e a súa conversa. Esta acción non se pode desfacer."
 
@@ -2501,30 +2282,21 @@ msgstr "Xoves"
 msgid "Tiles left"
 msgstr "Pezas restantes"
 
-#: src/features/words/index.tsx:188
+#: src/features/words/index.tsx:186
 msgid "Tiles must be contiguous (no gaps)"
 msgstr "As fichas deben estar seguidas (sen ocos)"
 
-#: src/features/words/index.tsx:187
+#: src/features/words/index.tsx:185
 msgid "Tiles must be placed in a single row or column"
 msgstr "As fichas deben colocarse nunha soa fila ou columna"
 
-#: src/features/words/index.tsx:191
+#: src/features/words/index.tsx:189
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "As fichas deben conectar coas fichas xa postas no taboleiro"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:220
 msgid "To"
 msgstr "A"
-
-#: ../../../lib/web/src/components/data-table/view-options.tsx:37
-#~ msgid "Toggle columns"
-#~ msgstr "Alternar columnas"
-
-#: ../../../lib/web/src/components/layout/right-panel.tsx:233
-#: ../../../lib/web/src/components/layout/right-panel.tsx:236
-#~ msgid "Toggle right panel"
-#~ msgstr "Alternar o panel dereito"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:365
 #: ../../../lib/web/src/components/layout/nav-group.tsx:372
@@ -2542,11 +2314,6 @@ msgstr "Alternar a barra lateral"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle Sidebar"
 msgstr "Alternar Barra Lateral"
-
-#: ../../../lib/web/src/components/theme-switch.tsx:37
-#: ../../../lib/web/src/components/theme-switch.tsx:41
-#~ msgid "Toggle theme"
-#~ msgstr "Alternar tema"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2642,22 +2409,17 @@ msgstr "Descoñecido"
 msgid "Unsubscribe"
 msgstr "Cancelar subscrición"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Sen título"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-#~ msgid "Unverified"
-#~ msgstr "Non verificado"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
 msgid "Updated"
 msgstr "Actualizado"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Cargar"
@@ -2684,17 +2446,13 @@ msgstr "Validación sen conexión"
 msgid "Validation offline — you can still submit."
 msgstr "Validación sen conexión — aínda así, podes envialo."
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Código de verificación"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-#~ msgid "Verification code sent"
-#~ msgstr "Código de verificación enviado"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#~ msgid "Verification failed"
-#~ msgstr "Verificación fallida"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:391
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
@@ -2714,18 +2472,14 @@ msgstr "Miniatura de vídeo"
 msgid "Video viewer: {0}"
 msgstr "Visor de vídeos: {0}"
 
-#: ../../../lib/web/src/components/data-table/view-options.tsx:33
-#~ msgid "View"
-#~ msgstr "Ver"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-#~ msgid "View all"
-#~ msgstr "Ver todo"
-
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:220
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:228
 msgid "View all notifications"
 msgstr "Ver todas as notificacións"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
@@ -2738,6 +2492,11 @@ msgstr "Agardando fichas"
 #: src/features/words/components/move-composer.tsx:70
 msgid "Waiting for your turn"
 msgstr "Agardando a túa quenda"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2753,24 +2512,12 @@ msgstr "Só vixiados"
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
 msgstr "Enviamos un código de verificación a <0>{0}</0>. Introduce o código a continuación para verificar o teu enderezo de correo."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-#~ msgid "We'll be back online shortly."
-#~ msgstr "Volveremos a estar en liña en breve."
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-#~ msgid "We'll notify you when something important happens."
-#~ msgstr "Avisarémoste cando ocorra algo importante."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-#~ msgid "Website is under maintenance!"
-#~ msgstr "O sitio web está en mantemento!"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
 msgstr "Mércores"
 
-#: src/features/words/index.tsx:83
-#: src/features/words/index.tsx:717
+#: src/features/words/index.tsx:81
+#: src/features/words/index.tsx:705
 msgid "Words"
 msgstr "Words"
 
@@ -2789,10 +2536,6 @@ msgstr "Ti"
 msgid "You do not have access to this section."
 msgstr "Non tes acceso a esta sección."
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:18
-#~ msgid "You don't have necessary permission <0/>to view this resource."
-#~ msgstr "Non tes o permiso necesario <0/>para ver este recurso."
-
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
 msgstr "Renunciaches"
@@ -2800,10 +2543,6 @@ msgstr "Renunciaches"
 #: src/features/words/lib/header-model.ts:129
 msgid "You win!"
 msgstr "Gañaches!"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "You're all caught up!"
-#~ msgstr "Estás ao día!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "કૃપા કરી તમારું ઇન્ટરનેટ કનેક્શન તપાસો અને ફરી પ્રયાસ કરો."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " અથવા "
 
@@ -35,13 +35,9 @@ msgid "[not set]"
 msgstr "[સેટ નથી]"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:99
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# ખેલાડી} other {# ખેલાડીઓ}}"
-
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
-#~ msgid "{0, plural, one {# selected} other {# selected}}"
-#~ msgstr "{0, plural, one {# પસંદ કરેલ} other {# પસંદ કરેલ}}"
 
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
@@ -49,10 +45,6 @@ msgstr "{0, plural, one {# ખેલાડી} other {# ખેલાડીઓ}}"
 #: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} પર {1}{2}, દૂર કરવા ક્લિક કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:160
-#~ msgid "{0} option preview"
-#~ msgstr "{0} વિકલ્પનું પૂર્વાવલોકન"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -125,22 +117,6 @@ msgstr "{opponentName}એ ડ્રોની ઓફર કરી"
 msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
 msgstr "{playerCount, plural, one {# ખેલાડી સાથે રમત} other {# ખેલાડીઓ સાથે રમત}}"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-#~ msgstr "{selectedCount, plural, one {{entityName} પસંદ કરેલ} other {{manyName} પસંદ કરેલ}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-#~ msgstr "{selectedCount, plural, one {# {entityName} પસંદ કરેલ. બલ્ક ક્રિયા ટૂલબાર ઉપલબ્ધ છે.} other {# {manyName} પસંદ કરેલ. બલ્ક ક્રિયા ટૂલબાર ઉપલબ્ધ છે.}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-#~ msgstr "{selectedCount, plural, one {# પસંદ કરેલ} other {# પસંદ કરેલ}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-#~ msgstr "{selectedCount, plural, one {# પસંદ કરેલ {entityName} માટે બલ્ક ક્રિયાઓ} other {# પસંદ કરેલ {manyName} માટે બલ્ક ક્રિયાઓ}}"
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -191,33 +167,21 @@ msgstr "સ્વીકારો"
 msgid "Access denied"
 msgstr "ઍક્સેસ નકારી"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:16
-#~ msgid "Access Forbidden"
-#~ msgstr "ઍક્સેસ પ્રતિબંધિત"
-
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "ઍક્સેસ સ્તર"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-#~ msgid "Account added"
-#~ msgstr "ખાતું ઉમેર્યું"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-#~ msgid "Account removed"
-#~ msgstr "ખાતું દૂર કર્યું"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "ખાતાનો પ્રકાર"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-#~ msgid "Account verified"
-#~ msgstr "ખાતું ચકાસાયું"
-
-#: src/components/layout/words-layout.tsx:61
+#: src/components/layout/words-layout.tsx:45
 msgid "Active games"
 msgstr "સક્રિય રમતો"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -245,10 +209,6 @@ msgstr "ઍક્સેસ ઉમેરો"
 msgid "Add account"
 msgstr "ખાતું ઉમેરો"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-#~ msgid "Add an account to receive notifications and use services."
-#~ msgstr "સૂચનાઓ મેળવવા અને સેવાઓનો ઉપયોગ કરવા માટે ખાતું ઉમેરો."
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "કૅપ્શન ઉમેરો"
@@ -262,11 +222,11 @@ msgstr "ચેકલિસ્ટ આઇટમ ઉમેરો"
 msgid "Add field"
 msgstr "ફીલ્ડ ઉમેરો"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends"
 msgstr "મિત્રો ઉમેરો"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:139
 msgid "Add friends in the People app to start playing"
 msgstr "રમવાનું શરૂ કરવા People એપ્લિકેશનમાં મિત્રો ઉમેરો"
 
@@ -274,13 +234,9 @@ msgstr "રમવાનું શરૂ કરવા People એપ્લિક�
 msgid "Add item..."
 msgstr "આઇટમ ઉમેરો..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "લિંક ઉમેરો"
-
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-#~ msgid "Add new account"
-#~ msgstr "નવું ખાતું ઉમેરો"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:215
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:220
@@ -293,10 +249,6 @@ msgstr "વિકલ્પ ઉમેરો"
 #: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "ટૅગ ઉમેરો..."
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-#~ msgid "Add team/app"
-#~ msgstr "ટીમ/એપ્લિકેશન ઉમેરો"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -313,17 +265,9 @@ msgstr "દૃશ્ય ઉમેરો"
 msgid "Adding..."
 msgstr "ઉમેરી રહ્યું છે..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:72
-#~ msgid "Adjust the appearance and layout to suit your preferences."
-#~ msgstr "તમારી પસંદગી અનુસાર દેખાવ અને લેઆઉટ સમાયોજિત કરો."
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "AI"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-#~ msgid "All"
-#~ msgstr "બધા"
 
 #. placeholder {0}: entityLabel.toLowerCase()
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
@@ -364,6 +308,10 @@ msgstr "આ ફીડ પર સબ્સ્ક્રાઇબ થયેલુ�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "શું તમે ખરેખર \"{0}\" કાઢી નાખવા માંગો છો?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "શું તમે ખરેખર \"{name}\" કૉલમ કાઢી નાખવા માંગો છો? આ પૂર્વવત્ કરી શકાતું નથી."
@@ -376,13 +324,13 @@ msgstr "શું તમે ખરેખર આ ટિપ્પણી કાઢ�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો? તમારા ખાતાને ઍક્સેસ કરવા તમારે ફરી લૉગ ઇન કરવું પડશે."
 
-#: src/features/words/index.tsx:1008
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
 msgid "Are you sure you want to resign?"
 msgstr "શું તમે ખરેખર હાર માનવા માંગો છો?"
 
-#: ../../../lib/web/src/components/data-table/column-header.tsx:59
-#~ msgid "Asc"
-#~ msgstr "ચડતા"
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -426,16 +374,25 @@ msgstr "પાછળ"
 msgid "Back to home"
 msgstr "મુખ્ય પૃષ્ઠ પર પાછા જાઓ"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "બૅનર"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/words/components/tile-rack.tsx:85
 msgid "Blank tile"
 msgstr "ખાલી ટાઇલ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "દ્વારા અવરોધિત"
 
@@ -444,7 +401,7 @@ msgstr "દ્વારા અવરોધિત"
 msgid "Blocked navigation to untrusted link"
 msgstr "વિશ્વાસપાત્ર નથી તેવી લિંક પર નેવિગેશન અવરોધિત કર્યું"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "અવરોધે છે"
 
@@ -481,9 +438,9 @@ msgstr "બ્રાઉઝર સૂચનાઓ"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:157
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:904
-#: src/features/words/index.tsx:1081
+#: src/features/words/components/new-game.tsx:143
+#: src/features/words/index.tsx:890
+#: src/features/words/index.tsx:1009
 msgid "Cancel"
 msgstr "રદ કરો"
 
@@ -491,7 +448,7 @@ msgstr "રદ કરો"
 msgid "Cancel comment"
 msgstr "ટિપ્પણી રદ કરો"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Cancel exchange"
 msgstr "વિનિમય રદ કરો"
 
@@ -513,14 +470,9 @@ msgstr "આ સૂચનાઓ માટેની શ્રેણી"
 msgid "Change notification category"
 msgstr "સૂચના શ્રેણી બદલો"
 
-#: src/features/words/index.tsx:944
-#: src/features/words/index.tsx:978
+#: src/features/words/index.tsx:930
 msgid "Chat"
 msgstr "ચેટ"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-#~ msgid "Check \"All\" to see your past notifications."
-#~ msgstr "તમારી અગાઉની સૂચનાઓ જોવા માટે \"બધું\" પસંદ કરો."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -538,35 +490,20 @@ msgstr "ચેકલિસ્ટ"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "સાઇડબારમાંથી રમત પસંદ કરો અથવા નવી શરૂ કરો."
 
-#: src/features/words/index.tsx:1065
+#: src/features/words/index.tsx:993
 msgid "Choose a letter"
 msgstr "અક્ષર પસંદ કરો"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:329
-#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
-#~ msgstr "ડિફૉલ્ટ વિસ્તૃત, કોમ્પેક્ટ ફક્ત-આઇકન, અથવા સંપૂર્ણ લેઆઉટ મોડ વચ્ચે પસંદ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:271
-#~ msgid "Choose between inset, floating, or standard sidebar layout"
-#~ msgstr "inset, floating, અથવા સ્ટાન્ડર્ડ સાઇડબાર લેઆઉટ વચ્ચે પસંદ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:372
-#~ msgid "Choose between left-to-right or right-to-left site direction"
-#~ msgstr "ડાબેથી-જમણે અથવા જમણેથી-ડાબે સાઇટ દિશા વચ્ચે પસંદ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:227
-#~ msgid "Choose between system preference, light mode, or dark mode"
-#~ msgstr "સિસ્ટમ પસંદગી, લાઇટ મોડ, અથવા ડાર્ક મોડ વચ્ચે પસંદ કરો"
-
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "ભાષા પસંદ કરો"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:136
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "પ્રતિસ્પર્ધીઓ પસંદ કરો <0>(1-3)</0>"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -580,26 +517,12 @@ msgstr "સાફ કરો"
 msgid "Clear all"
 msgstr "બધું સાફ કરો"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-#~ msgid "Clear filters"
-#~ msgstr "ફિલ્ટર સાફ કરો"
-
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
 msgstr "શોધ સાફ કરો"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-#~ msgid "Clear selection"
-#~ msgstr "પસંદગી સાફ કરો"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-#~ msgid "Clear selection (Escape)"
-#~ msgstr "પસંદગી સાફ કરો (Escape)"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -660,10 +583,6 @@ msgstr "કૉલમ આના દ્વારા જૂથબદ્ધ"
 msgid "Comfortable"
 msgstr "આરામદાયક"
 
-#: ../../../lib/web/src/components/coming-soon.tsx:12
-#~ msgid "Coming Soon!"
-#~ msgstr "જલ્દી આવી રહ્યું છે!"
-
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
 msgstr "કમાન્ડ પેલેટ"
@@ -678,11 +597,16 @@ msgstr "ટિપ્પણી ક્રિયાઓ"
 msgid "Comments"
 msgstr "ટિપ્પણીઓ"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "કોમ્પેક્ટ"
 
-#: src/components/layout/words-layout.tsx:62
+#: src/components/layout/words-layout.tsx:46
 msgid "Completed"
 msgstr "પૂર્ણ"
 
@@ -702,10 +626,6 @@ msgstr "પુષ્ટિ કરો"
 #: ../../../lib/web/src/lib/chat-ui.ts:18
 msgid "Connected"
 msgstr "જોડાયેલ"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-#~ msgid "Connected accounts"
-#~ msgstr "જોડાયેલા ખાતાઓ"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -769,8 +689,8 @@ msgstr "તે ખાતા વડે ચકાસણી કરી શકાઈ 
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "બનાવો"
@@ -789,9 +709,9 @@ msgstr "નવી આઇટમ બનાવો"
 msgid "Created"
 msgstr "બનાવ્યું"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:145
 msgid "Creating..."
 msgstr "બનાવી રહ્યું છે..."
 
@@ -799,6 +719,7 @@ msgstr "બનાવી રહ્યું છે..."
 msgid "Current location"
 msgstr "વર્તમાન સ્થાન"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "કસ્ટમ"
@@ -806,11 +727,6 @@ msgstr "કસ્ટમ"
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "ડાર્ક"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:87
-#: ../../../lib/web/src/components/profile-dropdown.tsx:123
-#~ msgid "Dark mode"
-#~ msgstr "ડાર્ક મોડ"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
@@ -824,9 +740,9 @@ msgstr "તારીખ"
 msgid "Decline"
 msgstr "નકારો"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:311
-#~ msgid "Default"
-#~ msgstr "ડિફૉલ્ટ"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr "ડિફૉલ્ટ"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
@@ -845,7 +761,8 @@ msgstr "ડિફૉલ્ટ સૉર્ટ"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/words/index.tsx:1037
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "કાઢી નાખો"
 
@@ -865,13 +782,19 @@ msgstr "ટિપ્પણી કાઢી નાખો"
 msgid "Delete field"
 msgstr "ફીલ્ડ કાઢી નાખો"
 
-#: src/features/words/index.tsx:847
+#: src/features/words/index.tsx:833
 msgid "Delete game"
 msgstr "રમત કાઢી નાખો"
 
-#: src/features/words/index.tsx:1028
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "ગેમ કાઢી નાખવી છે?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -891,13 +814,9 @@ msgstr "દૃશ્ય કાઢી નાખો"
 msgid "Delete your account on the old server"
 msgstr "જૂના સર્વર પર તમારું ખાતું કાઢી નાખો"
 
-#: src/features/words/index.tsx:1034
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "કાઢી રહ્યું છે..."
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:63
-#~ msgid "Desc"
-#~ msgstr "ઊતરતા"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -911,7 +830,7 @@ msgstr "વર્ણન"
 msgid "Details Panel"
 msgstr "વિગતો પૅનલ"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -921,10 +840,6 @@ msgstr "વિગતો પૅનલ"
 #: ../../../lib/web/src/lib/preference-utils.ts:79
 msgid "Detect from web browser"
 msgstr "વેબ બ્રાઉઝરમાંથી શોધો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:341
-#~ msgid "Direction"
-#~ msgstr "દિશા"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
@@ -953,6 +868,7 @@ msgid "Displays the mobile sidebar."
 msgstr "મોબાઇલ સાઇડબાર દર્શાવે છે."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "થઈ ગયું"
@@ -967,7 +883,7 @@ msgstr "ડાઉનલોડ કરો"
 msgid "Download failed"
 msgstr "ડાઉનલોડ નિષ્ફળ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "ડુપ્લિકેટ"
 
@@ -1032,13 +948,17 @@ msgstr "ખાલી ખાનું {0}{1}"
 msgid "Empty tile slot"
 msgstr "ખાલી ટાઇલ સ્થાન"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:23
 msgid "English (UK)"
 msgstr "અંગ્રેજી (UK)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:24
 msgid "English (US)"
 msgstr "અંગ્રેજી (US)"
+
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
@@ -1048,13 +968,17 @@ msgstr "તમારા ઈમેલમાંથી કોડ દાખલ ક�
 msgid "Enter your authenticator code"
 msgstr "તમારો ઑથેન્ટિકેટર કોડ દાખલ કરો"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
+
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange"
 msgstr "બદલો"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange ({0})"
 msgstr "બદલો ({0})"
 
@@ -1062,7 +986,7 @@ msgstr "બદલો ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "બદલો ({exchangeCount})"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Exchange tiles"
 msgstr "ટાઇલ્સ બદલો"
 
@@ -1085,31 +1009,27 @@ msgstr "બાહ્ય URL"
 msgid "Extra large"
 msgstr "વધારાનું મોટું"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:225
-#~ msgid "Failed to add account"
-#~ msgstr "એકાઉન્ટ ઉમેરવામાં નિષ્ફળ"
-
-#: ../../../lib/web/src/components/tag-input.tsx:39
-#~ msgid "Failed to add tag"
-#~ msgstr "ટેગ ઉમેરવામાં નિષ્ફળ"
-
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
 msgid "Failed to copy"
 msgstr "કૉપિ કરવામાં નિષ્ફળ"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:52
 msgid "Failed to create game"
 msgstr "ગેમ બનાવવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "લિંક બનાવવામાં નિષ્ફળ"
 
-#: src/features/words/index.tsx:371
+#: src/features/words/index.tsx:360
 msgid "Failed to create rematch"
 msgstr "રિમેચ બનાવવામાં નિષ્ફળ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1119,15 +1039,15 @@ msgstr "એટેચમેન્ટ કાઢી નાખવામાં નિ
 msgid "Failed to delete comment"
 msgstr "કમેન્ટ કાઢી નાખવામાં નિષ્ફળ"
 
-#: src/features/words/index.tsx:382
+#: src/features/words/index.tsx:371
 msgid "Failed to delete game"
 msgstr "ગેમ કાઢી નાખવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "લિંક કાઢી નાખવામાં નિષ્ફળ"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:344
 msgid "Failed to exchange"
 msgstr "એક્સચેન્જ કરવામાં નિષ્ફળ"
 
@@ -1147,11 +1067,24 @@ msgstr "ઇતિહાસ લોડ કરવામાં નિષ્ફળ"
 msgid "Failed to load image"
 msgstr "છબી લોડ કરવામાં નિષ્ફળ"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "વિડિઓ લોડ કરવામાં નિષ્ફળ"
 
-#: src/features/words/index.tsx:345
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/words/index.tsx:334
 msgid "Failed to pass"
 msgstr "પાસ કરવામાં નિષ્ફળ"
 
@@ -1159,11 +1092,11 @@ msgstr "પાસ કરવામાં નિષ્ફળ"
 msgid "Failed to post comment"
 msgstr "કમેન્ટ પોસ્ટ કરવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-#~ msgid "Failed to remove account"
-#~ msgstr "એકાઉન્ટ દૂર કરવામાં નિષ્ફળ"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:351
 msgid "Failed to resign"
 msgstr "રિઝાઇન કરવામાં નિષ્ફળ"
 
@@ -1171,46 +1104,53 @@ msgstr "રિઝાઇન કરવામાં નિષ્ફળ"
 msgid "Failed to revoke RSS access"
 msgstr "RSS ઍક્સેસ રદ કરવામાં નિષ્ફળ"
 
-#: src/features/words/index.tsx:961
-#: src/features/words/index.tsx:995
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/words/index.tsx:947
 msgid "Failed to send"
 msgstr "મોકલવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-#~ msgid "Failed to send verification code"
-#~ msgstr "ચકાસણી કોડ મોકલવામાં નિષ્ફળ"
-
-#: src/features/words/index.tsx:339
+#: src/features/words/index.tsx:328
 msgid "Failed to submit move"
 msgstr "ચાલ સબમિટ કરવામાં નિષ્ફળ"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "કમેન્ટ અપડેટ કરવામાં નિષ્ફળ"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "એટેચમેન્ટ અપલોડ કરવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "ફાઇલ્સ"
 
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-#~ msgid "Filter..."
-#~ msgstr "ફિલ્ટર..."
-
 #: ../../../lib/web/src/components/restore-banner.tsx:97
 msgid "Finish moving your account"
 msgstr "તમારું ખાતું ખસેડવાનું પૂર્ણ કરો"
 
-#: src/features/words/index.tsx:189
+#: src/features/words/index.tsx:187
 msgid "First move must cover the central square"
 msgstr "પહેલી ચાલમાં વચ્ચેનું ખાનું આવરી લેવું જોઈએ"
 
-#: src/features/words/index.tsx:190
+#: src/features/words/index.tsx:188
 msgid "First move must place at least 2 tiles"
 msgstr "પહેલી ચાલમાં ઓછામાં ઓછી 2 ટાઇલ્સ મૂકવી જોઈએ"
 
@@ -1221,10 +1161,6 @@ msgstr "ફ્લેગ્સ"
 #: ../../../lib/web/src/lib/preference-utils.ts:111
 msgid "Flat"
 msgstr "સપાટ"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:258
-#~ msgid "Floating"
-#~ msgstr "ફ્લોટિંગ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
@@ -1246,15 +1182,11 @@ msgstr "તરફથી"
 msgid "From theme"
 msgstr "થીમમાંથી"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:321
-#~ msgid "Full layout"
-#~ msgstr "સંપૂર્ણ લેઆઉટ"
-
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:48
 msgid "Game created"
 msgstr "ગેમ બનાવી"
 
-#: src/features/words/index.tsx:378
+#: src/features/words/index.tsx:367
 msgid "Game deleted"
 msgstr "ગેમ કાઢી નાખી"
 
@@ -1267,26 +1199,6 @@ msgstr "ગેમ સમાપ્ત"
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "પાછા જાઓ"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:82
-#~ msgid "Go to first page"
-#~ msgstr "પ્રથમ પેજ પર જાઓ"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:128
-#~ msgid "Go to last page"
-#~ msgstr "છેલ્લા પેજ પર જાઓ"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:119
-#~ msgid "Go to next page"
-#~ msgstr "આગલા પેજ પર જાઓ"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:106
-#~ msgid "Go to page {pageNumber}"
-#~ msgstr "પૃષ્ઠ {pageNumber} પર જાઓ"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:91
-#~ msgid "Go to previous page"
-#~ msgstr "પાછલા પેજ પર જાઓ"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -1304,14 +1216,6 @@ msgstr "જૂથ: {0}"
 #: src/features/words/components/move-composer.tsx:75
 msgid "Has unknown words"
 msgstr "અજાણ્યા શબ્દો છે"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:70
-#~ msgid "Hide"
-#~ msgstr "છુપાવો"
-
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Hide password"
-#~ msgstr "પાસવર્ડ છુપાવો"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1353,10 +1257,6 @@ msgstr "આદ્યાક્ષર અવતાર"
 msgid "Initials avatar for {name}"
 msgstr "{name} માટે આદ્યાક્ષર અવતાર"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:253
-#~ msgid "Inset"
-#~ msgstr "ઇનસેટ"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "રુચિઓ"
@@ -1366,21 +1266,17 @@ msgid "Invalid date"
 msgstr "અમાન્ય તારીખ"
 
 #: src/features/words/components/move-composer.tsx:72
-#: src/features/words/index.tsx:181
+#: src/features/words/index.tsx:179
 msgid "Invalid move"
 msgstr "અમાન્ય ચાલ"
-
-#: ../../../lib/web/src/components/tag-input.tsx:38
-#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-#~ msgstr "અમાન્ય ટૅગ: ફક્ત અક્ષરો, અંકો, જગ્યાઓ, હાઇફન અને સ્લેશ (વધુમાં વધુ 50 અક્ષરો)"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#~ msgid "Invalid verification code"
-#~ msgstr "અમાન્ય ચકાસણી કોડ"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "એવું લાગે છે કે તમે જે પૃષ્ઠ શોધી રહ્યા છો <0/>તે અસ્તિત્વમાં નથી અથવા દૂર કરવામાં આવ્યું છે."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
 
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
@@ -1390,7 +1286,7 @@ msgstr "હમણાં જ"
 msgid "Keyboard shortcuts"
 msgstr "કીબોર્ડ શૉર્ટકટ્સ"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:115
 msgid "Language"
 msgstr "ભાષા"
 
@@ -1402,15 +1298,6 @@ msgstr "મોટું"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:306
 msgid "Layout"
 msgstr "લેઆઉટ"
-
-#: ../../../lib/web/src/components/learn-more.tsx:33
-#: ../../../lib/web/src/components/learn-more.tsx:38
-#~ msgid "Learn more"
-#~ msgstr "વધુ જાણો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:355
-#~ msgid "Left to Right"
-#~ msgstr "ડાબેથી જમણે"
 
 #: ../../../lib/web/src/components/post-tags.tsx:72
 msgid "Letters, numbers, spaces, and hyphens only"
@@ -1424,7 +1311,7 @@ msgstr "લાઇટ"
 msgid "Link"
 msgstr "લિંક"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "લિંક્સ"
 
@@ -1439,6 +1326,14 @@ msgstr "વધુ લોડ કરો"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "સામગ્રી લોડ થઈ રહી છે…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1466,10 +1361,6 @@ msgstr "લૉગ આઉટ થઈ રહ્યું છે…"
 msgid "Manage categories"
 msgstr "શ્રેણીઓ મેનેજ કરો"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-#~ msgid "Manage your connected accounts for notifications and services."
-#~ msgstr "સૂચનાઓ અને સેવાઓ માટે તમારા જોડાયેલા એકાઉન્ટ્સનું સંચાલન કરો."
-
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "મેન્યુઅલ"
@@ -1479,7 +1370,7 @@ msgstr "મેન્યુઅલ"
 msgid "Mark all as read"
 msgstr "બધાને વાંચેલા તરીકે માર્ક કરો"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:69
 msgid "Maximum 3 opponents"
 msgstr "મહત્તમ 3 પ્રતિસ્પર્ધી"
 
@@ -1549,15 +1440,15 @@ msgstr "નામ 1000 અક્ષરો અથવા તેથી ઓછું
 msgid "Network error"
 msgstr "નેટવર્ક ભૂલ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "નવું"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/words-layout.tsx:63
-#: src/features/words/components/new-game.tsx:115
+#: src/components/layout/words-layout.tsx:47
+#: src/features/words/components/new-game.tsx:133
 msgid "New game"
 msgstr "નવી ગેમ"
 
@@ -1566,7 +1457,7 @@ msgstr "નવી ગેમ"
 msgid "Next image"
 msgstr "આગળની છબી"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "ઉમેરવા માટે કોઈ {parentClassNames} નથી"
 
@@ -1582,15 +1473,11 @@ msgstr "હજુ સુધી કોઈ પ્રવૃત્તિ નથી"
 msgid "No comments yet"
 msgstr "હજુ સુધી કોઈ કૉમેન્ટ્સ નથી"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-#~ msgid "No connected accounts"
-#~ msgstr "કોઈ કનેક્ટેડ ખાતા નથી"
-
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:142
 msgid "No friends found"
 msgstr "કોઈ મિત્રો મળ્યા નથી"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:138
 msgid "No friends yet"
 msgstr "હજુ સુધી કોઈ મિત્રો નથી"
 
@@ -1602,21 +1489,17 @@ msgstr "હજુ સુધી કોઈ ગેમ્સ નથી"
 msgid "No groups available"
 msgstr "કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "કોઈ મેળ ખાતી ઑબ્જેક્ટ્સ નથી"
 
 #: src/features/words/components/chat-message-list.tsx:42
 msgid "No messages yet"
 msgstr "હજુ સુધી કોઈ સંદેશા નથી"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "No notifications yet"
-#~ msgstr "હજુ સુધી કોઈ સૂચના નથી"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:341
 #: ../../../lib/web/src/components/person-picker.tsx:84
@@ -1626,10 +1509,6 @@ msgstr "કોઈ લોકો મળ્યા નથી"
 #: ../../../lib/web/src/components/place-picker.tsx:133
 msgid "No places found"
 msgstr "કોઈ સ્થળો મળ્યા નથી"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:58
-#~ msgid "No profile"
-#~ msgstr "કોઈ પ્રોફાઇલ નથી"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
@@ -1646,7 +1525,7 @@ msgstr "કોઈ પરિણામો મળ્યા નથી."
 msgid "No status"
 msgstr "કોઈ સ્થિતિ નથી"
 
-#: src/features/words/index.tsx:184
+#: src/features/words/index.tsx:182
 msgid "No tiles placed"
 msgstr "કોઈ ટાઇલ મૂકી નથી"
 
@@ -1666,7 +1545,7 @@ msgstr "કોઈ વાંચ્યા વગરની સૂચનાઓ ન�
 msgid "No users found"
 msgstr "કોઈ યુઝર્સ મળ્યા નથી"
 
-#: src/features/words/index.tsx:192
+#: src/features/words/index.tsx:190
 msgid "No valid words formed"
 msgstr "કોઈ માન્ય શબ્દ બન્યો નથી"
 
@@ -1675,9 +1554,13 @@ msgid "No views"
 msgstr "કોઈ વ્યૂ નથી"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1707,14 +1590,6 @@ msgstr "સેટ કર્યું નથી"
 msgid "Nothing found"
 msgstr "કંઈ મળ્યું નથી"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:136
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:150
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:236
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:257
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-#~ msgid "Notifications"
-#~ msgstr "સૂચનાઓ"
-
 #. placeholder {0}: unread.length
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:200
 msgid "Notifications: {0}"
@@ -1734,21 +1609,16 @@ msgstr "ચાલુ"
 msgid "Oops! Page Not Found!"
 msgstr "ઓહ! પેજ મળ્યું નથી!"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:156
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-#~ msgid "Open account actions"
-#~ msgstr "ખાતાની ક્રિયાઓ ખોલો"
-
 #: ../../../lib/web/src/components/layout/nav-group.tsx:199
 #: ../../../lib/web/src/components/layout/nav-group.tsx:204
 msgid "Open actions"
 msgstr "ક્રિયાઓ ખોલો"
 
-#: src/features/words/index.tsx:793
+#: src/features/words/index.tsx:779
 msgid "Open chat panel"
 msgstr "ચેટ પેનલ ખોલો"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:787
 msgid "Open game actions"
 msgstr "ગેમ ક્રિયાઓ ખોલો"
 
@@ -1761,11 +1631,6 @@ msgstr "મેનૂ ખોલો"
 msgid "Open navigation"
 msgstr "નેવિગેશન ખોલો"
 
-#: ../../../lib/web/src/components/layout/top-nav.tsx:38
-#: ../../../lib/web/src/components/layout/top-nav.tsx:44
-#~ msgid "Open navigation menu"
-#~ msgstr "નેવિગેશન મેનૂ ખોલો"
-
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:105
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:111
 msgid "Open option actions"
@@ -1774,11 +1639,6 @@ msgstr "વિકલ્પ ક્રિયાઓ ખોલો"
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:30
 msgid "Open selected card"
 msgstr "પસંદ કરેલ કાર્ડ ખોલો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:58
-#: ../../../lib/web/src/components/config-drawer.tsx:66
-#~ msgid "Open theme settings"
-#~ msgstr "થીમ સેટિંગ્સ ખોલો"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:274
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:279
@@ -1812,16 +1672,12 @@ msgstr "અન્ય"
 msgid "Owner"
 msgstr "માલિક"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:43
-#: ../../../lib/web/src/components/data-table/pagination.tsx:71
-#~ msgid "Page {currentPage} of {totalPages}"
-#~ msgstr "પૃષ્ઠ {currentPage} / {totalPages}"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "પેરન્ટ"
 
-#: src/features/words/index.tsx:819
+#: src/features/words/index.tsx:805
 msgid "Pass"
 msgstr "પાસ"
 
@@ -1841,11 +1697,7 @@ msgstr "પાસકીઝ"
 msgid "Pattern (regex)"
 msgstr "પૅટર્ન (regex)"
 
-#: ../../../lib/web/src/components/date-picker.tsx:20
-#~ msgid "Pick a date"
-#~ msgstr "તારીખ પસંદ કરો"
-
-#: src/features/words/index.tsx:185
+#: src/features/words/index.tsx:183
 msgid "Placement out of bounds"
 msgstr "ગોઠવણી બોર્ડની બહાર છે"
 
@@ -1863,7 +1715,7 @@ msgstr "કૃપા કરી તમારું ઇન્ટરનેટ ક�
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "આ સંસાધનને ઍક્સેસ કરવા માટે <0/> કૃપા કરીને યોગ્ય ઓળખપત્રો સાથે લોગ ઇન કરો."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:65
 msgid "Please select at least one friend"
 msgstr "કૃપા કરીને ઓછામાં ઓછો એક મિત્ર પસંદ કરો"
 
@@ -1897,13 +1749,17 @@ msgstr "ગોપનીયતા"
 msgid "Processing…"
 msgstr "પ્રક્રિયા થઈ રહી છે…"
 
-#: ../../../lib/web/src/components/profile-dropdown.tsx:114
-#~ msgid "Profile"
-#~ msgstr "પ્રોફાઇલ"
-
 #: ../../../lib/web/src/components/person-picker.tsx:200
 msgid "Project members"
 msgstr "પ્રોજેક્ટ સભ્યો"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
@@ -1926,7 +1782,7 @@ msgid "Ready"
 msgstr "તૈયાર"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:916
+#: src/features/words/index.tsx:902
 msgid "Recall"
 msgstr "રિકૉલ"
 
@@ -1947,7 +1803,7 @@ msgstr "લોગિન પર રિડાયરેક્ટ થઈ રહ્�
 msgid "Reduce interest"
 msgstr "રસ ઘટાડો"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "સંબંધિત"
 
@@ -1959,7 +1815,7 @@ msgstr "સાપેક્ષ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 કલાકની અંદર સાપેક્ષ, અન્યથા સંપૂર્ણ"
 
-#: src/features/words/index.tsx:844
+#: src/features/words/index.tsx:830
 msgid "Rematch"
 msgstr "ફરી મેચ"
 
@@ -1999,8 +1855,8 @@ msgstr "રસ દૂર કરો"
 msgid "Remove item"
 msgstr "આઇટમ દૂર કરો"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "લિંક દૂર કરો"
 
@@ -2035,30 +1891,16 @@ msgstr "આવશ્યક"
 msgid "Resend email"
 msgstr "ઇમેઇલ ફરી મોકલો"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:87
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-#~ msgid "Reset"
-#~ msgstr "રીસેટ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:122
-#: ../../../lib/web/src/components/config-drawer.tsx:127
-#~ msgid "Reset {title}"
-#~ msgstr "{title} રીસેટ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:85
-#~ msgid "Reset all settings to default values"
-#~ msgstr "તમામ સેટિંગ્સને ડિફૉલ્ટ મૂલ્યો પર રીસેટ કરો"
-
-#: src/features/words/index.tsx:835
-#: src/features/words/index.tsx:1016
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/words/index.tsx:821
 msgid "Resign"
 msgstr "રિઝાઇન કરો"
 
-#: src/features/words/index.tsx:1007
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "ગેમ રિઝાઇન કરો?"
 
-#: src/features/words/index.tsx:1013
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "રિઝાઇન કરી રહ્યું છે..."
 
@@ -2078,10 +1920,6 @@ msgstr "ઍક્સેસ રદ કરો"
 msgid "Revoke RSS access?"
 msgstr "RSS ઍક્સેસ રદ કરવો છે?"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:362
-#~ msgid "Right to Left"
-#~ msgstr "જમણે થી ડાબે"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:150
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:168
 msgid "Rows"
@@ -2090,10 +1928,6 @@ msgstr "પંક્તિઓ"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:373
 msgid "Rows group by"
 msgstr "પંક્તિઓ આ રીતે જૂથબદ્ધ કરો"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:65
-#~ msgid "Rows per page"
-#~ msgstr "પ્રતિ પૃષ્ઠ પંક્તિઓ"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2111,13 +1945,19 @@ msgstr "RSS URL ક્લિપબોર્ડ પર કૉપિ થઈ"
 msgid "Saturday"
 msgstr "શનિવાર"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "સાચવો"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -2146,7 +1986,7 @@ msgstr "ગંતવ્ય માટે શોધો..."
 msgid "Search for origin..."
 msgstr "મૂળ માટે શોધો..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "ઑબ્જેક્ટ્સ શોધો..."
 
@@ -2179,10 +2019,6 @@ msgstr "શોધી રહ્યું છે..."
 msgid "Select"
 msgstr "પસંદ કરો"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:149
-#~ msgid "Select {0}"
-#~ msgstr "{0} પસંદ કરો"
-
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:356
 msgid "Select a field"
 msgstr "ફીલ્ડ પસંદ કરો"
@@ -2199,25 +2035,17 @@ msgstr "ઍક્સેસ આપવા માટે વપરાશકર્ત
 msgid "Select access rule"
 msgstr "ઍક્સેસ નિયમ પસંદ કરો"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-#~ msgid "Select account"
-#~ msgstr "એકાઉન્ટ પસંદ કરો"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
 msgstr "ખાતા પ્રકાર પસંદ કરો"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:141
 msgid "Select friends..."
 msgstr "મિત્રો પસંદ કરો..."
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:231
 msgid "Select group"
 msgstr "જૂથ પસંદ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:305
-#~ msgid "Select layout style"
-#~ msgstr "લેઆઉટ શૈલી પસંદ કરો"
 
 #: ../../../lib/web/src/components/place-picker.tsx:49
 msgid "Select location"
@@ -2235,26 +2063,10 @@ msgstr "વ્યક્તિ પસંદ કરો..."
 msgid "Select previous card"
 msgstr "પાછલું કાર્ડ પસંદ કરો"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:247
-#~ msgid "Select sidebar style"
-#~ msgstr "સાઇડબાર શૈલી પસંદ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:349
-#~ msgid "Select site direction"
-#~ msgstr "સાઇટ દિશા પસંદ કરો"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:203
-#~ msgid "Select theme preference"
-#~ msgstr "થીમ પસંદગી પસંદ કરો"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:257
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:340
 msgid "Select..."
 msgstr "પસંદ કરો..."
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-#~ msgid "selected"
-#~ msgstr "પસંદ કરેલ"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2310,10 +2122,6 @@ msgstr "વર્ગો બતાવો"
 msgid "Show fields"
 msgstr "ફીલ્ડ્સ બતાવો"
 
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Show password"
-#~ msgstr "પાસવર્ડ બતાવો"
-
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
 msgstr "આ સહાય બતાવો"
@@ -2322,7 +2130,7 @@ msgstr "આ સહાય બતાવો"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total} માંથી {totalShown} બતાવી રહ્યું છે"
 
-#: src/features/words/index.tsx:811
+#: src/features/words/index.tsx:797
 msgid "Shuffle rack"
 msgstr "રેક શફલ કરો"
 
@@ -2344,10 +2152,6 @@ msgstr "સાઇન આઉટ થઈ રહ્યું છે..."
 msgid "Single line of text only"
 msgstr "ફક્ત ટેક્સ્ટની એક જ લાઇન"
 
-#: ../../../lib/web/src/components/skip-to-main.tsx:11
-#~ msgid "Skip to Main"
-#~ msgstr "મુખ્ય પર જાઓ"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:101
 #: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
@@ -2365,15 +2169,15 @@ msgstr "સ્રોતો"
 msgid "Spacious"
 msgstr "વિશાળ"
 
-#: src/features/words/index.tsx:186
+#: src/features/words/index.tsx:184
 msgid "Square already occupied"
 msgstr "આ ખાનું પહેલેથી ભરેલું છે"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:134
 msgid "Start a new Words game"
 msgstr "નવી Words રમત શરૂ કરો"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:144
 msgid "Start game"
 msgstr "રમત શરૂ કરો"
 
@@ -2381,16 +2185,17 @@ msgstr "રમત શરૂ કરો"
 msgid "Start the discussion by adding the first comment."
 msgstr "પ્રથમ ટિપ્પણી ઉમેરીને ચર્ચા શરૂ કરો."
 
-#: ../../../lib/web/src/components/coming-soon.tsx:15
-#~ msgid "Stay tuned though!"
-#~ msgstr "છતાં અમારી સાથે જોડાયેલા રહો!"
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "વિષય"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:928
+#: src/features/words/index.tsx:914
 msgid "Submit"
 msgstr "સબમિટ કરો"
 
@@ -2422,10 +2227,6 @@ msgstr "દૃશ્ય 1-9 પર સ્વિચ કરો"
 msgid "System"
 msgstr "સિસ્ટમ"
 
-#: ../../../lib/web/src/components/tag-input.tsx:95
-#~ msgid "Tag"
-#~ msgstr "ટૅગ"
-
 #: ../../../lib/web/src/components/post-tags.tsx:76
 msgid "Tag already exists"
 msgstr "ટૅગ પહેલેથી જ અસ્તિત્વમાં છે"
@@ -2438,10 +2239,6 @@ msgstr "ટૅગ 50 અક્ષરો કે તેથી ઓછા હોવ�
 #: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "ટૅગ્સ"
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-#~ msgid "Teams/Apps"
-#~ msgstr "ટીમો/એપ્સ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2473,23 +2270,7 @@ msgstr "વિનંતી કરેલી સામગ્રી મળી શ�
 msgid "The server returned a web page instead of data."
 msgstr "સર્વરે ડેટાને બદલે વેબ પેજ પરત કર્યું."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-#~ msgid "The site is not available at the moment."
-#~ msgstr "સાઇટ આ ક્ષણે ઉપલબ્ધ નથી."
-
-#: ../../../lib/web/src/components/config-drawer.tsx:195
-#~ msgid "Theme"
-#~ msgstr "થીમ"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:70
-#~ msgid "Theme Settings"
-#~ msgstr "થીમ સેટિંગ્સ"
-
-#: ../../../lib/web/src/components/coming-soon.tsx:14
-#~ msgid "This page has not been created yet."
-#~ msgstr "આ પૃષ્ઠ હજુ સુધી બનાવવામાં આવ્યું નથી."
-
-#: src/features/words/index.tsx:1029
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "આ ગેમ અને તેની ચેટને કાયમ માટે કાઢી નાખશે. આ ક્રિયા પાછી લઈ શકાશે નહીં."
 
@@ -2501,30 +2282,21 @@ msgstr "ગુરુવાર"
 msgid "Tiles left"
 msgstr "બાકી ટાઇલ્સ"
 
-#: src/features/words/index.tsx:188
+#: src/features/words/index.tsx:186
 msgid "Tiles must be contiguous (no gaps)"
 msgstr "ટાઇલ્સ સળંગ હોવી જોઈએ (કોઈ ખાલી જગ્યા નહીં)"
 
-#: src/features/words/index.tsx:187
+#: src/features/words/index.tsx:185
 msgid "Tiles must be placed in a single row or column"
 msgstr "ટાઇલ્સ એક જ હરોળ કે સ્તંભમાં મૂકવી જોઈએ"
 
-#: src/features/words/index.tsx:191
+#: src/features/words/index.tsx:189
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "ટાઇલ્સ બોર્ડ પરની હાલની ટાઇલ્સ સાથે જોડાયેલી હોવી જોઈએ"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:220
 msgid "To"
 msgstr "પ્રતિ"
-
-#: ../../../lib/web/src/components/data-table/view-options.tsx:37
-#~ msgid "Toggle columns"
-#~ msgstr "કૉલમ્સ ટૉગલ કરો"
-
-#: ../../../lib/web/src/components/layout/right-panel.tsx:233
-#: ../../../lib/web/src/components/layout/right-panel.tsx:236
-#~ msgid "Toggle right panel"
-#~ msgstr "જમણી પેનલ ટૉગલ કરો"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:365
 #: ../../../lib/web/src/components/layout/nav-group.tsx:372
@@ -2542,11 +2314,6 @@ msgstr "સાઇડબાર ટૉગલ કરો"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle Sidebar"
 msgstr "સાઇડબાર ટૉગલ કરો"
-
-#: ../../../lib/web/src/components/theme-switch.tsx:37
-#: ../../../lib/web/src/components/theme-switch.tsx:41
-#~ msgid "Toggle theme"
-#~ msgstr "થીમ ટૉગલ કરો"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2642,22 +2409,17 @@ msgstr "અજાણ્યું"
 msgid "Unsubscribe"
 msgstr "અનસબ્સ્ક્રાઇબ કરો"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "શીર્ષક વગરનું"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-#~ msgid "Unverified"
-#~ msgstr "અપ્રમાણિત"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
 msgid "Updated"
 msgstr "અપડેટ કર્યું"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "અપલોડ કરો"
@@ -2684,17 +2446,13 @@ msgstr "ચકાસણી ઑફલાઇન"
 msgid "Validation offline — you can still submit."
 msgstr "માન્યતા ઑફલાઇન છે — તેમ છતાં તમે સબમિટ કરી શકો છો."
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "ચકાસણી કોડ"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-#~ msgid "Verification code sent"
-#~ msgstr "ચકાસણી કોડ મોકલ્યો"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#~ msgid "Verification failed"
-#~ msgstr "ચકાસણી નિષ્ફળ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:391
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
@@ -2714,18 +2472,14 @@ msgstr "વિડિયો થંબનેલ"
 msgid "Video viewer: {0}"
 msgstr "વિડિઓ દર્શક: {0}"
 
-#: ../../../lib/web/src/components/data-table/view-options.tsx:33
-#~ msgid "View"
-#~ msgstr "જુઓ"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-#~ msgid "View all"
-#~ msgstr "બધું જુઓ"
-
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:220
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:228
 msgid "View all notifications"
 msgstr "બધી સૂચનાઓ જુઓ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
@@ -2738,6 +2492,11 @@ msgstr "ટાઇલ્સની રાહ જોઈ રહ્યા છીએ"
 #: src/features/words/components/move-composer.tsx:70
 msgid "Waiting for your turn"
 msgstr "તમારા વારાની રાહ જોઈ રહ્યા છીએ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2753,24 +2512,12 @@ msgstr "ફક્ત વૉચ કરેલ"
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
 msgstr "અમે <0>{0}</0> પર ચકાસણી કોડ મોકલ્યો છે. તમારું ઇમેઇલ સરનામું ચકાસવા માટે નીચે કોડ દાખલ કરો."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-#~ msgid "We'll be back online shortly."
-#~ msgstr "અમે ટૂંક સમયમાં ઓનલાઈન પાછા આવીશું."
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-#~ msgid "We'll notify you when something important happens."
-#~ msgstr "કંઈક મહત્ત્વનું બનશે ત્યારે અમે તમને જણાવીશું."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-#~ msgid "Website is under maintenance!"
-#~ msgstr "વેબસાઇટ જાળવણી હેઠળ છે!"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
 msgstr "બુધવાર"
 
-#: src/features/words/index.tsx:83
-#: src/features/words/index.tsx:717
+#: src/features/words/index.tsx:81
+#: src/features/words/index.tsx:705
 msgid "Words"
 msgstr "Words"
 
@@ -2789,10 +2536,6 @@ msgstr "તમે"
 msgid "You do not have access to this section."
 msgstr "તમારી પાસે આ વિભાગની ઍક્સેસ નથી."
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:18
-#~ msgid "You don't have necessary permission <0/>to view this resource."
-#~ msgstr "આ સંસાધન જોવા માટે <0/>તમારી પાસે જરૂરી પરવાનગી નથી."
-
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
 msgstr "તમે રાજીનામું આપ્યું"
@@ -2800,10 +2543,6 @@ msgstr "તમે રાજીનામું આપ્યું"
 #: src/features/words/lib/header-model.ts:129
 msgid "You win!"
 msgstr "તમે જીત્યા!"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "You're all caught up!"
-#~ msgstr "તમે બધું જોઈ લીધું!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " അല്ലെങ്കിൽ "
 
@@ -35,13 +35,9 @@ msgid "[not set]"
 msgstr "[സജ്ജമാക്കിയിട്ടില്ല]"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:99
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# കളിക്കാരൻ} other {# കളിക്കാർ}}"
-
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
-#~ msgid "{0, plural, one {# selected} other {# selected}}"
-#~ msgstr "{0, plural, one {# തിരഞ്ഞെടുത്തു} other {# തിരഞ്ഞെടുത്തു}}"
 
 #. placeholder {0}: pending!.letter.toUpperCase()
 #. placeholder {1}: String.fromCharCode(65 + col)
@@ -49,10 +45,6 @@ msgstr "{0, plural, one {# കളിക്കാരൻ} other {# കളിക്
 #: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} {1}{2}-ൽ, നീക്കം ചെയ്യാൻ ക്ലിക്ക് ചെയ്യുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:160
-#~ msgid "{0} option preview"
-#~ msgstr "{0} ഓപ്ഷന്റെ പ്രിവ്യൂ"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -125,22 +117,6 @@ msgstr "{opponentName} സമനില വാഗ്ദാനം ചെയ്ത�
 msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
 msgstr "{playerCount, plural, one {# കളിക്കാരനുമായി കളി} other {# കളിക്കാരുമായി കളി}}"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-#~ msgstr "{selectedCount, plural, one {{entityName} തിരഞ്ഞെടുത്തു} other {{manyName} തിരഞ്ഞെടുത്തു}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-#~ msgstr "{selectedCount, plural, one {# {entityName} തിരഞ്ഞെടുത്തു. ബൾക്ക് പ്രവർത്തന ടൂൾബാർ ലഭ്യമാണ്.} other {# {manyName} തിരഞ്ഞെടുത്തു. ബൾക്ക് പ്രവർത്തന ടൂൾബാർ ലഭ്യമാണ്.}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-#~ msgstr "{selectedCount, plural, one {# തിരഞ്ഞെടുത്തു} other {# തിരഞ്ഞെടുത്തു}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-#~ msgstr "{selectedCount, plural, one {# തിരഞ്ഞെടുത്ത {entityName} എന്നതിനുള്ള ബൾക്ക് പ്രവർത്തനങ്ങൾ} other {# തിരഞ്ഞെടുത്ത {manyName} എന്നതിനുള്ള ബൾക്ക് പ്രവർത്തനങ്ങൾ}}"
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -191,33 +167,21 @@ msgstr "സ്വീകരിക്കുക"
 msgid "Access denied"
 msgstr "ആക്സസ് നിരസിച്ചു"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:16
-#~ msgid "Access Forbidden"
-#~ msgstr "ആക്സസ് നിഷിദ്ധം"
-
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "ആക്സസ് ലെവൽ"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-#~ msgid "Account added"
-#~ msgstr "അക്കൗണ്ട് ചേർത്തു"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-#~ msgid "Account removed"
-#~ msgstr "അക്കൗണ്ട് നീക്കം ചെയ്തു"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "അക്കൗണ്ട് തരം"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-#~ msgid "Account verified"
-#~ msgstr "അക്കൗണ്ട് പരിശോധിച്ചുറപ്പിച്ചു"
-
-#: src/components/layout/words-layout.tsx:61
+#: src/components/layout/words-layout.tsx:45
 msgid "Active games"
 msgstr "സജീവ ഗെയിമുകൾ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -245,10 +209,6 @@ msgstr "ആക്സസ് ചേർക്കുക"
 msgid "Add account"
 msgstr "അക്കൗണ്ട് ചേർക്കുക"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-#~ msgid "Add an account to receive notifications and use services."
-#~ msgstr "അറിയിപ്പുകൾ സ്വീകരിക്കാനും സേവനങ്ങൾ ഉപയോഗിക്കാനും ഒരു അക്കൗണ്ട് ചേർക്കുക."
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "അടിക്കുറിപ്പ് ചേർക്കുക"
@@ -262,11 +222,11 @@ msgstr "ചെക്ക്‌ലിസ്റ്റ് ഇനം ചേർക്�
 msgid "Add field"
 msgstr "ഫീൽഡ് ചേർക്കുക"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends"
 msgstr "സുഹൃത്തുക്കളെ ചേർക്കുക"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:139
 msgid "Add friends in the People app to start playing"
 msgstr "കളി തുടങ്ങാൻ People ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക"
 
@@ -274,13 +234,9 @@ msgstr "കളി തുടങ്ങാൻ People ആപ്പിൽ സുഹ�
 msgid "Add item..."
 msgstr "ഇനം ചേർക്കുക..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "ലിങ്ക് ചേർക്കുക"
-
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-#~ msgid "Add new account"
-#~ msgstr "പുതിയ അക്കൗണ്ട് ചേർക്കുക"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:215
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:220
@@ -293,10 +249,6 @@ msgstr "ഓപ്ഷൻ ചേർക്കുക"
 #: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "ടാഗ് ചേർക്കുക..."
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-#~ msgid "Add team/app"
-#~ msgstr "ടീം/ആപ്പ് ചേർക്കുക"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -313,17 +265,9 @@ msgstr "കാഴ്ച ചേർക്കുക"
 msgid "Adding..."
 msgstr "ചേർക്കുന്നു..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:72
-#~ msgid "Adjust the appearance and layout to suit your preferences."
-#~ msgstr "നിങ്ങളുടെ മുൻഗണനകൾക്ക് അനുയോജ്യമാകുംവിധം രൂപഭാവവും ലേഔട്ടും ക്രമീകരിക്കുക."
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "AI"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-#~ msgid "All"
-#~ msgstr "എല്ലാം"
 
 #. placeholder {0}: entityLabel.toLowerCase()
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
@@ -364,6 +308,10 @@ msgstr "ഈ ഫീഡ് സബ്‌സ്‌ക്രൈബ് ചെയ്ത
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\" ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "\"{name}\" കോളം ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല."
@@ -376,13 +324,13 @@ msgstr "ഈ അഭിപ്രായം ഇല്ലാതാക്കണമെ�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ലോഗ് ഔട്ട് ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? നിങ്ങളുടെ അക്കൗണ്ട് ആക്സസ് ചെയ്യാൻ വീണ്ടും ലോഗിൻ ചെയ്യേണ്ടിവരും."
 
-#: src/features/words/index.tsx:1008
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
 msgid "Are you sure you want to resign?"
 msgstr "നിങ്ങൾ തീർച്ചയായും രാജി വയ്ക്കാൻ ആഗ്രഹിക്കുന്നുവോ?"
 
-#: ../../../lib/web/src/components/data-table/column-header.tsx:59
-#~ msgid "Asc"
-#~ msgstr "Asc"
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -426,16 +374,25 @@ msgstr "തിരികെ"
 msgid "Back to home"
 msgstr "ഹോമിലേക്ക് മടങ്ങുക"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ബാനർ"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/words/components/tile-rack.tsx:85
 msgid "Blank tile"
 msgstr "ശൂന്യ ടൈൽ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "തടഞ്ഞത്"
 
@@ -444,7 +401,7 @@ msgstr "തടഞ്ഞത്"
 msgid "Blocked navigation to untrusted link"
 msgstr "വിശ്വസനീയമല്ലാത്ത ലിങ്കിലേക്കുള്ള നാവിഗേഷൻ തടഞ്ഞു"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "തടയുന്നു"
 
@@ -481,9 +438,9 @@ msgstr "ബ്രൗസർ അറിയിപ്പുകൾ"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:157
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:904
-#: src/features/words/index.tsx:1081
+#: src/features/words/components/new-game.tsx:143
+#: src/features/words/index.tsx:890
+#: src/features/words/index.tsx:1009
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
@@ -491,7 +448,7 @@ msgstr "റദ്ദാക്കുക"
 msgid "Cancel comment"
 msgstr "അഭിപ്രായം റദ്ദാക്കുക"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Cancel exchange"
 msgstr "എക്സ്ചേഞ്ച് റദ്ദാക്കുക"
 
@@ -513,14 +470,9 @@ msgstr "ഈ അറിയിപ്പുകൾക്കുള്ള വിഭാ�
 msgid "Change notification category"
 msgstr "അറിയിപ്പ് വിഭാഗം മാറ്റുക"
 
-#: src/features/words/index.tsx:944
-#: src/features/words/index.tsx:978
+#: src/features/words/index.tsx:930
 msgid "Chat"
 msgstr "ചാറ്റ്"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-#~ msgid "Check \"All\" to see your past notifications."
-#~ msgstr "മുൻ അറിയിപ്പുകൾ കാണാൻ \"എല്ലാം\" തിരഞ്ഞെടുക്കുക."
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -538,35 +490,20 @@ msgstr "ചെക്ക്‌ലിസ്റ്റ്"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "സൈഡ്ബാറിൽ നിന്ന് ഒരു ഗെയിം തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ ഒരു പുതിയത് ആരംഭിക്കുക."
 
-#: src/features/words/index.tsx:1065
+#: src/features/words/index.tsx:993
 msgid "Choose a letter"
 msgstr "ഒരു അക്ഷരം തിരഞ്ഞെടുക്കുക"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:329
-#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
-#~ msgstr "ഡിഫോൾട്ട് വിപുലീകരിച്ച, കോംപാക്റ്റ് ഐക്കൺ-മാത്രം, അല്ലെങ്കിൽ പൂർണ്ണ ലേഔട്ട് മോഡ് എന്നിവയിൽ നിന്ന് തിരഞ്ഞെടുക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:271
-#~ msgid "Choose between inset, floating, or standard sidebar layout"
-#~ msgstr "inset, floating, അല്ലെങ്കിൽ standard സൈഡ്ബാർ ലേഔട്ടുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:372
-#~ msgid "Choose between left-to-right or right-to-left site direction"
-#~ msgstr "ഇടത്ത്-മുതൽ-വലത്ത് അല്ലെങ്കിൽ വലത്ത്-മുതൽ-ഇടത്ത് സൈറ്റ് ദിശയിൽ നിന്ന് തിരഞ്ഞെടുക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:227
-#~ msgid "Choose between system preference, light mode, or dark mode"
-#~ msgstr "സിസ്റ്റം മുൻഗണന, ലൈറ്റ് മോഡ്, അല്ലെങ്കിൽ ഡാർക്ക് മോഡ് എന്നിവയിൽ നിന്ന് തിരഞ്ഞെടുക്കുക"
-
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "ഭാഷ തിരഞ്ഞെടുക്കുക"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:136
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "എതിരാളികളെ തിരഞ്ഞെടുക്കുക <0>(1-3)</0>"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -580,26 +517,12 @@ msgstr "മായ്ക്കുക"
 msgid "Clear all"
 msgstr "എല്ലാം മായ്ക്കുക"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-#~ msgid "Clear filters"
-#~ msgstr "ഫിൽട്ടറുകൾ മായ്ക്കുക"
-
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
 msgstr "തിരയൽ മായ്ക്കുക"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-#~ msgid "Clear selection"
-#~ msgstr "തിരഞ്ഞെടുപ്പ് മായ്ക്കുക"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-#~ msgid "Clear selection (Escape)"
-#~ msgstr "തിരഞ്ഞെടുപ്പ് മായ്ക്കുക (Escape)"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -660,10 +583,6 @@ msgstr "കോളങ്ങൾ ഇതുപ്രകാരം ഗ്രൂപ്�
 msgid "Comfortable"
 msgstr "സൗകര്യപ്രദം"
 
-#: ../../../lib/web/src/components/coming-soon.tsx:12
-#~ msgid "Coming Soon!"
-#~ msgstr "ഉടൻ വരുന്നു!"
-
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
 msgstr "കമാൻഡ് പാലറ്റ്"
@@ -678,11 +597,16 @@ msgstr "അഭിപ്രായ പ്രവർത്തനങ്ങൾ"
 msgid "Comments"
 msgstr "അഭിപ്രായങ്ങൾ"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "കോംപാക്റ്റ്"
 
-#: src/components/layout/words-layout.tsx:62
+#: src/components/layout/words-layout.tsx:46
 msgid "Completed"
 msgstr "പൂർത്തിയായി"
 
@@ -702,10 +626,6 @@ msgstr "സ്ഥിരീകരിക്കുക"
 #: ../../../lib/web/src/lib/chat-ui.ts:18
 msgid "Connected"
 msgstr "കണക്റ്റ് ചെയ്തു"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-#~ msgid "Connected accounts"
-#~ msgstr "കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുകൾ"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -769,8 +689,8 @@ msgstr "ആ അക്കൗണ്ട് ഉപയോഗിച്ച് പരി
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "സൃഷ്ടിക്കുക"
@@ -789,9 +709,9 @@ msgstr "പുതിയ ഇനം സൃഷ്ടിക്കുക"
 msgid "Created"
 msgstr "സൃഷ്ടിച്ചു"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:145
 msgid "Creating..."
 msgstr "സൃഷ്ടിക്കുന്നു..."
 
@@ -799,6 +719,7 @@ msgstr "സൃഷ്ടിക്കുന്നു..."
 msgid "Current location"
 msgstr "നിലവിലെ സ്ഥാനം"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "ഇഷ്ടാനുസൃതം"
@@ -806,11 +727,6 @@ msgstr "ഇഷ്ടാനുസൃതം"
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "ഇരുണ്ടത്"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:87
-#: ../../../lib/web/src/components/profile-dropdown.tsx:123
-#~ msgid "Dark mode"
-#~ msgstr "ഡാർക്ക് മോഡ്"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
@@ -824,9 +740,9 @@ msgstr "തീയതി"
 msgid "Decline"
 msgstr "നിരസിക്കുക"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:311
-#~ msgid "Default"
-#~ msgstr "ഡിഫോൾട്ട്"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr "ഡിഫോൾട്ട്"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
@@ -845,7 +761,8 @@ msgstr "ഡിഫോൾട്ട് സോർട്ട്"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/words/index.tsx:1037
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "ഇല്ലാതാക്കുക"
 
@@ -865,13 +782,19 @@ msgstr "അഭിപ്രായം ഇല്ലാതാക്കുക"
 msgid "Delete field"
 msgstr "ഫീൽഡ് ഇല്ലാതാക്കുക"
 
-#: src/features/words/index.tsx:847
+#: src/features/words/index.tsx:833
 msgid "Delete game"
 msgstr "ഗെയിം ഇല്ലാതാക്കുക"
 
-#: src/features/words/index.tsx:1028
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "ഗെയിം ഇല്ലാതാക്കണോ?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -891,13 +814,9 @@ msgstr "കാഴ്ച ഇല്ലാതാക്കുക"
 msgid "Delete your account on the old server"
 msgstr "പഴയ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കുക"
 
-#: src/features/words/index.tsx:1034
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "ഇല്ലാതാക്കുന്നു..."
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:63
-#~ msgid "Desc"
-#~ msgstr "Desc"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -911,7 +830,7 @@ msgstr "വിവരണം"
 msgid "Details Panel"
 msgstr "വിശദാംശ പാനൽ"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -921,10 +840,6 @@ msgstr "വിശദാംശ പാനൽ"
 #: ../../../lib/web/src/lib/preference-utils.ts:79
 msgid "Detect from web browser"
 msgstr "വെബ് ബ്രൗസറിൽ നിന്ന് കണ്ടെത്തുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:341
-#~ msgid "Direction"
-#~ msgstr "ദിശ"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
@@ -953,6 +868,7 @@ msgid "Displays the mobile sidebar."
 msgstr "മൊബൈൽ സൈഡ്‌ബാർ പ്രദർശിപ്പിക്കുന്നു."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "പൂർത്തിയായി"
@@ -967,7 +883,7 @@ msgstr "ഡൗൺലോഡ്"
 msgid "Download failed"
 msgstr "ഡൗൺലോഡ് പരാജയപ്പെട്ടു"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "ഡ്യൂപ്ലിക്കേറ്റ്"
 
@@ -1032,13 +948,17 @@ msgstr "ശൂന്യ ചതുരം {0}{1}"
 msgid "Empty tile slot"
 msgstr "ശൂന്യ ടൈൽ സ്ലോട്ട്"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:23
 msgid "English (UK)"
 msgstr "ഇംഗ്ലീഷ് (UK)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:24
 msgid "English (US)"
 msgstr "ഇംഗ്ലീഷ് (US)"
+
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
@@ -1048,13 +968,17 @@ msgstr "നിങ്ങളുടെ ഇമെയിലിലെ കോഡ് ന
 msgid "Enter your authenticator code"
 msgstr "നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
+
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange"
 msgstr "മാറ്റുക"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange ({0})"
 msgstr "മാറ്റുക ({0})"
 
@@ -1062,7 +986,7 @@ msgstr "മാറ്റുക ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "മാറ്റുക ({exchangeCount})"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Exchange tiles"
 msgstr "ടൈലുകൾ കൈമാറ്റം ചെയ്യുക"
 
@@ -1085,31 +1009,27 @@ msgstr "ബാഹ്യ URL"
 msgid "Extra large"
 msgstr "അധിക വലുത്"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:225
-#~ msgid "Failed to add account"
-#~ msgstr "അക്കൗണ്ട് ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു"
-
-#: ../../../lib/web/src/components/tag-input.tsx:39
-#~ msgid "Failed to add tag"
-#~ msgstr "ടാഗ് ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു"
-
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
 msgid "Failed to copy"
 msgstr "പകർത്തുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:52
 msgid "Failed to create game"
 msgstr "ഗെയിം സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "ലിങ്ക് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/words/index.tsx:371
+#: src/features/words/index.tsx:360
 msgid "Failed to create rematch"
 msgstr "റീമാച്ച് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1119,15 +1039,15 @@ msgstr "അറ്റാച്ച്മെന്റ് ഇല്ലാതാക�
 msgid "Failed to delete comment"
 msgstr "അഭിപ്രായം ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/words/index.tsx:382
+#: src/features/words/index.tsx:371
 msgid "Failed to delete game"
 msgstr "ഗെയിം ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "ലിങ്ക് ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:344
 msgid "Failed to exchange"
 msgstr "കൈമാറ്റം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -1147,11 +1067,24 @@ msgstr "ചരിത്രം ലോഡുചെയ്യുന്നതിൽ �
 msgid "Failed to load image"
 msgstr "ചിത്രം ലോഡ് ചെയ്യാനായില്ല"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "വീഡിയോ ലോഡ് ചെയ്യാനായില്ല"
 
-#: src/features/words/index.tsx:345
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/words/index.tsx:334
 msgid "Failed to pass"
 msgstr "പാസ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -1159,11 +1092,11 @@ msgstr "പാസ് ചെയ്യുന്നതിൽ പരാജയപ്�
 msgid "Failed to post comment"
 msgstr "അഭിപ്രായം പോസ്റ്റുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-#~ msgid "Failed to remove account"
-#~ msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:351
 msgid "Failed to resign"
 msgstr "രാജിവയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -1171,46 +1104,53 @@ msgstr "രാജിവയ്ക്കുന്നതിൽ പരാജയപ�
 msgid "Failed to revoke RSS access"
 msgstr "RSS ആക്‌സസ് പിൻവലിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/words/index.tsx:961
-#: src/features/words/index.tsx:995
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/words/index.tsx:947
 msgid "Failed to send"
 msgstr "അയയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-#~ msgid "Failed to send verification code"
-#~ msgstr "സ്ഥിരീകരണ കോഡ് അയയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
-
-#: src/features/words/index.tsx:339
+#: src/features/words/index.tsx:328
 msgid "Failed to submit move"
 msgstr "നീക്കം സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "അഭിപ്രായം പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "അറ്റാച്ച്മെന്റ് അപ്‌ലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "ഫയലുകൾ"
 
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-#~ msgid "Filter..."
-#~ msgstr "ഫിൽട്ടർ..."
-
 #: ../../../lib/web/src/components/restore-banner.tsx:97
 msgid "Finish moving your account"
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് മാറ്റൽ പൂർത്തിയാക്കുക"
 
-#: src/features/words/index.tsx:189
+#: src/features/words/index.tsx:187
 msgid "First move must cover the central square"
 msgstr "ആദ്യ നീക്കം നടുവിലെ കളം ഉൾക്കൊള്ളണം"
 
-#: src/features/words/index.tsx:190
+#: src/features/words/index.tsx:188
 msgid "First move must place at least 2 tiles"
 msgstr "ആദ്യ നീക്കത്തിൽ കുറഞ്ഞത് 2 ടൈലുകൾ വയ്ക്കണം"
 
@@ -1221,10 +1161,6 @@ msgstr "ഫ്ലാഗുകൾ"
 #: ../../../lib/web/src/lib/preference-utils.ts:111
 msgid "Flat"
 msgstr "പരന്നത്"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:258
-#~ msgid "Floating"
-#~ msgstr "ഫ്ലോട്ടിംഗ്"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
@@ -1246,15 +1182,11 @@ msgstr "നിന്ന്"
 msgid "From theme"
 msgstr "തീമിൽ നിന്ന്"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:321
-#~ msgid "Full layout"
-#~ msgstr "പൂർണ്ണ ലേഔട്ട്"
-
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:48
 msgid "Game created"
 msgstr "ഗെയിം സൃഷ്ടിച്ചു"
 
-#: src/features/words/index.tsx:378
+#: src/features/words/index.tsx:367
 msgid "Game deleted"
 msgstr "ഗെയിം ഇല്ലാതാക്കി"
 
@@ -1267,26 +1199,6 @@ msgstr "ഗെയിം അവസാനിച്ചു"
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "തിരികെ പോകുക"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:82
-#~ msgid "Go to first page"
-#~ msgstr "ആദ്യ പേജിലേക്ക് പോകുക"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:128
-#~ msgid "Go to last page"
-#~ msgstr "അവസാന പേജിലേക്ക് പോകുക"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:119
-#~ msgid "Go to next page"
-#~ msgstr "അടുത്ത പേജിലേക്ക് പോകുക"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:106
-#~ msgid "Go to page {pageNumber}"
-#~ msgstr "പേജ് {pageNumber}-ലേക്ക് പോകുക"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:91
-#~ msgid "Go to previous page"
-#~ msgstr "മുൻ പേജിലേക്ക് പോകുക"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
@@ -1304,14 +1216,6 @@ msgstr "ഗ്രൂപ്പ്: {0}"
 #: src/features/words/components/move-composer.tsx:75
 msgid "Has unknown words"
 msgstr "അജ്ഞാത വാക്കുകളുണ്ട്"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:70
-#~ msgid "Hide"
-#~ msgstr "മറയ്ക്കുക"
-
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Hide password"
-#~ msgstr "പാസ്‌വേഡ് മറയ്ക്കുക"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1353,10 +1257,6 @@ msgstr "ഇനിഷ്യൽ അവതാർ"
 msgid "Initials avatar for {name}"
 msgstr "{name}-ന്റെ ഇനിഷ്യൽ അവതാർ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:253
-#~ msgid "Inset"
-#~ msgstr "ഇൻസെറ്റ്"
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "താൽപ്പര്യങ്ങൾ"
@@ -1366,21 +1266,17 @@ msgid "Invalid date"
 msgstr "അസാധുവായ തീയതി"
 
 #: src/features/words/components/move-composer.tsx:72
-#: src/features/words/index.tsx:181
+#: src/features/words/index.tsx:179
 msgid "Invalid move"
 msgstr "അസാധുവായ നീക്കം"
-
-#: ../../../lib/web/src/components/tag-input.tsx:38
-#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-#~ msgstr "അസാധുവായ ടാഗ്: അക്ഷരങ്ങൾ, അക്കങ്ങൾ, സ്പേസുകൾ, ഹൈഫനുകൾ, സ്ലാഷുകൾ മാത്രം (പരമാവധി 50 അക്ഷരങ്ങൾ)"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#~ msgid "Invalid verification code"
-#~ msgstr "അസാധുവായ സ്ഥിരീകരണ കോഡ്"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "നിങ്ങൾ തിരയുന്ന പേജ് <0/>നിലവിലില്ല അല്ലെങ്കിൽ നീക്കംചെയ്തിരിക്കാം."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
 
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
@@ -1390,7 +1286,7 @@ msgstr "ഇപ്പോൾ"
 msgid "Keyboard shortcuts"
 msgstr "കീബോർഡ് കുറുക്കുവഴികൾ"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:115
 msgid "Language"
 msgstr "ഭാഷ"
 
@@ -1402,15 +1298,6 @@ msgstr "വലുത്"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:306
 msgid "Layout"
 msgstr "ലേഔട്ട്"
-
-#: ../../../lib/web/src/components/learn-more.tsx:33
-#: ../../../lib/web/src/components/learn-more.tsx:38
-#~ msgid "Learn more"
-#~ msgstr "കൂടുതലറിയുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:355
-#~ msgid "Left to Right"
-#~ msgstr "ഇടത്ത് നിന്ന് വലത്തേക്ക്"
 
 #: ../../../lib/web/src/components/post-tags.tsx:72
 msgid "Letters, numbers, spaces, and hyphens only"
@@ -1424,7 +1311,7 @@ msgstr "ലൈറ്റ്"
 msgid "Link"
 msgstr "ലിങ്ക്"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "ലിങ്കുകൾ"
 
@@ -1439,6 +1326,14 @@ msgstr "കൂടുതൽ ലോഡുചെയ്യുക"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നു…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1466,10 +1361,6 @@ msgstr "ലോഗ് ഔട്ട് ചെയ്യുന്നു…"
 msgid "Manage categories"
 msgstr "വിഭാഗങ്ങൾ നിയന്ത്രിക്കുക"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-#~ msgid "Manage your connected accounts for notifications and services."
-#~ msgstr "അറിയിപ്പുകൾക്കും സേവനങ്ങൾക്കുമായി നിങ്ങളുടെ കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുകൾ കൈകാര്യം ചെയ്യുക."
-
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "മാനുവൽ"
@@ -1479,7 +1370,7 @@ msgstr "മാനുവൽ"
 msgid "Mark all as read"
 msgstr "എല്ലാം വായിച്ചതായി അടയാളപ്പെടുത്തുക"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:69
 msgid "Maximum 3 opponents"
 msgstr "പരമാവധി 3 എതിരാളികൾ"
 
@@ -1549,15 +1440,15 @@ msgstr "പേര് 1000 പ്രതീകങ്ങൾ അല്ലെങ്�
 msgid "Network error"
 msgstr "നെറ്റ്‌വർക്ക് പിശക്"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "പുതിയത്"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/words-layout.tsx:63
-#: src/features/words/components/new-game.tsx:115
+#: src/components/layout/words-layout.tsx:47
+#: src/features/words/components/new-game.tsx:133
 msgid "New game"
 msgstr "പുതിയ ഗെയിം"
 
@@ -1566,7 +1457,7 @@ msgstr "പുതിയ ഗെയിം"
 msgid "Next image"
 msgstr "അടുത്ത ചിത്രം"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "ചേർക്കാൻ {parentClassNames} ഇല്ല"
 
@@ -1582,15 +1473,11 @@ msgstr "പ്രവർത്തനം ഇതുവരെയില്ല"
 msgid "No comments yet"
 msgstr "അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-#~ msgid "No connected accounts"
-#~ msgstr "ബന്ധിപ്പിച്ച അക്കൗണ്ടുകളൊന്നുമില്ല"
-
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:142
 msgid "No friends found"
 msgstr "സുഹൃത്തുക്കളെ കണ്ടെത്തിയില്ല"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:138
 msgid "No friends yet"
 msgstr "സുഹൃത്തുക്കളാരും ഇതുവരെ ഇല്ല"
 
@@ -1602,21 +1489,17 @@ msgstr "ഗെയിമുകളൊന്നും ഇതുവരെ ഇല്�
 msgid "No groups available"
 msgstr "ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്ല"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ഇതുവരെ ഒരു item type-ഉം സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ parent items ആദ്യം സൃഷ്ടിക്കുക."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "പൊരുത്തപ്പെടുന്ന ഒബ്ജക്ടുകളൊന്നുമില്ല"
 
 #: src/features/words/components/chat-message-list.tsx:42
 msgid "No messages yet"
 msgstr "സന്ദേശങ്ങളൊന്നും ഇതുവരെ ഇല്ല"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "No notifications yet"
-#~ msgstr "ഇതുവരെ അറിയിപ്പുകളൊന്നുമില്ല"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:341
 #: ../../../lib/web/src/components/person-picker.tsx:84
@@ -1626,10 +1509,6 @@ msgstr "ആളുകളെ കണ്ടെത്തിയില്ല"
 #: ../../../lib/web/src/components/place-picker.tsx:133
 msgid "No places found"
 msgstr "സ്ഥലങ്ങളൊന്നും കണ്ടെത്തിയില്ല"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:58
-#~ msgid "No profile"
-#~ msgstr "പ്രൊഫൈൽ ഇല്ല"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
@@ -1646,7 +1525,7 @@ msgstr "ഫലങ്ങളൊന്നും കണ്ടെത്തിയി�
 msgid "No status"
 msgstr "സ്ഥിതി ഇല്ല"
 
-#: src/features/words/index.tsx:184
+#: src/features/words/index.tsx:182
 msgid "No tiles placed"
 msgstr "ടൈലുകളൊന്നും വച്ചിട്ടില്ല"
 
@@ -1666,7 +1545,7 @@ msgstr "വായിക്കാത്ത അറിയിപ്പുകളൊ�
 msgid "No users found"
 msgstr "ഉപയോക്താക്കളെ കണ്ടെത്തിയില്ല"
 
-#: src/features/words/index.tsx:192
+#: src/features/words/index.tsx:190
 msgid "No valid words formed"
 msgstr "സാധുവായ വാക്കുകളൊന്നും ഉണ്ടായില്ല"
 
@@ -1675,9 +1554,13 @@ msgid "No views"
 msgstr "വ്യൂകളൊന്നുമില്ല"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1707,14 +1590,6 @@ msgstr "സജ്ജമാക്കിയിട്ടില്ല"
 msgid "Nothing found"
 msgstr "ഒന്നും കണ്ടെത്തിയില്ല"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:136
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:150
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:236
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:257
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-#~ msgid "Notifications"
-#~ msgstr "അറിയിപ്പുകൾ"
-
 #. placeholder {0}: unread.length
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:200
 msgid "Notifications: {0}"
@@ -1734,21 +1609,16 @@ msgstr "ഓൺ"
 msgid "Oops! Page Not Found!"
 msgstr "ഓ! പേജ് കണ്ടെത്തിയില്ല!"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:156
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-#~ msgid "Open account actions"
-#~ msgstr "അക്കൗണ്ട് പ്രവർത്തനങ്ങൾ തുറക്കുക"
-
 #: ../../../lib/web/src/components/layout/nav-group.tsx:199
 #: ../../../lib/web/src/components/layout/nav-group.tsx:204
 msgid "Open actions"
 msgstr "പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
-#: src/features/words/index.tsx:793
+#: src/features/words/index.tsx:779
 msgid "Open chat panel"
 msgstr "ചാറ്റ് പാനൽ തുറക്കുക"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:787
 msgid "Open game actions"
 msgstr "ഗെയിം പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
@@ -1761,11 +1631,6 @@ msgstr "മെനു തുറക്കുക"
 msgid "Open navigation"
 msgstr "navigation തുറക്കുക"
 
-#: ../../../lib/web/src/components/layout/top-nav.tsx:38
-#: ../../../lib/web/src/components/layout/top-nav.tsx:44
-#~ msgid "Open navigation menu"
-#~ msgstr "navigation മെനു തുറക്കുക"
-
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:105
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:111
 msgid "Open option actions"
@@ -1774,11 +1639,6 @@ msgstr "ഓപ്ഷൻ പ്രവർത്തനങ്ങൾ തുറക്�
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:30
 msgid "Open selected card"
 msgstr "തിരഞ്ഞെടുത്ത കാർഡ് തുറക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:58
-#: ../../../lib/web/src/components/config-drawer.tsx:66
-#~ msgid "Open theme settings"
-#~ msgstr "തീം സെറ്റിങ്ങുകൾ തുറക്കുക"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:274
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:279
@@ -1812,16 +1672,12 @@ msgstr "മറ്റുള്ളവ"
 msgid "Owner"
 msgstr "ഉടമ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:43
-#: ../../../lib/web/src/components/data-table/pagination.tsx:71
-#~ msgid "Page {currentPage} of {totalPages}"
-#~ msgstr "പേജ് {currentPage} / {totalPages}"
-
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "parent"
 
-#: src/features/words/index.tsx:819
+#: src/features/words/index.tsx:805
 msgid "Pass"
 msgstr "പാസ് ചെയ്യുക"
 
@@ -1841,11 +1697,7 @@ msgstr "പാസ്കീകൾ"
 msgid "Pattern (regex)"
 msgstr "പാറ്റേൺ (regex)"
 
-#: ../../../lib/web/src/components/date-picker.tsx:20
-#~ msgid "Pick a date"
-#~ msgstr "തീയതി തിരഞ്ഞെടുക്കുക"
-
-#: src/features/words/index.tsx:185
+#: src/features/words/index.tsx:183
 msgid "Placement out of bounds"
 msgstr "ബോർഡിന് പുറത്താണ് വച്ചത്"
 
@@ -1863,7 +1715,7 @@ msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക�
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "ഈ ഉറവിടം ആക്‌സസ് ചെയ്യാൻ <0/> ഉചിതമായ ക്രെഡൻഷ്യലുകൾ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:65
 msgid "Please select at least one friend"
 msgstr "കുറഞ്ഞത് ഒരു സുഹൃത്തിനെയെങ്കിലും തിരഞ്ഞെടുക്കുക"
 
@@ -1897,13 +1749,17 @@ msgstr "സ്വകാര്യതാ നയം"
 msgid "Processing…"
 msgstr "പ്രോസസ്സ് ചെയ്യുന്നു…"
 
-#: ../../../lib/web/src/components/profile-dropdown.tsx:114
-#~ msgid "Profile"
-#~ msgstr "പ്രൊഫൈൽ പ്രിവ്യൂ"
-
 #: ../../../lib/web/src/components/person-picker.tsx:200
 msgid "Project members"
 msgstr "പ്രോജക്റ്റ് അംഗങ്ങൾ"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
@@ -1926,7 +1782,7 @@ msgid "Ready"
 msgstr "തയ്യാർ"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:916
+#: src/features/words/index.tsx:902
 msgid "Recall"
 msgstr "രസീത് സ്ഥിരീകരിച്ചു"
 
@@ -1947,7 +1803,7 @@ msgstr "ലോഗിനിലേക്ക് തിരിച്ചുവിട�
 msgid "Reduce interest"
 msgstr "പുതുക്കുക"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "ബന്ധപ്പെട്ടത്"
 
@@ -1959,7 +1815,7 @@ msgstr "24 മണിക്കൂറിനുള്ളിൽ ആപേക്ഷ�
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 മണിക്കൂറിനുള്ളിൽ ആപേക്ഷികം, അല്ലാത്തപക്ഷം കൃത്യം"
 
-#: src/features/words/index.tsx:844
+#: src/features/words/index.tsx:830
 msgid "Rematch"
 msgstr "നീക്കം ചെയ്യുക"
 
@@ -1999,8 +1855,8 @@ msgstr "item നീക്കം ചെയ്യുക"
 msgid "Remove item"
 msgstr "ലിസ്റ്റിങ് നീക്കം ചെയ്യുക"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "ലിങ്ക് നീക്കം ചെയ്യുക"
 
@@ -2035,30 +1891,16 @@ msgstr "Reserve പൂർത്തിയായില്ല"
 msgid "Resend email"
 msgstr "ഇമെയിൽ വീണ്ടും അയയ്ക്കുക"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:87
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-#~ msgid "Reset"
-#~ msgstr "പുനഃസജ്ജമാക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:122
-#: ../../../lib/web/src/components/config-drawer.tsx:127
-#~ msgid "Reset {title}"
-#~ msgstr "{title} പുനഃസജ്ജമാക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:85
-#~ msgid "Reset all settings to default values"
-#~ msgstr "മുൻഗണനകൾ റീസെറ്റ് ചെയ്യണോ?"
-
-#: src/features/words/index.tsx:835
-#: src/features/words/index.tsx:1016
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/words/index.tsx:821
 msgid "Resign"
 msgstr "ഗെയിം പിന്മാറണോ?"
 
-#: src/features/words/index.tsx:1007
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "പിന്മാറുന്നു..."
 
-#: src/features/words/index.tsx:1013
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "റെസല്യൂഷൻ"
 
@@ -2078,10 +1920,6 @@ msgstr "ആക്‌സസ് പിൻവലിക്കുക"
 msgid "Revoke RSS access?"
 msgstr "RSS ആക്‌സസ് റദ്ദാക്കണോ?"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:362
-#~ msgid "Right to Left"
-#~ msgstr "വലത്തുനിന്ന് ഇടത്തേക്ക്"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:150
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:168
 msgid "Rows"
@@ -2090,10 +1928,6 @@ msgstr "വരികൾ"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:373
 msgid "Rows group by"
 msgstr "വരികൾ ഗ്രൂപ്പ് ചെയ്യുന്നത്"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:65
-#~ msgid "Rows per page"
-#~ msgstr "ഒരു പേജിലെ വരികൾ"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2111,13 +1945,19 @@ msgstr "RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പക
 msgid "Saturday"
 msgstr "ശനിയാഴ്ച"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "സേവ് ചെയ്യുക"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -2146,7 +1986,7 @@ msgstr "ലക്ഷ്യസ്ഥാനം തിരയുക..."
 msgid "Search for origin..."
 msgstr "ഉത്ഭവ സ്ഥാനം തിരയുക..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "ഒബ്ജക്ടുകൾ തിരയുക..."
 
@@ -2179,10 +2019,6 @@ msgstr "തിരയുന്നു..."
 msgid "Select"
 msgstr "തിരഞ്ഞെടുക്കുക"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:149
-#~ msgid "Select {0}"
-#~ msgstr "{0} തിരഞ്ഞെടുക്കുക"
-
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:356
 msgid "Select a field"
 msgstr "ഒരു ഫീൽഡ് തിരഞ്ഞെടുക്കുക"
@@ -2199,25 +2035,17 @@ msgstr "ആക്സസ് നൽകാൻ ഒരു ഉപയോക്താവ
 msgid "Select access rule"
 msgstr "ആക്സസ് റൂൾ തിരഞ്ഞെടുക്കുക"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-#~ msgid "Select account"
-#~ msgstr "അക്കൗണ്ട് തിരഞ്ഞെടുക്കുക"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
 msgstr "അക്കൗണ്ട് തരം തിരഞ്ഞെടുക്കുക"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:141
 msgid "Select friends..."
 msgstr "സുഹൃത്തുക്കളെ തിരഞ്ഞെടുക്കുക..."
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:231
 msgid "Select group"
 msgstr "ഗ്രൂപ്പ് തിരഞ്ഞെടുക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:305
-#~ msgid "Select layout style"
-#~ msgstr "ലേഔട്ട് ശൈലി തിരഞ്ഞെടുക്കുക"
 
 #: ../../../lib/web/src/components/place-picker.tsx:49
 msgid "Select location"
@@ -2235,26 +2063,10 @@ msgstr "വ്യക്തിയെ തിരഞ്ഞെടുക്കുക..
 msgid "Select previous card"
 msgstr "മുൻ കാർഡ് തിരഞ്ഞെടുക്കുക"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:247
-#~ msgid "Select sidebar style"
-#~ msgstr "സൈഡ്ബാർ ശൈലി തിരഞ്ഞെടുക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:349
-#~ msgid "Select site direction"
-#~ msgstr "സൈറ്റ് ദിശ തിരഞ്ഞെടുക്കുക"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:203
-#~ msgid "Select theme preference"
-#~ msgstr "തീം മുൻഗണന തിരഞ്ഞെടുക്കുക"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:257
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:340
 msgid "Select..."
 msgstr "തിരഞ്ഞെടുക്കുക..."
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-#~ msgid "selected"
-#~ msgstr "തിരഞ്ഞെടുത്തു"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2310,10 +2122,6 @@ msgstr "ക്ലാസുകൾ കാണിക്കുക"
 msgid "Show fields"
 msgstr "ഫീൽഡുകൾ കാണിക്കുക"
 
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Show password"
-#~ msgstr "പാസ്‌വേഡ് കാണിക്കുക"
-
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
 msgstr "ഈ സഹായം കാണിക്കുക"
@@ -2322,7 +2130,7 @@ msgstr "ഈ സഹായം കാണിക്കുക"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total}-ൽ {totalShown} കാണിക്കുന്നു"
 
-#: src/features/words/index.tsx:811
+#: src/features/words/index.tsx:797
 msgid "Shuffle rack"
 msgstr "റാക്ക് ഷഫിൾ ചെയ്യുക"
 
@@ -2344,10 +2152,6 @@ msgstr "സൈൻ ഔട്ട് ചെയ്യുന്നു..."
 msgid "Single line of text only"
 msgstr "ഒറ്റ വരി ടെക്സ്റ്റ് മാത്രം"
 
-#: ../../../lib/web/src/components/skip-to-main.tsx:11
-#~ msgid "Skip to Main"
-#~ msgstr "പ്രധാനഭാഗത്തേക്ക് പോകുക"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:101
 #: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
@@ -2365,15 +2169,15 @@ msgstr "സ്രോതസ്സുകൾ"
 msgid "Spacious"
 msgstr "വിശാലം"
 
-#: src/features/words/index.tsx:186
+#: src/features/words/index.tsx:184
 msgid "Square already occupied"
 msgstr "കളം ഇതിനകം ഉപയോഗത്തിലാണ്"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:134
 msgid "Start a new Words game"
 msgstr "ഒരു പുതിയ Words ഗെയിം ആരംഭിക്കുക"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:144
 msgid "Start game"
 msgstr "ഗെയിം ആരംഭിക്കുക"
 
@@ -2381,16 +2185,17 @@ msgstr "ഗെയിം ആരംഭിക്കുക"
 msgid "Start the discussion by adding the first comment."
 msgstr "ആദ്യത്തെ കമന്റ് ചേർത്ത് ചർച്ച ആരംഭിക്കുക."
 
-#: ../../../lib/web/src/components/coming-soon.tsx:15
-#~ msgid "Stay tuned though!"
-#~ msgstr "ശ്രദ്ധിച്ചുകൊണ്ടിരിക്കുക!"
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "വിഷയം"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:928
+#: src/features/words/index.tsx:914
 msgid "Submit"
 msgstr "സമർപ്പിക്കുക"
 
@@ -2422,10 +2227,6 @@ msgstr "കാഴ്ച 1-9 ലേക്ക് മാറുക"
 msgid "System"
 msgstr "സിസ്റ്റം"
 
-#: ../../../lib/web/src/components/tag-input.tsx:95
-#~ msgid "Tag"
-#~ msgstr "ടാഗ്"
-
 #: ../../../lib/web/src/components/post-tags.tsx:76
 msgid "Tag already exists"
 msgstr "ടാഗ് നിലവിലുണ്ട്"
@@ -2438,10 +2239,6 @@ msgstr "ടാഗ് 50 പ്രതീകങ്ങളോ അതിൽ കുറ
 #: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "ടാഗുകൾ"
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-#~ msgid "Teams/Apps"
-#~ msgstr "ടീമുകൾ/ആപ്പുകൾ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2473,23 +2270,7 @@ msgstr "അഭ്യർത്ഥിച്ച ഉള്ളടക്കം കണ�
 msgid "The server returned a web page instead of data."
 msgstr "സെർവർ ഡാറ്റയ്ക്ക് പകരം ഒരു വെബ് പേജ് തിരികെ നൽകി."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-#~ msgid "The site is not available at the moment."
-#~ msgstr "സൈറ്റ് ഈ നിമിഷം ലഭ്യമല്ല."
-
-#: ../../../lib/web/src/components/config-drawer.tsx:195
-#~ msgid "Theme"
-#~ msgstr "തീം"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:70
-#~ msgid "Theme Settings"
-#~ msgstr "തീം ക്രമീകരണങ്ങൾ"
-
-#: ../../../lib/web/src/components/coming-soon.tsx:14
-#~ msgid "This page has not been created yet."
-#~ msgstr "ഈ പേജ് ഇതുവരെ സൃഷ്ടിച്ചിട്ടില്ല."
-
-#: src/features/words/index.tsx:1029
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ഇത് ഗെയിമും അതിന്റെ ചാറ്റും ശാശ്വതമായി ഇല്ലാതാക്കും. ഈ പ്രവർത്തി പഴയപടിയാക്കാൻ കഴിയില്ല."
 
@@ -2501,30 +2282,21 @@ msgstr "വ്യാഴാഴ്ച"
 msgid "Tiles left"
 msgstr "ബാക്കി ടൈലുകൾ"
 
-#: src/features/words/index.tsx:188
+#: src/features/words/index.tsx:186
 msgid "Tiles must be contiguous (no gaps)"
 msgstr "ടൈലുകൾ ഇടവിടാതെ തുടർച്ചയായി വയ്ക്കണം"
 
-#: src/features/words/index.tsx:187
+#: src/features/words/index.tsx:185
 msgid "Tiles must be placed in a single row or column"
 msgstr "ടൈലുകൾ ഒരേ വരിയിലോ നിരയിലോ വയ്ക്കണം"
 
-#: src/features/words/index.tsx:191
+#: src/features/words/index.tsx:189
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "ടൈലുകൾ ബോർഡിലുള്ള ടൈലുകളുമായി ചേരണം"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:220
 msgid "To"
 msgstr "എവിടേക്ക്"
-
-#: ../../../lib/web/src/components/data-table/view-options.tsx:37
-#~ msgid "Toggle columns"
-#~ msgstr "കോളങ്ങൾ ടോഗിൾ ചെയ്യുക"
-
-#: ../../../lib/web/src/components/layout/right-panel.tsx:233
-#: ../../../lib/web/src/components/layout/right-panel.tsx:236
-#~ msgid "Toggle right panel"
-#~ msgstr "വലത് പാനൽ ടോഗിൾ ചെയ്യുക"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:365
 #: ../../../lib/web/src/components/layout/nav-group.tsx:372
@@ -2542,11 +2314,6 @@ msgstr "സൈഡ്‌ബാർ ടോഗിൾ ചെയ്യുക"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle Sidebar"
 msgstr "സൈഡ്ബാർ ടോഗിൾ ചെയ്യുക"
-
-#: ../../../lib/web/src/components/theme-switch.tsx:37
-#: ../../../lib/web/src/components/theme-switch.tsx:41
-#~ msgid "Toggle theme"
-#~ msgstr "തീം ടോഗിൾ ചെയ്യുക"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2642,22 +2409,17 @@ msgstr "അജ്ഞാതം"
 msgid "Unsubscribe"
 msgstr "അൺസബ്സ്ക്രൈബ് ചെയ്യുക"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "ശീർഷകമില്ലാത്തത്"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-#~ msgid "Unverified"
-#~ msgstr "സ്ഥിരീകരിച്ചിട്ടില്ല"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
 msgid "Updated"
 msgstr "അപ്ഡേറ്റ് ചെയ്തു"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "അപ്‌ലോഡ് ചെയ്യുക"
@@ -2684,17 +2446,13 @@ msgstr "പരിശോധന ഓഫ്‌ലൈൻ"
 msgid "Validation offline — you can still submit."
 msgstr "സ്ഥിരീകരണം ഓഫ്‌ലൈനാണ് — നിങ്ങൾക്ക് ഇപ്പോഴും സമർപ്പിക്കാം."
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "സ്ഥിരീകരണ കോഡ്"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-#~ msgid "Verification code sent"
-#~ msgstr "സ്ഥിരീകരണ കോഡ് അയച്ചു"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#~ msgid "Verification failed"
-#~ msgstr "സ്ഥിരീകരണം പരാജയപ്പെട്ടു"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:391
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
@@ -2714,18 +2472,14 @@ msgstr "വീഡിയോ തംബ്നെയിൽ"
 msgid "Video viewer: {0}"
 msgstr "വീഡിയോ വ്യൂവർ: {0}"
 
-#: ../../../lib/web/src/components/data-table/view-options.tsx:33
-#~ msgid "View"
-#~ msgstr "കാണുക"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-#~ msgid "View all"
-#~ msgstr "എല്ലാം കാണുക"
-
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:220
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:228
 msgid "View all notifications"
 msgstr "എല്ലാ അറിയിപ്പുകളും കാണുക"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
@@ -2738,6 +2492,11 @@ msgstr "ടൈലുകൾക്കായി കാത്തിരിക്ക�
 #: src/features/words/components/move-composer.tsx:70
 msgid "Waiting for your turn"
 msgstr "നിങ്ങളുടെ ഊഴത്തിനായി കാത്തിരിക്കുന്നു"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2753,24 +2512,12 @@ msgstr "വാച്ച് ചെയ്തവ മാത്രം"
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
 msgstr "ഞങ്ങൾ <0>{0}</0> എന്നതിലേക്ക് ഒരു പരിശോധനാ കോഡ് അയച്ചു. നിങ്ങളുടെ ഇമെയിൽ വിലാസം പരിശോധിക്കാൻ താഴെ കോഡ് നൽകുക."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-#~ msgid "We'll be back online shortly."
-#~ msgstr "ഞങ്ങൾ ഉടൻ വീണ്ടും ഓൺലൈൻ ആകും."
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-#~ msgid "We'll notify you when something important happens."
-#~ msgstr "പ്രധാനപ്പെട്ട എന്തെങ്കിലും സംഭവിക്കുമ്പോൾ ഞങ്ങൾ അറിയിക്കും."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-#~ msgid "Website is under maintenance!"
-#~ msgstr "വെബ്സൈറ്റ് മെയിന്റനൻസിലാണ്!"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
 msgstr "ബുധനാഴ്ച"
 
-#: src/features/words/index.tsx:83
-#: src/features/words/index.tsx:717
+#: src/features/words/index.tsx:81
+#: src/features/words/index.tsx:705
 msgid "Words"
 msgstr "Words"
 
@@ -2789,10 +2536,6 @@ msgstr "നിങ്ങൾ"
 msgid "You do not have access to this section."
 msgstr "ഈ വിഭാഗത്തിലേക്ക് നിങ്ങൾക്ക് പ്രവേശനമില്ല."
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:18
-#~ msgid "You don't have necessary permission <0/>to view this resource."
-#~ msgstr "ഈ ഉറവിടം കാണാൻ <0/>നിങ്ങൾക്ക് ആവശ്യമായ അനുമതിയില്ല."
-
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
 msgstr "നിങ്ങൾ രാജിവെച്ചു"
@@ -2800,10 +2543,6 @@ msgstr "നിങ്ങൾ രാജിവെച്ചു"
 #: src/features/words/lib/header-model.ts:129
 msgid "You win!"
 msgstr "നിങ്ങൾ വിജയിച്ചു!"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "You're all caught up!"
-#~ msgstr "നിങ്ങൾ എല്ലാം കണ്ടു!"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
