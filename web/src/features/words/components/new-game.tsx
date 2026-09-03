@@ -9,21 +9,11 @@ import { plural } from '@lingui/core/macro'
 import { useNavigate } from '@tanstack/react-router'
 import {
   Button,
-  ResponsiveDialog,
-  ResponsiveDialogContent,
-  ResponsiveDialogDescription,
-  ResponsiveDialogFooter,
-  ResponsiveDialogHeader,
-  ResponsiveDialogTitle,
+  GameNewGameDialog,
   getErrorMessage,
   toast,
-  Skeleton,
-  PersonPicker,
-  GeneralError,
-  shellNavigateExternal,
   type Person,
 } from '@mochi/web'
-import { Loader2, Plus, UserPlus, Users } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
@@ -44,7 +34,6 @@ export function NewGame() {
     if (!isOpen) closeNewGameDialog()
   }
   const [selectedFriends, setSelectedFriends] = useState<string[]>([])
-  const [friendsPickerOpen, setFriendsPickerOpen] = useState(false)
   const [language, setLanguage] = useState<string>('en_UK')
 
   const { data, isLoading, error, refetch } = useNewGameFriendsQuery({
@@ -71,8 +60,6 @@ export function NewGame() {
     [friends]
   )
 
-  const canSubmit = selectedFriends.length >= 1 && selectedFriends.length <= 3 && !createGameMutation.isPending
-
   const handleCreateGame = () => {
     if (selectedFriends.length < 1) {
       toast.error(t`Please select at least one friend`)
@@ -91,113 +78,72 @@ export function NewGame() {
   useEffect(() => {
     if (!open) {
       setSelectedFriends([])
-      setFriendsPickerOpen(false)
       setLanguage('en_UK')
     }
   }, [open])
 
-  useEffect(() => {
-    if (open && !isLoading && friends.length > 0) {
-      const timer = setTimeout(() => setFriendsPickerOpen(true), 50)
-      return () => clearTimeout(timer)
-    }
-  }, [open, isLoading, friends.length])
-
   return (
-    <ResponsiveDialog
+    <GameNewGameDialog
       open={open}
       onOpenChange={onOpenChange}
-      shouldCloseOnInteractOutside={false}
-    >
-      <ResponsiveDialogContent className="sm:max-w-[420px]">
-        <ResponsiveDialogHeader>
-          <ResponsiveDialogTitle className="flex items-center gap-2">
-            <Trans>New game</Trans>
-          </ResponsiveDialogTitle>
-          <ResponsiveDialogDescription className="sr-only">
-            <Trans>Start a new Words game</Trans>
-          </ResponsiveDialogDescription>
-        </ResponsiveDialogHeader>
-
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <label className="text-sm font-medium">
-              <Trans>Choose opponents <span className="text-muted-foreground font-normal">(1-3)</span></Trans>
-            </label>
-            {isLoading ? (
-              <Skeleton className="h-9 w-full" />
-            ) : error ? (
-              <GeneralError error={error} minimal mode="inline" reset={refetch} />
-            ) : friends.length === 0 ? (
-              <div className="flex flex-col items-center justify-center rounded-lg border py-8 text-center">
-                <UserPlus className="text-muted-foreground mb-3 h-10 w-10 opacity-50" />
-                <p className="text-muted-foreground text-sm font-medium"><Trans>No friends yet</Trans></p>
-                <p className="text-muted-foreground mt-1 text-xs"><Trans>Add friends in the People app to start playing</Trans></p>
-                <Button
-                  size="sm"
-                  className="mt-3"
-                  onClick={() => shellNavigateExternal('/people/?action=add')}
-                >
-                  <Users className="size-4" />
-                  <Trans>Add friends</Trans>
-                </Button>
-              </div>
-            ) : (
-              <PersonPicker
-                mode="multiple"
-                value={selectedFriends}
-                onChange={(value) => setSelectedFriends(value as string[])}
-                local={friendsAsPeople}
-                placeholder={t`Select friends...`}
-                emptyMessage={t`No friends found`}
-                open={friendsPickerOpen}
-                onOpenChange={setFriendsPickerOpen}
-              />
-            )}
-            {selectedFriends.length > 0 && (
-              <p className="text-xs text-muted-foreground">
-                {plural(selectedFriends.length + 1, { one: '# player', other: '# players' })}
-              </p>
-            )}
-          </div>
-
-          <div className="space-y-2">
-            <label className="text-sm font-medium"><Trans>Language</Trans></label>
-            <div className="flex gap-2">
-              {languages.map((lang) => (
-                <Button
-                  key={lang.value}
-                  type="button"
-                  variant={language === lang.value ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setLanguage(lang.value)}
-                  className="flex-1"
-                >
-                  {lang.label}
-                </Button>
-              ))}
-            </div>
+      friends={friendsAsPeople}
+      isLoading={isLoading}
+      error={error}
+      onRetry={refetch}
+      mode="multiple"
+      value={selectedFriends}
+      onChange={(value) => setSelectedFriends(value as string[])}
+      pickerFooter={
+        selectedFriends.length > 0 ? (
+          <p className="text-xs text-muted-foreground">
+            {plural(selectedFriends.length + 1, {
+              one: '# player',
+              other: '# players',
+            })}
+          </p>
+        ) : null
+      }
+      canSubmit={
+        selectedFriends.length >= 1 &&
+        selectedFriends.length <= 3 &&
+        !createGameMutation.isPending
+      }
+      isSubmitting={createGameMutation.isPending}
+      onSubmit={handleCreateGame}
+      options={
+        <div className="space-y-2">
+          <label className="text-sm font-medium"><Trans>Language</Trans></label>
+          <div className="flex gap-2">
+            {languages.map((lang) => (
+              <Button
+                key={lang.value}
+                type="button"
+                variant={language === lang.value ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setLanguage(lang.value)}
+                className="flex-1"
+              >
+                {lang.label}
+              </Button>
+            ))}
           </div>
         </div>
-
-        <ResponsiveDialogFooter className="gap-2">
-          <Button
-            variant="outline"
-            onClick={() => onOpenChange(false)}
-            disabled={createGameMutation.isPending}
-          >
-            <Trans>Cancel</Trans>
-          </Button>
-          <Button onClick={handleCreateGame} disabled={!canSubmit}>
-            {createGameMutation.isPending ? (
-              <Loader2 className="size-4 animate-spin" />
-            ) : (
-              <Plus className="size-4" />
-            )}
-            {createGameMutation.isPending ? t`Creating...` : t`Start game`}
-          </Button>
-        </ResponsiveDialogFooter>
-      </ResponsiveDialogContent>
-    </ResponsiveDialog>
+      }
+      labels={{
+        title: <Trans>New game</Trans>,
+        description: <Trans>Start a new Words game</Trans>,
+        opponentLabel: (
+          <Trans>Choose opponents <span className="text-muted-foreground font-normal">(1-3)</span></Trans>
+        ),
+        emptyTitle: <Trans>No friends yet</Trans>,
+        emptyHint: <Trans>Add friends in the People app to start playing</Trans>,
+        addFriends: <Trans>Add friends</Trans>,
+        placeholder: t`Select friends...`,
+        emptyMessage: t`No friends found`,
+        cancel: <Trans>Cancel</Trans>,
+        submit: t`Start game`,
+        submitting: t`Creating...`,
+      }}
+    />
   )
 }
