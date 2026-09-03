@@ -10,12 +10,10 @@ import { useNavigate, useParams } from '@tanstack/react-router'
 import {
   useAuthStore,
   usePageTitle,
-  PageHeader,
   Main,
   GeneralError,
   GameHeader,
   GameHeaderStat,
-  ConfirmDialog,
   Button,
   IconButton,
   getAppPath,
@@ -28,8 +26,11 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   Skeleton,
-  GameChatSidebar,
-  GameChatSheet,
+  GameChatPanels,
+  GameResignDialog,
+  GameDeleteDialog,
+  GamePlaceholderPage,
+  useGameChatMessages,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -311,16 +312,7 @@ export function WordsGameView() {
 
   // Messages
   const messagesQuery = useInfiniteMessagesQuery(selectedGameId)
-  const chatMessages = useMemo(() => {
-    if (!messagesQuery.data?.pages) return []
-    const all = [...messagesQuery.data.pages].reverse().flatMap((p) => p.messages)
-    const seen = new Set<string>()
-    return all.filter((m) => {
-      if (seen.has(m.id)) return false
-      seen.add(m.id)
-      return true
-    })
-  }, [messagesQuery.data?.pages])
+  const chatMessages = useGameChatMessages(messagesQuery.data?.pages)
 
   // Mutations
   const sendMessageMutation = useSendMessageMutation({
@@ -710,26 +702,23 @@ export function WordsGameView() {
   // "Select a game" are the same component told apart by the list's length.
   if (!selectedGameId) {
     return (
-      <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title={t`Words`} />
-        <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
-          {gamesQuery.isLoading ? (
-            <Skeleton className="h-8 w-48" />
-          ) : gamesQuery.error ? (
-            <GeneralError
-              error={gamesQuery.error}
-              minimal
-              mode="inline"
-              reset={gamesQuery.refetch}
-            />
-          ) : (
-            <GameEmptyState
-              onNewGame={openNewGameDialog}
-              hasExistingGames={games.length > 0}
-            />
-          )}
-        </Main>
-      </div>
+      <GamePlaceholderPage title={t`Words`}>
+        {gamesQuery.isLoading ? (
+          <Skeleton className="h-8 w-48" />
+        ) : gamesQuery.error ? (
+          <GeneralError
+            error={gamesQuery.error}
+            minimal
+            mode="inline"
+            reset={gamesQuery.refetch}
+          />
+        ) : (
+          <GameEmptyState
+            onNewGame={openNewGameDialog}
+            hasExistingGames={games.length > 0}
+          />
+        )}
+      </GamePlaceholderPage>
     )
   }
 
@@ -936,8 +925,8 @@ export function WordsGameView() {
           </div>
 
           {/* Right: Chat sidebar */}
-          <GameChatSidebar
-            className="hidden lg:flex w-72 xl:w-80"
+          <GameChatPanels
+            sidebarClassName="hidden lg:flex w-72 xl:w-80"
             title={<Trans>Chat</Trans>}
             messageList={
               <ChatMessageList
@@ -959,77 +948,26 @@ export function WordsGameView() {
                 : null
             }
             footer={moveComposerSection}
+            sheetOpen={showMobileChat}
+            onSheetOpenChange={setShowMobileChat}
           />
         </Main>
       </div>
 
-      {/* Mobile chat sheet */}
-      <GameChatSheet
-        open={showMobileChat}
-        onOpenChange={setShowMobileChat}
-        title={<Trans>Chat</Trans>}
-        messageList={
-          <ChatMessageList
-            key={selectedGameId}
-            messagesQuery={messagesQuery}
-            chatMessages={chatMessages}
-            isLoadingMessages={messagesQuery.isLoading}
-            messagesError={messagesQuery.error}
-            currentUserIdentity={myIdentity}
-          />
-        }
-        newMessage={newMessage}
-        setNewMessage={setNewMessage}
-        onSendMessage={handleSendMessage}
-        isSending={sendMessageMutation.isPending}
-        sendErrorMessage={
-          sendMessageMutation.error
-            ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
-            : null
-        }
-        footer={moveComposerSection}
-      />
-
-      {/* Resign confirmation */}
-      <ConfirmDialog
+      {/* No opponentName: words has no single opponent to name, and its
+          shorter warning is the one it ships. */}
+      <GameResignDialog
         open={showResignDialog}
         onOpenChange={setShowResignDialog}
-        title={t`Resign game?`}
-        desc={t`Are you sure you want to resign?`}
-        confirmText={
-          resignMutation.isPending ? (
-            <>
-              <Loader2 className="me-2 size-4 animate-spin" />
-              <Trans>Resigning...</Trans>
-            </>
-          ) : (
-            t`Resign`
-          )
-        }
-        destructive
-        handleConfirm={handleResign}
-        isLoading={resignMutation.isPending}
+        onConfirm={handleResign}
+        isPending={resignMutation.isPending}
       />
 
-      {/* Delete confirmation */}
-      <ConfirmDialog
+      <GameDeleteDialog
         open={showDeleteDialog}
         onOpenChange={setShowDeleteDialog}
-        title={t`Delete game?`}
-        desc={t`This permanently deletes the game and its chat. This cannot be undone.`}
-        confirmText={
-          deleteGameMutation.isPending ? (
-            <>
-              <Loader2 className="me-2 size-4 animate-spin" />
-              <Trans>Deleting...</Trans>
-            </>
-          ) : (
-            t`Delete`
-          )
-        }
-        destructive
-        handleConfirm={handleDelete}
-        isLoading={deleteGameMutation.isPending}
+        onConfirm={handleDelete}
+        isPending={deleteGameMutation.isPending}
       />
 
       {/* Blank tile letter selection */}
