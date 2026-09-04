@@ -31,7 +31,7 @@ msgid "[not set]"
 msgstr "[არ არის მითითებული]"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:99
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# მოთამაშე} other {# მოთამაშე}}"
 
@@ -173,9 +173,13 @@ msgstr "წვდომის დონე"
 msgid "Account type"
 msgstr "ანგარიშის ტიპი"
 
-#: src/components/layout/words-layout.tsx:61
+#: src/components/layout/words-layout.tsx:45
 msgid "Active games"
 msgstr "აქტიური თამაშები"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+msgid "Activity"
+msgstr "აქტივობა"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:758
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "ჩამონათვალის ერთეულის დამ�
 msgid "Add field"
 msgstr "ველის დამატება"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends"
 msgstr "მეგობრების დამატება"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:139
 msgid "Add friends in the People app to start playing"
 msgstr "დაამატეთ მეგობრები People აპში სათამაშოდ დასაწყებად"
 
@@ -228,7 +232,7 @@ msgstr "დაამატეთ მეგობრები People აპში
 msgid "Add item..."
 msgstr "ერთეულის დამატება..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "ბმულის დამატება"
 
@@ -302,6 +306,10 @@ msgstr "ყველაფერი, რაც ამ არხზეა გა�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "დარწმუნებული ხართ, რომ გსურთ „{0}“-ის წაშლა?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr "დარწმუნებული ხართ, რომ გსურთ „{title}“-ის წაშლა? მოქმედება შეუქცევადია."
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:631
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "დარწმუნებული ხართ, რომ გსურთ „{name}“ სვეტის წაშლა? ეს შეუქცევადია."
@@ -314,9 +322,13 @@ msgstr "დარწმუნებული ხართ, რომ გსუ�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "დარწმუნებული ხართ, რომ გსურთ გასვლა? ანგარიშზე წვდომისთვის ხელახლა შესვლა მოგიწევთ."
 
-#: src/features/words/index.tsx:1008
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
 msgid "Are you sure you want to resign?"
 msgstr "დარწმუნებული ხართ, რომ გსურთ დათმობა?"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "დარწმუნებული ხართ, რომ გსურთ დათმობა? {opponentName} მოიგებს თამაშს."
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -360,16 +372,25 @@ msgstr "უკან"
 msgid "Back to home"
 msgstr "მთავარზე დაბრუნება"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ბანერი"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr "ბანერი წაიშალა"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr "ბანერი განახლდა"
 
 #: src/features/words/components/tile-rack.tsx:85
 msgid "Blank tile"
 msgstr "ცარიელი ფილა"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "დაბლოკილია"
 
@@ -378,7 +399,7 @@ msgstr "დაბლოკილია"
 msgid "Blocked navigation to untrusted link"
 msgstr "დაბლოკილია უსანდო ბმულზე ნავიგაცია"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "ბლოკები"
 
@@ -423,9 +444,9 @@ msgstr "კამერა მიუწვდომელია"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:157
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:904
-#: src/features/words/index.tsx:1081
+#: src/features/words/components/new-game.tsx:143
+#: src/features/words/index.tsx:890
+#: src/features/words/index.tsx:1009
 msgid "Cancel"
 msgstr "გაუქმება"
 
@@ -433,7 +454,7 @@ msgstr "გაუქმება"
 msgid "Cancel comment"
 msgstr "კომენტარის გაუქმება"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Cancel exchange"
 msgstr "გაცვლის გაუქმება"
 
@@ -469,8 +490,7 @@ msgstr "შეიცვალა"
 msgid "Changed {field}"
 msgstr "შეიცვალა {field}"
 
-#: src/features/words/index.tsx:944
-#: src/features/words/index.tsx:978
+#: src/features/words/index.tsx:930
 msgid "Chat"
 msgstr "ჩატი"
 
@@ -490,7 +510,7 @@ msgstr "ჩამონათვალი"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "აირჩიეთ თამაში გვერდითა პანელიდან ან დაიწყეთ ახალი."
 
-#: src/features/words/index.tsx:1065
+#: src/features/words/index.tsx:993
 msgid "Choose a letter"
 msgstr "აირჩიეთ ასო"
 
@@ -499,10 +519,11 @@ msgstr "აირჩიეთ ასო"
 msgid "Choose language"
 msgstr "აირჩიეთ ენა"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:136
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "აირჩიეთ ოპონენტები <0>(1-3)</0>"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -520,8 +541,8 @@ msgstr "ყველაფრის გასუფთავება"
 msgid "Clear search"
 msgstr "ძიების გასუფთავება"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:517
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
@@ -596,11 +617,16 @@ msgstr "კომენტარის მოქმედებები"
 msgid "Comments"
 msgstr "კომენტარები"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+msgid "Comments ({0})"
+msgstr "კომენტარები ({0})"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "კომპაქტური"
 
-#: src/components/layout/words-layout.tsx:62
+#: src/components/layout/words-layout.tsx:46
 msgid "Completed"
 msgstr "დასრულდა"
 
@@ -683,8 +709,8 @@ msgstr "ამ ანგარიშით ვერ მოხერხდა �
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:551
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:691
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:513
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:507
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "შექმნა"
@@ -707,9 +733,9 @@ msgstr "შექმნილია"
 msgid "Created {field}"
 msgstr "შეიქმნა {field}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:260
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:145
 msgid "Creating..."
 msgstr "იქმნება..."
 
@@ -759,7 +785,8 @@ msgstr "ნაგულისხმევი დახარისხება"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: src/features/words/index.tsx:1037
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "წაშლა"
 
@@ -779,13 +806,19 @@ msgstr "კომენტარის წაშლა"
 msgid "Delete field"
 msgstr "ველის წაშლა"
 
-#: src/features/words/index.tsx:847
+#: src/features/words/index.tsx:833
 msgid "Delete game"
 msgstr "თამაშის წაშლა"
 
-#: src/features/words/index.tsx:1028
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "თამაშის წაშლა?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+msgid "Delete item"
+msgstr "ერთეულის წაშლა"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:117
 msgid "Delete option"
@@ -813,7 +846,7 @@ msgstr "წაიშალა"
 msgid "Deleted {field}"
 msgstr "წაიშალა {field}"
 
-#: src/features/words/index.tsx:1034
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "იშლება..."
 
@@ -871,6 +904,7 @@ msgid "Does not match the required pattern"
 msgstr "არ შეესაბამება საჭირო შაბლონს"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "მზადაა"
@@ -886,7 +920,7 @@ msgstr "ჩამოტვირთვა"
 msgid "Download failed"
 msgstr "ჩამოტვირთვა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "დუბლიკატები"
 
@@ -951,13 +985,17 @@ msgstr "ცარიელი უჯრა {0}{1}"
 msgid "Empty tile slot"
 msgstr "ცარიელი ფილის სლოტი"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:23
 msgid "English (UK)"
 msgstr "ინგლისური (UK)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:24
 msgid "English (US)"
 msgstr "ინგლისური (US)"
+
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr "შეიყვანეთ ბანერის ტექსტი (markdown მხარდაჭერილია)..."
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:290
 msgid "Enter the code from your email"
@@ -967,13 +1005,17 @@ msgstr "შეიყვანეთ კოდი თქვენი ელფო
 msgid "Enter your authenticator code"
 msgstr "შეიყვანეთ თქვენი authenticator-ის კოდი"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+msgid "Error"
+msgstr "შეცდომა"
+
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange"
 msgstr "გაცვლა"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange ({0})"
 msgstr "გაცვლა ({0})"
 
@@ -981,7 +1023,7 @@ msgstr "გაცვლა ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "გაცვლა ({exchangeCount})"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Exchange tiles"
 msgstr "ფილების გაცვლა"
 
@@ -1013,18 +1055,22 @@ msgstr "ანგარიშის დამატება ვერ მოხ
 msgid "Failed to copy"
 msgstr "კოპირება ვერ მოხერხდა"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:52
 msgid "Failed to create game"
 msgstr "თამაშის შექმნა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "ბმულის შექმნა ვერ მოხერხდა"
 
-#: src/features/words/index.tsx:371
+#: src/features/words/index.tsx:360
 msgid "Failed to create rematch"
 msgstr "რევანშის შექმნა ვერ მოხერხდა"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:303
+msgid "Failed to delete"
+msgstr "წაშლა ვერ მოხერხდა"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1034,15 +1080,15 @@ msgstr "დანართის წაშლა ვერ მოხერხდ
 msgid "Failed to delete comment"
 msgstr "კომენტარის წაშლა ვერ მოხერხდა"
 
-#: src/features/words/index.tsx:382
+#: src/features/words/index.tsx:371
 msgid "Failed to delete game"
 msgstr "თამაშის წაშლა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "ბმულის წაშლა ვერ მოხერხდა"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:344
 msgid "Failed to exchange"
 msgstr "გაცვლა ვერ მოხერხდა"
 
@@ -1062,6 +1108,11 @@ msgstr "ისტორიის ჩატვირთვა ვერ მოხ
 msgid "Failed to load image"
 msgstr "სურათის ჩატვირთვა ვერ მოხერხდა"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+msgid "Failed to load item"
+msgstr "ელემენტის ჩატვირთვა ვერ მოხერხდა"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
 msgid "Failed to load prompts"
 msgstr "მოთხოვნების ჩატვირთვა ვერ მოხერხდა"
@@ -1070,7 +1121,11 @@ msgstr "მოთხოვნების ჩატვირთვა ვერ 
 msgid "Failed to load video"
 msgstr "ვიდეოს ჩატვირთვა ვერ მოხერხდა"
 
-#: src/features/words/index.tsx:345
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:317
+msgid "Failed to move"
+msgstr "გადატანა ვერ მოხერხდა"
+
+#: src/features/words/index.tsx:334
 msgid "Failed to pass"
 msgstr "პასი ვერ მოხერხდა"
 
@@ -1082,7 +1137,7 @@ msgstr "კომენტარის გამოქვეყნება ვ�
 msgid "Failed to reset prompt"
 msgstr "მოთხოვნის გადატვირთვა ვერ მოხერხდა"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:351
 msgid "Failed to resign"
 msgstr "თანამდებობიდან გადადგომა ვერ მოხერხდა"
 
@@ -1090,28 +1145,39 @@ msgstr "თანამდებობიდან გადადგომა �
 msgid "Failed to revoke RSS access"
 msgstr "RSS წვდომის გაუქმება ვერ მოხერხდა"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:273
+msgid "Failed to save"
+msgstr "შენახვა ვერ მოხერხდა"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
 msgid "Failed to save prompt"
 msgstr "მოთხოვნის შენახვა ვერ მოხერხდა"
 
-#: src/features/words/index.tsx:961
-#: src/features/words/index.tsx:995
+#: src/features/words/index.tsx:947
 msgid "Failed to send"
 msgstr "გაგზავნა ვერ მოხერხდა"
 
-#: src/features/words/index.tsx:339
+#: src/features/words/index.tsx:328
 msgid "Failed to submit move"
 msgstr "სვლის გაგზავნა ვერ მოხერხდა"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr "ბანერის განახლება ვერ მოხერხდა"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to update comment"
 msgstr "კომენტარის განახლება ვერ მოხერხდა"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:288
+msgid "Failed to update watching"
+msgstr "თვალყურის დევნების განახლება ვერ მოხერხდა"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "დანართის ატვირთვა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:611
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:605
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:160
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:180
 msgid "Files"
@@ -1121,11 +1187,11 @@ msgstr "ფაილები"
 msgid "Finish moving your account"
 msgstr "დაასრულეთ ანგარიშის გადატანა"
 
-#: src/features/words/index.tsx:189
+#: src/features/words/index.tsx:187
 msgid "First move must cover the central square"
 msgstr "პირველმა სვლამ უნდა დაფაროს ცენტრალური უჯრა"
 
-#: src/features/words/index.tsx:190
+#: src/features/words/index.tsx:188
 msgid "First move must place at least 2 tiles"
 msgstr "პირველ სვლაზე უნდა განთავსდეს სულ მცირე 2 ფილა"
 
@@ -1157,11 +1223,11 @@ msgstr "ვისგან"
 msgid "From theme"
 msgstr "თემიდან"
 
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:48
 msgid "Game created"
 msgstr "თამაში შეიქმნა"
 
-#: src/features/words/index.tsx:378
+#: src/features/words/index.tsx:367
 msgid "Game deleted"
 msgstr "თამაში წაიშალა"
 
@@ -1245,13 +1311,17 @@ msgid "Invalid date"
 msgstr "არასწორი თარიღი"
 
 #: src/features/words/components/move-composer.tsx:72
-#: src/features/words/index.tsx:181
+#: src/features/words/index.tsx:179
 msgid "Invalid move"
 msgstr "არასწორი სვლა"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "როგორც ჩანს, გვერდი, რომელსაც ეძებთ, <0/>არ არსებობს ან წაშლილია."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+msgid "Item details"
+msgstr "ელემენტის დეტალები"
 
 #: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
@@ -1261,7 +1331,7 @@ msgstr "ახლახან"
 msgid "Keyboard shortcuts"
 msgstr "კლავიატურის მალსახმობები"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:115
 msgid "Language"
 msgstr "ენა"
 
@@ -1286,7 +1356,7 @@ msgstr "ღია"
 msgid "Link"
 msgstr "ბმული"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "ბმულები"
 
@@ -1301,6 +1371,14 @@ msgstr "მეტის ჩატვირთვა"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "შიგთავსის ჩატვირთვა…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+msgid "Loading item"
+msgstr "ელემენტის ჩატვირთვა"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+msgid "Loading item details"
+msgstr "ელემენტის დეტალების ჩატვირთვა"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:39
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1337,7 +1415,7 @@ msgstr "სახელმძღვანელო"
 msgid "Mark all as read"
 msgstr "ყველას წაკითხულად მონიშვნა"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:69
 msgid "Maximum 3 opponents"
 msgstr "მაქსიმუმ 3 მოწინააღმდეგე"
 
@@ -1427,15 +1505,15 @@ msgstr "სახელი უნდა იყოს 1000 სიმბოლო 
 msgid "Network error"
 msgstr "ქსელის შეცდომა"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:498
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:492
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "ახალი"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/words-layout.tsx:63
-#: src/features/words/components/new-game.tsx:115
+#: src/components/layout/words-layout.tsx:47
+#: src/features/words/components/new-game.tsx:133
 msgid "New game"
 msgstr "ახალი თამაში"
 
@@ -1444,7 +1522,7 @@ msgstr "ახალი თამაში"
 msgid "Next image"
 msgstr "შემდეგი სურათი"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:577
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:571
 msgid "No {parentClassNames} to add to"
 msgstr "დასამატებელი {parentClassNames} არ არის"
 
@@ -1460,11 +1538,11 @@ msgstr "აქტივობა ჯერ არ არის"
 msgid "No comments yet"
 msgstr "კომენტარები ჯერ არ არის"
 
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:142
 msgid "No friends found"
 msgstr "მეგობრები ვერ მოიძებნა"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:138
 msgid "No friends yet"
 msgstr "მეგობრები ჯერ არ არის"
 
@@ -1476,11 +1554,11 @@ msgstr "თამაშები ჯერ არ არის"
 msgid "No groups available"
 msgstr "ხელმისაწვდომი ჯგუფები არ არის"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:544
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "შესაბამისი ობიექტები არ არის"
 
@@ -1512,7 +1590,7 @@ msgstr "შედეგები ვერ მოიძებნა."
 msgid "No status"
 msgstr "სტატუსი არ არის"
 
-#: src/features/words/index.tsx:184
+#: src/features/words/index.tsx:182
 msgid "No tiles placed"
 msgstr "ფილები არ არის განთავსებული"
 
@@ -1532,7 +1610,7 @@ msgstr "წაუკითხავი შეტყობინებები �
 msgid "No users found"
 msgstr "მომხმარებლები ვერ მოიძებნა"
 
-#: src/features/words/index.tsx:192
+#: src/features/words/index.tsx:190
 msgid "No valid words formed"
 msgstr "სწორი სიტყვა არ შედგა"
 
@@ -1541,9 +1619,13 @@ msgid "No views"
 msgstr "ნახვები არ არის"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:563
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1597,11 +1679,11 @@ msgstr "უპს! გვერდი ვერ მოიძებნა!"
 msgid "Open actions"
 msgstr "მოქმედებების გახსნა"
 
-#: src/features/words/index.tsx:793
+#: src/features/words/index.tsx:779
 msgid "Open chat panel"
 msgstr "ჩატის პანელის გახსნა"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:787
 msgid "Open game actions"
 msgstr "თამაშის მოქმედებების გახსნა"
 
@@ -1655,11 +1737,13 @@ msgstr "სხვა"
 msgid "Owner"
 msgstr "მფლობელი"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:552
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
 msgid "Parent"
 msgstr "მშობელი"
 
-#: src/features/words/index.tsx:819
+#: src/features/words/index.tsx:805
 msgid "Pass"
 msgstr "გამოტოვება"
 
@@ -1688,7 +1772,7 @@ msgstr "შაბლონი (regex)"
 msgid "People"
 msgstr "ხალხი"
 
-#: src/features/words/index.tsx:185
+#: src/features/words/index.tsx:183
 msgid "Placement out of bounds"
 msgstr "განთავსება დაფის გარეთაა"
 
@@ -1702,7 +1786,7 @@ msgstr "მოთამაშე {playerNumber}"
 msgid "Please check your internet connection and try again."
 msgstr "გთხოვთ, შეამოწმოთ ინტერნეტთან კავშირი და სცადოთ ხელახლა."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:65
 msgid "Please select at least one friend"
 msgstr "გთხოვთ, აირჩიოთ მინიმუმ ერთი მეგობარი"
 
@@ -1740,6 +1824,10 @@ msgstr "მუშავდება…"
 msgid "Prompt saved"
 msgstr "მოთხოვნა შენახულია"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+msgid "Properties"
+msgstr "თვისებები"
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Push შეტყობინება"
@@ -1761,7 +1849,7 @@ msgid "Ready"
 msgstr "მზადაა"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:916
+#: src/features/words/index.tsx:902
 msgid "Recall"
 msgstr "გახსენება"
 
@@ -1790,7 +1878,7 @@ msgstr "შესვლის გვერდზე გადამისამ�
 msgid "Reduce interest"
 msgstr "ინტერესის შემცირება"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "ეხება"
 
@@ -1810,7 +1898,7 @@ msgstr "რელევანტურობა {relevance}"
 msgid "Relevance {relevance}, interest {weight}"
 msgstr "რელევანტურობა {relevance}, ინტერესი {weight}"
 
-#: src/features/words/index.tsx:844
+#: src/features/words/index.tsx:830
 msgid "Rematch"
 msgstr "რევანში"
 
@@ -1850,8 +1938,8 @@ msgstr "ინტერესის წაშლა"
 msgid "Remove item"
 msgstr "ნივთის წაშლა"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "ბმულის წაშლა"
 
@@ -1886,16 +1974,16 @@ msgstr "აუცილებელი"
 msgid "Resend email"
 msgstr "ელფოსტის ხელახლა გაგზავნა"
 
-#: src/features/words/index.tsx:835
-#: src/features/words/index.tsx:1016
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/words/index.tsx:821
 msgid "Resign"
 msgstr "ჩაბარება"
 
-#: src/features/words/index.tsx:1007
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "თამაშის ჩაბარება?"
 
-#: src/features/words/index.tsx:1013
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "ჩაბარება..."
 
@@ -1942,6 +2030,7 @@ msgstr "შაბათი"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -1980,7 +2069,7 @@ msgstr "დანიშნულების ძიება..."
 msgid "Search for origin..."
 msgstr "წყაროს ძიება..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "ობიექტების ძიება..."
 
@@ -2033,7 +2122,7 @@ msgstr "წვდომის წესის არჩევა"
 msgid "Select account type"
 msgstr "ანგარიშის ტიპის არჩევა"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:141
 msgid "Select friends..."
 msgstr "აირჩიეთ მეგობრები..."
 
@@ -2124,7 +2213,7 @@ msgstr "ამ დახმარების ჩვენება"
 msgid "Showing {totalShown} of {total}"
 msgstr "ნაჩვენებია {totalShown} {total}-დან"
 
-#: src/features/words/index.tsx:811
+#: src/features/words/index.tsx:797
 msgid "Shuffle rack"
 msgstr "სტოიკის შერევა"
 
@@ -2167,15 +2256,15 @@ msgstr "წყაროები"
 msgid "Spacious"
 msgstr "ფართო"
 
-#: src/features/words/index.tsx:186
+#: src/features/words/index.tsx:184
 msgid "Square already occupied"
 msgstr "უჯრა უკვე დაკავებულია"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:134
 msgid "Start a new Words game"
 msgstr "დაიწყე ახალი Words თამაში"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:144
 msgid "Start game"
 msgstr "თამაშის დაწყება"
 
@@ -2183,12 +2272,17 @@ msgstr "თამაშის დაწყება"
 msgid "Start the discussion by adding the first comment."
 msgstr "დაიწყეთ დისკუსია პირველი კომენტარის დამატებით."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Stop watching"
+msgstr "ყურების შეწყვეტა"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "თემა"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:928
+#: src/features/words/index.tsx:914
 msgid "Submit"
 msgstr "გაგზავნა"
 
@@ -2283,7 +2377,7 @@ msgstr "სერვერმა მონაცემების ნაცვ�
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
 msgstr "ამ აპლიკაციას თქვენი passkey-ის გამოყენების უფლება არ აქვს. დაუშვით პარამეტრებში, უფლებების განყოფილებაში."
 
-#: src/features/words/index.tsx:1029
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ეს სამუდამოდ წაშლის თამაშსა და მის ჩატს. ამ მოქმედების გაუქმება შეუძლებელია."
 
@@ -2295,15 +2389,15 @@ msgstr "ხუთშაბათი"
 msgid "Tiles left"
 msgstr "დარჩენილი ფილები"
 
-#: src/features/words/index.tsx:188
+#: src/features/words/index.tsx:186
 msgid "Tiles must be contiguous (no gaps)"
 msgstr "ფილები უნდა იყოს ერთმანეთის გვერდით (უფსკრულების გარეშე)"
 
-#: src/features/words/index.tsx:187
+#: src/features/words/index.tsx:185
 msgid "Tiles must be placed in a single row or column"
 msgstr "ფილები უნდა განთავსდეს ერთ სტრიქონში ან სვეტში"
 
-#: src/features/words/index.tsx:191
+#: src/features/words/index.tsx:189
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "ფილები უნდა შეუერთდეს დაფაზე არსებულ ფილებს"
 
@@ -2420,9 +2514,8 @@ msgstr "ერთეულები"
 msgid "Unsubscribe"
 msgstr "ამოუცნობი ანგარიში"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:299
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "შეჩერება მოხსნილია"
 
@@ -2436,7 +2529,7 @@ msgstr "განახლებულია"
 msgid "Updated {field}"
 msgstr "განახლდა {field}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:661
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:655
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:304
 msgid "Upload"
 msgstr "განახლება მიმდინარეობს..."
@@ -2494,6 +2587,10 @@ msgstr "ვიდეოს მნახველი: {0}"
 msgid "View all notifications"
 msgstr "ყველას ნახვა"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+msgid "View and edit item details"
+msgstr "ყველა პოსტის ნახვა"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "ხედის მართვა"
@@ -2509,6 +2606,11 @@ msgstr "ელოდება ფილებს"
 #: src/features/words/components/move-composer.tsx:70
 msgid "Waiting for your turn"
 msgstr "ელოდება თქვენს სვლას"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Watch"
+msgstr "გაფრთხილება გამოიცა"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2528,8 +2630,8 @@ msgstr "გავაგზავნეთ დამადასტურებ�
 msgid "Wednesday"
 msgstr "ოთხშაბათი"
 
-#: src/features/words/index.tsx:83
-#: src/features/words/index.tsx:717
+#: src/features/words/index.tsx:81
+#: src/features/words/index.tsx:705
 msgid "Words"
 msgstr "სიტყვები"
 

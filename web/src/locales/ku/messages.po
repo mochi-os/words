@@ -31,7 +31,7 @@ msgid "[not set]"
 msgstr "[neyî sazkirin]"
 
 #. placeholder {0}: selectedFriends.length + 1
-#: src/features/words/components/new-game.tsx:159
+#: src/features/words/components/new-game.tsx:99
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# lîstikvan} other {# lîstikvan}}"
 
@@ -173,9 +173,13 @@ msgstr "Asta gihîştinê"
 msgid "Account type"
 msgstr "Cureyê hesabê"
 
-#: src/components/layout/words-layout.tsx:61
+#: src/components/layout/words-layout.tsx:45
 msgid "Active games"
 msgstr "Lîstikên çalak"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+msgid "Activity"
+msgstr "Çalakî"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:758
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "Hêmana lîsteya kontrolê zêde bike"
 msgid "Add field"
 msgstr "Qad zêde bike"
 
-#: src/features/words/components/new-game.tsx:142
+#: src/features/words/components/new-game.tsx:140
 msgid "Add friends"
 msgstr "Hevalan zêde bike"
 
-#: src/features/words/components/new-game.tsx:135
+#: src/features/words/components/new-game.tsx:139
 msgid "Add friends in the People app to start playing"
 msgstr "Ji bo destpêkirina lîstikê di sepana Mirovan de hevalan zêde bike"
 
@@ -228,7 +232,7 @@ msgstr "Ji bo destpêkirina lîstikê di sepana Mirovan de hevalan zêde bike"
 msgid "Add item..."
 msgstr "Hêman zêde bike..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Girêdan zêde bike"
 
@@ -302,6 +306,10 @@ msgstr "Her tiştê ku li vê xwarinê abone ye dê wergirtinê rawestîne. Piş
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Tu bawer î ku dixwazî \"{0}\" jê bibî?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr "Tu bawer î ku dixwazî \"{title}\" jê bibî? Ev kar nikare were vegerandin."
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:631
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Tu bawer î ku dixwazî stûna \"{name}\" jê bibî? Ev nikare were vegerandin."
@@ -314,9 +322,13 @@ msgstr "Tu bawer î ku dixwazî vê şîroveyê jê bibî? Hemû bersiv jî dê 
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Tu bawer î ku dixwazî derkevî? Tu ê hewce bikî ku ji nû ve têkevî da ku gihîştina hesabê xwe bibî."
 
-#: src/features/words/index.tsx:1008
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
 msgid "Are you sure you want to resign?"
 msgstr "Tu bawer î ku dixwazî teslîm bibî?"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "Tu bawer î ku dixwazî teslîm bibî? {opponentName} dê di lîstikê de bi ser bikeve."
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -360,16 +372,25 @@ msgstr "Vegere"
 msgid "Back to home"
 msgstr "Vegere ser malê"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr "Banner hat rakirin"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr "Banner hat nûkirin"
 
 #: src/features/words/components/tile-rack.tsx:85
 msgid "Blank tile"
 msgstr "Kareya vala"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Hat astengkirin ji aliyê"
 
@@ -378,7 +399,7 @@ msgstr "Hat astengkirin ji aliyê"
 msgid "Blocked navigation to untrusted link"
 msgstr "Gihîştin bo girêdaneke nebawer hat astengkirin"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Blok"
 
@@ -423,9 +444,9 @@ msgstr "Kamera tune ye"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/words/components/move-composer.tsx:157
-#: src/features/words/components/new-game.tsx:189
-#: src/features/words/index.tsx:904
-#: src/features/words/index.tsx:1081
+#: src/features/words/components/new-game.tsx:143
+#: src/features/words/index.tsx:890
+#: src/features/words/index.tsx:1009
 msgid "Cancel"
 msgstr "Betal bike"
 
@@ -433,7 +454,7 @@ msgstr "Betal bike"
 msgid "Cancel comment"
 msgstr "Şîroveyê betal bike"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Cancel exchange"
 msgstr "Veguhertinê betal bike"
 
@@ -469,8 +490,7 @@ msgstr "Hate guhertin"
 msgid "Changed {field}"
 msgstr "{field} hate guhertin"
 
-#: src/features/words/index.tsx:944
-#: src/features/words/index.tsx:978
+#: src/features/words/index.tsx:930
 msgid "Chat"
 msgstr "Chat"
 
@@ -490,7 +510,7 @@ msgstr "Lîsteya kontrolê"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Lîstikekê ji panela kêlekê hilbijêre an yeke nû dest pê bike."
 
-#: src/features/words/index.tsx:1065
+#: src/features/words/index.tsx:993
 msgid "Choose a letter"
 msgstr "Tîpekê hilbijêre"
 
@@ -499,10 +519,11 @@ msgstr "Tîpekê hilbijêre"
 msgid "Choose language"
 msgstr "Ziman hilbijêre"
 
-#: src/features/words/components/new-game.tsx:125
+#: src/features/words/components/new-game.tsx:136
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Hevrikan hilbijêre <0>(1-3)</0>"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -520,8 +541,8 @@ msgstr "Hemûyan paqij bike"
 msgid "Clear search"
 msgstr "Lêgerînê paqij bike"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:517
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
@@ -596,11 +617,16 @@ msgstr "Kiryarên şîroveyê"
 msgid "Comments"
 msgstr "Şîrove"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+msgid "Comments ({0})"
+msgstr "Şîrove ({0})"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Kompakt"
 
-#: src/components/layout/words-layout.tsx:62
+#: src/components/layout/words-layout.tsx:46
 msgid "Completed"
 msgstr "Temam"
 
@@ -683,8 +709,8 @@ msgstr "Bi wê hesabê re piştrastkirin pêk nehat. Ji kerema xwe dîsa bicerib
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:551
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:691
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:513
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:507
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Çêbike"
@@ -707,9 +733,9 @@ msgstr "Hat çêkirin"
 msgid "Created {field}"
 msgstr "{field} hate afirandin"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:260
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:145
 msgid "Creating..."
 msgstr "Tê çêkirin..."
 
@@ -759,7 +785,8 @@ msgstr "Rêzkirina standard"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: src/features/words/index.tsx:1037
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Jê bibe"
 
@@ -779,13 +806,19 @@ msgstr "Şîroveyê jê bibe"
 msgid "Delete field"
 msgstr "Qadê jê bibe"
 
-#: src/features/words/index.tsx:847
+#: src/features/words/index.tsx:833
 msgid "Delete game"
 msgstr "Lîstikê jê bibe"
 
-#: src/features/words/index.tsx:1028
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "Lîstik jê bibe?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+msgid "Delete item"
+msgstr "Hêmanê jê bibe"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:117
 msgid "Delete option"
@@ -813,7 +846,7 @@ msgstr "Hate jêbirin"
 msgid "Deleted {field}"
 msgstr "{field} hate jêbirin"
 
-#: src/features/words/index.tsx:1034
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "Tê jêbirin..."
 
@@ -871,6 +904,7 @@ msgid "Does not match the required pattern"
 msgstr "Bi şablona pêwîst re li hev nake"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Qediya"
@@ -886,7 +920,7 @@ msgstr "Daxe"
 msgid "Download failed"
 msgstr "Daxistin têk çû"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Dubare"
 
@@ -951,13 +985,17 @@ msgstr "Çargoşeya vala {0}{1}"
 msgid "Empty tile slot"
 msgstr "Cihê piranê vala"
 
-#: src/features/words/components/new-game.tsx:33
+#: src/features/words/components/new-game.tsx:23
 msgid "English (UK)"
 msgstr "Îngilîzî (Brîtanya)"
 
-#: src/features/words/components/new-game.tsx:34
+#: src/features/words/components/new-game.tsx:24
 msgid "English (US)"
 msgstr "Îngilîzî (Amerîka)"
+
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr "Nivîsa pankartê binivîse (markdown tê piştgirîkirin)..."
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:290
 msgid "Enter the code from your email"
@@ -967,13 +1005,17 @@ msgstr "Koda ji e-nameya xwe binivîse"
 msgid "Enter your authenticator code"
 msgstr "Koda authenticator-a xwe têkevê"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+msgid "Error"
+msgstr "Çewtî"
+
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange"
 msgstr "Guherandin"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:910
+#: src/features/words/index.tsx:896
 msgid "Exchange ({0})"
 msgstr "Guherandin ({0})"
 
@@ -981,7 +1023,7 @@ msgstr "Guherandin ({0})"
 msgid "Exchange ({exchangeCount})"
 msgstr "Guherandin ({exchangeCount})"
 
-#: src/features/words/index.tsx:831
+#: src/features/words/index.tsx:817
 msgid "Exchange tiles"
 msgstr "Pêran biguherîne"
 
@@ -1013,18 +1055,22 @@ msgstr "Zêdekirina hesabê neserkeftî bû"
 msgid "Failed to copy"
 msgstr "Kopîkirin neserkeftî bû"
 
-#: src/features/words/components/new-game.tsx:63
+#: src/features/words/components/new-game.tsx:52
 msgid "Failed to create game"
 msgstr "Çêkirina lîstikê neserkeftî bû"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Çêkirina lînkê neserkeftî bû"
 
-#: src/features/words/index.tsx:371
+#: src/features/words/index.tsx:360
 msgid "Failed to create rematch"
 msgstr "Çêkirina lîstika nû neserkeftî bû"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:303
+msgid "Failed to delete"
+msgstr "Jêbirin neserkeftî bû"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1034,15 +1080,15 @@ msgstr "Jêbirina pêvekê neserkeftî bû"
 msgid "Failed to delete comment"
 msgstr "Jêbirina şîroveyê neserkeftî bû"
 
-#: src/features/words/index.tsx:382
+#: src/features/words/index.tsx:371
 msgid "Failed to delete game"
 msgstr "Jêbirina lîstikê neserkeftî bû"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Jêbirina lînkê neserkeftî bû"
 
-#: src/features/words/index.tsx:355
+#: src/features/words/index.tsx:344
 msgid "Failed to exchange"
 msgstr "Guherandin neserkeftî bû"
 
@@ -1062,6 +1108,11 @@ msgstr "Barkirina dîrokê neserkeftî bû"
 msgid "Failed to load image"
 msgstr "Wêne nehat barkirin"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+msgid "Failed to load item"
+msgstr "Barkirina xalê neserkeftî bû"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
 msgid "Failed to load prompts"
 msgstr "Barkirina promptan neserkeftî bû"
@@ -1070,7 +1121,11 @@ msgstr "Barkirina promptan neserkeftî bû"
 msgid "Failed to load video"
 msgstr "Vîdyo nehat barkirin"
 
-#: src/features/words/index.tsx:345
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:317
+msgid "Failed to move"
+msgstr "Veguhastin bi ser neket"
+
+#: src/features/words/index.tsx:334
 msgid "Failed to pass"
 msgstr "Derbas neserkeftî bû"
 
@@ -1082,7 +1137,7 @@ msgstr "Şandina şîroveyê neserkeftî bû"
 msgid "Failed to reset prompt"
 msgstr "Sifirkirina prompt neserkeftî bû"
 
-#: src/features/words/index.tsx:362
+#: src/features/words/index.tsx:351
 msgid "Failed to resign"
 msgstr "Dest tê de hilanîn neserkeftî bû"
 
@@ -1090,28 +1145,39 @@ msgstr "Dest tê de hilanîn neserkeftî bû"
 msgid "Failed to revoke RSS access"
 msgstr "Betalkirina gihîştina RSS bi ser neket"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:273
+msgid "Failed to save"
+msgstr "Tomarkirin neserkeftî bû"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
 msgid "Failed to save prompt"
 msgstr "Tomarkirina prompt neserkeftî bû"
 
-#: src/features/words/index.tsx:961
-#: src/features/words/index.tsx:995
+#: src/features/words/index.tsx:947
 msgid "Failed to send"
 msgstr "Şandin neserkeftî bû"
 
-#: src/features/words/index.tsx:339
+#: src/features/words/index.tsx:328
 msgid "Failed to submit move"
 msgstr "Şandina tevgerê neserkeftî bû"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr "Rojanekirina pankartê neserkeftî bû"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to update comment"
 msgstr "Rojanekirina şîroveyê neserkeftî bû"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:288
+msgid "Failed to update watching"
+msgstr "Nûvekirina şopandinê bi ser neket"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Barkirina pêvekê neserkeftî bû"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:611
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:605
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:160
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:180
 msgid "Files"
@@ -1121,11 +1187,11 @@ msgstr "Pelan"
 msgid "Finish moving your account"
 msgstr "Veguheztina hesabê xwe biqedînin"
 
-#: src/features/words/index.tsx:189
+#: src/features/words/index.tsx:187
 msgid "First move must cover the central square"
 msgstr "Divê tevgera yekem xaneya navîn bigire"
 
-#: src/features/words/index.tsx:190
+#: src/features/words/index.tsx:188
 msgid "First move must place at least 2 tiles"
 msgstr "Divê di tevgera yekem de kêmî 2 kevir bên danîn"
 
@@ -1157,11 +1223,11 @@ msgstr "Ji"
 msgid "From theme"
 msgstr "Ji temayê"
 
-#: src/features/words/components/new-game.tsx:59
+#: src/features/words/components/new-game.tsx:48
 msgid "Game created"
 msgstr "Lîstik hat çêkirin"
 
-#: src/features/words/index.tsx:378
+#: src/features/words/index.tsx:367
 msgid "Game deleted"
 msgstr "Lîstik hat jêbirin"
 
@@ -1245,13 +1311,17 @@ msgid "Invalid date"
 msgstr "Tarîxa nederbasdar"
 
 #: src/features/words/components/move-composer.tsx:72
-#: src/features/words/index.tsx:181
+#: src/features/words/index.tsx:179
 msgid "Invalid move"
 msgstr "Tevgera nederbasdar"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Wisa xuya dike ku rûpela ku tu lê digerî <0/>tune ye an hatiye rakirin."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+msgid "Item details"
+msgstr "Hûrgiliyên xalê"
 
 #: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
@@ -1261,7 +1331,7 @@ msgstr "Nuha"
 msgid "Keyboard shortcuts"
 msgstr "Kurtek klavyeyê"
 
-#: src/features/words/components/new-game.tsx:165
+#: src/features/words/components/new-game.tsx:115
 msgid "Language"
 msgstr "Ziman"
 
@@ -1286,7 +1356,7 @@ msgstr "Ronî"
 msgid "Link"
 msgstr "Girêdan"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Lînka"
 
@@ -1301,6 +1371,14 @@ msgstr "Bêtir bar bike"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Naverok tê barkirin…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+msgid "Loading item"
+msgstr "Xal tê barkirin"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+msgid "Loading item details"
+msgstr "Hûrgiliyên xalê tên barkirin"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:39
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1337,7 +1415,7 @@ msgstr "Destî"
 msgid "Mark all as read"
 msgstr "Hemû wek xwendî nîşan bike"
 
-#: src/features/words/components/new-game.tsx:82
+#: src/features/words/components/new-game.tsx:69
 msgid "Maximum 3 opponents"
 msgstr "Herî zêde 3 dijber"
 
@@ -1427,15 +1505,15 @@ msgstr "Nav divê 1000 tîp an kêmtir be"
 msgid "Network error"
 msgstr "Çewtiya torê"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:498
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:492
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Nû"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/words-layout.tsx:63
-#: src/features/words/components/new-game.tsx:115
+#: src/components/layout/words-layout.tsx:47
+#: src/features/words/components/new-game.tsx:133
 msgid "New game"
 msgstr "Lîstika nû"
 
@@ -1444,7 +1522,7 @@ msgstr "Lîstika nû"
 msgid "Next image"
 msgstr "Wêneya pêştir"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:577
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:571
 msgid "No {parentClassNames} to add to"
 msgstr "Tu {parentClassNames} ji bo zêdekirinê tune"
 
@@ -1460,11 +1538,11 @@ msgstr "Hêj tu çalakî tune"
 msgid "No comments yet"
 msgstr "Hêj tu şîrove tune"
 
-#: src/features/words/components/new-game.tsx:152
+#: src/features/words/components/new-game.tsx:142
 msgid "No friends found"
 msgstr "Tu heval nehatin dîtin"
 
-#: src/features/words/components/new-game.tsx:134
+#: src/features/words/components/new-game.tsx:138
 msgid "No friends yet"
 msgstr "Hêj tu heval tune"
 
@@ -1476,11 +1554,11 @@ msgstr "Hêj tu lîstik tune"
 msgid "No groups available"
 msgstr "Tu kom berdest nîn in"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:544
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Tu objeyên li hev tên tune"
 
@@ -1512,7 +1590,7 @@ msgstr "Tu encam nehatin dîtin."
 msgid "No status"
 msgstr "Tu rewş tune"
 
-#: src/features/words/index.tsx:184
+#: src/features/words/index.tsx:182
 msgid "No tiles placed"
 msgstr "Tu kevir nehatine danîn"
 
@@ -1532,7 +1610,7 @@ msgstr "Tu agahdariyên nexwendî tune"
 msgid "No users found"
 msgstr "Tu bikarhêner nehatin dîtin"
 
-#: src/features/words/index.tsx:192
+#: src/features/words/index.tsx:190
 msgid "No valid words formed"
 msgstr "Tu peyveke derbasdar çênebû"
 
@@ -1541,9 +1619,13 @@ msgid "No views"
 msgstr "Tu dîtin tune"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:563
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1597,11 +1679,11 @@ msgstr "Wey! Rûpel nehat dîtin!"
 msgid "Open actions"
 msgstr "Kiryaran veke"
 
-#: src/features/words/index.tsx:793
+#: src/features/words/index.tsx:779
 msgid "Open chat panel"
 msgstr "Panela chatê veke"
 
-#: src/features/words/index.tsx:801
+#: src/features/words/index.tsx:787
 msgid "Open game actions"
 msgstr "Çalakiyên lîstikê veke"
 
@@ -1655,11 +1737,13 @@ msgstr "Yên din"
 msgid "Owner"
 msgstr "Xwedî"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:552
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
 msgid "Parent"
 msgstr "Dêûbav"
 
-#: src/features/words/index.tsx:819
+#: src/features/words/index.tsx:805
 msgid "Pass"
 msgstr "Bibihure"
 
@@ -1688,7 +1772,7 @@ msgstr "Şablon (regex)"
 msgid "People"
 msgstr "Kes"
 
-#: src/features/words/index.tsx:185
+#: src/features/words/index.tsx:183
 msgid "Placement out of bounds"
 msgstr "Danîn li derveyî tabloyê ye"
 
@@ -1702,7 +1786,7 @@ msgstr "Lîstikvanê {playerNumber}"
 msgid "Please check your internet connection and try again."
 msgstr "Ji kerema xwe girêdana xwe ya înternetê kontrol bike û dîsa biceribîne."
 
-#: src/features/words/components/new-game.tsx:78
+#: src/features/words/components/new-game.tsx:65
 msgid "Please select at least one friend"
 msgstr "Ji kerema xwe bi kêmî yek heval hilbijêre"
 
@@ -1740,6 +1824,10 @@ msgstr "Tê pêvajokirin…"
 msgid "Prompt saved"
 msgstr "Daxwaz hate tomarkirin"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+msgid "Properties"
+msgstr "Taybetmendî"
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Agahdariya push"
@@ -1761,7 +1849,7 @@ msgid "Ready"
 msgstr "Amade"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:916
+#: src/features/words/index.tsx:902
 msgid "Recall"
 msgstr "Vegere bîr"
 
@@ -1790,7 +1878,7 @@ msgstr "Beralîkirin ber bi têketinê ve."
 msgid "Reduce interest"
 msgstr "Balkêşî kêm bike"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Pêwendîdar e"
 
@@ -1810,7 +1898,7 @@ msgstr "Peywendî {relevance}"
 msgid "Relevance {relevance}, interest {weight}"
 msgstr "Peywendî {relevance}, eleqe {weight}"
 
-#: src/features/words/index.tsx:844
+#: src/features/words/index.tsx:830
 msgid "Rematch"
 msgstr "Lîstika ji nû"
 
@@ -1850,8 +1938,8 @@ msgstr "Balkêşiyê rake"
 msgid "Remove item"
 msgstr "Babetê rake"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Girêdanê rake"
 
@@ -1886,16 +1974,16 @@ msgstr "Pêwîst"
 msgid "Resend email"
 msgstr "Dîsa e-nameyê bişîne"
 
-#: src/features/words/index.tsx:835
-#: src/features/words/index.tsx:1016
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/words/index.tsx:821
 msgid "Resign"
 msgstr "Dest jê berde"
 
-#: src/features/words/index.tsx:1007
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "Dest ji lîstikê berde?"
 
-#: src/features/words/index.tsx:1013
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "Dest jê tê berdan..."
 
@@ -1942,6 +2030,7 @@ msgstr "Şemî"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -1980,7 +2069,7 @@ msgstr "Li mebestê bigere..."
 msgid "Search for origin..."
 msgstr "Li çavkaniyê bigere..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Li objeyan bigere..."
 
@@ -2033,7 +2122,7 @@ msgstr "Rêzika destpêkirinê hilbijêre"
 msgid "Select account type"
 msgstr "Cureyê hesab hilbijêre"
 
-#: src/features/words/components/new-game.tsx:151
+#: src/features/words/components/new-game.tsx:141
 msgid "Select friends..."
 msgstr "Hevalan hilbijêre..."
 
@@ -2124,7 +2213,7 @@ msgstr "Vê alîkariyê nîşan bide"
 msgid "Showing {totalShown} of {total}"
 msgstr "Nîşandana {totalShown} ji {total}"
 
-#: src/features/words/index.tsx:811
+#: src/features/words/index.tsx:797
 msgid "Shuffle rack"
 msgstr "Refê tevlihev bike"
 
@@ -2167,15 +2256,15 @@ msgstr "Çavkanî"
 msgid "Spacious"
 msgstr "Berfireh"
 
-#: src/features/words/index.tsx:186
+#: src/features/words/index.tsx:184
 msgid "Square already occupied"
 msgstr "Xane jixwe tije ye"
 
-#: src/features/words/components/new-game.tsx:118
+#: src/features/words/components/new-game.tsx:134
 msgid "Start a new Words game"
 msgstr "Lîstika nû ya Words dest pê bike"
 
-#: src/features/words/components/new-game.tsx:197
+#: src/features/words/components/new-game.tsx:144
 msgid "Start game"
 msgstr "Lîstikê dest pê bike"
 
@@ -2183,12 +2272,17 @@ msgstr "Lîstikê dest pê bike"
 msgid "Start the discussion by adding the first comment."
 msgstr "Bi zêdekirina şîroveya yekem nîqaşê dest pê bike."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Stop watching"
+msgstr "Temaşekirinê rawestîne"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Mijar"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:928
+#: src/features/words/index.tsx:914
 msgid "Submit"
 msgstr "Bişîne"
 
@@ -2283,7 +2377,7 @@ msgstr "Rajekar li şûna daneyan rûpeleke webê vegerand."
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
 msgstr "Ev sepan destûr nîne ku passkey-a te bi kar bîne. Di Mîhengan de, di bin Destûran de destûrê bide."
 
-#: src/features/words/index.tsx:1029
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ev ê lîstik û sohbeta wê bi awayekî domdar jê bibe. Ev kirin nayê vegerandin."
 
@@ -2295,15 +2389,15 @@ msgstr "Pêncşem"
 msgid "Tiles left"
 msgstr "Tîpên mayî"
 
-#: src/features/words/index.tsx:188
+#: src/features/words/index.tsx:186
 msgid "Tiles must be contiguous (no gaps)"
 msgstr "Divê kevir li pey hev bin (bê valahî)"
 
-#: src/features/words/index.tsx:187
+#: src/features/words/index.tsx:185
 msgid "Tiles must be placed in a single row or column"
 msgstr "Divê kevir di rêzek an stûnek de bên danîn"
 
-#: src/features/words/index.tsx:191
+#: src/features/words/index.tsx:189
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Divê kevir bi kevirên li ser tabloyê ve girêbidin"
 
@@ -2420,9 +2514,8 @@ msgstr "Nediyar"
 msgid "Unsubscribe"
 msgstr "Abone yî nebe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:299
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Bê sernav"
 
@@ -2436,7 +2529,7 @@ msgstr "Nûjen kirin"
 msgid "Updated {field}"
 msgstr "{field} hate nûkirin"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:661
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:655
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:304
 msgid "Upload"
 msgstr "Bar bike"
@@ -2494,6 +2587,10 @@ msgstr "Nêrîna vîdyoyan: {0}"
 msgid "View all notifications"
 msgstr "Hemû agahdariyan bibîne"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+msgid "View and edit item details"
+msgstr "Hûragahên tiştî bibîne û sererast bike"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Kontrolên dîtinê"
@@ -2509,6 +2606,11 @@ msgstr "Li benda keviran e"
 #: src/features/words/components/move-composer.tsx:70
 msgid "Waiting for your turn"
 msgstr "Li benda dora te ye"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Watch"
+msgstr "Temaşe bike"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2528,8 +2630,8 @@ msgstr "Me kodek pejirandinê şand bo <0>{0}</0>. Ji bo pejirandina navnîşana
 msgid "Wednesday"
 msgstr "Çarşem"
 
-#: src/features/words/index.tsx:83
-#: src/features/words/index.tsx:717
+#: src/features/words/index.tsx:81
+#: src/features/words/index.tsx:705
 msgid "Words"
 msgstr "Words"
 
