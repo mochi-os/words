@@ -18,10 +18,6 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
-#~ msgid " or "
-#~ msgstr " ή "
-
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:189
 msgid "(edited)"
 msgstr "(επεξεργάστηκε)"
@@ -40,7 +36,7 @@ msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# παίκτης} other {# παίκτες}}"
 
 #. placeholder {0}: displayInfo.count
-#: ../../../lib/web/src/components/person-picker.tsx:257
+#: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# επιλεγμένο} other {# επιλεγμένα}}"
 
@@ -55,10 +51,6 @@ msgstr "{0, plural, one {+# ένθετο} other {+# ένθετα}}"
 #: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} στο {1}{2}, κάντε κλικ για αφαίρεση"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:160
-#~ msgid "{0} option preview"
-#~ msgstr "Προεπισκόπηση επιλογής {0}"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -80,19 +72,19 @@ msgstr "Ο/Η {actor} πέρασε"
 msgid "{actor} passed — game over"
 msgstr "Ο/Η {actor} πέρασε — τέλος παιχνιδιού"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#μ} other {#μ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#ώ} other {#ώ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#λ} other {#λ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#εβδ} other {#εβδ}}"
 
@@ -105,10 +97,6 @@ msgstr "{displayLetter} στο {0}{1}"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:176
 msgid "{entityLabel} name"
 msgstr "Όνομα {entityLabel}"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
-#~ msgid "{entityLabel} name is required"
-#~ msgstr "Το όνομα {entityLabel} είναι υποχρεωτικό"
 
 #: src/features/words/components/chat-message-list.tsx:49
 #: src/features/words/lib/header-model.ts:154
@@ -131,22 +119,6 @@ msgstr "Ο/Η {opponentName} πρότεινε ισοπαλία"
 msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
 msgstr "{playerCount, plural, one {Παιχνίδι με # παίκτη} other {Παιχνίδι με # παίκτες}}"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-#~ msgstr "{selectedCount, plural, one {{entityName} επιλέχθηκε} other {{manyName} επιλέχθηκαν}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-#~ msgstr "{selectedCount, plural, one {# {entityName} επιλέχθηκε. Η γραμμή μαζικών ενεργειών είναι διαθέσιμη.} other {# {manyName} επιλέχθηκαν. Η γραμμή μαζικών ενεργειών είναι διαθέσιμη.}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-#~ msgstr "{selectedCount, plural, one {# επιλεγμένα} other {# επιλεγμένα}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-#~ msgstr "{selectedCount, plural, one {Μαζικές ενέργειες για # επιλεγμένο {entityName}} other {Μαζικές ενέργειες για # επιλεγμένα {manyName}}}"
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -168,18 +140,6 @@ msgstr "{unreadCount, plural, one {Άνοιγμα μενού (# μη αναγν�
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# πόντος} other {# πόντοι}}"
 
-#: ../../../lib/web/src/components/entity/entity-board-card.tsx:418
-#~ msgid "+{0} nested"
-#~ msgstr "+{0} ένθετα"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:171
-#~ msgid "+{totalDescendants} more replies"
-#~ msgstr "+{totalDescendants} περισσότερες απαντήσεις"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:170
-#~ msgid "1 reply"
-#~ msgstr "1 απάντηση"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:37
 msgid "12 hours"
 msgstr "12 ώρες"
@@ -187,6 +147,10 @@ msgstr "12 ώρες"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 ώρες"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "Μια εγγραφή βρίσκεται ήδη σε εξέλιξη."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -201,29 +165,13 @@ msgstr "Αποδοχή"
 msgid "Access denied"
 msgstr "Άρνηση πρόσβασης"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:16
-#~ msgid "Access Forbidden"
-#~ msgstr "Απαγορευμένη πρόσβαση"
-
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Επίπεδο πρόσβασης"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-#~ msgid "Account added"
-#~ msgstr "Ο λογαριασμός προστέθηκε"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-#~ msgid "Account removed"
-#~ msgstr "Ο λογαριασμός αφαιρέθηκε"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "Τύπος λογαριασμού"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-#~ msgid "Account verified"
-#~ msgstr "Ο λογαριασμός επαληθεύτηκε"
 
 #: src/components/layout/words-layout.tsx:61
 msgid "Active games"
@@ -255,10 +203,6 @@ msgstr "Προσθήκη πρόσβασης"
 msgid "Add account"
 msgstr "Προσθήκη λογαριασμού"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-#~ msgid "Add an account to receive notifications and use services."
-#~ msgstr "Προσθέστε έναν λογαριασμό για να λαμβάνετε ειδοποιήσεις και να χρησιμοποιείτε υπηρεσίες."
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "Προσθήκη λεζάντας"
@@ -288,10 +232,6 @@ msgstr "Προσθήκη στοιχείου..."
 msgid "Add link"
 msgstr "Προσθήκη συνδέσμου"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-#~ msgid "Add new account"
-#~ msgstr "Προσθήκη νέου λογαριασμού"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:217
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:222
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:295
@@ -303,10 +243,6 @@ msgstr "Προσθήκη επιλογής"
 #: ../../../lib/web/src/components/post-tags.tsx:138
 msgid "Add tag..."
 msgstr "Προσθήκη ετικέτας..."
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-#~ msgid "Add team/app"
-#~ msgstr "Προσθήκη ομάδας/εφαρμογής"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -323,21 +259,9 @@ msgstr "Προσθήκη προβολής"
 msgid "Adding..."
 msgstr "Προσθήκη..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:72
-#~ msgid "Adjust the appearance and layout to suit your preferences."
-#~ msgstr "Προσαρμόστε την εμφάνιση και τη διάταξη σύμφωνα με τις προτιμήσεις σας."
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "AI"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-#~ msgid "All"
-#~ msgstr "Όλα"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
-#~ msgid "Allow anyone to search for {0}"
-#~ msgstr "Να επιτρέπεται σε οποιονδήποτε η αναζήτηση {0}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:87
 msgid "Allow anyone to search for {entityLabel}"
@@ -393,10 +317,6 @@ msgstr "Είστε βέβαιοι ότι θέλετε να αποσυνδεθε�
 #: src/features/words/index.tsx:1008
 msgid "Are you sure you want to resign?"
 msgstr "Είστε σίγουροι ότι θέλετε να εγκαταλείψετε;"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:59
-#~ msgid "Asc"
-#~ msgstr "Αύξουσα"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -480,6 +400,14 @@ msgstr "Χρώμα περιγράμματος"
 msgid "Browser notifications"
 msgstr "Ειδοποιήσεις προγράμματος περιήγησης"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "Η άδεια κάμερας απορρίφθηκε"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "Η κάμερα δεν είναι διαθέσιμη"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -513,6 +441,12 @@ msgstr "Ακύρωση ανταλλαγής"
 msgid "Cancel reply"
 msgstr "Ακύρωση απάντησης"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "Ακυρώθηκε"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
 msgid "Caption"
@@ -540,10 +474,6 @@ msgstr "Άλλαξε {field}"
 msgid "Chat"
 msgstr "Συνομιλία"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-#~ msgid "Check \"All\" to see your past notifications."
-#~ msgstr "Επιλέξτε «Όλα» για να δείτε παλαιότερες ειδοποιήσεις."
-
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:12
 msgid "Checkbox"
 msgstr "Πλαίσιο ελέγχου"
@@ -563,22 +493,6 @@ msgstr "Επιλέξτε ένα παιχνίδι από την πλαϊνή στ
 #: src/features/words/index.tsx:1065
 msgid "Choose a letter"
 msgstr "Επιλέξτε ένα γράμμα"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:329
-#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
-#~ msgstr "Επιλέξτε ανάμεσα σε προεπιλεγμένη ανεπτυγμένη, συμπαγή μόνο με εικονίδια ή πλήρη λειτουργία διάταξης"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:271
-#~ msgid "Choose between inset, floating, or standard sidebar layout"
-#~ msgstr "Επιλέξτε ανάμεσα σε ένθετη, αιωρούμενη ή τυπική διάταξη πλαϊνής στήλης"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:372
-#~ msgid "Choose between left-to-right or right-to-left site direction"
-#~ msgstr "Επιλέξτε ανάμεσα σε κατεύθυνση ιστότοπου από αριστερά προς τα δεξιά ή από δεξιά προς τα αριστερά"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:227
-#~ msgid "Choose between system preference, light mode, or dark mode"
-#~ msgstr "Επιλέξτε ανάμεσα σε προτίμηση συστήματος, ανοιχτή λειτουργία ή σκοτεινή λειτουργία"
 
 #: ../../../lib/web/src/components/language-picker.tsx:267
 #: ../../../lib/web/src/components/language-picker.tsx:274
@@ -602,29 +516,15 @@ msgstr "Εκκαθάριση"
 msgid "Clear all"
 msgstr "Εκκαθάριση όλων"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-#~ msgid "Clear filters"
-#~ msgstr "Εκκαθάριση φίλτρων"
-
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
 msgstr "Εκκαθάριση αναζήτησης"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-#~ msgid "Clear selection"
-#~ msgstr "Εκκαθάριση επιλογής"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-#~ msgid "Clear selection (Escape)"
-#~ msgstr "Εκκαθάριση επιλογής (Escape)"
-
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:479
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:482
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Κλείσιμο"
@@ -682,10 +582,6 @@ msgstr "Οι στήλες ομαδοποιούνται κατά"
 msgid "Comfortable"
 msgstr "Άνετο"
 
-#: ../../../lib/web/src/components/coming-soon.tsx:12
-#~ msgid "Coming Soon!"
-#~ msgstr "Έρχεται σύντομα!"
-
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
 msgstr "Παλέτα εντολών"
@@ -695,8 +591,8 @@ msgstr "Παλέτα εντολών"
 msgid "Comment actions"
 msgstr "Ενέργειες σχολίου"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:442
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:454
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:443
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:455
 msgid "Comments"
 msgstr "Σχόλια"
 
@@ -724,10 +620,6 @@ msgstr "Επιβεβαίωση"
 #: ../../../lib/web/src/lib/chat-ui.ts:18
 msgid "Connected"
 msgstr "Συνδεδεμένο"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-#~ msgid "Connected accounts"
-#~ msgstr "Συνδεδεμένοι λογαριασμοί"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -797,10 +689,6 @@ msgstr "Δεν ήταν δυνατή η επαλήθευση με αυτόν τ�
 msgid "Create"
 msgstr "Δημιουργία"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:144
-#~ msgid "Create {0}"
-#~ msgstr "Δημιουργία {0}"
-
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:146
 msgid "Create {entityLabel}"
 msgstr "Δημιουργία {entityLabel}"
@@ -837,11 +725,6 @@ msgstr "Προσαρμοσμένο"
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "Σκοτεινό"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:87
-#: ../../../lib/web/src/components/profile-dropdown.tsx:123
-#~ msgid "Dark mode"
-#~ msgstr "Σκοτεινή λειτουργία"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
@@ -918,7 +801,7 @@ msgstr "Διαγραφή επιλογής {0}"
 msgid "Delete view"
 msgstr "Διαγραφή προβολής"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "Διαγράψτε τον λογαριασμό σας στον παλιό διακομιστή"
 
@@ -933,10 +816,6 @@ msgstr "Διαγράφηκε {field}"
 #: src/features/words/index.tsx:1034
 msgid "Deleting..."
 msgstr "Διαγραφή..."
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:63
-#~ msgid "Desc"
-#~ msgstr "Φθίνουσα"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -961,11 +840,7 @@ msgstr "Πίνακας λεπτομερειών"
 msgid "Detect from web browser"
 msgstr "Εντοπισμός από το πρόγραμμα περιήγησης"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:341
-#~ msgid "Direction"
-#~ msgstr "Κατεύθυνση"
-
-#: ../../../lib/web/src/components/person-picker.tsx:190
+#: ../../../lib/web/src/components/person-picker.tsx:193
 msgid "Directory"
 msgstr "Κατάλογος"
 
@@ -982,8 +857,8 @@ msgstr "Απόρριψη πρόχειρου;"
 msgid "Disconnected"
 msgstr "Αποσυνδεδεμένο"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "Απόρριψη"
 
@@ -1001,8 +876,8 @@ msgid "Done"
 msgstr "Ολοκληρώθηκε"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:243
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:463
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:473
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:464
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:474
 msgid "Download"
 msgstr "Λήψη"
 
@@ -1133,10 +1008,6 @@ msgstr "Πολύ μεγάλο"
 msgid "Failed to add account"
 msgstr "Αποτυχία προσθήκης λογαριασμού"
 
-#: ../../../lib/web/src/components/tag-input.tsx:39
-#~ msgid "Failed to add tag"
-#~ msgstr "Αποτυχία προσθήκης ετικέτας"
-
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
 msgid "Failed to copy"
@@ -1187,7 +1058,7 @@ msgstr "Αποτυχία φόρτωσης"
 msgid "Failed to load history"
 msgstr "Αποτυχία φόρτωσης ιστορικού"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load image"
 msgstr "Αποτυχία φόρτωσης εικόνας"
 
@@ -1195,7 +1066,7 @@ msgstr "Αποτυχία φόρτωσης εικόνας"
 msgid "Failed to load prompts"
 msgstr "Αποτυχία φόρτωσης προτροπών"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load video"
 msgstr "Αποτυχία φόρτωσης βίντεο"
 
@@ -1206,10 +1077,6 @@ msgstr "Αποτυχία πάσου"
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:155
 msgid "Failed to post comment"
 msgstr "Αποτυχία ανάρτησης σχολίου"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-#~ msgid "Failed to remove account"
-#~ msgstr "Αποτυχία αφαίρεσης λογαριασμού"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
 msgid "Failed to reset prompt"
@@ -1232,10 +1099,6 @@ msgstr "Αποτυχία αποθήκευσης προτροπής"
 msgid "Failed to send"
 msgstr "Αποτυχία αποστολής"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-#~ msgid "Failed to send verification code"
-#~ msgstr "Αποτυχία αποστολής κωδικού επαλήθευσης"
-
 #: src/features/words/index.tsx:339
 msgid "Failed to submit move"
 msgstr "Αποτυχία υποβολής κίνησης"
@@ -1254,11 +1117,7 @@ msgstr "Αποτυχία μεταφόρτωσης συνημμένου"
 msgid "Files"
 msgstr "Αρχεία"
 
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-#~ msgid "Filter..."
-#~ msgstr "Φιλτράρισμα..."
-
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "Ολοκληρώστε τη μεταφορά του λογαριασμού σας"
 
@@ -1278,15 +1137,11 @@ msgstr "Σημαίες"
 msgid "Flat"
 msgstr "Επίπεδη"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:258
-#~ msgid "Floating"
-#~ msgstr "Αιωρούμενο"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
 msgstr "Παρασκευή"
 
-#: ../../../lib/web/src/components/person-picker.tsx:183
+#: ../../../lib/web/src/components/person-picker.tsx:186
 msgid "Friends"
 msgstr "Φίλοι"
 
@@ -1301,10 +1156,6 @@ msgstr "Από"
 #: ../../../lib/web/src/lib/preference-utils.ts:131
 msgid "From theme"
 msgstr "Από το θέμα"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:321
-#~ msgid "Full layout"
-#~ msgstr "Πλήρης διάταξη"
 
 #: src/features/words/components/new-game.tsx:59
 msgid "Game created"
@@ -1324,26 +1175,6 @@ msgstr "Τέλος παιχνιδιού"
 msgid "Go back"
 msgstr "Πίσω"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:82
-#~ msgid "Go to first page"
-#~ msgstr "Μετάβαση στην πρώτη σελίδα"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:128
-#~ msgid "Go to last page"
-#~ msgstr "Μετάβαση στην τελευταία σελίδα"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:119
-#~ msgid "Go to next page"
-#~ msgstr "Μετάβαση στην επόμενη σελίδα"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:106
-#~ msgid "Go to page {pageNumber}"
-#~ msgstr "Μετάβαση στη σελίδα {pageNumber}"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:91
-#~ msgid "Go to previous page"
-#~ msgstr "Μετάβαση στην προηγούμενη σελίδα"
-
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
 msgstr "Ομάδα"
@@ -1360,14 +1191,6 @@ msgstr "Ομάδα: {0}"
 #: src/features/words/components/move-composer.tsx:75
 msgid "Has unknown words"
 msgstr "Περιέχει άγνωστες λέξεις"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:70
-#~ msgid "Hide"
-#~ msgstr "Απόκρυψη"
-
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Hide password"
-#~ msgstr "Απόκρυψη κωδικού"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1389,7 +1212,7 @@ msgid "ID"
 msgstr "Αναγνωριστικό"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:328
 msgid "Image viewer: {0}"
 msgstr "Προβολή εικόνας: {0}"
 
@@ -1409,10 +1232,6 @@ msgstr "Άβαταρ αρχικών"
 msgid "Initials avatar for {name}"
 msgstr "Άβαταρ αρχικών για {name}"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:253
-#~ msgid "Inset"
-#~ msgstr "Εσωτερικό"
-
 #: ../../../lib/web/src/components/post-tags.tsx:168
 msgid "Interest {weight}"
 msgstr "Ενδιαφέρον {weight}"
@@ -1430,19 +1249,11 @@ msgstr "Μη έγκυρη ημερομηνία"
 msgid "Invalid move"
 msgstr "Μη έγκυρη κίνηση"
 
-#: ../../../lib/web/src/components/tag-input.tsx:38
-#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-#~ msgstr "Μη έγκυρη ετικέτα: μόνο γράμματα, αριθμοί, κενά, παύλες και κάθετοι (έως 50 χαρακτήρες)"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#~ msgid "Invalid verification code"
-#~ msgstr "Μη έγκυρος κωδικός επαλήθευσης"
-
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Φαίνεται ότι η σελίδα που αναζητάτε <0/>δεν υπάρχει ή έχει καταργηθεί."
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Μόλις τώρα"
 
@@ -1462,19 +1273,6 @@ msgstr "Μεγάλο"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:309
 msgid "Layout"
 msgstr "Διάταξη"
-
-#: ../../../lib/web/src/components/learn-more.tsx:33
-#: ../../../lib/web/src/components/learn-more.tsx:38
-#~ msgid "Learn more"
-#~ msgstr "Μάθετε περισσότερα"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:355
-#~ msgid "Left to Right"
-#~ msgstr "Από αριστερά προς τα δεξιά"
-
-#: ../../../lib/web/src/components/post-tags.tsx:72
-#~ msgid "Letters, numbers, spaces, and hyphens only"
-#~ msgstr "Μόνο γράμματα, αριθμοί, κενά και παύλες"
 
 #: ../../../lib/web/src/components/post-tags.tsx:73
 msgid "Letters, numbers, spaces, hyphens, and slashes only"
@@ -1530,10 +1328,6 @@ msgstr "Αποσύνδεση…"
 msgid "Manage categories"
 msgstr "Διαχείριση κατηγοριών"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-#~ msgid "Manage your connected accounts for notifications and services."
-#~ msgstr "Διαχειριστείτε τους συνδεδεμένους λογαριασμούς σας για ειδοποιήσεις και υπηρεσίες."
-
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "Χειροκίνητο"
@@ -1574,6 +1368,10 @@ msgstr "Μήνυμα"
 #: ../../../lib/web/src/lib/preference-utils.ts:80
 msgid "Metric"
 msgstr "Μετρικό"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "Η άδεια μικροφώνου απορρίφθηκε"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
@@ -1616,10 +1414,6 @@ msgstr "Όνομα"
 msgid "Name cannot contain < or > characters"
 msgstr "Το όνομα δεν μπορεί να περιέχει χαρακτήρες < ή >"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
-#~ msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
-#~ msgstr "Το όνομα δεν μπορεί να περιέχει γωνιακές αγκύλες, ανάστροφη κάθετο, ερωτηματικό, εισαγωγικά ή ανάστροφα εισαγωγικά"
-
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:101
 msgid "Name is required"
 msgstr "Το όνομα είναι υποχρεωτικό"
@@ -1645,8 +1439,8 @@ msgstr "Νέο"
 msgid "New game"
 msgstr "Νέο παιχνίδι"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:536
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:541
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:537
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:542
 msgid "Next image"
 msgstr "Επόμενη εικόνα"
 
@@ -1665,10 +1459,6 @@ msgstr "Δεν υπάρχει ακόμη δραστηριότητα"
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:324
 msgid "No comments yet"
 msgstr "Δεν υπάρχουν ακόμη σχόλια"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-#~ msgid "No connected accounts"
-#~ msgstr "Δεν υπάρχουν συνδεδεμένοι λογαριασμοί"
 
 #: src/features/words/components/new-game.tsx:152
 msgid "No friends found"
@@ -1698,10 +1488,6 @@ msgstr "Δεν υπάρχουν αντίστοιχα αντικείμενα"
 msgid "No messages yet"
 msgstr "Δεν υπάρχουν ακόμη μηνύματα"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "No notifications yet"
-#~ msgstr "Καμία ειδοποίηση ακόμη"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:382
 #: ../../../lib/web/src/components/person-picker.tsx:71
 msgid "No people found"
@@ -1710,10 +1496,6 @@ msgstr "Δεν βρέθηκαν άτομα"
 #: ../../../lib/web/src/components/place-picker.tsx:120
 msgid "No places found"
 msgstr "Δεν βρέθηκαν τοποθεσίες"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:58
-#~ msgid "No profile"
-#~ msgstr "Χωρίς προφίλ"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:65
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
@@ -1769,7 +1551,7 @@ msgstr "Χωρίς προβολές"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:418
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:491
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
-#: ../../../lib/web/src/components/person-picker.tsx:326
+#: ../../../lib/web/src/components/person-picker.tsx:329
 #: ../../../lib/web/src/lib/preference-utils.ts:100
 msgid "None"
 msgstr "Κανένα"
@@ -1791,14 +1573,6 @@ msgstr "Δεν έχει οριστεί"
 msgid "Nothing found"
 msgstr "Δεν βρέθηκε τίποτα"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:136
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:150
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:236
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:257
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-#~ msgid "Notifications"
-#~ msgstr "Ειδοποιήσεις"
-
 #. placeholder {0}: unread.length
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:196
 msgid "Notifications: {0}"
@@ -1817,11 +1591,6 @@ msgstr "Ενεργό"
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "Ωχ! Η σελίδα δεν βρέθηκε!"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:156
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-#~ msgid "Open account actions"
-#~ msgstr "Άνοιγμα ενεργειών λογαριασμού"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:227
 #: ../../../lib/web/src/components/layout/nav-group.tsx:232
@@ -1845,11 +1614,6 @@ msgstr "Άνοιγμα μενού"
 msgid "Open navigation"
 msgstr "Άνοιγμα πλοήγησης"
 
-#: ../../../lib/web/src/components/layout/top-nav.tsx:38
-#: ../../../lib/web/src/components/layout/top-nav.tsx:44
-#~ msgid "Open navigation menu"
-#~ msgstr "Άνοιγμα μενού πλοήγησης"
-
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:106
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:112
 msgid "Open option actions"
@@ -1858,11 +1622,6 @@ msgstr "Άνοιγμα ενεργειών επιλογής"
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:30
 msgid "Open selected card"
 msgstr "Άνοιγμα επιλεγμένης κάρτας"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:58
-#: ../../../lib/web/src/components/config-drawer.tsx:66
-#~ msgid "Open theme settings"
-#~ msgstr "Άνοιγμα ρυθμίσεων θέματος"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:277
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:282
@@ -1896,11 +1655,6 @@ msgstr "Άλλο"
 msgid "Owner"
 msgstr "Ιδιοκτήτης"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:43
-#: ../../../lib/web/src/components/data-table/pagination.tsx:71
-#~ msgid "Page {currentPage} of {totalPages}"
-#~ msgstr "Σελίδα {currentPage} από {totalPages}"
-
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:552
 msgid "Parent"
 msgstr "Γονικό"
@@ -1914,24 +1668,25 @@ msgid "Passkey"
 msgstr "Κλειδί πρόσβασης"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "Η επαλήθευση με κλειδί πρόσβασης απέτυχε. Δοκιμάστε ξανά."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "Κλειδιά πρόσβασης"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "Τα passkeys δεν είναι διαθέσιμα σε αυτό το πρόγραμμα περιήγησης"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:213
 msgid "Pattern (regex)"
 msgstr "Μοτίβο (regex)"
 
-#: ../../../lib/web/src/components/person-picker.tsx:176
+#: ../../../lib/web/src/components/person-picker.tsx:179
 msgid "People"
 msgstr "Άτομα"
-
-#: ../../../lib/web/src/components/date-picker.tsx:20
-#~ msgid "Pick a date"
-#~ msgstr "Επιλέξτε ημερομηνία"
 
 #: src/features/words/index.tsx:185
 msgid "Placement out of bounds"
@@ -1946,10 +1701,6 @@ msgstr "Παίκτης {playerNumber}"
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:314
 msgid "Please check your internet connection and try again."
 msgstr "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά."
-
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
-#~ msgid "Please log in with the appropriate credentials <0/> to access this resource."
-#~ msgstr "Συνδεθείτε με τα κατάλληλα διαπιστευτήρια <0/> για πρόσβαση σε αυτόν τον πόρο."
 
 #: src/features/words/components/new-game.tsx:78
 msgid "Please select at least one friend"
@@ -1971,8 +1722,8 @@ msgstr "Αναρτήσεις"
 msgid "Posts and comments"
 msgstr "Αναρτήσεις και σχόλια"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:520
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:525
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:521
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:526
 msgid "Previous image"
 msgstr "Προηγούμενη εικόνα"
 
@@ -1984,14 +1735,6 @@ msgstr "Ιδιωτικότητα"
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:50
 msgid "Processing…"
 msgstr "Γίνεται επεξεργασία…"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:114
-#~ msgid "Profile"
-#~ msgstr "Προφίλ"
-
-#: ../../../lib/web/src/components/person-picker.tsx:200
-#~ msgid "Project members"
-#~ msgstr "Μέλη έργου"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
 msgid "Prompt saved"
@@ -2005,11 +1748,11 @@ msgstr "Ειδοποίηση push"
 msgid "Raised"
 msgstr "Ανυψωμένη"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "Επανασυνδέστε τους λογαριασμούς σας σε αυτόν τον διακομιστή"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "Καταχωρίστε ξανά τα κλειδιά πρόσβασής σας σε αυτόν τον διακομιστή"
 
@@ -2029,6 +1772,14 @@ msgstr "Συνιστώμενο"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "Επανασύνδεση ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "Η εγγραφή απέτυχε. Δοκιμάστε ξανά."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "Η εγγραφή δεν περιέχει ήχο"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:135
 msgid "Redirecting to login."
@@ -2135,20 +1886,6 @@ msgstr "Υποχρεωτικό"
 msgid "Resend email"
 msgstr "Επαναποστολή email"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:87
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-#~ msgid "Reset"
-#~ msgstr "Επαναφορά"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:122
-#: ../../../lib/web/src/components/config-drawer.tsx:127
-#~ msgid "Reset {title}"
-#~ msgstr "Επαναφορά {title}"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:85
-#~ msgid "Reset all settings to default values"
-#~ msgstr "Επαναφορά όλων των ρυθμίσεων σε προεπιλεγμένες τιμές"
-
 #: src/features/words/index.tsx:835
 #: src/features/words/index.tsx:1016
 msgid "Resign"
@@ -2178,10 +1915,6 @@ msgstr "Ανάκληση πρόσβασης"
 msgid "Revoke RSS access?"
 msgstr "Ανάκληση πρόσβασης RSS;"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:362
-#~ msgid "Right to Left"
-#~ msgstr "Από δεξιά προς αριστερά"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:152
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:172
 msgid "Rows"
@@ -2190,10 +1923,6 @@ msgstr "Γραμμές"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:376
 msgid "Rows group by"
 msgstr "Ομαδοποίηση γραμμών κατά"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:65
-#~ msgid "Rows per page"
-#~ msgstr "Γραμμές ανά σελίδα"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2270,7 +1999,7 @@ msgstr "Αναζήτηση, παρακολούθηση και ταξινόμησ
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:179
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:255
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
-#: ../../../lib/web/src/components/person-picker.tsx:300
+#: ../../../lib/web/src/components/person-picker.tsx:303
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Αναζήτηση..."
@@ -2283,10 +2012,6 @@ msgstr "Αναζήτηση..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "Επιλογή"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:149
-#~ msgid "Select {0}"
-#~ msgstr "Επιλογή {0}"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2304,10 +2029,6 @@ msgstr "Επιλέξτε έναν χρήστη, ομάδα ή άλλον καν�
 msgid "Select access rule"
 msgstr "Επιλέξτε κανόνα πρόσβασης"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-#~ msgid "Select account"
-#~ msgstr "Επιλέξτε λογαριασμό"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
 msgstr "Επιλέξτε τύπο λογαριασμού"
@@ -2319,10 +2040,6 @@ msgstr "Επιλέξτε φίλους..."
 #: ../../../lib/web/src/features/access/access-dialog.tsx:231
 msgid "Select group"
 msgstr "Επιλέξτε ομάδα"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:305
-#~ msgid "Select layout style"
-#~ msgstr "Επιλέξτε στυλ διάταξης"
 
 #: ../../../lib/web/src/components/place-picker.tsx:36
 msgid "Select location"
@@ -2340,26 +2057,10 @@ msgstr "Επιλέξτε άτομο..."
 msgid "Select previous card"
 msgstr "Επιλογή προηγούμενης κάρτας"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:247
-#~ msgid "Select sidebar style"
-#~ msgstr "Επιλέξτε στυλ πλευρικής μπάρας"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:349
-#~ msgid "Select site direction"
-#~ msgstr "Επιλέξτε κατεύθυνση ιστότοπου"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:203
-#~ msgid "Select theme preference"
-#~ msgstr "Επιλέξτε προτίμηση θέματος"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:289
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:381
 msgid "Select..."
 msgstr "Επιλογή..."
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-#~ msgid "selected"
-#~ msgstr "επιλεγμένα"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2415,10 +2116,6 @@ msgstr "Εμφάνιση κλάσεων"
 msgid "Show fields"
 msgstr "Εμφάνιση πεδίων"
 
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Show password"
-#~ msgstr "Εμφάνιση κωδικού"
-
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
 msgstr "Εμφάνιση βοήθειας"
@@ -2453,10 +2150,6 @@ msgstr "Αποσύνδεση..."
 msgid "Single line of text only"
 msgstr "Μόνο μία γραμμή κειμένου"
 
-#: ../../../lib/web/src/components/skip-to-main.tsx:11
-#~ msgid "Skip to Main"
-#~ msgstr "Μετάβαση στο κύριο περιεχόμενο"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:101
 #: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
@@ -2489,10 +2182,6 @@ msgstr "Έναρξη παιχνιδιού"
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:325
 msgid "Start the discussion by adding the first comment."
 msgstr "Ξεκινήστε τη συζήτηση προσθέτοντας το πρώτο σχόλιο."
-
-#: ../../../lib/web/src/components/coming-soon.tsx:15
-#~ msgid "Stay tuned though!"
-#~ msgstr "Μείνετε όμως συντονισμένοι!"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2531,10 +2220,6 @@ msgstr "Εναλλαγή σε προβολή 1-9"
 msgid "System"
 msgstr "Σύστημα"
 
-#: ../../../lib/web/src/components/tag-input.tsx:95
-#~ msgid "Tag"
-#~ msgstr "Ετικέτα"
-
 #: ../../../lib/web/src/components/post-tags.tsx:77
 msgid "Tag already exists"
 msgstr "Η ετικέτα υπάρχει ήδη"
@@ -2547,10 +2232,6 @@ msgstr "Η ετικέτα πρέπει να έχει έως 50 χαρακτήρ�
 #: ../../../lib/web/src/components/post-tags.tsx:116
 msgid "Tags"
 msgstr "Ετικέτες"
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-#~ msgid "Teams/Apps"
-#~ msgstr "Ομάδες/Εφαρμογές"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2574,6 +2255,22 @@ msgstr "Δεν ήταν δυνατή η αποστολή. Τα αρχεία μπ
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Ήταν πολύ μεγάλο για μεταφόρτωση. Αφαιρέστε ή μικρύνετε αρχεία και δοκιμάστε ξανά."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "Η κάμερα χρησιμοποιείται ήδη"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "Το αίτημα κάμερας δεν απαντήθηκε"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "Το αίτημα μικροφώνου δεν απαντήθηκε"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "Το αίτημα passkey δεν απαντήθηκε"
+
 #: ../../../lib/web/src/features/errors/general-error.tsx:66
 msgid "The requested content could not be found."
 msgstr "Το περιεχόμενο που ζητήσατε δεν βρέθηκε."
@@ -2582,21 +2279,9 @@ msgstr "Το περιεχόμενο που ζητήσατε δεν βρέθηκ�
 msgid "The server returned a web page instead of data."
 msgstr "Ο διακομιστής επέστρεψε ιστοσελίδα αντί για δεδομένα."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-#~ msgid "The site is not available at the moment."
-#~ msgstr "Ο ιστότοπος δεν είναι διαθέσιμος αυτή τη στιγμή."
-
-#: ../../../lib/web/src/components/config-drawer.tsx:195
-#~ msgid "Theme"
-#~ msgstr "Θέμα"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:70
-#~ msgid "Theme Settings"
-#~ msgstr "Ρυθμίσεις θέματος"
-
-#: ../../../lib/web/src/components/coming-soon.tsx:14
-#~ msgid "This page has not been created yet."
-#~ msgstr "Αυτή η σελίδα δεν έχει δημιουργηθεί ακόμη."
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "Αυτή η εφαρμογή δεν επιτρέπεται να χρησιμοποιήσει το passkey σας. Επιτρέψτε το στις Ρυθμίσεις, στην ενότητα Δικαιώματα."
 
 #: src/features/words/index.tsx:1029
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2626,15 +2311,6 @@ msgstr "Τα πλακίδια πρέπει να συνδέονται με υπά
 msgid "To"
 msgstr "Προς"
 
-#: ../../../lib/web/src/components/data-table/view-options.tsx:37
-#~ msgid "Toggle columns"
-#~ msgstr "Εναλλαγή στηλών"
-
-#: ../../../lib/web/src/components/layout/right-panel.tsx:233
-#: ../../../lib/web/src/components/layout/right-panel.tsx:236
-#~ msgid "Toggle right panel"
-#~ msgstr "Εναλλαγή δεξιού πίνακα"
-
 #: ../../../lib/web/src/components/layout/nav-group.tsx:393
 #: ../../../lib/web/src/components/layout/nav-group.tsx:400
 #: ../../../lib/web/src/components/layout/nav-group.tsx:522
@@ -2648,16 +2324,6 @@ msgstr "Εναλλαγή ενότητας"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle sidebar"
 msgstr "Εναλλαγή πλαϊνής μπάρας"
-
-#: ../../../lib/web/src/components/ui/sidebar.tsx:352
-#: ../../../lib/web/src/components/ui/sidebar.tsx:355
-#~ msgid "Toggle Sidebar"
-#~ msgstr "Εναλλαγή πλευρικής μπάρας"
-
-#: ../../../lib/web/src/components/theme-switch.tsx:37
-#: ../../../lib/web/src/components/theme-switch.tsx:41
-#~ msgid "Toggle theme"
-#~ msgstr "Εναλλαγή θέματος"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2727,10 +2393,6 @@ msgstr "Δεν ήταν δυνατή η ανακατεύθυνση στη σύν
 msgid "Unassigned"
 msgstr "Χωρίς ανάθεση"
 
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:16
-#~ msgid "Unauthorized Access"
-#~ msgstr "Μη εξουσιοδοτημένη πρόσβαση"
-
 #: ../../../lib/web/src/components/attachment-image.tsx:50
 msgid "Unavailable"
 msgstr "Μη διαθέσιμο"
@@ -2763,10 +2425,6 @@ msgstr "Διαγραφή εγγραφής"
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
 msgstr "Χωρίς τίτλο"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-#~ msgid "Unverified"
-#~ msgstr "Μη επαληθευμένο"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx:56
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
@@ -2813,14 +2471,6 @@ msgstr "Μεταβλητές: {variables}"
 msgid "Verification code"
 msgstr "Κωδικός επαλήθευσης"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-#~ msgid "Verification code sent"
-#~ msgstr "Ο κωδικός επαλήθευσης στάλθηκε"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#~ msgid "Verification failed"
-#~ msgstr "Η επαλήθευση απέτυχε"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:379
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2835,17 +2485,9 @@ msgid "Video thumbnail"
 msgstr "Μικρογραφία βίντεο"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
 msgid "Video viewer: {0}"
 msgstr "Προβολή βίντεο: {0}"
-
-#: ../../../lib/web/src/components/data-table/view-options.tsx:33
-#~ msgid "View"
-#~ msgstr "Προβολή"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-#~ msgid "View all"
-#~ msgstr "Προβολή όλων"
 
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:216
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:224
@@ -2855,6 +2497,10 @@ msgstr "Προβολή όλων των ειδοποιήσεων"
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Στοιχεία ελέγχου προβολής"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "Η φωνητική εγγραφή δεν υποστηρίζεται σε αυτό το πρόγραμμα περιήγησης"
 
 #: src/features/words/components/move-composer.tsx:71
 msgid "Waiting for tiles"
@@ -2877,18 +2523,6 @@ msgstr "Μόνο σε παρακολούθηση"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:63
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
 msgstr "Στείλαμε έναν κωδικό επαλήθευσης στο <0>{0}</0>. Εισαγάγετε τον κωδικό παρακάτω για να επαληθεύσετε τη διεύθυνση email σας."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-#~ msgid "We'll be back online shortly."
-#~ msgstr "Θα είμαστε ξανά online σύντομα."
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-#~ msgid "We'll notify you when something important happens."
-#~ msgstr "Θα σας ειδοποιήσουμε όταν συμβεί κάτι σημαντικό."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-#~ msgid "Website is under maintenance!"
-#~ msgstr "Ο ιστότοπος βρίσκεται υπό συντήρηση!"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
@@ -2914,10 +2548,6 @@ msgstr "Εσείς"
 msgid "You do not have access to this section."
 msgstr "Δεν έχετε πρόσβαση σε αυτήν την ενότητα."
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:18
-#~ msgid "You don't have necessary permission <0/>to view this resource."
-#~ msgstr "Δεν έχετε την απαραίτητη άδεια <0/>για να δείτε αυτόν τον πόρο."
-
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
 msgstr "Παραιτηθήκατε"
@@ -2926,11 +2556,7 @@ msgstr "Παραιτηθήκατε"
 msgid "You win!"
 msgstr "Νικήσατε!"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "You're all caught up!"
-#~ msgstr "Τα είδατε όλα!"
-
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ο λογαριασμός σας μεταφέρθηκε εδώ από {source}. Μέχρι να τον διαγράψετε εκεί, τα μηνύματα και οι ειδοποιήσεις μπορεί να φτάνουν και στους δύο διακομιστές, μέρος του περιεχομένου σας συνεχίζει να εξυπηρετείται από τον παλιό διακομιστή και οι ακόλουθοί σας ενδέχεται να χρειαστούν λίγα λεπτά για να σας βρουν εδώ."
 

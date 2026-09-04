@@ -18,10 +18,6 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Verifica tu conexión a internet e inténtalo de nuevo."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
-#~ msgid " or "
-#~ msgstr " o "
-
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:189
 msgid "(edited)"
 msgstr "(editado)"
@@ -40,7 +36,7 @@ msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# jugador} other {# jugadores}}"
 
 #. placeholder {0}: displayInfo.count
-#: ../../../lib/web/src/components/person-picker.tsx:257
+#: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# seleccionado} other {# seleccionados}}"
 
@@ -55,10 +51,6 @@ msgstr "{0, plural, one {+# anidado} other {+# anidados}}"
 #: src/features/words/components/words-board.tsx:229
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} en {1}{2}, hacé clic para quitar"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:160
-#~ msgid "{0} option preview"
-#~ msgstr "Vista previa de la opción {0}"
 
 #. placeholder {0}: isSent ? t`You` : message.name
 #. placeholder {1}: message.body
@@ -80,19 +72,19 @@ msgstr "{actor} pasó"
 msgid "{actor} passed — game over"
 msgstr "{actor} pasó — fin del juego"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#d} other {#d}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#h} other {#h}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#min} other {#min}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#sem} other {#sem}}"
 
@@ -105,10 +97,6 @@ msgstr "{displayLetter} en {0}{1}"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:176
 msgid "{entityLabel} name"
 msgstr "Nombre de {entityLabel}"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
-#~ msgid "{entityLabel} name is required"
-#~ msgstr "El nombre de {entityLabel} es obligatorio"
 
 #: src/features/words/components/chat-message-list.tsx:49
 #: src/features/words/lib/header-model.ts:154
@@ -131,22 +119,6 @@ msgstr "{opponentName} ofreció tablas"
 msgid "{playerCount, plural, one {Playing with # player} other {Playing with # players}}"
 msgstr "{playerCount, plural, one {Jugando con # jugador} other {Jugando con # jugadores}}"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:203
-#~ msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
-#~ msgstr "{selectedCount, plural, one {{entityName} seleccionado} other {{manyName} seleccionados}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:45
-#~ msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
-#~ msgstr "{selectedCount, plural, one {# {entityName} seleccionado. La barra de acciones masivas está disponible.} other {# {manyName} seleccionados. La barra de acciones masivas está disponible.}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:195
-#~ msgid "{selectedCount, plural, one {# selected} other {# selected}}"
-#~ msgstr "{selectedCount, plural, one {# seleccionados} other {# seleccionados}}"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:142
-#~ msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
-#~ msgstr "{selectedCount, plural, one {Acciones masivas para # {entityName} seleccionado} other {Acciones masivas para # {manyName} seleccionados}}"
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -168,18 +140,6 @@ msgstr "{unreadCount, plural, one {Abrir menú (# notificación sin leer)} other
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# punto} other {# puntos}}"
 
-#: ../../../lib/web/src/components/entity/entity-board-card.tsx:418
-#~ msgid "+{0} nested"
-#~ msgstr "+{0} anidados"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:171
-#~ msgid "+{totalDescendants} more replies"
-#~ msgstr "+{totalDescendants} respuestas más"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:170
-#~ msgid "1 reply"
-#~ msgstr "1 respuesta"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:37
 msgid "12 hours"
 msgstr "12 horas"
@@ -187,6 +147,10 @@ msgstr "12 horas"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 horas"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "Ya hay una grabación en curso."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -201,29 +165,13 @@ msgstr "Aceptar"
 msgid "Access denied"
 msgstr "Acceso denegado"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:16
-#~ msgid "Access Forbidden"
-#~ msgstr "Acceso prohibido"
-
 #: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Nivel de acceso"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:216
-#~ msgid "Account added"
-#~ msgstr "Cuenta añadida"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:232
-#~ msgid "Account removed"
-#~ msgstr "Cuenta eliminada"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "Tipo de cuenta"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:242
-#~ msgid "Account verified"
-#~ msgstr "Cuenta verificada"
 
 #: src/components/layout/words-layout.tsx:61
 msgid "Active games"
@@ -255,10 +203,6 @@ msgstr "Añadir acceso"
 msgid "Add account"
 msgstr "Añadir cuenta"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:297
-#~ msgid "Add an account to receive notifications and use services."
-#~ msgstr "Añade una cuenta para recibir notificaciones y usar servicios."
-
 #: ../../../lib/web/src/components/attachment-composer.tsx:291
 msgid "Add caption"
 msgstr "Agregar leyenda"
@@ -288,10 +232,6 @@ msgstr "Añadir elemento..."
 msgid "Add link"
 msgstr "Añadir enlace"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
-#~ msgid "Add new account"
-#~ msgstr "Añadir nueva cuenta"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:217
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:222
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:295
@@ -303,10 +243,6 @@ msgstr "Añadir opción"
 #: ../../../lib/web/src/components/post-tags.tsx:138
 msgid "Add tag..."
 msgstr "Añadir etiqueta..."
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:83
-#~ msgid "Add team/app"
-#~ msgstr "Añadir equipo/app"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
@@ -323,21 +259,9 @@ msgstr "Añadir vista"
 msgid "Adding..."
 msgstr "Añadiendo..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:72
-#~ msgid "Adjust the appearance and layout to suit your preferences."
-#~ msgstr "Ajusta la apariencia y el diseño según tus preferencias."
-
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "IA"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:163
-#~ msgid "All"
-#~ msgstr "Todo"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
-#~ msgid "Allow anyone to search for {0}"
-#~ msgstr "Permitir que cualquiera busque {0}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:87
 msgid "Allow anyone to search for {entityLabel}"
@@ -393,10 +317,6 @@ msgstr "¿Seguro que quieres cerrar sesión? Tendrás que iniciar sesión de nue
 #: src/features/words/index.tsx:1008
 msgid "Are you sure you want to resign?"
 msgstr "¿Seguro que querés rendirte?"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:59
-#~ msgid "Asc"
-#~ msgstr "Asc"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -480,6 +400,14 @@ msgstr "Color del borde"
 msgid "Browser notifications"
 msgstr "Notificaciones del navegador"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "Permiso de cámara denegado"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "Cámara no disponible"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -513,6 +441,12 @@ msgstr "Cancelar intercambio"
 msgid "Cancel reply"
 msgstr "Cancelar respuesta"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "Cancelado"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
 msgid "Caption"
@@ -540,10 +474,6 @@ msgstr "{field} cambiado"
 msgid "Chat"
 msgstr "Chat"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
-#~ msgid "Check \"All\" to see your past notifications."
-#~ msgstr "Marca «Todo» para ver tus notificaciones anteriores."
-
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:12
 msgid "Checkbox"
 msgstr "Casilla"
@@ -563,22 +493,6 @@ msgstr "Elige un juego de la barra lateral o inicia uno nuevo."
 #: src/features/words/index.tsx:1065
 msgid "Choose a letter"
 msgstr "Elige una letra"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:329
-#~ msgid "Choose between default expanded, compact icon-only, or full layout mode"
-#~ msgstr "Elige entre modo expandido predeterminado, compacto solo iconos o diseño completo"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:271
-#~ msgid "Choose between inset, floating, or standard sidebar layout"
-#~ msgstr "Elige entre diseño de barra lateral incrustada, flotante o estándar"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:372
-#~ msgid "Choose between left-to-right or right-to-left site direction"
-#~ msgstr "Elige entre dirección del sitio de izquierda a derecha o de derecha a izquierda"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:227
-#~ msgid "Choose between system preference, light mode, or dark mode"
-#~ msgstr "Elige entre preferencia del sistema, modo claro o modo oscuro"
 
 #: ../../../lib/web/src/components/language-picker.tsx:267
 #: ../../../lib/web/src/components/language-picker.tsx:274
@@ -602,29 +516,15 @@ msgstr "Borrar"
 msgid "Clear all"
 msgstr "Borrar todo"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
-#~ msgid "Clear filters"
-#~ msgstr "Borrar filtros"
-
 #: ../../../lib/web/src/components/search-input.tsx:26
 msgid "Clear search"
 msgstr "Borrar búsqueda"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:170
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:174
-#~ msgid "Clear selection"
-#~ msgstr "Borrar selección"
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
-#~ msgid "Clear selection (Escape)"
-#~ msgstr "Borrar selección (Escape)"
-
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:479
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:482
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Cerrar"
@@ -682,10 +582,6 @@ msgstr "Las columnas se agrupan por"
 msgid "Comfortable"
 msgstr "Cómodo"
 
-#: ../../../lib/web/src/components/coming-soon.tsx:12
-#~ msgid "Coming Soon!"
-#~ msgstr "¡Próximamente!"
-
 #: ../../../lib/web/src/components/ui/command.tsx:34
 msgid "Command Palette"
 msgstr "Paleta de comandos"
@@ -695,8 +591,8 @@ msgstr "Paleta de comandos"
 msgid "Comment actions"
 msgstr "Acciones del comentario"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:442
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:454
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:443
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:455
 msgid "Comments"
 msgstr "Comentarios"
 
@@ -724,10 +620,6 @@ msgstr "Confirmar"
 #: ../../../lib/web/src/lib/chat-ui.ts:18
 msgid "Connected"
 msgstr "Conectado"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
-#~ msgid "Connected accounts"
-#~ msgstr "Cuentas conectadas"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Connecting..."
@@ -797,10 +689,6 @@ msgstr "No se pudo verificar con esa cuenta. Vuelve a intentarlo."
 msgid "Create"
 msgstr "Crear"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:144
-#~ msgid "Create {0}"
-#~ msgstr "Crear {0}"
-
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:146
 msgid "Create {entityLabel}"
 msgstr "Crear {entityLabel}"
@@ -837,11 +725,6 @@ msgstr "Personalizado"
 #: ../../../lib/web/src/lib/preference-utils.ts:15
 msgid "Dark"
 msgstr "Oscuro"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:87
-#: ../../../lib/web/src/components/profile-dropdown.tsx:123
-#~ msgid "Dark mode"
-#~ msgstr "Modo oscuro"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:250
 msgid "Data conflict"
@@ -918,7 +801,7 @@ msgstr "Eliminar opción {0}"
 msgid "Delete view"
 msgstr "Eliminar vista"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "Eliminar tu cuenta en el servidor anterior"
 
@@ -933,10 +816,6 @@ msgstr "{field} eliminado"
 #: src/features/words/index.tsx:1034
 msgid "Deleting..."
 msgstr "Eliminando..."
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:63
-#~ msgid "Desc"
-#~ msgstr "Desc"
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -961,11 +840,7 @@ msgstr "Panel de detalles"
 msgid "Detect from web browser"
 msgstr "Detectar desde el navegador web"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:341
-#~ msgid "Direction"
-#~ msgstr "Dirección"
-
-#: ../../../lib/web/src/components/person-picker.tsx:190
+#: ../../../lib/web/src/components/person-picker.tsx:193
 msgid "Directory"
 msgstr "Directorio"
 
@@ -982,8 +857,8 @@ msgstr "¿Descartar el borrador?"
 msgid "Disconnected"
 msgstr "Desconectado"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "Descartar"
 
@@ -1001,8 +876,8 @@ msgid "Done"
 msgstr "Hecho"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:243
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:463
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:473
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:464
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:474
 msgid "Download"
 msgstr "Descargar"
 
@@ -1133,10 +1008,6 @@ msgstr "Extra grande"
 msgid "Failed to add account"
 msgstr "Error al agregar la cuenta"
 
-#: ../../../lib/web/src/components/tag-input.tsx:39
-#~ msgid "Failed to add tag"
-#~ msgstr "Error al agregar la etiqueta"
-
 #: ../../../lib/web/src/components/ui/copy-button.tsx:26
 #: ../../../lib/web/src/lib/toast-utils.ts:44
 msgid "Failed to copy"
@@ -1187,7 +1058,7 @@ msgstr "Error al cargar"
 msgid "Failed to load history"
 msgstr "Error al cargar el historial"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load image"
 msgstr "No se pudo cargar la imagen"
 
@@ -1195,7 +1066,7 @@ msgstr "No se pudo cargar la imagen"
 msgid "Failed to load prompts"
 msgstr "Error al cargar los prompts"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load video"
 msgstr "No se pudo cargar el video"
 
@@ -1206,10 +1077,6 @@ msgstr "Error al pasar"
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:155
 msgid "Failed to post comment"
 msgstr "Error al publicar el comentario"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:234
-#~ msgid "Failed to remove account"
-#~ msgstr "Error al eliminar la cuenta"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
 msgid "Failed to reset prompt"
@@ -1232,10 +1099,6 @@ msgstr "Error al guardar el prompt"
 msgid "Failed to send"
 msgstr "Error al enviar"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:257
-#~ msgid "Failed to send verification code"
-#~ msgstr "Error al enviar el código de verificación"
-
 #: src/features/words/index.tsx:339
 msgid "Failed to submit move"
 msgstr "Error al enviar la jugada"
@@ -1254,11 +1117,7 @@ msgstr "Error al subir el adjunto"
 msgid "Files"
 msgstr "Archivos"
 
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
-#~ msgid "Filter..."
-#~ msgstr "Filtrar..."
-
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "Terminar de mover tu cuenta"
 
@@ -1278,15 +1137,11 @@ msgstr "Banderas"
 msgid "Flat"
 msgstr "Plana"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:258
-#~ msgid "Floating"
-#~ msgstr "Flotante"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Friday"
 msgstr "Viernes"
 
-#: ../../../lib/web/src/components/person-picker.tsx:183
+#: ../../../lib/web/src/components/person-picker.tsx:186
 msgid "Friends"
 msgstr "Amigos"
 
@@ -1301,10 +1156,6 @@ msgstr "De"
 #: ../../../lib/web/src/lib/preference-utils.ts:131
 msgid "From theme"
 msgstr "Del tema"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:321
-#~ msgid "Full layout"
-#~ msgstr "Diseño completo"
 
 #: src/features/words/components/new-game.tsx:59
 msgid "Game created"
@@ -1324,26 +1175,6 @@ msgstr "Fin de la partida"
 msgid "Go back"
 msgstr "Regresar"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:82
-#~ msgid "Go to first page"
-#~ msgstr "Ir a la primera página"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:128
-#~ msgid "Go to last page"
-#~ msgstr "Ir a la última página"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:119
-#~ msgid "Go to next page"
-#~ msgstr "Ir a la siguiente página"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:106
-#~ msgid "Go to page {pageNumber}"
-#~ msgstr "Ir a la página {pageNumber}"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:91
-#~ msgid "Go to previous page"
-#~ msgstr "Ir a la página anterior"
-
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
 msgstr "Grupo"
@@ -1360,14 +1191,6 @@ msgstr "Grupo: {0}"
 #: src/features/words/components/move-composer.tsx:75
 msgid "Has unknown words"
 msgstr "Contiene palabras desconocidas"
-
-#: ../../../lib/web/src/components/data-table/column-header.tsx:70
-#~ msgid "Hide"
-#~ msgstr "Ocultar"
-
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Hide password"
-#~ msgstr "Ocultar contraseña"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx:61
 msgid "History"
@@ -1389,7 +1212,7 @@ msgid "ID"
 msgstr "ID"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:328
 msgid "Image viewer: {0}"
 msgstr "Visor de imágenes: {0}"
 
@@ -1409,10 +1232,6 @@ msgstr "Avatar con iniciales"
 msgid "Initials avatar for {name}"
 msgstr "Avatar con iniciales de {name}"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:253
-#~ msgid "Inset"
-#~ msgstr "Encajado"
-
 #: ../../../lib/web/src/components/post-tags.tsx:168
 msgid "Interest {weight}"
 msgstr "Interés {weight}"
@@ -1430,19 +1249,11 @@ msgstr "Fecha no válida"
 msgid "Invalid move"
 msgstr "Jugada no válida"
 
-#: ../../../lib/web/src/components/tag-input.tsx:38
-#~ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
-#~ msgstr "Etiqueta no válida: solo letras, números, espacios, guiones y barras (máximo 50 caracteres)"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#~ msgid "Invalid verification code"
-#~ msgstr "Código de verificación no válido"
-
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Parece que la página que buscas <0/>no existe o se eliminó."
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Ahora mismo"
 
@@ -1462,19 +1273,6 @@ msgstr "Grande"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:309
 msgid "Layout"
 msgstr "Diseño"
-
-#: ../../../lib/web/src/components/learn-more.tsx:33
-#: ../../../lib/web/src/components/learn-more.tsx:38
-#~ msgid "Learn more"
-#~ msgstr "Más información"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:355
-#~ msgid "Left to Right"
-#~ msgstr "De izquierda a derecha"
-
-#: ../../../lib/web/src/components/post-tags.tsx:72
-#~ msgid "Letters, numbers, spaces, and hyphens only"
-#~ msgstr "Solo letras, números, espacios y guiones"
 
 #: ../../../lib/web/src/components/post-tags.tsx:73
 msgid "Letters, numbers, spaces, hyphens, and slashes only"
@@ -1530,10 +1328,6 @@ msgstr "Cerrando sesión…"
 msgid "Manage categories"
 msgstr "Administrar categorías"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
-#~ msgid "Manage your connected accounts for notifications and services."
-#~ msgstr "Administra tus cuentas conectadas para notificaciones y servicios."
-
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:52
 msgid "Manual"
 msgstr "Manual"
@@ -1574,6 +1368,10 @@ msgstr "Mensaje"
 #: ../../../lib/web/src/lib/preference-utils.ts:80
 msgid "Metric"
 msgstr "Métrico"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "Permiso de micrófono denegado"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
@@ -1616,10 +1414,6 @@ msgstr "Nombre"
 msgid "Name cannot contain < or > characters"
 msgstr "El nombre no puede contener los caracteres < o >"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
-#~ msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
-#~ msgstr "El nombre no puede contener corchetes angulares, barra invertida, punto y coma, comillas ni comillas invertidas"
-
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:101
 msgid "Name is required"
 msgstr "El nombre es obligatorio"
@@ -1645,8 +1439,8 @@ msgstr "Nuevo"
 msgid "New game"
 msgstr "Nueva partida"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:536
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:541
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:537
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:542
 msgid "Next image"
 msgstr "Imagen siguiente"
 
@@ -1665,10 +1459,6 @@ msgstr "Aún no hay actividad"
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:324
 msgid "No comments yet"
 msgstr "Aún no hay comentarios"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:295
-#~ msgid "No connected accounts"
-#~ msgstr "No hay cuentas conectadas"
 
 #: src/features/words/components/new-game.tsx:152
 msgid "No friends found"
@@ -1698,10 +1488,6 @@ msgstr "No hay objetos coincidentes"
 msgid "No messages yet"
 msgstr "Aún no hay mensajes"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "No notifications yet"
-#~ msgstr "Aún no hay notificaciones"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:382
 #: ../../../lib/web/src/components/person-picker.tsx:71
 msgid "No people found"
@@ -1710,10 +1496,6 @@ msgstr "No se encontraron personas"
 #: ../../../lib/web/src/components/place-picker.tsx:120
 msgid "No places found"
 msgstr "No se encontraron lugares"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:58
-#~ msgid "No profile"
-#~ msgstr "Sin perfil"
 
 #: ../../../lib/web/src/components/inline-entity-search.tsx:65
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
@@ -1769,7 +1551,7 @@ msgstr "Sin vistas"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:418
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:491
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
-#: ../../../lib/web/src/components/person-picker.tsx:326
+#: ../../../lib/web/src/components/person-picker.tsx:329
 #: ../../../lib/web/src/lib/preference-utils.ts:100
 msgid "None"
 msgstr "Ninguno"
@@ -1791,14 +1573,6 @@ msgstr "Sin establecer"
 msgid "Nothing found"
 msgstr "No se encontró nada"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:136
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:150
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:236
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:257
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:261
-#~ msgid "Notifications"
-#~ msgstr "Notificaciones"
-
 #. placeholder {0}: unread.length
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:196
 msgid "Notifications: {0}"
@@ -1817,11 +1591,6 @@ msgstr "Activado"
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "¡Vaya! Página no encontrada!"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:156
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:166
-#~ msgid "Open account actions"
-#~ msgstr "Abrir acciones de cuenta"
 
 #: ../../../lib/web/src/components/layout/nav-group.tsx:227
 #: ../../../lib/web/src/components/layout/nav-group.tsx:232
@@ -1845,11 +1614,6 @@ msgstr "Abrir menú"
 msgid "Open navigation"
 msgstr "Abrir navegación"
 
-#: ../../../lib/web/src/components/layout/top-nav.tsx:38
-#: ../../../lib/web/src/components/layout/top-nav.tsx:44
-#~ msgid "Open navigation menu"
-#~ msgstr "Abrir menú de navegación"
-
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:106
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:112
 msgid "Open option actions"
@@ -1858,11 +1622,6 @@ msgstr "Abrir acciones de opción"
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:30
 msgid "Open selected card"
 msgstr "Abrir tarjeta seleccionada"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:58
-#: ../../../lib/web/src/components/config-drawer.tsx:66
-#~ msgid "Open theme settings"
-#~ msgstr "Abrir ajustes de tema"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:277
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:282
@@ -1896,11 +1655,6 @@ msgstr "Otro"
 msgid "Owner"
 msgstr "Propietario"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:43
-#: ../../../lib/web/src/components/data-table/pagination.tsx:71
-#~ msgid "Page {currentPage} of {totalPages}"
-#~ msgstr "Página {currentPage} de {totalPages}"
-
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:552
 msgid "Parent"
 msgstr "Principal"
@@ -1914,24 +1668,25 @@ msgid "Passkey"
 msgstr "Clave de acceso"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "Falló la verificación con la llave de acceso. Inténtalo de nuevo."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "Claves de acceso"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "Las claves de acceso no están disponibles en este navegador"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:213
 msgid "Pattern (regex)"
 msgstr "Patrón (regex)"
 
-#: ../../../lib/web/src/components/person-picker.tsx:176
+#: ../../../lib/web/src/components/person-picker.tsx:179
 msgid "People"
 msgstr "Personas"
-
-#: ../../../lib/web/src/components/date-picker.tsx:20
-#~ msgid "Pick a date"
-#~ msgstr "Elige una fecha"
 
 #: src/features/words/index.tsx:185
 msgid "Placement out of bounds"
@@ -1946,10 +1701,6 @@ msgstr "Jugador {playerNumber}"
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:314
 msgid "Please check your internet connection and try again."
 msgstr "Verifica tu conexión a internet e inténtalo de nuevo."
-
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
-#~ msgid "Please log in with the appropriate credentials <0/> to access this resource."
-#~ msgstr "Inicia sesión con las credenciales adecuadas <0/> para acceder a este recurso."
 
 #: src/features/words/components/new-game.tsx:78
 msgid "Please select at least one friend"
@@ -1971,8 +1722,8 @@ msgstr "Publicaciones"
 msgid "Posts and comments"
 msgstr "Publicaciones y comentarios"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:520
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:525
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:521
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:526
 msgid "Previous image"
 msgstr "Imagen anterior"
 
@@ -1984,14 +1735,6 @@ msgstr "Privacidad"
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:50
 msgid "Processing…"
 msgstr "Procesando…"
-
-#: ../../../lib/web/src/components/profile-dropdown.tsx:114
-#~ msgid "Profile"
-#~ msgstr "Perfil"
-
-#: ../../../lib/web/src/components/person-picker.tsx:200
-#~ msgid "Project members"
-#~ msgstr "Miembros del proyecto"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
 msgid "Prompt saved"
@@ -2005,11 +1748,11 @@ msgstr "Notificación push"
 msgid "Raised"
 msgstr "Elevada"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "Volver a vincular tus cuentas en este servidor"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "Vuelve a registrar tus llaves de acceso en este servidor"
 
@@ -2029,6 +1772,14 @@ msgstr "Recomendado"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "Reconectando ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "La grabación falló. Intenta de nuevo."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "La grabación no produjo audio"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:135
 msgid "Redirecting to login."
@@ -2135,20 +1886,6 @@ msgstr "Obligatorio"
 msgid "Resend email"
 msgstr "Reenviar correo"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:87
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
-#~ msgid "Reset"
-#~ msgstr "Restablecer"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:122
-#: ../../../lib/web/src/components/config-drawer.tsx:127
-#~ msgid "Reset {title}"
-#~ msgstr "Restablecer {title}"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:85
-#~ msgid "Reset all settings to default values"
-#~ msgstr "Restablecer todos los ajustes a los valores predeterminados"
-
 #: src/features/words/index.tsx:835
 #: src/features/words/index.tsx:1016
 msgid "Resign"
@@ -2178,10 +1915,6 @@ msgstr "Revocar acceso"
 msgid "Revoke RSS access?"
 msgstr "¿Revocar el acceso RSS?"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:362
-#~ msgid "Right to Left"
-#~ msgstr "De derecha a izquierda"
-
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:152
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:172
 msgid "Rows"
@@ -2190,10 +1923,6 @@ msgstr "Filas"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:376
 msgid "Rows group by"
 msgstr "Agrupar filas por"
-
-#: ../../../lib/web/src/components/data-table/pagination.tsx:65
-#~ msgid "Rows per page"
-#~ msgstr "Filas por página"
 
 #: ../../../lib/web/src/components/options-menu.tsx:131
 msgid "RSS access revoked"
@@ -2270,7 +1999,7 @@ msgstr "Busca, observa y ordena esta vista."
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:179
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:255
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
-#: ../../../lib/web/src/components/person-picker.tsx:300
+#: ../../../lib/web/src/components/person-picker.tsx:303
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Buscar..."
@@ -2283,10 +2012,6 @@ msgstr "Buscando..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts:16
 msgid "Select"
 msgstr "Seleccionar"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:149
-#~ msgid "Select {0}"
-#~ msgstr "Selecciona {0}"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 msgid "Select a field"
@@ -2304,10 +2029,6 @@ msgstr "Selecciona un usuario, grupo u otra regla para otorgar acceso."
 msgid "Select access rule"
 msgstr "Seleccionar regla de acceso"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
-#~ msgid "Select account"
-#~ msgstr "Selecciona una cuenta"
-
 #: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
 msgstr "Seleccionar tipo de cuenta"
@@ -2319,10 +2040,6 @@ msgstr "Selecciona amigos..."
 #: ../../../lib/web/src/features/access/access-dialog.tsx:231
 msgid "Select group"
 msgstr "Seleccionar grupo"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:305
-#~ msgid "Select layout style"
-#~ msgstr "Seleccionar estilo de diseño"
 
 #: ../../../lib/web/src/components/place-picker.tsx:36
 msgid "Select location"
@@ -2340,26 +2057,10 @@ msgstr "Selecciona una persona..."
 msgid "Select previous card"
 msgstr "Seleccionar tarjeta anterior"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:247
-#~ msgid "Select sidebar style"
-#~ msgstr "Seleccionar estilo de barra lateral"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:349
-#~ msgid "Select site direction"
-#~ msgstr "Seleccionar dirección del sitio"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:203
-#~ msgid "Select theme preference"
-#~ msgstr "Seleccionar preferencia de tema"
-
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:289
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:381
 msgid "Select..."
 msgstr "Seleccionar..."
-
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:209
-#~ msgid "selected"
-#~ msgstr "seleccionados"
 
 #. placeholder {0}: getSelectedName()
 #: ../../../lib/web/src/features/access/access-dialog.tsx:309
@@ -2415,10 +2116,6 @@ msgstr "Mostrar clases"
 msgid "Show fields"
 msgstr "Mostrar campos"
 
-#: ../../../lib/web/src/components/password-input.tsx:27
-#~ msgid "Show password"
-#~ msgstr "Mostrar contraseña"
-
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
 msgid "Show this help"
 msgstr "Mostrar esta ayuda"
@@ -2453,10 +2150,6 @@ msgstr "Cerrando sesión..."
 msgid "Single line of text only"
 msgstr "Solo una línea de texto"
 
-#: ../../../lib/web/src/components/skip-to-main.tsx:11
-#~ msgid "Skip to Main"
-#~ msgstr "Saltar al contenido principal"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:101
 #: ../../../lib/web/src/lib/preference-utils.ts:121
 msgid "Small"
@@ -2489,10 +2182,6 @@ msgstr "Iniciar partida"
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:325
 msgid "Start the discussion by adding the first comment."
 msgstr "Inicia la discusión agregando el primer comentario."
-
-#: ../../../lib/web/src/components/coming-soon.tsx:15
-#~ msgid "Stay tuned though!"
-#~ msgstr "¡Mantente atento!"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2531,10 +2220,6 @@ msgstr "Cambiar a vista 1-9"
 msgid "System"
 msgstr "Sistema"
 
-#: ../../../lib/web/src/components/tag-input.tsx:95
-#~ msgid "Tag"
-#~ msgstr "Etiqueta"
-
 #: ../../../lib/web/src/components/post-tags.tsx:77
 msgid "Tag already exists"
 msgstr "La etiqueta ya existe"
@@ -2547,10 +2232,6 @@ msgstr "La etiqueta debe tener 50 caracteres o menos"
 #: ../../../lib/web/src/components/post-tags.tsx:116
 msgid "Tags"
 msgstr "Etiquetas"
-
-#: ../../../lib/web/src/components/layout/team-switcher.tsx:63
-#~ msgid "Teams/Apps"
-#~ msgstr "Equipos/Aplicaciones"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:42
@@ -2574,6 +2255,22 @@ msgstr "No se pudo enviar. Puede que los archivos sean demasiado grandes o que l
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Era demasiado grande para subir. Elimina o reduce archivos e inténtalo de nuevo."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "La cámara ya está en uso"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "La solicitud de cámara no recibió respuesta"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "La solicitud de micrófono no recibió respuesta"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "La solicitud de clave de acceso no recibió respuesta"
+
 #: ../../../lib/web/src/features/errors/general-error.tsx:66
 msgid "The requested content could not be found."
 msgstr "No se pudo encontrar el contenido solicitado."
@@ -2582,21 +2279,9 @@ msgstr "No se pudo encontrar el contenido solicitado."
 msgid "The server returned a web page instead of data."
 msgstr "El servidor devolvió una página web en lugar de datos."
 
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
-#~ msgid "The site is not available at the moment."
-#~ msgstr "El sitio no está disponible en este momento."
-
-#: ../../../lib/web/src/components/config-drawer.tsx:195
-#~ msgid "Theme"
-#~ msgstr "Tema"
-
-#: ../../../lib/web/src/components/config-drawer.tsx:70
-#~ msgid "Theme Settings"
-#~ msgstr "Configuración del tema"
-
-#: ../../../lib/web/src/components/coming-soon.tsx:14
-#~ msgid "This page has not been created yet."
-#~ msgstr "Esta página aún no se ha creado."
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "Esta aplicación no puede usar tu clave de acceso. Permítelo en Configuración, en Permisos."
 
 #: src/features/words/index.tsx:1029
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2626,15 +2311,6 @@ msgstr "Las fichas deben conectarse con fichas ya colocadas en el tablero"
 msgid "To"
 msgstr "A"
 
-#: ../../../lib/web/src/components/data-table/view-options.tsx:37
-#~ msgid "Toggle columns"
-#~ msgstr "Alternar columnas"
-
-#: ../../../lib/web/src/components/layout/right-panel.tsx:233
-#: ../../../lib/web/src/components/layout/right-panel.tsx:236
-#~ msgid "Toggle right panel"
-#~ msgstr "Alternar panel derecho"
-
 #: ../../../lib/web/src/components/layout/nav-group.tsx:393
 #: ../../../lib/web/src/components/layout/nav-group.tsx:400
 #: ../../../lib/web/src/components/layout/nav-group.tsx:522
@@ -2648,16 +2324,6 @@ msgstr "Alternar sección"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle sidebar"
 msgstr "Alternar barra lateral"
-
-#: ../../../lib/web/src/components/ui/sidebar.tsx:352
-#: ../../../lib/web/src/components/ui/sidebar.tsx:355
-#~ msgid "Toggle Sidebar"
-#~ msgstr "Alternar barra lateral"
-
-#: ../../../lib/web/src/components/theme-switch.tsx:37
-#: ../../../lib/web/src/components/theme-switch.tsx:41
-#~ msgid "Toggle theme"
-#~ msgstr "Alternar tema"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2727,10 +2393,6 @@ msgstr "No se pudo redirigir al inicio de sesión. Inténtalo de nuevo."
 msgid "Unassigned"
 msgstr "Sin asignar"
 
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:16
-#~ msgid "Unauthorized Access"
-#~ msgstr "Acceso no autorizado"
-
 #: ../../../lib/web/src/components/attachment-image.tsx:50
 msgid "Unavailable"
 msgstr "No disponible"
@@ -2763,10 +2425,6 @@ msgstr "Cancelar suscripción"
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
 msgstr "Sin título"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:135
-#~ msgid "Unverified"
-#~ msgstr "No verificado"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx:56
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:57
@@ -2813,14 +2471,6 @@ msgstr "Variables: {variables}"
 msgid "Verification code"
 msgstr "Código de verificación"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:255
-#~ msgid "Verification code sent"
-#~ msgstr "Código de verificación enviado"
-
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#~ msgid "Verification failed"
-#~ msgstr "Verificación fallida"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:379
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2835,17 +2485,9 @@ msgid "Video thumbnail"
 msgstr "Miniatura del video"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
 msgid "Video viewer: {0}"
 msgstr "Visor de videos: {0}"
-
-#: ../../../lib/web/src/components/data-table/view-options.tsx:33
-#~ msgid "View"
-#~ msgstr "Ver"
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:177
-#~ msgid "View all"
-#~ msgstr "Ver todo"
 
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:216
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:224
@@ -2855,6 +2497,10 @@ msgstr "Ver todas las notificaciones"
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Ver controles"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "La grabación de voz no es compatible con este navegador"
 
 #: src/features/words/components/move-composer.tsx:71
 msgid "Waiting for tiles"
@@ -2877,18 +2523,6 @@ msgstr "Solo observados"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:63
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
 msgstr "Enviamos un código de verificación a <0>{0}</0>. Ingresa el código a continuación para verificar tu dirección de correo."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
-#~ msgid "We'll be back online shortly."
-#~ msgstr "Volveremos a estar en línea en breve."
-
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
-#~ msgid "We'll notify you when something important happens."
-#~ msgstr "Te avisaremos cuando ocurra algo importante."
-
-#: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
-#~ msgid "Website is under maintenance!"
-#~ msgstr "¡El sitio web está en mantenimiento!"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Wednesday"
@@ -2914,10 +2548,6 @@ msgstr "Tú"
 msgid "You do not have access to this section."
 msgstr "No tienes acceso a esta sección."
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:18
-#~ msgid "You don't have necessary permission <0/>to view this resource."
-#~ msgstr "No tienes el permiso necesario <0/>para ver este recurso."
-
 #: src/features/words/lib/header-model.ts:146
 msgid "You resigned"
 msgstr "Renunciaste"
@@ -2926,11 +2556,7 @@ msgstr "Renunciaste"
 msgid "You win!"
 msgstr "¡Ganaste!"
 
-#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
-#~ msgid "You're all caught up!"
-#~ msgstr "¡Estás al día!"
-
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Tu cuenta fue trasladada aquí desde {source}. Hasta que la elimines allá, los mensajes y notificaciones pueden llegar a ambos servidores, parte de tu contenido seguirá siendo servido desde el servidor anterior y es posible que tus seguidores tarden unos minutos en encontrarte aquí."
 
