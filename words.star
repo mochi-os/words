@@ -10,8 +10,8 @@
 # create a game or write its state, and that every stored field is valid.
 
 
-def notify(topic, object="", title="", body="", url="", event_id=""):
-	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notifications.topic." + topic.replace("/", ".")), "", "", None, event_id)
+def notify(topic, object="", title="", body="", url="", event_id="", name=""):
+	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notifications.topic." + topic.replace("/", ".")), name, "", None, event_id)
 
 # English tile distributions: (letter, value, count)
 TILES_EN = [
@@ -343,11 +343,22 @@ def get_player_name(game, player_num):
 
 def next_turn(game):
 	"""Get the next player's turn number."""
-	t = game["current_turn"]
-	t = t + 1
-	if t > game["player_count"]:
-		t = 1
-	return t
+	return next_seat(game, game["current_turn"])
+
+def next_seat(game, seat):
+	"""The seat whose turn follows seat."""
+	if seat >= game["player_count"]:
+		return 1
+	return seat + 1
+
+def event_turn_bound(e, game, seat, ends):
+	"""Whether an inbound snapshot's turn is the one the sender's own act leaves: the seat after theirs while the game goes on, their own once it has ended (action_move and action_pass keep the turn on game over). Judged on the payload alone - a gate on our stored turn would refuse every later event once one snapshot had been refused."""
+	turn = event_integer(e.content("current_turn"), None)
+	if turn == None:
+		return False
+	if ends and e.content("status") != "active":
+		return turn == seat
+	return turn == next_seat(game, seat)
 
 def event_integer(value, fallback):
 	"""Parse an integer field off a P2P event. Returns fallback when the field
@@ -422,13 +433,6 @@ GAME_PUBLIC = ["board", "player1_score", "player2_score", "player3_score",
 def game_players(game):
 	"""Entities entitled to write this game's state."""
 	return [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
-
-def event_name(value):
-	"""Peer-supplied display name, held to core's name rules (no angle brackets or line breaks, at most 1000 characters)."""
-	value = str(value or "")
-	if not value or not mochi.text.valid(value, "name"):
-		return "Opponent"
-	return value
 
 def event_body(value, maximum, fallback):
 	"""Peer-supplied display text, clamped to `maximum` rather than rejected: dropping an otherwise-good move over a bad label would leave us behind the sender for good."""
@@ -781,7 +785,7 @@ def action_messages(a):
 
 	limit = 30
 	limit_str = a.input("limit")
-	if limit_str and mochi.text.valid(limit_str, "natural"):
+	if limit_str and mochi.text.valid(limit_str, "positive"):
 		limit = min(int(limit_str), 100)
 
 	# Cursor is "<created>:<id>"; created alone is not unique, the id makes the
@@ -819,8 +823,8 @@ def action_messages(a):
 	return {
 		"data": {
 			"messages": messages,
-			"hasMore": has_more,
-			"nextCursor": next_cursor
+			"more": has_more,
+			"cursor": next_cursor
 		}
 	}
 
@@ -1259,8 +1263,10 @@ def action_validate_word(a):
 		a.error.label(400, "errors.invalid_language")
 		return
 
+	# Letters only: the list scan matches a whole line, so a word carrying a
+	# line break matched two adjacent entries as one "word".
 	word = word.strip()
-	if len(word) < 2 or len(word) > 15:
+	if not mochi.text.valid(word, "^[A-Za-z]{2,15}$"):
 		return {"data": {"valid": False}}
 
 	return {
@@ -1302,11 +1308,14 @@ def event_new(e):
 	if not f:
 		return
 
-	game_id = e.content("id")
+	# Every field is decoded JSON under the peer's control: mochi.text.valid
+	# and len() raise on a non-string, which would abort the handler and mail
+	# the administrator on every redelivery, so each is read as text first.
+	game_id = str(e.content("id") or "")
 	if not mochi.text.valid(game_id, "id"):
 		return
 
-	language = e.content("language") or "en_US"
+	language = str(e.content("language") or "en_US")
 	player_count = e.content("player_count")
 	if not player_count or not mochi.text.valid(str(player_count), "integer"):
 		return
@@ -1314,14 +1323,14 @@ def event_new(e):
 	if player_count < 2 or player_count > 4:
 		return
 
-	p1 = e.content("player1") or ""
-	p1_name = e.content("player1_name") or ""
-	p2 = e.content("player2") or ""
-	p2_name = e.content("player2_name") or ""
-	p3 = e.content("player3") or ""
-	p3_name = e.content("player3_name") or ""
-	p4 = e.content("player4") or ""
-	p4_name = e.content("player4_name") or ""
+	p1 = str(e.content("player1") or "")
+	p1_name = str(e.content("player1_name") or "")
+	p2 = str(e.content("player2") or "")
+	p2_name = str(e.content("player2_name") or "")
+	p3 = str(e.content("player3") or "")
+	p3_name = str(e.content("player3_name") or "")
+	p4 = str(e.content("player4") or "")
+	p4_name = str(e.content("player4_name") or "")
 
 	board = e.content("board") or empty_board()
 	created = event_created(e, mochi.time.now())
@@ -1333,11 +1342,14 @@ def event_new(e):
 	if my_id not in [p1, p2, p3, p4]:
 		return
 
-	# ...and that the sender is too: the friend check above only proves they are
-	# OUR friend. Without this a friend could plant a game between us and third
-	# parties, who would then satisfy every later is_player check.
-	if e.header("from") not in [p1, p2, p3, p4]:
+	# ...and that the sender is the creator, who is always player one
+	# (action_create): the friend check above only proves they are OUR
+	# friend, and a friend naming us as the creator would plant a game we
+	# never started. The creator's name is the friend record's, not the
+	# wire's, for the same reason.
+	if e.header("from") != p1:
 		return
+	p1_name = str(f["name"] or "")
 
 	# One entity per player slot, same rule action_create enforces: a
 	# duplicated player wedges the game once play reaches their second
@@ -1349,11 +1361,11 @@ def event_new(e):
 				return
 
 	# Use bag and racks from the creating server
-	bag = e.content("bag") or ""
-	rack1 = e.content("player1_rack") or ""
-	rack2 = e.content("player2_rack") or ""
-	rack3 = e.content("player3_rack") or ""
-	rack4 = e.content("player4_rack") or ""
+	bag = str(e.content("bag") or "")
+	rack1 = str(e.content("player1_rack") or "")
+	rack2 = str(e.content("player2_rack") or "")
+	rack3 = str(e.content("player3_rack") or "")
+	rack4 = str(e.content("player4_rack") or "")
 
 	# Validate every stored field: game_snapshot_valid guards later state, but a
 	# row planted here is stored raw, and a player_count above the filled slots
@@ -1404,7 +1416,7 @@ def event_new(e):
 	# already refused an empty or malformed player1_name, so the fallback that
 	# stood here was both unreachable and untranslated.
 	sender_name = p1_name
-	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.started_game", name=sender_name), "/words/" + game_id, event_id="game:" + game_id)
+	notify("activity", game_id, mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.started_game", name=sender_name), "/words/" + game_id, event_id="game:" + game_id, name=sender_name)
 
 def event_move(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1431,37 +1443,18 @@ def event_move(e):
 	if player_number < 1:
 		return
 
-	current_turn = event_integer(e.content("current_turn"), next_turn(game))
-	if not valid_turn(game, current_turn):
-		return
-
-	move_count = event_integer(e.content("move_count"), game["move_count"] + 1)
-	if move_count == None or move_count < 0 or move_count > 10000:
-		return
-
 	# Do not gate on move_count here: a second ordering ahead of the version tuple
 	# drops a concurrent resignation, which carries a lower move_count.
-
-	new_score = event_integer(e.content("new_score"), game["player" + str(player_number) + "_score"] + score)
-	if new_score == None:
+	if not event_turn_bound(e, game, player_number, True):
 		return
 
-	body = event_body(e.content("body"), 10000, "")
-	name = event_name(e.content("name"))
+	# The label ships as display text; action_move bounds it the same way.
+	body = event_body(e.content("body"), 200, "")
+	if body and not mochi.text.valid(body, "name"):
+		body = ""
+	name = get_player_name(game, player_number)
 
 	bag = e.content("bag")
-
-	# Gate only: the end-of-game rack penalties action_move ships as playerN_score
-	# keys are re-read from the applied snapshot below, so refuse a malformed one
-	# rather than carrying it. The slot index comes from this loop, never the payload.
-	for n in range(1, game["player_count"] + 1):
-		if n == player_number:
-			continue
-		value = e.content("player" + str(n) + "_score")
-		if value == None or value == "":
-			continue
-		if not mochi.text.valid(str(value), "integer"):
-			return
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1479,7 +1472,10 @@ def event_move(e):
 	# The receiver stamps the marker from what it validated, not from any
 	# sender text, so the row localises for this viewer whatever language the
 	# acting host spoke.
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, "play:" + str(score), created)
+	# A peer-chosen id that already names a row - a redelivery, or a collision
+	# with another game's message - inserts nothing, and nothing is announced.
+	if mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, "play:" + str(score), created) == 0:
+		return
 
 	bag_count = len(bag) if bag != None else len(game["bag"])
 	# Only the keys GAME_PUBLIC does not carry: everything it does list - board,
@@ -1498,7 +1494,7 @@ def event_move(e):
 	for key in GAME_PUBLIC:
 		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=body), "/words/" + game["id"], event_id="move:" + str(id))
+	notify("activity", game["id"], mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=body), "/words/" + game["id"], event_id="move:" + str(id), name=name)
 
 def event_pass(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1509,24 +1505,13 @@ def event_pass(e):
 	if not is_player(game, sender):
 		return
 
-	body = event_body(e.content("body"), 10000, "passed")
-	name = event_name(e.content("name"))
-	current_turn = event_integer(e.content("current_turn"), next_turn(game))
-	if not valid_turn(game, current_turn):
+	player_number = get_player_number(game, sender)
+	name = get_player_name(game, player_number)
+	# Our own label: the row renders from the marker, and the wire body was
+	# the actor's language.
+	body = mochi.app.label("notifications.body.passed", name=name)
+	if not event_turn_bound(e, game, player_number, True):
 		return
-
-	consecutive_passes = event_integer(e.content("consecutive_passes"), game["consecutive_passes"] + 1)
-	if consecutive_passes == None or consecutive_passes < 0 or consecutive_passes > game["player_count"]:
-		return
-
-	status = e.content("status") or "active"
-	if status not in ["active", "finished", "resigned"]:
-		status = "active"
-	winner = e.content("winner") or None
-	# Clamp winner to an actual player of this game, matching event_move.
-	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
-	if winner and winner not in players:
-		winner = None
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1541,14 +1526,15 @@ def event_pass(e):
 	if created == None:
 		created = now
 
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, "pass:over" if status != "active" else "pass", created)
+	marker = "pass:over" if state["status"] != "active" else "pass"
+	if mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, marker, created) == 0:
+		return
 
+	# Only the keys GAME_PUBLIC does not carry; the applied snapshot supplies
+	# the rest below.
 	ws_data = {
 		"type": "move", "created": now, "member": sender, "name": name,
-		"body": body, "pass": True,
-		"event": "pass:over" if status != "active" else "pass",
-		"current_turn": current_turn, "consecutive_passes": consecutive_passes,
-		"status": status, "winner": winner or "",
+		"body": body, "pass": True, "event": marker,
 	}
 	# Skip commit-hook conversion: matches action_pass — shared (games, update) shape and a pass flag the hook can't infer from row state.
 	# A snapshot may have repaired more than this event's own subject - a pass
@@ -1557,7 +1543,7 @@ def event_pass(e):
 	for key in GAME_PUBLIC:
 		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.passed", name=name), "/words/" + game["id"], event_id="pass:" + str(id))
+	notify("activity", game["id"], mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.passed", name=name), "/words/" + game["id"], event_id="pass:" + str(id), name=name)
 
 def event_exchange(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1568,10 +1554,13 @@ def event_exchange(e):
 	if not is_player(game, sender):
 		return
 
-	body = event_body(e.content("body"), 10000, "exchanged tiles")
-	name = event_name(e.content("name"))
-	current_turn = event_integer(e.content("current_turn"), next_turn(game))
-	if not valid_turn(game, current_turn):
+	player_number = get_player_number(game, sender)
+	name = get_player_name(game, player_number)
+	# Our own label: the row renders from the marker, and the wire body was
+	# the actor's language.
+	body = mochi.app.label("notifications.body.exchanged_tiles", name=name)
+	# An exchange never ends the game, so the turn always moves on.
+	if not event_turn_bound(e, game, player_number, False):
 		return
 
 	bag = e.content("bag")
@@ -1596,13 +1585,16 @@ def event_exchange(e):
 	if created == None:
 		created = now
 
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, exchange_marker, created)
+	if mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], sender, name, body, exchange_marker, created) == 0:
+		return
 
 	bag_count = len(bag) if bag != None else len(game["bag"])
+	# Only the keys GAME_PUBLIC does not carry; the applied snapshot supplies
+	# the rest below.
 	ws_data = {
 		"type": "move", "created": now, "member": sender, "name": name,
 		"body": body, "exchange": True, "event": exchange_marker,
-		"current_turn": current_turn, "bag_count": bag_count,
+		"bag_count": bag_count,
 	}
 	# Skip commit-hook conversion: matches action_exchange — shared (games, update) shape and an exchange flag the hook can't infer from row state.
 	# A snapshot may have repaired more than this event's own subject - a pass
@@ -1611,7 +1603,7 @@ def event_exchange(e):
 	for key in GAME_PUBLIC:
 		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.exchanged_tiles", name=name), "/words/" + game["id"], event_id="exchange:" + str(id))
+	notify("activity", game["id"], mochi.app.label("notifications.title.words"), mochi.app.label("notifications.body.exchanged_tiles", name=name), "/words/" + game["id"], event_id="exchange:" + str(id), name=name)
 
 def event_message(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1631,22 +1623,26 @@ def event_message(e):
 		return
 
 	body = e.content("body")
-	if not mochi.text.valid(str(body), "text"):
+	if not textual(body) or not mochi.text.valid(body, "text"):
 		return
-	if len(str(body)) > 10000:
+	if len(body) > 10000:
 		return
 
-	name = event_name(e.content("name"))
+	name = get_player_name(game, get_player_number(game, sender))
 
 	words_ensure_commit_hook()
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
+	# A peer-chosen id that already names a row - a redelivery, or a collision
+	# with another game's message - inserts nothing, and then the hook would
+	# fire a frame for whichever game owns the existing row.
+	if mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created) == 0:
+		return
 
 	mochi.db.commit.fire("messages", "insert", id)
 	# Label rather than concatenation, matching chat: the body may be 10000
 	# characters and a locale may want the name and the text the other way
 	# round, neither of which survives name + ": " + body.
-	excerpt = str(body).strip()[:80]
-	notify("message", "", mochi.app.label("notifications.title.message"), mochi.app.label("notifications.body.message", author=name, excerpt=excerpt), "/words/" + game["id"], event_id="message:" + str(id))
+	excerpt = body.strip()[:80]
+	notify("message", game["id"], mochi.app.label("notifications.title.message"), mochi.app.label("notifications.body.message", author=name, excerpt=excerpt), "/words/" + game["id"], event_id="message:" + str(id), name=name)
 
 def event_resign(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))
@@ -1657,11 +1653,9 @@ def event_resign(e):
 	if not is_player(game, sender):
 		return
 
-	winner = e.content("winner") or None
-	players = [game["player" + str(n)] for n in range(1, game["player_count"] + 1)]
-	if winner and winner not in players:
-		winner = None
-	body = event_body(e.content("body"), 10000, "Opponent resigned")
+	# Our own label: the row renders from the marker, and the wire body was
+	# the actor's language. The winner is read from the applied snapshot.
+	body = mochi.app.label("notifications.body.opponent_resigned")
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1674,10 +1668,10 @@ def event_resign(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', ?, ? )", id, game["id"], sender, get_player_name(game, get_player_number(game, sender)), body, "resign", now)
 
 	# Skip commit-hook conversion: matches action_resign — payload carries an event marker and the winner from the games row, neither of which is on the messages row alone.
-	ws_data = {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""}
+	ws_data = {"type": "system", "event": "resign", "created": now, "body": body}
 	# A snapshot may have repaired more than this event's own subject, so send
 	# the applied state, minus the racks and bag the browser must not see.
 	for key in GAME_PUBLIC:
 		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/words/" + game["id"], event_id="resign:" + game["id"])
+	notify("activity", game["id"], mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/words/" + game["id"], event_id="resign:" + game["id"], name=get_player_name(game, get_player_number(game, sender)))

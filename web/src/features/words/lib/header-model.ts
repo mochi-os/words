@@ -7,7 +7,7 @@ import { plural } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
 import type { Game } from '@/api/games'
 
-export interface WordsHeaderPlayer {
+interface WordsHeaderPlayer {
   playerNumber: number
   label: string
   score: number
@@ -15,7 +15,7 @@ export interface WordsHeaderPlayer {
   isMe: boolean
 }
 
-export interface WordsHeaderModel {
+interface WordsHeaderModel {
   title: string
   status: string
   meta: string | null

@@ -891,8 +891,7 @@ export function WordsGameView() {
                               </Button>
                               <div className="flex-1" />
                               <Button size="sm" onClick={handleExchangeConfirm} disabled={exchangeSelected.size === 0 || exchangeMutation.isPending}>
-                                {/* button-icon-ok: Exchange (tiles back to the bag) has no conventional glyph */}
-                                {exchangeMutation.isPending && <Loader2 className="size-3 animate-spin" />}
+                                {exchangeMutation.isPending ? <Loader2 className="size-3 animate-spin" /> : <ArrowLeftRight className="size-3" />}
                                 {exchangeSelected.size > 0 ? <Trans>Exchange ({exchangeSelected.size})</Trans> : <Trans>Exchange</Trans>}
                               </Button>
                             </>

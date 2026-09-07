@@ -30,7 +30,7 @@ export type MoveDraftStatus =
   | 'ready_with_invalid_words'
   | 'validation_unavailable'
 
-export type MoveDraftBase =
+type MoveDraftBase =
   | { status: 'empty'; errorMessage: null; result: null }
   | { status: 'invalid_local'; errorMessage: string; result: null }
   | { status: 'ready'; errorMessage: null; result: MoveResult }

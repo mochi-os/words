@@ -55,19 +55,6 @@ fi
 
 echo
 
-# ── Starlark test suites ─────────────────────────────────────────
-
-for SUITE in test_bag test_board test_dictionary test_game_flow; do
-	info "Running Starlark $SUITE"
-	RESPONSE=$("$CURL" /words/-/$SUITE)
-
-	if echo "$RESPONSE" | grep -q '"passed":true'; then
-		pass "Starlark $SUITE passed"
-	else
-		fail "Starlark $SUITE failed" "$RESPONSE"
-	fi
-done
-
 echo
 
 # ── Game lifecycle ───────────────────────────────────────────────

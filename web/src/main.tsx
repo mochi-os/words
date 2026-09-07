@@ -21,29 +21,6 @@ const catalogs: Catalogs = {
   'en-us': () => import('./locales/en-us/messages.po'),
   fr: () => import('./locales/fr/messages.po'),
   ja: () => import('./locales/ja/messages.po'),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   jv: () => import('./locales/jv/messages.po'),
 
   sd: () => import('./locales/sd/messages.po'),

@@ -37,7 +37,7 @@ export const {
 
 const WORD_VALIDATION_STALE_TIME = 10 * 60 * 1000
 
-export const wordValidationKeys = {
+const wordValidationKeys = {
   detail: (language: string, word: string) =>
     ['words', 'validate', language, word.toUpperCase()] as const,
 }
