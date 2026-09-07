@@ -35,6 +35,11 @@ msgstr "[ora disetel]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, other {# pemain}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, other {# asil}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "Jinis akun"
 msgid "Active games"
 msgstr "Game Aktif"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aktivitas"
 
@@ -306,7 +311,7 @@ msgstr "Kabeh sing langganan feed iki bakal mandheg nampa. Sampeyan bisa nyalin 
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Sampéyan yakin arep mbusak \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Sampéyan yakin arep mbusak \"{title}\"? Tindakan iki ora bisa dibatalaké."
 
@@ -334,11 +339,11 @@ msgstr "Sampéyan yakin arep nyerah? {opponentName} bakal menang ing game iki."
 msgid "Ascending"
 msgstr "Munggah"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Lampirké berkas komentar"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Lampirké berkas balesan"
 
@@ -372,16 +377,16 @@ msgstr "Bali"
 msgid "Back to home"
 msgstr "Mulih menyang ngarep"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Spanduk"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Banner dibusak"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Banner dianyari"
 
@@ -446,11 +451,11 @@ msgstr "Kamera ora kasedhiya"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "Batal"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Batal komentar"
 
@@ -458,7 +463,7 @@ msgstr "Batal komentar"
 msgid "Cancel exchange"
 msgstr "Batal pertukaran"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Batal balesan"
 
@@ -490,7 +495,7 @@ msgstr "Diowahi"
 msgid "Changed {field}"
 msgstr "{field} diowahi"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "Chat"
 
@@ -510,7 +515,7 @@ msgstr "Checklist"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Pilih game saka sidebar utawa miwiti sing anyar."
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "Pilih huruf"
 
@@ -523,7 +528,7 @@ msgstr "Pilih basa"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Pilih lawan <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "Tumindak komentar"
 msgid "Comments"
 msgstr "Komentar"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Komentar ({0})"
 
@@ -785,7 +790,7 @@ msgstr "Urutan standar"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Busak"
@@ -814,9 +819,9 @@ msgstr "Busak game"
 msgid "Delete game?"
 msgstr "Busak game?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Busak item"
 
@@ -877,11 +882,11 @@ msgstr "Deteksi saka browser web"
 msgid "Directory"
 msgstr "Direktori"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Buwang"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Buwang konsep?"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "Ora cocog karo pola sing dibutuhaké"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Rampung"
@@ -993,7 +998,7 @@ msgstr "Inggris (UK)"
 msgid "English (US)"
 msgstr "Inggris (US)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Lebokna teks banner (markdown didukung)..."
 
@@ -1005,17 +1010,17 @@ msgstr "Ketik kode saka email panjenengan"
 msgid "Enter your authenticator code"
 msgstr "Lebokna kode authenticator sampeyan"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Kesalahan"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "Tukar"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "Tukar ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "Gagal njupuk token RSS"
 msgid "Failed to load"
 msgstr "Gagal mbukak"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Gagal mbukak banner"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Gagal mbukak riwayat"
 
@@ -1108,8 +1117,8 @@ msgstr "Gagal mbukak riwayat"
 msgid "Failed to load image"
 msgstr "Gagal mbukak gambar"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Gagal mbukak item"
 
@@ -1153,7 +1162,7 @@ msgstr "Gagal nyimpen"
 msgid "Failed to save prompt"
 msgstr "Gagal nyimpen prompt"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "Gagal ngirim"
 
@@ -1161,7 +1170,7 @@ msgstr "Gagal ngirim"
 msgid "Failed to submit move"
 msgstr "Gagal ngirim langkah"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Gagal nganyari banner"
 
@@ -1258,7 +1267,7 @@ msgstr "Grup: {0}"
 msgid "Has unknown words"
 msgstr "Ngandhut tembung sing ora dikenal"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Riwayat"
 
@@ -1319,7 +1328,7 @@ msgstr "Langkah ora valid"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Kayane kaca sing sampeyan golèki <0/>ora ana utawa wis dibusak."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Detail item"
 
@@ -1372,11 +1381,11 @@ msgstr "Muat luwih akèh"
 msgid "Loading content…"
 msgstr "Ngemot konten…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Mbukak item"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Mbukak detail item"
 
@@ -1622,10 +1631,10 @@ msgstr "Ora ana tampilan"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "Sing duwé"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Induk"
 
@@ -1824,7 +1833,7 @@ msgstr "Ngolah…"
 msgid "Prompt saved"
 msgstr "Prompt disimpen"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Properti"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "Siap"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "Cabut"
 
@@ -2030,7 +2039,7 @@ msgstr "Setu"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "Miwiti game"
 msgid "Start the discussion by adding the first comment."
 msgstr "Miwiti diskusi kanthi nambah komentar pisanan."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Mandheg nonton"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "Subyek"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "Kirim"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Kirim komentar"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Kirim balesan"
 
@@ -2308,7 +2317,7 @@ msgstr "Minggu"
 msgid "Switch to view 1-9"
 msgstr "Pindah menyang tampilan 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "Kesalahan API ora dikarepake"
 msgid "United States"
 msgstr "Amerika Serikat"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "Panampil video: {0}"
 msgid "View all notifications"
 msgstr "Deleng kabeh notifikasi"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Deleng lan owahi detail item"
 
@@ -2607,8 +2616,8 @@ msgstr "Ngenteni ubin"
 msgid "Waiting for your turn"
 msgstr "Ngenteni giliranmu"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Tonton"
 
@@ -2662,7 +2671,7 @@ msgstr "Sampéyan menang!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akun sampeyan dipindah mrene saka {source}. Nganti sampeyan mbusak ana, pesen lan notifikasi bisa tekan loro-lorone server, sawetara konten sampeyan tetep dilayani saka server lawas, lan pengikut bisa butuh sawetara menit kanggo nemokake sampeyan ing kene."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Lampiranmu bakal ilang."
 
@@ -2670,10 +2679,10 @@ msgstr "Lampiranmu bakal ilang."
 msgid "Your move"
 msgstr "Langkahmu"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Teks lan lampiranmu bakal ilang."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Teksmu bakal ilang."

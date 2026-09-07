@@ -35,6 +35,11 @@ msgstr "[سیٹ نہیں]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# کھلاڑی} other {# کھلاڑی}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# نتیجہ} other {# نتائج}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "اکاؤنٹ کی قسم"
 msgid "Active games"
 msgstr "فعال گیمز"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "سرگرمی"
 
@@ -306,7 +311,7 @@ msgstr "اس فیڈ کو سبسکرائب کرنے والی ہر چیز اسے �
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "کیا آپ واقعی \"{0}\" کو حذف کرنا چاہتے ہیں؟"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "کیا آپ واقعی \"{title}\" کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔"
 
@@ -334,11 +339,11 @@ msgstr "کیا آپ واقعی ہار ماننا چاہتے ہیں؟ {opponentNa
 msgid "Ascending"
 msgstr "صعودی"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "تبصرے کی فائلیں منسلک کریں"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "جواب کی فائلیں منسلک کریں"
 
@@ -372,16 +377,16 @@ msgstr "واپس"
 msgid "Back to home"
 msgstr "گھر واپس جائیں"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "بینر"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "بینر ہٹا دیا"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "بینر اپڈیٹ ہوا"
 
@@ -446,11 +451,11 @@ msgstr "کیمرہ دستیاب نہیں"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "تبصرہ منسوخ کریں"
 
@@ -458,7 +463,7 @@ msgstr "تبصرہ منسوخ کریں"
 msgid "Cancel exchange"
 msgstr "تبادلہ منسوخ کریں"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "جواب منسوخ کریں"
 
@@ -490,7 +495,7 @@ msgstr "تبدیل ہوا"
 msgid "Changed {field}"
 msgstr "{field} تبدیل ہوا"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "چیٹ"
 
@@ -510,7 +515,7 @@ msgstr "چیک لسٹ"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "سائڈ بار سے گیم منتخب کریں یا نئی شروع کریں۔"
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "ایک حرف منتخب کریں"
 
@@ -523,7 +528,7 @@ msgstr "زبان منتخب کریں"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "حریف منتخب کریں <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "تبصرے کے اعمال"
 msgid "Comments"
 msgstr "تبصرے"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "تبصرے ({0})"
 
@@ -785,7 +790,7 @@ msgstr "ڈیفالٹ ترتیب"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "حذف کریں"
@@ -814,9 +819,9 @@ msgstr "گیم حذف کریں"
 msgid "Delete game?"
 msgstr "گیم حذف کریں؟"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "آئٹم حذف کریں"
 
@@ -877,11 +882,11 @@ msgstr "ویب براؤزر سے پتہ لگائیں"
 msgid "Directory"
 msgstr "ڈائریکٹری"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "رد کریں"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "مسودہ رد کریں؟"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "مطلوبہ نمونے سے مطابقت نہیں رکھتا"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "مکمل"
@@ -993,7 +998,7 @@ msgstr "انگریزی (UK)"
 msgid "English (US)"
 msgstr "انگریزی (US)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "بینر کا متن درج کریں (مارک ڈاؤن سپورٹڈ)..."
 
@@ -1005,17 +1010,17 @@ msgstr "اپنی ای میل میں موجود کوڈ درج کریں"
 msgid "Enter your authenticator code"
 msgstr "اپنا اتھینٹیکیٹر کوڈ درج کریں"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "خرابی"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "تبدیل کریں"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "تبدیل کریں ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "RSS ٹوکن حاصل کرنے میں ناکامی"
 msgid "Failed to load"
 msgstr "لوڈ کرنے میں ناکامی"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "بینر لوڈ نہیں ہو سکا"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "تاریخ لوڈ کرنے میں ناکامی"
 
@@ -1108,8 +1117,8 @@ msgstr "تاریخ لوڈ کرنے میں ناکامی"
 msgid "Failed to load image"
 msgstr "تصویر لوڈ نہیں ہو سکی"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "آئٹم لوڈ کرنے میں ناکامی"
 
@@ -1153,7 +1162,7 @@ msgstr "محفوظ کرنے میں ناکامی"
 msgid "Failed to save prompt"
 msgstr "پرومپٹ محفوظ کرنے میں ناکامی"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "بھیجنے میں ناکامی"
 
@@ -1161,7 +1170,7 @@ msgstr "بھیجنے میں ناکامی"
 msgid "Failed to submit move"
 msgstr "چال جمع کرانے میں ناکامی"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "بینر اپڈیٹ کرنے میں ناکامی"
 
@@ -1258,7 +1267,7 @@ msgstr "گروپ: {0}"
 msgid "Has unknown words"
 msgstr "نامعلوم الفاظ ہیں"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "تاریخ"
 
@@ -1319,7 +1328,7 @@ msgstr "غلط چال"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ایسا لگتا ہے کہ جو صفحہ آپ تلاش کر رہے ہیں <0/>وہ موجود نہیں ہے یا ہٹا دیا گیا ہے۔"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "آئٹم کی تفصیلات"
 
@@ -1372,11 +1381,11 @@ msgstr "مزید لوڈ کریں"
 msgid "Loading content…"
 msgstr "مواد لوڈ ہو رہا ہے…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "آئٹم لوڈ ہو رہا ہے"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "آئٹم کی تفصیلات لوڈ ہو رہی ہیں"
 
@@ -1622,10 +1631,10 @@ msgstr "کوئی views نہیں"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "مالک"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "parent"
 
@@ -1824,7 +1833,7 @@ msgstr "پروسیس ہو رہا ہے…"
 msgid "Prompt saved"
 msgstr "prompt محفوظ ہو گیا"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "خصوصیات"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "تیار"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "واپس بلائیں"
 
@@ -2030,7 +2039,7 @@ msgstr "ہفتہ"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "گیم شروع کریں"
 msgid "Start the discussion by adding the first comment."
 msgstr "پہلا تبصرہ شامل کر کے بحث شروع کریں۔"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "دیکھنا بند کریں"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "موضوع"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "جمع کریں"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "تبصرہ جمع کریں"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "جواب جمع کریں"
 
@@ -2308,7 +2317,7 @@ msgstr "اتوار"
 msgid "Switch to view 1-9"
 msgstr "ویو 1-9 پر سوئچ کریں"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "غیر متوقع API خرابی"
 msgid "United States"
 msgstr "ریاستہائے متحدہ"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "ویڈیو ناظر: {0}"
 msgid "View all notifications"
 msgstr "تمام نوٹیفکیشنز دیکھیں"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "آئٹم کی تفصیلات دیکھیں اور ایڈٹ کریں"
 
@@ -2607,8 +2616,8 @@ msgstr "ٹائلوں کا انتظار"
 msgid "Waiting for your turn"
 msgstr "آپ کی باری کا انتظار"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "دیکھیں"
 
@@ -2662,7 +2671,7 @@ msgstr "آپ جیت گئے!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "آپ کا اکاؤنٹ {source} سے یہاں منتقل کر دیا گیا ہے۔ جب تک آپ اسے وہاں سے حذف نہیں کرتے، پیغامات اور اطلاعات دونوں سرورز تک پہنچ سکتی ہیں، آپ کے کچھ مواد پرانے سرور سے فراہم ہوتے رہیں گے، اور فالوورز کو آپ کو یہاں تلاش کرنے میں چند منٹ لگ سکتے ہیں۔"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "آپ کے منسلکات ضائع ہو جائیں گے۔"
 
@@ -2670,10 +2679,10 @@ msgstr "آپ کے منسلکات ضائع ہو جائیں گے۔"
 msgid "Your move"
 msgstr "آپ کی چال"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "آپ کا متن اور منسلکات ضائع ہو جائیں گے۔"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "آپ کا متن ضائع ہو جائے گا۔"

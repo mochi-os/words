@@ -35,6 +35,11 @@ msgstr "[nie gestel nie]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# speler} other {# spelers}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# resultaat} other {# resultate}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "Rekeningtipe"
 msgid "Active games"
 msgstr "Aktiewe speletjies"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aktiwiteit"
 
@@ -306,7 +311,7 @@ msgstr "Enigiets wat op hierdie voer ingeteken is, sal dit nie meer ontvang nie.
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Is jy seker jy wil \"{0}\" verwyder?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Is jy seker jy wil \"{title}\" verwyder? Hierdie aksie kan nie ongedaan gemaak word nie."
 
@@ -334,11 +339,11 @@ msgstr "Is jy seker jy wil oorgee? {opponentName} sal die spel wen."
 msgid "Ascending"
 msgstr "Oplopend"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Heg kommentaarlêers aan"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Heg antwoordlêers aan"
 
@@ -372,16 +377,16 @@ msgstr "Terug"
 msgid "Back to home"
 msgstr "Terug na tuis"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banier"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Banier verwyder"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Banier bygewerk"
 
@@ -446,11 +451,11 @@ msgstr "Kamera nie beskikbaar nie"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "Kanselleer"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Kanselleer kommentaar"
 
@@ -458,7 +463,7 @@ msgstr "Kanselleer kommentaar"
 msgid "Cancel exchange"
 msgstr "Kanselleer uitruil"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Kanselleer antwoord"
 
@@ -490,7 +495,7 @@ msgstr "Verander"
 msgid "Changed {field}"
 msgstr "{field} verander"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "Klets"
 
@@ -510,7 +515,7 @@ msgstr "Kontrolelys"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Kies 'n speletjie uit die sybalk of begin 'n nuwe een."
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "Kies 'n letter"
 
@@ -523,7 +528,7 @@ msgstr "Kies taal"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Kies teenstanders <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "Kommentaaraksies"
 msgid "Comments"
 msgstr "Kommentare"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Kommentaar ({0})"
 
@@ -785,7 +790,7 @@ msgstr "Verstek sortering"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Verwyder"
@@ -814,9 +819,9 @@ msgstr "Verwyder speletjie"
 msgid "Delete game?"
 msgstr "Verwyder spel?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Verwyder item"
 
@@ -877,11 +882,11 @@ msgstr "Spoor op vanaf webblaaier"
 msgid "Directory"
 msgstr "Gids"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Gooi weg"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Konsep weggooi?"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "Stem nie met die vereiste patroon ooreen nie"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Klaar"
@@ -993,7 +998,7 @@ msgstr "Engels (VK)"
 msgid "English (US)"
 msgstr "Engels (VSA)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Tik banierteks in (markdown ondersteun)..."
 
@@ -1005,17 +1010,17 @@ msgstr "Voer die kode uit jou e-pos in"
 msgid "Enter your authenticator code"
 msgstr "Voer jou verifikator-kode in"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Fout"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "Ruil"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "Ruil ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "Kon nie RSS-token kry nie"
 msgid "Failed to load"
 msgstr "Kon nie laai nie"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Kon nie banier laai nie"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Kon nie geskiedenis laai nie"
 
@@ -1108,8 +1117,8 @@ msgstr "Kon nie geskiedenis laai nie"
 msgid "Failed to load image"
 msgstr "Kon nie prent laai nie"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Kon nie item laai nie"
 
@@ -1153,7 +1162,7 @@ msgstr "Kon nie stoor nie"
 msgid "Failed to save prompt"
 msgstr "Kon nie aanwysing stoor nie"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "Kon nie stuur nie"
 
@@ -1161,7 +1170,7 @@ msgstr "Kon nie stuur nie"
 msgid "Failed to submit move"
 msgstr "Kon nie skuif indien nie"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Kon nie banier opdateer nie"
 
@@ -1258,7 +1267,7 @@ msgstr "Groep: {0}"
 msgid "Has unknown words"
 msgstr "Bevat onbekende woorde"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Geskiedenis"
 
@@ -1319,7 +1328,7 @@ msgstr "Ongeldige skuif"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Dit lyk of die bladsy wat jy soek <0/>nie bestaan nie of verwyder is."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Itembesonderhede"
 
@@ -1372,11 +1381,11 @@ msgstr "Laai meer"
 msgid "Loading content…"
 msgstr "Inhoud word gelaai…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Laai item"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Laai itembesonderhede"
 
@@ -1622,10 +1631,10 @@ msgstr "Geen aansigte"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "Eienaar"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Ouer"
 
@@ -1824,7 +1833,7 @@ msgstr "Verwerk…"
 msgid "Prompt saved"
 msgstr "Aanwysing gestoor"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Eienskappe"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "Gereed"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "Herroep"
 
@@ -2030,7 +2039,7 @@ msgstr "Saterdag"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "Begin speletjie"
 msgid "Start the discussion by adding the first comment."
 msgstr "Begin die bespreking deur die eerste kommentaar by te voeg."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Hou op kyk"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "Onderwerp"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "Dien in"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Dien kommentaar in"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Dien antwoord in"
 
@@ -2308,7 +2317,7 @@ msgstr "Sondag"
 msgid "Switch to view 1-9"
 msgstr "Skakel oor na aansig 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "Onverwagte API-fout"
 msgid "United States"
 msgstr "Verenigde State"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "Videokyker: {0}"
 msgid "View all notifications"
 msgstr "Bekyk alle kennisgewings"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Bekyk en wysig item-besonderhede"
 
@@ -2607,8 +2616,8 @@ msgstr "Wag vir teëls"
 msgid "Waiting for your turn"
 msgstr "Wag vir jou beurt"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Kyk"
 
@@ -2662,7 +2671,7 @@ msgstr "Jy wen!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Jou rekening is hierheen geskuif vanaf {source}. Totdat jy dit daar uitvee, kan boodskappe en kennisgewings albei bedieners bereik, word sommige van jou inhoud steeds vanaf die ou bediener bedien, en kan volgelinge 'n paar minute neem om jou hier te vind."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Jou aanhegsels sal verlore gaan."
 
@@ -2670,10 +2679,10 @@ msgstr "Jou aanhegsels sal verlore gaan."
 msgid "Your move"
 msgstr "Jou skuif"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Jou teks en aanhegsels sal verlore gaan."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Jou teks sal verlore gaan."

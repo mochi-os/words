@@ -35,6 +35,11 @@ msgstr "[орнатылмаған]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# ойыншы} other {# ойыншы}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# нәтиже} other {# нәтиже}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "Тіркелгі түрі"
 msgid "Active games"
 msgstr "Белсенді ойындар"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Әрекет"
 
@@ -306,7 +311,7 @@ msgstr "Осы арнаға жазылған барлық нәрсе оны ал
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\" жойылғанына сенімдісіз бе?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "\"{title}\" жойылғанына сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес."
 
@@ -334,11 +339,11 @@ msgstr "Шынымен бас тартқыңыз келе ме? {opponentName} �
 msgid "Ascending"
 msgstr "Өсу реті"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Пікір файлдарын тіркеу"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Жауап файлдарын тіркеу"
 
@@ -372,16 +377,16 @@ msgstr "Артқа"
 msgid "Back to home"
 msgstr "Басты бетке оралу"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Баннер"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Баннер алып тасталды"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Баннер жаңартылды"
 
@@ -446,11 +451,11 @@ msgstr "Камера қолжетімсіз"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "Болдырмау"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Пікірден бас тарту"
 
@@ -458,7 +463,7 @@ msgstr "Пікірден бас тарту"
 msgid "Cancel exchange"
 msgstr "Айырбасты болдырмау"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Жауаптан бас тарту"
 
@@ -490,7 +495,7 @@ msgstr "Өзгертілді"
 msgid "Changed {field}"
 msgstr "{field} өзгертілді"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "Чат"
 
@@ -510,7 +515,7 @@ msgstr "Тапсырмалар тізімі"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Бүйір тақтадан ойынды таңдаңыз немесе жаңасын бастаңыз."
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "Әріпті таңдаңыз"
 
@@ -523,7 +528,7 @@ msgstr "Тілді таңдау"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Қарсыластарды таңдау <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "Пікір әрекеттері"
 msgid "Comments"
 msgstr "Пікірлер"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Пікірлер ({0})"
 
@@ -785,7 +790,7 @@ msgstr "Әдепкі сұрыптау"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Жою"
@@ -814,9 +819,9 @@ msgstr "Ойынды жою"
 msgid "Delete game?"
 msgstr "Ойын жойылсын ба?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Тармақты жою"
 
@@ -877,11 +882,11 @@ msgstr "Веб-браузерден анықтау"
 msgid "Directory"
 msgstr "Каталог"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Алып тастау"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Жобаны алып тастау керек пе?"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "Қажетті үлгіге сәйкес келмейді"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Дайын"
@@ -993,7 +998,7 @@ msgstr "Ағылшын (UK)"
 msgid "English (US)"
 msgstr "Ағылшын (US)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Баннер мәтінін енгізіңіз (markdown қолдау көрсетіледі)..."
 
@@ -1005,17 +1010,17 @@ msgstr "Электрондық поштаңыздағы кодты енгізі�
 msgid "Enter your authenticator code"
 msgstr "Authenticator кодын енгізіңіз"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Қате"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "Айырбас"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "Айырбас ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "RSS токенін алу сәтсіз аяқталды"
 msgid "Failed to load"
 msgstr "Жүктеу сәтсіз аяқталды"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Баннерді жүктеу мүмкін болмады"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Тарихты жүктеу сәтсіз аяқталды"
 
@@ -1108,8 +1117,8 @@ msgstr "Тарихты жүктеу сәтсіз аяқталды"
 msgid "Failed to load image"
 msgstr "Суретті жүктеу мүмкін болмады"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Элементті жүктеу сәтсіз аяқталды"
 
@@ -1153,7 +1162,7 @@ msgstr "Сақтау сәтсіз аяқталды"
 msgid "Failed to save prompt"
 msgstr "Жолдамасын сақтау сәтсіз аяқталды"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "Жіберу сәтсіз аяқталды"
 
@@ -1161,7 +1170,7 @@ msgstr "Жіберу сәтсіз аяқталды"
 msgid "Failed to submit move"
 msgstr "Жүрісті тапсыру сәтсіз аяқталды"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Баннерді жаңарту сәтсіз аяқталды"
 
@@ -1258,7 +1267,7 @@ msgstr "Топ: {0}"
 msgid "Has unknown words"
 msgstr "Белгісіз сөздер бар"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Тарих"
 
@@ -1319,7 +1328,7 @@ msgstr "Жарамсыз жүріс"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Сіз іздеген бет <0/>жоқ немесе жойылған сияқты."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Элемент мәліметтері"
 
@@ -1372,11 +1381,11 @@ msgstr "Көбірек жүктеу"
 msgid "Loading content…"
 msgstr "Мазмұн жүктелуде…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Элемент жүктелуде"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Элемент мәліметтері жүктелуде"
 
@@ -1622,10 +1631,10 @@ msgstr "Көріністер жоқ"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "Иесі"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Ата-ана"
 
@@ -1824,7 +1833,7 @@ msgstr "Өңделуде…"
 msgid "Prompt saved"
 msgstr "Сұрау сақталды"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Қасиеттер"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "Дайын"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "Қайтарып алу"
 
@@ -2030,7 +2039,7 @@ msgstr "Сенбі"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "Ойынды бастау"
 msgid "Start the discussion by adding the first comment."
 msgstr "Бірінші пікір қосып талқылауды бастаңыз."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Қарауды тоқтату"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "Тақырып"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "Жіберу"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Пікірді жіберу"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Жауапты жіберу"
 
@@ -2308,7 +2317,7 @@ msgstr "Жексенбі"
 msgid "Switch to view 1-9"
 msgstr "1-9 көрінісіне ауысу"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "Күтпеген API қатесі"
 msgid "United States"
 msgstr "Америка Құрама Штаттары"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "Бейне көрушісі: {0}"
 msgid "View all notifications"
 msgstr "Барлық хабарландыруларды көру"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Элемент мәліметтерін көру және өңдеу"
 
@@ -2607,8 +2616,8 @@ msgstr "Тақтайшалар күтілуде"
 msgid "Waiting for your turn"
 msgstr "Кезегіңіз күтілуде"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Бақылау"
 
@@ -2662,7 +2671,7 @@ msgstr "Сіз жеңдіңіз!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Тіркелгіңіз {source} жерінен осында ауыстырылды. Сіз оны сол жерден жоймайынша, хабарлар мен хабарландырулар екі серверге де жетуі мүмкін, кейбір мазмұныңыз ескі серверден берілуін жалғастырады, ал жазылушылар сізді осында табу үшін бірнеше минут кетуі мүмкін."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Тіркемелеріңіз жоғалады."
 
@@ -2670,10 +2679,10 @@ msgstr "Тіркемелеріңіз жоғалады."
 msgid "Your move"
 msgstr "Сіздің жүрісіңіз"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Мәтініңіз бен тіркемелеріңіз жоғалады."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Мәтініңіз жоғалады."

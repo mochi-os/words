@@ -35,6 +35,11 @@ msgstr "[mhux issettjat]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# plejer} two {# plejers} few {# plejers} many {# plejer} other {# plejer}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# riżultat} few {# riżultati} many {# riżultati} other {# riżultati}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "Tip ta' kont"
 msgid "Active games"
 msgstr "Logħob attiv"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Attività"
 
@@ -306,7 +311,7 @@ msgstr "Kull ma huwa abbonat għal din il-feed se jieqaf jirċeviha. Wara tista'
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Żgur trid tħassar \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Żgur trid tħassar \"{title}\"? Din l-azzjoni ma tistax tiġi ndirizzata."
 
@@ -334,11 +339,11 @@ msgstr "Żgur trid tirriżenja? {opponentName} tirbaħ il-logħba."
 msgid "Ascending"
 msgstr "Axxendenti"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Ehmeż files tal-kummenti"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Ehmeż files tar-risposti"
 
@@ -372,16 +377,16 @@ msgstr "Lura"
 msgid "Back to home"
 msgstr "Lura għall-paġna ewlenija"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Banner imneħħi"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Banner aġġornat"
 
@@ -446,11 +451,11 @@ msgstr "Il-kamera mhix disponibbli"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "Ikkanċella"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Ikkanċella l-kumment"
 
@@ -458,7 +463,7 @@ msgstr "Ikkanċella l-kumment"
 msgid "Cancel exchange"
 msgstr "Ikkanċella l-iskambju"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Ikkanċella r-risposta"
 
@@ -490,7 +495,7 @@ msgstr "Inbidel"
 msgid "Changed {field}"
 msgstr "Inbidel {field}"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "Chat"
 
@@ -510,7 +515,7 @@ msgstr "Checklist"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Agħżel logħba mill-barra tal-ġenb jew ibda waħda ġdida."
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "Agħżel ittra"
 
@@ -523,7 +528,7 @@ msgstr "Agħżel lingwa"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Agħżel opponenti <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "Azzjonijiet tal-kumment"
 msgid "Comments"
 msgstr "Kummenti"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Kummenti ({0})"
 
@@ -785,7 +790,7 @@ msgstr "Ssortjar default"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Ħassar"
@@ -814,9 +819,9 @@ msgstr "Ħassar logħba"
 msgid "Delete game?"
 msgstr "Ħassar il-logħba?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Ħassar item"
 
@@ -877,11 +882,11 @@ msgstr "Iskopri mill-browser"
 msgid "Directory"
 msgstr "Direttorju"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Armi"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Tarmi l-abbozz?"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "Ma jaqbilx mal-mudell meħtieġ"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Lest"
@@ -993,7 +998,7 @@ msgstr "Ingliż (UK)"
 msgid "English (US)"
 msgstr "Ingliż (US)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Daħħal it-test tal-banner (markdown sapportit)..."
 
@@ -1005,17 +1010,17 @@ msgstr "Daħħal il-kodiċi mill-email tiegħek"
 msgid "Enter your authenticator code"
 msgstr "Daħħal il-kodiċi tal-awtentikatur tiegħek"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Żball"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "Skambja"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "Skambja ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "Ma rnexxiex jinkiseb it-token tar-RSS"
 msgid "Failed to load"
 msgstr "Ma rnexxiex jitgħabba"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Ma rnexxielux jitgħabba l-banner"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Ma rnexxiex titgħabba l-istorja"
 
@@ -1108,8 +1117,8 @@ msgstr "Ma rnexxiex titgħabba l-istorja"
 msgid "Failed to load image"
 msgstr "Ma rnexxielux jitgħabba l-istampa"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Ma rnexxiex jitgħabba l-oġġett"
 
@@ -1153,7 +1162,7 @@ msgstr "Ma rnexxiex jiġi ssejvjat"
 msgid "Failed to save prompt"
 msgstr "Ma rnexxiex jiġi ssejvjat il-prompt"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "Ma rnexxiex jintbagħat"
 
@@ -1161,7 +1170,7 @@ msgstr "Ma rnexxiex jintbagħat"
 msgid "Failed to submit move"
 msgstr "Ma rnexxiex tiġi sottomessa l-mossa"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Ma rnexxiex jiġi aġġornat il-banner"
 
@@ -1258,7 +1267,7 @@ msgstr "Grupp: {0}"
 msgid "Has unknown words"
 msgstr "Fih kliem mhux magħruf"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Storja"
 
@@ -1319,7 +1328,7 @@ msgstr "Mossa invalida"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Jidher li l-paġna li qed tfittex <0/>ma teżistix jew tneħħiet."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Dettalji tal-oġġett"
 
@@ -1372,11 +1381,11 @@ msgstr "Tella' aktar"
 msgid "Loading content…"
 msgstr "Qed jitgħabba l-kontenut…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Qed jitgħabba l-oġġett"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Qed jitgħabbew id-dettalji tal-oġġett"
 
@@ -1622,10 +1631,10 @@ msgstr "L-ebda views"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "Sid"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Ġenitur"
 
@@ -1824,7 +1833,7 @@ msgstr "Qed jiġi pproċessat…"
 msgid "Prompt saved"
 msgstr "Prompt issejvjat"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Proprjetajiet"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "Lest"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "Sejjaħ lura"
 
@@ -2030,7 +2039,7 @@ msgstr "Is-Sibt"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "Ibda l-logħba"
 msgid "Start the discussion by adding the first comment."
 msgstr "Ibda d-diskussjoni billi żżid l-ewwel kumment."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Ieqaf segwi"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "Suġġett"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "Issottometti"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Issottometti kumment"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Issottometti tweġiba"
 
@@ -2308,7 +2317,7 @@ msgstr "Il-Ħadd"
 msgid "Switch to view 1-9"
 msgstr "Aqleb għal vista 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "Żball API mhux mistenni"
 msgid "United States"
 msgstr "Stati Uniti"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "Viewer tal-vidjo: {0}"
 msgid "View all notifications"
 msgstr "Ara n-notifiki kollha"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Ara u editja d-dettalji tal-oġġett"
 
@@ -2607,8 +2616,8 @@ msgstr "Qed jistenna l-madum"
 msgid "Waiting for your turn"
 msgstr "Qed jistenna d-dawra tiegħek"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Segwi"
 
@@ -2662,7 +2671,7 @@ msgstr "Rebaħt!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Il-kont tiegħek ġie miċċaqqlaq hawn minn {source}. Sakemm tħassru hemm, il-messaġġi u n-notifiki jistgħu jaslu fuq iż-żewġ servers, xi kontenut tiegħek jibqa' jingħata mis-server il-qadim, u s-segwaċi jistgħu jieħdu ftit minuti biex isibuk hawn."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "L-annessi tiegħek se jintilfu."
 
@@ -2670,10 +2679,10 @@ msgstr "L-annessi tiegħek se jintilfu."
 msgid "Your move"
 msgstr "Il-mossa tiegħek"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "It-test u l-annessi tiegħek se jintilfu."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "It-test tiegħek se jintilef."

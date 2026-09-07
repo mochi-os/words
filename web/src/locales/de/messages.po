@@ -35,6 +35,11 @@ msgstr "[nicht gesetzt]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# Spieler} other {# Spieler}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# Ergebnis} other {# Ergebnisse}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "Kontotyp"
 msgid "Active games"
 msgstr "Aktive Spiele"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "Aktivität"
 
@@ -306,7 +311,7 @@ msgstr "Alles, was diesen Feed abonniert hat, empfängt ihn nicht mehr. Danach k
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Möchten Sie \"{0}\" wirklich löschen?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "Möchten Sie \"{title}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden."
 
@@ -334,11 +339,11 @@ msgstr "Möchten Sie wirklich aufgeben? {opponentName} gewinnt die Partie."
 msgid "Ascending"
 msgstr "Aufsteigend"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "Kommentardateien anhängen"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "Antwortdateien anhängen"
 
@@ -372,16 +377,16 @@ msgstr "Zurück"
 msgid "Back to home"
 msgstr "Zurück zur Startseite"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "Banner entfernt"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "Banner aktualisiert"
 
@@ -446,11 +451,11 @@ msgstr "Kamera nicht verfügbar"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "Kommentar abbrechen"
 
@@ -458,7 +463,7 @@ msgstr "Kommentar abbrechen"
 msgid "Cancel exchange"
 msgstr "Austausch abbrechen"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "Antwort abbrechen"
 
@@ -490,7 +495,7 @@ msgstr "Geändert"
 msgid "Changed {field}"
 msgstr "{field} geändert"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "Chat"
 
@@ -510,7 +515,7 @@ msgstr "Checkliste"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Wählen Sie ein Spiel aus der Seitenleiste aus oder starten Sie ein neues."
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "Buchstaben auswählen"
 
@@ -523,7 +528,7 @@ msgstr "Sprache auswählen"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "Gegner wählen <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "Kommentaraktionen"
 msgid "Comments"
 msgstr "Kommentare"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "Kommentare ({0})"
 
@@ -785,7 +790,7 @@ msgstr "Standardsortierung"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Löschen"
@@ -814,9 +819,9 @@ msgstr "Spiel löschen"
 msgid "Delete game?"
 msgstr "Spiel löschen?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "Eintrag löschen"
 
@@ -877,11 +882,11 @@ msgstr "Aus Webbrowser ermitteln"
 msgid "Directory"
 msgstr "Verzeichnis"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "Verwerfen"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "Entwurf verwerfen?"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "Entspricht nicht dem erforderlichen Muster"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Fertig"
@@ -993,7 +998,7 @@ msgstr "Englisch (UK)"
 msgid "English (US)"
 msgstr "Englisch (US)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "Banner-Text eingeben (Markdown unterstützt)..."
 
@@ -1005,17 +1010,17 @@ msgstr "Code aus deiner E-Mail eingeben"
 msgid "Enter your authenticator code"
 msgstr "Code Ihrer Authenticator-App eingeben"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "Fehler"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "Tauschen"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "Tauschen ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "RSS-Token konnte nicht abgerufen werden"
 msgid "Failed to load"
 msgstr "Laden fehlgeschlagen"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "Banner konnte nicht geladen werden"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "Verlauf konnte nicht geladen werden"
 
@@ -1108,8 +1117,8 @@ msgstr "Verlauf konnte nicht geladen werden"
 msgid "Failed to load image"
 msgstr "Bild konnte nicht geladen werden"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "Element konnte nicht geladen werden"
 
@@ -1153,7 +1162,7 @@ msgstr "Speichern fehlgeschlagen"
 msgid "Failed to save prompt"
 msgstr "Prompt konnte nicht gespeichert werden"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "Senden fehlgeschlagen"
 
@@ -1161,7 +1170,7 @@ msgstr "Senden fehlgeschlagen"
 msgid "Failed to submit move"
 msgstr "Zug konnte nicht eingereicht werden"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "Banner konnte nicht aktualisiert werden"
 
@@ -1258,7 +1267,7 @@ msgstr "Gruppe: {0}"
 msgid "Has unknown words"
 msgstr "Enthält unbekannte Wörter"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "Verlauf"
 
@@ -1319,7 +1328,7 @@ msgstr "Ungültiger Zug"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Die gesuchte Seite <0/>existiert nicht oder wurde entfernt."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "Elementdetails"
 
@@ -1372,11 +1381,11 @@ msgstr "Mehr laden"
 msgid "Loading content…"
 msgstr "Inhalt wird geladen…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "Element wird geladen"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "Elementdetails werden geladen"
 
@@ -1622,10 +1631,10 @@ msgstr "Keine Ansichten"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "Eigentümer"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "Übergeordnet"
 
@@ -1824,7 +1833,7 @@ msgstr "Wird verarbeitet…"
 msgid "Prompt saved"
 msgstr "Prompt gespeichert"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "Eigenschaften"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "Bereit"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "Zurückrufen"
 
@@ -2030,7 +2039,7 @@ msgstr "Samstag"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "Spiel starten"
 msgid "Start the discussion by adding the first comment."
 msgstr "Beginnen Sie die Diskussion mit dem ersten Kommentar."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "Nicht mehr beobachten"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "Betreff"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "Absenden"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "Kommentar absenden"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "Antwort absenden"
 
@@ -2308,7 +2317,7 @@ msgstr "Sonntag"
 msgid "Switch to view 1-9"
 msgstr "Zu Ansicht 1-9 wechseln"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "Unerwarteter API-Fehler"
 msgid "United States"
 msgstr "Vereinigte Staaten"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "Videobetrachter: {0}"
 msgid "View all notifications"
 msgstr "Alle Benachrichtigungen anzeigen"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "Artikeldetails anzeigen und bearbeiten"
 
@@ -2607,8 +2616,8 @@ msgstr "Warten auf Steine"
 msgid "Waiting for your turn"
 msgstr "Warten auf deinen Zug"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "Beobachten"
 
@@ -2662,7 +2671,7 @@ msgstr "Sie gewinnen!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ihr Konto wurde von {source} hierher verschoben. Bis Sie es dort löschen, können Nachrichten und Benachrichtigungen beide Server erreichen, ein Teil Ihrer Inhalte wird weiterhin vom alten Server bereitgestellt, und Follower benötigen möglicherweise ein paar Minuten, um Sie hier zu finden."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "Deine Anhänge gehen verloren."
 
@@ -2670,10 +2679,10 @@ msgstr "Deine Anhänge gehen verloren."
 msgid "Your move"
 msgstr "Ihr Zug"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "Dein Text und deine Anhänge gehen verloren."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "Dein Text geht verloren."

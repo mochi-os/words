@@ -35,6 +35,11 @@ msgstr "[सेट नहीं]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# खिलाड़ी} other {# खिलाड़ी}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# परिणाम} other {# परिणाम}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "अकाउंट प्रकार"
 msgid "Active games"
 msgstr "सक्रिय गेम्स"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "गतिविधि"
 
@@ -306,7 +311,7 @@ msgstr "इस फ़ीड की सदस्यता लेने वाल�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "क्या आप \"{0}\" को हटाना चाहते हैं?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "क्या आप \"{title}\" को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।"
 
@@ -334,11 +339,11 @@ msgstr "क्या आप वाकई हार मानना चाहत�
 msgid "Ascending"
 msgstr "आरोही"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "टिप्पणी फ़ाइलें अटैच करें"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "उत्तर फ़ाइलें अटैच करें"
 
@@ -372,16 +377,16 @@ msgstr "वापस"
 msgid "Back to home"
 msgstr "होम पर वापस जाएँ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "बैनर"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "बैनर हटाया गया"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "बैनर अपडेट किया गया"
 
@@ -446,11 +451,11 @@ msgstr "कैमरा उपलब्ध नहीं"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "टिप्पणी रद्द करें"
 
@@ -458,7 +463,7 @@ msgstr "टिप्पणी रद्द करें"
 msgid "Cancel exchange"
 msgstr "एक्सचेंज रद्द करें"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "उत्तर रद्द करें"
 
@@ -490,7 +495,7 @@ msgstr "बदला गया"
 msgid "Changed {field}"
 msgstr "{field} बदला गया"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "चैट"
 
@@ -510,7 +515,7 @@ msgstr "चेकलिस्ट"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "साइडबार से एक गेम चुनें या नया शुरू करें।"
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "एक अक्षर चुनें"
 
@@ -523,7 +528,7 @@ msgstr "भाषा चुनें"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "विरोधी चुनें <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "टिप्पणी क्रियाएँ"
 msgid "Comments"
 msgstr "टिप्पणियाँ"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "टिप्पणियाँ ({0})"
 
@@ -785,7 +790,7 @@ msgstr "डिफ़ॉल्ट सॉर्ट"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "हटाएँ"
@@ -814,9 +819,9 @@ msgstr "गेम हटाएँ"
 msgid "Delete game?"
 msgstr "गेम हटाएँ?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "आइटम हटाएँ"
 
@@ -877,11 +882,11 @@ msgstr "वेब ब्राउज़र से पता लगाएँ"
 msgid "Directory"
 msgstr "निर्देशिका"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "त्यागें"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "ड्राफ्ट त्यागें?"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "आवश्यक पैटर्न से मेल नहीं खाता"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "पूर्ण"
@@ -993,7 +998,7 @@ msgstr "अंग्रेज़ी (UK)"
 msgid "English (US)"
 msgstr "अंग्रेज़ी (US)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "बैनर टेक्स्ट दर्ज करें (मार्कडाउन समर्थित)..."
 
@@ -1005,17 +1010,17 @@ msgstr "अपने ईमेल से कोड दर्ज करें"
 msgid "Enter your authenticator code"
 msgstr "अपना प्रमाणक कोड दर्ज करें"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "त्रुटि"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "बदलें"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "बदलें ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "RSS टोकन प्राप्त करने में विफ�
 msgid "Failed to load"
 msgstr "लोड करने में विफल"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "बैनर लोड नहीं हो सका"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "इतिहास लोड करने में विफल"
 
@@ -1108,8 +1117,8 @@ msgstr "इतिहास लोड करने में विफल"
 msgid "Failed to load image"
 msgstr "छवि लोड नहीं हो सकी"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "आइटम लोड करने में विफल"
 
@@ -1153,7 +1162,7 @@ msgstr "सहेजने में विफल"
 msgid "Failed to save prompt"
 msgstr "प्रॉम्प्ट सहेजने में विफल"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "भेजने में विफल"
 
@@ -1161,7 +1170,7 @@ msgstr "भेजने में विफल"
 msgid "Failed to submit move"
 msgstr "चाल जमा करने में विफल"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "बैनर अपडेट करने में विफल"
 
@@ -1258,7 +1267,7 @@ msgstr "समूह: {0}"
 msgid "Has unknown words"
 msgstr "अज्ञात शब्द हैं"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "इतिहास"
 
@@ -1319,7 +1328,7 @@ msgstr "अमान्य चाल"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ऐसा लगता है कि आप जिस पृष्ठ को खोज रहे हैं <0/>वह मौजूद नहीं है या हटा दिया गया है।"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "आइटम विवरण"
 
@@ -1372,11 +1381,11 @@ msgstr "और लोड करें"
 msgid "Loading content…"
 msgstr "सामग्री लोड हो रही है…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "आइटम लोड हो रहा है"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "आइटम विवरण लोड हो रहे हैं"
 
@@ -1622,10 +1631,10 @@ msgstr "कोई व्यू नहीं"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "स्वामी"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "पैरेंट"
 
@@ -1824,7 +1833,7 @@ msgstr "प्रोसेस हो रहा है…"
 msgid "Prompt saved"
 msgstr "प्रॉम्प्ट सहेजा गया"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "गुण"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "तैयार"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "रिकॉल"
 
@@ -2030,7 +2039,7 @@ msgstr "शनिवार"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "गेम शुरू करें"
 msgid "Start the discussion by adding the first comment."
 msgstr "पहला कमेंट जोड़कर चर्चा शुरू करें।"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "देखना बंद करें"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "विषय"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "सबमिट करें"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "कमेंट सबमिट करें"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "जवाब सबमिट करें"
 
@@ -2308,7 +2317,7 @@ msgstr "रविवार"
 msgid "Switch to view 1-9"
 msgstr "व्यू 1-9 पर स्विच करें"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "अप्रत्याशित API त्रुटि"
 msgid "United States"
 msgstr "संयुक्त राज्य अमेरिका"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "वीडियो व्यूअर: {0}"
 msgid "View all notifications"
 msgstr "सभी नोटिफ़िकेशन देखें"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "आइटम विवरण देखें और एडिट करें"
 
@@ -2607,8 +2616,8 @@ msgstr "टाइलों की प्रतीक्षा"
 msgid "Waiting for your turn"
 msgstr "आपकी बारी की प्रतीक्षा"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "देखें"
 
@@ -2662,7 +2671,7 @@ msgstr "आप जीत गए!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "आपका खाता {source} से यहाँ स्थानांतरित किया गया। जब तक आप वहाँ इसे हटा नहीं देते, संदेश और सूचनाएं दोनों सर्वर तक पहुँच सकती हैं, आपकी कुछ सामग्री पुराने सर्वर से परोसी जाती रहेगी, और फ़ॉलोअर्स को आपको यहाँ ढूंढने में कुछ मिनट लग सकते हैं।"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "आपके अनुलग्नक खो जाएँगे।"
 
@@ -2670,10 +2679,10 @@ msgstr "आपके अनुलग्नक खो जाएँगे।"
 msgid "Your move"
 msgstr "आपकी चाल"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "आपका पाठ और अनुलग्नक खो जाएँगे।"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "आपका टेक्स्ट खो जाएगा।"

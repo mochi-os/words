@@ -35,6 +35,11 @@ msgstr "[לא מוגדר]"
 msgid "{0, plural, one {# player} other {# players}}"
 msgstr "{0, plural, one {# שחקן} two {# שחקנים} many {# שחקנים} other {# שחקנים}}"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {תוצאה אחת} two {# תוצאות} many {# תוצאות} other {# תוצאות}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -177,7 +182,7 @@ msgstr "סוג חשבון"
 msgid "Active games"
 msgstr "משחקים פעילים"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "פעילות"
 
@@ -306,7 +311,7 @@ msgstr "כל מה שרשום להזנה הזו יפסיק לקבל אותה. א�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "האם אתה בטוח שברצונך למחוק את \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "האם אתה בטוח שברצונך למחוק את \"{title}\"? לא ניתן לבטל פעולה זו."
 
@@ -334,11 +339,11 @@ msgstr "האם אתה בטוח שברצונך לפרוש? {opponentName} ינצ�
 msgid "Ascending"
 msgstr "סדר עולה"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "צרף קובצי תגובה"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "צרף קובצי תשובה"
 
@@ -372,16 +377,16 @@ msgstr "חזור"
 msgid "Back to home"
 msgstr "חזרה לבית"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "באנר"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "הבאנר הוסר"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "הבאנר עודכן"
 
@@ -446,11 +451,11 @@ msgstr "המצלמה אינה זמינה"
 #: src/features/words/components/move-composer.tsx:157
 #: src/features/words/components/new-game.tsx:143
 #: src/features/words/index.tsx:890
-#: src/features/words/index.tsx:1009
+#: src/features/words/index.tsx:1008
 msgid "Cancel"
 msgstr "ביטול"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "בטל תגובה"
 
@@ -458,7 +463,7 @@ msgstr "בטל תגובה"
 msgid "Cancel exchange"
 msgstr "בטל החלפה"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "בטל תשובה"
 
@@ -490,7 +495,7 @@ msgstr "שונה"
 msgid "Changed {field}"
 msgstr "{field} שונה"
 
-#: src/features/words/index.tsx:930
+#: src/features/words/index.tsx:929
 msgid "Chat"
 msgstr "צ'אט"
 
@@ -510,7 +515,7 @@ msgstr "רשימת משימות"
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "בחר משחק מהסרגל הצדדי או התחל אחד חדש."
 
-#: src/features/words/index.tsx:993
+#: src/features/words/index.tsx:992
 msgid "Choose a letter"
 msgstr "בחר אות"
 
@@ -523,7 +528,7 @@ msgstr "בחר שפה"
 msgid "Choose opponents <0>(1-3)</0>"
 msgstr "בחר יריבים <0>(1-3)</0>"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -617,8 +622,8 @@ msgstr "פעולות תגובה"
 msgid "Comments"
 msgstr "תגובות"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "תגובות ({0})"
 
@@ -785,7 +790,7 @@ msgstr "מיון ברירת מחדל"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "מחק"
@@ -814,9 +819,9 @@ msgstr "מחק משחק"
 msgid "Delete game?"
 msgstr "למחוק את המשחק?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "מחק פריט"
 
@@ -877,11 +882,11 @@ msgstr "זיהוי מהדפדפן"
 msgid "Directory"
 msgstr "מדריך"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "מחיקה"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "למחוק את הטיוטה?"
 
@@ -904,7 +909,7 @@ msgid "Does not match the required pattern"
 msgstr "לא תואם לתבנית הנדרשת"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "בוצע"
@@ -993,7 +998,7 @@ msgstr "אנגלית (בריטניה)"
 msgid "English (US)"
 msgstr "אנגלית (ארה\"ב)"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "הזן טקסט באנר (יש תמיכה ב-markdown)..."
 
@@ -1005,17 +1010,17 @@ msgstr "הזן את הקוד מהאימייל שלך"
 msgid "Enter your authenticator code"
 msgstr "הזן את הקוד מאפליקציית האימות"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "שגיאה"
 
 #: src/features/words/components/move-composer.tsx:173
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange"
 msgstr "החלף"
 
 #. placeholder {0}: exchangeSelected.size
-#: src/features/words/index.tsx:896
+#: src/features/words/index.tsx:895
 msgid "Exchange ({0})"
 msgstr "החלף ({0})"
 
@@ -1100,7 +1105,11 @@ msgstr "קבלת טוקן RSS נכשלה"
 msgid "Failed to load"
 msgstr "הטעינה נכשלה"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "טעינת הבאנר נכשלה"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "טעינת ההיסטוריה נכשלה"
 
@@ -1108,8 +1117,8 @@ msgstr "טעינת ההיסטוריה נכשלה"
 msgid "Failed to load image"
 msgstr "טעינת התמונה נכשלה"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "טעינת הפריט נכשלה"
 
@@ -1153,7 +1162,7 @@ msgstr "השמירה נכשלה"
 msgid "Failed to save prompt"
 msgstr "שמירת ה-prompt נכשלה"
 
-#: src/features/words/index.tsx:947
+#: src/features/words/index.tsx:946
 msgid "Failed to send"
 msgstr "השליחה נכשלה"
 
@@ -1161,7 +1170,7 @@ msgstr "השליחה נכשלה"
 msgid "Failed to submit move"
 msgstr "הגשת המהלך נכשלה"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "עדכון הבאנר נכשל"
 
@@ -1258,7 +1267,7 @@ msgstr "קבוצה: {0}"
 msgid "Has unknown words"
 msgstr "מכיל מילים לא מוכרות"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "היסטוריה"
 
@@ -1319,7 +1328,7 @@ msgstr "מהלך לא תקין"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "נראה שהדף שאתה מחפש <0/>אינו קיים או שהוסר."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "פרטי פריט"
 
@@ -1372,11 +1381,11 @@ msgstr "טען עוד"
 msgid "Loading content…"
 msgstr "טוען תוכן…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "טוען פריט"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "טוען פרטי פריט"
 
@@ -1622,10 +1631,10 @@ msgstr "אין תצוגות"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1738,8 +1747,8 @@ msgid "Owner"
 msgstr "בעלים"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "אב"
 
@@ -1824,7 +1833,7 @@ msgstr "מעבד…"
 msgid "Prompt saved"
 msgstr "הפרומפט נשמר"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "מאפיינים"
 
@@ -1849,7 +1858,7 @@ msgid "Ready"
 msgstr "מוכן"
 
 #: src/features/words/components/move-composer.tsx:183
-#: src/features/words/index.tsx:902
+#: src/features/words/index.tsx:901
 msgid "Recall"
 msgstr "החזר"
 
@@ -2030,7 +2039,7 @@ msgstr "שבת"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2272,8 +2281,8 @@ msgstr "התחל משחק"
 msgid "Start the discussion by adding the first comment."
 msgstr "התחל את הדיון על ידי הוספת התגובה הראשונה."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "הפסק לעקוב"
 
@@ -2282,15 +2291,15 @@ msgid "Subject"
 msgstr "נושא"
 
 #: src/features/words/components/move-composer.tsx:200
-#: src/features/words/index.tsx:914
+#: src/features/words/index.tsx:913
 msgid "Submit"
 msgstr "שלח"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "שלח תגובה"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "שלח תשובה"
 
@@ -2308,7 +2317,7 @@ msgstr "יום ראשון"
 msgid "Switch to view 1-9"
 msgstr "עבור לתצוגה 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2500,7 +2509,7 @@ msgstr "שגיאת API בלתי צפויה"
 msgid "United States"
 msgstr "ארצות הברית"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2587,7 +2596,7 @@ msgstr "מציג וידאו: {0}"
 msgid "View all notifications"
 msgstr "הצג את כל ההתראות"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "הצג וערוך פרטי פריט"
 
@@ -2607,8 +2616,8 @@ msgstr "ממתין לאריחים"
 msgid "Waiting for your turn"
 msgstr "ממתין לתורך"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "עקוב"
 
@@ -2662,7 +2671,7 @@ msgstr "ניצחת!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו שם, הודעות והתראות עשויות להגיע לשני השרתים, חלק מהתוכן שלך ממשיך להיות מוגש מהשרת הישן, ועוקבים עשויים לקחת מספר דקות למצוא אותך כאן."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "הקבצים המצורפים שלך יאבדו."
 
@@ -2670,10 +2679,10 @@ msgstr "הקבצים המצורפים שלך יאבדו."
 msgid "Your move"
 msgstr "התור שלך"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "הטקסט והקבצים המצורפים שלך יאבדו."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "הטקסט שלכם יאבד."
