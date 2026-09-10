@@ -2,14 +2,13 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useLingui } from '@lingui/react/macro'
 import {
   useGameWebsocket as useSharedGameWebsocket,
   type UseGameWebsocketResult,
 } from '@mochi/web'
-import { gameKeys } from '@/hooks/useGames'
 import type { Game } from '@/api/games'
+import { gameKeys } from '@/hooks/useGames'
 
 export const useGameWebsocket = (
   gameId?: string,

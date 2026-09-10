@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { plural } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
 import type { Game } from '@/api/games'
@@ -24,11 +23,17 @@ interface WordsHeaderModel {
   tilesLeft: number
 }
 
-function getPlayerIdentity(game: Game, playerNumber: number): string | undefined {
+function getPlayerIdentity(
+  game: Game,
+  playerNumber: number
+): string | undefined {
   return game[`player${playerNumber}` as keyof Game] as string | undefined
 }
 
-function getPlayerNameRaw(game: Game, playerNumber: number): string | undefined {
+function getPlayerNameRaw(
+  game: Game,
+  playerNumber: number
+): string | undefined {
   return game[`player${playerNumber}_name` as keyof Game] as string | undefined
 }
 
@@ -56,7 +61,10 @@ function isCurrentUserWinner(game: Game, myIdentity?: string | null): boolean {
   return game.winner === getPlayerIdentity(game, game.my_player_number)
 }
 
-function isCurrentUserResigner(game: Game, myIdentity?: string | null): boolean {
+function isCurrentUserResigner(
+  game: Game,
+  myIdentity?: string | null
+): boolean {
   if (!game.writer) {
     return false
   }
@@ -72,7 +80,11 @@ function getResignerPlayerNumber(game: Game): number | null {
   if (!game.writer) {
     return null
   }
-  for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
+  for (
+    let playerNumber = 1;
+    playerNumber <= game.player_count;
+    playerNumber += 1
+  ) {
     if (getPlayerIdentity(game, playerNumber) === game.writer) {
       return playerNumber
     }
@@ -85,7 +97,11 @@ function getWinnerPlayerNumber(game: Game): number | null {
     return null
   }
 
-  for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
+  for (
+    let playerNumber = 1;
+    playerNumber <= game.player_count;
+    playerNumber += 1
+  ) {
     if (getPlayerIdentity(game, playerNumber) === game.winner) {
       return playerNumber
     }
@@ -106,7 +122,11 @@ export function useWordsHeaderModel(
 
   const getOppositionNames = (): string[] => {
     const names: string[] = []
-    for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
+    for (
+      let playerNumber = 1;
+      playerNumber <= game.player_count;
+      playerNumber += 1
+    ) {
       if (isCurrentUserPlayer(game, playerNumber, myIdentity)) {
         continue
       }
@@ -157,7 +177,11 @@ export function useWordsHeaderModel(
   }
 
   const players: WordsHeaderPlayer[] = []
-  for (let playerNumber = 1; playerNumber <= game.player_count; playerNumber += 1) {
+  for (
+    let playerNumber = 1;
+    playerNumber <= game.player_count;
+    playerNumber += 1
+  ) {
     const score = game[`player${playerNumber}_score` as keyof Game] as number
     const isMe = isCurrentUserPlayer(game, playerNumber, myIdentity)
 
@@ -165,7 +189,8 @@ export function useWordsHeaderModel(
       playerNumber,
       label: isMe ? t`You` : getPlayerName(playerNumber),
       score,
-      isCurrentTurn: game.status === 'active' && game.current_turn === playerNumber,
+      isCurrentTurn:
+        game.status === 'active' && game.current_turn === playerNumber,
       isMe,
     })
   }

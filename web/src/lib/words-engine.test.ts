@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { describe, it, expect } from 'vitest'
 import {
   BOARD_SIZE,
@@ -25,7 +24,12 @@ function makeEmptyBoard(): string[][] {
   return emptyBoard()
 }
 
-function placeOnBoard(board: string[][], row: number, col: number, letter: string): string[][] {
+function placeOnBoard(
+  board: string[][],
+  row: number,
+  col: number,
+  letter: string
+): string[][] {
   const b = board.map((r) => [...r])
   b[row][col] = letter
   return b
@@ -60,7 +64,9 @@ describe('parseBoard', () => {
   it('returns empty board when a row is the wrong width', () => {
     // A ragged row leaves board[row][col] undefined, which the board reads as
     // occupied and getDisplayLetter throws on.
-    const rows = Array.from({ length: BOARD_SIZE }, () => '.'.repeat(BOARD_SIZE))
+    const rows = Array.from({ length: BOARD_SIZE }, () =>
+      '.'.repeat(BOARD_SIZE)
+    )
     rows[7] = '.'.repeat(BOARD_SIZE - 1)
     const board = parseBoard(rows.join('/'))
     expect(board.length).toBe(BOARD_SIZE)
@@ -69,9 +75,13 @@ describe('parseBoard', () => {
   })
 
   it('returns empty board when a row is too wide', () => {
-    const rows = Array.from({ length: BOARD_SIZE }, () => '.'.repeat(BOARD_SIZE))
+    const rows = Array.from({ length: BOARD_SIZE }, () =>
+      '.'.repeat(BOARD_SIZE)
+    )
     rows[0] = '.'.repeat(BOARD_SIZE + 1)
-    expect(parseBoard(rows.join('/')).every((row) => row.length === BOARD_SIZE)).toBe(true)
+    expect(
+      parseBoard(rows.join('/')).every((row) => row.length === BOARD_SIZE)
+    ).toBe(true)
   })
 })
 
@@ -158,17 +168,23 @@ describe('getPremium', () => {
 
 describe('validateAndScoreMove — validation', () => {
   it('throws on empty placements', () => {
-    expect(() => validateAndScoreMove(makeEmptyBoard(), [])).toThrow(new MoveError('no_tiles'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), [])).toThrow(
+      new MoveError('no_tiles')
+    )
   })
 
   it('throws on out of bounds placement', () => {
     const p: Placement[] = [{ row: -1, col: 7, letter: 'A', rackTile: 'A' }]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('out_of_bounds'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(
+      new MoveError('out_of_bounds')
+    )
   })
 
   it('throws on out of bounds (too large)', () => {
     const p: Placement[] = [{ row: 7, col: 15, letter: 'A', rackTile: 'A' }]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('out_of_bounds'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(
+      new MoveError('out_of_bounds')
+    )
   })
 
   it('throws on occupied square', () => {
@@ -177,7 +193,9 @@ describe('validateAndScoreMove — validation', () => {
       { row: 7, col: 7, letter: 'B', rackTile: 'B' },
       { row: 7, col: 8, letter: 'A', rackTile: 'A' },
     ]
-    expect(() => validateAndScoreMove(board, p)).toThrow(new MoveError('square_occupied'))
+    expect(() => validateAndScoreMove(board, p)).toThrow(
+      new MoveError('square_occupied')
+    )
   })
 
   it('throws when tiles not in single row/column', () => {
@@ -185,7 +203,9 @@ describe('validateAndScoreMove — validation', () => {
       { row: 7, col: 7, letter: 'A', rackTile: 'A' },
       { row: 8, col: 8, letter: 'B', rackTile: 'B' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('not_in_line'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(
+      new MoveError('not_in_line')
+    )
   })
 
   it('rejects two placements on the same square', () => {
@@ -196,7 +216,9 @@ describe('validateAndScoreMove — validation', () => {
       { row: centre, col: centre, letter: 'A', rackTile: 'A' },
       { row: centre, col: centre, letter: 'B', rackTile: 'B' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('square_occupied'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(
+      new MoveError('square_occupied')
+    )
   })
 
   it('requires the first move to cover the centre derived from BOARD_SIZE', () => {
@@ -205,7 +227,9 @@ describe('validateAndScoreMove — validation', () => {
       { row: 0, col: 0, letter: 'A', rackTile: 'A' },
       { row: 0, col: 1, letter: 'B', rackTile: 'B' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), off)).toThrow(new MoveError('first_move_centre'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), off)).toThrow(
+      new MoveError('first_move_centre')
+    )
     const on: Placement[] = [
       { row: centre, col: centre, letter: 'A', rackTile: 'A' },
       { row: centre, col: centre + 1, letter: 'B', rackTile: 'B' },
@@ -219,7 +243,9 @@ describe('validateAndScoreMove — validation', () => {
       { row: 7, col: 7, letter: 'B', rackTile: 'B' },
       { row: 7, col: 9, letter: 'C', rackTile: 'C' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('not_contiguous'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(
+      new MoveError('not_contiguous')
+    )
   })
 
   it('first move must cover center (7,7)', () => {
@@ -227,12 +253,16 @@ describe('validateAndScoreMove — validation', () => {
       { row: 0, col: 0, letter: 'A', rackTile: 'A' },
       { row: 0, col: 1, letter: 'B', rackTile: 'B' },
     ]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('first_move_centre'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(
+      new MoveError('first_move_centre')
+    )
   })
 
   it('first move must place at least 2 tiles', () => {
     const p: Placement[] = [{ row: 7, col: 7, letter: 'A', rackTile: 'A' }]
-    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(new MoveError('first_move_two_tiles'))
+    expect(() => validateAndScoreMove(makeEmptyBoard(), p)).toThrow(
+      new MoveError('first_move_two_tiles')
+    )
   })
 
   it('subsequent move must connect to existing tiles', () => {
@@ -242,7 +272,9 @@ describe('validateAndScoreMove — validation', () => {
       { row: 0, col: 0, letter: 'C', rackTile: 'C' },
       { row: 0, col: 1, letter: 'D', rackTile: 'D' },
     ]
-    expect(() => validateAndScoreMove(board, p)).toThrow(new MoveError('not_connected'))
+    expect(() => validateAndScoreMove(board, p)).toThrow(
+      new MoveError('not_connected')
+    )
   })
 })
 
@@ -353,7 +385,7 @@ describe('validateAndScoreMove — scoring', () => {
     board[4][8] = 'D'
     board[4][9] = 'E'
     const placements: Placement[] = [
-      { row: 4, col: 4, letter: 'F', rackTile: 'F' },  // DW
+      { row: 4, col: 4, letter: 'F', rackTile: 'F' }, // DW
       { row: 4, col: 10, letter: 'G', rackTile: 'G' }, // DW
     ]
     const result = validateAndScoreMove(board, placements)

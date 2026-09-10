@@ -2,15 +2,14 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useState } from 'react'
-import { cn } from '@mochi/web'
-import { useLingui } from '@lingui/react/macro'
 import { plural } from '@lingui/core/macro'
+import { useLingui } from '@lingui/react/macro'
+import { cn } from '@mochi/web'
 import { getLetterValue } from '@/lib/words-engine'
 
 interface TileRackProps {
-  tiles: string[]  // array of tile characters (uppercase letters or '_' for blank)
+  tiles: string[] // array of tile characters (uppercase letters or '_' for blank)
   selectedIndex: number | null
   onSelectTile: (index: number) => void
   disabled?: boolean
@@ -44,7 +43,7 @@ export function TileRack({
 
   return (
     <div
-      className="flex items-center justify-center gap-1.5 py-2"
+      className='flex items-center justify-center gap-1.5 py-2'
       onDragOver={(e) => {
         if (!canDrop) return
         e.preventDefault()
@@ -77,7 +76,7 @@ export function TileRack({
         return (
           <div
             key={i}
-            role="button"
+            role='button'
             aria-label={
               !hasTile
                 ? t`Empty tile slot`
@@ -114,15 +113,26 @@ export function TileRack({
             }}
             className={cn(
               'relative flex h-10 w-10 items-center justify-center rounded border-2 text-base font-bold transition-all select-none',
-              hasTile && 'bg-amber-100 dark:bg-amber-900/60 border-amber-300 dark:border-amber-700',
-              !hasTile && 'bg-transparent border-dashed border-gray-300 dark:border-gray-700',
-              isSelected && !exchangeMode && 'ring-2 ring-primary border-primary scale-110',
-              isExchangeSelected && 'ring-2 ring-red-500 border-red-500 opacity-60',
-              hasTile && !disabled && !exchangeMode && 'cursor-grab hover:scale-105',
-              hasTile && !disabled && exchangeMode && 'cursor-pointer hover:scale-105',
-              disabled && 'opacity-50 cursor-default',
+              hasTile &&
+                'border-amber-300 bg-amber-100 dark:border-amber-700 dark:bg-amber-900/60',
+              !hasTile &&
+                'border-dashed border-gray-300 bg-transparent dark:border-gray-700',
+              isSelected &&
+                !exchangeMode &&
+                'ring-primary border-primary scale-110 ring-2',
+              isExchangeSelected &&
+                'border-red-500 opacity-60 ring-2 ring-red-500',
+              hasTile &&
+                !disabled &&
+                !exchangeMode &&
+                'cursor-grab hover:scale-105',
+              hasTile &&
+                !disabled &&
+                exchangeMode &&
+                'cursor-pointer hover:scale-105',
+              disabled && 'cursor-default opacity-50',
               isSlotDragging && 'opacity-40',
-              isDropSlot && 'ring-2 ring-primary ring-inset',
+              isDropSlot && 'ring-primary ring-2 ring-inset'
             )}
             onClick={() => {
               if (!hasTile || disabled) return
@@ -133,7 +143,11 @@ export function TileRack({
               }
             }}
             onKeyDown={(e) => {
-              if ((e.key === 'Enter' || e.key === ' ') && hasTile && !disabled) {
+              if (
+                (e.key === 'Enter' || e.key === ' ') &&
+                hasTile &&
+                !disabled
+              ) {
                 e.preventDefault()
                 if (exchangeMode && onToggleExchange) {
                   onToggleExchange(i)
@@ -147,12 +161,14 @@ export function TileRack({
               <>
                 <span>{displayLetter}</span>
                 {value > 0 && (
-                  <span className="absolute right-0 bottom-0 origin-bottom-right scale-50 text-base font-medium text-gray-600 dark:text-gray-400 leading-none">
+                  <span className='absolute right-0 bottom-0 origin-bottom-right scale-50 text-base leading-none font-medium text-gray-600 dark:text-gray-400'>
                     {value}
                   </span>
                 )}
                 {tile === '_' && (
-                  <span className="text-gray-400 dark:text-gray-500 text-xs">?</span>
+                  <span className='text-xs text-gray-400 dark:text-gray-500'>
+                    ?
+                  </span>
                 )}
               </>
             )}

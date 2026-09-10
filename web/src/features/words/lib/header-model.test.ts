@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { describe, it, expect, vi } from 'vitest'
 import type { Game } from '@/api/games'
 
@@ -15,7 +14,9 @@ function render(descriptor: unknown): string {
     message: string
     values?: Record<string, unknown>
   }
-  return message.replace(/\{(\w+)\}/g, (_whole, key: string) => String(values?.[key] ?? ''))
+  return message.replace(/\{(\w+)\}/g, (_whole, key: string) =>
+    String(values?.[key] ?? '')
+  )
 }
 
 vi.mock('@lingui/react', () => ({
@@ -100,7 +101,9 @@ describe('resigned status', () => {
   })
 
   it('uses the seat number when the resigner has no name', () => {
-    expect(useStatus(game({ player3_name: undefined }), 'id1')).toBe('Player 3 resigned')
+    expect(useStatus(game({ player3_name: undefined }), 'id1')).toBe(
+      'Player 3 resigned'
+    )
   })
 
   it('still reads correctly with two seats', () => {
@@ -112,8 +115,12 @@ describe('resigned status', () => {
 
 describe('other statuses', () => {
   it('is unaffected on an active game', () => {
-    expect(useStatus(game({ status: 'active', current_turn: 2 }), 'id1')).toBe("Bob's move")
-    expect(useStatus(game({ status: 'active', current_turn: 1 }), 'id1')).toBe('Your move')
+    expect(useStatus(game({ status: 'active', current_turn: 2 }), 'id1')).toBe(
+      "Bob's move"
+    )
+    expect(useStatus(game({ status: 'active', current_turn: 1 }), 'id1')).toBe(
+      'Your move'
+    )
   })
 
   it('is unaffected on a finished game', () => {

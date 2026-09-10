@@ -2,15 +2,17 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-import {
-  Badge,
-  Button,
-  cn,
-} from '@mochi/web'
-import { Trans, useLingui } from '@lingui/react/macro'
-import { AlertTriangle, ArrowLeftRight, CheckCircle2, Loader2, Send, XCircle } from 'lucide-react'
 import { useMemo } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
+import { Badge, Button, cn } from '@mochi/web'
+import {
+  AlertTriangle,
+  ArrowLeftRight,
+  CheckCircle2,
+  Loader2,
+  Send,
+  XCircle,
+} from 'lucide-react'
 import {
   getMoveStatusLabel,
   type DraftWordValidationState,
@@ -83,20 +85,25 @@ export function MoveComposer({
   const isChecking = draftStatus === 'checking'
 
   return (
-    <div className="space-y-2 p-3">
+    <div className='space-y-2 p-3'>
       {/* Status badge + score inline */}
-      <div className="flex items-center gap-2 min-w-0">
+      <div className='flex min-w-0 items-center gap-2'>
         <Badge
           variant={getStatusBadgeVariant(draftStatus)}
-          className={cn('shrink-0 gap-1 text-xs', getStatusBadgeClass(draftStatus))}
+          className={cn(
+            'shrink-0 gap-1 text-xs',
+            getStatusBadgeClass(draftStatus)
+          )}
         >
-          {isChecking && <Loader2 className="size-3 animate-spin" aria-hidden />}
+          {isChecking && (
+            <Loader2 className='size-3 animate-spin' aria-hidden />
+          )}
           {statusLabel}
         </Badge>
         {showWordList && totalScore > 0 && (
           <span
-            className="ms-auto shrink-0 text-lg font-bold tabular-nums"
-            aria-live="polite"
+            className='ms-auto shrink-0 text-lg font-bold tabular-nums'
+            aria-live='polite'
           >
             +{totalScore}
           </span>
@@ -105,45 +112,51 @@ export function MoveComposer({
 
       {/* Validation error */}
       {draftStatus === 'invalid_local' && localErrorMessage && (
-        <p className="flex items-start gap-1 text-xs text-destructive">
-          <AlertTriangle className="mt-0.5 size-3 shrink-0" aria-hidden />
+        <p className='text-destructive flex items-start gap-1 text-xs'>
+          <AlertTriangle className='mt-0.5 size-3 shrink-0' aria-hidden />
           {localErrorMessage}
         </p>
       )}
 
       {/* Validation offline */}
       {validationUnavailable && (
-        <p className="flex items-start gap-1 text-xs text-muted-foreground">
-          <AlertTriangle className="mt-0.5 size-3 shrink-0" aria-hidden />
+        <p className='text-muted-foreground flex items-start gap-1 text-xs'>
+          <AlertTriangle className='mt-0.5 size-3 shrink-0' aria-hidden />
           <Trans>Validation offline — you can still submit.</Trans>
         </p>
       )}
 
       {/* Advisory unknown words */}
       {hasAdvisoryInvalidWords && (
-        <p className="flex items-start gap-1 text-xs text-muted-foreground">
-          <XCircle className="mt-0.5 size-3 shrink-0 text-destructive" aria-hidden />
+        <p className='text-muted-foreground flex items-start gap-1 text-xs'>
+          <XCircle
+            className='text-destructive mt-0.5 size-3 shrink-0'
+            aria-hidden
+          />
           <Trans>Contains unknown words. You can still submit.</Trans>
         </p>
       )}
 
       {/* Horizontal word pills */}
       {showWordList && (
-        <div className="flex flex-wrap gap-1" aria-label={t`Words formed`}>
+        <div className='flex flex-wrap gap-1' aria-label={t`Words formed`}>
           {words.map(({ word, score }, index) => {
             const normalizedWord = word.toUpperCase()
-            const validationState = wordValidationState[normalizedWord] ?? 'unknown'
+            const validationState =
+              wordValidationState[normalizedWord] ?? 'unknown'
             return (
               <span
                 // Index, because wordsFormed is not deduplicated: one parallel
                 // play routinely forms the same cross-word twice at the same
                 // score, and word+score then collides.
                 key={`${normalizedWord}-${score}-${index}`}
-                className="inline-flex items-center gap-1 rounded bg-muted px-1.5 py-0.5 text-xs"
+                className='bg-muted inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-xs'
               >
                 <ValidationIndicator state={validationState} />
-                <span className="font-semibold tracking-wide">{normalizedWord}</span>
-                <span className="text-muted-foreground">+{score}</span>
+                <span className='font-semibold tracking-wide'>
+                  {normalizedWord}
+                </span>
+                <span className='text-muted-foreground'>+{score}</span>
               </span>
             )
           })}
@@ -152,20 +165,25 @@ export function MoveComposer({
 
       {/* Exchange actions */}
       {showExchangeActions && (
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" onClick={onCancelExchange} className="flex-1">
+        <div className='flex items-center gap-2'>
+          <Button
+            variant='outline'
+            size='sm'
+            onClick={onCancelExchange}
+            className='flex-1'
+          >
             <Trans>Cancel</Trans>
           </Button>
           <Button
-            size="sm"
+            size='sm'
             onClick={onConfirmExchange}
             disabled={exchangeCount === 0 || isExchanging}
-            className="flex-1"
+            className='flex-1'
           >
             {isExchanging ? (
-              <Loader2 className="size-3 animate-spin" />
+              <Loader2 className='size-3 animate-spin' />
             ) : (
-              <ArrowLeftRight className="size-3" />
+              <ArrowLeftRight className='size-3' />
             )}
             {exchangeCount > 0 ? (
               <Trans>Exchange ({exchangeCount})</Trans>
@@ -178,24 +196,29 @@ export function MoveComposer({
 
       {/* Move actions */}
       {showMoveActions && (
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" onClick={onRecall} disabled={!canRecall}>
+        <div className='flex items-center gap-2'>
+          <Button
+            variant='outline'
+            size='sm'
+            onClick={onRecall}
+            disabled={!canRecall}
+          >
             <Trans>Recall</Trans>
           </Button>
           {/* Named for the browser test, as the board is by data-game-status:
               picking this button out by position or by its label would break
               on any layout change or in any locale but English. */}
           <Button
-            size="sm"
+            size='sm'
             onClick={onSubmit}
             disabled={!canSubmit}
-            className="flex-1"
+            className='flex-1'
             data-move-submit
           >
             {isSubmitting ? (
-              <Loader2 className="size-3 animate-spin" />
+              <Loader2 className='size-3 animate-spin' />
             ) : (
-              <Send className="size-4" />
+              <Send className='size-4' />
             )}
             <Trans>Submit</Trans>
           </Button>
@@ -207,17 +230,19 @@ export function MoveComposer({
 
 function ValidationIndicator({ state }: { state: DraftWordValidationState }) {
   if (state === 'checking') {
-    return <Loader2 className="size-3 shrink-0 animate-spin text-muted-foreground" />
+    return (
+      <Loader2 className='text-muted-foreground size-3 shrink-0 animate-spin' />
+    )
   }
   if (state === 'valid') {
-    return <CheckCircle2 className="size-3 shrink-0 text-emerald-500" />
+    return <CheckCircle2 className='size-3 shrink-0 text-emerald-500' />
   }
   if (state === 'invalid') {
-    return <XCircle className="size-3 shrink-0 text-destructive" />
+    return <XCircle className='text-destructive size-3 shrink-0' />
   }
   return (
     <span
-      className="inline-flex size-3 shrink-0 items-center justify-center rounded-full border border-border/80 text-[8px] leading-none text-muted-foreground"
+      className='border-border/80 text-muted-foreground inline-flex size-3 shrink-0 items-center justify-center rounded-full border text-[8px] leading-none'
       aria-hidden
     >
       ?
@@ -247,4 +272,3 @@ function getStatusBadgeClass(status: MoveDraftStatus): string {
   }
   return ''
 }
-

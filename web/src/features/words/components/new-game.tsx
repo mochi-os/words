@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useEffect, useMemo, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
-import { plural } from '@lingui/core/macro'
 import { useNavigate } from '@tanstack/react-router'
+import { plural } from '@lingui/core/macro'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Button,
   GameNewGameDialog,
@@ -90,12 +89,12 @@ export function NewGame() {
       isLoading={isLoading}
       error={error}
       onRetry={refetch}
-      mode="multiple"
+      mode='multiple'
       value={selectedFriends}
       onChange={(value) => setSelectedFriends(value as string[])}
       pickerFooter={
         selectedFriends.length > 0 ? (
-          <p className="text-xs text-muted-foreground">
+          <p className='text-muted-foreground text-xs'>
             {plural(selectedFriends.length + 1, {
               one: '# player',
               other: '# players',
@@ -111,17 +110,19 @@ export function NewGame() {
       isSubmitting={createGameMutation.isPending}
       onSubmit={handleCreateGame}
       options={
-        <div className="space-y-2">
-          <label className="text-sm font-medium"><Trans>Language</Trans></label>
-          <div className="flex gap-2">
+        <div className='space-y-2'>
+          <label className='text-sm font-medium'>
+            <Trans>Language</Trans>
+          </label>
+          <div className='flex gap-2'>
             {languages.map((lang) => (
               <Button
                 key={lang.value}
-                type="button"
+                type='button'
                 variant={language === lang.value ? 'default' : 'outline'}
-                size="sm"
+                size='sm'
                 onClick={() => setLanguage(lang.value)}
-                className="flex-1"
+                className='flex-1'
               >
                 {lang.label}
               </Button>
@@ -133,10 +134,15 @@ export function NewGame() {
         title: <Trans>New game</Trans>,
         description: <Trans>Start a new Words game</Trans>,
         opponentLabel: (
-          <Trans>Choose opponents <span className="text-muted-foreground font-normal">(1-3)</span></Trans>
+          <Trans>
+            Choose opponents{' '}
+            <span className='text-muted-foreground font-normal'>(1-3)</span>
+          </Trans>
         ),
         emptyTitle: <Trans>No friends yet</Trans>,
-        emptyHint: <Trans>Add friends in the People app to start playing</Trans>,
+        emptyHint: (
+          <Trans>Add friends in the People app to start playing</Trans>
+        ),
         addFriends: <Trans>Add friends</Trans>,
         placeholder: t`Select friends...`,
         emptyMessage: t`No friends found`,

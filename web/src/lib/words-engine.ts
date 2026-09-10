@@ -13,21 +13,229 @@ export type PremiumType = '.' | 'DL' | 'TL' | 'DW' | 'TW' | 'ST'
 // Standard Scrabble premium square layout (15x15)
 // ST = center star (acts as DW on first move)
 const PREMIUM_MAP: PremiumType[][] = [
-  ['TW', '.', '.', 'DL', '.', '.', '.', 'TW', '.', '.', '.', 'DL', '.', '.', 'TW'],
-  ['.', 'DW', '.', '.', '.', 'TL', '.', '.', '.', 'TL', '.', '.', '.', 'DW', '.'],
-  ['.', '.', 'DW', '.', '.', '.', 'DL', '.', 'DL', '.', '.', '.', 'DW', '.', '.'],
-  ['DL', '.', '.', 'DW', '.', '.', '.', 'DL', '.', '.', '.', 'DW', '.', '.', 'DL'],
+  [
+    'TW',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'TW',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    'TW',
+  ],
+  [
+    '.',
+    'DW',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'DW',
+    '.',
+  ],
+  [
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+  ],
+  [
+    'DL',
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+    'DL',
+  ],
   ['.', '.', '.', '.', 'DW', '.', '.', '.', '.', '.', 'DW', '.', '.', '.', '.'],
-  ['.', 'TL', '.', '.', '.', 'TL', '.', '.', '.', 'TL', '.', '.', '.', 'TL', '.'],
-  ['.', '.', 'DL', '.', '.', '.', 'DL', '.', 'DL', '.', '.', '.', 'DL', '.', '.'],
-  ['TW', '.', '.', 'DL', '.', '.', '.', 'ST', '.', '.', '.', 'DL', '.', '.', 'TW'],
-  ['.', '.', 'DL', '.', '.', '.', 'DL', '.', 'DL', '.', '.', '.', 'DL', '.', '.'],
-  ['.', 'TL', '.', '.', '.', 'TL', '.', '.', '.', 'TL', '.', '.', '.', 'TL', '.'],
+  [
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+  ],
+  [
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+  ],
+  [
+    'TW',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'ST',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    'TW',
+  ],
+  [
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+  ],
+  [
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+  ],
   ['.', '.', '.', '.', 'DW', '.', '.', '.', '.', '.', 'DW', '.', '.', '.', '.'],
-  ['DL', '.', '.', 'DW', '.', '.', '.', 'DL', '.', '.', '.', 'DW', '.', '.', 'DL'],
-  ['.', '.', 'DW', '.', '.', '.', 'DL', '.', 'DL', '.', '.', '.', 'DW', '.', '.'],
-  ['.', 'DW', '.', '.', '.', 'TL', '.', '.', '.', 'TL', '.', '.', '.', 'DW', '.'],
-  ['TW', '.', '.', 'DL', '.', '.', '.', 'TW', '.', '.', '.', 'DL', '.', '.', 'TW'],
+  [
+    'DL',
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+    'DL',
+  ],
+  [
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'DW',
+    '.',
+    '.',
+  ],
+  [
+    '.',
+    'DW',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'TL',
+    '.',
+    '.',
+    '.',
+    'DW',
+    '.',
+  ],
+  [
+    'TW',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    '.',
+    'TW',
+    '.',
+    '.',
+    '.',
+    'DL',
+    '.',
+    '.',
+    'TW',
+  ],
 ]
 
 export function getPremium(row: number, col: number): PremiumType {
@@ -36,9 +244,32 @@ export function getPremium(row: number, col: number): PremiumType {
 
 // Letter values (English)
 const LETTER_VALUES: Record<string, number> = {
-  A: 1, B: 3, C: 3, D: 2, E: 1, F: 4, G: 2, H: 4, I: 1, J: 8,
-  K: 5, L: 1, M: 3, N: 1, O: 1, P: 3, Q: 10, R: 1, S: 1, T: 1,
-  U: 1, V: 4, W: 4, X: 8, Y: 4, Z: 10,
+  A: 1,
+  B: 3,
+  C: 3,
+  D: 2,
+  E: 1,
+  F: 4,
+  G: 2,
+  H: 4,
+  I: 1,
+  J: 8,
+  K: 5,
+  L: 1,
+  M: 3,
+  N: 1,
+  O: 1,
+  P: 3,
+  Q: 10,
+  R: 1,
+  S: 1,
+  T: 1,
+  U: 1,
+  V: 4,
+  W: 4,
+  X: 8,
+  Y: 4,
+  Z: 10,
 }
 
 export function getLetterValue(letter: string): number {
@@ -77,8 +308,8 @@ export function isBoardEmpty(board: string[][]): boolean {
 export interface Placement {
   row: number
   col: number
-  letter: string     // uppercase letter to display on board
-  rackTile: string   // the tile from the rack ('_' for blank, uppercase letter otherwise)
+  letter: string // uppercase letter to display on board
+  rackTile: string // the tile from the rack ('_' for blank, uppercase letter otherwise)
 }
 
 export interface ScoredWord {
@@ -91,7 +322,7 @@ export interface MoveResult {
   newBoard: string[][]
   wordsFormed: ScoredWord[]
   totalScore: number
-  tilesUsed: string  // rack tiles consumed (for server)
+  tilesUsed: string // rack tiles consumed (for server)
 }
 
 // Why a move was rejected. The engine names the reason and the UI supplies the
@@ -173,14 +404,17 @@ export function validateAndScoreMove(
   const newlyPlaced = new Set<string>()
   for (const p of placements) {
     // Blanks stored as lowercase
-    newBoard[p.row][p.col] = p.rackTile === '_' ? p.letter.toLowerCase() : p.letter.toUpperCase()
+    newBoard[p.row][p.col] =
+      p.rackTile === '_' ? p.letter.toLowerCase() : p.letter.toUpperCase()
     newlyPlaced.add(`${p.row},${p.col}`)
   }
 
   // Check continuity: no gaps between placed tiles (existing tiles fill gaps)
   if (sorted.length > 1) {
     const start = isHorizontal ? sorted[0].col : sorted[0].row
-    const end = isHorizontal ? sorted[sorted.length - 1].col : sorted[sorted.length - 1].row
+    const end = isHorizontal
+      ? sorted[sorted.length - 1].col
+      : sorted[sorted.length - 1].row
     const fixedAxis = isHorizontal ? sorted[0].row : sorted[0].col
 
     for (let i = start; i <= end; i++) {
@@ -197,7 +431,9 @@ export function validateAndScoreMove(
   if (boardIsEmpty) {
     // First move must cover the centre square
     const centre = Math.floor(BOARD_SIZE / 2)
-    const coversCenter = placements.some((p) => p.row === centre && p.col === centre)
+    const coversCenter = placements.some(
+      (p) => p.row === centre && p.col === centre
+    )
     if (!coversCenter) {
       throw new MoveError('first_move_centre')
     }
@@ -209,8 +445,10 @@ export function validateAndScoreMove(
     let connected = false
     for (const p of placements) {
       const neighbors = [
-        [p.row - 1, p.col], [p.row + 1, p.col],
-        [p.row, p.col - 1], [p.row, p.col + 1],
+        [p.row - 1, p.col],
+        [p.row + 1, p.col],
+        [p.row, p.col - 1],
+        [p.row, p.col + 1],
       ]
       for (const [nr, nc] of neighbors) {
         if (nr >= 0 && nr < BOARD_SIZE && nc >= 0 && nc < BOARD_SIZE) {
@@ -231,14 +469,26 @@ export function validateAndScoreMove(
   const wordsFormed: ScoredWord[] = []
 
   // Find the main word (along the direction of placement)
-  const mainWord = findWord(newBoard, sorted[0].row, sorted[0].col, isHorizontal, newlyPlaced)
+  const mainWord = findWord(
+    newBoard,
+    sorted[0].row,
+    sorted[0].col,
+    isHorizontal,
+    newlyPlaced
+  )
   if (mainWord && mainWord.word.length >= 2) {
     wordsFormed.push(mainWord)
   }
 
   // Find cross-words (perpendicular words formed by each placed tile)
   for (const p of placements) {
-    const crossWord = findWord(newBoard, p.row, p.col, !isHorizontal, newlyPlaced)
+    const crossWord = findWord(
+      newBoard,
+      p.row,
+      p.col,
+      !isHorizontal,
+      newlyPlaced
+    )
     if (crossWord && crossWord.word.length >= 2) {
       wordsFormed.push(crossWord)
     }

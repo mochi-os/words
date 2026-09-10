@@ -2,10 +2,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useCallback, useMemo, useRef } from 'react'
-import { cn } from '@mochi/web'
 import { useLingui } from '@lingui/react/macro'
+import { cn } from '@mochi/web'
 import {
   BOARD_SIZE,
   getPremium,
@@ -16,13 +15,36 @@ import {
   type PremiumType,
 } from '@/lib/words-engine'
 
-const PREMIUM_STYLES: Record<PremiumType, { bg: string; label: string; textColor: string }> = {
-  'TW': { bg: 'bg-red-400 dark:bg-red-900',         label: 'TW', textColor: 'text-red-700 dark:text-red-300' },
-  'DW': { bg: 'bg-pink-300 dark:bg-pink-800/70',    label: 'DW', textColor: 'text-pink-700 dark:text-pink-300' },
-  'TL': { bg: 'bg-primary/20 dark:bg-primary/30',   label: 'TL', textColor: 'text-primary' },
-  'DL': { bg: 'bg-sky-200 dark:bg-sky-900/40',      label: 'DL', textColor: 'text-sky-500 dark:text-sky-400' },
-  'ST': { bg: 'bg-pink-300 dark:bg-pink-800/70',    label: '', textColor: 'text-pink-700 dark:text-pink-300' },
-  '.':  { bg: '', label: '', textColor: '' },
+const PREMIUM_STYLES: Record<
+  PremiumType,
+  { bg: string; label: string; textColor: string }
+> = {
+  TW: {
+    bg: 'bg-red-400 dark:bg-red-900',
+    label: 'TW',
+    textColor: 'text-red-700 dark:text-red-300',
+  },
+  DW: {
+    bg: 'bg-pink-300 dark:bg-pink-800/70',
+    label: 'DW',
+    textColor: 'text-pink-700 dark:text-pink-300',
+  },
+  TL: {
+    bg: 'bg-primary/20 dark:bg-primary/30',
+    label: 'TL',
+    textColor: 'text-primary',
+  },
+  DL: {
+    bg: 'bg-sky-200 dark:bg-sky-900/40',
+    label: 'DL',
+    textColor: 'text-sky-500 dark:text-sky-400',
+  },
+  ST: {
+    bg: 'bg-pink-300 dark:bg-pink-800/70',
+    label: '',
+    textColor: 'text-pink-700 dark:text-pink-300',
+  },
+  '.': { bg: '', label: '', textColor: '' },
 }
 
 type DragSource =
@@ -70,8 +92,8 @@ export function WordsBoard({
   )
 
   // Is this the first move of the game? (board entirely empty, no pending placements yet)
-  const isBoardEmpty = useMemo(() =>
-    board.every((row) => row.every((cell) => cell === '.')),
+  const isBoardEmpty = useMemo(
+    () => board.every((row) => row.every((cell) => cell === '.')),
     [board]
   )
   const center = Math.floor(BOARD_SIZE / 2)
@@ -96,10 +118,15 @@ export function WordsBoard({
       return null // any empty cell is valid
     }
     if (effectivePlacements.length === 1) {
-      return { row: effectivePlacements[0].row, col: effectivePlacements[0].col }
+      return {
+        row: effectivePlacements[0].row,
+        col: effectivePlacements[0].col,
+      }
     }
     // 2+ placements: direction is locked
-    const allSameRow = effectivePlacements.every((p) => p.row === effectivePlacements[0].row)
+    const allSameRow = effectivePlacements.every(
+      (p) => p.row === effectivePlacements[0].row
+    )
     if (allSameRow) return { row: effectivePlacements[0].row, col: null }
     return { row: null, col: effectivePlacements[0].col }
   }, [effectivePlacements, isBoardEmpty, center])
@@ -107,9 +134,12 @@ export function WordsBoard({
   const isValidLineCell = useCallback(
     (row: number, col: number) => {
       if (!validLine) return true
-      if (validLine.row !== null && validLine.col !== null) return validLine.row === row || validLine.col === col
-      if (validLine.row !== null && validLine.col === null) return validLine.row === row
-      if (validLine.col !== null && validLine.row === null) return validLine.col === col
+      if (validLine.row !== null && validLine.col !== null)
+        return validLine.row === row || validLine.col === col
+      if (validLine.row !== null && validLine.col === null)
+        return validLine.row === row
+      if (validLine.col !== null && validLine.row === null)
+        return validLine.col === col
       return true
     },
     [validLine]
@@ -117,7 +147,8 @@ export function WordsBoard({
 
   const isDroppableCell = useCallback(
     (row: number, col: number) => {
-      if (row < 0 || row >= BOARD_SIZE || col < 0 || col >= BOARD_SIZE) return false
+      if (row < 0 || row >= BOARD_SIZE || col < 0 || col >= BOARD_SIZE)
+        return false
       if (board[row][col] !== '.') return false
       if (getPending(row, col)) return false
       return true
@@ -127,24 +158,22 @@ export function WordsBoard({
 
   const gridRef = useRef<HTMLDivElement>(null)
 
-  const cellFromPointer = useCallback(
-    (e: React.DragEvent) => {
-      const grid = gridRef.current
-      if (!grid) return null
-      const rect = grid.getBoundingClientRect()
-      const x = e.clientX - rect.left
-      const y = e.clientY - rect.top
-      const col = Math.floor((x / rect.width) * BOARD_SIZE)
-      const row = Math.floor((y / rect.height) * BOARD_SIZE)
-      if (row < 0 || row >= BOARD_SIZE || col < 0 || col >= BOARD_SIZE) return null
-      return { row, col }
-    },
-    []
-  )
+  const cellFromPointer = useCallback((e: React.DragEvent) => {
+    const grid = gridRef.current
+    if (!grid) return null
+    const rect = grid.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    const col = Math.floor((x / rect.width) * BOARD_SIZE)
+    const row = Math.floor((y / rect.height) * BOARD_SIZE)
+    if (row < 0 || row >= BOARD_SIZE || col < 0 || col >= BOARD_SIZE)
+      return null
+    return { row, col }
+  }, [])
 
   return (
     <div
-      className="mx-auto w-full"
+      className='mx-auto w-full'
       style={{ maxWidth: 'min(100cqw, 100cqh)' }}
       // Exposes the status the board is actually rendering with, so a test can
       // assert what the UI shows rather than scraping text - the message list
@@ -157,11 +186,11 @@ export function WordsBoard({
         // A screen reader reading 225 loose divs announces bare letters with
         // no idea where they sit. The grid roles give every square its
         // coordinates, so the board can be read row by row.
-        role="grid"
+        role='grid'
         aria-label={t`Board`}
         aria-rowcount={BOARD_SIZE}
         aria-colcount={BOARD_SIZE}
-        className="grid aspect-square w-full gap-px bg-neutral-300 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-700"
+        className='grid aspect-square w-full gap-px rounded border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-700'
         style={{
           gridTemplateColumns: `repeat(${BOARD_SIZE}, 1fr)`,
           gridTemplateRows: `repeat(${BOARD_SIZE}, 1fr)`,
@@ -187,147 +216,180 @@ export function WordsBoard({
           // display:contents keeps the row out of the layout, so the squares
           // stay direct grid items of the 15x15 template above while the
           // accessibility tree still sees grid > row > gridcell.
-          <div key={`row-${row}`} role="row" aria-rowindex={row + 1} style={{ display: 'contents' }}>
-          {Array.from({ length: BOARD_SIZE }).map((_, col) => {
-            const cellValue = board[row][col]
-            const pending = getPending(row, col)
-            const premium = getPremium(row, col)
-            const premiumStyle = PREMIUM_STYLES[premium]
-            const isEmpty = cellValue === '.' && !pending
-            const isOccupied = cellValue !== '.'
-            const isPending = !!pending
+          <div
+            key={`row-${row}`}
+            role='row'
+            aria-rowindex={row + 1}
+            style={{ display: 'contents' }}
+          >
+            {Array.from({ length: BOARD_SIZE }).map((_, col) => {
+              const cellValue = board[row][col]
+              const pending = getPending(row, col)
+              const premium = getPremium(row, col)
+              const premiumStyle = PREMIUM_STYLES[premium]
+              const isEmpty = cellValue === '.' && !pending
+              const isOccupied = cellValue !== '.'
+              const isPending = !!pending
 
-            let displayLetter = ''
-            let letterValue = 0
-            let isBlank = false
+              let displayLetter = ''
+              let letterValue = 0
+              let isBlank = false
 
-            if (isPending) {
-              displayLetter = pending.letter.toUpperCase()
-              letterValue = pending.rackTile === '_' ? 0 : getLetterValue(pending.letter)
-              isBlank = pending.rackTile === '_'
-            } else if (isOccupied) {
-              displayLetter = getDisplayLetter(cellValue)
-              letterValue = getLetterValue(cellValue)
-              isBlank = isBlankTile(cellValue)
-            }
+              if (isPending) {
+                displayLetter = pending.letter.toUpperCase()
+                letterValue =
+                  pending.rackTile === '_' ? 0 : getLetterValue(pending.letter)
+                isBlank = pending.rackTile === '_'
+              } else if (isOccupied) {
+                displayLetter = getDisplayLetter(cellValue)
+                letterValue = getLetterValue(cellValue)
+                isBlank = isBlankTile(cellValue)
+              }
 
-            const canClickToPlace = canPlace && isEmpty
-            const canClickToRemove = isPending && !isDragging
-            const canAcceptDrop = canDrop && isEmpty
-            const isDropTarget = canAcceptDrop && isValidLineCell(row, col)
-            const isPlaceTarget = canClickToPlace && isValidLineCell(row, col)
-            const isValidTarget = isDropTarget || isPlaceTarget
-            const canDragThis = isActive && isMyTurn && isPending
-            const isBeingDragged = dragSource?.type === 'board' && dragSource.row === row && dragSource.col === col
+              const canClickToPlace = canPlace && isEmpty
+              const canClickToRemove = isPending && !isDragging
+              const canAcceptDrop = canDrop && isEmpty
+              const isDropTarget = canAcceptDrop && isValidLineCell(row, col)
+              const isPlaceTarget = canClickToPlace && isValidLineCell(row, col)
+              const isValidTarget = isDropTarget || isPlaceTarget
+              const canDragThis = isActive && isMyTurn && isPending
+              const isBeingDragged =
+                dragSource?.type === 'board' &&
+                dragSource.row === row &&
+                dragSource.col === col
 
-            // A played square announced its bare letter and nothing else,
-            // which is the least useful thing a board can say. The other two
-            // labels are unchanged, placeholders included, so their existing
-            // translations still apply. Rows are numbered 1-15 top to bottom,
-            // as Scrabble numbers them - not bottom-up as in chess.
-            const label = isPending
-              ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${row + 1}, click to remove`
-              : isOccupied
-                ? t`${displayLetter} at ${String.fromCharCode(65 + col)}${row + 1}`
-                : canClickToPlace
-                  ? t`Empty square ${String.fromCharCode(65 + col)}${row + 1}`
-                  : undefined
+              // A played square announced its bare letter and nothing else,
+              // which is the least useful thing a board can say. The other two
+              // labels are unchanged, placeholders included, so their existing
+              // translations still apply. Rows are numbered 1-15 top to bottom,
+              // as Scrabble numbers them - not bottom-up as in chess.
+              const label = isPending
+                ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${row + 1}, click to remove`
+                : isOccupied
+                  ? t`${displayLetter} at ${String.fromCharCode(65 + col)}${row + 1}`
+                  : canClickToPlace
+                    ? t`Empty square ${String.fromCharCode(65 + col)}${row + 1}`
+                    : undefined
 
-            return (
-              <div
-                key={`${row}-${col}`}
-                role="gridcell"
-                aria-colindex={col + 1}
-                tabIndex={canClickToPlace || canClickToRemove ? 0 : -1}
-                aria-label={label}
-                draggable={canDragThis}
-                onDragStart={(e) => {
-                  if (!canDragThis) return
-                  e.dataTransfer.setData('text/plain', `board-${row}-${col}`)
-                  e.dataTransfer.effectAllowed = 'move'
-                  onBoardDragStart?.(row, col)
-                }}
-                onDragEnd={() => onDragEnd?.()}
-                className={cn(
-                  'relative flex items-center justify-center text-xs font-bold select-none overflow-hidden',
-                  isEmpty && !premiumStyle.bg && 'bg-stone-50 dark:bg-stone-900/30',
-                  isEmpty && premiumStyle.bg && premiumStyle.bg,
-                  isOccupied && 'bg-amber-100 dark:bg-amber-900/60',
-                  isPending && 'bg-amber-200 dark:bg-amber-800 ring-2 ring-amber-500 ring-inset',
-                  canClickToPlace && 'cursor-pointer hover:bg-amber-200/50 dark:hover:bg-amber-800/50',
-                  canClickToRemove && 'cursor-pointer',
-                  canDragThis && 'cursor-grab',
-                  !canClickToPlace && !canClickToRemove && !canAcceptDrop && !canDragThis && 'cursor-default',
-                  canAcceptDrop && 'cursor-copy',
-                  isBeingDragged && 'opacity-40',
-                )}
-                onClick={() => {
-                  if (canClickToRemove) {
-                    onRemovePlacement(row, col)
-                  } else if (canClickToPlace) {
-                    onCellClick(row, col)
-                  }
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    if (canClickToRemove) onRemovePlacement(row, col)
-                    else if (canClickToPlace) onCellClick(row, col)
-                  }
-                }}
-                onDragOver={(e) => {
-                  if (canAcceptDrop) {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    e.dataTransfer.dropEffect = 'move'
-                  }
-                }}
-                onDrop={(e) => {
-                  if (canAcceptDrop) {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    onDrop?.(row, col)
-                  }
-                }}
-              >
-                {isEmpty && premiumStyle.label && !isValidTarget && (
-                  <span className={cn('text-[9px] font-semibold leading-none', premiumStyle.textColor)}>
-                    {premiumStyle.label}
-                  </span>
-                )}
-
-                {isEmpty && premium === 'ST' && !isValidTarget && (
-                  <span className={cn('text-base leading-none', premiumStyle.textColor)}>
-                    {'\u2605'}
-                  </span>
-                )}
-
-                {isValidTarget && (
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-[30%] h-[30%] rounded-full bg-emerald-500/30" />
-                  </div>
-                )}
-
-                {/* The cell's label already says the letter and the square,
-                    so these glyphs are decoration and would be read twice. */}
-                {(isOccupied || isPending) && (
-                  <>
-                    <span aria-hidden className={cn(
-                      'text-sm font-bold leading-none',
-                      isBlank && 'text-gray-500 dark:text-gray-400',
-                    )}>
-                      {displayLetter}
+              return (
+                <div
+                  key={`${row}-${col}`}
+                  role='gridcell'
+                  aria-colindex={col + 1}
+                  tabIndex={canClickToPlace || canClickToRemove ? 0 : -1}
+                  aria-label={label}
+                  draggable={canDragThis}
+                  onDragStart={(e) => {
+                    if (!canDragThis) return
+                    e.dataTransfer.setData('text/plain', `board-${row}-${col}`)
+                    e.dataTransfer.effectAllowed = 'move'
+                    onBoardDragStart?.(row, col)
+                  }}
+                  onDragEnd={() => onDragEnd?.()}
+                  className={cn(
+                    'relative flex items-center justify-center overflow-hidden text-xs font-bold select-none',
+                    isEmpty &&
+                      !premiumStyle.bg &&
+                      'bg-stone-50 dark:bg-stone-900/30',
+                    isEmpty && premiumStyle.bg && premiumStyle.bg,
+                    isOccupied && 'bg-amber-100 dark:bg-amber-900/60',
+                    isPending &&
+                      'bg-amber-200 ring-2 ring-amber-500 ring-inset dark:bg-amber-800',
+                    canClickToPlace &&
+                      'cursor-pointer hover:bg-amber-200/50 dark:hover:bg-amber-800/50',
+                    canClickToRemove && 'cursor-pointer',
+                    canDragThis && 'cursor-grab',
+                    !canClickToPlace &&
+                      !canClickToRemove &&
+                      !canAcceptDrop &&
+                      !canDragThis &&
+                      'cursor-default',
+                    canAcceptDrop && 'cursor-copy',
+                    isBeingDragged && 'opacity-40'
+                  )}
+                  onClick={() => {
+                    if (canClickToRemove) {
+                      onRemovePlacement(row, col)
+                    } else if (canClickToPlace) {
+                      onCellClick(row, col)
+                    }
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      if (canClickToRemove) onRemovePlacement(row, col)
+                      else if (canClickToPlace) onCellClick(row, col)
+                    }
+                  }}
+                  onDragOver={(e) => {
+                    if (canAcceptDrop) {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      e.dataTransfer.dropEffect = 'move'
+                    }
+                  }}
+                  onDrop={(e) => {
+                    if (canAcceptDrop) {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      onDrop?.(row, col)
+                    }
+                  }}
+                >
+                  {isEmpty && premiumStyle.label && !isValidTarget && (
+                    <span
+                      className={cn(
+                        'text-[9px] leading-none font-semibold',
+                        premiumStyle.textColor
+                      )}
+                    >
+                      {premiumStyle.label}
                     </span>
-                    {letterValue > 0 && (
-                      <span aria-hidden className="absolute right-0 bottom-0 origin-bottom-right scale-[0.45] text-sm font-medium text-gray-600 dark:text-gray-400 leading-none">
-                        {letterValue}
+                  )}
+
+                  {isEmpty && premium === 'ST' && !isValidTarget && (
+                    <span
+                      className={cn(
+                        'text-base leading-none',
+                        premiumStyle.textColor
+                      )}
+                    >
+                      {'\u2605'}
+                    </span>
+                  )}
+
+                  {isValidTarget && (
+                    <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>
+                      <div className='h-[30%] w-[30%] rounded-full bg-emerald-500/30' />
+                    </div>
+                  )}
+
+                  {/* The cell's label already says the letter and the square,
+                    so these glyphs are decoration and would be read twice. */}
+                  {(isOccupied || isPending) && (
+                    <>
+                      <span
+                        aria-hidden
+                        className={cn(
+                          'text-sm leading-none font-bold',
+                          isBlank && 'text-gray-500 dark:text-gray-400'
+                        )}
+                      >
+                        {displayLetter}
                       </span>
-                    )}
-                  </>
-                )}
-              </div>
-            )
-          })}
+                      {letterValue > 0 && (
+                        <span
+                          aria-hidden
+                          className='absolute right-0 bottom-0 origin-bottom-right scale-[0.45] text-sm leading-none font-medium text-gray-600 dark:text-gray-400'
+                        >
+                          {letterValue}
+                        </span>
+                      )}
+                    </>
+                  )}
+                </div>
+              )
+            })}
           </div>
         ))}
       </div>

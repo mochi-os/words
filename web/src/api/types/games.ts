@@ -67,7 +67,10 @@ export interface GameListItem {
   created: number
 }
 
-export function getPlayerNames(game: GameListItem | Game, myIdentity: string): string {
+export function getPlayerNames(
+  game: GameListItem | Game,
+  myIdentity: string
+): string {
   const names: string[] = []
   for (let i = 1; i <= game.player_count; i++) {
     const id = game[`player${i}` as keyof typeof game] as string
@@ -79,13 +82,19 @@ export function getPlayerNames(game: GameListItem | Game, myIdentity: string): s
   return names.join(', ')
 }
 
-export function isMyTurn(game: GameListItem | Game, myIdentity: string): boolean {
+export function isMyTurn(
+  game: GameListItem | Game,
+  myIdentity: string
+): boolean {
   if (game.status !== 'active') return false
   const myNum = getMyPlayerNumber(game, myIdentity)
   return game.current_turn === myNum
 }
 
-function getMyPlayerNumber(game: GameListItem | Game, myIdentity: string): number {
+function getMyPlayerNumber(
+  game: GameListItem | Game,
+  myIdentity: string
+): number {
   for (let i = 1; i <= game.player_count; i++) {
     if ((game[`player${i}` as keyof typeof game] as string) === myIdentity) {
       return i

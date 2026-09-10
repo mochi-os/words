@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import {
   type MoveErrorCode,
   type MoveResult,
@@ -17,10 +16,7 @@ import {
 export type MoveErrorMessages = Readonly<Record<MoveErrorCode, string>>
 
 export type DraftWordValidationState =
-  | 'checking'
-  | 'valid'
-  | 'invalid'
-  | 'unknown'
+  'checking' | 'valid' | 'invalid' | 'unknown'
 
 export type MoveDraftStatus =
   | 'empty'
@@ -46,7 +42,7 @@ export function deriveMoveDraft(
   board: string[][],
   placements: readonly Placement[],
   messages: MoveErrorMessages,
-  invalidMoveFallback: string,
+  invalidMoveFallback: string
 ): MoveDraftBase {
   if (placements.length === 0) {
     return { status: 'empty', errorMessage: null, result: null }
@@ -93,7 +89,9 @@ export function resolveMoveDraftStatus({
 // Translated text for each badge state, supplied by the component that has the
 // Lingui context. `waiting` is not a draft status: an empty draft on the
 // opponent's turn reads differently from an empty draft on your own.
-export type MoveStatusMessages = Readonly<Record<MoveDraftStatus | 'waiting', string>>
+export type MoveStatusMessages = Readonly<
+  Record<MoveDraftStatus | 'waiting', string>
+>
 
 export function getMoveStatusLabel(
   status: MoveDraftStatus,
@@ -106,7 +104,9 @@ export function getMoveStatusLabel(
   return messages[status]
 }
 
-export function getUniqueDraftWords(wordsFormed: readonly ScoredWord[]): string[] {
+export function getUniqueDraftWords(
+  wordsFormed: readonly ScoredWord[]
+): string[] {
   const uniqueWords = new Set<string>()
   for (const entry of wordsFormed) {
     if (entry.word) {
@@ -140,8 +140,9 @@ export function createDraftSignature(
       if (a.rackTile !== b.rackTile) return a.rackTile < b.rackTile ? -1 : 1
       return 0
     })
-    .map((placement) =>
-      `${placement.row},${placement.col},${placement.letter},${placement.rackTile}`
+    .map(
+      (placement) =>
+        `${placement.row},${placement.col},${placement.letter},${placement.rackTile}`
     )
     .join('|')
 
@@ -154,4 +155,3 @@ export function shouldApplyValidationResult(
 ): boolean {
   return activeSignature === resultSignature
 }
-

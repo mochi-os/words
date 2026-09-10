@@ -2,9 +2,12 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { describe, it, expect, vi } from 'vitest'
-import { emptyBoard, type MoveErrorCode, type Placement } from '@/lib/words-engine'
+import {
+  emptyBoard,
+  type MoveErrorCode,
+  type Placement,
+} from '@/lib/words-engine'
 import {
   deriveMoveDraft,
   getMoveStatusLabel,
@@ -44,7 +47,9 @@ describe('deriveMoveDraft — rejection text', () => {
   // no_tiles is absent deliberately: deriveMoveDraft answers 'empty' for an
   // empty placement list and never reaches the engine. words-engine.test.ts
   // covers the throw.
-  const cases: Array<[string, MoveErrorCode, Placement[], string[][] | undefined]> = [
+  const cases: Array<
+    [string, MoveErrorCode, Placement[], string[][] | undefined]
+  > = [
     [
       'off the board',
       'out_of_bounds',
@@ -138,7 +143,10 @@ describe('deriveMoveDraft — rejection text', () => {
     const board = emptyBoard()
     // A malformed board makes the engine index into undefined.
     board[7] = undefined as unknown as string[]
-    const result = draft([{ row: 7, col: 7, letter: 'A', rackTile: 'A' }], board)
+    const result = draft(
+      [{ row: 7, col: 7, letter: 'A', rackTile: 'A' }],
+      board
+    )
     expect(result.status).toBe('invalid_local')
     expect(result.errorMessage).toBe(FALLBACK)
   })
@@ -182,9 +190,13 @@ describe('getMoveStatusLabel', () => {
     )
   })
 
-  it('reads an empty draft differently on the opponent\'s turn', () => {
-    expect(getMoveStatusLabel('empty', false, STATUS_MESSAGES)).toBe('catalogue:waiting')
-    expect(getMoveStatusLabel('empty', true, STATUS_MESSAGES)).toBe('catalogue:empty')
+  it("reads an empty draft differently on the opponent's turn", () => {
+    expect(getMoveStatusLabel('empty', false, STATUS_MESSAGES)).toBe(
+      'catalogue:waiting'
+    )
+    expect(getMoveStatusLabel('empty', true, STATUS_MESSAGES)).toBe(
+      'catalogue:empty'
+    )
   })
 
   it('waits only on an empty draft, never on one with tiles down', () => {
@@ -198,7 +210,9 @@ describe('getMoveStatusLabel', () => {
   it('never answers with the empty string the badge used to show', () => {
     for (const status of statuses) {
       for (const isMyTurn of [true, false]) {
-        expect(getMoveStatusLabel(status, isMyTurn, STATUS_MESSAGES)).not.toBe('')
+        expect(getMoveStatusLabel(status, isMyTurn, STATUS_MESSAGES)).not.toBe(
+          ''
+        )
       }
     }
   })

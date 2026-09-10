@@ -2,14 +2,13 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useCallback, useMemo } from 'react'
-import { useLingui } from '@lingui/react/macro'
 import { Outlet } from '@tanstack/react-router'
+import { useLingui } from '@lingui/react/macro'
 import { GameRouteLayout, useAuthStore } from '@mochi/web'
+import { getPlayerNames, isMyTurn, type GameListItem } from '@/api/games'
 import { useGamesQuery } from '@/hooks/useGames'
 import { NewGame } from '@/features/words/components/new-game'
-import { getPlayerNames, isMyTurn, type GameListItem } from '@/api/games'
 
 export function WordsLayout() {
   const { t } = useLingui()
