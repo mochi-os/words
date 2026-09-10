@@ -243,7 +243,6 @@ function getStatusBadgeVariant(
 
 function getStatusBadgeClass(status: MoveDraftStatus): string {
   if (status === 'ready') {
-    // eslint-disable-next-line lingui/no-unlocalized-strings -- Tailwind class names
     return 'bg-emerald-600 border-emerald-600 text-white dark:bg-emerald-700 dark:border-emerald-700'
   }
   return ''
