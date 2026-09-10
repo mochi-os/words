@@ -94,7 +94,7 @@ function getMyPlayerNumber(game: GameListItem | Game, myIdentity: string): numbe
   return 0
 }
 
-export type MessageType = 'message' | 'move' | 'system'
+type MessageType = 'message' | 'move' | 'system'
 
 export interface GameMessage {
   id: string
@@ -131,7 +131,7 @@ export interface CreateGameResponse {
   id: string
 }
 
-export interface NewGameFriend {
+interface NewGameFriend {
   class: string
   id: string
   identity: string
