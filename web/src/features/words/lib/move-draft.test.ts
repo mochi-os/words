@@ -3,7 +3,6 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-/* eslint-disable lingui/no-unlocalized-strings -- vitest names and the fake catalogue below are not user-facing */
 import { describe, it, expect, vi } from 'vitest'
 import { emptyBoard, type MoveErrorCode, type Placement } from '@/lib/words-engine'
 import {
