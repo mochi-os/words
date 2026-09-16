@@ -177,14 +177,11 @@ export function MoveComposer({
           <Button
             size='sm'
             onClick={onConfirmExchange}
-            disabled={exchangeCount === 0 || isExchanging}
+            loading={isExchanging}
+            icon={<ArrowLeftRight className='size-3' />}
+            disabled={exchangeCount === 0}
             className='flex-1'
           >
-            {isExchanging ? (
-              <Loader2 className='size-3 animate-spin' />
-            ) : (
-              <ArrowLeftRight className='size-3' />
-            )}
             {exchangeCount > 0 ? (
               <Trans>Exchange ({exchangeCount})</Trans>
             ) : (
@@ -211,15 +208,12 @@ export function MoveComposer({
           <Button
             size='sm'
             onClick={onSubmit}
+            loading={isSubmitting}
+            icon={<Send className='size-4' />}
             disabled={!canSubmit}
             className='flex-1'
             data-move-submit
           >
-            {isSubmitting ? (
-              <Loader2 className='size-3 animate-spin' />
-            ) : (
-              <Send className='size-4' />
-            )}
             <Trans>Submit</Trans>
           </Button>
         </div>
