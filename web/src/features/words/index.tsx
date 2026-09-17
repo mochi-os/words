@@ -39,7 +39,6 @@ import {
 import {
   ArrowLeftRight,
   Flag,
-  Loader2,
   MessageCircle,
   MoreHorizontal,
   RotateCcw,
@@ -970,16 +969,12 @@ export function WordsGameView() {
                               <Button
                                 size='sm'
                                 onClick={handleExchangeConfirm}
+                                loading={exchangeMutation.isPending}
+                                icon={<ArrowLeftRight className='size-3' />}
                                 disabled={
-                                  exchangeSelected.size === 0 ||
-                                  exchangeMutation.isPending
+                                  exchangeSelected.size === 0
                                 }
                               >
-                                {exchangeMutation.isPending ? (
-                                  <Loader2 className='size-3 animate-spin' />
-                                ) : (
-                                  <ArrowLeftRight className='size-3' />
-                                )}
                                 {exchangeSelected.size > 0 ? (
                                   <Trans>
                                     Exchange ({exchangeSelected.size})
@@ -1008,13 +1003,10 @@ export function WordsGameView() {
                               <Button
                                 size='sm'
                                 onClick={handleSubmitMove}
+                                loading={moveMutation.isPending}
+                                icon={<Send className='size-4' />}
                                 disabled={!canSubmitMove}
                               >
-                                {moveMutation.isPending ? (
-                                  <Loader2 className='size-3 animate-spin' />
-                                ) : (
-                                  <Send className='size-4' />
-                                )}
                                 <Trans>Submit</Trans>
                               </Button>
                             </>
