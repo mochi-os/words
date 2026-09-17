@@ -971,9 +971,7 @@ export function WordsGameView() {
                                 onClick={handleExchangeConfirm}
                                 loading={exchangeMutation.isPending}
                                 icon={<ArrowLeftRight className='size-3' />}
-                                disabled={
-                                  exchangeSelected.size === 0
-                                }
+                                disabled={exchangeSelected.size === 0}
                               >
                                 {exchangeSelected.size > 0 ? (
                                   <Trans>
