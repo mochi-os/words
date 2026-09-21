@@ -9,6 +9,7 @@ import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Button,
   GameNewGameDialog,
+  Label,
   getErrorMessage,
   toast,
   type Person,
@@ -111,9 +112,9 @@ export function NewGame() {
       onSubmit={handleCreateGame}
       options={
         <div className='space-y-2'>
-          <label className='text-sm font-medium'>
+          <Label>
             <Trans>Language</Trans>
-          </label>
+          </Label>
           <div className='flex gap-2'>
             {languages.map((lang) => (
               <Button
