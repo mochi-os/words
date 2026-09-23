@@ -34,7 +34,7 @@
 		"-/validate": {"function": "action_validate_word"},
 
 		":game": {"file": "web/dist/index.html"},
-		":game/-/user/:user/asset/:asset": {"function": "action_user_asset", "public": true},
+		":game/-/user/:user/asset/:asset": {"function": "action_user_asset", "public": true, "asset": true},
 		":game/-/view": {"function": "action_view"},
 		":game/-/messages": {"function": "action_messages"},
 		":game/-/send": {"function": "action_send"},
