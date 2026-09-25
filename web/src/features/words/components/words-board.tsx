@@ -187,7 +187,7 @@ export function WordsBoard({
         // no idea where they sit. The grid roles give every square its
         // coordinates, so the board can be read row by row.
         role='grid'
-        aria-label={t`Board`}
+        aria-label={t({ message: 'Board', context: 'game board' })}
         aria-rowcount={BOARD_SIZE}
         aria-colcount={BOARD_SIZE}
         className='grid aspect-square w-full gap-px rounded border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-700'
