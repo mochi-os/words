@@ -97,6 +97,11 @@ msgstr "{count, plural, one {#דק} other {#דק}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#שב} other {#שב}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} עד {to}"
+
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: row + 1
 #: src/features/words/components/words-board.tsx
@@ -106,6 +111,15 @@ msgstr "{displayLetter} ב-{0}{1}"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "שם {entityLabel}"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} עד {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# נוסף} two {+# נוספים} many {+# נוספים} other {+# נוספים}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -272,6 +286,11 @@ msgstr "הוסף תצוגה"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "כל היום"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "לאפשר לכל אחד לחפש {entityLabel}"
@@ -338,6 +357,10 @@ msgstr "האם אתה בטוח שברצונך לפרוש? {opponentName} ינצ�
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "סדר עולה"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "בים"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -431,6 +454,10 @@ msgstr "צבע מסגרת"
 msgid "Browser notifications"
 msgstr "התראות דפדפן"
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "שרת יומנים"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "הרשאת המצלמה נדחתה"
@@ -500,6 +527,11 @@ msgstr "שונה"
 msgid "Changed {field}"
 msgstr "{field} שונה"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "מופע ששונה"
+
 #: src/features/words/index.tsx
 msgid "Chat"
 msgstr "צ'אט"
@@ -515,6 +547,10 @@ msgstr "בודק"
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "רשימת משימות"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "בחירת תאריך"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 msgid "Choose a game from the sidebar or start a new one."
@@ -590,6 +626,7 @@ msgid "Collapse sidebar"
 msgstr "צמצם סרגל צדדי"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "צבע"
 
@@ -676,6 +713,10 @@ msgstr "המשך"
 msgid "Continue with {label}"
 msgstr "המשך עם {label}"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "המשך עם {providerLabel}"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "הועתק"
@@ -684,6 +725,10 @@ msgstr "הועתק"
 msgid "Copied to clipboard"
 msgstr "הועתק ללוח"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "העתק"
@@ -978,6 +1023,10 @@ msgstr "משבצת ריקה {0}{1}"
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
 msgstr "מקום אריח ריק"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "מסתיים לפני שהתחיל"
 
 #: src/features/words/components/new-game.tsx
 msgid "English (UK)"
@@ -1464,6 +1513,10 @@ msgstr "פיקוח"
 msgid "Monday"
 msgstr "יום שני"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "חודש"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "אפשרויות נוספות"
@@ -1475,6 +1528,13 @@ msgstr "הועבר"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} הועבר"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "מעביר אל {0}"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1517,6 +1577,14 @@ msgstr "משחק חדש"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "התמונה הבאה"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "החודש הבא"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "השנה הבאה"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1805,6 +1873,14 @@ msgstr "פוסטים ותגובות"
 msgid "Previous image"
 msgstr "התמונה הקודמת"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "החודש הקודם"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "השנה הקודמת"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 msgid "Privacy"
@@ -1955,6 +2031,11 @@ msgstr "שנה שם עמודה"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "שנה את שם עמודת הלוח הזו"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "חוזר"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2625,11 +2706,15 @@ msgstr "יום רביעי"
 #: src/features/words/index.tsx
 #: src/features/words/index.tsx
 msgid "Words"
-msgstr "Words"
+msgstr "מילים"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Words formed"
 msgstr "מילים שנוצרו"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "שנה"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

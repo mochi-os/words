@@ -97,6 +97,11 @@ msgstr "{count, plural, one {#မိ} other {#မိ}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#ပတ်} other {#ပတ်}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day} {from} မှ {to}"
+
 #. placeholder {0}: String.fromCharCode(65 + col)
 #. placeholder {1}: row + 1
 #: src/features/words/components/words-board.tsx
@@ -106,6 +111,15 @@ msgstr "{0}{1} ၌ {displayLetter}"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel} အမည်"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} မှ {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, other {+# ခု ထပ်မံ}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -272,6 +286,11 @@ msgstr "ကြည့်ရှုမှု ထည့်မည်"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "တစ်နေကုန်"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "{entityLabel} ကို မည်သူမဆို ရှာဖွေခွင့်ပြုပါ"
@@ -338,6 +357,10 @@ msgstr "လက်လျှော့မှာသေချာပါသလား? {
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "ငယ်စဉ်ကြီးလိုက်"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "ပင်လယ်ပြင်တွင်"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -431,6 +454,10 @@ msgstr "ဘောင်အရောင်"
 msgid "Browser notifications"
 msgstr "Browser အကြောင်းကြားချက်များ"
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "ပြက္ခဒိန် ဆာဗာ"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "ကင်မရာခွင့်ပြုချက်ကို ငြင်းပယ်ခဲ့သည်"
@@ -500,6 +527,11 @@ msgstr "ပြောင်းလဲခဲ့သည်"
 msgid "Changed {field}"
 msgstr "{field} ကို ပြောင်းလဲခဲ့သည်"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "ပြောင်းလဲထားသော အကြိမ်"
+
 #: src/features/words/index.tsx
 msgid "Chat"
 msgstr "စကားပြောခန်း"
@@ -515,6 +547,10 @@ msgstr "စစ်ဆေးနေသည်"
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "Checklist"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "ရက်စွဲ ရွေးပါ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 msgid "Choose a game from the sidebar or start a new one."
@@ -590,6 +626,7 @@ msgid "Collapse sidebar"
 msgstr "ဘေးဘား ခေါက်မည်"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "အရောင်"
 
@@ -676,6 +713,10 @@ msgstr "ဆက်လက်လုပ်ဆောင်မည်"
 msgid "Continue with {label}"
 msgstr "{label} ဖြင့် ဆက်လက်လုပ်ဆောင်ပါ"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "{providerLabel} ဖြင့် ဆက်လုပ်မည်"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "ကူးယူပြီးပါပြီ"
@@ -684,6 +725,10 @@ msgstr "ကူးယူပြီးပါပြီ"
 msgid "Copied to clipboard"
 msgstr "ကလစ်ဘုတ်သို့ ကူးပြီး"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "ကူးမည်"
@@ -978,6 +1023,10 @@ msgstr "ကွက်လပ် {0}{1}"
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
 msgstr "ကြွေပြားနေရာ ဗလာ"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "မစတင်မီ ပြီးဆုံးသည်"
 
 #: src/features/words/components/new-game.tsx
 msgid "English (UK)"
@@ -1464,6 +1513,10 @@ msgstr "စိစစ်မှု"
 msgid "Monday"
 msgstr "တနင်္လာ"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "လ"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "နောက်ထပ် ရွေးချယ်စရာများ"
@@ -1475,6 +1528,13 @@ msgstr "ရွှေ့ခဲ့သည်"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} ကို ရွှေ့ခဲ့သည်"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "{0} သို့ ရွှေ့နေသည်"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1517,6 +1577,14 @@ msgstr "ဂိမ်းအသစ်"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "နောက်ပုံ"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "နောက်လ"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "နောက်နှစ်"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1805,6 +1873,14 @@ msgstr "ပို့စ်နှင့် comment များ"
 msgid "Previous image"
 msgstr "ယခင်ပုံ"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "ယခင်လ"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "ယခင်နှစ်"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 msgid "Privacy"
@@ -1955,6 +2031,11 @@ msgstr "ကော်လံ အမည်ပြောင်း"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "ဤ board column ကို အမည်ပြောင်း"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "ထပ်ခါထပ်ခါ ဖြစ်သည်"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2625,11 +2706,15 @@ msgstr "ဗုဒ္ဓဟူး"
 #: src/features/words/index.tsx
 #: src/features/words/index.tsx
 msgid "Words"
-msgstr "Words"
+msgstr "စကားလုံးများ"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Words formed"
 msgstr "ဖွဲ့စည်းထားသော Words များ"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "နှစ်"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx
