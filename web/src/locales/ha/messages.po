@@ -26,6 +26,11 @@ msgstr "(an gyara)"
 msgid "(expand)"
 msgstr "(faɗaɗa)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Babu take)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(kai)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Sunan {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} zuwa {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# ƙari} other {+# ƙari}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Ƙara abokai"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Ƙara abokai a app ɗin People don fara wasa"
+msgstr "Ƙara abokai a app ɗin Mutane don fara wasa"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -314,7 +316,7 @@ msgstr "An samu kuskuren da ba a zata ba"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Android push"
+msgstr "Tura ta Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -389,7 +391,7 @@ msgstr "Gajerun hanyoyi na keyboard da ake samu"
 
 #: ../../../lib/web/src/components/entity-avatar.tsx
 msgid "Avatar"
-msgstr "Avatar"
+msgstr "Hoton bayanin martaba"
 
 #: ../../../lib/web/src/components/entity-avatar.tsx
 msgid "Avatar for {name}"
@@ -407,7 +409,7 @@ msgstr "Komawa gida"
 #: ../../../lib/web/src/components/banner-section.tsx
 #: ../../../lib/web/src/components/entity-banner.tsx
 msgid "Banner"
-msgstr "Banner"
+msgstr "Tuta"
 
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Banner removed"
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Yana toshe"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Allo"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Allon wasa"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -509,6 +515,11 @@ msgstr "Soke amsa"
 msgid "Cancelled"
 msgstr "An soke"
 
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "An soke"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 msgid "Caption"
@@ -538,11 +549,11 @@ msgstr "Maimaicin da aka canza"
 
 #: src/features/words/index.tsx
 msgid "Chat"
-msgstr "Chat"
+msgstr "Tattaunawa"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checkbox"
-msgstr "Checkbox"
+msgstr "Akwatin zaɓi"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Checking"
@@ -550,7 +561,7 @@ msgstr "Ana dubawa"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
-msgstr "Checklist"
+msgstr "Jerin dubawa"
 
 #: ../../../lib/web/src/components/ui/date-picker.tsx
 msgid "Choose a date"
@@ -815,7 +826,7 @@ msgstr "Ƙi"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Default"
-msgstr "Default"
+msgstr "Tsoho"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx
 msgid "Default AI account"
@@ -1295,7 +1306,7 @@ msgstr "Komawa baya"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx
 msgid "Group"
-msgstr "Group"
+msgstr "Ƙungiya"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Group by"
@@ -1336,7 +1347,7 @@ msgstr "Mai duba hoto: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "Tsarin Birtaniya"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1356,7 +1367,7 @@ msgstr "Sha'awa {weight}"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Interests"
-msgstr "Interests"
+msgstr "Abubuwan sha'awa"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Invalid date"
@@ -1394,7 +1405,7 @@ msgstr "Babba"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Layout"
-msgstr "Layout"
+msgstr "Tsari"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Letters, numbers, spaces, hyphens, and slashes only"
@@ -1406,15 +1417,15 @@ msgstr "Haske"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Link"
-msgstr "Hanya"
+msgstr "Hanyar haɗi"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
-msgstr "Links"
+msgstr "Hanyoyin haɗi"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "List"
-msgstr "List"
+msgstr "Jeri"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx
 msgid "Load more"
@@ -1488,7 +1499,7 @@ msgstr "Membobi"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "Menu"
-msgstr "Menu"
+msgstr "Jeri"
 
 #: ../../../lib/web/src/components/game/game-chat-input.tsx
 msgid "Message"
@@ -1496,7 +1507,7 @@ msgstr "Saƙo"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Metric"
-msgstr "Metric"
+msgstr "Tsarin metrik"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Microphone permission denied"
@@ -1508,7 +1519,7 @@ msgstr "Mafi ƙarancin tsawo"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Mochi web"
-msgstr "Mochi web"
+msgstr "Yanar gizon Mochi"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Moderation"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Kuskuren hanyar sadarwa"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Sabon"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Mafi sabo"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "Ba a sami komai ba"
 msgid "Notifications: {0}"
 msgstr "Sanarwa: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Lamba"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Lamba"
 
@@ -1812,7 +1831,7 @@ msgstr "Iyaye"
 
 #: src/features/words/index.tsx
 msgid "Pass"
-msgstr "Pass"
+msgstr "Wuce"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Passkey"
@@ -1845,7 +1864,7 @@ msgstr "Wurin sanyawa ya wuce iyakar allo"
 
 #: src/features/words/lib/header-model.ts
 msgid "Player {playerNumber}"
-msgstr "Player {playerNumber}"
+msgstr "Ɗan wasa {playerNumber}"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 #: ../../../lib/web/src/features/errors/general-error.tsx
@@ -1976,6 +1995,11 @@ msgstr "Dacewa {relevance}, sha'awa {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Sake wasa"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Tunatarwa"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2255,7 +2279,7 @@ msgstr "Serif"
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "Server error"
-msgstr "Kuskuren saba"
+msgstr "Kuskuren sabar"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2294,11 +2318,11 @@ msgstr "Ana nuna {totalShown} daga {total}"
 
 #: src/features/words/index.tsx
 msgid "Shuffle rack"
-msgstr "Shuffle rack"
+msgstr "Gauraya allo"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Sidebar"
-msgstr "Sidebar"
+msgstr "Sandar gefe"
 
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
@@ -2358,7 +2382,7 @@ msgstr "Daina kallo"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Batu"
+msgstr "Mai amfani ko ƙungiya"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,11 +2411,15 @@ msgstr "Lahadi"
 msgid "Switch to view 1-9"
 msgstr "Sauya zuwa ra'ayi 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx
 #: ../../../lib/web/src/lib/preference-utils.ts
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "System"
-msgstr "System"
+msgstr "Tsari"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx
+msgctxt "actor"
+msgid "System"
+msgstr "Tsarin"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tag already exists"
@@ -2405,6 +2433,11 @@ msgstr "Tag dole ne ya kasance haruffa 50 ko ƙasa"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Alamomi"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Na wucin gadi"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Buƙatu sun yi yawa"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Sama"
+msgstr "Mafi kyau"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2672,7 +2705,7 @@ msgstr "Kalla kuma gyara cikakkun bayanan abu"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "View controls"
-msgstr "View controls"
+msgstr "Sarrafa kallo"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Voice recording is not supported in this browser"

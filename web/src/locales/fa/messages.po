@@ -26,6 +26,11 @@ msgstr "(ویرایش‌شده)"
 msgid "(expand)"
 msgstr "(باز کردن)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(بدون عنوان)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(شما)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "نام {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} تا {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# مورد دیگر} other {+# مورد دیگر}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "افزودن دوستان"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "برای شروع بازی، در برنامهٔ People دوست اضافه کنید"
+msgstr "برای شروع بازی، در برنامهٔ «افراد» دوست اضافه کنید"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -377,7 +379,7 @@ msgstr "پیوست فایل‌های پاسخ"
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Authenticated users"
-msgstr "کاربران احرازهویت‌شده"
+msgstr "کاربران احراز هویت‌شده"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "بلوک‌ها"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "تخته"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "صفحهٔ بازی"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -509,6 +515,11 @@ msgstr "لغو پاسخ"
 msgid "Cancelled"
 msgstr "لغو شد"
 
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "لغوشده"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 msgid "Caption"
@@ -538,7 +549,7 @@ msgstr "رخداد تغییریافته"
 
 #: src/features/words/index.tsx
 msgid "Chat"
-msgstr "گفت‌وگو"
+msgstr "چت"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checkbox"
@@ -1187,7 +1198,7 @@ msgstr "ارسال دیدگاه ناموفق بود"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to reset prompt"
-msgstr "بازنشانی prompt ناموفق بود"
+msgstr "بازنشانی پرامپت ناموفق بود"
 
 #: src/features/words/index.tsx
 msgid "Failed to resign"
@@ -1203,7 +1214,7 @@ msgstr "ذخیره ناموفق بود"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
-msgstr "ذخیره prompt ناموفق بود"
+msgstr "ذخیره پرامپت ناموفق بود"
 
 #: src/features/words/index.tsx
 msgid "Failed to send"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "خطای شبکه"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "جدید"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "جدیدترین"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "چیزی یافت نشد"
 msgid "Notifications: {0}"
 msgstr "اعلان‌ها: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "شماره"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "شماره"
 
@@ -1897,7 +1916,7 @@ msgstr "در حال پردازش…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "Prompt ذخیره شد"
+msgstr "پرامپت ذخیره شد"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -1976,6 +1995,11 @@ msgstr "ارتباط {relevance}، علاقه {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "بازی مجدد"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "یادآور"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2341,7 +2365,7 @@ msgstr "این خانه از قبل اشغال شده است"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "شروع بازی Words جدید"
+msgstr "شروع بازی کلمات جدید"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "توقف تماشا"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "موضوع"
+msgstr "کاربر یا گروه"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "یکشنبه"
 msgid "Switch to view 1-9"
 msgstr "تغییر به نمای ۱ تا ۹"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "سیستم"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "سیستم"
 
@@ -2405,6 +2433,11 @@ msgstr "برچسب باید ۵۰ نویسه یا کمتر باشد"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "برچسب‌ها"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "قطعی نشده"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "درخواست‌های بیش از حد"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "بالا"
+msgstr "برترین"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

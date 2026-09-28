@@ -26,6 +26,11 @@ msgstr "(modifié)"
 msgid "(expand)"
 msgstr "(développer)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Sans titre)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(vous)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Nom du {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "de {from} à {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# autre} other {+# autres}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -202,7 +204,7 @@ msgstr "Type de compte"
 
 #: src/components/layout/words-layout.tsx
 msgid "Active games"
-msgstr "Parties actives"
+msgstr "Parties en cours"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Activity"
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Bloque"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Tableau"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Plateau"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -509,6 +515,11 @@ msgstr "Annuler la réponse"
 msgid "Cancelled"
 msgstr "Annulé"
 
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "Annulé"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 msgid "Caption"
@@ -538,7 +549,7 @@ msgstr "Occurrence modifiée"
 
 #: src/features/words/index.tsx
 msgid "Chat"
-msgstr "Chat"
+msgstr "Messagerie"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checkbox"
@@ -550,7 +561,7 @@ msgstr "Vérification"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
-msgstr "Checklist"
+msgstr "Liste de contrôle"
 
 #: ../../../lib/web/src/components/ui/date-picker.tsx
 msgid "Choose a date"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Erreur réseau"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Nouveau"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Récent"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "Rien trouvé"
 msgid "Notifications: {0}"
 msgstr "Notifications : {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Nombre"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Numéro"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1976,6 +1995,11 @@ msgstr "Pertinence {relevance}, intérêt {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Revanche"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Rappel"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2358,7 +2382,7 @@ msgstr "Arrêter de suivre"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Sujet"
+msgstr "Utilisateur ou groupe"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Dimanche"
 msgid "Switch to view 1-9"
 msgstr "Basculer vers la vue 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Système"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Système"
 
@@ -2405,6 +2433,11 @@ msgstr "L'étiquette ne doit pas dépasser 50 caractères"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Étiquettes"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Provisoire"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx

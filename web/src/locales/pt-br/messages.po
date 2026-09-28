@@ -26,6 +26,11 @@ msgstr "(editado)"
 msgid "(expand)"
 msgstr "(expandir)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Sem título)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(você)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Nome do {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "de {from} a {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# mais} other {+# mais}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Bloqueia"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Quadro"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Tabuleiro"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "Cancelar resposta"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Cancelado"
 
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Erro de rede"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Novo"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Recentes"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "Nada encontrado"
 msgid "Notifications: {0}"
 msgstr "Notificações: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Número"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Número"
 
@@ -1977,6 +1996,11 @@ msgstr "Relevância {relevance}, interesse {weight}"
 msgid "Rematch"
 msgstr "Revanche"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Lembrete"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "Pesquisando..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Selecionar"
+msgstr "Seleção"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Parar de observar"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Assunto"
+msgstr "Usuário ou grupo"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Domingo"
 msgid "Switch to view 1-9"
 msgstr "Mudar para visualização 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Sistema"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Sistema"
 
@@ -2405,6 +2433,11 @@ msgstr "A tag deve ter 50 caracteres ou menos"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Tags"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Provisório"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Muitas solicitações"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Topo"
+msgstr "Melhores"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

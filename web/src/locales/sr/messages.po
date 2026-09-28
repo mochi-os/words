@@ -26,6 +26,11 @@ msgstr "(измењено)"
 msgid "(expand)"
 msgstr "(прошири)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Без наслова)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(ви)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Назив {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "од {from} до {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# више} few {+# више} other {+# више}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Додај пријатеље"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Додајте пријатеље у апликацији People да започнете игру"
+msgstr "Додајте пријатеље у апликацији Особе да започнете игру"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -314,7 +316,7 @@ msgstr "Дошло је до неочекиване грешке"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Push за Android"
+msgstr "Пуш за Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -381,7 +383,7 @@ msgstr "Аутентификовани корисници"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "Authenticator код"
+msgstr "Код аутентификатора"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Блокови"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Табла"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Табла за игру"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "Откажи одговор"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Отказано"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Отказано"
 
@@ -1472,7 +1483,7 @@ msgstr "Максимално 3 противника"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Maximum length"
-msgstr "Najveća dužina"
+msgstr "Највећа дужина"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "MCP server"
@@ -1504,7 +1515,7 @@ msgstr "Дозвола за микрофон је одбијена"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Minimum length"
-msgstr "Najmanja dužina"
+msgstr "Најмања дужина"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Mochi web"
@@ -1547,19 +1558,19 @@ msgstr "Премештање на {0}"
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Name"
-msgstr "Име"
+msgstr "Назив"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name cannot contain < or > characters"
-msgstr "Име не може да садржи знакове < или >"
+msgstr "Назив не може да садржи знакове < или >"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name is required"
-msgstr "Име је обавезно"
+msgstr "Назив је обавезан"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name must be 1000 characters or less"
-msgstr "Име мора имати 1000 знакова или мање"
+msgstr "Назив мора имати 1000 знакова или мање"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Грешка мреже"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Ново"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Најновије"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "Ништа није пронађено"
 msgid "Notifications: {0}"
 msgstr "Обавештења: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Број"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Број"
 
@@ -1833,7 +1852,7 @@ msgstr "Passkey-еви нису доступни у овом прегледач�
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
-msgstr "Šablon (regex)"
+msgstr "Шаблон (regex)"
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "People"
@@ -1897,7 +1916,7 @@ msgstr "Обрада…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "Prompt сачуван"
+msgstr "Упит сачуван"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -1905,7 +1924,7 @@ msgstr "Својства"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Push notification"
-msgstr "Push обавештење"
+msgstr "Пуш обавештење"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Raised"
@@ -1976,6 +1995,11 @@ msgstr "Релевантност {relevance}, интересовање {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Реванш"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Подсетник"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "Претраживање..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Изабери"
+msgstr "Избор"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2274,7 +2298,7 @@ msgstr "Постави полазиште и одредиште"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Settings"
-msgstr "Поставке"
+msgstr "Подешавања"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Show classes"
@@ -2341,7 +2365,7 @@ msgstr "Поље је већ заузето"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "Започни нову Words партију"
+msgstr "Започни нову партију Речи"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "Престани да пратиш"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Тема"
+msgstr "Корисник или група"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Недеља"
 msgid "Switch to view 1-9"
 msgstr "Пребаци на приказ 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Систем"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Систем"
 
@@ -2405,6 +2433,11 @@ msgstr "Ознака сме имати највише 50 знакова"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Ознаке"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Непотврђено"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2442,7 +2475,7 @@ msgstr "На захтев за микрофон није одговорено"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "На захтев за passkey није одговорено"
+msgstr "На захтев за приступни кључ није одговорено"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2454,7 +2487,7 @@ msgstr "Сервер је вратио веб страницу уместо по
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "Овој апликацији није дозвољено да користи ваш passkey. Дозволите јој то у Подешавањима, под Дозволе."
+msgstr "Овој апликацији није дозвољено да користи ваш приступни кључ. Дозволите јој то у Подешавањима, под Дозволе."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2513,7 +2546,7 @@ msgstr "Превише захтева"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Врх"
+msgstr "Најбоље"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

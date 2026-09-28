@@ -26,6 +26,11 @@ msgstr "(đã chỉnh sửa)"
 msgid "(expand)"
 msgstr "(mở rộng)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Không có tiêu đề)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(bạn)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Tên {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} đến {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, other {+# nữa}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Thêm bạn"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Thêm bạn trong ứng dụng People để bắt đầu chơi"
+msgstr "Thêm bạn trong ứng dụng Mọi người để bắt đầu chơi"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Chặn"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Bảng"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Bàn chơi"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "Hủy phản hồi"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Đã hủy"
 
@@ -1508,7 +1519,7 @@ msgstr "Độ dài tối thiểu"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Mochi web"
-msgstr "Mochi web"
+msgstr "Web Mochi"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Moderation"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Lỗi mạng"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Mới"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Mới nhất"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "Không tìm thấy gì"
 msgid "Notifications: {0}"
 msgstr "Thông báo: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Số"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Số"
 
@@ -1977,6 +1996,11 @@ msgstr "Mức liên quan {relevance}, mức quan tâm {weight}"
 msgid "Rematch"
 msgstr "Đấu lại"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Lời nhắc"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "Đang tìm kiếm..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Chọn"
+msgstr "Lựa chọn"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Ngừng theo dõi"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Tiêu đề"
+msgstr "Người dùng hoặc nhóm"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Chủ nhật"
 msgid "Switch to view 1-9"
 msgstr "Chuyển sang chế độ xem 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Hệ thống"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Hệ thống"
 
@@ -2405,6 +2433,11 @@ msgstr "Thẻ phải có tối đa 50 ký tự"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Các thẻ"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Chưa chắc chắn"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Quá nhiều yêu cầu"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Đầu"
+msgstr "Hàng đầu"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

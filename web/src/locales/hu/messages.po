@@ -26,6 +26,11 @@ msgstr "(szerkesztve)"
 msgid "(expand)"
 msgstr "(kibontás)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Nincs cím)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(te)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel} neve"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} és {to} között"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# további} other {+# további}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Barátok hozzáadása"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "A játék megkezdéséhez vegyen fel barátokat az Emberek alkalmazásban"
+msgstr "A játék megkezdéséhez vegyen fel barátokat a Személyek alkalmazásban"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -314,7 +316,7 @@ msgstr "Váratlan hiba történt"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Android push"
+msgstr "Android push értesítés"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Blokkolja"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Tábla"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Játéktábla"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -509,6 +515,11 @@ msgstr "Válasz elvetése"
 msgid "Cancelled"
 msgstr "Visszavonva"
 
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "Lemondva"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 msgid "Caption"
@@ -538,7 +549,7 @@ msgstr "Módosított előfordulás"
 
 #: src/features/words/index.tsx
 msgid "Chat"
-msgstr "Chat"
+msgstr "Csevegés"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checkbox"
@@ -1336,7 +1347,7 @@ msgstr "Képnézegető: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "Angolszász"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1459,7 +1470,7 @@ msgstr "Kategóriák kezelése"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "Manual"
-msgstr "Kézikönyv"
+msgstr "Kézi"
 
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Hálózati hiba"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Új"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Legújabb"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "Semmi sem található"
 msgid "Notifications: {0}"
 msgstr "Értesítések: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Szám"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Sorszám"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1976,6 +1995,11 @@ msgstr "Relevancia: {relevance}, érdeklődés: {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Visszavágó"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Emlékeztető"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2358,7 +2382,7 @@ msgstr "Figyelés leállítása"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Tárgy"
+msgstr "Felhasználó vagy csoport"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Vasárnap"
 msgid "Switch to view 1-9"
 msgstr "Váltás 1-9 nézetre"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Rendszer"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Rendszer"
 
@@ -2405,6 +2433,11 @@ msgstr "A címke legfeljebb 50 karakter lehet"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Címkék"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Előzetes"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Túl sok kérés"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Eleje"
+msgstr "Legjobbak"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

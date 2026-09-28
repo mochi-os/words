@@ -26,6 +26,11 @@ msgstr "(breytt)"
 msgid "(expand)"
 msgstr "(útvíkka)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Enginn titill)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(þú)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Nafn {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} til {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# til viðbótar} other {+# til viðbótar}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "Lokar"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "Borð"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "Borð"
 
@@ -508,6 +514,11 @@ msgstr "Hætta við svar"
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Cancelled"
 msgstr "Hætt við"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "Aflýst"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -938,7 +949,7 @@ msgstr "Aftengt"
 #: ../../../lib/web/src/components/restore-banner.tsx
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Dismiss"
-msgstr "Hafna"
+msgstr "Hunsa"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Displays the mobile sidebar."
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Netvilla"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Nýtt"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Nýjast"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "Ekkert fundið"
 msgid "Notifications: {0}"
 msgstr "Tilkynningar: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Tala"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Númer"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1977,6 +1996,11 @@ msgstr "Mikilvægi {relevance}, áhugi {weight}"
 msgid "Rematch"
 msgstr "Endurleikur"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Áminning"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "Leita..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Velja"
+msgstr "Val"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Hætta að fylgjast með"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Efni"
+msgstr "Notandi eða hópur"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Sunnudagur"
 msgid "Switch to view 1-9"
 msgstr "Skipta yfir í sýn 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Kerfi"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Kerfi"
 
@@ -2405,6 +2433,11 @@ msgstr "Merkið má mest vera 50 stafir"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Merki"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Bráðabirgða"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Of margar beiðnir"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Efst"
+msgstr "Hæst metið"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

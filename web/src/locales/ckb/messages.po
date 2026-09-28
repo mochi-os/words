@@ -26,6 +26,11 @@ msgstr "(دەستکاریکراو)"
 msgid "(expand)"
 msgstr "(فراوانکردن)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(بێ ناونیشان)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(تۆ)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "ناوی {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "لە {from} بۆ {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# زیاتر} other {+# زیاتر}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "بلۆکەکان"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "تەختە"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "تەختە"
 
@@ -509,6 +515,11 @@ msgstr "هەڵوەشاندنەوەی وەڵام"
 msgid "Cancelled"
 msgstr "هەڵوەشێنرایەوە"
 
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "هەڵوەشێنراوە"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 msgid "Caption"
@@ -538,7 +549,7 @@ msgstr "ڕوودانی گۆڕاو"
 
 #: src/features/words/index.tsx
 msgid "Chat"
-msgstr "گفتوگۆ"
+msgstr "چات"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checkbox"
@@ -1142,7 +1153,7 @@ msgstr "گۆڕینەوە سەرکەوتوو نەبوو"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Failed to get RSS token"
-msgstr "وەرگرتنی Token ـی RSS سەرکەوتوو نەبوو"
+msgstr "وەرگرتنی تۆکنی RSS سەرکەوتوو نەبوو"
 
 #: ../../../lib/web/src/hooks/use-load-more.ts
 msgid "Failed to load"
@@ -1187,7 +1198,7 @@ msgstr "ناردنی بۆچوون سەرکەوتوو نەبوو"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to reset prompt"
-msgstr "ڕێکخستنەوەی Prompt سەرکەوتوو نەبوو"
+msgstr "ڕێکخستنەوەی پرۆمپت سەرکەوتوو نەبوو"
 
 #: src/features/words/index.tsx
 msgid "Failed to resign"
@@ -1203,7 +1214,7 @@ msgstr "پاشەکەوتکردن سەرکەوتوو نەبوو"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
-msgstr "پاشەکەوتکردنی Prompt سەرکەوتوو نەبوو"
+msgstr "پاشەکەوتکردنی پرۆمپت سەرکەوتوو نەبوو"
 
 #: src/features/words/index.tsx
 msgid "Failed to send"
@@ -1377,7 +1388,7 @@ msgstr "وردەکارییەکانی بڕگە"
 
 #: ../../../lib/web/src/lib/locale-format.ts
 msgid "Just now"
-msgstr "ئێستا"
+msgstr "هەر ئێستا"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Keyboard shortcuts"
@@ -1488,7 +1499,7 @@ msgstr "ئەندامەکان"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "Menu"
-msgstr "Menu"
+msgstr "مێنیو"
 
 #: ../../../lib/web/src/components/game/game-chat-input.tsx
 msgid "Message"
@@ -1496,7 +1507,7 @@ msgstr "پەیام"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Metric"
-msgstr "Metric"
+msgstr "مەتری"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Microphone permission denied"
@@ -1524,7 +1535,7 @@ msgstr "مانگ"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
-msgstr "هەڵبژاردنی زیاتر"
+msgstr "بژاردەی زیاتر"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "هەڵەی تۆڕ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "نوێ"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "نوێترین"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "هیچ نەدۆزرایەوە"
 msgid "Notifications: {0}"
 msgstr "ئاگادارکردنەوەکان: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "ژمارە"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "ژمارە"
 
@@ -1837,7 +1856,7 @@ msgstr "نموونە (regex)"
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "People"
-msgstr "کەسەکان"
+msgstr "خەڵک"
 
 #: src/features/words/index.tsx
 msgid "Placement out of bounds"
@@ -1976,6 +1995,11 @@ msgstr "پەیوەندیدارێتی {relevance}، ئارەزوو {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "یاری دووبارە"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "بیرخەرەوە"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2358,7 +2382,7 @@ msgstr "وازبهێنە لە چاودێری"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "بابەت"
+msgstr "بەکارهێنەر یان گرووپ"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "یەکشەممە"
 msgid "Switch to view 1-9"
 msgstr "بگۆڕە بۆ پیشاندانی ١-٩"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "سیستەم"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "سیستەم"
 
@@ -2405,6 +2433,11 @@ msgstr "تاگ دەبێت ٥٠ پیت یان کەمتر بێت"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "تاگەکان"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "کاتی"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "داواکاری زۆر زیاد"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "سەرەوە"
+msgstr "باشترین"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

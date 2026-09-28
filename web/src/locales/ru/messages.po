@@ -26,6 +26,11 @@ msgstr "(изменено)"
 msgid "(expand)"
 msgstr "(развернуть)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Без названия)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(вы)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Название {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "с {from} до {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# ещё} few {+# ещё} many {+# ещё} other {+# ещё}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Добавить друзей"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Добавьте друзей в приложении People, чтобы начать играть"
+msgstr "Добавьте друзей в приложении «Люди», чтобы начать играть"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Блокирует"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Доска"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Игровое поле"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "Отменить ответ"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Отменено"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Отменено"
 
@@ -1547,19 +1558,19 @@ msgstr "Перемещение на {0}"
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Name"
-msgstr "Имя"
+msgstr "Название"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name cannot contain < or > characters"
-msgstr "Имя не может содержать символы < или >"
+msgstr "Название не может содержать символы < или >"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name is required"
-msgstr "Требуется имя"
+msgstr "Требуется название"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name must be 1000 characters or less"
-msgstr "Имя должно быть не длиннее 1000 символов"
+msgstr "Название должно быть не длиннее 1000 символов"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Ошибка сети"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Новый"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Новые"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "Ничего не найдено"
 msgid "Notifications: {0}"
 msgstr "Уведомления: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Число"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Номер"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1829,7 +1848,7 @@ msgstr "Ключи доступа"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys недоступны в этом браузере"
+msgstr "Ключи доступа недоступны в этом браузере"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
@@ -1976,6 +1995,11 @@ msgstr "Релевантность {relevance}, интерес {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Реванш"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Напоминание"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "Поиск..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Выбрать"
+msgstr "Выбор"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "Клетка уже занята"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "Начать новую игру Words"
+msgstr "Начать новую игру в Слова"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "Прекратить отслеживание"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Тема"
+msgstr "Пользователь или группа"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Воскресенье"
 msgid "Switch to view 1-9"
 msgstr "Перейти к виду 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Система"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Система"
 
@@ -2405,6 +2433,11 @@ msgstr "Тег должен быть не длиннее 50 символов"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Теги"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Под вопросом"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2442,7 +2475,7 @@ msgstr "Запрос микрофона остался без ответа"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Запрос passkey остался без ответа"
+msgstr "Запрос ключа доступа остался без ответа"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2454,7 +2487,7 @@ msgstr "Сервер вернул веб-страницу вместо данн�
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "Этому приложению не разрешено использовать ваш passkey. Разрешите это в Настройках, в разделе Разрешения."
+msgstr "Этому приложению не разрешено использовать ваш ключ доступа. Разрешите это в Настройках, в разделе Разрешения."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2513,7 +2546,7 @@ msgstr "Слишком много запросов"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Верх"
+msgstr "Лучшее"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

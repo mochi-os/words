@@ -26,6 +26,11 @@ msgstr "(disunting)"
 msgid "(expand)"
 msgstr "(kembangkan)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Tiada tajuk)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(anda)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Nama {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} hingga {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, other {+# lagi}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Tambah rakan"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Tambah rakan dalam apl People untuk mula bermain"
+msgstr "Tambah rakan dalam apl Orang untuk mula bermain"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "Sekat"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "Papan"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "Papan"
 
@@ -506,6 +512,11 @@ msgstr "Batal balasan"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Dibatalkan"
 
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Ralat rangkaian"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Baharu"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Terbaharu"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "Tiada apa-apa dijumpai"
 msgid "Notifications: {0}"
 msgstr "Pemberitahuan: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Nombor"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Nombor"
 
@@ -1977,6 +1996,11 @@ msgstr "Kaitan {relevance}, minat {weight}"
 msgid "Rematch"
 msgstr "Lawan semula"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Peringatan"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "Sedang mencari..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Pilih"
+msgstr "Pilihan"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Berhenti memerhati"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Subjek"
+msgstr "Pengguna atau kumpulan"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Ahad"
 msgid "Switch to view 1-9"
 msgstr "Tukar ke paparan 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Sistem"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Sistem"
 
@@ -2405,6 +2433,11 @@ msgstr "Tag mestilah 50 aksara atau kurang"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Tag"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Sementara"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Terlalu banyak permintaan"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Atas"
+msgstr "Teratas"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2712,7 +2745,7 @@ msgstr "Rabu"
 #: src/features/words/index.tsx
 #: src/features/words/index.tsx
 msgid "Words"
-msgstr "Kata"
+msgstr "Perkataan"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Words formed"

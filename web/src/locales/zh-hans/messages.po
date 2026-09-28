@@ -26,6 +26,11 @@ msgstr "(已编辑)"
 msgid "(expand)"
 msgstr "(展开)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "（无标题）"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(你)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel}名称"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} 至 {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, other {+# 个}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "添加好友"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "在人脉应用中添加好友即可开始游戏"
+msgstr "在联系人应用中添加好友即可开始游戏"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "阻止"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "棋盘"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "棋盘"
 
@@ -506,6 +512,11 @@ msgstr "取消回复"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "已取消"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "已取消"
 
@@ -861,7 +872,7 @@ msgstr "删除游戏"
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "Delete game?"
-msgstr "删除对局?"
+msgstr "删除对局？"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "网络错误"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "新建"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "最新"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "未找到任何内容"
 msgid "Notifications: {0}"
 msgstr "通知：{0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "数字"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "编号"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1976,6 +1995,11 @@ msgstr "相关性 {relevance}，兴趣 {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "再来一局"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "提醒"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2341,7 +2365,7 @@ msgstr "该格已被占用"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "开始新 Words 对局"
+msgstr "开始新拼字对局"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "停止关注"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "主题"
+msgstr "对象"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "星期日"
 msgid "Switch to view 1-9"
 msgstr "切换到视图 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "系统"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "系统"
 
@@ -2405,6 +2433,11 @@ msgstr "标签不得超过 50 个字符"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "标签"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "暂定"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "请求次数过多"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "顶部"
+msgstr "最佳"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2712,7 +2745,7 @@ msgstr "星期三"
 #: src/features/words/index.tsx
 #: src/features/words/index.tsx
 msgid "Words"
-msgstr "词语"
+msgstr "拼字"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Words formed"

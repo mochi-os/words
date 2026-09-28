@@ -26,6 +26,11 @@ msgstr "(ተሻሽሏል)"
 msgid "(expand)"
 msgstr "(አስፋ)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(ርዕስ የለም)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(እርስዎ)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "የ{entityLabel} ስም"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "ከ{from} እስከ {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# ተጨማሪ} other {+# ተጨማሪ}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -327,7 +329,7 @@ msgstr "የገባ ማንኛውም ሰው"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
-msgstr "በዚህ ምግብ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።"
+msgstr "በዚህ ፊድ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "ይገድባል"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "ሰሌዳ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "የጨዋታ ሰሌዳ"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -460,7 +466,7 @@ msgstr "የአሳሽ ማሳወቂያዎች"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Calendar server"
-msgstr "የቀን መቁጠሪያ ሰርቨር"
+msgstr "የቀን መቁጠሪያ አገልጋይ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
@@ -506,6 +512,11 @@ msgstr "ምላሽ ሰርዝ"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "ተሰርዟል"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "ተሰርዟል"
 
@@ -938,7 +949,7 @@ msgstr "ተቋርጧል"
 #: ../../../lib/web/src/components/restore-banner.tsx
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Dismiss"
-msgstr "አጥፋ"
+msgstr "ዝጋ"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Displays the mobile sidebar."
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "የአውታረ መረብ ስህተት"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "አዲስ"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "አዳዲስ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "ምንም አልተገኘም"
 msgid "Notifications: {0}"
 msgstr "ማሳወቂያዎች፦ {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "ቁጥር"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "ቁጥር"
 
@@ -1816,12 +1835,12 @@ msgstr "አስተላልፍ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Passkey"
-msgstr "የይለፍ ቁልፍ"
+msgstr "ፓስኪ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkey verification failed. Please try again."
-msgstr "የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
+msgstr "ፓስኪ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
@@ -1976,6 +1995,11 @@ msgstr "አግባብነት {relevance}፣ ፍላጎት {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "እንደገና ተወዳደር"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "አስታዋሽ"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "በመፈለግ ላይ..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "ይምረጡ"
+msgstr "ምርጫ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "ካሬው አስቀድሞ ተይዟል"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "አዲስ የWords ጨዋታ ይጀምሩ"
+msgstr "አዲስ የቃላት ጨዋታ ይጀምሩ"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "መከታተል አቁም"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "ርዕሰ ጉዳይ"
+msgstr "ተጠቃሚ ወይም ቡድን"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,11 +2411,15 @@ msgstr "እሁድ"
 msgid "Switch to view 1-9"
 msgstr "ወደ ዕይታ 1-9 ቀይር"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx
 #: ../../../lib/web/src/lib/preference-utils.ts
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "System"
 msgstr "ስርዓት"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx
+msgctxt "actor"
+msgid "System"
+msgstr "ስርዓቱ"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tag already exists"
@@ -2405,6 +2433,11 @@ msgstr "መለያው 50 ቁምፊዎች ወይም ያነሰ መሆን አለበ�
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "መለያዎች"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "ያልተረጋገጠ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "በጣም ብዙ ጥያቄዎች"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ላይ"
+msgstr "ምርጥ"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2619,7 +2652,7 @@ msgstr "የመስቀል ሂደት"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Use your passkey"
-msgstr "የይለፍ ቁልፍዎን ይጠቀሙ"
+msgstr "ፓስኪዎን ይጠቀሙ"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 #: ../../../lib/web/src/features/access/access-dialog.tsx

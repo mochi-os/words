@@ -26,6 +26,11 @@ msgstr "(зменена)"
 msgid "(expand)"
 msgstr "(разгарнуць)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Без назвы)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(вы)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Назва {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "з {from} да {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# яшчэ} few {+# яшчэ} many {+# яшчэ} other {+# яшчэ}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Дадаць сяброў"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Дадайце сяброў у дадатку People, каб пачаць гуляць"
+msgstr "Дадайце сяброў у дадатку «Людзі», каб пачаць гуляць"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -314,7 +316,7 @@ msgstr "Адбылася нечаканая памылка"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Push для Android"
+msgstr "Пуш-апавяшчэнні для Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "Блокі"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "Дошка"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "Дошка"
 
@@ -506,6 +512,11 @@ msgstr "Адмяніць адказ"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Адменена"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Адменена"
 
@@ -938,7 +949,7 @@ msgstr "Адключана"
 #: ../../../lib/web/src/components/restore-banner.tsx
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Dismiss"
-msgstr "Адхіліць"
+msgstr "Закрыць"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Displays the mobile sidebar."
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Памылка сеткі"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Новы"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Новае"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "Нічога не знойдзена"
 msgid "Notifications: {0}"
 msgstr "Апавяшчэнні: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Лік"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Нумар"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1829,7 +1848,7 @@ msgstr "Ключы доступу"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys недаступныя ў гэтым браўзеры"
+msgstr "Ключы доступу недаступныя ў гэтым браўзеры"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
@@ -1905,7 +1924,7 @@ msgstr "Уласцівасці"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Push notification"
-msgstr "Push-апавяшчэнне"
+msgstr "Пуш-апавяшчэнне"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Raised"
@@ -1976,6 +1995,11 @@ msgstr "Рэлевантнасць {relevance}, цікавасць {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Reматч"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Напамін"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "Пошук..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Абраць"
+msgstr "Выбар"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Спыніць сачэнне"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Тэма"
+msgstr "Карыстальнік або група"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Нядзеля"
 msgid "Switch to view 1-9"
 msgstr "Пераключыцца на выгляд 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Сістэма"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Сістэма"
 
@@ -2405,6 +2433,11 @@ msgstr "Тэг павінен быць не больш за 50 сімвалаў"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Тэгі"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Пад пытаннем"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2442,7 +2475,7 @@ msgstr "Запыт мікрафона застаўся без адказу"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Запыт passkey застаўся без адказу"
+msgstr "Запыт ключа доступу застаўся без адказу"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2454,7 +2487,7 @@ msgstr "Сервер вярнуў вэб-старонку замест даны�
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "Гэтай праграме не дазволена выкарыстоўваць ваш passkey. Дазвольце гэта ў Наладах, у раздзеле Дазволы."
+msgstr "Гэтай праграме не дазволена выкарыстоўваць ваш ключ доступу. Дазвольце гэта ў Наладах, у раздзеле Дазволы."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2513,7 +2546,7 @@ msgstr "Занадта шмат запытаў"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Верх"
+msgstr "Лепшае"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

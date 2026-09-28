@@ -26,6 +26,11 @@ msgstr "(ແກ້ໄຂແລ້ວ)"
 msgid "(expand)"
 msgstr "(ຂະຫຍາຍ)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(ບໍ່ມີຊື່)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(ທ່ານ)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "ຊື່ {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} ຫາ {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, other {+# ລາຍການ}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "ເພີ່ມເພື່ອນ"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "ເພີ່ມເພື່ອນໃນແອັບ People ເພື່ອເລີ່ມຫຼິ້ນ"
+msgstr "ເພີ່ມເພື່ອນໃນແອັບ “ບຸກຄົນ” ເພື່ອເລີ່ມຫຼິ້ນ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -314,7 +316,7 @@ msgstr "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິ
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "ການແຈ້ງເຕືອນ Android"
+msgstr "ການແຈ້ງເຕືອນແບບພຸຊ Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -381,7 +383,7 @@ msgstr "ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "ລະຫັດ authenticator"
+msgstr "ລະຫັດຢືນຢັນຕົວຕົນ"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "ບລັອກ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "ກະດານ"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "ກະດານ"
 
@@ -509,6 +515,11 @@ msgstr "ຍົກເລີກການຕອບກັບ"
 msgid "Cancelled"
 msgstr "ຍົກເລີກແລ້ວ"
 
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "ຍົກເລີກແລ້ວ"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 msgid "Caption"
@@ -538,7 +549,7 @@ msgstr "ຄັ້ງທີ່ຖືກປ່ຽນແປງ"
 
 #: src/features/words/index.tsx
 msgid "Chat"
-msgstr "ແຊັດ"
+msgstr "ສົນທະນາ"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checkbox"
@@ -613,7 +624,7 @@ msgstr "ປິດແຜງ"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Close panel / cancel"
-msgstr "ປິດ panel / ຍົກເລີກ"
+msgstr "ປິດແຜງ / ຍົກເລີກ"
 
 #: ../../../lib/web/src/components/header-search.tsx
 msgid "Close search"
@@ -696,7 +707,7 @@ msgstr "ກຳລັງເຊື່ອມຕໍ່..."
 
 #: src/features/words/components/move-composer.tsx
 msgid "Contains unknown words. You can still submit."
-msgstr "ມີຄຳສັບທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້."
+msgstr "ມີຄຳທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້."
 
 #: ../../../lib/web/src/lib/handle-server-error.ts
 msgid "Content not found."
@@ -1051,7 +1062,7 @@ msgstr "ປ້ອນລະຫັດຈາກອີເມວຂອງທ່ານ
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Enter your authenticator code"
-msgstr "ໃສ່ລະຫັດ authenticator ຂອງທ່ານ"
+msgstr "ໃສ່ລະຫັດຢືນຢັນຕົວຕົນຂອງທ່ານ"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Error"
@@ -1167,7 +1178,7 @@ msgstr "ໂຫຼດລາຍການລົ້ມເຫຼວ"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to load prompts"
-msgstr "ໂຫຼດ prompt ລົ້ມເຫຼວ"
+msgstr "ໂຫຼດພຣອມທ໌ລົ້ມເຫຼວ"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Failed to load video"
@@ -1187,7 +1198,7 @@ msgstr "ໂພສຄຳເຫັນລົ້ມເຫຼວ"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to reset prompt"
-msgstr "ຣີເຊັດ prompt ລົ້ມເຫຼວ"
+msgstr "ຣີເຊັດພຣອມທ໌ລົ້ມເຫຼວ"
 
 #: src/features/words/index.tsx
 msgid "Failed to resign"
@@ -1203,7 +1214,7 @@ msgstr "ບັນທຶກລົ້ມເຫຼວ"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
-msgstr "ບັນທຶກ prompt ລົ້ມເຫຼວ"
+msgstr "ບັນທຶກພຣອມທ໌ລົ້ມເຫຼວ"
 
 #: src/features/words/index.tsx
 msgid "Failed to send"
@@ -1336,7 +1347,7 @@ msgstr "ຕົວເບິ່ງຮູບພາບ: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "ອິມພີຣຽລ"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1377,7 +1388,7 @@ msgstr "ລາຍລະອຽດລາຍການ"
 
 #: ../../../lib/web/src/lib/locale-format.ts
 msgid "Just now"
-msgstr "ຫາກໍ"
+msgstr "ຫາກໍ່ດຽວນີ້"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Keyboard shortcuts"
@@ -1496,7 +1507,7 @@ msgstr "ຂໍ້ຄວາມ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Metric"
-msgstr "Metric"
+msgstr "ແມັດຕຣິກ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Microphone permission denied"
@@ -1512,7 +1523,7 @@ msgstr "Mochi ເວັບ"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Moderation"
-msgstr "ການຄວບຄຸມ"
+msgstr "ການກວດກາ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Monday"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "ຂໍ້ຜິດພາດເຄືອຂ່າຍ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "ໃໝ່"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "ໃໝ່ລ່າສຸດ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "ບໍ່ພົບຫຍັງ"
 msgid "Notifications: {0}"
 msgstr "ການແຈ້ງເຕືອນ: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "ຕົວເລກ"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "ໝາຍເລກ"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1816,12 +1835,12 @@ msgstr "ຜ່ານ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Passkey"
-msgstr "Passkey"
+msgstr "ກະແຈຜ່ານ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkey verification failed. Please try again."
-msgstr "ການຢືນຢັນ passkey ລົ້ມເຫລວ. ກະລຸນາລອງອີກຄັ້ງ."
+msgstr "ການຢືນຢັນກະແຈຜ່ານລົ້ມເຫລວ. ກະລຸນາລອງອີກຄັ້ງ."
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
@@ -1829,7 +1848,7 @@ msgstr "ກະແຈຜ່ານ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys ບໍ່ສາມາດໃຊ້ໄດ້ໃນບຣາວເຊີນີ້"
+msgstr "ກະແຈຜ່ານບໍ່ສາມາດໃຊ້ໄດ້ໃນຕົວທ່ອງເວັບນີ້"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
@@ -1837,7 +1856,7 @@ msgstr "ຮູບແບບ (regex)"
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "People"
-msgstr "ຄົນ"
+msgstr "ບຸກຄົນ"
 
 #: src/features/words/index.tsx
 msgid "Placement out of bounds"
@@ -1897,7 +1916,7 @@ msgstr "ກຳລັງປະມວນຜົນ…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "ບັນທຶກ prompt ແລ້ວ"
+msgstr "ບັນທຶກພຣອມທ໌ແລ້ວ"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -1905,7 +1924,7 @@ msgstr "ຄຸນສົມບັດ"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Push notification"
-msgstr "ການແຈ້ງເຕືອນ push"
+msgstr "ການແຈ້ງເຕືອນແບບພຸຊ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Raised"
@@ -1976,6 +1995,11 @@ msgstr "ຄວາມກ່ຽວຂ້ອງ {relevance}, ຄວາມສົນ�
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "ແຂ່ງຄືນ"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "ການແຈ້ງເຕືອນ"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "ກຳລັງຄົ້ນຫາ..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "ເລືອກ"
+msgstr "ລາຍການເລືອກ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2278,11 +2302,11 @@ msgstr "ການຕັ້ງຄ່າ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Show classes"
-msgstr "ສະແດງ classes"
+msgstr "ສະແດງຄລາສ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Show fields"
-msgstr "ສະແດງ fields"
+msgstr "ສະແດງຊ່ອງ"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Show this help"
@@ -2294,7 +2318,7 @@ msgstr "ກຳລັງສະແດງ {totalShown} ຈາກ {total}"
 
 #: src/features/words/index.tsx
 msgid "Shuffle rack"
-msgstr "ສຸ່ມ rack"
+msgstr "ສຸ່ມຊັ້ນ"
 
 #: ../../../lib/web/src/components/ui/sidebar.tsx
 msgid "Sidebar"
@@ -2341,7 +2365,7 @@ msgstr "ຊ່ອງນີ້ຖືກໃຊ້ແລ້ວ"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "ເລີ່ມເກມ Words ໃໝ່"
+msgstr "ເລີ່ມເກມ ຄຳ ໃໝ່"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "ຢຸດການເບິ່ງ"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "ຫົວຂໍ້"
+msgstr "ຜູ້ໃຊ້ ຫຼື ກຸ່ມ"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,15 +2411,19 @@ msgstr "ວັນອາທິດ"
 msgid "Switch to view 1-9"
 msgstr "ສະຫຼັບໄປເບິ່ງ 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx
 #: ../../../lib/web/src/lib/preference-utils.ts
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "System"
 msgstr "ລະບົບ"
 
+#: ../../../lib/web/src/components/audit-timeline.tsx
+msgctxt "actor"
+msgid "System"
+msgstr "ລະບົບ"
+
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tag already exists"
-msgstr "Tag ມີຢູ່ແລ້ວ"
+msgstr "ແທັກມີຢູ່ແລ້ວ"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tag must be 50 characters or less"
@@ -2405,6 +2433,11 @@ msgstr "ແທັກຕ້ອງມີບໍ່ເກີນ 50 ຕົວອັ�
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "ແທັກ"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "ຊົ່ວຄາວ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2442,7 +2475,7 @@ msgstr "ຄຳຮ້ອງຂໍໄມໂຄຣໂຟນບໍ່ໄດ້ຮັ
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "ຄຳຮ້ອງຂໍ passkey ບໍ່ໄດ້ຮັບການຕອບ"
+msgstr "ຄຳຮ້ອງຂໍກະແຈຜ່ານບໍ່ໄດ້ຮັບການຕອບ"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2454,7 +2487,7 @@ msgstr "ເຊີບເວີສົ່ງຄືນໜ້າເວັບແທນ
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "ແອັບນີ້ບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ໃຊ້ passkey ຂອງທ່ານ. ອະນຸຍາດໃນການຕັ້ງຄ່າ, ພາຍໃຕ້ການອະນຸຍາດ."
+msgstr "ແອັບນີ້ບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ໃຊ້ ກະແຈຜ່ານຂອງທ່ານ. ອະນຸຍາດໃນການຕັ້ງຄ່າ, ພາຍໃຕ້ການອະນຸຍາດ."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2466,7 +2499,7 @@ msgstr "ວັນພະຫັດ"
 
 #: src/features/words/lib/header-model.ts
 msgid "Tiles left"
-msgstr "Tiles ເຫຼືອ"
+msgstr "ແຜ່ນປ້າຍເຫຼືອ"
 
 #: src/features/words/index.tsx
 msgid "Tiles must be contiguous (no gaps)"
@@ -2513,7 +2546,7 @@ msgstr "ມີຄຳຮ້ອງຂໍຫຼາຍເກີນໄປ"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ເທິງ"
+msgstr "ຍອດນິຍົມ"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2619,7 +2652,7 @@ msgstr "ຄວາມຄືບໜ້າການອັບໂຫລດ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Use your passkey"
-msgstr "ໃຊ້ passkey ຂອງທ່ານ"
+msgstr "ໃຊ້ກະແຈຜ່ານຂອງທ່ານ"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 #: ../../../lib/web/src/features/access/access-dialog.tsx
@@ -2676,7 +2709,7 @@ msgstr "ການຄວບຄຸມການເບິ່ງ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Voice recording is not supported in this browser"
-msgstr "ບຣາວເຊີນີ້ບໍ່ຮອງຮັບການບັນທຶກສຽງ"
+msgstr "ຕົວທ່ອງເວັບນີ້ບໍ່ຮອງຮັບການບັນທຶກສຽງ"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Waiting for tiles"
@@ -2712,11 +2745,11 @@ msgstr "ວັນພຸດ"
 #: src/features/words/index.tsx
 #: src/features/words/index.tsx
 msgid "Words"
-msgstr "ຄຳສັບ"
+msgstr "ຄຳ"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Words formed"
-msgstr "Words ທີ່ສ້າງຂຶ້ນ"
+msgstr "ຄຳທີ່ສ້າງຂຶ້ນ"
 
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"

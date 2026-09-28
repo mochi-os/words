@@ -26,6 +26,11 @@ msgstr "(સંપાદિત)"
 msgid "(expand)"
 msgstr "(વિસ્તાર કરો)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(શીર્ષક નથી)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(તમે)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel} નામ"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} થી {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# વધુ} other {+# વધુ}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "મિત્રો ઉમેરો"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "રમવાનું શરૂ કરવા People એપ્લિકેશનમાં મિત્રો ઉમેરો"
+msgstr "રમવાનું શરૂ કરવા લોકો એપ્લિકેશનમાં મિત્રો ઉમેરો"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -381,7 +383,7 @@ msgstr "પ્રમાણિત વપરાશકર્તાઓ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "Authenticator કોડ"
+msgstr "ઑથેન્ટિકેટર કોડ"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "અવરોધે છે"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "બોર્ડ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "ગેમ બોર્ડ"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -508,6 +514,11 @@ msgstr "જવાબ રદ કરો"
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Cancelled"
 msgstr "રદ કર્યું"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "રદ"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "નેટવર્ક ભૂલ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "નવું"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "નવીનતમ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "કંઈ મળ્યું નથી"
 msgid "Notifications: {0}"
 msgstr "સૂચનાઓ: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "સંખ્યા"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "ક્રમાંક"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1977,6 +1996,11 @@ msgstr "સુસંગતતા {relevance}, રુચિ {weight}"
 msgid "Rematch"
 msgstr "ફરી મેચ"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "રિમાઇન્ડર"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "શોધી રહ્યું છે..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "પસંદ કરો"
+msgstr "પસંદગી"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "આ ખાનું પહેલેથી ભરેલું છે"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "નવી Words રમત શરૂ કરો"
+msgstr "નવી શબ્દો રમત શરૂ કરો"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "જોવાનું બંધ કરો"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "વિષય"
+msgstr "વપરાશકર્તા અથવા ગ્રુપ"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "રવિવાર"
 msgid "Switch to view 1-9"
 msgstr "દૃશ્ય 1-9 પર સ્વિચ કરો"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "સિસ્ટમ"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "સિસ્ટમ"
 
@@ -2405,6 +2433,11 @@ msgstr "ટૅગ 50 અક્ષરો કે તેથી ઓછા હોવ�
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "ટૅગ્સ"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "કામચલાઉ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "ઘણી બધી વિનંતીઓ"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ટોચ"
+msgstr "શ્રેષ્ઠ"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

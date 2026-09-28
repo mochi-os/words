@@ -26,6 +26,11 @@ msgstr "(திருத்தப்பட்டது)"
 msgid "(expand)"
 msgstr "(விரிவாக்கு)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(தலைப்பு இல்லை)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(நீங்கள்)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel} பெயர்"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} முதல் {to} வரை"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# மேலும்} other {+# மேலும்}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "நண்பர்கள் சேர்"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "விளையாட்டைத் தொடங்க People பயன்பாட்டில் நண்பர்களைச் சேர்க்கவும்"
+msgstr "விளையாட்டைத் தொடங்க மக்கள் பயன்பாட்டில் நண்பர்களைச் சேர்க்கவும்"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "தடுக்கிறது"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "பலகை"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "பலகை"
 
@@ -460,7 +466,7 @@ msgstr "உலாவி அறிவிப்புகள்"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Calendar server"
-msgstr "நாட்காட்டி சர்வர்"
+msgstr "நாட்காட்டி சேவையகம்"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
@@ -506,6 +512,11 @@ msgstr "பதிலளிப்பை ரத்துசெய்"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "ரத்துசெய்யப்பட்டது"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "ரத்துசெய்யப்பட்டது"
 
@@ -920,7 +931,7 @@ msgstr "வலை உலாவியிலிருந்து கண்டற�
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "Directory"
-msgstr "கோப்பகம்"
+msgstr "அடைவு"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Discard"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "பிணையப் பிழை"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "புதியது"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "சமீபத்தியவை"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "எதுவும் கிடைக்கவில்லை"
 msgid "Notifications: {0}"
 msgstr "அறிவிப்புகள்: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "எண்"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "எண்"
 
@@ -1821,7 +1840,7 @@ msgstr "கடவுக்குறி"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkey verification failed. Please try again."
-msgstr "கடவுவிசை சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்."
+msgstr "கடவுக்குறி சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்."
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
@@ -1897,7 +1916,7 @@ msgstr "செயலாக்கப்படுகிறது…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "Prompt சேமிக்கப்பட்டது"
+msgstr "தூண்டுதல் சேமிக்கப்பட்டது"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -1917,7 +1936,7 @@ msgstr "இந்த சேவையகத்தில் உங்கள் க
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Re-register your passkeys on this server"
-msgstr "இந்த சேவையகத்தில் உங்கள் கடவுச்சாவிகளை மீண்டும் பதிவு செய்யவும்"
+msgstr "இந்த சேவையகத்தில் உங்கள் கடவுக்குறிகளை மீண்டும் பதிவு செய்யவும்"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Ready"
@@ -1977,6 +1996,11 @@ msgstr "தொடர்புடைமை {relevance}, ஆர்வம் {weigh
 msgid "Rematch"
 msgstr "மறுபோட்டி"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "நினைவூட்டல்"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -1988,7 +2012,7 @@ msgstr "அகற்று"
 #: ../../../lib/web/src/components/filter-bar.tsx
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "Remove {0} filter"
-msgstr "{0} filter-ஐ அகற்று"
+msgstr "{0} வடிகட்டியை அகற்று"
 
 #: ../../../lib/web/src/components/member-list.tsx
 #: ../../../lib/web/src/components/member-list.tsx
@@ -2105,7 +2129,7 @@ msgstr "RSS ஃபீட்"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "RSS URL copied to clipboard"
-msgstr "RSS URL clipboard-க்கு நகலெடுக்கப்பட்டது"
+msgstr "RSS URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Saturday"
@@ -2179,7 +2203,7 @@ msgstr "தேடுகிறது..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "தேர்ந்தெடு"
+msgstr "தேர்வு"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "கட்டம் ஏற்கனவே நிரம்பியுள�
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "புதிய Words கேமை தொடங்கு"
+msgstr "புதிய சொற்கள் கேமை தொடங்கு"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "பார்ப்பதை நிறுத்து"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "பொருள்"
+msgstr "பயனர் அல்லது குழு"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "ஞாயிற்றுக்கிழமை"
 msgid "Switch to view 1-9"
 msgstr "காட்சி 1-9 க்கு மாறு"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "சிஸ்டம்"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "சிஸ்டம்"
 
@@ -2405,6 +2433,11 @@ msgstr "குறிச்சொல் 50 எழுத்துகள் அல�
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "டேக்குகள்"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "தற்காலிகம்"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2442,7 +2475,7 @@ msgstr "மைக்ரோஃபோன் கோரிக்கைக்கு �
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Passkey கோரிக்கைக்கு பதில் இல்லை"
+msgstr "கடவுக்குறி கோரிக்கைக்கு பதில் இல்லை"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2454,7 +2487,7 @@ msgstr "சேவையகம் தரவுக்குப் பதிலா�
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "இந்த ஆப்ஸுக்கு உங்கள் passkey-ஐப் பயன்படுத்த அனுமதி இல்லை. அமைப்புகளில், அனுமதிகள் பிரிவில் அதை அனுமதிக்கவும்."
+msgstr "இந்த ஆப்ஸுக்கு உங்கள் கடவுக்குறியைப் பயன்படுத்த அனுமதி இல்லை. அமைப்புகளில், அனுமதிகள் பிரிவில் அதை அனுமதிக்கவும்."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2513,7 +2546,7 @@ msgstr "மிக அதிகமான கோரிக்கைகள்"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "மேல்"
+msgstr "சிறந்தவை"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2619,7 +2652,7 @@ msgstr "பதிவேற்ற முன்னேற்றம்"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Use your passkey"
-msgstr "உங்கள் கடவுவிசையைப் பயன்படுத்தவும்"
+msgstr "உங்கள் கடவுக்குறியைப் பயன்படுத்தவும்"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 #: ../../../lib/web/src/features/access/access-dialog.tsx
@@ -2712,7 +2745,7 @@ msgstr "புதன்கிழமை"
 #: src/features/words/index.tsx
 #: src/features/words/index.tsx
 msgid "Words"
-msgstr "வார்த்தைகள்"
+msgstr "சொற்கள்"
 
 #: src/features/words/components/move-composer.tsx
 msgid "Words formed"

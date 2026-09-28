@@ -26,6 +26,11 @@ msgstr "(נערך)"
 msgid "(expand)"
 msgstr "(הרחב)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(ללא כותרת)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(אתה)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "שם {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} עד {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# נוסף} two {+# נוספים} many {+# נוספים} other {+# נוספים}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "חוסם"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
-msgstr "Board"
+msgstr "לוח"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "לוח"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "בטל תשובה"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "בוטל"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "בוטל"
 
@@ -1167,7 +1178,7 @@ msgstr "טעינת הפריט נכשלה"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to load prompts"
-msgstr "טעינת ה-prompts נכשלה"
+msgstr "טעינת הפרומפטים נכשלה"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Failed to load video"
@@ -1187,7 +1198,7 @@ msgstr "פרסום התגובה נכשל"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to reset prompt"
-msgstr "איפוס ה-prompt נכשל"
+msgstr "איפוס הפרומפט נכשל"
 
 #: src/features/words/index.tsx
 msgid "Failed to resign"
@@ -1203,7 +1214,7 @@ msgstr "השמירה נכשלה"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
-msgstr "שמירת ה-prompt נכשלה"
+msgstr "שמירת הפרומפט נכשלה"
 
 #: src/features/words/index.tsx
 msgid "Failed to send"
@@ -1512,7 +1523,7 @@ msgstr "Mochi ברשת"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Moderation"
-msgstr "פיקוח"
+msgstr "ניהול תוכן"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Monday"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "שגיאת רשת"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "חדש"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "חדשים"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "לא נמצא דבר"
 msgid "Notifications: {0}"
 msgstr "התראות: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "מספר"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "מספר"
 
@@ -1977,6 +1996,11 @@ msgstr "רלוונטיות {relevance}, עניין {weight}"
 msgid "Rematch"
 msgstr "משחק חוזר"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "תזכורת"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "מחפש..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "בחר"
+msgstr "רשימה נפתחת"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "המשבצת כבר תפוסה"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "התחל משחק Words חדש"
+msgstr "התחל משחק מילים חדש"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "הפסק לעקוב"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "נושא"
+msgstr "משתמש או קבוצה"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "יום ראשון"
 msgid "Switch to view 1-9"
 msgstr "עבור לתצוגה 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "מערכת"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "מערכת"
 
@@ -2405,6 +2433,11 @@ msgstr "התג חייב להיות עד 50 תווים"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "תגיות"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "לא סופי"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "יותר מדי בקשות"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ראש"
+msgstr "מובילים"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

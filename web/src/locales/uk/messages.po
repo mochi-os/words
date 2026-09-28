@@ -26,6 +26,11 @@ msgstr "(відредаговано)"
 msgid "(expand)"
 msgstr "(розгорнути)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Без назви)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(ви)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Назва {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "з {from} до {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {ще +#} few {ще +#} many {ще +#} other {ще +#}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "Додати друзів"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Додайте друзів у застосунку People, щоб почати грати"
+msgstr "Додайте друзів у застосунку «Люди», щоб почати грати"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -314,7 +316,7 @@ msgstr "Сталася неочікувана помилка"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Push для Android"
+msgstr "Пуш для Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Блокує"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Дошка"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Ігрове поле"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "Скасувати відповідь"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Скасовано"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Скасовано"
 
@@ -1547,19 +1558,19 @@ msgstr "Переміщення на {0}"
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Name"
-msgstr "Ім'я"
+msgstr "Назва"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name cannot contain < or > characters"
-msgstr "Ім'я не може містити символи < або >"
+msgstr "Назва не може містити символи < або >"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name is required"
-msgstr "Ім'я обов'язкове"
+msgstr "Назва обов'язкова"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Name must be 1000 characters or less"
-msgstr "Ім'я має містити 1000 символів або менше"
+msgstr "Назва має містити 1000 символів або менше"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Помилка мережі"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Нове"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Нові"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,11 +1744,15 @@ msgstr "Нічого не знайдено"
 msgid "Notifications: {0}"
 msgstr "Сповіщення: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Число"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Номер"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1905,7 +1924,7 @@ msgstr "Властивості"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Push notification"
-msgstr "Push-сповіщення"
+msgstr "Пуш-сповіщення"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Raised"
@@ -1976,6 +1995,11 @@ msgstr "Релевантність {relevance}, інтерес {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Реванш"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Нагадування"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "Пошук..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Вибрати"
+msgstr "Вибір"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Припинити стеження"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Тема"
+msgstr "Користувач або група"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Неділя"
 msgid "Switch to view 1-9"
 msgstr "Перейти до вигляду 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Система"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Система"
 
@@ -2405,6 +2433,11 @@ msgstr "Тег має бути не довшим за 50 символів"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Теги"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Під питанням"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Забагато запитів"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Верх"
+msgstr "Найкращі"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

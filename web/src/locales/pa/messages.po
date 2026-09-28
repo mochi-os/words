@@ -26,6 +26,11 @@ msgstr "(ਸੰਪਾਦਿਤ)"
 msgid "(expand)"
 msgstr "(ਫੈਲਾਓ)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(ਕੋਈ ਸਿਰਲੇਖ ਨਹੀਂ)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(ਤੁਸੀਂ)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel} ਨਾਮ"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} ਤੋਂ {to} ਤੱਕ"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# ਹੋਰ} other {+# ਹੋਰ}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "ਦੋਸਤ ਜੋੜੋ"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "ਖੇਡਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ People ਐਪ ਵਿੱਚ ਦੋਸਤ ਜੋੜੋ"
+msgstr "ਖੇਡਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਲੋਕ ਐਪ ਵਿੱਚ ਦੋਸਤ ਜੋੜੋ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "ਬਲੌਕ ਕਰਦਾ ਹੈ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "ਬੋਰਡ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "ਖੇਡ ਬੋਰਡ"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -508,6 +514,11 @@ msgstr "ਜਵਾਬ ਰੱਦ ਕਰੋ"
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Cancelled"
 msgstr "ਰੱਦ ਕੀਤਾ ਗਿਆ"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "ਰੱਦ"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -957,7 +968,7 @@ msgstr "ਹੋ ਗਿਆ"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Download"
-msgstr "ਡਾਊਨਲੋਡ"
+msgstr "ਡਾਊਨਲੋਡ ਕਰੋ"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1319,7 +1330,7 @@ msgstr "ਇਤਿਹਾਸ"
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 msgid "Home"
-msgstr "ਮੁੱਖ"
+msgstr "ਹੋਮ"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
@@ -1488,7 +1499,7 @@ msgstr "ਮੈਂਬਰ"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "Menu"
-msgstr "ਮੇਨੂ"
+msgstr "ਮੀਨੂ"
 
 #: ../../../lib/web/src/components/game/game-chat-input.tsx
 msgid "Message"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "ਨੈੱਟਵਰਕ ਗੜਬੜ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "ਨਵਾਂ"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "ਸਭ ਤੋਂ ਨਵੇਂ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "ਕੁਝ ਨਹੀਂ ਮਿਲਿਆ"
 msgid "Notifications: {0}"
 msgstr "ਸੂਚਨਾਵਾਂ: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "ਨੰਬਰ"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "ਨੰਬਰ"
 
@@ -1977,6 +1996,11 @@ msgstr "ਸੰਬੰਧਿਤਤਾ {relevance}, ਦਿਲਚਸਪੀ {weight}"
 msgid "Rematch"
 msgstr "ਦੁਬਾਰਾ ਮੈਚ"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "ਰਿਮਾਈਂਡਰ"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "ਖੋਜ ਰਿਹਾ ਹੈ..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "ਚੁਣੋ"
+msgstr "ਚੋਣ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "ਇਹ ਖਾਨਾ ਪਹਿਲਾਂ ਹੀ ਭਰਿਆ ਹੋਇਆ 
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "ਨਵੀਂ Words ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ"
+msgstr "ਨਵੀਂ ਸ਼ਬਦ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "ਦੇਖਣਾ ਬੰਦ ਕਰੋ"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "ਵਿਸ਼ਾ"
+msgstr "ਉਪਭੋਗਤਾ ਜਾਂ ਗਰੁੱਪ"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "ਐਤਵਾਰ"
 msgid "Switch to view 1-9"
 msgstr "ਦ੍ਰਿਸ਼ 1-9 'ਤੇ ਜਾਓ"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "ਸਿਸਟਮ"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "ਸਿਸਟਮ"
 
@@ -2405,6 +2433,11 @@ msgstr "ਟੈਗ 50 ਅੱਖਰ ਜਾਂ ਘੱਟ ਹੋਣਾ ਚਾਹੀ�
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "ਟੈਗ"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "ਆਰਜ਼ੀ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2505,7 +2538,7 @@ msgstr "ਦ੍ਰਿਸ਼ ਵਿਕਲਪ ਟੌਗਲ ਕਰੋ"
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "Toggle watched filter"
-msgstr "watched ਫਿਲਟਰ ਟੌਗਲ ਕਰੋ"
+msgstr "ਨਿਗਰਾਨੀ ਅਧੀਨ ਫਿਲਟਰ ਟੌਗਲ ਕਰੋ"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "Too many requests"
@@ -2513,7 +2546,7 @@ msgstr "ਬਹੁਤ ਜ਼ਿਆਦਾ ਬੇਨਤੀਆਂ"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ਉੱਪਰ"
+msgstr "ਸਭ ਤੋਂ ਵਧੀਆ"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

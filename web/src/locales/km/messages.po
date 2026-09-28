@@ -26,6 +26,11 @@ msgstr "(បានកែ)"
 msgid "(expand)"
 msgstr "(ពង្រីក)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(គ្មានចំណងជើង)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(អ្នក)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "ឈ្មោះ {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} ដល់ {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, other {+# បន្ថែមទៀត}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "បន្ថែមមិត្តភក្តិ"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "បន្ថែមមិត្តភក្តិក្នុងកម្មវិធី People ដើម្បីចាប់ផ្តើមលេង"
+msgstr "បន្ថែមមិត្តភក្តិក្នុងកម្មវិធី «មនុស្ស» ដើម្បីចាប់ផ្តើមលេង"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -319,7 +321,7 @@ msgstr "ការជូនដំណឹង Android"
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Anyone"
-msgstr "នរណាម្នាក់"
+msgstr "អ្នកណាក៏បាន"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Anyone who is logged in"
@@ -381,7 +383,7 @@ msgstr "អ្នកប្រើដែលបានផ្ទៀងផ្ទាត
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "កូដ Authenticator"
+msgstr "កូដកម្មវិធីផ្ទៀងផ្ទាត់"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -441,7 +443,11 @@ msgid "Blocks"
 msgstr "ប្លុក"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgid "Board"
+msgstr "ក្តារ"
+
 #: src/features/words/components/words-board.tsx
+msgctxt "game board"
 msgid "Board"
 msgstr "ក្តារ"
 
@@ -509,6 +515,11 @@ msgstr "បោះបង់ការឆ្លើយតប"
 msgid "Cancelled"
 msgstr "បានបោះបង់"
 
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "បានបោះបង់"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 msgid "Caption"
@@ -538,7 +549,7 @@ msgstr "ការកើតឡើងដែលបានផ្លាស់ប្ត
 
 #: src/features/words/index.tsx
 msgid "Chat"
-msgstr "ជជែក"
+msgstr "ការសន្ទនា"
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checkbox"
@@ -920,7 +931,7 @@ msgstr "រកឃើញពីកម្មវិធីរុករកគេហទ
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "Directory"
-msgstr "ថត"
+msgstr "បញ្ជីឈ្មោះ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Discard"
@@ -1051,7 +1062,7 @@ msgstr "បញ្ចូលកូដពីអ៊ីមែលរបស់អ្ន
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Enter your authenticator code"
-msgstr "បញ្ចូលកូដ authenticator របស់អ្នក"
+msgstr "បញ្ចូលកូដកម្មវិធីផ្ទៀងផ្ទាត់របស់អ្នក"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Error"
@@ -1319,7 +1330,7 @@ msgstr "ប្រវត្តិ"
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 msgid "Home"
-msgstr "ដើម"
+msgstr "ទំព័រដើម"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
@@ -1336,7 +1347,7 @@ msgstr "កម្មវិធីមើលរូបភាព៖ {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "អ៊ីមភេរៀល"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1459,7 +1470,7 @@ msgstr "គ្រប់គ្រងប្រភេទ"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "Manual"
-msgstr "សៀវភៅណែនាំ"
+msgstr "ដោយដៃ"
 
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
@@ -1512,7 +1523,7 @@ msgstr "Mochi វេប"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Moderation"
-msgstr "ការត្រួតពិនិត្យ"
+msgstr "ការសម្របសម្រួល"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Monday"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "កំហុសបណ្តាញ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "ថ្មី"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "ថ្មីបំផុត"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "រកមិនឃើញ"
 msgid "Notifications: {0}"
 msgstr "ការជូនដំណឹង៖ {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "លេខ"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "លេខ"
 
@@ -1816,12 +1835,12 @@ msgstr "ឆ្លងកាត់"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Passkey"
-msgstr "សោសម្ងាត់"
+msgstr "កូនសោចូល"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkey verification failed. Please try again."
-msgstr "ការផ្ទៀងផ្ទាត់ passkey បានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។"
+msgstr "ការផ្ទៀងផ្ទាត់កូនសោចូលបានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
@@ -1829,7 +1848,7 @@ msgstr "កូនសោចូល"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys មិនមាននៅក្នុងកម្មវិធីរុករកនេះទេ"
+msgstr "កូនសោចូលមិនមាននៅក្នុងកម្មវិធីរុករកនេះទេ"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
@@ -1897,7 +1916,7 @@ msgstr "កំពុងដំណើរការ…"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "បានរក្សាទុក prompt"
+msgstr "បានរក្សាទុកការសួរ"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -1976,6 +1995,11 @@ msgstr "ភាពពាក់ព័ន្ធ {relevance} ចំណាប់អ�
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "ប្រកួតឡើងវិញ"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "ការរំលឹក"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2105,7 +2129,7 @@ msgstr "មតិព័ត៌មាន RSS"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "RSS URL copied to clipboard"
-msgstr "បានចម្លង RSS URL ទៅ clipboard"
+msgstr "បានចម្លង RSS URL ទៅ ក្ដារតម្បៀតខ្ទាស់"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Saturday"
@@ -2179,7 +2203,7 @@ msgstr "កំពុងស្វែងរក..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "ជ្រើសរើស"
+msgstr "ការជ្រើសរើស"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "ប្រអប់ត្រូវបានប្រើរួចហើយ
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "ចាប់ផ្តើមហ្គេម Words ថ្មី"
+msgstr "ចាប់ផ្តើមហ្គេមពាក្យថ្មី"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "បញ្ឈប់ការតាមដាន"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "ប្រធានបទ"
+msgstr "អ្នកប្រើប្រាស់ ឬក្រុម"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "ថ្ងៃអាទិត្យ"
 msgid "Switch to view 1-9"
 msgstr "ប្តូរទៅទិដ្ឋភាព 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "ប្រព័ន្ធ"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "ប្រព័ន្ធ"
 
@@ -2405,6 +2433,11 @@ msgstr "ស្លាកត្រូវមានយ៉ាងច្រើន 50 �
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "ស្លាក"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "បណ្ដោះអាសន្ន"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2442,7 +2475,7 @@ msgstr "សំណើមីក្រូហ្វូនមិនត្រូវប
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "សំណើ passkey មិនត្រូវបានឆ្លើយតបទេ"
+msgstr "សំណើកូនសោចូលមិនត្រូវបានឆ្លើយតបទេ"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2454,7 +2487,7 @@ msgstr "ម៉ាស៊ីនមេបានបញ្ជូនត្រឡប់
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "កម្មវិធីនេះមិនត្រូវបានអនុញ្ញាតឱ្យប្រើ passkey របស់អ្នកទេ។ អនុញ្ញាតវានៅក្នុងការកំណត់ ក្រោមផ្នែកសិទ្ធិ។"
+msgstr "កម្មវិធីនេះមិនត្រូវបានអនុញ្ញាតឱ្យប្រើកូនសោចូលរបស់អ្នកទេ។ អនុញ្ញាតវានៅក្នុងការកំណត់ ក្រោមផ្នែកសិទ្ធិ។"
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2466,7 +2499,7 @@ msgstr "ថ្ងៃព្រហស្បតិ៍"
 
 #: src/features/words/lib/header-model.ts
 msgid "Tiles left"
-msgstr "Tiles នៅសល់"
+msgstr "ក្បឿងនៅសល់"
 
 #: src/features/words/index.tsx
 msgid "Tiles must be contiguous (no gaps)"
@@ -2619,7 +2652,7 @@ msgstr "វឌ្ឍនភាពនៃការផ្ទុកឡើង"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Use your passkey"
-msgstr "ប្រើ passkey របស់អ្នក"
+msgstr "ប្រើកូនសោចូលរបស់អ្នក"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 #: ../../../lib/web/src/features/access/access-dialog.tsx

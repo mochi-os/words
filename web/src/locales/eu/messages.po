@@ -26,6 +26,11 @@ msgstr "(editatua)"
 msgid "(expand)"
 msgstr "(zabaldu)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Izenbururik gabe)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(zu)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel} izena"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} - {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# gehiago} other {+# gehiago}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -314,7 +316,7 @@ msgstr "Ustekabeko errore bat gertatu da"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Android push"
+msgstr "Android push jakinarazpenak"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Blokeak"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Taula"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Joko-taula"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -508,6 +514,11 @@ msgstr "Utzi erantzuna"
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Cancelled"
 msgstr "Bertan behera utzia"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "Bertan behera"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -1088,7 +1099,7 @@ msgstr "Zabaldu alboko barra"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "External URL"
-msgstr "Kanpoko URL-a"
+msgstr "Kanpoko URLa"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Extra large"
@@ -1508,7 +1519,7 @@ msgstr "Gutxieneko luzera"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Mochi web"
-msgstr "Mochi web"
+msgstr "Mochi weba"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Moderation"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Sareko errorea"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Berria"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Berrienak"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "Ez da ezer aurkitu"
 msgid "Notifications: {0}"
 msgstr "Jakinarazpenak: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Zenbakia"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Zenbakia"
 
@@ -1816,7 +1835,7 @@ msgstr "Pasa"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Passkey"
-msgstr "Passkey-a"
+msgstr "Sarbide-gakoa"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
@@ -1825,11 +1844,11 @@ msgstr "Sarbide-gakoaren egiaztapenak huts egin du. Saiatu berriro."
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Passkeys"
-msgstr "Passkey-ak"
+msgstr "Sarbide-gakoak"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkey-ak ez daude erabilgarri nabigatzaile honetan"
+msgstr "Sarbide-gakoak ez daude erabilgarri nabigatzaile honetan"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
@@ -1837,7 +1856,7 @@ msgstr "Eredua (regex)"
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "People"
-msgstr "Jendea"
+msgstr "Pertsonak"
 
 #: src/features/words/index.tsx
 msgid "Placement out of bounds"
@@ -1976,6 +1995,11 @@ msgstr "Garrantzia {relevance}, interesa {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "Itzulketa-partida"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Oroigarria"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "Bilatzen..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Hautatu"
+msgstr "Hautapena"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Utzi ikusten"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Gaia"
+msgstr "Erabiltzailea edo taldea"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Igandea"
 msgid "Switch to view 1-9"
 msgstr "Aldatu 1-9 ikuspegira"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Sistema"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Sistema"
 
@@ -2405,6 +2433,11 @@ msgstr "Etiketak gehienez 50 karaktere izan behar ditu"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Etiketak"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Behin-behinekoa"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2442,7 +2475,7 @@ msgstr "Mikrofono eskaerak ez du erantzunik jaso"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Passkey eskaerak ez du erantzunik jaso"
+msgstr "Sarbide-gakoaren eskaerak ez du erantzunik jaso"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2454,7 +2487,7 @@ msgstr "Zerbitzariak web-orri bat itzuli du datuen ordez."
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "Aplikazio honek ez du baimenik zure passkey-a erabiltzeko. Baimendu Ezarpenetan, Baimenak atalean."
+msgstr "Aplikazio honek ez du baimenik zure sarbide-gakoa erabiltzeko. Baimendu Ezarpenetan, Baimenak atalean."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2513,7 +2546,7 @@ msgstr "Eskaera gehiegi"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Goia"
+msgstr "Onenak"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

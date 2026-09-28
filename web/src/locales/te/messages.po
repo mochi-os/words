@@ -26,6 +26,11 @@ msgstr "(సవరించబడింది)"
 msgid "(expand)"
 msgstr "(విస్తరించు)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(శీర్షిక లేదు)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(మీరు)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel} పేరు"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} నుండి {to} వరకు"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# మరిన్ని} other {+# మరిన్ని}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "స్నేహితులను జోడించండి"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "ఆడటం ప్రారంభించడానికి People యాప్‌లో స్నేహితులను జోడించండి"
+msgstr "ఆడటం ప్రారంభించడానికి వ్యక్తులు యాప్‌లో స్నేహితులను జోడించండి"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "నిరోధిస్తుంది"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "బోర్డు"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "ఆట బోర్డు"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "ప్రత్యుత్తరాన్ని రద్దు చే�
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "రద్దు చేయబడింది"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "రద్దు చేయబడింది"
 
@@ -957,7 +968,7 @@ msgstr "పూర్తయింది"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Download"
-msgstr "డౌన్‌లోడ్"
+msgstr "డౌన్‌లోడ్ చేయండి"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1488,7 +1499,7 @@ msgstr "సభ్యులు"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "Menu"
-msgstr "మెను"
+msgstr "మెనూ"
 
 #: ../../../lib/web/src/components/game/game-chat-input.tsx
 msgid "Message"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "నెట్‌వర్క్ లోపం"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "కొత్తది"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "సరికొత్తవి"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "ఏమీ కనుగొనబడలేదు"
 msgid "Notifications: {0}"
 msgstr "నోటిఫికేషన్‌లు: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "సంఖ్య"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "సంఖ్య"
 
@@ -1837,7 +1856,7 @@ msgstr "నమూనా (regex)"
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "People"
-msgstr "పీపుల్"
+msgstr "వ్యక్తులు"
 
 #: src/features/words/index.tsx
 msgid "Placement out of bounds"
@@ -1976,6 +1995,11 @@ msgstr "ఔచిత్యం {relevance}, ఆసక్తి {weight}"
 #: src/features/words/index.tsx
 msgid "Rematch"
 msgstr "రీమ్యాచ్"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "రిమైండర్"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -2179,7 +2203,7 @@ msgstr "శోధిస్తోంది..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "ఎంచుకోండి"
+msgstr "ఎంపిక"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "గడి ఇప్పటికే నిండి ఉంది"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "కొత్త Words గేమ్‌ను ప్రారంభించండి"
+msgstr "కొత్త పదాల గేమ్‌ను ప్రారంభించండి"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "చూడటం ఆపండి"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "విషయం"
+msgstr "వినియోగదారు లేదా సమూహం"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "ఆదివారం"
 msgid "Switch to view 1-9"
 msgstr "వీక్షణ 1-9 కి మారండి"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "సిస్టమ్"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "సిస్టమ్"
 
@@ -2405,6 +2433,11 @@ msgstr "ట్యాగ్ 50 అక్షరాలు లేదా తక్క
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "ట్యాగ్‌లు"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "తాత్కాలికం"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "చాలా ఎక్కువ అభ్యర్థనలు"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ఎగువ"
+msgstr "ఉత్తమమైనవి"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

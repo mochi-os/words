@@ -26,6 +26,11 @@ msgstr "(gulaalame)"
 msgid "(expand)"
 msgstr "(babal'isi)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Mata duree hin qabu)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(ati)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "Maqaa {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} hanga {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# dabalataa} other {+# dabalataa}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "Bloka"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "Boordii"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "Gabatee taphaa"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "Deebii haquu"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Haqame"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Haqame"
 
@@ -667,7 +678,7 @@ msgstr "Yaadawwan ({0})"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Compact"
-msgstr "Compact"
+msgstr "Walitti qabame"
 
 #: src/components/layout/words-layout.tsx
 msgid "Completed"
@@ -1336,7 +1347,7 @@ msgstr "Ilaaltuu fakkii: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "Imperiyaal"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1488,7 +1499,7 @@ msgstr "Miseensota"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "Menu"
-msgstr "Menu"
+msgstr "Liisticha"
 
 #: ../../../lib/web/src/components/game/game-chat-input.tsx
 msgid "Message"
@@ -1496,7 +1507,7 @@ msgstr "Ergaa"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Metric"
-msgstr "Metric"
+msgstr "Meetrikii"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Microphone permission denied"
@@ -1508,11 +1519,11 @@ msgstr "Dheerina xiqqaa"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Mochi web"
-msgstr "Mochi web"
+msgstr "Mochi marsariitii"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Moderation"
-msgstr "Too'annoo"
+msgstr "To'annoo"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Monday"
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "Dogoggora networkii"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Haaraa"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Haaraa dura"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1729,9 +1744,13 @@ msgstr "Wanti argame hin jiru"
 msgid "Notifications: {0}"
 msgstr "Beeksisawwan: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Lakkoofsa"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Lakkoofsa"
 
@@ -1977,6 +1996,11 @@ msgstr "Wal-simannaa {relevance}, fedhii {weight}"
 msgid "Rematch"
 msgstr "Walqixxummaa deebi'ee"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Yaadachiisa"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "Barbaadaa jira..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Fili"
+msgstr "Filannoo"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2358,7 +2382,7 @@ msgstr "Daawwannaa dhaabsisi"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Mata duree"
+msgstr "Fayyadamaa ykn garee"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "Dilbata"
 msgid "Switch to view 1-9"
 msgstr "Gara argaa 1-9 jijjiiri"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Sirna"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Sirna"
 
@@ -2405,6 +2433,11 @@ msgstr "Maallattoon 50 arfii ykn xiqqaa ta'uu qaba"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Tagoota"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Hin mirkanoofne"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "Gaaffiiwwan baay'ee garmalee"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Ol"
+msgstr "Kan caalan"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

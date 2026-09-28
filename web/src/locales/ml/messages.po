@@ -26,6 +26,11 @@ msgstr "(എഡിറ്റ് ചെയ്തു)"
 msgid "(expand)"
 msgstr "(വിപുലീകരിക്കുക)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(തലക്കെട്ടില്ല)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(നിങ്ങൾ)"
@@ -117,13 +122,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel} പേര്"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} മുതൽ {to} വരെ"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# കൂടി} other {+# കൂടി}}"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/lib/header-model.ts
@@ -253,7 +255,7 @@ msgstr "സുഹൃത്തുക്കളെ ചേർക്കുക"
 
 #: src/features/words/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "കളി തുടങ്ങാൻ People ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക"
+msgstr "കളി തുടങ്ങാൻ “ആളുകൾ” ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -381,7 +383,7 @@ msgstr "പ്രാമാണീകരിച്ച ഉപയോക്താക�
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "Authenticator കോഡ്"
+msgstr "ഓതന്റിക്കേറ്റർ കോഡ്"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -441,9 +443,13 @@ msgid "Blocks"
 msgstr "തടയുന്നു"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: src/features/words/components/words-board.tsx
 msgid "Board"
 msgstr "ബോർഡ്"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "game board"
+msgid "Board"
+msgstr "ഗെയിം ബോർഡ്"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -506,6 +512,11 @@ msgstr "മറുപടി റദ്ദാക്കുക"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "റദ്ദാക്കി"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "റദ്ദാക്കി"
 
@@ -957,7 +968,7 @@ msgstr "പൂർത്തിയായി"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Download"
-msgstr "ഡൗൺലോഡ്"
+msgstr "ഡൗൺലോഡ് ചെയ്യുക"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1567,9 +1578,13 @@ msgid "Network error"
 msgstr "നെറ്റ്‌വർക്ക് പിശക്"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "പുതിയത്"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "ഏറ്റവും പുതിയത്"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1625,7 +1640,7 @@ msgstr "ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്�
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No item types can be created yet. Create the required parent items first."
-msgstr "ഇതുവരെ ഒരു item type-ഉം സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ parent items ആദ്യം സൃഷ്ടിക്കുക."
+msgstr "ഇതുവരെ ഒരു ഇന തരവും സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ പാരന്റ് ഇനങ്ങൾ ആദ്യം സൃഷ്ടിക്കുക."
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "No matching objects"
@@ -1729,11 +1744,15 @@ msgstr "ഒന്നും കണ്ടെത്തിയില്ല"
 msgid "Notifications: {0}"
 msgstr "അറിയിപ്പുകൾ: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "സംഖ്യ"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "നമ്പർ"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1762,7 +1781,7 @@ msgstr "മെനു തുറക്കുക"
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 #: ../../../lib/web/src/components/layout/top-bar.tsx
 msgid "Open navigation"
-msgstr "navigation തുറക്കുക"
+msgstr "നാവിഗേഷൻ തുറക്കുക"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
 msgid "Open option actions"
@@ -1977,6 +1996,11 @@ msgstr "പ്രസക്തി {relevance}, താൽപ്പര്യം {we
 msgid "Rematch"
 msgstr "വീണ്ടും മത്സരം"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "ഓർമ്മപ്പെടുത്തൽ"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2179,7 +2203,7 @@ msgstr "തിരയുന്നു..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "തിരഞ്ഞെടുക്കുക"
+msgstr "തിരഞ്ഞെടുപ്പ്"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2341,7 +2365,7 @@ msgstr "കളം ഇതിനകം ഉപയോഗത്തിലാണ്"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start a new Words game"
-msgstr "ഒരു പുതിയ Words ഗെയിം ആരംഭിക്കുക"
+msgstr "ഒരു പുതിയ വാക്കുകൾ ഗെയിം ആരംഭിക്കുക"
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
@@ -2358,7 +2382,7 @@ msgstr "നിരീക്ഷണം നിർത്തുക"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "വിഷയം"
+msgstr "ഉപയോക്താവ് അല്ലെങ്കിൽ ഗ്രൂപ്പ്"
 
 #: src/features/words/components/move-composer.tsx
 #: src/features/words/index.tsx
@@ -2387,9 +2411,13 @@ msgstr "ഞായറാഴ്ച"
 msgid "Switch to view 1-9"
 msgstr "കാഴ്ച 1-9 ലേക്ക് മാറുക"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "സിസ്റ്റം"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "സിസ്റ്റം"
 
@@ -2405,6 +2433,11 @@ msgstr "ടാഗ് 50 പ്രതീകങ്ങളോ അതിൽ കുറ
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "ടാഗുകൾ"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "താൽക്കാലികം"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -2513,7 +2546,7 @@ msgstr "വളരെയധികം അഭ്യർത്ഥനകൾ"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "മുകളിൽ"
+msgstr "മികച്ചവ"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
