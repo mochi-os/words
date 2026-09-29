@@ -18,12 +18,12 @@ import {
   getAppPath,
   getErrorMessage,
   toast,
-  AlertDialog,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
+  ResponsiveDialog,
+  ResponsiveDialogClose,
+  ResponsiveDialogContent,
+  ResponsiveDialogFooter,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
   Skeleton,
   GameChatPanels,
   GameResignDialog,
@@ -1065,7 +1065,7 @@ export function WordsGameView() {
       />
 
       {/* Blank tile letter selection */}
-      <AlertDialog
+      <ResponsiveDialog
         open={blankPromptOpen}
         onOpenChange={(open) => {
           if (!open) {
@@ -1076,7 +1076,7 @@ export function WordsGameView() {
           }
         }}
       >
-        <AlertDialogContent
+        <ResponsiveDialogContent
           onOpenAutoFocus={(e) => {
             e.preventDefault()
             const firstBtn = (
@@ -1085,11 +1085,11 @@ export function WordsGameView() {
             firstBtn?.focus()
           }}
         >
-          <AlertDialogHeader>
-            <AlertDialogTitle>
+          <ResponsiveDialogHeader>
+            <ResponsiveDialogTitle>
               <Trans>Choose a letter</Trans>
-            </AlertDialogTitle>
-          </AlertDialogHeader>
+            </ResponsiveDialogTitle>
+          </ResponsiveDialogHeader>
           <div className='grid grid-cols-7 gap-1 py-2'>
             {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
               <Button
@@ -1103,13 +1103,15 @@ export function WordsGameView() {
               </Button>
             ))}
           </div>
-          <AlertDialogFooter>
-            <AlertDialogCancel>
-              <Trans>Cancel</Trans>
-            </AlertDialogCancel>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+          <ResponsiveDialogFooter>
+            <ResponsiveDialogClose asChild>
+              <Button variant='outline'>
+                <Trans>Cancel</Trans>
+              </Button>
+            </ResponsiveDialogClose>
+          </ResponsiveDialogFooter>
+        </ResponsiveDialogContent>
+      </ResponsiveDialog>
     </>
   )
 }
