@@ -26,6 +26,11 @@ msgstr "(ಸಂಪಾದಿಸಲಾಗಿದೆ)"
 msgid "(expand)"
 msgstr "(ವಿಸ್ತರಿಸಿ)"
 
+#. placeholder {0}: file.oldPath
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "(from {0})"
+msgstr ""
+
 #: ../../../lib/web/src/components/calendar/event-title.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "(No title)"
@@ -41,6 +46,11 @@ msgstr "(ನೀವು)"
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx
 msgid "[not set]"
 msgstr "[ಸಜ್ಜುಗೊಳಿಸಿಲ್ಲ]"
+
+#. placeholder {0}: files.length
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{0, plural, one {# file changed} other {# files changed}}"
+msgstr ""
 
 #. placeholder {0}: selectedFriends.length + 1
 #: src/features/words/components/new-game.tsx
@@ -163,6 +173,10 @@ msgstr "{totalCount, plural, one {# ಐಟಂ} other {# ಐಟಂಗಳು}}"
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 msgid "{totalDescendants, plural, one {# reply} other {+# more replies}}"
 msgstr "{totalDescendants, plural, one {# ಪ್ರತ್ಯುತ್ತರ} other {+# ಹೆಚ್ಚಿನ ಪ್ರತ್ಯುತ್ತರಗಳು}}"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "{truncated, plural, one {# more file not shown} other {# more files not shown}}"
+msgstr ""
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
@@ -421,6 +435,10 @@ msgstr "ಬ್ಯಾನರ್ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Banner updated"
 msgstr "ಬ್ಯಾನರ್ ನವೀಕರಿಸಲಾಗಿದೆ"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Binary file not shown"
+msgstr ""
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Blank tile"
@@ -749,6 +767,7 @@ msgstr "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾ�
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
@@ -1628,6 +1647,10 @@ msgstr "ಯಾವುದೇ ಪ್ರವೇಶ ನಿಯಮಗಳನ್ನು ಕ
 msgid "No activity yet"
 msgstr "ಇನ್ನೂ ಯಾವುದೇ ಚಟುವಟಿಕೆ ಇಲ್ಲ"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "No changes to display"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "No comments yet"
 msgstr "ಇನ್ನೂ ಯಾವುದೇ ಕಾಮೆಂಟ್‌ಗಳಿಲ್ಲ"
@@ -1729,6 +1752,15 @@ msgstr "ಯಾವುದೂ ಇಲ್ಲ"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Normal"
 msgstr "ಸಾಮಾನ್ಯ"
+
+#. placeholder {0}: formatFileSize(file.limit)
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: larger than {0}"
+msgstr ""
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Not compared: over the size limit"
+msgstr ""
 
 #: ../../../lib/web/src/components/attachment-image.tsx
 #: ../../../lib/web/src/features/errors/general-error.tsx
@@ -2363,6 +2395,10 @@ msgstr "ಮೂಲಗಳು"
 msgid "Spacious"
 msgstr "ವಿಶಾಲ"
 
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Split"
+msgstr ""
+
 #: src/features/words/index.tsx
 msgid "Square already occupied"
 msgstr "ಚೌಕ ಈಗಾಗಲೇ ತುಂಬಿದೆ"
@@ -2610,6 +2646,10 @@ msgstr "ಲಭ್ಯವಿಲ್ಲ"
 #: ../../../lib/web/src/lib/request.ts
 msgid "Unexpected API error"
 msgstr "ಅನಿರೀಕ್ಷಿತ API ದೋಷ"
+
+#: ../../../lib/web/src/components/diff-viewer.tsx
+msgid "Unified"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "United States"
