@@ -14,6 +14,7 @@ import {
   GameHeader,
   GameHeaderStat,
   Button,
+  ConfirmDialog,
   IconButton,
   getAppPath,
   getErrorMessage,
@@ -80,6 +81,7 @@ import {
   type DraftWordValidationState,
   type MoveErrorMessages,
 } from './lib/move-draft'
+import { passEndsGame } from './lib/pass'
 
 export function WordsGameView() {
   const { t } = useLingui()
@@ -92,6 +94,7 @@ export function WordsGameView() {
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
+  const [showEndGameDialog, setShowEndGameDialog] = useState(false)
   // Tile placement state
   const [selectedRackIndex, setSelectedRackIndex] = useState<number | null>(
     null
@@ -850,7 +853,11 @@ export function WordsGameView() {
                                   {isMyTurn &&
                                     pendingPlacements.length === 0 && (
                                       <DropdownMenuItem
-                                        onClick={handlePass}
+                                        onClick={
+                                          passEndsGame(game)
+                                            ? () => setShowEndGameDialog(true)
+                                            : handlePass
+                                        }
                                         disabled={passMutation.isPending}
                                       >
                                         <SkipForward className='me-2 size-4' />{' '}
@@ -1062,6 +1069,24 @@ export function WordsGameView() {
         onOpenChange={setShowDeleteDialog}
         onConfirm={handleDelete}
         isPending={deleteGameMutation.isPending}
+      />
+
+      {/* Only the pass that ends the game is asked about. An ordinary pass
+          gives up a turn and nothing else; this one finishes the game and
+          takes each player's leftover tiles off their score. */}
+      <ConfirmDialog
+        open={showEndGameDialog}
+        onOpenChange={setShowEndGameDialog}
+        title={t`End game?`}
+        desc={t`This pass ends the game. The tiles left on each rack come off that player's score.`}
+        confirmText={t`End game`}
+        icon={<SkipForward className='size-4' />}
+        destructive
+        handleConfirm={() => {
+          setShowEndGameDialog(false)
+          handlePass()
+        }}
+        isLoading={passMutation.isPending}
       />
 
       {/* Blank tile letter selection */}
