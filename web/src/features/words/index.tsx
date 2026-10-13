@@ -94,7 +94,10 @@ export function WordsGameView() {
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
-  const [showEndGameDialog, setShowEndGameDialog] = useState(false)
+  // The game the end-game question was asked about, not a plain open flag:
+  // the view outlives a switch to another game, and a flag would leave the
+  // question open over that game and pass there instead.
+  const [endGameFor, setEndGameFor] = useState<string | null>(null)
   // Tile placement state
   const [selectedRackIndex, setSelectedRackIndex] = useState<number | null>(
     null
@@ -146,6 +149,12 @@ export function WordsGameView() {
     if (selectedGameId) {
       setLastGame(selectedGameId)
     }
+  }, [selectedGameId])
+
+  // Leaving a game answers its end-game question with no. Without this the
+  // question would be waiting again on the way back.
+  useEffect(() => {
+    setEndGameFor(null)
   }, [selectedGameId])
 
   // Games list
@@ -366,6 +375,7 @@ export function WordsGameView() {
   })
 
   const passMutation = usePassMutation({
+    onSuccess: () => setEndGameFor(null),
     onError: (error) => {
       toast.error(getErrorMessage(error, t`Failed to pass`))
     },
@@ -855,7 +865,10 @@ export function WordsGameView() {
                                       <DropdownMenuItem
                                         onClick={
                                           passEndsGame(game)
-                                            ? () => setShowEndGameDialog(true)
+                                            ? () =>
+                                                setEndGameFor(
+                                                  selectedGameId ?? null
+                                                )
                                             : handlePass
                                         }
                                         disabled={passMutation.isPending}
@@ -1075,16 +1088,19 @@ export function WordsGameView() {
           gives up a turn and nothing else; this one finishes the game and
           takes each player's leftover tiles off their score. */}
       <ConfirmDialog
-        open={showEndGameDialog}
-        onOpenChange={setShowEndGameDialog}
+        open={endGameFor !== null && endGameFor === selectedGameId}
+        onOpenChange={(open) => {
+          if (!open) setEndGameFor(null)
+        }}
         title={t`End game?`}
         desc={t`This pass ends the game. The tiles left on each rack come off that player's score.`}
         confirmText={t`End game`}
         icon={<SkipForward className='size-4' />}
         destructive
+        // Stays open while the pass is sent, so the button shows it, and after
+        // a failure, so the player can try again.
         handleConfirm={() => {
-          setShowEndGameDialog(false)
-          handlePass()
+          if (endGameFor) passMutation.mutate({ gameId: endGameFor })
         }}
         isLoading={passMutation.isPending}
       />
