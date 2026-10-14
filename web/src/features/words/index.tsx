@@ -94,9 +94,9 @@ export function WordsGameView() {
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
-  // The game the end-game question was asked about, not a plain open flag:
-  // the view outlives a switch to another game, and a flag would leave the
-  // question open over that game and pass there instead.
+  // The game the end-game question was asked about, not a plain open flag, so
+  // it can only ever pass in that game. The route also remounts the view per
+  // game; this holds even if that changes.
   const [endGameFor, setEndGameFor] = useState<string | null>(null)
   // Tile placement state
   const [selectedRackIndex, setSelectedRackIndex] = useState<number | null>(
@@ -181,6 +181,15 @@ export function WordsGameView() {
   const myPlayerNumber = game?.my_player_number ?? 0
   const isMyTurn =
     game?.status === 'active' && game?.current_turn === myPlayerNumber
+
+  // An exchange is a move, so it ends with the turn. A pass or a resignation
+  // changes neither rack nor board, and left Exchange live for a request the
+  // server refuses.
+  useEffect(() => {
+    if (isMyTurn) return
+    setExchangeMode(false)
+    setExchangeSelected(new Set())
+  }, [isMyTurn])
 
   // Initialize rack from game data
   useEffect(() => {
