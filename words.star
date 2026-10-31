@@ -259,34 +259,6 @@ def database_create():
 	)""")
 	mochi.db.execute("create index if not exists messages_game_created on messages( game, created )")
 
-def stream_asset(a, entity_id, service, asset):
-	if not entity_id:
-		a.error.label(404, "errors.asset_unavailable", asset=asset)
-		return None
-	# mochi.remote.stream aborts the action as a 500 on a malformed entity, so
-	# refuse one here as a 404 instead. Matches chess.
-	if not mochi.text.valid(entity_id, "entity"):
-		a.error.label(404, "errors.asset_unavailable", asset=asset)
-		return None
-	s = mochi.remote.stream(entity_id, service, asset, {})
-	if not s:
-		a.error.label(404, "errors.asset_unavailable", asset=asset)
-		return None
-	header = s.read()
-	if not header or header.get("status") != "200":
-		a.error.label(404, "errors.asset_not_set", asset=asset)
-		return None
-	a.header("Cache-Control", "private, max-age=300")
-	if "data" in header:
-		return {"data": header["data"]}
-	a.header("Content-Type", header.get("content_type", "application/octet-stream"))
-	# Per-slot byte caps matching what the people app accepts on upload; the route
-	# is public, so an uncapped stream could run indefinitely. Unknown slots fall
-	# back to the largest cap.
-	caps = {"avatar": 2 * 1024 * 1024, "banner": 10 * 1024 * 1024, "favicon": 64 * 1024}
-	a.write.stream(s, maximum=caps.get(asset, 10 * 1024 * 1024))
-	return None
-
 _PERSON_ASSETS = ("avatar", "banner", "favicon", "style", "information")
 
 def action_user_asset(a):
@@ -308,7 +280,7 @@ def action_user_asset(a):
 	if not is_player(game, a.input("user") or ""):
 		a.error.label(404, "errors.unknown_asset")
 		return
-	return stream_asset(a, a.input("user") or "", "people", asset)
+	return asset_serve(a, a.input("user") or "", "people", asset)
 
 # Helpers
 

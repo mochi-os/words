@@ -11,7 +11,8 @@
 	"services": ["words"],
 
 	"architecture": {"engine": "starlark", "version": 4},
-	"execute": ["words.star"],
+	"execute": ["lib/assets.star", "words.star"],
+	"require": {"version": {"minimum": "0.4.244"}},
 
 	"database": {
 		"schema": 6,
