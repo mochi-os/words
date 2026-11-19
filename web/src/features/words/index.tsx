@@ -36,6 +36,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   cn,
+  tryPath,
 } from '@mochi/web'
 import {
   ArrowLeftRight,
@@ -48,6 +49,7 @@ import {
   SkipForward,
   Trash2,
 } from 'lucide-react'
+import endpoints from '@/api/endpoints'
 import { parseBoard, serializeBoard, type Placement } from '@/lib/words-engine'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
@@ -695,12 +697,17 @@ export function WordsGameView() {
     const id = game[`player${number}` as keyof typeof game] as
       string | undefined
     if (!id) return null
-    const base = `${getAppPath()}/${selectedGameId}/-/user/${id}/asset`
+    // The player's id comes from their server, so it goes in through path,
+    // and an address it would take out of its segment is left out.
+    const asset = (slot: 'avatar' | 'style') =>
+      tryPath(
+        () => getAppPath() + endpoints.game.asset(selectedGameId, id, slot)
+      )
     return {
       name: game[`player${number}_name` as keyof typeof game] as
         string | undefined,
-      avatarUrl: `${base}/avatar`,
-      styleUrl: `${base}/style`,
+      avatarUrl: asset('avatar'),
+      styleUrl: asset('style'),
     }
   }, [game, selectedGameId])
 

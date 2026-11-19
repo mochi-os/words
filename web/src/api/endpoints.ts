@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
+import { path } from '@mochi/web'
 
 const endpoints = {
   game: {
@@ -9,14 +10,17 @@ const endpoints = {
     new: '/-/new',
     create: '/-/create',
     validate: '/-/validate',
-    detail: (gameId: string) => `/${gameId}/-/view`,
-    messages: (gameId: string) => `/${gameId}/-/messages`,
-    send: (gameId: string) => `/${gameId}/-/send`,
-    move: (gameId: string) => `/${gameId}/-/move`,
-    pass: (gameId: string) => `/${gameId}/-/pass`,
-    exchange: (gameId: string) => `/${gameId}/-/exchange`,
-    resign: (gameId: string) => `/${gameId}/-/resign`,
-    delete: (gameId: string) => `/${gameId}/-/delete`,
+    detail: (gameId: string) => path`/${gameId}/-/view`,
+    messages: (gameId: string) => path`/${gameId}/-/messages`,
+    send: (gameId: string) => path`/${gameId}/-/send`,
+    move: (gameId: string) => path`/${gameId}/-/move`,
+    pass: (gameId: string) => path`/${gameId}/-/pass`,
+    exchange: (gameId: string) => path`/${gameId}/-/exchange`,
+    resign: (gameId: string) => path`/${gameId}/-/resign`,
+    delete: (gameId: string) => path`/${gameId}/-/delete`,
+    // A player's avatar or style, through the game it is bound to.
+    asset: (gameId: string, user: string, slot: 'avatar' | 'style') =>
+      path`/${gameId}/-/user/${user}/asset/${slot}`,
   },
 } as const
 
