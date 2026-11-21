@@ -19,6 +19,7 @@ import {
   type MoveDraftStatus,
   type MoveStatusMessages,
 } from '../lib/move-draft'
+import { useScoreGain } from '../lib/score'
 
 interface DraftWordPreview {
   word: string
@@ -67,6 +68,7 @@ export function MoveComposer({
   onConfirmExchange,
 }: MoveComposerProps) {
   const { t } = useLingui()
+  const scoreGain = useScoreGain()
   const statusMessages = useMemo<MoveStatusMessages>(
     () => ({
       waiting: t`Waiting for your turn`,
@@ -105,7 +107,7 @@ export function MoveComposer({
             className='ms-auto shrink-0 text-lg font-bold tabular-nums'
             aria-live='polite'
           >
-            +{totalScore}
+            {scoreGain(totalScore)}
           </span>
         )}
       </div>
@@ -156,7 +158,9 @@ export function MoveComposer({
                 <span className='font-semibold tracking-wide'>
                   {normalizedWord}
                 </span>
-                <span className='text-muted-foreground'>+{score}</span>
+                <span className='text-muted-foreground'>
+                  {scoreGain(score)}
+                </span>
               </span>
             )
           })}

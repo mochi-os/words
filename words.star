@@ -135,6 +135,8 @@ def valid_rack(rack):
 # Fires the chat-message-arrival websocket wherever a messages row commits.
 # Scoped to type='message': move / pass / exchange / resign carry per-event
 # payloads the row cannot supply, so those paths write the websocket directly.
+# Every frame that adds a chat row carries the row's id, so a client tells two
+# rows apart however alike they are.
 def words_commit_hook(table, kind, row_uid):
 	if table != "messages" or kind != "insert" or not row_uid:
 		return
@@ -148,6 +150,7 @@ def words_commit_hook(table, kind, row_uid):
 		return
 	mochi.websocket.write(game["key"], {
 		"type": "message",
+		"id": message["id"],
 		"created": message["created"],
 		"member": message["member"],
 		"name": message["name"],
@@ -949,7 +952,7 @@ def action_move(a):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, move_label + " (+" + str(score) + ")", "play:" + str(score), now)
 
 	ws_data = {
-		"type": "move", "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
+		"type": "move", "id": id, "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
 		"body": move_label + " (+" + str(score) + ")",
 		"event": "play:" + str(score),
 		"board": board, "score": score, "player_number": pnum,
@@ -1041,7 +1044,7 @@ def action_pass(a):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, body, "pass:over" if game_over else "pass", now)
 
 	ws_data = {
-		"type": "move", "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
+		"type": "move", "id": id, "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
 		"body": body, "pass": True,
 		"event": "pass:over" if game_over else "pass",
 		"current_turn": new_turn, "consecutive_passes": new_consecutive,
@@ -1130,7 +1133,7 @@ def action_exchange(a):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'move', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, body, "exchange:" + str(len(tiles_to_exchange)), now)
 
 	ws_data = {
-		"type": "move", "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
+		"type": "move", "id": id, "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
 		"body": body, "exchange": True,
 		"event": "exchange:" + str(len(tiles_to_exchange)),
 		"current_turn": new_turn, "bag_count": len(new_bag),
@@ -1188,14 +1191,17 @@ def action_resign(a):
 		return
 
 
+	# The row is the event and its player, with no prose: each client words it
+	# in its own viewer's language from member and name.
 	id = mochi.uid()
-	msg = a.user.identity.name + " resigned"
-	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', ?, ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, "resign", now)
+	member = a.user.identity.id
+	name = a.user.identity.name
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, '', 'system', 'resign', ? )", id, game["id"], member, name, now)
 
 	# Skip commit-hook conversion: the resign payload carries an event marker and the winner (sourced from the games row), neither of which is on the messages row alone — and the games.update is shared with move / pass / exchange.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": msg, "winner": winner or ""})
+	mochi.websocket.write(game["key"], {"type": "system", "id": id, "event": "resign", "created": now, "member": member, "name": name, "body": "", "winner": winner or ""})
 
-	resign_data = {"game": game["id"], "created": now, "body": msg}
+	resign_data = {"game": game["id"], "created": now, "member": member, "name": name, "body": ""}
 	for key, value in state.items():
 		resign_data[key] = value
 	for other in get_other_players(game, a.user.identity.id):
@@ -1454,7 +1460,7 @@ def event_move(e):
 	# current_turn, move_count, status, winner and every playerN_score - is
 	# overwritten from the applied snapshot by the loop below.
 	ws_data = {
-		"type": "move", "created": created, "member": sender, "name": name,
+		"type": "move", "id": id, "created": created, "member": sender, "name": name,
 		"body": body, "event": "play:" + str(score),
 		"score": score, "player_number": player_number,
 		"bag_count": bag_count,
@@ -1505,7 +1511,7 @@ def event_pass(e):
 	# Only the keys GAME_PUBLIC does not carry; the applied snapshot supplies
 	# the rest below.
 	ws_data = {
-		"type": "move", "created": now, "member": sender, "name": name,
+		"type": "move", "id": id, "created": now, "member": sender, "name": name,
 		"body": body, "pass": True, "event": marker,
 	}
 	# Skip commit-hook conversion: matches action_pass — shared (games, update) shape and a pass flag the hook can't infer from row state.
@@ -1564,7 +1570,7 @@ def event_exchange(e):
 	# Only the keys GAME_PUBLIC does not carry; the applied snapshot supplies
 	# the rest below.
 	ws_data = {
-		"type": "move", "created": now, "member": sender, "name": name,
+		"type": "move", "id": id, "created": now, "member": sender, "name": name,
 		"body": body, "exchange": True, "event": exchange_marker,
 		"bag_count": bag_count,
 	}
@@ -1625,25 +1631,24 @@ def event_resign(e):
 	if not is_player(game, sender):
 		return
 
-	# Our own label: the row renders from the marker, and the wire body was
-	# the actor's language. The winner is read from the applied snapshot.
-	body = mochi.app.label("notifications.body.opponent_resigned")
-
+	# The winner is read from the applied snapshot.
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
 	if state == None:
 		return
 
 	id = mochi.uid()
-	# Resolve the resigner's name from our own row rather than storing the
-	# sender's prose, so the marker render has a name in the viewer's data.
-	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', ?, ? )", id, game["id"], sender, get_player_name(game, get_player_number(game, sender)), body, "resign", now)
+	# The same shape action_resign stores: the event and its player, no prose.
+	# The player is the verified sender and the name comes from our own row,
+	# not from the payload's member and name.
+	name = get_player_name(game, get_player_number(game, sender))
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, '', 'system', 'resign', ? )", id, game["id"], sender, name, now)
 
 	# Skip commit-hook conversion: matches action_resign — payload carries an event marker and the winner from the games row, neither of which is on the messages row alone.
-	ws_data = {"type": "system", "event": "resign", "created": now, "body": body}
+	ws_data = {"type": "system", "id": id, "event": "resign", "created": now, "member": sender, "name": name, "body": ""}
 	# A snapshot may have repaired more than this event's own subject, so send
 	# the applied state, minus the racks and bag the browser must not see.
 	for key in GAME_PUBLIC:
 		ws_data[key] = state[key]
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", game["id"], mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/words/" + game["id"], event_id="resign:" + game["id"], name=get_player_name(game, get_player_number(game, sender)))
+	notify("activity", game["id"], mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/words/" + game["id"], event_id="resign:" + game["id"], name=name)
