@@ -80,6 +80,13 @@ msgstr ""
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr ""
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr ""
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr ""
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr ""
@@ -847,10 +855,6 @@ msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
-msgstr ""
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
 msgstr ""
 
 #: ../../../lib/web/src/components/map-view.tsx
@@ -1023,6 +1027,16 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr ""
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1099,6 +1113,12 @@ msgstr ""
 #. placeholder {1}: row + 1
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
+msgstr ""
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
 msgstr ""
 
 #: src/features/words/components/tile-rack.tsx
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr ""
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr ""
 
@@ -1496,10 +1518,6 @@ msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
-msgstr ""
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
 msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
@@ -2374,6 +2392,7 @@ msgstr ""
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr ""
 
@@ -2450,6 +2469,11 @@ msgstr ""
 
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
+msgstr ""
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
 msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
@@ -2644,6 +2668,16 @@ msgstr ""
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Traveling"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr ""
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr ""
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

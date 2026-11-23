@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# дохилӣ} other {+# дохилӣ}}"
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} дар {1}{2}, {premiumName}, барои хориҷ кардан клик кунед"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} дар {1}{2}, барои хориҷ кардан клик кунед"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "Нусхабардорӣ шуд"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "Ба буфер нусхабардорӣ шуд"
@@ -848,10 +856,6 @@ msgstr "Эҷодшуда"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} сохта шуд"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "Эҷод карда истодааст..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "Ба намунаи талабшуда мувофиқат намекун
 msgid "Done"
 msgstr "Иҷро шуд"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "Холи дучандаи ҳарф"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "Холи дучандаи калима"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "Рамзи email"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "Чоркунҷаи холии {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "Чоркунҷаи холии {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "Илова кардани ҳисоб ба анҷом нарасид"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "Эҷоди бозӣ ба анҷом нарасид"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "Эҷоди пайванд ба анҷом нарасид"
 
@@ -1497,10 +1519,6 @@ msgstr "Танҳо ҳарфҳо, рақамҳо, фосилаҳо, дефисҳ�
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "Равшан"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "Пайванд"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "Танзимот"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "Мубодила"
 
@@ -2451,6 +2470,11 @@ msgstr "Бозии нави Калимаҳоро оғоз кунед"
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "Бозӣ оғоз кунед"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "Чоркунҷаи оғоз, холи дучандаи калима"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "Сатҳи болоӣ"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Сафар"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "Холи сечандаи ҳарф"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "Холи сечандаи калима"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

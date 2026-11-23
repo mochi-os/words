@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# ውስጠኛ} other {+# ውስጠኛ}}"
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} በ{1}{2}፣ {premiumName}፣ ለማስወገድ ይጫኑ"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} በ{1}{2}፣ ለማስወገድ ይጫኑ"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "ተቀድቷል"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "ወደ ቅንጥብ ሰሌዳ ተቀድቷል"
@@ -848,10 +856,6 @@ msgstr "ተፈጥሯል"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} ተፈጥሯል"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "በመፍጠር ላይ..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "ከሚያስፈልገው ስርዓተ ጥለት ጋር አይዛመድ�
 msgid "Done"
 msgstr "ተጠናቅቋል"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "ሁለት እጥፍ የፊደል ነጥብ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "ሁለት እጥፍ የቃል ነጥብ"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "የኢሜይል ኮድ"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "ባዶ ካሬ {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "ባዶ ካሬ {0}{1}፣ {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "መለያ መጨመር አልተሳካም"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "ጨዋታ መፍጠር አልተሳካም"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "አገናኝ መፍጠር አልተሳካም"
 
@@ -1497,10 +1519,6 @@ msgstr "ፊደላት፣ ቁጥሮች፣ ክፍተቶች፣ ሰረዞች እና �
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "ብርሃን"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "አገናኝ"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "ቅንብሮች"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "አጋራ"
 
@@ -2451,6 +2470,11 @@ msgstr "አዲስ የቃላት ጨዋታ ይጀምሩ"
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "ጨዋታ ይጀምሩ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "መነሻ ካሬ፣ ሁለት እጥፍ የቃል ነጥብ"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "ላይኛው ደረጃ"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "በጉዞ ላይ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "ሶስት እጥፍ የፊደል ነጥብ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "ሶስት እጥፍ የቃል ነጥብ"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

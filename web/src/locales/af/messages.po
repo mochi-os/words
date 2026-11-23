@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# geneste} other {+# geneste}}"
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} by {1}{2}, {premiumName}, klik om te verwyder"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} by {1}{2}, klik om te verwyder"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "Gekopieer"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "Gekopieer na knipbord"
@@ -848,10 +856,6 @@ msgstr "Geskep"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} geskep"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "Skep..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "Stem nie met die vereiste patroon ooreen nie"
 msgid "Done"
 msgstr "Klaar"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "Dubbele lettertelling"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "Dubbele woordtelling"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "E-poskode"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "Leë blok {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "Leë blok {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "Kon nie rekening byvoeg nie"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "Kon nie spel skep nie"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "Kon nie skakel skep nie"
 
@@ -1497,10 +1519,6 @@ msgstr "Slegs letters, syfers, spasies, koppeltekens en skuinsstrepe"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "Lig"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "Skakel"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "Instellings"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "Deel"
 
@@ -2451,6 +2470,11 @@ msgstr "Begin 'n nuwe Words-speletjie"
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "Begin speletjie"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "Beginblok, dubbele woordtelling"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "Boonste vlak"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Op reis"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "Driedubbele lettertelling"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "Driedubbele woordtelling"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

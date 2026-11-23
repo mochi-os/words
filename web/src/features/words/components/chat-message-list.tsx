@@ -20,6 +20,8 @@ interface ChatMessageListProps {
   isLoadingMessages: boolean
   messagesError: unknown
   currentUserIdentity: string
+  /** Name each received run's sender: set when there is more than one opponent. */
+  showNames?: boolean
 }
 
 export function ChatMessageList({
@@ -28,6 +30,7 @@ export function ChatMessageList({
   isLoadingMessages,
   messagesError,
   currentUserIdentity,
+  showNames = false,
 }: ChatMessageListProps) {
   const { t } = useLingui()
 
@@ -38,6 +41,7 @@ export function ChatMessageList({
       isLoadingMessages={isLoadingMessages}
       messagesError={messagesError}
       currentUserIdentity={currentUserIdentity}
+      showNames={showNames}
       emptyLabel={t`No messages yet`}
       // Words has no draw, so resignation is the only event with wording of
       // its own. A row carrying no actor name falls back to the stored body,

@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# කැදැලි} other {+# කැදැලි}}"
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{1}{2} හි {0}, {premiumName}, ඉවත් කිරීමට ක්ලික් කරන්න"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{1}{2} හි {0}, ඉවත් කිරීමට ක්ලික් කරන්න"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "පිටපත් කළා"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී"
@@ -848,10 +856,6 @@ msgstr "නිර්මාණය කරන ලදී"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} සාදන ලදී"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "නිර්මාණය කරමින්..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "අවශ්‍ය රටාවට නොගැළපේ"
 msgid "Done"
 msgstr "නිමයි"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "අකුරට දෙගුණයක ලකුණු"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "වචනයට දෙගුණයක ලකුණු"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "ඊමේල් කේතය"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "හිස් කොටුව {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "හිස් කොටුව {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "ගිණුම එක් කිරීමට අසමත් විය"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "ක්‍රීඩාවක් සෑදීමට අසමත් විය"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "සබැඳියක් සෑදීමට අසමත් විය"
 
@@ -1497,10 +1519,6 @@ msgstr "අකුරු, ඉලක්කම්, හිස්තැන්, ඉර
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "ලා"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "සබැඳිය"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "සැකසුම්"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "බෙදාගන්න"
 
@@ -2451,6 +2470,11 @@ msgstr "නව වචන ක්‍රීඩාවක් ආරම්භ කර�
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "ක්‍රීඩාව ආරම්භ කරන්න"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "ආරම්භක කොටුව, වචනයට දෙගුණයක ලකුණු"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "ඉහළ මට්ටම"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "ගමන් කරමින්"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "අකුරට තුන් ගුණයක ලකුණු"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "වචනයට තුන් ගුණයක ලකුණු"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

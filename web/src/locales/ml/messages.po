@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# നെസ്റ്റഡ്} other {+# നെസ്�
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} {1}{2}-ൽ, {premiumName}, നീക്കം ചെയ്യാൻ ക്ലിക്ക് ചെയ്യുക"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} {1}{2}-ൽ, നീക്കം ചെയ്യാൻ ക്ലിക്ക് ചെയ്യുക"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "പകർത്തി"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി"
@@ -848,10 +856,6 @@ msgstr "സൃഷ്ടിച്ചു"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} സൃഷ്ടിച്ചു"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "സൃഷ്ടിക്കുന്നു..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "ആവശ്യമായ മാതൃകയുമായി പൊരു�
 msgid "Done"
 msgstr "പൂർത്തിയായി"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "അക്ഷരത്തിന് ഇരട്ടി പോയിന്റ്"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "വാക്കിന് ഇരട്ടി പോയിന്റ്"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "ഇമെയിൽ കോഡ്"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "ശൂന്യ ചതുരം {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "ശൂന്യ ചതുരം {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "അക്കൗണ്ട് ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "ഗെയിം സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "ലിങ്ക് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -1497,10 +1519,6 @@ msgstr "അക്ഷരങ്ങൾ, അക്കങ്ങൾ, സ്പേസ�
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "ലൈറ്റ്"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "ലിങ്ക്"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "ക്രമീകരണങ്ങൾ"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "പങ്കിടുക"
 
@@ -2451,6 +2470,11 @@ msgstr "ഒരു പുതിയ വാക്കുകൾ ഗെയിം ആ�
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "ഗെയിം ആരംഭിക്കുക"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "ആരംഭ ചതുരം, വാക്കിന് ഇരട്ടി പോയിന്റ്"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "ഏറ്റവും മുകളിലുള്ള ലെവൽ"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "യാത്ര ചെയ്യുന്നു"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "അക്ഷരത്തിന് മൂന്നിരട്ടി പോയിന്റ്"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "വാക്കിന് മൂന്നിരട്ടി പോയിന്റ്"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

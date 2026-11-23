@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# ನೆಸ್ಟೆಡ್} other {+# ನೆಸ್ಟ�
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} ರಲ್ಲಿ {1}{2}, {premiumName}, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} ರಲ್ಲಿ {1}{2}, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "ನಕಲಿಸಲಾಗಿದೆ"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ"
@@ -848,10 +856,6 @@ msgstr "ರಚಿಸಲಾಗಿದೆ"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} ರಚಿಸಲಾಗಿದೆ"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "ರಚಿಸಲಾಗುತ್ತಿದೆ..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "ಅಗತ್ಯವಿರುವ ಮಾದರಿಗೆ ಹೊಂದಿಕ�
 msgid "Done"
 msgstr "ಮುಗಿಯಿತು"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "ಅಕ್ಷರದ ಎರಡು ಪಟ್ಟು ಅಂಕ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "ಪದದ ಎರಡು ಪಟ್ಟು ಅಂಕ"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "ಇಮೇಲ್ ಕೋಡ್"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "ಖಾಲಿ ಚೌಕ {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "ಖಾಲಿ ಚೌಕ {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "ಖಾತೆ ಸೇರಿಸಲು ವಿಫಲವಾಗಿದೆ"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "ಆಟ ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "ಲಿಂಕ್ ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ"
 
@@ -1497,10 +1519,6 @@ msgstr "ಅಕ್ಷರಗಳು, ಸಂಖ್ಯೆಗಳು, ಸ್ಥಳಗ�
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "ಲೈಟ್"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "ಲಿಂಕ್"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "ಹಂಚಿಕೊಳ್ಳಿ"
 
@@ -2451,6 +2470,11 @@ msgstr "ಹೊಸ ಪದಗಳ ಆಟವನ್ನು ಪ್ರಾರಂಭಿಸ
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "ಆಟವನ್ನು ಪ್ರಾರಂಭಿಸಿ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "ಆರಂಭಿಕ ಚೌಕ, ಪದದ ಎರಡು ಪಟ್ಟು ಅಂಕ"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "ಅಗ್ರ ಮಟ್ಟ"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "ಪ್ರಯಾಣ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "ಅಕ್ಷರದ ಮೂರು ಪಟ್ಟು ಅಂಕ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "ಪದದ ಮೂರು ಪಟ್ಟು ಅಂಕ"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

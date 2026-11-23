@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# ਨੈਸਟਡ} other {+# ਨੈਸਟਡ}}"
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} {1}{2} 'ਤੇ, {premiumName}, ਹਟਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} {1}{2} 'ਤੇ, ਹਟਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "ਕਾਪੀ ਕੀਤਾ ਗਿਆ"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਹੋਇਆ"
@@ -848,10 +856,6 @@ msgstr "ਬਣਾਇਆ ਗਿਆ"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} ਬਣਾਇਆ ਗਿਆ"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "ਬਣਾ ਰਹੇ ਹਾਂ..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "ਲੋੜੀਂਦੇ ਪੈਟਰਨ ਨਾਲ ਮੇਲ ਨਹੀਂ �
 msgid "Done"
 msgstr "ਹੋ ਗਿਆ"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "ਅੱਖਰ ਦੇ ਦੁੱਗਣੇ ਅੰਕ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "ਸ਼ਬਦ ਦੇ ਦੁੱਗਣੇ ਅੰਕ"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "ਈਮੇਲ ਕੋਡ"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "ਖਾਲੀ ਖਾਨਾ {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "ਖਾਲੀ ਖਾਨਾ {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "ਖਾਤਾ ਜੋੜਨ ਵਿੱਚ ਅਸਫਲ"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "ਗੇਮ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "ਲਿੰਕ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ"
 
@@ -1497,10 +1519,6 @@ msgstr "ਸਿਰਫ਼ ਅੱਖਰ, ਅੰਕ, ਖਾਲੀ ਥਾਂਵਾਂ
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "ਲਾਈਟ"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "ਲਿੰਕ"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "ਸੈਟਿੰਗਾਂ"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
 
@@ -2451,6 +2470,11 @@ msgstr "ਨਵੀਂ ਸ਼ਬਦ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ"
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "ਸ਼ੁਰੂਆਤੀ ਖਾਨਾ, ਸ਼ਬਦ ਦੇ ਦੁੱਗਣੇ ਅੰਕ"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "ਉੱਚ ਪੱਧਰ"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "ਯਾਤਰਾ ਕਰ ਰਿਹਾ ਹੈ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "ਅੱਖਰ ਦੇ ਤਿੰਨ ਗੁਣਾ ਅੰਕ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "ਸ਼ਬਦ ਦੇ ਤਿੰਨ ਗੁਣਾ ਅੰਕ"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

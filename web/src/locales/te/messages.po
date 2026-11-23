@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# లోపలిది} other {+# లోపలివ�
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} {1}{2} వద్ద, {premiumName}, తీసివేయడానికి క్లిక్ చేయండి"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} {1}{2} వద్ద, తీసివేయడానికి క్లిక్ చేయండి"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "కాపీ అయింది"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది"
@@ -848,10 +856,6 @@ msgstr "సృష్టించబడింది"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} సృష్టించబడింది"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "సృష్టిస్తోంది..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "అవసరమైన నమూనాతో సరిపోలడం ల
 msgid "Done"
 msgstr "పూర్తయింది"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "అక్షరానికి రెండు రెట్లు పాయింట్లు"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "పదానికి రెండు రెట్లు పాయింట్లు"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "ఇమెయిల్ కోడ్"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "ఖాళీ గడి {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "ఖాళీ గడి {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "ఖాతాను జోడించడంలో విఫలమైంది"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "ఆటను సృష్టించడంలో విఫలమైంది"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "లింక్‌ను సృష్టించడంలో విఫలమైంది"
 
@@ -1497,10 +1519,6 @@ msgstr "అక్షరాలు, సంఖ్యలు, ఖాళీలు, హ
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "లైట్"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "లింక్"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "సెట్టింగ్‌లు"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "పంచుకోండి"
 
@@ -2451,6 +2470,11 @@ msgstr "కొత్త పదాల గేమ్‌ను ప్రారంభ
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "గేమ్‌ను ప్రారంభించండి"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "ప్రారంభ గడి, పదానికి రెండు రెట్లు పాయింట్లు"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "టాప్ లెవల్"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "ప్రయాణిస్తోంది"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "అక్షరానికి మూడు రెట్లు పాయింట్లు"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "పదానికి మూడు రెట్లు పాయింట్లు"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"

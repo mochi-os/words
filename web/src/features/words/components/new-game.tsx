@@ -10,12 +10,19 @@ import {
   Button,
   GameNewGameDialog,
   Label,
+  cn,
   getErrorMessage,
   toast,
   type Person,
 } from '@mochi/web'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
+
+// The chosen option of a group: an outline button with the primary tint, so
+// the dialog's one solid button stays its primary action. The dark and hover
+// tints replace the outline variant's own backgrounds for those states.
+const SELECTED_OPTION =
+  'bg-primary/10 text-primary hover:bg-primary/15 dark:bg-primary/10'
 
 function useLanguages() {
   const { t } = useLingui()
@@ -120,10 +127,14 @@ export function NewGame() {
               <Button
                 key={lang.value}
                 type='button'
-                variant={language === lang.value ? 'default' : 'outline'}
+                variant='outline'
                 size='sm'
+                aria-pressed={language === lang.value}
                 onClick={() => setLanguage(lang.value)}
-                className='flex-1'
+                className={cn(
+                  'flex-1',
+                  language === lang.value && SELECTED_OPTION
+                )}
               >
                 {lang.label}
               </Button>
@@ -149,7 +160,6 @@ export function NewGame() {
         emptyMessage: t`No friends found`,
         cancel: <Trans>Cancel</Trans>,
         submit: t`Start game`,
-        submitting: t`Creating...`,
       }}
     />
   )

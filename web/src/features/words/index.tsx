@@ -1068,6 +1068,7 @@ export function WordsGameView() {
                 isLoadingMessages={messagesQuery.isLoading}
                 messagesError={messagesQuery.error}
                 currentUserIdentity={myIdentity}
+                showNames={(game?.player_count ?? 0) > 2}
               />
             }
             newMessage={newMessage}

@@ -82,6 +82,19 @@ export function WordsBoard({
     ST: '',
     '.': '',
   }
+  // The same squares by their full names, for a screen reader. The start
+  // square doubles the word like any other double word square.
+  const premiumNames: Record<PremiumType, string> = {
+    TW: t({ message: 'Triple word score', context: 'premium square' }),
+    DW: t({ message: 'Double word score', context: 'premium square' }),
+    TL: t({ message: 'Triple letter score', context: 'premium square' }),
+    DL: t({ message: 'Double letter score', context: 'premium square' }),
+    ST: t({
+      message: 'Start square, double word score',
+      context: 'premium square',
+    }),
+    '.': '',
+  }
   const isActive = gameStatus === 'active'
   const canPlace = isActive && isMyTurn && selectedRackIndex !== null
   const isDragging = dragSource !== null && dragSource !== undefined
@@ -230,6 +243,7 @@ export function WordsBoard({
               const premium = getPremium(row, col)
               const premiumStyle = PREMIUM_STYLES[premium]
               const premiumLabel = premiumLabels[premium]
+              const premiumName = premiumNames[premium]
               const isEmpty = cellValue === '.' && !pending
               const isOccupied = cellValue !== '.'
               const isPending = !!pending
@@ -261,18 +275,22 @@ export function WordsBoard({
                 dragSource.row === row &&
                 dragSource.col === col
 
-              // A played square announced its bare letter and nothing else,
-              // which is the least useful thing a board can say. The other two
-              // labels are unchanged, placeholders included, so their existing
-              // translations still apply. Rows are numbered 1-15 top to bottom,
-              // as Scrabble numbers them - not bottom-up as in chess.
+              // Every square names its coordinate, and a square whose premium
+              // still counts (empty, or holding a tile of this move) names the
+              // premium too. A played tile has spent its square's premium, and
+              // the board no longer shows it there. The labels without a
+              // premium are unchanged, placeholders included, so their
+              // existing translations still apply. Rows are numbered 1-15 top
+              // to bottom, as Scrabble numbers them - not bottom-up as in chess.
               const label = isPending
-                ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${row + 1}, click to remove`
+                ? premiumName
+                  ? t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${row + 1}, ${premiumName}, click to remove`
+                  : t`${pending!.letter.toUpperCase()} at ${String.fromCharCode(65 + col)}${row + 1}, click to remove`
                 : isOccupied
                   ? t`${displayLetter} at ${String.fromCharCode(65 + col)}${row + 1}`
-                  : canClickToPlace
-                    ? t`Empty square ${String.fromCharCode(65 + col)}${row + 1}`
-                    : undefined
+                  : premiumName
+                    ? t`Empty square ${String.fromCharCode(65 + col)}${row + 1}, ${premiumName}`
+                    : t`Empty square ${String.fromCharCode(65 + col)}${row + 1}`
 
               return (
                 <div

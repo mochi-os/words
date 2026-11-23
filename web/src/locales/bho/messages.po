@@ -80,6 +80,13 @@ msgstr "{0, plural, one {+# नेस्टेड} other {+# नेस्टे�
 #. placeholder {1}: String.fromCharCode(65 + col)
 #. placeholder {2}: row + 1
 #: src/features/words/components/words-board.tsx
+msgid "{0} at {1}{2}, {premiumName}, click to remove"
+msgstr "{0} {1}{2} पर, {premiumName}, हटावे खातिर क्लिक करीं"
+
+#. placeholder {0}: pending!.letter.toUpperCase()
+#. placeholder {1}: String.fromCharCode(65 + col)
+#. placeholder {2}: row + 1
+#: src/features/words/components/words-board.tsx
 msgid "{0} at {1}{2}, click to remove"
 msgstr "{0} {1}{2} पर, हटावे खातिर क्लिक करीं"
 
@@ -788,6 +795,7 @@ msgid "Copied"
 msgstr "कॉपी हो गइल"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copied to clipboard"
 msgstr "क्लिपबोर्ड पर कॉपी कइल गइल"
@@ -848,10 +856,6 @@ msgstr "बनावल गइल"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Created {field}"
 msgstr "{field} बनावल गइल"
-
-#: src/features/words/components/new-game.tsx
-msgid "Creating..."
-msgstr "बनावल जा रहल बा..."
 
 #: ../../../lib/web/src/components/map-view.tsx
 msgid "Current location"
@@ -1023,6 +1027,16 @@ msgstr "जरूरी पैटर्न से मेल ना खात ब
 msgid "Done"
 msgstr "हो गइल"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double letter score"
+msgstr "अक्षर के दुगुना अंक"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Double word score"
+msgstr "शब्द के दुगुना अंक"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1100,6 +1114,12 @@ msgstr "ईमेल कोड"
 #: src/features/words/components/words-board.tsx
 msgid "Empty square {0}{1}"
 msgstr "खाली वर्ग {0}{1}"
+
+#. placeholder {0}: String.fromCharCode(65 + col)
+#. placeholder {1}: row + 1
+#: src/features/words/components/words-board.tsx
+msgid "Empty square {0}{1}, {premiumName}"
+msgstr "खाली वर्ग {0}{1}, {premiumName}"
 
 #: src/features/words/components/tile-rack.tsx
 msgid "Empty tile slot"
@@ -1183,6 +1203,7 @@ msgid "Failed to add account"
 msgstr "खाता जोड़े में विफल"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Failed to copy"
@@ -1193,7 +1214,8 @@ msgid "Failed to create game"
 msgstr "खेल बनावे में विफल"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
-#: ../../../lib/web/src/components/options-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Failed to create link"
 msgstr "लिंक बनावे में विफल"
 
@@ -1497,10 +1519,6 @@ msgstr "खाली अक्षर, अंक, खाली जगह, हा�
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Light"
 msgstr "हल्का"
-
-#: ../../../lib/web/src/components/options-menu.tsx
-msgid "Link"
-msgstr "लिंक"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
@@ -2374,6 +2392,7 @@ msgstr "सेटिंग सब"
 
 #: ../../../lib/web/src/components/comment-share-button.tsx
 #: ../../../lib/web/src/components/comment-share-button.tsx
+#: ../../../lib/web/src/components/share-menu.tsx
 msgid "Share"
 msgstr "साझा करीं"
 
@@ -2451,6 +2470,11 @@ msgstr "नया शब्द खेल शुरू करीं"
 #: src/features/words/components/new-game.tsx
 msgid "Start game"
 msgstr "खेल शुरू करीं"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Start square, double word score"
+msgstr "सुरुआती वर्ग, शब्द के दुगुना अंक"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx
 msgid "Start the discussion by adding the first comment."
@@ -2644,6 +2668,16 @@ msgstr "शीर्ष स्तर"
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "यात्रा कर रहल बा"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple letter score"
+msgstr "अक्षर के तीन गुना अंक"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "premium square"
+msgid "Triple word score"
+msgstr "शब्द के तीन गुना अंक"
 
 #: ../../../lib/web/src/components/search-entity-page.tsx
 msgid "Try adjusting your search terms"
