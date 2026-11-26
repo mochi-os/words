@@ -190,6 +190,10 @@ msgstr "{unreadCount, plural, one {Otvori izbornik (# nepročitana obavijest)} f
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# bod} few {# boda} other {# bodova}}"
 
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 sati"
@@ -457,6 +461,7 @@ msgstr "Prazna pločica"
 msgid "Block {name}"
 msgstr "Blokiraj {name}"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "Blokirao"
 msgid "Blocked navigation to untrusted link"
 msgstr "Blokirana navigacija na nepouzdanu poveznicu"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "Blokovi"
@@ -569,6 +575,10 @@ msgstr "Promijenjeno"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "Promijenjeno {field}"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "Klasa promijenjena"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "Odbaci"
 msgid "Displays the mobile sidebar."
 msgstr "Prikazuje mobilnu bočnu traku."
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "2S"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "Ne odgovara traženom uzorku"
@@ -1019,9 +1034,15 @@ msgstr "Preuzmi"
 msgid "Download failed"
 msgstr "Preuzimanje nije uspjelo"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "Duplikati"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "2R"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "Svijetlo"
 msgid "Link"
 msgstr "Poveznica"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "Veze"
@@ -1607,10 +1629,6 @@ msgstr "Više opcija"
 msgid "Moved"
 msgstr "Premješteno"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "Premješteno {field}"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "Sljedeći mjesec"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "Sljedeća godina"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "Ne"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "Preusmjeravanje na prijavu."
 msgid "Reduce interest"
 msgstr "Smanji interes"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "Povezuje se"
@@ -2579,6 +2602,11 @@ msgstr "Pločice moraju biti u jednom retku ili stupcu"
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Pločice se moraju spajati s pločicama koje su već na ploči"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "3S"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "Za"
@@ -2613,6 +2641,10 @@ msgstr "Previše zahtjeva"
 msgid "Top"
 msgstr "Najbolje"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "Najviša razina"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Putovanje"
@@ -2629,6 +2661,11 @@ msgstr "Pokušaj ponovno"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "Utorak"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "3R"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "Sjedinjene Američke Države"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "Stvorene riječi"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Godina"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "Da"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

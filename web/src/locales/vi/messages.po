@@ -190,6 +190,10 @@ msgstr "{unreadCount, plural, one {Mở menu (# thông báo chưa đọc)} other
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, other {# điểm}}"
 
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 giờ"
@@ -457,6 +461,7 @@ msgstr "Quân trống"
 msgid "Block {name}"
 msgstr "Chặn {name}"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "Bị chặn bởi"
 msgid "Blocked navigation to untrusted link"
 msgstr "Đã chặn điều hướng tới liên kết không tin cậy"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "Chặn"
@@ -569,6 +575,10 @@ msgstr "Đã thay đổi"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "Đã thay đổi {field}"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "Đã thay đổi lớp"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "Bỏ qua"
 msgid "Displays the mobile sidebar."
 msgstr "Hiển thị thanh bên di động."
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "2C"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "Không khớp với mẫu bắt buộc"
@@ -1019,9 +1034,15 @@ msgstr "Tải xuống"
 msgid "Download failed"
 msgstr "Tải xuống thất bại"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "Trùng lặp"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "2T"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "Sáng"
 msgid "Link"
 msgstr "Liên kết"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "Liên kết"
@@ -1607,10 +1629,6 @@ msgstr "Tùy chọn khác"
 msgid "Moved"
 msgstr "Đã di chuyển"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "Đã di chuyển {field}"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "Tháng sau"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "Năm sau"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "Không"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "Đang chuyển hướng đến đăng nhập."
 msgid "Reduce interest"
 msgstr "Giảm sự quan tâm"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "Liên quan đến"
@@ -2579,6 +2602,11 @@ msgstr "Các quân phải nằm trên cùng một hàng hoặc một cột"
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Các quân phải nối với quân đã có trên bàn"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "3C"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "Đến"
@@ -2613,6 +2641,10 @@ msgstr "Quá nhiều yêu cầu"
 msgid "Top"
 msgstr "Hàng đầu"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "Cấp cao nhất"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Đang di chuyển"
@@ -2629,6 +2661,11 @@ msgstr "Thử lại"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "Thứ ba"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "3T"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "Hoa Kỳ"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "Từ đã ghép"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Năm"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "Có"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

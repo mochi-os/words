@@ -190,6 +190,10 @@ msgstr "{unreadCount, plural, one {Vula imenyu (# isaziso esingafundiwe)} other 
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {amaphuzu angu-#} other {amaphuzu angu-#}}"
 
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "Amahora angu-12"
@@ -457,6 +461,7 @@ msgstr "Ithayela elingenalutho"
 msgid "Block {name}"
 msgstr "Vimbela u-{name}"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "Ivinjelwe ngu"
 msgid "Blocked navigation to untrusted link"
 msgstr "Kuvinjelwe ukuya esixhumanisini esingathembekile"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "Iyavimba"
@@ -569,6 +575,10 @@ msgstr "Kushintshiwe"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "Kushintshiwe {field}"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "Iklasi lishintshiwe"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "Cashisa"
 msgid "Displays the mobile sidebar."
 msgstr "Ibonisa ibha eseceleni yefoni."
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "2U"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "Ayihambisani nephethini edingekayo"
@@ -1019,9 +1034,15 @@ msgstr "Landa"
 msgid "Download failed"
 msgstr "Ukulanda kuhlulekile"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "Iphinda kabili"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "2I"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "Okukhanyayo"
 msgid "Link"
 msgstr "Isixhumanisi"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "Izixhumanisi"
@@ -1607,10 +1629,6 @@ msgstr "Eziningi izinketho"
 msgid "Moved"
 msgstr "Kuhanjiswe"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "Kuhanjiswe {field}"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "Inyanga ezayo"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "Unyaka ozayo"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "Cha"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "Iqondisa kabusha ekungeneni."
 msgid "Reduce interest"
 msgstr "Yehlisa intshisekelo"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "Iyahlobana"
@@ -2579,6 +2602,11 @@ msgstr "Amathayela kumele abekwe emugqeni owodwa noma ekholomu eyodwa"
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Amathayela kumele axhumane namathayela asevele ekhona ebhodini"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "3U"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "Kuya"
@@ -2613,6 +2641,10 @@ msgstr "Izicelo eziningi kakhulu"
 msgid "Top"
 msgstr "Okuhamba phambili"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "Izinga eliphezulu"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Kuyahanjwa"
@@ -2629,6 +2661,11 @@ msgstr "Zama futhi"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "ULwesibili"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "3I"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "I-United States"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "Amagama akhiwe"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Unyaka"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "Yebo"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

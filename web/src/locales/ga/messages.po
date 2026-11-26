@@ -190,6 +190,10 @@ msgstr "{unreadCount, plural, one {Oscail an roghchlár (# fhógra gan léamh)} 
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# phointe} two {# phointe} few {# phointe} many {# bpointe} other {# pointe}}"
 
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 uair"
@@ -457,6 +461,7 @@ msgstr "Tíl bán"
 msgid "Block {name}"
 msgstr "Cuir bac ar {name}"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "Coiscthe ag"
 msgid "Blocked navigation to untrusted link"
 msgstr "Cuireadh bac le nascleanúint go nasc neamhiontaofa"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "Bloic"
@@ -569,6 +575,10 @@ msgstr "Athraithe"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "Athraíodh {field}"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "Rang athraithe"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "Dún"
 msgid "Displays the mobile sidebar."
 msgstr "Taispeánann an barra taoibh móibíleach."
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "2L"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "Ní mheaitseálann sé an patrún riachtanach"
@@ -1019,9 +1034,15 @@ msgstr "Íoslódáil"
 msgid "Download failed"
 msgstr "Theip ar an íoslódáil"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "Dúblaigh"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "2F"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "Geal"
 msgid "Link"
 msgstr "Nasc"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "Naisc"
@@ -1607,10 +1629,6 @@ msgstr "Tuilleadh roghanna"
 msgid "Moved"
 msgstr "Bogtha"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "Bogadh {field}"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "An mhí seo chugainn"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "An bhliain seo chugainn"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "Níl"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "Á atreorú chuig logáil isteach."
 msgid "Reduce interest"
 msgstr "Laghdaigh spéis"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "Bainteach"
@@ -2579,6 +2602,11 @@ msgstr "Ní mór na tíleanna a chur i sraith amháin nó i gcolún amháin"
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Ní mór do na tíleanna nascadh le tíleanna atá ar an gclár cheana"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "3L"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "Go dtí"
@@ -2613,6 +2641,10 @@ msgstr "An iomarca iarratas"
 msgid "Top"
 msgstr "Is fearr"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "Barrleibhéal"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Ag taisteal"
@@ -2629,6 +2661,11 @@ msgstr "Bain triail eile as"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "Máirt"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "3F"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "Stáit Aontaithe"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "Focail déanta"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Bliain"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "Tá"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

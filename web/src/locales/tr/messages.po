@@ -190,6 +190,10 @@ msgstr "{unreadCount, plural, one {Menüyü aç (# okunmamış bildirim)} other 
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# puan} other {# puan}}"
 
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 saat"
@@ -457,6 +461,7 @@ msgstr "Boş kare"
 msgid "Block {name}"
 msgstr "{name} kullanıcısını engelle"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "Engelleyen"
 msgid "Blocked navigation to untrusted link"
 msgstr "Güvenilmeyen bağlantıya gezinme engellendi"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "Bloklar"
@@ -569,6 +575,10 @@ msgstr "Değiştirildi"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "{field} değiştirildi"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "Sınıf değiştirildi"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "Kapat"
 msgid "Displays the mobile sidebar."
 msgstr "Mobil kenar çubuğunu görüntüler."
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "H²"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "Gerekli kalıpla eşleşmiyor"
@@ -1019,9 +1034,15 @@ msgstr "İndir"
 msgid "Download failed"
 msgstr "İndirme başarısız oldu"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "Yinelenenler"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "K²"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "Açık"
 msgid "Link"
 msgstr "Bağlantı"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "Bağlantılar"
@@ -1607,10 +1629,6 @@ msgstr "Diğer seçenekler"
 msgid "Moved"
 msgstr "Taşındı"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "{field} taşındı"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "Sonraki ay"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "Sonraki yıl"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "Hayır"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "Girişe yönlendiriliyor."
 msgid "Reduce interest"
 msgstr "İlgiyi azalt"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "İlişkili"
@@ -2579,6 +2602,11 @@ msgstr "Taşlar tek bir satıra veya sütuna yerleştirilmeli"
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Taşlar tahtadaki mevcut taşlara bağlanmalı"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "H³"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "Nereye"
@@ -2613,6 +2641,10 @@ msgstr "Çok fazla istek"
 msgid "Top"
 msgstr "En iyi"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "Üst seviye"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Yolda"
@@ -2629,6 +2661,11 @@ msgstr "Tekrar dene"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "Salı"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "K³"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "Amerika Birleşik Devletleri"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "Oluşturulan kelimeler"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Yıl"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "Evet"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

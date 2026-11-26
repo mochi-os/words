@@ -190,6 +190,10 @@ msgstr "{unreadCount, plural, one {ምናሌን ክፈት (# ያልተነበበ 
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# ነጥብ} other {# ነጥቦች}}"
 
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ሰዓት"
@@ -457,6 +461,7 @@ msgstr "ባዶ ድንጋይ"
 msgid "Block {name}"
 msgstr "{name}ን አግድ"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "የታገደው በ"
 msgid "Blocked navigation to untrusted link"
 msgstr "ወደማይታመን አገናኝ ማሰስ ተከልክሏል"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "ይገድባል"
@@ -569,6 +575,10 @@ msgstr "ተቀይሯል"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "{field} ተቀይሯል"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "ክፍል ተቀይሯል"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "ዝጋ"
 msgid "Displays the mobile sidebar."
 msgstr "የሞባይል ጎንደርን ያሳያል።"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "ፊ×2"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "ከሚያስፈልገው ስርዓተ ጥለት ጋር አይዛመድም"
@@ -1019,9 +1034,15 @@ msgstr "አውርድ"
 msgid "Download failed"
 msgstr "ማውረድ አልተሳካም"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "ይባዛል"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "ቃ×2"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "ብርሃን"
 msgid "Link"
 msgstr "አገናኝ"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "አገናኞች"
@@ -1607,10 +1629,6 @@ msgstr "ተጨማሪ አማራጮች"
 msgid "Moved"
 msgstr "ተንቀሳቅሷል"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "{field} ተንቀሳቅሷል"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "ቀጣይ ወር"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "ቀጣይ ዓመት"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "አይ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "ወደ መግቢያ በማዘዋወር ላይ።"
 msgid "Reduce interest"
 msgstr "ፍላጎትን ቀንስ"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "ይዛመዳል"
@@ -2579,6 +2602,11 @@ msgstr "ፊደላት በአንድ ረድፍ ወይም አምድ መቀመጥ አ
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "ፊደላት በሰሌዳው ላይ ካሉ ፊደላት ጋር መገናኘት አለባቸው"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "ፊ×3"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "ወደ"
@@ -2613,6 +2641,10 @@ msgstr "በጣም ብዙ ጥያቄዎች"
 msgid "Top"
 msgstr "ምርጥ"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "ላይኛው ደረጃ"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "በጉዞ ላይ"
@@ -2629,6 +2661,11 @@ msgstr "እንደገና ይሞክሩ"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "ማክሰኞ"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "ቃ×3"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "ዩናይትድ ስቴትስ"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "የተፈጠሩ ቃላት"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "ዓመት"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "አዎ"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

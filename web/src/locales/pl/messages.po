@@ -55,7 +55,7 @@ msgstr "{0, plural, one {# plik zmieniony} few {# pliki zmienione} many {# plik�
 #. placeholder {0}: selectedFriends.length + 1
 #: src/features/words/components/new-game.tsx
 msgid "{0, plural, one {# player} other {# players}}"
-msgstr "{0, plural, one {# gracz} few {# graczy} many {# graczy} other {# gracza}}"
+msgstr "{0, plural, one {# gracz} few {# gracze} many {# graczy} other {# gracza}}"
 
 #. placeholder {0}: visible.length
 #: ../../../lib/web/src/components/inline-entity-search.tsx
@@ -189,6 +189,10 @@ msgstr "{unreadCount, plural, one {Otwórz menu (# nieprzeczytane powiadomienie)
 #: src/features/words/components/tile-rack.tsx
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# punkt} few {# punkty} many {# punktów} other {# punktów}}"
+
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
@@ -457,6 +461,7 @@ msgstr "Pusty kamień"
 msgid "Block {name}"
 msgstr "Zablokuj {name}"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "Zablokowane przez"
 msgid "Blocked navigation to untrusted link"
 msgstr "Zablokowano nawigację do niezaufanego linku"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "Blokuje"
@@ -569,6 +575,10 @@ msgstr "Zmieniono"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "Zmieniono {field}"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "Zmieniono klasę"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "Odrzuć"
 msgid "Displays the mobile sidebar."
 msgstr "Wyświetla pasek boczny mobilny."
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "2L"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "Nie pasuje do wymaganego wzorca"
@@ -1019,9 +1034,15 @@ msgstr "Pobierz"
 msgid "Download failed"
 msgstr "Pobieranie nie powiodło się"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "Duplikuje"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "2S"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "Jasny"
 msgid "Link"
 msgstr "Link"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "Linki"
@@ -1607,10 +1629,6 @@ msgstr "Więcej opcji"
 msgid "Moved"
 msgstr "Przeniesiono"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "Przeniesiono {field}"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "Następny miesiąc"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "Następny rok"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "Nie"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "Przekierowywanie do logowania."
 msgid "Reduce interest"
 msgstr "Zmniejsz zainteresowanie"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "Dotyczy"
@@ -2579,6 +2602,11 @@ msgstr "Płytki muszą leżeć w jednym wierszu lub jednej kolumnie"
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "Płytki muszą stykać się z płytkami na planszy"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "3L"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "Dokąd"
@@ -2613,6 +2641,10 @@ msgstr "Zbyt wiele żądań"
 msgid "Top"
 msgstr "Najlepsze"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "Najwyższy poziom"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "Podróż"
@@ -2629,6 +2661,11 @@ msgstr "Spróbuj ponownie"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "Wtorek"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "3S"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "Stany Zjednoczone"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "Utworzone słowa"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Rok"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "Tak"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

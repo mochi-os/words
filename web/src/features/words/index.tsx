@@ -84,9 +84,11 @@ import {
   type MoveErrorMessages,
 } from './lib/move-draft'
 import { passEndsGame } from './lib/pass'
+import { useScoreGain } from './lib/score'
 
 export function WordsGameView() {
   const { t } = useLingui()
+  const scoreGain = useScoreGain()
   usePageTitle(t`Words`)
 
   const navigate = useNavigate()
@@ -1031,7 +1033,7 @@ export function WordsGameView() {
                               <div className='flex-1' />
                               {draftScore > 0 && (
                                 <span className='text-base font-bold tabular-nums'>
-                                  +{draftScore}
+                                  {scoreGain(draftScore)}
                                 </span>
                               )}
                               <Button

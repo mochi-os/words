@@ -190,6 +190,10 @@ msgstr "{unreadCount, plural, one {پێڕست بکەرەوە (# ئاگادارک
 msgid "{value, plural, one {# point} other {# points}}"
 msgstr "{value, plural, one {# خاڵ} other {# خاڵ}}"
 
+#: src/features/words/lib/score.ts
+msgid "+{points}"
+msgstr "+{points}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "١٢ کاتژمێر"
@@ -457,6 +461,7 @@ msgstr "خشتی بەتاڵ"
 msgid "Block {name}"
 msgstr "بلۆککردنی {name}"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocked by"
@@ -467,6 +472,7 @@ msgstr "بلۆککرا لەلایەن"
 msgid "Blocked navigation to untrusted link"
 msgstr "ڕێگەنەدرا بە چوون بۆ بەستەری نامتمانە"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Blocks"
 msgstr "بلۆکەکان"
@@ -569,6 +575,10 @@ msgstr "گۆڕدرا"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Changed {field}"
 msgstr "{field} گۆڕدرا"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Changed class"
+msgstr "پۆل گۆڕدرا"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -999,6 +1009,11 @@ msgstr "لابردن"
 msgid "Displays the mobile sidebar."
 msgstr "لاتەنیشتی مۆبایل پیشان دەدات."
 
+#: src/features/words/components/words-board.tsx
+msgctxt "double letter square"
+msgid "DL"
+msgstr "پ×2"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Does not match the required pattern"
 msgstr "لەگەڵ ئەو نەخشەیەی داواکراوە ناگونجێت"
@@ -1019,9 +1034,15 @@ msgstr "داگرتن"
 msgid "Download failed"
 msgstr "داگرتن سەرکەوتوو نەبوو"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Duplicates"
 msgstr "دووبارەکان"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "double word square"
+msgid "DW"
+msgstr "و×2"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Dyslexia-friendly"
@@ -1481,6 +1502,7 @@ msgstr "ڕووناک"
 msgid "Link"
 msgstr "بەستەر"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Links"
 msgstr "بەستەرەکان"
@@ -1607,10 +1629,6 @@ msgstr "بژاردەی زیاتر"
 msgid "Moved"
 msgstr "گواسترایەوە"
 
-#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
-msgid "Moved {field}"
-msgstr "{field} گواسترایەوە"
-
 #. placeholder {0}: dayName(dragging.day)
 #. placeholder {0}: dayName(opening(current, format.zonedDay))
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
@@ -1671,6 +1689,10 @@ msgstr "مانگی داهاتوو"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Next year"
 msgstr "ساڵی داهاتوو"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "No"
+msgstr "نەخێر"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -2046,6 +2068,7 @@ msgstr "ڕەوانەکردنەوە بۆ چونەژوورەوە."
 msgid "Reduce interest"
 msgstr "کەمکردنەوەی بەرژەوەندی"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 msgid "Relates"
 msgstr "پەیوەندیدارە"
@@ -2579,6 +2602,11 @@ msgstr "پارچەکان دەبێت لە یەک ڕیز یان یەک ستوون 
 msgid "Tiles must connect to existing tiles on the board"
 msgstr "پارچەکان دەبێت بەو پارچانەوە ببەسترێن کە لەسەر تەختەن"
 
+#: src/features/words/components/words-board.tsx
+msgctxt "triple letter square"
+msgid "TL"
+msgstr "پ×3"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "To"
 msgstr "بۆ"
@@ -2613,6 +2641,10 @@ msgstr "داواکاری زۆر زیاد"
 msgid "Top"
 msgstr "باشترین"
 
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Top level"
+msgstr "ئاستی سەرەوە"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
 msgstr "گەشتکردن"
@@ -2629,6 +2661,11 @@ msgstr "دیسان هەوڵبدە"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Tuesday"
 msgstr "سێشەممە"
+
+#: src/features/words/components/words-board.tsx
+msgctxt "triple word square"
+msgid "TW"
+msgstr "و×3"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2674,6 +2711,11 @@ msgid "United States"
 msgstr "ویلایەتە یەکگرتووەکان"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
 #: ../../../lib/web/src/components/tree-row.tsx
@@ -2815,6 +2857,10 @@ msgstr "وشەکانی پێکهاتوو"
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "ساڵ"
+
+#: ../../../lib/web/src/components/entity/entity-activity-list.tsx
+msgid "Yes"
+msgstr "بەڵێ"
 
 #: src/features/words/components/chat-message-list.tsx
 #: src/features/words/components/chat-message-list.tsx

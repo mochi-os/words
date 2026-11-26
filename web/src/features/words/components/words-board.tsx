@@ -15,36 +15,28 @@ import {
   type PremiumType,
 } from '@/lib/words-engine'
 
-const PREMIUM_STYLES: Record<
-  PremiumType,
-  { bg: string; label: string; textColor: string }
-> = {
+const PREMIUM_STYLES: Record<PremiumType, { bg: string; textColor: string }> = {
   TW: {
     bg: 'bg-red-400 dark:bg-red-900',
-    label: 'TW',
     textColor: 'text-red-700 dark:text-red-300',
   },
   DW: {
     bg: 'bg-pink-300 dark:bg-pink-800/70',
-    label: 'DW',
     textColor: 'text-pink-700 dark:text-pink-300',
   },
   TL: {
     bg: 'bg-primary/20 dark:bg-primary/30',
-    label: 'TL',
     textColor: 'text-primary',
   },
   DL: {
     bg: 'bg-sky-200 dark:bg-sky-900/40',
-    label: 'DL',
     textColor: 'text-sky-500 dark:text-sky-400',
   },
   ST: {
     bg: 'bg-pink-300 dark:bg-pink-800/70',
-    label: '',
     textColor: 'text-pink-700 dark:text-pink-300',
   },
-  '.': { bg: '', label: '', textColor: '' },
+  '.': { bg: '', textColor: '' },
 }
 
 type DragSource =
@@ -80,6 +72,16 @@ export function WordsBoard({
   onDragEnd,
 }: WordsBoardProps) {
   const { t } = useLingui()
+  // The abbreviation printed on an empty premium square, in the viewer's
+  // language. The start square shows a star instead.
+  const premiumLabels: Record<PremiumType, string> = {
+    TW: t({ message: 'TW', context: 'triple word square' }),
+    DW: t({ message: 'DW', context: 'double word square' }),
+    TL: t({ message: 'TL', context: 'triple letter square' }),
+    DL: t({ message: 'DL', context: 'double letter square' }),
+    ST: '',
+    '.': '',
+  }
   const isActive = gameStatus === 'active'
   const canPlace = isActive && isMyTurn && selectedRackIndex !== null
   const isDragging = dragSource !== null && dragSource !== undefined
@@ -227,6 +229,7 @@ export function WordsBoard({
               const pending = getPending(row, col)
               const premium = getPremium(row, col)
               const premiumStyle = PREMIUM_STYLES[premium]
+              const premiumLabel = premiumLabels[premium]
               const isEmpty = cellValue === '.' && !pending
               const isOccupied = cellValue !== '.'
               const isPending = !!pending
@@ -336,14 +339,14 @@ export function WordsBoard({
                     }
                   }}
                 >
-                  {isEmpty && premiumStyle.label && !isValidTarget && (
+                  {isEmpty && premiumLabel && !isValidTarget && (
                     <span
                       className={cn(
                         'text-[9px] leading-none font-semibold',
                         premiumStyle.textColor
                       )}
                     >
-                      {premiumStyle.label}
+                      {premiumLabel}
                     </span>
                   )}
 
